@@ -739,9 +739,19 @@ select:focus {
 }
 
 .banner-slide img,
-.banner-slide video {
+.banner-slide video,
+.banner-slide iframe {
   width: 100%;
   height: 100%;
+  border: 0;
+}
+
+.banner-slide iframe {
+  pointer-events: none;
+}
+
+.banner-slide video,
+.banner-slide img {
   object-fit: cover;
 }
 
