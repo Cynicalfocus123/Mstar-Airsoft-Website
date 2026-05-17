@@ -38,17 +38,13 @@ export function EventDetailPage({ event }: EventDetailPageProps) {
           <p>{event.overview}</p>
         </article>
         <aside className="event-detail-sidebar">
-          <a className="btn btn-gold join-now-button" href="#registration">
+          <a className="btn btn-gold join-now-button" href="#/signup">
             Join Now
           </a>
           <dl>
             <div>
               <dt>Entry fee</dt>
               <dd>{event.entryFee}</dd>
-            </div>
-            <div>
-              <dt>Teams</dt>
-              <dd>{event.teams}</dd>
             </div>
             <div>
               <dt>Attendance</dt>

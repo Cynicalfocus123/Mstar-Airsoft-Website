@@ -24,6 +24,7 @@ export const siteContent: SiteContent = {
     {
       id: 'gold-rush',
       imagePath: '/banners/gold-rush.svg',
+      videoPath: '/media/largest-airsoft-game-southeast-asia.mp4',
       eyebrow: 'Featured Tournament',
       title: 'Gold Rush Open',
       body: 'Squad-based tournament registration is open now for the next Mstar Airsoft operation.',
@@ -52,8 +53,8 @@ export const siteContent: SiteContent = {
     subtitle:
       'Tactical airsoft tournaments and competitive events built for organized teams, clear rules, and mission-focused play.',
     buttons: [
-      { label: 'Join Tournament', href: '#registration', variant: 'primary' },
-      { label: 'View Events', href: '#events', variant: 'secondary' },
+      { label: 'Join Tournament', href: '#/events', variant: 'primary' },
+      { label: 'View Events', href: '#/events', variant: 'secondary' },
     ],
     stats: [
       { value: '5v5', label: 'Squad format' },

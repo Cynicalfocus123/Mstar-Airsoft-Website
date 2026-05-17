@@ -29,6 +29,7 @@ export interface HeroContent {
 export interface HeroSlide {
   id: string;
   imagePath: string;
+  videoPath?: string;
   eyebrow: string;
   title: string;
   body: string;

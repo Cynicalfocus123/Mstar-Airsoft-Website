@@ -4,7 +4,6 @@ import { BannerSlider } from './components/BannerSlider';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Events } from './components/Events';
-import { Registration } from './components/Registration';
 import { Gallery } from './components/Gallery';
 import { Rules } from './components/Rules';
 import { Contact } from './components/Contact';
@@ -87,7 +86,6 @@ export default function App() {
           <Hero content={siteContent.hero} />
           <About content={siteContent.about} />
           <Events events={siteContent.events.slice(0, 3)} viewAllHref="#/events" />
-          <Registration fields={siteContent.registrationFields} />
           <Rules rules={siteContent.rules} />
           <Gallery items={siteContent.gallery} />
           <Contact contact={siteContent.contact} />

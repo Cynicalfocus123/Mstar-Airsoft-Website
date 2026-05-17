@@ -41,10 +41,6 @@ export function EventsPage({ events }: EventsPageProps) {
                   <dd>{event.entryFee}</dd>
                 </div>
                 <div>
-                  <dt>Teams</dt>
-                  <dd>{event.teams}</dd>
-                </div>
-                <div>
                   <dt>Attendance</dt>
                   <dd>Attendance: {event.attendance}</dd>
                 </div>

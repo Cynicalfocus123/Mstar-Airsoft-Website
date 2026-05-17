@@ -10,7 +10,7 @@ export function Events({ events, viewAllHref }: EventsProps) {
     <section className="section section-anchor section-rib" id="events">
       <div className="section-heading">
         <p className="eyebrow">Upcoming Operations</p>
-        <h2>Tournament Schedule</h2>
+        <h2>Game Schedules</h2>
         <p className="section-intro">
           Select upcoming Mstar Airsoft operations are listed below. Open the full events page for the complete season.
         </p>
@@ -34,10 +34,6 @@ export function Events({ events, viewAllHref }: EventsProps) {
               <div>
                 <dt>Entry fee</dt>
                 <dd>{event.entryFee}</dd>
-              </div>
-              <div>
-                <dt>Teams</dt>
-                <dd>{event.teams}</dd>
               </div>
               <div>
                 <dt>Attendance</dt>

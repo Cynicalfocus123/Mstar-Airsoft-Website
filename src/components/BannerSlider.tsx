@@ -21,7 +21,19 @@ export function BannerSlider({ slides }: BannerSliderProps) {
           key={slide.id}
           aria-hidden={index !== activeIndex}
         >
-          <img src={slide.imagePath} alt="" />
+          {slide.videoPath ? (
+            <video
+              src={slide.videoPath}
+              poster={slide.imagePath}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            />
+          ) : (
+            <img src={slide.imagePath} alt="" />
+          )}
         </article>
       ))}
       <div className="banner-overlay">
