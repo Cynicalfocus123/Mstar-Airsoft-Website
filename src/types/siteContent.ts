@@ -29,8 +29,9 @@ export interface HeroContent {
 export interface HeroSlide {
   id: string;
   imagePath: string;
-  videoPath?: string;
-  videoEmbedUrl?: string;
+  posterPath: string;
+  videoMp4Path: string;
+  videoWebmPath?: string;
   eyebrow: string;
   title: string;
   body: string;

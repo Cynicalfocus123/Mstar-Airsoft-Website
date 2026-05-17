@@ -72,6 +72,7 @@
 - Homepage YouTube hero must behave like ambient background media: iframe fully covering the slider, non-interactive, hidden behind a dark overlay, with a poster image underneath as fallback and CTA content always above it.
 - Homepage hero is a custom slider surface, so it must not keep any legacy previous/next/dot/pause/play UI; only the background video and CTA should remain visible.
 - Main navigation URLs should read like named destinations instead of bare fragments, while still behaving like smooth section navigation on the homepage.
+- Homepage hero video must use the full native video file, not YouTube or a short trimmed loop, with a poster fallback, muted autoplay, loop, playsInline, no controls, pointer-events disabled, and dark overlay/content stacking above the video.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
 
@@ -164,3 +165,4 @@
 - 2026-05-17: Upgraded the homepage YouTube hero layering so the embed works as a background video with poster fallback, cover-fit iframe positioning, hidden interactivity, and proper overlay/content stacking.
 - 2026-05-17: Cleared remaining legacy custom-slider control styling from the homepage hero so no carousel or player buttons appear over the background video.
 - 2026-05-17: Cleaned up main menu and footer link URLs by moving homepage section navigation to named hash routes like `#/about` and `#/contact`.
+- 2026-05-17: Replaced the homepage YouTube hero with a native full-length MP4 background, poster image, no player controls, disabled video interaction, and preserved dark overlay plus CTA layering.
