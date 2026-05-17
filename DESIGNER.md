@@ -65,6 +65,7 @@
 - Event detail titles must wrap inside their panel without clipping or oversized overflow.
 - Event registration checkout uses a clean white cart layout with bold headers, clear event summary, yellow EDIT buttons, editable shipping/billing sections, and responsive payment fields.
 - Unauthenticated checkout views show clear Login and Register actions at the top before the event summary.
+- Homepage video hero CTA must sit on a full-width bottom overlay so the Sign Up Now button remains truly centered instead of drifting right on large screens.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
 
@@ -150,3 +151,4 @@
 - 2026-05-17: Fixed route navigation scroll behavior so new pages open from the top while homepage section links still work.
 - 2026-05-17: Repositioned homepage video hero CTA to bottom-center and optimized its mobile tap target.
 - 2026-05-17: Added a responsive white cart/checkout design for event registration with auth prompts, event summary, editable shipping/billing sections, yellow EDIT controls, and credit card payment fields.
+- 2026-05-17: Corrected the homepage video hero CTA layer so the Sign Up Now button stays bottom-center across desktop and mobile layouts.
