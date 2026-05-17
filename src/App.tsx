@@ -69,14 +69,18 @@ export default function App() {
     goHomeTop();
   }
 
-  useEffect(() => {
-    if (route.name === 'home' && (window.location.hash === '#/' || window.location.hash === '')) {
-      window.scrollTo({ top: 0 });
-    }
-  }, [route.name]);
-
   const isHome = route.name === 'home';
   const selectedEvent = route.name === 'eventDetail' ? siteContent.events.find((event) => event.id === route.eventId) : undefined;
+
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (route.name === 'home' && hash && hash !== '#/') {
+      return;
+    }
+
+    window.scrollTo({ top: 0, left: 0 });
+  }, [route.name, selectedEvent?.id]);
 
   return (
     <>

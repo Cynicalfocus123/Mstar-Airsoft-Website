@@ -153,6 +153,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Added the provided Southeast Asia airsoft video to the homepage banner as Git LFS-tracked public media, enabled LFS checkout in the Pages workflow, moved homepage slider copy to a right-aligned tactical hero treatment, removed Teams display from event cards/details, removed the homepage registration form section, renamed Tournament Schedule to Game Schedules, and pointed homepage Join Tournament to All Events.
 - Replaced the three-slide homepage media carousel with a single video hero, resolved public video/poster paths through the Vite base URL for GitHub Pages, changed attendance values to show only player counts under the Attendance label, and changed login/register success to return users to their previous page instead of Account Settings.
 - Removed all text from the homepage video hero overlay except the Sign Up Now button, and forced the hero video to reset to 0 seconds and play immediately on mount.
+- Added route-level scroll reset so Events, Event Detail, auth, account, and other full-page routes always open at the top instead of inheriting the previous scroll position.
 
 ## Completed Changes
 
@@ -179,6 +180,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Added LFS-tracked homepage hero video media, updated the slider to render video backgrounds with dark overlay/right-aligned copy, removed displayed Teams lines, removed homepage Join Tournament form, renamed schedule heading to Game Schedules, and updated Pages checkout for LFS assets.
 - 2026-05-17: Simplified homepage banner to a single video hero, fixed Pages-safe video asset paths, removed carousel arrows/dots/image slides, changed displayed attendance values to player counts only, and preserved user location after login/register.
 - 2026-05-17: Removed video hero text overlay, kept only the Sign Up Now CTA, and made hero video restart from 0 seconds on page entry.
+- 2026-05-17: Added top-of-page scroll reset for full page route changes while preserving homepage section anchor behavior.
 
 ## Next Steps
 

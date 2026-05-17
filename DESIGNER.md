@@ -63,6 +63,7 @@
 - Event detail pages use a large top banner, content panel, and right-side Join Now/details panel that collapses cleanly on mobile.
 - Event detail titles must wrap inside their panel without clipping or oversized overflow.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
+- Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
 
 ## Responsive Design Rules
 
@@ -143,3 +144,4 @@
 - 2026-05-17: Added homepage video hero treatment, right-aligned slider copy, removed displayed Teams rows, removed homepage registration form, renamed Tournament Schedule to Game Schedules, and retargeted Join Tournament to the Events page.
 - 2026-05-17: Removed remaining image-slider controls from the homepage hero, made the video path deployment-safe, simplified attendance display to numeric player counts, and kept users on their return page after auth.
 - 2026-05-17: Removed homepage video hero text overlay and retained only the Sign Up Now CTA over autoplaying looped video.
+- 2026-05-17: Fixed route navigation scroll behavior so new pages open from the top while homepage section links still work.
