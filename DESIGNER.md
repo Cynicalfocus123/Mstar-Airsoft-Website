@@ -76,6 +76,31 @@
 - Asset references must remain compatible with repository-scoped GitHub Pages hosting.
 - Deployment changes must not alter visual direction or add heavy assets.
 - Workflow must use Node 24 and Pages artifact deployment from `./dist`.
+- Keep deployment workflow working under `.github/workflows/deploy.yml`.
+- After pushing, confirm live site URL: `https://cynicalfocus123.github.io/Mstar-Airsoft-Website/`.
+
+## Automatic Workflow Rules
+
+- For every completed design update, layout fix, content update, style update, deployment update, or normal repo change, commit and push automatically.
+- Do not ask for approval before normal GitHub commit or push.
+- Normal frontend changes, style changes, image optimization, README updates, memory file updates, and deployment workflow fixes are approved by default.
+- Stop and ask only before serious destructive actions: deleting the repo, deleting major project files, force-pushing, rewriting Git history, removing deployment, exposing secrets, or changing production credentials.
+
+## Project Memory Rules
+
+- Always update `AGENT.md` and `DESIGNER.md` for every design change or fix.
+- Add a short changelog entry before commit.
+- Commit memory files with the related code/design change.
+
+## Token And Do-Not-Repeat Rules
+
+- Use fewer tokens and summarize results only.
+- Do not dump large logs.
+- Use capped output for large commands.
+- Do not ask repeated approval questions for the same workflow.
+- Do not redo completed work.
+- Do not rebuild the whole site unless the task requires it.
+- Do not change the GitHub repo remote unless needed to fix push problems.
 
 ## Do-Not-Break Visual Rules
 
@@ -94,3 +119,4 @@
 - 2026-05-17: Kept generated artifacts out of source control so deployed design stays lightweight and maintainable.
 - 2026-05-17: Added GitHub Pages deployment requirements and confirmed repo-scoped base path keeps assets deploy-safe.
 - 2026-05-17: Updated deployment workflow rules for Node 24 and GitHub Pages enablement without changing site design.
+- 2026-05-17: Added permanent automatic commit/push, approved normal change, project memory, token-saving, and do-not-repeat design workflow rules.

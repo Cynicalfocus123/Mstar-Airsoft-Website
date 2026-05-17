@@ -48,9 +48,30 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Do not revert user changes unless explicitly requested.
 - Use per-command `-c safe.directory='D:/mstar airsoft site'` if git warns about workspace ownership.
 
+## Auto Commit + Push Rule
+
+- For every completed change, fix, design update, deployment update, or content update, automatically run `git add`, `git commit`, and `git push`.
+- Do not ask the user to approve normal GitHub commit or push.
+- Do not repeatedly ask permission for repo pushes after each task.
+- Commit and push are allowed by default for this project.
+- Only stop and ask before serious destructive actions: deleting the repo, deleting major project files, force-pushing, rewriting Git history, removing deployment, exposing secrets, or changing production credentials.
+
+## Allow Normal Changes Rule
+
+- Normal frontend changes, layout fixes, text updates, style updates, image optimization, GitHub Pages fixes, README updates, `AGENT.md` updates, `DESIGNER.md` updates, and deployment workflow fixes are approved by default.
+- Complete the work, test it, commit it, and push it.
+
+## Project Memory Rule
+
+- Always update `AGENT.md` and `DESIGNER.md` for every change or fix.
+- Add a short changelog entry before committing.
+- Commit `AGENT.md` and `DESIGNER.md` together with code changes.
+
 ## Token-Saving Command Rule
 
 - Keep logs short.
+- Use fewer tokens.
+- Do not dump large logs.
 - For unknown or large output, cap output with `2>&1 | head -c 4000` or PowerShell equivalent.
 - Summarize command results instead of dumping full logs.
 
@@ -87,6 +108,10 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 ## Known Failed Attempts / Do-Not-Repeat Notes
 
 - Do not create a generic template.
+- Do not ask repeated approval questions for the same workflow.
+- Do not redo completed work.
+- Do not rebuild the whole site unless the task requires it.
+- Do not change the GitHub repo remote unless needed to fix push problems.
 - Do not hard-code all content inside JSX.
 - Do not create backend files.
 - Do not use broken image imports.
@@ -114,6 +139,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Updated README with live GitHub Pages URL format.
 - Found actual GitHub Actions failure at `Setup Pages`: Pages site was not enabled/configured for GitHub Actions.
 - Updated deployment workflow for Node 24 and Pages enablement.
+- Added permanent auto commit/push rules and approved-normal-work rules to project memory.
 
 ## Completed Changes
 
@@ -132,6 +158,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Added repository ignore rules for node modules, build output, dev logs, env files, tsbuildinfo, and original loose logo file.
 - 2026-05-17: Added GitHub Pages Actions deployment, configured Vite base path, and documented live URL format.
 - 2026-05-17: Fixed Pages workflow warning/failure by opting actions into Node 24, building with Node 24, using `npm install`, and enabling Pages during configure step.
+- 2026-05-17: Added permanent rules for automatic commit/push, approved normal changes, project memory updates, token-saving, and do-not-repeat workflow behavior.
 
 ## Next Steps
 
