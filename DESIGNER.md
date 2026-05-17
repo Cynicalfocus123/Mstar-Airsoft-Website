@@ -59,6 +59,7 @@
 - Homepage banner slider must include arrows, dots, overlaid event text, and gold Sign Up CTA.
 - Homepage banner first slide uses the provided airsoft video as full-width background media with dark overlay and right-aligned copy on desktop.
 - Homepage banner is no longer a three-image carousel; it is a single full-width video hero with text and CTA over the video.
+- Homepage video hero overlay should show only the gold Sign Up Now button.
 - Event detail pages use a large top banner, content panel, and right-side Join Now/details panel that collapses cleanly on mobile.
 - Event detail titles must wrap inside their panel without clipping or oversized overflow.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
@@ -141,3 +142,4 @@
 - 2026-05-17: Corrected Events page card scale, moved event details below each image, added account Logout, fixed Home/logo top navigation behavior, tightened event detail title wrapping, and switched country/region dropdowns to maintained subdivision data.
 - 2026-05-17: Added homepage video hero treatment, right-aligned slider copy, removed displayed Teams rows, removed homepage registration form, renamed Tournament Schedule to Game Schedules, and retargeted Join Tournament to the Events page.
 - 2026-05-17: Removed remaining image-slider controls from the homepage hero, made the video path deployment-safe, simplified attendance display to numeric player counts, and kept users on their return page after auth.
+- 2026-05-17: Removed homepage video hero text overlay and retained only the Sign Up Now CTA over autoplaying looped video.

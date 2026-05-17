@@ -152,6 +152,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Fixed remaining event/account issues: Events page uses compact image-on-top cards with details underneath, My Account dropdown includes Logout, Home/logo clicks return to the top of the homepage, event detail titles now wrap and scale down to prevent overflow, and country/region data now comes from `country-region-data` for broad subdivision coverage such as Italy.
 - Added the provided Southeast Asia airsoft video to the homepage banner as Git LFS-tracked public media, enabled LFS checkout in the Pages workflow, moved homepage slider copy to a right-aligned tactical hero treatment, removed Teams display from event cards/details, removed the homepage registration form section, renamed Tournament Schedule to Game Schedules, and pointed homepage Join Tournament to All Events.
 - Replaced the three-slide homepage media carousel with a single video hero, resolved public video/poster paths through the Vite base URL for GitHub Pages, changed attendance values to show only player counts under the Attendance label, and changed login/register success to return users to their previous page instead of Account Settings.
+- Removed all text from the homepage video hero overlay except the Sign Up Now button, and forced the hero video to reset to 0 seconds and play immediately on mount.
 
 ## Completed Changes
 
@@ -177,6 +178,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Reworked Events page into smaller horizontal-style cards with banner image above details, added Logout, fixed Home/logo top navigation, tightened event detail title CSS, and replaced manual country region examples with the `country-region-data` dataset.
 - 2026-05-17: Added LFS-tracked homepage hero video media, updated the slider to render video backgrounds with dark overlay/right-aligned copy, removed displayed Teams lines, removed homepage Join Tournament form, renamed schedule heading to Game Schedules, and updated Pages checkout for LFS assets.
 - 2026-05-17: Simplified homepage banner to a single video hero, fixed Pages-safe video asset paths, removed carousel arrows/dots/image slides, changed displayed attendance values to player counts only, and preserved user location after login/register.
+- 2026-05-17: Removed video hero text overlay, kept only the Sign Up Now CTA, and made hero video restart from 0 seconds on page entry.
 
 ## Next Steps
 

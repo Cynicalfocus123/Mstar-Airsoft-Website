@@ -759,7 +759,7 @@ select:focus {
   z-index: 2;
   top: 50%;
   right: clamp(20px, 7vw, 110px);
-  width: min(740px, calc(100% - 100px));
+  width: min(260px, calc(100% - 100px));
   text-align: right;
   transform: translateY(-50%);
 }
@@ -784,7 +784,7 @@ select:focus {
 }
 
 .banner-overlay .btn {
-  margin-top: 8px;
+  min-width: 210px;
 }
 
 .slider-arrow {
@@ -1248,7 +1248,7 @@ select:focus {
     left: 20px;
     right: 20px;
     width: calc(100% - 40px);
-    text-align: left;
+    text-align: center;
   }
 
   .banner-overlay p:not(.eyebrow) {
