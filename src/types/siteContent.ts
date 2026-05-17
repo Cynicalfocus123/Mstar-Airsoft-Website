@@ -26,6 +26,15 @@ export interface HeroContent {
   }>;
 }
 
+export interface HeroSlide {
+  id: string;
+  imagePath: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+  cta: CtaButton;
+}
+
 export interface AboutContent {
   eyebrow: string;
   title: string;
@@ -41,12 +50,14 @@ export interface EventCard {
   entryFee: string;
   teamSize: string;
   status: string;
+  summary: string;
+  imagePath: string;
 }
 
 export interface FormField {
   id: string;
   label: string;
-  type: 'text' | 'email' | 'tel' | 'number' | 'textarea';
+  type: 'text' | 'email' | 'tel' | 'number' | 'password' | 'textarea';
   placeholder: string;
   required: boolean;
 }
@@ -69,9 +80,27 @@ export interface ContactContent {
   location: string;
 }
 
+export interface SignInContent {
+  title: string;
+  fields: FormField[];
+  benefits: string[];
+}
+
+export interface CreateAccountContent {
+  title: string;
+  fields: FormField[];
+}
+
+export interface CountryRegion {
+  country: string;
+  regions: string[];
+}
+
 export interface SiteContent {
   identity: SiteIdentity;
   navLinks: NavLink[];
+  authLinks: NavLink[];
+  heroSlides: HeroSlide[];
   hero: HeroContent;
   about: AboutContent;
   events: EventCard[];
@@ -80,4 +109,7 @@ export interface SiteContent {
   rules: RuleItem[];
   contact: ContactContent;
   footerLinks: NavLink[];
+  signIn: SignInContent;
+  createAccount: CreateAccountContent;
+  countryRegions: CountryRegion[];
 }

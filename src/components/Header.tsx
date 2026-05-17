@@ -4,14 +4,15 @@ import type { NavLink, SiteIdentity } from '../types/siteContent';
 interface HeaderProps {
   identity: SiteIdentity;
   navLinks: NavLink[];
+  authLinks: NavLink[];
 }
 
-export function Header({ identity, navLinks }: HeaderProps) {
+export function Header({ identity, navLinks, authLinks }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="site-header">
-      <a className="brand" href="#home" aria-label={`${identity.name} home`}>
+      <a className="brand" href="#/" aria-label={`${identity.name} home`}>
         <img src={identity.logoPath} alt={`${identity.name} logo`} />
         <span>{identity.name}</span>
       </a>
@@ -32,6 +33,18 @@ export function Header({ identity, navLinks }: HeaderProps) {
             {link.label}
           </a>
         ))}
+        <div className="header-actions">
+          {authLinks.map((link, index) => (
+            <a
+              className={index === 0 ? 'auth-link auth-link-login' : 'auth-link auth-link-signup'}
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
       </nav>
     </header>
   );

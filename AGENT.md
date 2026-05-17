@@ -140,6 +140,12 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Found actual GitHub Actions failure at `Setup Pages`: Pages site was not enabled/configured for GitHub Actions.
 - Updated deployment workflow for Node 24 and Pages enablement.
 - Added permanent auto commit/push rules and approved-normal-work rules to project memory.
+- Replaced logo asset with provided `logo transparent.png` at `src/assets/mstar-airsoft-logo.png`.
+- Added header Login and Sign Up actions.
+- Added homepage image slider, Events page, Sign In page, and Create Account page.
+- Added dynamic country/region account form config.
+- Added full event banner data and lightweight SVG banner assets.
+- Updated footer visual treatment for transparent logo visibility.
 
 ## Completed Changes
 
@@ -159,6 +165,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Added GitHub Pages Actions deployment, configured Vite base path, and documented live URL format.
 - 2026-05-17: Fixed Pages workflow warning/failure by opting actions into Node 24, building with Node 24, using `npm install`, and enabling Pages during configure step.
 - 2026-05-17: Added permanent rules for automatic commit/push, approved normal changes, project memory updates, token-saving, and do-not-repeat workflow behavior.
+- 2026-05-17: Added transparent logo header/footer treatment, homepage slider, Events page with hover banners/load more, Sign In page, Create Account page with country-driven regions, and black/white/gold branding updates.
 
 ## Next Steps
 

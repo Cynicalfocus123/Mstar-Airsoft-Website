@@ -15,14 +15,18 @@
 ## Header Rules
 
 - Logo stays top-left.
+- Use the transparent MSTAR Airsoft logo from `src/assets/mstar-airsoft-logo.png`.
+- Keep a light/gold logo plate in the dark header so transparent artwork remains visible.
 - Header navigation: Home, About, Events, Rules, Gallery, Contact.
+- Header includes Login and Sign Up actions.
 - No Shop link.
 - Mobile menu must remain responsive and easy to tap.
 - Navigation must come from config/data.
 
 ## Footer Rules
 
-- Tactical dark footer with logo/name, quick links, contact info, social placeholder.
+- Lighter gold/white footer treatment with logo/name, quick links, contact info, social placeholder.
+- Footer logo must stay clearly visible with transparent artwork.
 - Footer links must come from config/data.
 - No Shop link.
 
@@ -36,23 +40,26 @@
 ## Color Direction
 
 - Dark background: near-black and charcoal.
-- Accent red for primary actions and status.
-- Military green for labels and tactical accents.
+- Primary accent: yellow/gold.
+- White for logo visibility, typography, and contrast.
 - White for strong headings.
 - Muted grey/khaki for supporting text.
 
 ## Button/Card Style Rules
 
 - Buttons: strong, square tactical feel, uppercase, high contrast.
-- Primary CTA uses red.
+- Primary CTA uses yellow/gold.
 - Secondary CTA uses dark panel and light border.
 - Cards: bordered, dark, structured, boxy, event-focused.
 - Avoid soft rounded generic SaaS style.
+- Event page banners must have large image treatment with animated hover movement.
+- Homepage banner slider must include arrows, dots, overlaid event text, and gold Sign Up CTA.
 
 ## Responsive Design Rules
 
 - Header collapses to mobile menu.
 - Hero, cards, forms, gallery, rules, contact, and footer stack cleanly on small screens.
+- Header actions, slider controls, event banners, Sign In page, and Create Account form must stay mobile responsive.
 - Text must not overlap or overflow containers.
 - Logo remains aligned in top-left on mobile.
 
@@ -120,3 +127,4 @@
 - 2026-05-17: Added GitHub Pages deployment requirements and confirmed repo-scoped base path keeps assets deploy-safe.
 - 2026-05-17: Updated deployment workflow rules for Node 24 and GitHub Pages enablement without changing site design.
 - 2026-05-17: Added permanent automatic commit/push, approved normal change, project memory, token-saving, and do-not-repeat design workflow rules.
+- 2026-05-17: Updated brand direction to black/white/gold, added transparent logo visibility rules, homepage slider, event banner hover design, auth page layouts, and lighter footer treatment.

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-label="Gold tactical event banner">
+  <rect width="1600" height="720" fill="#090909"/>
+  <path d="M0 0h1600v720H0z" fill="#111"/>
+  <path d="M0 0h1600L980 720H0z" fill="#f0b90b" opacity=".78"/>
+  <path d="M220 0h180L0 720h-180zM720 0h120L420 720H300zM1280 0h220l-420 720H860z" fill="#fff" opacity=".12"/>
+  <g fill="none" stroke="#000" stroke-opacity=".36" stroke-width="3">
+    <path d="M80 100h520v180H80zM920 150h420v260H920zM180 490h720"/>
+  </g>
+</svg>

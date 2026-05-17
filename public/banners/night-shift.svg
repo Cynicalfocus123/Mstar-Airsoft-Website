@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-label="Night tactical event banner">
+  <rect width="1600" height="720" fill="#050505"/>
+  <path d="M0 0h1600v720H0z" fill="#111"/>
+  <path d="M0 520 1600 120v600H0z" fill="#f0b90b" opacity=".62"/>
+  <path d="M0 0h1600v260H0z" fill="#fff" opacity=".05"/>
+  <g fill="none" stroke="#f0b90b" stroke-opacity=".45" stroke-width="2">
+    <path d="M0 140h1600M0 300h1600M0 460h1600M160 0v720M420 0v720M980 0v720M1320 0v720"/>
+  </g>
+</svg>
