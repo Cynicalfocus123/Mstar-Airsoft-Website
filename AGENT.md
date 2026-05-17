@@ -154,6 +154,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Replaced the three-slide homepage media carousel with a single video hero, resolved public video/poster paths through the Vite base URL for GitHub Pages, changed attendance values to show only player counts under the Attendance label, and changed login/register success to return users to their previous page instead of Account Settings.
 - Removed all text from the homepage video hero overlay except the Sign Up Now button, and forced the hero video to reset to 0 seconds and play immediately on mount.
 - Added route-level scroll reset so Events, Event Detail, auth, account, and other full-page routes always open at the top instead of inheriting the previous scroll position.
+- Repositioned the homepage video hero Sign Up Now CTA to bottom-center inside the video with mobile-optimized width and tap target sizing.
 
 ## Completed Changes
 
@@ -181,6 +182,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Simplified homepage banner to a single video hero, fixed Pages-safe video asset paths, removed carousel arrows/dots/image slides, changed displayed attendance values to player counts only, and preserved user location after login/register.
 - 2026-05-17: Removed video hero text overlay, kept only the Sign Up Now CTA, and made hero video restart from 0 seconds on page entry.
 - 2026-05-17: Added top-of-page scroll reset for full page route changes while preserving homepage section anchor behavior.
+- 2026-05-17: Moved video hero Sign Up Now button to bottom-center inside the video and improved mobile button sizing.
 
 ## Next Steps
 

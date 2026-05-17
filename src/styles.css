@@ -757,11 +757,11 @@ select:focus {
 .banner-overlay {
   position: absolute;
   z-index: 2;
-  top: 50%;
-  right: clamp(20px, 7vw, 110px);
-  width: min(260px, calc(100% - 100px));
-  text-align: right;
-  transform: translateY(-50%);
+  right: 50%;
+  bottom: clamp(34px, 7vw, 86px);
+  width: min(320px, calc(100% - 40px));
+  text-align: center;
+  transform: translateX(50%);
 }
 
 .banner-overlay h1,
@@ -784,7 +784,9 @@ select:focus {
 }
 
 .banner-overlay .btn {
-  min-width: 210px;
+  width: 100%;
+  min-width: 220px;
+  min-height: 54px;
 }
 
 .slider-arrow {
@@ -1208,8 +1210,9 @@ select:focus {
   }
 
   .banner-overlay {
-    right: 72px;
-    width: calc(100% - 144px);
+    right: 50%;
+    bottom: 56px;
+    width: min(320px, calc(100% - 64px));
   }
 
   .event-banner-content dl,
@@ -1244,11 +1247,18 @@ select:focus {
   }
 
   .banner-overlay {
-    top: 48%;
     left: 20px;
     right: 20px;
+    bottom: 84px;
     width: calc(100% - 40px);
     text-align: center;
+    transform: none;
+  }
+
+  .banner-overlay .btn {
+    min-width: 0;
+    min-height: 52px;
+    padding-inline: 18px;
   }
 
   .banner-overlay p:not(.eyebrow) {

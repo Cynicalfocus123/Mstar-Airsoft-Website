@@ -60,6 +60,7 @@
 - Homepage banner first slide uses the provided airsoft video as full-width background media with dark overlay and right-aligned copy on desktop.
 - Homepage banner is no longer a three-image carousel; it is a single full-width video hero with text and CTA over the video.
 - Homepage video hero overlay should show only the gold Sign Up Now button.
+- Homepage video hero CTA sits bottom-center inside the video and remains easy to tap on mobile.
 - Event detail pages use a large top banner, content panel, and right-side Join Now/details panel that collapses cleanly on mobile.
 - Event detail titles must wrap inside their panel without clipping or oversized overflow.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
@@ -145,3 +146,4 @@
 - 2026-05-17: Removed remaining image-slider controls from the homepage hero, made the video path deployment-safe, simplified attendance display to numeric player counts, and kept users on their return page after auth.
 - 2026-05-17: Removed homepage video hero text overlay and retained only the Sign Up Now CTA over autoplaying looped video.
 - 2026-05-17: Fixed route navigation scroll behavior so new pages open from the top while homepage section links still work.
+- 2026-05-17: Repositioned homepage video hero CTA to bottom-center and optimized its mobile tap target.
