@@ -5,16 +5,17 @@ interface HeaderProps {
   identity: SiteIdentity;
   navLinks: NavLink[];
   authLinks: NavLink[];
+  isAuthenticated: boolean;
 }
 
-export function Header({ identity, navLinks, authLinks }: HeaderProps) {
+export function Header({ identity, navLinks, authLinks, isAuthenticated }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAccountOpen, setIsAccountOpen] = useState(false);
 
   return (
     <header className="site-header">
       <a className="brand" href="#/" aria-label={`${identity.name} home`}>
         <img src={identity.logoPath} alt={`${identity.name} logo`} />
-        <span>{identity.name}</span>
       </a>
       <button
         className="menu-toggle"
@@ -34,16 +35,38 @@ export function Header({ identity, navLinks, authLinks }: HeaderProps) {
           </a>
         ))}
         <div className="header-actions">
-          {authLinks.map((link, index) => (
-            <a
-              className={index === 0 ? 'auth-link auth-link-login' : 'auth-link auth-link-signup'}
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          {isAuthenticated ? (
+            <div className={isAccountOpen ? 'account-menu account-menu-open' : 'account-menu'}>
+              <button
+                className="auth-link auth-link-signup account-menu-button"
+                type="button"
+                aria-expanded={isAccountOpen}
+                aria-haspopup="menu"
+                onClick={() => setIsAccountOpen((open) => !open)}
+              >
+                My Account
+              </button>
+              <div className="account-dropdown" role="menu">
+                <a href="#/account" role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
+                  Account Settings
+                </a>
+                <a href="#/account#orders" role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
+                  Orders
+                </a>
+              </div>
+            </div>
+          ) : (
+            authLinks.map((link, index) => (
+              <a
+                className={index === 0 ? 'auth-link auth-link-login' : 'auth-link auth-link-signup'}
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))
+          )}
         </div>
       </nav>
     </header>

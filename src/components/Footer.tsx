@@ -11,10 +11,6 @@ export function Footer({ identity, links, contact }: FooterProps) {
     <footer className="site-footer">
       <div className="footer-brand">
         <img src={identity.logoPath} alt={`${identity.name} logo`} />
-        <div>
-          <strong>{identity.name}</strong>
-          <span>{identity.tagline}</span>
-        </div>
       </div>
       <nav className="footer-links" aria-label="Footer navigation">
         {links.map((link) => (

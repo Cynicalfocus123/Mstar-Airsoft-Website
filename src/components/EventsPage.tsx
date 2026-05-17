@@ -19,7 +19,7 @@ export function EventsPage({ events }: EventsPageProps) {
       </section>
       <section className="event-banner-list" aria-label="All events">
         {visibleEvents.map((event) => (
-          <article className="event-banner-card" key={event.id}>
+          <a className="event-banner-card" key={event.id} href={`#/events/${event.id}`} aria-label={`Open ${event.title}`}>
             <img src={event.imagePath} alt="" loading="lazy" />
             <div className="event-banner-content">
               <span>{event.date}</span>
@@ -35,13 +35,17 @@ export function EventsPage({ events }: EventsPageProps) {
                   <dd>{event.entryFee}</dd>
                 </div>
                 <div>
-                  <dt>Team</dt>
-                  <dd>{event.teamSize}</dd>
+                  <dt>Teams</dt>
+                  <dd>{event.teams}</dd>
+                </div>
+                <div>
+                  <dt>Attendance</dt>
+                  <dd>Attendance: {event.attendance}</dd>
                 </div>
               </dl>
               <strong>{event.status}</strong>
             </div>
-          </article>
+          </a>
         ))}
       </section>
       {hasMore && (

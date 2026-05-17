@@ -212,8 +212,9 @@ textarea {
 }
 
 .btn-primary {
-  color: var(--white);
-  background: linear-gradient(180deg, var(--red), var(--red-dark));
+  color: #090909;
+  border-color: var(--gold);
+  background: linear-gradient(180deg, var(--gold), var(--gold-dark));
 }
 
 .btn-secondary {
@@ -320,7 +321,7 @@ textarea {
 
 .check-list li {
   padding: 16px;
-  border-left: 4px solid var(--red);
+  border-left: 4px solid var(--gold);
   background: rgba(255, 255, 255, 0.055);
 }
 
@@ -347,7 +348,7 @@ textarea {
 }
 
 .card-topline strong {
-  color: var(--red);
+  color: var(--gold);
 }
 
 .event-card h3 {
@@ -404,7 +405,8 @@ dd {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 0;
@@ -418,7 +420,8 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: 2px solid rgba(196, 33, 34, 0.55);
   outline-offset: 2px;
 }
@@ -610,20 +613,6 @@ textarea:focus {
   --gold-dark: #b88400;
 }
 
-select {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 0;
-  padding: 14px 15px;
-  color: var(--white);
-  background: #0f120d;
-}
-
-select:focus {
-  outline: 2px solid rgba(240, 185, 11, 0.55);
-  outline-offset: 2px;
-}
-
 .btn-gold {
   color: #090909;
   border-color: var(--gold);
@@ -660,14 +649,53 @@ select:focus {
   margin-left: 8px;
 }
 
-.nav .auth-link {
+.nav .auth-link,
+.account-menu-button {
   color: var(--white);
   border: 1px solid rgba(240, 185, 11, 0.38);
 }
 
-.nav .auth-link-signup {
+.nav .auth-link-signup,
+.account-menu-button {
   color: #080808;
   background: var(--gold);
+}
+
+.account-menu {
+  position: relative;
+}
+
+.account-menu-button {
+  min-height: 44px;
+  padding: 11px 13px;
+  font-size: 0.86rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.account-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  display: grid;
+  min-width: 210px;
+  padding: 8px;
+  border: 1px solid rgba(240, 185, 11, 0.36);
+  background: #111;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.account-menu:hover .account-dropdown,
+.account-menu:focus-within .account-dropdown,
+.account-menu-open .account-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .banner-slider {
@@ -814,6 +842,7 @@ select:focus {
 
 .event-banner-card {
   position: relative;
+  display: block;
   min-height: 360px;
   overflow: hidden;
   border: 1px solid rgba(240, 185, 11, 0.28);
@@ -870,7 +899,7 @@ select:focus {
 }
 
 .event-banner-content dl {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 22px 0;
 }
 
@@ -949,11 +978,14 @@ select:focus {
 .site-footer {
   color: var(--white);
   border-top: 1px solid rgba(255, 255, 255, 0.16);
-  background: linear-gradient(180deg, #5a5a5a, #2c2c2c);
+  background:
+    linear-gradient(180deg, rgba(240, 185, 11, 0.12), transparent 56%),
+    linear-gradient(180deg, #686868, #303030);
 }
 
 .footer-brand {
   color: var(--white);
+  min-width: 116px;
 }
 
 .footer-brand img {
@@ -976,11 +1008,135 @@ select:focus {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.orders-panel {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.orders-panel h2,
+.event-detail-main h2 {
+  margin: 0 0 12px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.orders-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.event-detail-page {
+  min-height: calc(100vh - 92px);
+  background: #070707;
+}
+
+.event-detail-hero {
+  position: relative;
+  height: clamp(320px, 50vw, 620px);
+  overflow: hidden;
+  background: #050505;
+}
+
+.event-detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-detail-hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.7));
+}
+
+.event-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: clamp(24px, 5vw, 54px);
+  width: min(1160px, 100%);
+  margin: -80px auto 0;
+  padding: 0 clamp(18px, 4vw, 24px) clamp(60px, 8vw, 96px);
+  position: relative;
+  z-index: 2;
+}
+
+.event-detail-main,
+.event-detail-sidebar {
+  border: 1px solid rgba(240, 185, 11, 0.28);
+  background: linear-gradient(180deg, rgba(22, 22, 22, 0.97), rgba(8, 8, 8, 0.97));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+}
+
+.event-detail-main {
+  padding: clamp(24px, 5vw, 48px);
+}
+
+.event-detail-main h1 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(2.8rem, 7vw, 6.5rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.event-detail-main p {
+  color: #e9e0c8;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.event-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 32px;
+}
+
+.event-meta-strip span {
+  padding: 9px 12px;
+  border: 1px solid rgba(240, 185, 11, 0.3);
+  color: var(--gold);
+  font-size: 0.84rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.event-detail-sidebar {
+  align-self: start;
+  display: grid;
+  gap: 24px;
+  padding: 22px;
+}
+
+.join-now-button {
+  width: 100%;
+}
+
 @media (max-width: 900px) {
   .header-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 8px 0 0;
+  }
+
+  .account-menu {
+    grid-column: 1 / -1;
+  }
+
+  .account-menu-button {
+    width: 100%;
+  }
+
+  .account-dropdown {
+    position: static;
+    margin-top: 8px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
   }
 
   .banner-overlay {
@@ -989,9 +1145,14 @@ select:focus {
   }
 
   .event-banner-content dl,
+  .event-detail-layout,
   .auth-layout,
   .account-form {
     grid-template-columns: 1fr;
+  }
+
+  .event-detail-layout {
+    margin-top: -42px;
   }
 }
 
@@ -1033,6 +1194,14 @@ select:focus {
 
   .event-banner-card {
     min-height: 520px;
+  }
+
+  .event-banner-content {
+    padding: 22px;
+  }
+
+  .event-detail-hero {
+    height: 300px;
   }
 
   .captcha-check {

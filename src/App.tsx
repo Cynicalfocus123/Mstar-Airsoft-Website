@@ -12,18 +12,23 @@ import { Footer } from './components/Footer';
 import { EventsPage } from './components/EventsPage';
 import { SignInPage } from './components/SignInPage';
 import { CreateAccountPage } from './components/CreateAccountPage';
+import { AccountSettingsPage } from './components/AccountSettingsPage';
+import { EventDetailPage } from './components/EventDetailPage';
 import { siteContent } from './data/siteContent';
 
 function getRoute() {
   const hash = window.location.hash;
-  if (hash.startsWith('#/events')) return 'events';
-  if (hash.startsWith('#/signin')) return 'signin';
-  if (hash.startsWith('#/signup')) return 'signup';
-  return 'home';
+  if (hash.startsWith('#/events/')) return { name: 'eventDetail', eventId: hash.replace('#/events/', '') };
+  if (hash.startsWith('#/events')) return { name: 'events' };
+  if (hash.startsWith('#/signin')) return { name: 'signin' };
+  if (hash.startsWith('#/signup')) return { name: 'signup' };
+  if (hash.startsWith('#/account')) return { name: 'account' };
+  return { name: 'home' };
 }
 
 export default function App() {
   const [route, setRoute] = useState(getRoute);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => localStorage.getItem('mstarAccountStatus') === 'active');
 
   useEffect(() => {
     function handleHashChange() {
@@ -34,7 +39,14 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  const isHome = route === 'home';
+  function markSignedIn() {
+    localStorage.setItem('mstarAccountStatus', 'active');
+    setIsAuthenticated(true);
+    window.location.hash = '#/account';
+  }
+
+  const isHome = route.name === 'home';
+  const selectedEvent = route.name === 'eventDetail' ? siteContent.events.find((event) => event.id === route.eventId) : undefined;
 
   return (
     <>
@@ -42,6 +54,7 @@ export default function App() {
         identity={siteContent.identity}
         navLinks={siteContent.navLinks}
         authLinks={siteContent.authLinks}
+        isAuthenticated={isAuthenticated}
       />
       {isHome && (
         <main>
@@ -55,10 +68,18 @@ export default function App() {
           <Contact contact={siteContent.contact} />
         </main>
       )}
-      {route === 'events' && <EventsPage events={siteContent.events} />}
-      {route === 'signin' && <SignInPage content={siteContent.signIn} />}
-      {route === 'signup' && (
+      {route.name === 'events' && <EventsPage events={siteContent.events} />}
+      {route.name === 'eventDetail' && <EventDetailPage event={selectedEvent} />}
+      {route.name === 'signin' && <SignInPage content={siteContent.signIn} onSuccess={markSignedIn} />}
+      {route.name === 'signup' && (
         <CreateAccountPage
+          content={siteContent.createAccount}
+          countryRegions={siteContent.countryRegions}
+          onSuccess={markSignedIn}
+        />
+      )}
+      {route.name === 'account' && (
+        <AccountSettingsPage
           content={siteContent.createAccount}
           countryRegions={siteContent.countryRegions}
         />

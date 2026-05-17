@@ -33,10 +33,10 @@ export function BannerSlider({ slides }: BannerSliderProps) {
         </a>
       </div>
       <button className="slider-arrow slider-arrow-left" type="button" onClick={() => goToSlide(activeIndex - 1)} aria-label="Previous slide">
-        ‹
+        &lt;
       </button>
       <button className="slider-arrow slider-arrow-right" type="button" onClick={() => goToSlide(activeIndex + 1)} aria-label="Next slide">
-        ›
+        &gt;
       </button>
       <div className="slide-dots" aria-label="Slide navigation">
         {slides.map((slide, index) => (

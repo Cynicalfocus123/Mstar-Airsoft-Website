@@ -1,5 +1,6 @@
 import type { FormEvent } from 'react';
 import type { FormField } from '../types/siteContent';
+import { getCleanFormData } from '../utils/formSecurity';
 
 interface RegistrationProps {
   fields: FormField[];
@@ -8,8 +9,7 @@ interface RegistrationProps {
 export function Registration({ fields }: RegistrationProps) {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    console.info('Registration payload ready for future API integration:', Object.fromEntries(formData));
+    console.info('Registration payload ready for future API integration:', getCleanFormData(event.currentTarget));
   }
 
   return (
@@ -36,6 +36,7 @@ export function Registration({ fields }: RegistrationProps) {
                 placeholder={field.placeholder}
                 required={field.required}
                 min={field.type === 'number' ? 1 : undefined}
+                maxLength={field.type === 'number' ? undefined : 180}
               />
             )}
           </label>

@@ -20,7 +20,7 @@ export function Events({ events, viewAllHref }: EventsProps) {
       </div>
       <div className="card-grid">
         {events.map((event) => (
-          <article className="event-card" key={event.id}>
+          <a className="event-card" key={event.id} href={`#/events/${event.id}`}>
             <div className="card-topline">
               <span>{event.date}</span>
               <strong>{event.status}</strong>
@@ -36,11 +36,15 @@ export function Events({ events, viewAllHref }: EventsProps) {
                 <dd>{event.entryFee}</dd>
               </div>
               <div>
-                <dt>Team size</dt>
-                <dd>{event.teamSize}</dd>
+                <dt>Teams</dt>
+                <dd>{event.teams}</dd>
+              </div>
+              <div>
+                <dt>Attendance</dt>
+                <dd>Attendance: {event.attendance}</dd>
               </div>
             </dl>
-          </article>
+          </a>
         ))}
       </div>
     </section>

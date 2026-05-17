@@ -46,11 +46,14 @@ export interface EventCard {
   id: string;
   title: string;
   date: string;
+  time: string;
   location: string;
   entryFee: string;
-  teamSize: string;
+  teams: string;
+  attendance: string;
   status: string;
   summary: string;
+  overview: string;
   imagePath: string;
 }
 

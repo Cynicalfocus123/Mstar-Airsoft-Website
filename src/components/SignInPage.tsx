@@ -1,15 +1,17 @@
 import type { FormEvent } from 'react';
 import type { SignInContent } from '../types/siteContent';
+import { getCleanFormData } from '../utils/formSecurity';
 
 interface SignInPageProps {
   content: SignInContent;
+  onSuccess: () => void;
 }
 
-export function SignInPage({ content }: SignInPageProps) {
+export function SignInPage({ content, onSuccess }: SignInPageProps) {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    console.info('Sign in payload ready for future API integration:', Object.fromEntries(formData));
+    console.info('Sign in payload ready for future API integration:', getCleanFormData(event.currentTarget));
+    onSuccess();
   }
 
   return (
@@ -21,7 +23,7 @@ export function SignInPage({ content }: SignInPageProps) {
             {content.fields.map((field) => (
               <label className="field" key={field.id}>
                 <span>{field.label}</span>
-                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} />
+                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={128} />
               </label>
             ))}
             <button className="btn btn-gold" type="submit">

@@ -56,6 +56,8 @@
 - Avoid soft rounded generic SaaS style.
 - Event page banners must have large image treatment with animated hover movement.
 - Homepage banner slider must include arrows, dots, overlaid event text, and gold Sign Up CTA.
+- Event detail pages use a large top banner, content panel, and right-side Join Now/details panel that collapses cleanly on mobile.
+- Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 
 ## Responsive Design Rules
 
@@ -131,3 +133,4 @@
 - 2026-05-17: Added permanent automatic commit/push, approved normal change, project memory, token-saving, and do-not-repeat design workflow rules.
 - 2026-05-17: Updated brand direction to black/white/gold, added transparent logo visibility rules, homepage slider, event banner hover design, auth page layouts, and lighter footer treatment.
 - 2026-05-17: Revised header/footer to grey treatment and removed logo background plates so the transparent MSTAR logo displays directly.
+- 2026-05-17: Finished account dropdown/settings UX, event detail layout, clickable event banners, country/region form behavior, gold CTA consistency, and responsive refinements for account, banner, and event surfaces.

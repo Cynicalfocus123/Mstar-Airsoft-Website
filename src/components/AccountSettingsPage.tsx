@@ -2,28 +2,29 @@ import { useState, type FormEvent } from 'react';
 import type { CountryRegion, CreateAccountContent } from '../types/siteContent';
 import { getCleanFormData } from '../utils/formSecurity';
 
-interface CreateAccountPageProps {
+interface AccountSettingsPageProps {
   content: CreateAccountContent;
   countryRegions: CountryRegion[];
-  onSuccess: () => void;
 }
 
-export function CreateAccountPage({ content, countryRegions, onSuccess }: CreateAccountPageProps) {
-  const [country, setCountry] = useState(countryRegions[0]?.country ?? '');
+const editableFields = new Set(['email', 'address1', 'city', 'stateProvince', 'zip', 'country', 'phone']);
+
+export function AccountSettingsPage({ content, countryRegions }: AccountSettingsPageProps) {
+  const [country, setCountry] = useState(countryRegions.find((item) => item.country === 'Thailand')?.country ?? countryRegions[0]?.country ?? '');
   const regions = countryRegions.find((item) => item.country === country)?.regions ?? [];
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.info('Create account payload ready for future API integration:', getCleanFormData(event.currentTarget));
-    onSuccess();
+    console.info('Account settings payload ready for future API integration:', getCleanFormData(event.currentTarget));
   }
 
   return (
     <main className="auth-page">
       <section className="auth-panel create-account-panel">
-        <h1>{content.title}</h1>
+        <p className="eyebrow">My Account</p>
+        <h1>Account Settings</h1>
         <form className="account-form" onSubmit={handleSubmit}>
-          {content.fields.map((field) => {
+          {content.fields.filter((field) => editableFields.has(field.id)).map((field) => {
             if (field.id === 'country') {
               return (
                 <label className="field" key={field.id}>
@@ -61,18 +62,18 @@ export function CreateAccountPage({ content, countryRegions, onSuccess }: Create
             return (
               <label className="field" key={field.id}>
                 <span>{field.label}</span>
-                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={field.type === 'password' ? 128 : 180} />
+                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={180} />
               </label>
             );
           })}
-          <label className="captcha-check">
-            <input name="notRobot" type="checkbox" required />
-            <span>I'm not a robot</span>
-          </label>
           <button className="btn btn-gold form-submit" type="submit">
-            Create Account
+            Save Account Settings
           </button>
         </form>
+        <section className="orders-panel" id="orders" aria-label="Orders">
+          <h2>Orders</h2>
+          <p>Your future event registrations and orders will appear here once backend order history is connected.</p>
+        </section>
       </section>
     </main>
   );

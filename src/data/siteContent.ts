@@ -1,5 +1,6 @@
 import logoPath from '../assets/mstar-airsoft-logo.png';
 import type { SiteContent } from '../types/siteContent';
+import { worldCountries } from './countries';
 
 export const siteContent: SiteContent = {
   identity: {
@@ -10,7 +11,7 @@ export const siteContent: SiteContent = {
   navLinks: [
     { label: 'Home', href: '#/' },
     { label: 'About', href: '#about' },
-    { label: 'Events', href: '#events' },
+    { label: 'Events', href: '#/events' },
     { label: 'Rules', href: '#rules' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'Contact', href: '#contact' },
@@ -76,66 +77,90 @@ export const siteContent: SiteContent = {
       id: 'urban-rush',
       title: 'Urban Rush Qualifier',
       date: 'June 21, 2026',
+      time: '09:00 AM - 05:30 PM',
       location: 'Bangkok Tactical Field',
       entryFee: 'THB 1,500 / player',
-      teamSize: '5 players',
+      teams: 'Alpha Coalition vs Bravo Unit',
+      attendance: '2,000 players',
       status: 'Registration Open',
       summary: 'A fast-paced qualifier built around urban lanes, short rotations, and clean team scoring.',
+      overview:
+        'Urban Rush Qualifier is a controlled tournament day for squads that want fast objective cycles, clear marshal calls, and structured scoring. Teams rotate through urban lanes, capture points, and timed pressure rounds before final bracket placement.',
       imagePath: '/banners/event-urban.svg',
     },
     {
       id: 'night-grid',
       title: 'Night Grid Invitational',
       date: 'July 12, 2026',
+      time: '04:00 PM - 11:30 PM',
       location: 'Eastern Training Zone',
       entryFee: 'THB 2,000 / player',
-      teamSize: '6 players',
+      teams: 'Night Squad vs Grid Command',
+      attendance: '1,200 players',
       status: 'Limited Slots',
       summary: 'Low-light missions with tight objective windows and strict safety control.',
+      overview:
+        'Night Grid Invitational uses low-light lanes, visible team markings, and marshal-held pause points. The format rewards communication, disciplined movement, and clean hit calling across timed mission sets.',
       imagePath: '/banners/event-night.svg',
     },
     {
       id: 'final-front',
       title: 'Final Front Championship',
       date: 'August 30, 2026',
+      time: '08:00 AM - 06:00 PM',
       location: 'Mstar Event Arena',
       entryFee: 'THB 10,000 / team',
-      teamSize: '5 players + sub',
+      teams: 'Qualified Teams Bracket',
+      attendance: '2,500 players',
       status: 'Coming Soon',
       summary: 'Season-end championship bracket for qualified teams and invited squads.',
+      overview:
+        'Final Front Championship closes the season with seeded brackets, staged finals, field briefings, and objective-based scoring. Qualified teams should arrive roster-ready with approved gear and captain check-in complete.',
       imagePath: '/banners/event-final.svg',
     },
     {
       id: 'ridge-line',
       title: 'Ridge Line Assault',
       date: 'September 19, 2026',
+      time: '10:00 AM - 05:00 PM',
       location: 'Northern Ridge Field',
       entryFee: 'THB 1,800 / player',
-      teamSize: '7 players',
+      teams: 'Ridge Command vs Valley Response',
+      attendance: '1,600 players',
       status: 'Roster Preview',
       summary: 'Outdoor objective play with longer lanes, hold points, and rotating command roles.',
+      overview:
+        'Ridge Line Assault expands the field with outdoor control points, longer rotations, and command role swaps. The event favors patient movement, reliable squad spacing, and objective timing.',
       imagePath: '/banners/event-ridge.svg',
     },
     {
       id: 'steel-yard',
       title: 'Steel Yard Clash',
       date: 'October 10, 2026',
+      time: '09:30 AM - 04:30 PM',
       location: 'Industrial Yard Arena',
       entryFee: 'THB 1,600 / player',
-      teamSize: '5 players',
+      teams: 'Steel Team vs Yard Team',
+      attendance: '900 players',
       status: 'Coming Soon',
       summary: 'Compact arena tournament designed for quick pushes and precise communication.',
+      overview:
+        'Steel Yard Clash is a compact arena operation with short resets, fast flanks, and tight objective windows. Captains should prepare for rapid match turnaround and close-range discipline.',
       imagePath: '/banners/event-steel.svg',
     },
     {
       id: 'black-zone',
       title: 'Black Zone Finals',
       date: 'November 15, 2026',
+      time: '08:30 AM - 07:00 PM',
       location: 'Mstar Main Field',
       entryFee: 'THB 12,000 / team',
-      teamSize: '6 players + sub',
+      teams: 'Finalists Red vs Finalists Gold',
+      attendance: '3,000 players',
       status: 'Invite Watch',
       summary: 'Final high-pressure tournament with ranked seeds, finals staging, and broadcast-ready timing.',
+      overview:
+        'Black Zone Finals brings the highest-ranked squads into a finals format with staged entrances, controlled briefings, and pressure-tested mission rules. Expect strict timing and no loose equipment checks.',
       imagePath: '/banners/event-black.svg',
     },
   ],
@@ -230,26 +255,16 @@ export const siteContent: SiteContent = {
       { id: 'phone', label: 'Phone number', type: 'tel', placeholder: '+66 00 000 0000', required: true },
     ],
   },
-  countryRegions: [
-    {
-      country: 'United States',
-      regions: ['Alabama', 'California', 'Florida', 'New York', 'Texas', 'Washington'],
-    },
-    {
-      country: 'Thailand',
-      regions: ['Bangkok', 'Chiang Mai', 'Chonburi', 'Phuket', 'Nakhon Ratchasima', 'Nonthaburi'],
-    },
-    {
-      country: 'Canada',
-      regions: ['Alberta', 'British Columbia', 'Manitoba', 'Ontario', 'Quebec', 'Saskatchewan'],
-    },
-    {
-      country: 'Japan',
-      regions: ['Aichi', 'Chiba', 'Hokkaido', 'Osaka', 'Tokyo', 'Yokohama'],
-    },
-    {
-      country: 'Australia',
-      regions: ['Australian Capital Territory', 'New South Wales', 'Queensland', 'Victoria', 'Western Australia'],
-    },
-  ],
+  countryRegions: worldCountries.map((country) => ({
+    country,
+    regions:
+      {
+        Australia: ['Australian Capital Territory', 'New South Wales', 'Northern Territory', 'Queensland', 'South Australia', 'Tasmania', 'Victoria', 'Western Australia'],
+        Canada: ['Alberta', 'British Columbia', 'Manitoba', 'New Brunswick', 'Newfoundland and Labrador', 'Northwest Territories', 'Nova Scotia', 'Nunavut', 'Ontario', 'Prince Edward Island', 'Quebec', 'Saskatchewan', 'Yukon'],
+        Japan: ['Aichi', 'Akita', 'Aomori', 'Chiba', 'Ehime', 'Fukui', 'Fukuoka', 'Fukushima', 'Gifu', 'Gunma', 'Hiroshima', 'Hokkaido', 'Hyogo', 'Ibaraki', 'Ishikawa', 'Iwate', 'Kagawa', 'Kagoshima', 'Kanagawa', 'Kochi', 'Kumamoto', 'Kyoto', 'Mie', 'Miyagi', 'Miyazaki', 'Nagano', 'Nagasaki', 'Nara', 'Niigata', 'Oita', 'Okayama', 'Okinawa', 'Osaka', 'Saga', 'Saitama', 'Shiga', 'Shimane', 'Shizuoka', 'Tochigi', 'Tokushima', 'Tokyo', 'Tottori', 'Toyama', 'Wakayama', 'Yamagata', 'Yamaguchi', 'Yamanashi'],
+        Thailand: ['Amnat Charoen', 'Ang Thong', 'Bangkok', 'Bueng Kan', 'Buri Ram', 'Chachoengsao', 'Chai Nat', 'Chaiyaphum', 'Chanthaburi', 'Chiang Mai', 'Chiang Rai', 'Chonburi', 'Chumphon', 'Kalasin', 'Kamphaeng Phet', 'Kanchanaburi', 'Khon Kaen', 'Krabi', 'Lampang', 'Lamphun', 'Loei', 'Lopburi', 'Mae Hong Son', 'Maha Sarakham', 'Mukdahan', 'Nakhon Nayok', 'Nakhon Pathom', 'Nakhon Phanom', 'Nakhon Ratchasima', 'Nakhon Sawan', 'Nakhon Si Thammarat', 'Nan', 'Narathiwat', 'Nong Bua Lam Phu', 'Nong Khai', 'Nonthaburi', 'Pathum Thani', 'Pattani', 'Phang Nga', 'Phatthalung', 'Phayao', 'Phetchabun', 'Phetchaburi', 'Phichit', 'Phitsanulok', 'Phra Nakhon Si Ayutthaya', 'Phrae', 'Phuket', 'Prachinburi', 'Prachuap Khiri Khan', 'Ranong', 'Ratchaburi', 'Rayong', 'Roi Et', 'Sa Kaeo', 'Sakon Nakhon', 'Samut Prakan', 'Samut Sakhon', 'Samut Songkhram', 'Saraburi', 'Satun', 'Sing Buri', 'Sisaket', 'Songkhla', 'Sukhothai', 'Suphan Buri', 'Surat Thani', 'Surin', 'Tak', 'Trang', 'Trat', 'Ubon Ratchathani', 'Udon Thani', 'Uthai Thani', 'Uttaradit', 'Yala', 'Yasothon'],
+        'United Kingdom': ['England', 'Northern Ireland', 'Scotland', 'Wales'],
+        'United States': ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'],
+      }[country] ?? [],
+  })),
 };
