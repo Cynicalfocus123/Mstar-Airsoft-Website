@@ -58,6 +58,7 @@ export const siteContent: SiteContent = {
       'Clear registration flow for teams and solo players',
       'Rules, safety, and gear details ready for admin updates',
     ],
+    backgroundImagePath: '/images/about-background.avif',
   },
   events: [
     {

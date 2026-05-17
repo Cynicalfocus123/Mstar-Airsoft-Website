@@ -44,6 +44,7 @@ export interface AboutContent {
   title: string;
   body: string;
   highlights: string[];
+  backgroundImagePath?: string;
 }
 
 export interface EventCard {

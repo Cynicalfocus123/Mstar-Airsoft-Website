@@ -165,6 +165,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Updated main navigation and footer links to use named hash routes like `#/home`, `#/about`, `#/rules`, `#/gallery`, and `#/contact`, with homepage section scrolling wired through the app router instead of bare `#section` fragments.
 - Replaced the homepage YouTube hero embed with a native full-length video background using `/videos/home-hero.mp4`, poster fallback `/images/home-hero-poster.jpg`, muted autoplay, loop, playsInline, preload, pointer-events disabled, and no controls.
 - Added a mobile-only homepage hero video source at `/videos/home-hero-mobile.mp4`, selected by the hero component for screens up to 640px while desktop keeps the full desktop MP4.
+- Added a dedicated background image for the homepage About section, rendering the supplied AVIF only behind “Competitive airsoft with clean structure and strong field discipline.” with its own dark overlay.
 
 ## Completed Changes
 
@@ -203,6 +204,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Replaced bare fragment menu URLs with named hash routes and routed homepage section links through the app so menu paths read cleanly while still scrolling to the correct section.
 - 2026-05-17: Removed the YouTube iframe from the homepage hero and restored a native full-length video background with poster fallback, muted autoplay, loop, playsInline, and no interactive controls.
 - 2026-05-17: Added the supplied mobile-specific hero video as a Git LFS public asset and wired the homepage hero to use it only on mobile viewports.
+- 2026-05-17: Added the supplied AVIF image behind the homepage About section and kept the section text readable with an isolated overlay treatment.
 
 ## Next Steps
 

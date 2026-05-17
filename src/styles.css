@@ -302,11 +302,40 @@ textarea {
   text-transform: uppercase;
 }
 
+.about-section {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  padding-right: clamp(18px, 4vw, 64px);
+  padding-left: clamp(18px, 4vw, 64px);
+  background-color: #090909;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.about-section::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(7, 8, 7, 0.92), rgba(7, 8, 7, 0.72) 45%, rgba(7, 8, 7, 0.88)),
+    linear-gradient(180deg, rgba(240, 185, 11, 0.08), rgba(0, 0, 0, 0.46));
+}
+
+.about-section-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1160px, 100%);
+  margin: 0 auto;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
   gap: 34px;
-  color: var(--muted);
+  color: #d7d4ca;
   font-size: 1.05rem;
   line-height: 1.7;
 }
