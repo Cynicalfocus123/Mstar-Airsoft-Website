@@ -75,6 +75,7 @@
 - Homepage hero video must use the full native video file, not YouTube or a short trimmed loop, with a poster fallback, muted autoplay, loop, playsInline, no controls, pointer-events disabled, and dark overlay/content stacking above the video.
 - Homepage hero may use a separate mobile-specific native MP4 on small screens, but desktop must keep the desktop full-length hero video and both versions must remain muted, looping, no-controls background media.
 - The About section can carry its own background image when supplied, but the image must stay scoped to that section only and use a strong overlay so the copy remains clear and tactical.
+- Mobile header navigation should stay visually locked beneath the sticky header while scrolling, without clipping through the bar, and homepage hero video overlays should preserve the footage closer to its natural brightness.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
 
@@ -170,3 +171,4 @@
 - 2026-05-17: Replaced the homepage YouTube hero with a native full-length MP4 background, poster image, no player controls, disabled video interaction, and preserved dark overlay plus CTA layering.
 - 2026-05-17: Added a mobile-only homepage hero video source so small screens use the supplied mobile clip while desktop keeps the existing full hero video.
 - 2026-05-17: Added a section-specific background image treatment to the homepage About block using the supplied AVIF with an overlay for readability.
+- 2026-05-17: Refined the mobile header menu into a fixed under-header drawer and lightened the homepage hero video overlay so the desktop and mobile footage reads less dark.

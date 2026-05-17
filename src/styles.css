@@ -62,7 +62,7 @@ textarea {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 60;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -559,17 +559,26 @@ select:focus {
     display: block;
   }
 
+  .site-header {
+    overflow: visible;
+  }
+
   .nav {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 92px;
     right: 18px;
     left: 18px;
+    z-index: 59;
     display: none;
     flex-direction: column;
     align-items: stretch;
+    max-height: calc(100vh - 112px);
     padding: 12px;
     border: 1px solid var(--line);
-    background: #080908;
+    overflow-y: auto;
+    background: rgba(8, 9, 8, 0.98);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(18px);
   }
 
   .nav-open {
@@ -601,6 +610,13 @@ select:focus {
 @media (max-width: 640px) {
   .site-header {
     min-height: 72px;
+  }
+
+  .nav {
+    top: 72px;
+    right: 12px;
+    left: 12px;
+    max-height: calc(100vh - 88px);
   }
 
   .brand span {
@@ -781,7 +797,7 @@ select:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: saturate(0.92) contrast(1.05);
+  filter: saturate(1) contrast(1.02);
 }
 
 .banner-background-video,
@@ -797,8 +813,8 @@ select:focus {
   z-index: 1;
   content: "";
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.34) 45%, rgba(0, 0, 0, 0.82)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.7));
+    linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.14) 45%, rgba(0, 0, 0, 0.52)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.34));
 }
 
 .banner-overlay {
