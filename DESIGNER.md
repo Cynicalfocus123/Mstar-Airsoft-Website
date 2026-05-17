@@ -77,6 +77,7 @@
 - The About section can carry its own background image when supplied, but the image must stay scoped to that section only and use a strong overlay so the copy remains clear and tactical.
 - Mobile header navigation should stay visually locked beneath the sticky header while scrolling, without clipping through the bar, and homepage hero video overlays should preserve the footage closer to its natural brightness.
 - Section background images must resolve through the deployed site base path, not raw root-relative URLs, so homepage imagery still appears correctly on GitHub Pages.
+- About section imagery must be optimized for mobile as well as desktop, using the content-config mobile background path and mobile-specific crop/readability styling.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
 
@@ -90,11 +91,13 @@
 
 ## Image/Lightweight Design Rules
 
+- Main priority: every site image must be planned and implemented for both desktop and mobile, including source choice, crop/position, aspect ratio, file weight, and readability overlays.
 - Avoid large decorative image backgrounds.
 - Prefer CSS texture, gradients, and lightweight placeholder images.
 - Gallery paths should prefer WebP/AVIF.
 - Gallery images use lazy loading.
 - Logo PNG is acceptable because it is user-replaceable brand asset.
+- Background and hero images must provide a mobile-specific path or explicit mobile crop/position rules before a change is considered complete.
 
 ## Backend-Ready Section Design Rules
 
@@ -174,3 +177,4 @@
 - 2026-05-17: Added a section-specific background image treatment to the homepage About block using the supplied AVIF with an overlay for readability.
 - 2026-05-17: Refined the mobile header menu into a fixed under-header drawer and lightened the homepage hero video overlay so the desktop and mobile footage reads less dark.
 - 2026-05-17: Replaced the About section background with the supplied WebP and fixed its base-path image URL handling for deployed rendering.
+- 2026-05-17: Added mobile-specific About image handling and promoted desktop/mobile image optimization to a main design priority for every image going forward.

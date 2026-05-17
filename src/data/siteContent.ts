@@ -59,6 +59,7 @@ export const siteContent: SiteContent = {
       'Rules, safety, and gear details ready for admin updates',
     ],
     backgroundImagePath: '/images/about-background.webp',
+    mobileBackgroundImagePath: '/images/about-background.webp',
   },
   events: [
     {

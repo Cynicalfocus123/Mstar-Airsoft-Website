@@ -45,6 +45,7 @@ export interface AboutContent {
   body: string;
   highlights: string[];
   backgroundImagePath?: string;
+  mobileBackgroundImagePath?: string;
 }
 
 export interface EventCard {

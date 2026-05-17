@@ -309,6 +309,7 @@ textarea {
   padding-right: clamp(18px, 4vw, 64px);
   padding-left: clamp(18px, 4vw, 64px);
   background-color: #090909;
+  background-image: var(--about-background-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -627,6 +628,21 @@ select:focus {
   .hero {
     min-height: auto;
     padding-top: 60px;
+  }
+
+  .about-section {
+    min-height: 620px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    background-image: var(--about-mobile-background-image, var(--about-background-image));
+    background-position: 56% top;
+    background-size: auto 100%;
+  }
+
+  .about-section::before {
+    background:
+      linear-gradient(180deg, rgba(7, 8, 7, 0.78), rgba(7, 8, 7, 0.88) 42%, rgba(7, 8, 7, 0.96)),
+      linear-gradient(90deg, rgba(240, 185, 11, 0.1), rgba(0, 0, 0, 0.24));
   }
 
   .hero-grid,

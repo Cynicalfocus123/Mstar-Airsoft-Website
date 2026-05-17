@@ -88,6 +88,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 - Keep site image-light and fast.
 - Use WebP/AVIF paths where possible.
+- Main priority: every site image must be optimized for both desktop and mobile, with mobile-specific source/crop handling whenever the image is used as a hero, banner, background, card, gallery, or content image.
 - Use lazy loading for gallery images.
 - Avoid heavy image libraries and large background images.
 - Logo is replaceable at `src/assets/mstar-airsoft-logo.png`.
@@ -168,6 +169,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Added a dedicated background image for the homepage About section, rendering the supplied AVIF only behind “Competitive airsoft with clean structure and strong field discipline.” with its own dark overlay.
 - Fixed the mobile header menu so it stays locked as a fixed drawer beneath the sticky header while scrolling, and brightened the homepage hero video treatment by reducing overlay darkness for both desktop and mobile sources.
 - Replaced the homepage About background with the supplied WebP image and fixed the section background URL to respect the Vite/GitHub Pages base path so the image actually renders in production.
+- Optimized the homepage About section image for mobile display with a mobile background source hook, adjusted mobile crop/positioning, and promoted desktop-plus-mobile image optimization to a main priority rule.
 
 ## Completed Changes
 
@@ -209,6 +211,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Added the supplied AVIF image behind the homepage About section and kept the section text readable with an isolated overlay treatment.
 - 2026-05-17: Updated the mobile header nav to a fixed under-header panel and reduced the homepage hero overlay so the background videos display at a more natural brightness.
 - 2026-05-17: Swapped the About background asset to the supplied WebP and corrected the background-image URL handling so the section image shows reliably under the site base path.
+- 2026-05-17: Added a mobile-optimized About background image path and mobile crop treatment, and made desktop/mobile image optimization a main priority rule.
 
 ## Next Steps
 
