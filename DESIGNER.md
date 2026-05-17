@@ -70,6 +70,12 @@
 - Components must accept props, not own hard-coded data.
 - Admin/backend can later replace data for nav, hero, about, events, registration fields, gallery, rules, contact, footer, CTA buttons, and assets.
 
+## Deployment Design Rules
+
+- GitHub Pages path must use Vite base `/Mstar-Airsoft-Website/`.
+- Asset references must remain compatible with repository-scoped GitHub Pages hosting.
+- Deployment changes must not alter visual direction or add heavy assets.
+
 ## Do-Not-Break Visual Rules
 
 - Do not add Shop.
@@ -85,3 +91,4 @@
 - 2026-05-17: Established tactical visual system, responsive rules, logo/header/footer constraints, lightweight image strategy, and backend-ready design rules for initial site build.
 - 2026-05-17: Confirmed build-readiness work did not change visual rules; kept logo and gallery asset paths compatible with Vite.
 - 2026-05-17: Kept generated artifacts out of source control so deployed design stays lightweight and maintainable.
+- 2026-05-17: Added GitHub Pages deployment requirements and confirmed repo-scoped base path keeps assets deploy-safe.

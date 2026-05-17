@@ -26,6 +26,14 @@ npm run dev
 npm run build
 ```
 
+## Deployment
+
+- GitHub Pages workflow: `.github/workflows/deploy.yml`
+- Vite base path: `/Mstar-Airsoft-Website/`
+- Live URL format: `https://cynicalfocus123.github.io/Mstar-Airsoft-Website/`
+- Workflow runs on pushes to `main` and manual dispatch.
+- Workflow builds `dist`, uploads Pages artifact, then deploys GitHub Pages.
+
 On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `npm.ps1`.
 
 ## Git Rules
@@ -98,6 +106,9 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - `npm run build` passed after dependency/type fixes.
 - Local dev server reached Vite ready state; browser plugin blocked localhost/127.0.0.1 with client-side blocking.
 - Added `.gitignore` to exclude generated folders, logs, env files, and loose source logo copy.
+- Added GitHub Pages deployment workflow.
+- Set Vite base path for repository Pages deployment.
+- Updated README with live GitHub Pages URL format.
 
 ## Completed Changes
 
@@ -114,9 +125,10 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Created first full frontend version with data-driven architecture, tactical visual direction, replaceable logo path, README, and project memory files.
 - 2026-05-17: Fixed TypeScript build readiness by adding React DOM types and Vite env declarations after initial build check.
 - 2026-05-17: Added repository ignore rules for node modules, build output, dev logs, env files, tsbuildinfo, and original loose logo file.
+- 2026-05-17: Added GitHub Pages Actions deployment, configured Vite base path, and documented live URL format.
 
 ## Next Steps
 
 - Replace placeholder/current logo file with final approved logo at `src/assets/mstar-airsoft-logo.png`.
 - Connect `src/data/siteContent.ts` to backend/admin API when backend work begins.
-- Add GitHub Pages deploy config when hosting path is known.
+- Check GitHub Actions Pages run after push and enable Pages source as GitHub Actions if repository settings require it.

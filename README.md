@@ -2,6 +2,14 @@
 
 React + Vite + TypeScript frontend for Mstar Airsoft tournament and event pages.
 
+## Live Site
+
+GitHub Pages URL format:
+
+```text
+https://cynicalfocus123.github.io/Mstar-Airsoft-Website/
+```
+
 ## Setup
 
 ```bash
