@@ -68,6 +68,7 @@
 - Homepage video hero CTA must sit on a full-width bottom overlay so the Sign Up Now button remains truly centered instead of drifting right on large screens.
 - Homepage video hero may use the supplied YouTube embed, but it must autoplay muted, hide player chrome, avoid exposing a play button, and feel immediate when the user lands on Home.
 - Event checkout should feel modern and editorial: left-side information sections separated by clean rules instead of card boxes, with a more structured order summary panel on the right for event details and pricing.
+- Checkout order summary text must stay contained and balanced: long event names should wrap cleanly, prices should not collide with titles, and totals should scale without spilling outside the sidebar.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
 
@@ -156,3 +157,4 @@
 - 2026-05-17: Corrected the homepage video hero CTA layer so the Sign Up Now button stays bottom-center across desktop and mobile layouts.
 - 2026-05-17: Changed the homepage hero video to the provided YouTube embed with hidden controls, muted autoplay, eager loading, and a non-clickable player surface so no play button appears.
 - 2026-05-17: Updated the event checkout visual treatment to remove boxed text sections, add divider-led content blocks, and present event details and pricing in a right-side summary layout.
+- 2026-05-17: Refined the checkout summary sidebar typography so heading, event title, price, and total lines stay aligned within the panel without overflow.
