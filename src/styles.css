@@ -831,56 +831,6 @@ select:focus {
   pointer-events: auto;
 }
 
-.slider-arrow {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  width: 48px;
-  height: 72px;
-  border: 1px solid rgba(240, 185, 11, 0.45);
-  color: var(--white);
-  background: rgba(0, 0, 0, 0.54);
-  font-size: 3rem;
-  line-height: 1;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.slider-arrow-left {
-  left: 18px;
-}
-
-.slider-arrow-right {
-  right: 18px;
-}
-
-.slide-dots {
-  position: absolute;
-  z-index: 3;
-  right: 28px;
-  bottom: 26px;
-  display: flex;
-  gap: 10px;
-}
-
-.slide-dot {
-  width: 13px;
-  height: 13px;
-  border: 1px solid var(--gold);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.22);
-  cursor: pointer;
-}
-
-.slide-dot-active {
-  background: var(--gold);
-}
-
-.banner-video-hero .slider-arrow,
-.banner-video-hero .slide-dots {
-  display: none;
-}
-
 .section-intro {
   max-width: 620px;
   color: var(--muted);
@@ -1637,21 +1587,6 @@ select:focus {
 
   .banner-overlay p:not(.eyebrow) {
     margin-left: 0;
-  }
-
-  .slider-arrow {
-    top: auto;
-    bottom: 20px;
-    width: 42px;
-    height: 48px;
-    font-size: 2rem;
-    transform: none;
-  }
-
-  .slide-dots {
-    right: 50%;
-    bottom: 34px;
-    transform: translateX(50%);
   }
 
   .event-banner-content {

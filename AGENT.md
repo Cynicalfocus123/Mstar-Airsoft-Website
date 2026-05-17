@@ -161,6 +161,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Reworked the event checkout page into a cleaner modern split layout with line-separated left-side sections, a sticky order summary on the right, and event details plus pricing grouped in the summary panel.
 - Tightened the checkout order summary typography and alignment so long event titles and team-based prices wrap cleanly inside the sidebar without overflowing the box.
 - Converted the homepage YouTube hero into a true background-video layer with a poster fallback, non-interactive iframe, oversized cover fit, and overlay/text stacking that hides player UI and keeps CTA content on top.
+- Confirmed the homepage hero uses a custom `BannerSlider` instead of Swiper/Slick/Bootstrap and removed the leftover custom previous/next/dot control CSS so the hero stays clean with background video only.
 
 ## Completed Changes
 
@@ -195,6 +196,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Redesigned the event checkout UI to use divider-based sections instead of boxed text panels and added a right-side order summary with event details and pricing.
 - 2026-05-17: Fixed checkout order summary overflow by resizing the sidebar heading, using a safer title/price layout, and reducing total-row scaling.
 - 2026-05-17: Refined the homepage YouTube hero so it behaves like a silent background video with a poster fallback, absolute cover positioning, non-clickable iframe, and overlay-first layering.
+- 2026-05-17: Removed unused custom slider control styles from the homepage hero after confirming no navigation or pause/play buttons are rendered at the component level.
 
 ## Next Steps
 
