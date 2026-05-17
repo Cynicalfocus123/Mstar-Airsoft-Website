@@ -632,23 +632,25 @@ select:focus {
 
 .site-header {
   min-height: 92px;
-  background: rgba(3, 3, 3, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(180deg, rgba(64, 64, 64, 0.96), rgba(28, 28, 28, 0.96));
 }
 
 .brand {
-  padding: 8px 12px 8px 8px;
-  border: 1px solid rgba(240, 185, 11, 0.28);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(240, 185, 11, 0.88));
-  color: #070707;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--white);
 }
 
 .brand img {
-  width: clamp(60px, 9vw, 78px);
-  height: clamp(46px, 8vw, 62px);
+  width: clamp(86px, 12vw, 124px);
+  height: clamp(58px, 9vw, 78px);
+  object-fit: contain;
 }
 
 .brand span {
-  color: #070707;
+  color: var(--white);
 }
 
 .header-actions {
@@ -945,32 +947,33 @@ select:focus {
 }
 
 .site-footer {
-  color: #090909;
-  border-top: 4px solid var(--gold);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(240, 185, 11, 0.92));
+  color: var(--white);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(180deg, #5a5a5a, #2c2c2c);
 }
 
 .footer-brand {
-  color: #090909;
+  color: var(--white);
 }
 
 .footer-brand img {
-  width: 78px;
-  height: 62px;
-  padding: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  background: rgba(255, 255, 255, 0.8);
+  width: 116px;
+  height: 78px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  object-fit: contain;
 }
 
 .footer-brand span,
 .footer-contact span,
 .site-footer .footer-links a {
-  color: #181818;
+  color: #e2e2e2;
 }
 
 .site-footer .footer-links a:hover {
-  color: #000;
-  background: rgba(0, 0, 0, 0.08);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 900px) {
@@ -995,12 +998,12 @@ select:focus {
 @media (max-width: 640px) {
   .brand {
     gap: 8px;
-    padding: 6px 8px;
+    padding: 0;
   }
 
   .brand img {
-    width: 54px;
-    height: 44px;
+    width: 76px;
+    height: 54px;
   }
 
   .banner-slider {

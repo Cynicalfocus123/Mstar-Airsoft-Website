@@ -146,6 +146,8 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Added dynamic country/region account form config.
 - Added full event banner data and lightweight SVG banner assets.
 - Updated footer visual treatment for transparent logo visibility.
+- Converted provided `logo transparent.png` into the actual app logo asset with transparent alpha.
+- Removed yellow logo plates from header/footer and changed header/footer treatment to grey so transparent logo is used directly without a background box.
 
 ## Completed Changes
 
@@ -166,6 +168,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Fixed Pages workflow warning/failure by opting actions into Node 24, building with Node 24, using `npm install`, and enabling Pages during configure step.
 - 2026-05-17: Added permanent rules for automatic commit/push, approved normal changes, project memory updates, token-saving, and do-not-repeat workflow behavior.
 - 2026-05-17: Added transparent logo header/footer treatment, homepage slider, Events page with hover banners/load more, Sign In page, Create Account page with country-driven regions, and black/white/gold branding updates.
+- 2026-05-17: Updated header and footer to grey visual treatment, removed yellow logo background plates, and regenerated `src/assets/mstar-airsoft-logo.png` from the provided transparent logo with real alpha.
 
 ## Next Steps
 

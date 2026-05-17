@@ -16,7 +16,8 @@
 
 - Logo stays top-left.
 - Use the transparent MSTAR Airsoft logo from `src/assets/mstar-airsoft-logo.png`.
-- Keep a light/gold logo plate in the dark header so transparent artwork remains visible.
+- Do not place the logo on a yellow or solid background plate.
+- Header background should be grey/dark grey so transparent artwork is visible directly.
 - Header navigation: Home, About, Events, Rules, Gallery, Contact.
 - Header includes Login and Sign Up actions.
 - No Shop link.
@@ -25,8 +26,9 @@
 
 ## Footer Rules
 
-- Lighter gold/white footer treatment with logo/name, quick links, contact info, social placeholder.
+- Grey footer treatment with logo/name, quick links, contact info, social placeholder.
 - Footer logo must stay clearly visible with transparent artwork.
+- Do not place footer logo on a yellow or solid background plate.
 - Footer links must come from config/data.
 - No Shop link.
 
@@ -128,3 +130,4 @@
 - 2026-05-17: Updated deployment workflow rules for Node 24 and GitHub Pages enablement without changing site design.
 - 2026-05-17: Added permanent automatic commit/push, approved normal change, project memory, token-saving, and do-not-repeat design workflow rules.
 - 2026-05-17: Updated brand direction to black/white/gold, added transparent logo visibility rules, homepage slider, event banner hover design, auth page layouts, and lighter footer treatment.
+- 2026-05-17: Revised header/footer to grey treatment and removed logo background plates so the transparent MSTAR logo displays directly.
