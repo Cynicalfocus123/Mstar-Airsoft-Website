@@ -814,10 +814,10 @@ select:focus {
   overflow: hidden;
 }
 
-.hero-poster {
+.hero-fallback-image {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -825,8 +825,12 @@ select:focus {
   transition: opacity 240ms ease;
 }
 
-.hero-poster.is-hidden {
+.hero-fallback-image.is-hidden {
   opacity: 0;
+}
+
+.hero-video {
+  z-index: 2;
 }
 
 .banner-media-poster {
@@ -846,7 +850,7 @@ select:focus {
 .banner-slider::after {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 3;
   content: "";
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.14) 45%, rgba(0, 0, 0, 0.52)),
@@ -856,7 +860,7 @@ select:focus {
 .banner-overlay {
   position: absolute;
   inset-inline: 0;
-  z-index: 2;
+  z-index: 4;
   bottom: clamp(34px, 7vw, 86px);
   display: flex;
   justify-content: center;

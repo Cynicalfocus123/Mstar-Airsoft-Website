@@ -24,7 +24,7 @@ export function BannerSlider({ slides }: BannerSliderProps) {
     return path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path;
   }
 
-  const posterUrl = getPublicAssetPath(activeSlide.posterPath);
+  const posterUrl = `${import.meta.env.BASE_URL}images/home-hero-poster.webp`;
   const desktopVideoUrl = getPublicAssetPath(activeSlide.videoMp4Path);
   const mobileVideoUrl = activeSlide.mobileVideoMp4Path
     ? getPublicAssetPath(activeSlide.mobileVideoMp4Path)
@@ -37,7 +37,7 @@ export function BannerSlider({ slides }: BannerSliderProps) {
           <img
             src={posterUrl}
             alt=""
-            className={`hero-poster ${videoReady ? 'is-hidden' : ''}`}
+            className={`hero-fallback-image ${videoReady ? 'is-hidden' : ''}`}
             loading="eager"
             fetchPriority="high"
           />
@@ -52,6 +52,9 @@ export function BannerSlider({ slides }: BannerSliderProps) {
             poster={posterUrl}
             onCanPlay={() => setVideoReady(true)}
             onPlaying={() => setVideoReady(true)}
+            onWaiting={() => setVideoReady(false)}
+            onStalled={() => setVideoReady(false)}
+            onError={() => setVideoReady(false)}
           >
             {activeSlide.videoWebmPath && !mobileVideoUrl && (
               <source src={getPublicAssetPath(activeSlide.videoWebmPath)} type="video/webm" />

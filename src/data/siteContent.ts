@@ -24,7 +24,7 @@ export const siteContent: SiteContent = {
     {
       id: 'gold-rush',
       imagePath: '/banners/gold-rush.svg',
-      posterPath: '/images/home-hero-poster.jpg',
+      posterPath: '/images/home-hero-poster.webp',
       videoMp4Path: 'https://pub-f5e1fd2c513f432b9abc4e51398be430.r2.dev/Largest%20Airsoft%20Game%20in%20Southeast%20Asia%20-%20youtube.mp4',
       mobileVideoMp4Path: 'https://pub-f6fca3f41b8943aaac45cf128d4740d7.r2.dev/mobile%20video%20test%201.mp4',
       eyebrow: 'Featured Tournament',
