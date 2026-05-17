@@ -162,6 +162,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Tightened the checkout order summary typography and alignment so long event titles and team-based prices wrap cleanly inside the sidebar without overflowing the box.
 - Converted the homepage YouTube hero into a true background-video layer with a poster fallback, non-interactive iframe, oversized cover fit, and overlay/text stacking that hides player UI and keeps CTA content on top.
 - Confirmed the homepage hero uses a custom `BannerSlider` instead of Swiper/Slick/Bootstrap and removed the leftover custom previous/next/dot control CSS so the hero stays clean with background video only.
+- Updated main navigation and footer links to use named hash routes like `#/home`, `#/about`, `#/rules`, `#/gallery`, and `#/contact`, with homepage section scrolling wired through the app router instead of bare `#section` fragments.
 
 ## Completed Changes
 
@@ -197,6 +198,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Fixed checkout order summary overflow by resizing the sidebar heading, using a safer title/price layout, and reducing total-row scaling.
 - 2026-05-17: Refined the homepage YouTube hero so it behaves like a silent background video with a poster fallback, absolute cover positioning, non-clickable iframe, and overlay-first layering.
 - 2026-05-17: Removed unused custom slider control styles from the homepage hero after confirming no navigation or pause/play buttons are rendered at the component level.
+- 2026-05-17: Replaced bare fragment menu URLs with named hash routes and routed homepage section links through the app so menu paths read cleanly while still scrolling to the correct section.
 
 ## Next Steps
 

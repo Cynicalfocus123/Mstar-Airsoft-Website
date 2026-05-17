@@ -24,7 +24,14 @@ function getRoute() {
   if (hash.startsWith('#/signin')) return { name: 'signin' };
   if (hash.startsWith('#/signup')) return { name: 'signup' };
   if (hash.startsWith('#/account')) return { name: 'account' };
-  return { name: 'home' };
+  if (hash.startsWith('#/')) {
+    const section = hash.replace('#/', '') || 'home';
+    return { name: 'home', section };
+  }
+  if (hash.startsWith('#')) {
+    return { name: 'home', section: hash.replace('#', '') || 'home' };
+  }
+  return { name: 'home', section: 'home' };
 }
 
 export default function App() {
@@ -55,13 +62,13 @@ export default function App() {
   }
 
   function goHomeTop() {
-    if (window.location.hash === '#/' || window.location.hash === '') {
-      setRoute({ name: 'home' });
+    if (window.location.hash === '#/home' || window.location.hash === '#/' || window.location.hash === '') {
+      setRoute({ name: 'home', section: 'home' });
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
-    window.location.hash = '#/';
+    window.location.hash = '#/home';
     window.setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
   }
 
@@ -77,14 +84,16 @@ export default function App() {
     : undefined;
 
   useEffect(() => {
-    const hash = window.location.hash;
-
-    if (route.name === 'home' && hash && hash !== '#/') {
+    if (route.name === 'home' && route.section && route.section !== 'home') {
+      const target = document.getElementById(route.section);
+      if (target) {
+        target.scrollIntoView({ block: 'start' });
+      }
       return;
     }
 
     window.scrollTo({ top: 0, left: 0 });
-  }, [route.name, selectedEvent?.id]);
+  }, [route.name, route.section, selectedEvent?.id]);
 
   return (
     <>

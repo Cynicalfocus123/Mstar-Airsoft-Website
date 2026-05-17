@@ -18,7 +18,7 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
     <header className="site-header">
       <a
         className="brand"
-        href="#/"
+        href="#/home"
         aria-label={`${identity.name} home`}
         onClick={(event) => {
           event.preventDefault();
@@ -48,7 +48,7 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
             onClick={(event) => {
               setIsOpen(false);
               setIsAccountOpen(false);
-              if (link.href === '#/') {
+              if (link.href === '#/home') {
                 event.preventDefault();
                 onHomeClick();
               }
@@ -97,7 +97,7 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
                 key={link.href}
                 href={link.href}
                 onClick={() => {
-                  const currentHash = window.location.hash || '#/';
+                  const currentHash = window.location.hash || '#/home';
                   if (!currentHash.startsWith('#/signin') && !currentHash.startsWith('#/signup')) {
                     sessionStorage.setItem('mstarAuthReturnTo', currentHash);
                   }
