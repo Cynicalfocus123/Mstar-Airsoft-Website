@@ -26,6 +26,7 @@ export const siteContent: SiteContent = {
       imagePath: '/banners/gold-rush.svg',
       posterPath: '/images/home-hero-poster.jpg',
       videoMp4Path: '/videos/home-hero.mp4',
+      mobileVideoMp4Path: '/videos/home-hero-mobile.mp4',
       eyebrow: 'Featured Tournament',
       title: 'Gold Rush Open',
       body: 'Squad-based tournament registration is open now for the next Mstar Airsoft operation.',

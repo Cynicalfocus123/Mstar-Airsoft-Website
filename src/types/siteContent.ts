@@ -31,6 +31,7 @@ export interface HeroSlide {
   imagePath: string;
   posterPath: string;
   videoMp4Path: string;
+  mobileVideoMp4Path?: string;
   videoWebmPath?: string;
   eyebrow: string;
   title: string;

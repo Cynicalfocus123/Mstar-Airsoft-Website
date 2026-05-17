@@ -164,6 +164,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Confirmed the homepage hero uses a custom `BannerSlider` instead of Swiper/Slick/Bootstrap and removed the leftover custom previous/next/dot control CSS so the hero stays clean with background video only.
 - Updated main navigation and footer links to use named hash routes like `#/home`, `#/about`, `#/rules`, `#/gallery`, and `#/contact`, with homepage section scrolling wired through the app router instead of bare `#section` fragments.
 - Replaced the homepage YouTube hero embed with a native full-length video background using `/videos/home-hero.mp4`, poster fallback `/images/home-hero-poster.jpg`, muted autoplay, loop, playsInline, preload, pointer-events disabled, and no controls.
+- Added a mobile-only homepage hero video source at `/videos/home-hero-mobile.mp4`, selected by the hero component for screens up to 640px while desktop keeps the full desktop MP4.
 
 ## Completed Changes
 
@@ -201,6 +202,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Removed unused custom slider control styles from the homepage hero after confirming no navigation or pause/play buttons are rendered at the component level.
 - 2026-05-17: Replaced bare fragment menu URLs with named hash routes and routed homepage section links through the app so menu paths read cleanly while still scrolling to the correct section.
 - 2026-05-17: Removed the YouTube iframe from the homepage hero and restored a native full-length video background with poster fallback, muted autoplay, loop, playsInline, and no interactive controls.
+- 2026-05-17: Added the supplied mobile-specific hero video as a Git LFS public asset and wired the homepage hero to use it only on mobile viewports.
 
 ## Next Steps
 
