@@ -30,22 +30,6 @@ export const siteContent: SiteContent = {
       body: 'Squad-based tournament registration is open now for the next Mstar Airsoft operation.',
       cta: { label: 'Sign Up Now', href: '#/signup', variant: 'primary' },
     },
-    {
-      id: 'night-shift',
-      imagePath: '/banners/night-shift.svg',
-      eyebrow: 'Night Event',
-      title: 'Night Shift CQB',
-      body: 'Low-light objective rounds, marshal-controlled lanes, and competitive scoring.',
-      cta: { label: 'Sign Up Now', href: '#/signup', variant: 'primary' },
-    },
-    {
-      id: 'final-line',
-      imagePath: '/banners/final-line.svg',
-      eyebrow: 'Championship Path',
-      title: 'Final Line Series',
-      body: 'Qualify through seasonal events and fight for the championship bracket.',
-      cta: { label: 'Sign Up Now', href: '#/signup', variant: 'primary' },
-    },
   ],
   hero: {
     kicker: 'Tournament Operations',

@@ -832,6 +832,11 @@ select:focus {
   background: var(--gold);
 }
 
+.banner-video-hero .slider-arrow,
+.banner-video-hero .slide-dots {
+  display: none;
+}
+
 .section-intro {
   max-width: 620px;
   color: var(--muted);

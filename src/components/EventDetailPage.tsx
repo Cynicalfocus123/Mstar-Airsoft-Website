@@ -48,7 +48,7 @@ export function EventDetailPage({ event }: EventDetailPageProps) {
             </div>
             <div>
               <dt>Attendance</dt>
-              <dd>Attendance: {event.attendance}</dd>
+              <dd>{event.attendance}</dd>
             </div>
           </dl>
         </aside>

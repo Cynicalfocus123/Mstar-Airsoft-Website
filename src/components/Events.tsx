@@ -37,7 +37,7 @@ export function Events({ events, viewAllHref }: EventsProps) {
               </div>
               <div>
                 <dt>Attendance</dt>
-                <dd>Attendance: {event.attendance}</dd>
+                <dd>{event.attendance}</dd>
               </div>
             </dl>
           </a>

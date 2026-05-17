@@ -96,7 +96,13 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
                 className={index === 0 ? 'auth-link auth-link-login' : 'auth-link auth-link-signup'}
                 key={link.href}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  const currentHash = window.location.hash || '#/';
+                  if (!currentHash.startsWith('#/signin') && !currentHash.startsWith('#/signup')) {
+                    sessionStorage.setItem('mstarAuthReturnTo', currentHash);
+                  }
+                  setIsOpen(false);
+                }}
               >
                 {link.label}
               </a>

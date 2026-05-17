@@ -41,7 +41,15 @@ export default function App() {
   function markSignedIn() {
     localStorage.setItem('mstarAccountStatus', 'active');
     setIsAuthenticated(true);
-    window.location.hash = '#/account';
+    const returnTo = sessionStorage.getItem('mstarAuthReturnTo');
+    sessionStorage.removeItem('mstarAuthReturnTo');
+
+    if (returnTo && !returnTo.startsWith('#/signin') && !returnTo.startsWith('#/signup')) {
+      window.location.hash = returnTo;
+      return;
+    }
+
+    setRoute(getRoute());
   }
 
   function goHomeTop() {
