@@ -5,11 +5,15 @@ interface AboutProps {
 }
 
 export function About({ content }: AboutProps) {
+  const backgroundImagePath = content.backgroundImagePath
+    ? (content.backgroundImagePath.startsWith('/') ? `${import.meta.env.BASE_URL}${content.backgroundImagePath.slice(1)}` : content.backgroundImagePath)
+    : undefined;
+
   return (
     <section
       className="section section-anchor about-section"
       id="about"
-      style={content.backgroundImagePath ? { backgroundImage: `url(${content.backgroundImagePath})` } : undefined}
+      style={backgroundImagePath ? { backgroundImage: `url(${backgroundImagePath})` } : undefined}
     >
       <div className="about-section-inner">
         <div className="section-heading">
