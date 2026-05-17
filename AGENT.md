@@ -33,6 +33,9 @@ npm run build
 - Live URL format: `https://cynicalfocus123.github.io/Mstar-Airsoft-Website/`
 - Workflow runs on pushes to `main` and manual dispatch.
 - Workflow builds `dist`, uploads Pages artifact, then deploys GitHub Pages.
+- Workflow opts JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`.
+- Workflow uses Node 24 for project build.
+- `actions/configure-pages@v5` uses `enablement: true` to handle repositories where Pages is not yet enabled.
 
 On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `npm.ps1`.
 
@@ -109,6 +112,8 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Added GitHub Pages deployment workflow.
 - Set Vite base path for repository Pages deployment.
 - Updated README with live GitHub Pages URL format.
+- Found actual GitHub Actions failure at `Setup Pages`: Pages site was not enabled/configured for GitHub Actions.
+- Updated deployment workflow for Node 24 and Pages enablement.
 
 ## Completed Changes
 
@@ -126,6 +131,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Fixed TypeScript build readiness by adding React DOM types and Vite env declarations after initial build check.
 - 2026-05-17: Added repository ignore rules for node modules, build output, dev logs, env files, tsbuildinfo, and original loose logo file.
 - 2026-05-17: Added GitHub Pages Actions deployment, configured Vite base path, and documented live URL format.
+- 2026-05-17: Fixed Pages workflow warning/failure by opting actions into Node 24, building with Node 24, using `npm install`, and enabling Pages during configure step.
 
 ## Next Steps
 
