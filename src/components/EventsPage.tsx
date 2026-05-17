@@ -20,12 +20,18 @@ export function EventsPage({ events }: EventsPageProps) {
       <section className="event-banner-list" aria-label="All events">
         {visibleEvents.map((event) => (
           <a className="event-banner-card" key={event.id} href={`#/events/${event.id}`} aria-label={`Open ${event.title}`}>
-            <img src={event.imagePath} alt="" loading="lazy" />
+            <div className="event-card-image">
+              <img src={event.imagePath} alt="" loading="lazy" />
+              <strong>{event.status}</strong>
+            </div>
             <div className="event-banner-content">
-              <span>{event.date}</span>
               <h2>{event.title}</h2>
               <p>{event.summary}</p>
               <dl>
+                <div>
+                  <dt>Date</dt>
+                  <dd>{event.date}</dd>
+                </div>
                 <div>
                   <dt>Location</dt>
                   <dd>{event.location}</dd>
@@ -43,7 +49,6 @@ export function EventsPage({ events }: EventsPageProps) {
                   <dd>Attendance: {event.attendance}</dd>
                 </div>
               </dl>
-              <strong>{event.status}</strong>
             </div>
           </a>
         ))}

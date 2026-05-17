@@ -45,6 +45,29 @@ export default function App() {
     window.location.hash = '#/account';
   }
 
+  function goHomeTop() {
+    if (window.location.hash === '#/' || window.location.hash === '') {
+      setRoute({ name: 'home' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    window.location.hash = '#/';
+    window.setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
+  }
+
+  function logout() {
+    localStorage.removeItem('mstarAccountStatus');
+    setIsAuthenticated(false);
+    goHomeTop();
+  }
+
+  useEffect(() => {
+    if (route.name === 'home' && (window.location.hash === '#/' || window.location.hash === '')) {
+      window.scrollTo({ top: 0 });
+    }
+  }, [route.name]);
+
   const isHome = route.name === 'home';
   const selectedEvent = route.name === 'eventDetail' ? siteContent.events.find((event) => event.id === route.eventId) : undefined;
 
@@ -55,6 +78,8 @@ export default function App() {
         navLinks={siteContent.navLinks}
         authLinks={siteContent.authLinks}
         isAuthenticated={isAuthenticated}
+        onHomeClick={goHomeTop}
+        onLogout={logout}
       />
       {isHome && (
         <main>

@@ -690,6 +690,25 @@ select:focus {
   transition: opacity 160ms ease, transform 160ms ease;
 }
 
+.account-dropdown-button {
+  width: 100%;
+  border: 0;
+  padding: 11px 13px;
+  color: var(--muted);
+  background: transparent;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.account-dropdown-button:hover,
+.account-dropdown-button:focus {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .account-menu:hover .account-dropdown,
 .account-menu:focus-within .account-dropdown,
 .account-menu-open .account-dropdown {
@@ -837,58 +856,89 @@ select:focus {
 
 .event-banner-list {
   display: grid;
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .event-banner-card {
   position: relative;
-  display: block;
-  min-height: 360px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 0;
   overflow: hidden;
   border: 1px solid rgba(240, 185, 11, 0.28);
-  background: #050505;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+  background: linear-gradient(180deg, rgba(22, 22, 22, 0.98), rgba(8, 8, 8, 0.98));
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  transition: border-color 160ms ease, transform 160ms ease;
 }
 
-.event-banner-card img {
-  position: absolute;
-  inset: 0;
+.event-banner-card:hover {
+  border-color: rgba(240, 185, 11, 0.58);
+  transform: translateY(-3px);
+}
+
+.event-card-image {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  background: #050505;
+}
+
+.event-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 600ms ease, filter 600ms ease;
 }
 
-.event-banner-card:hover img {
+.event-banner-card:hover .event-card-image img {
   filter: contrast(1.14) saturate(1.18);
-  transform: scale(1.08) translateX(16px);
+  transform: scale(1.06);
 }
 
-.event-banner-card::after {
+.event-card-image::after {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.12));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.68));
+}
+
+.event-card-image strong {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  z-index: 1;
+  padding: 7px 10px;
+  color: #090909;
+  background: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .event-banner-content {
   position: relative;
   z-index: 1;
-  max-width: 760px;
-  padding: clamp(24px, 5vw, 54px);
+  display: grid;
+  gap: 14px;
+  max-width: none;
+  padding: 18px;
 }
 
 .event-banner-content h2 {
-  margin: 10px 0;
+  margin: 0;
   color: var(--white);
-  font-size: clamp(2rem, 5vw, 4.8rem);
-  line-height: 0.92;
+  font-size: clamp(1.24rem, 2vw, 1.72rem);
+  line-height: 1.05;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .event-banner-content p {
+  margin: 0;
   color: #e9e0c8;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .event-banner-content span,
@@ -899,8 +949,9 @@ select:focus {
 }
 
 .event-banner-content dl {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: 22px 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  margin: 0;
 }
 
 .load-more {
@@ -1072,15 +1123,19 @@ select:focus {
 }
 
 .event-detail-main {
+  min-width: 0;
   padding: clamp(24px, 5vw, 48px);
 }
 
 .event-detail-main h1 {
   margin: 0;
+  max-width: 100%;
   color: var(--white);
-  font-size: clamp(2.8rem, 7vw, 6.5rem);
-  line-height: 0.9;
+  font-size: clamp(2.15rem, 4.8vw, 4.75rem);
+  line-height: 0.98;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .event-detail-main p {
@@ -1107,6 +1162,7 @@ select:focus {
 
 .event-detail-sidebar {
   align-self: start;
+  min-width: 0;
   display: grid;
   gap: 24px;
   padding: 22px;
@@ -1145,9 +1201,13 @@ select:focus {
   }
 
   .event-banner-content dl,
-  .event-detail-layout,
   .auth-layout,
   .account-form {
+    grid-template-columns: 1fr;
+  }
+
+  .event-banner-list,
+  .event-detail-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1192,12 +1252,17 @@ select:focus {
     transform: translateX(50%);
   }
 
-  .event-banner-card {
-    min-height: 520px;
+  .event-banner-content {
+    padding: 16px;
   }
 
-  .event-banner-content {
-    padding: 22px;
+  .event-card-image {
+    aspect-ratio: 16 / 8.5;
+  }
+
+  .event-detail-main h1 {
+    font-size: clamp(1.9rem, 12vw, 3.2rem);
+    line-height: 1;
   }
 
   .event-detail-hero {

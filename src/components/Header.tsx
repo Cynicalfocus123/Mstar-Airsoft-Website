@@ -6,15 +6,27 @@ interface HeaderProps {
   navLinks: NavLink[];
   authLinks: NavLink[];
   isAuthenticated: boolean;
+  onHomeClick: () => void;
+  onLogout: () => void;
 }
 
-export function Header({ identity, navLinks, authLinks, isAuthenticated }: HeaderProps) {
+export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeClick, onLogout }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAccountOpen, setIsAccountOpen] = useState(false);
 
   return (
     <header className="site-header">
-      <a className="brand" href="#/" aria-label={`${identity.name} home`}>
+      <a
+        className="brand"
+        href="#/"
+        aria-label={`${identity.name} home`}
+        onClick={(event) => {
+          event.preventDefault();
+          setIsOpen(false);
+          setIsAccountOpen(false);
+          onHomeClick();
+        }}
+      >
         <img src={identity.logoPath} alt={`${identity.name} logo`} />
       </a>
       <button
@@ -30,7 +42,18 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated }: Heade
       </button>
       <nav id="site-nav" className={isOpen ? 'nav nav-open' : 'nav'} aria-label="Primary navigation">
         {navLinks.map((link) => (
-          <a key={link.href} href={link.href} onClick={() => setIsOpen(false)}>
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={(event) => {
+              setIsOpen(false);
+              setIsAccountOpen(false);
+              if (link.href === '#/') {
+                event.preventDefault();
+                onHomeClick();
+              }
+            }}
+          >
             {link.label}
           </a>
         ))}
@@ -53,6 +76,18 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated }: Heade
                 <a href="#/account#orders" role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
                   Orders
                 </a>
+                <button
+                  className="account-dropdown-button"
+                  type="button"
+                  role="menuitem"
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsAccountOpen(false);
+                    onLogout();
+                  }}
+                >
+                  Logout
+                </button>
               </div>
             </div>
           ) : (

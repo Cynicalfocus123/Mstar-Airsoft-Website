@@ -149,6 +149,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Converted provided `logo transparent.png` into the actual app logo asset with transparent alpha.
 - Removed yellow logo plates from header/footer and changed header/footer treatment to grey so transparent logo is used directly without a background box.
 - Completed remaining account and event flows: header now switches to My Account after sign-in/register, account dropdown links to Account Settings and Orders, Account Settings supports editable address/email/phone fields, event cards route to detail pages, event data includes time/teams/attendance/overview, create-account country dropdown now uses a full ISO country list with region fallbacks, and frontend form payloads are trimmed/sanitized before future API handoff.
+- Fixed remaining event/account issues: Events page uses compact image-on-top cards with details underneath, My Account dropdown includes Logout, Home/logo clicks return to the top of the homepage, event detail titles now wrap and scale down to prevent overflow, and country/region data now comes from `country-region-data` for broad subdivision coverage such as Italy.
 
 ## Completed Changes
 
@@ -171,6 +172,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Added transparent logo header/footer treatment, homepage slider, Events page with hover banners/load more, Sign In page, Create Account page with country-driven regions, and black/white/gold branding updates.
 - 2026-05-17: Updated header and footer to grey visual treatment, removed yellow logo background plates, and regenerated `src/assets/mstar-airsoft-logo.png` from the provided transparent logo with real alpha.
 - 2026-05-17: Added My Account dropdown behavior, Account Settings page, clickable event cards, Event Detail page, event attendance/teams/time data, full world country dropdown support, safer frontend form cleaning, gold button consistency, and responsive account/event styling.
+- 2026-05-17: Reworked Events page into smaller horizontal-style cards with banner image above details, added Logout, fixed Home/logo top navigation, tightened event detail title CSS, and replaced manual country region examples with the `country-region-data` dataset.
 
 ## Next Steps
 
