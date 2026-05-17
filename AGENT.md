@@ -171,6 +171,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Replaced the homepage About background with the supplied WebP image and fixed the section background URL to respect the Vite/GitHub Pages base path so the image actually renders in production.
 - Optimized the homepage About section image for mobile display with a mobile background source hook, adjusted mobile crop/positioning, and promoted desktop-plus-mobile image optimization to a main priority rule.
 - Reworked the homepage hero video to use a poster image fallback that stays visible until playback starts, and let the browser choose mobile versus desktop MP4 sources through native media-based video sources.
+- Switched the homepage hero video from local assets to Cloudflare R2 public desktop and mobile MP4 URLs, and added DNS prefetch plus preconnect hints for both R2 domains.
 
 ## Completed Changes
 
@@ -214,6 +215,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Swapped the About background asset to the supplied WebP and corrected the background-image URL handling so the section image shows reliably under the site base path.
 - 2026-05-17: Added a mobile-optimized About background image path and mobile crop treatment, and made desktop/mobile image optimization a main priority rule.
 - 2026-05-17: Updated the homepage hero video to use a real poster fallback plus native mobile/desktop source selection, improving first paint and reducing blank video flashes.
+- 2026-05-17: Moved the homepage hero desktop and mobile videos to Cloudflare R2 public URLs and added connection hints for both video origins.
 
 ## Next Steps
 

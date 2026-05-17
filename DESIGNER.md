@@ -79,6 +79,7 @@
 - Section background images must resolve through the deployed site base path, not raw root-relative URLs, so homepage imagery still appears correctly on GitHub Pages.
 - About section imagery must be optimized for mobile as well as desktop, using the content-config mobile background path and mobile-specific crop/readability styling.
 - Homepage hero video should keep the poster visible until video playback is actually ready, and should prefer native media-based source selection for mobile versus desktop when separate MP4 assets exist.
+- Homepage hero video may use external Cloudflare R2 public MP4 URLs for desktop and mobile, but it must remain native HTML5 video with poster-first loading, hidden controls, pointer-events disabled, and the CTA plus dark overlay layered above it.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
 
@@ -180,3 +181,4 @@
 - 2026-05-17: Replaced the About section background with the supplied WebP and fixed its base-path image URL handling for deployed rendering.
 - 2026-05-17: Added mobile-specific About image handling and promoted desktop/mobile image optimization to a main design priority for every image going forward.
 - 2026-05-17: Improved the homepage hero media loading with a persistent poster fallback and native browser source selection for mobile and desktop video assets.
+- 2026-05-17: Connected the homepage hero desktop and mobile videos to Cloudflare R2 public MP4 URLs and added browser connection hints for both media domains.
