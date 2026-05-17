@@ -2,9 +2,10 @@ import type { EventCard } from '../types/siteContent';
 
 interface EventDetailPageProps {
   event?: EventCard;
+  isAuthenticated: boolean;
 }
 
-export function EventDetailPage({ event }: EventDetailPageProps) {
+export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps) {
   if (!event) {
     return (
       <main className="page-shell">
@@ -38,7 +39,15 @@ export function EventDetailPage({ event }: EventDetailPageProps) {
           <p>{event.overview}</p>
         </article>
         <aside className="event-detail-sidebar">
-          <a className="btn btn-gold join-now-button" href="#/signup">
+          <a
+            className="btn btn-gold join-now-button"
+            href={isAuthenticated ? `#/checkout/${event.id}` : '#/signup'}
+            onClick={() => {
+              if (!isAuthenticated) {
+                sessionStorage.setItem('mstarAuthReturnTo', `#/checkout/${event.id}`);
+              }
+            }}
+          >
             Join Now
           </a>
           <dl>

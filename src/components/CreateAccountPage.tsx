@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import type { CountryRegion, CreateAccountContent } from '../types/siteContent';
 import { getCleanFormData } from '../utils/formSecurity';
+import { accountAddressFromForm, saveAccountProfile } from '../utils/accountProfile';
 
 interface CreateAccountPageProps {
   content: CreateAccountContent;
@@ -14,7 +15,14 @@ export function CreateAccountPage({ content, countryRegions, onSuccess }: Create
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.info('Create account payload ready for future API integration:', getCleanFormData(event.currentTarget));
+    const formPayload = getCleanFormData(event.currentTarget);
+    const address = accountAddressFromForm(formPayload);
+    saveAccountProfile({
+      email: String(formPayload.email ?? ''),
+      shipping: address,
+      billing: address,
+    });
+    console.info('Create account payload ready for future API integration:', formPayload);
     onSuccess();
   }
 

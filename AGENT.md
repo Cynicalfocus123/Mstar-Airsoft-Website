@@ -155,6 +155,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Removed all text from the homepage video hero overlay except the Sign Up Now button, and forced the hero video to reset to 0 seconds and play immediately on mount.
 - Added route-level scroll reset so Events, Event Detail, auth, account, and other full-page routes always open at the top instead of inheriting the previous scroll position.
 - Repositioned the homepage video hero Sign Up Now CTA to bottom-center inside the video with mobile-optimized width and tap target sizing.
+- Added frontend event checkout routing: Join Now now sends unauthenticated users to Create Account with a saved checkout return path, sends authenticated users to event checkout, and checkout displays event summary, login/register prompts, editable shipping/billing details, and card payment fields.
 
 ## Completed Changes
 
@@ -183,6 +184,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Removed video hero text overlay, kept only the Sign Up Now CTA, and made hero video restart from 0 seconds on page entry.
 - 2026-05-17: Added top-of-page scroll reset for full page route changes while preserving homepage section anchor behavior.
 - 2026-05-17: Moved video hero Sign Up Now button to bottom-center inside the video and improved mobile button sizing.
+- 2026-05-17: Added event registration cart/checkout behavior with auth-aware Join Now routing, saved account profile reuse, editable shipping/billing sections, payment fields, and responsive white checkout styling.
 
 ## Next Steps
 

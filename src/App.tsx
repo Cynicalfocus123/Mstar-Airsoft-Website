@@ -13,11 +13,13 @@ import { SignInPage } from './components/SignInPage';
 import { CreateAccountPage } from './components/CreateAccountPage';
 import { AccountSettingsPage } from './components/AccountSettingsPage';
 import { EventDetailPage } from './components/EventDetailPage';
+import { EventCheckoutPage } from './components/EventCheckoutPage';
 import { siteContent } from './data/siteContent';
 
 function getRoute() {
   const hash = window.location.hash;
   if (hash.startsWith('#/events/')) return { name: 'eventDetail', eventId: hash.replace('#/events/', '') };
+  if (hash.startsWith('#/checkout/')) return { name: 'checkout', eventId: hash.replace('#/checkout/', '') };
   if (hash.startsWith('#/events')) return { name: 'events' };
   if (hash.startsWith('#/signin')) return { name: 'signin' };
   if (hash.startsWith('#/signup')) return { name: 'signup' };
@@ -70,7 +72,9 @@ export default function App() {
   }
 
   const isHome = route.name === 'home';
-  const selectedEvent = route.name === 'eventDetail' ? siteContent.events.find((event) => event.id === route.eventId) : undefined;
+  const selectedEvent = route.name === 'eventDetail' || route.name === 'checkout'
+    ? siteContent.events.find((event) => event.id === route.eventId)
+    : undefined;
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -104,7 +108,8 @@ export default function App() {
         </main>
       )}
       {route.name === 'events' && <EventsPage events={siteContent.events} />}
-      {route.name === 'eventDetail' && <EventDetailPage event={selectedEvent} />}
+      {route.name === 'eventDetail' && <EventDetailPage event={selectedEvent} isAuthenticated={isAuthenticated} />}
+      {route.name === 'checkout' && <EventCheckoutPage event={selectedEvent} isAuthenticated={isAuthenticated} />}
       {route.name === 'signin' && <SignInPage content={siteContent.signIn} onSuccess={markSignedIn} />}
       {route.name === 'signup' && (
         <CreateAccountPage

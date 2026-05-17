@@ -1,6 +1,7 @@
 import type { FormEvent } from 'react';
 import type { SignInContent } from '../types/siteContent';
 import { getCleanFormData } from '../utils/formSecurity';
+import { getStoredAccountProfile, saveAccountProfile } from '../utils/accountProfile';
 
 interface SignInPageProps {
   content: SignInContent;
@@ -10,7 +11,13 @@ interface SignInPageProps {
 export function SignInPage({ content, onSuccess }: SignInPageProps) {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.info('Sign in payload ready for future API integration:', getCleanFormData(event.currentTarget));
+    const formPayload = getCleanFormData(event.currentTarget);
+    const profile = getStoredAccountProfile();
+    saveAccountProfile({
+      ...profile,
+      email: String(formPayload.email ?? profile.email),
+    });
+    console.info('Sign in payload ready for future API integration:', formPayload);
     onSuccess();
   }
 

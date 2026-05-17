@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import type { CountryRegion, CreateAccountContent } from '../types/siteContent';
 import { getCleanFormData } from '../utils/formSecurity';
+import { accountAddressFromForm, getStoredAccountProfile, saveAccountProfile } from '../utils/accountProfile';
 
 interface AccountSettingsPageProps {
   content: CreateAccountContent;
@@ -10,12 +11,23 @@ interface AccountSettingsPageProps {
 const editableFields = new Set(['email', 'address1', 'city', 'stateProvince', 'zip', 'country', 'phone']);
 
 export function AccountSettingsPage({ content, countryRegions }: AccountSettingsPageProps) {
-  const [country, setCountry] = useState(countryRegions.find((item) => item.country === 'Thailand')?.country ?? countryRegions[0]?.country ?? '');
+  const savedProfile = getStoredAccountProfile();
+  const [country, setCountry] = useState(savedProfile.shipping.country || countryRegions.find((item) => item.country === 'Thailand')?.country || countryRegions[0]?.country || '');
   const regions = countryRegions.find((item) => item.country === country)?.regions ?? [];
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.info('Account settings payload ready for future API integration:', getCleanFormData(event.currentTarget));
+    const formPayload = getCleanFormData(event.currentTarget);
+    const updatedAddress = accountAddressFromForm({
+      ...formPayload,
+      fullName: savedProfile.shipping.fullName,
+    });
+    saveAccountProfile({
+      email: String(formPayload.email ?? savedProfile.email),
+      shipping: updatedAddress,
+      billing: savedProfile.billing.fullName ? savedProfile.billing : updatedAddress,
+    });
+    console.info('Account settings payload ready for future API integration:', formPayload);
   }
 
   return (
@@ -45,7 +57,7 @@ export function AccountSettingsPage({ content, countryRegions }: AccountSettings
                 <label className="field" key={field.id}>
                   <span>{field.label}</span>
                   {regions.length > 0 ? (
-                    <select name={field.id} required={field.required} autoComplete="address-level1">
+                    <select name={field.id} required={field.required} autoComplete="address-level1" defaultValue={savedProfile.shipping.stateProvince}>
                       {regions.map((region) => (
                         <option key={region} value={region}>
                           {region}
@@ -53,7 +65,7 @@ export function AccountSettingsPage({ content, countryRegions }: AccountSettings
                       ))}
                     </select>
                   ) : (
-                    <input name={field.id} type="text" placeholder="Region, province, or area" required={field.required} autoComplete="address-level1" maxLength={120} />
+                    <input name={field.id} type="text" placeholder="Region, province, or area" required={field.required} autoComplete="address-level1" maxLength={120} defaultValue={savedProfile.shipping.stateProvince} />
                   )}
                 </label>
               );
@@ -62,7 +74,7 @@ export function AccountSettingsPage({ content, countryRegions }: AccountSettings
             return (
               <label className="field" key={field.id}>
                 <span>{field.label}</span>
-                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={180} />
+                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={180} defaultValue={field.id === 'email' ? savedProfile.email : savedProfile.shipping[field.id as keyof typeof savedProfile.shipping] ?? ''} />
               </label>
             );
           })}
