@@ -158,6 +158,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Added frontend event checkout routing: Join Now now sends unauthenticated users to Create Account with a saved checkout return path, sends authenticated users to event checkout, and checkout displays event summary, login/register prompts, editable shipping/billing details, and card payment fields.
 - Corrected the homepage video hero CTA overlay so the Sign Up Now button is anchored to the bottom center of the slider with full-width overlay centering instead of offset positioning.
 - Replaced the homepage hero MP4 with the supplied YouTube embed, using muted autoplay, hidden player controls, eager iframe loading, and preconnect hints so the video starts faster on homepage entry without exposing a play button.
+- Reworked the event checkout page into a cleaner modern split layout with line-separated left-side sections, a sticky order summary on the right, and event details plus pricing grouped in the summary panel.
 
 ## Completed Changes
 
@@ -189,6 +190,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Added event registration cart/checkout behavior with auth-aware Join Now routing, saved account profile reuse, editable shipping/billing sections, payment fields, and responsive white checkout styling.
 - 2026-05-17: Fixed the homepage video hero CTA alignment by centering the overlay layer and pinning the Sign Up Now button to the true bottom center on desktop and mobile.
 - 2026-05-17: Swapped the homepage hero media to the provided YouTube embed and configured it for muted autoplay, hidden controls, eager loading, and non-interactive playback on page entry.
+- 2026-05-17: Redesigned the event checkout UI to use divider-based sections instead of boxed text panels and added a right-side order summary with event details and pricing.
 
 ## Next Steps
 

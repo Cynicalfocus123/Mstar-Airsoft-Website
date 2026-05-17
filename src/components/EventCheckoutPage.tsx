@@ -21,6 +21,11 @@ interface AddressSectionProps {
   onSave: (address: AccountAddress) => void;
 }
 
+interface SummaryRowProps {
+  label: string;
+  value: string;
+}
+
 const addressFields = [
   { id: 'fullName', label: 'Full name', autoComplete: 'name' },
   { id: 'phone', label: 'Phone number', autoComplete: 'tel' },
@@ -31,6 +36,15 @@ const addressFields = [
   { id: 'country', label: 'Country', autoComplete: 'country-name' },
 ] as const;
 
+function SummaryRow({ label, value }: SummaryRowProps) {
+  return (
+    <div className="checkout-summary-row">
+      <dt>{label}</dt>
+      <dd>{value}</dd>
+    </div>
+  );
+}
+
 function AddressSection({ title, address, isEditing, onEdit, onSave }: AddressSectionProps) {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -38,7 +52,7 @@ function AddressSection({ title, address, isEditing, onEdit, onSave }: AddressSe
   }
 
   return (
-    <section className="checkout-section">
+    <section className="checkout-line-section">
       <div className="checkout-section-header">
         <h2>{title}</h2>
         {!isEditing && (
@@ -85,6 +99,8 @@ export function EventCheckoutPage({ event, isAuthenticated }: EventCheckoutPageP
   const [profile, setProfile] = useState(getStoredAccountProfile);
   const [editingSection, setEditingSection] = useState<'shipping' | 'billing' | null>(null);
 
+  const customerEmail = profile.email || 'customer@mstarairsoft.example';
+
   function saveAddress(section: 'shipping' | 'billing', address: AccountAddress) {
     const nextProfile = { ...profile, [section]: address };
     setProfile(nextProfile);
@@ -119,110 +135,136 @@ export function EventCheckoutPage({ event, isAuthenticated }: EventCheckoutPageP
             Back to event
           </a>
         </div>
-
-        {!isAuthenticated && (
-          <section className="checkout-auth-callout">
-            <div>
-              <h2>Sign in to finish registration</h2>
-              <p>Create an account or log in, then your event checkout will continue here.</p>
-            </div>
-            <div className="checkout-auth-actions">
-              <a
-                className="btn btn-secondary"
-                href="#/signin"
-                onClick={() => sessionStorage.setItem('mstarAuthReturnTo', `#/checkout/${event.id}`)}
-              >
-                Login
-              </a>
-              <a
-                className="btn btn-gold"
-                href="#/signup"
-                onClick={() => sessionStorage.setItem('mstarAuthReturnTo', `#/checkout/${event.id}`)}
-              >
-                Register
-              </a>
-            </div>
-          </section>
-        )}
-
-        <section className="checkout-event-card">
-          <img src={event.imagePath} alt="" />
-          <div>
-            <span>{event.status}</span>
-            <h2>{event.title}</h2>
-            <dl>
-              <div>
-                <dt>Date</dt>
-                <dd>{event.date}</dd>
-              </div>
-              <div>
-                <dt>Location</dt>
-                <dd>{event.location}</dd>
-              </div>
-              <div>
-                <dt>Entry fee</dt>
-                <dd>{event.entryFee}</dd>
-              </div>
-              {event.attendance && (
-                <div>
-                  <dt>Attendance</dt>
-                  <dd>{event.attendance}</dd>
+        <div className="checkout-layout">
+          <div className="checkout-main">
+            {!isAuthenticated && (
+              <section className="checkout-line-section checkout-auth-strip">
+                <div className="checkout-section-header">
+                  <div>
+                    <h2>Sign in to finish registration</h2>
+                    <p>Create an account or log in, then your event checkout will continue here.</p>
+                  </div>
                 </div>
-              )}
-            </dl>
+                <div className="checkout-auth-actions">
+                  <a
+                    className="btn btn-secondary"
+                    href="#/signin"
+                    onClick={() => sessionStorage.setItem('mstarAuthReturnTo', `#/checkout/${event.id}`)}
+                  >
+                    Login
+                  </a>
+                  <a
+                    className="btn btn-gold"
+                    href="#/signup"
+                    onClick={() => sessionStorage.setItem('mstarAuthReturnTo', `#/checkout/${event.id}`)}
+                  >
+                    Register
+                  </a>
+                </div>
+              </section>
+            )}
+
+            {isAuthenticated && (
+              <section className="checkout-line-section">
+                <div className="checkout-section-header">
+                  <h2>Customer</h2>
+                  <button className="checkout-edit" type="button" onClick={() => { window.location.hash = '#/account'; }}>
+                    Edit
+                  </button>
+                </div>
+                <div className="checkout-customer-email">{customerEmail}</div>
+              </section>
+            )}
+
+            {isAuthenticated && (
+              <AddressSection
+                title="Shipping"
+                address={profile.shipping}
+                isEditing={editingSection === 'shipping'}
+                onEdit={() => setEditingSection('shipping')}
+                onSave={(address) => saveAddress('shipping', address)}
+              />
+            )}
+
+            {isAuthenticated && (
+              <AddressSection
+                title="Billing"
+                address={profile.billing}
+                isEditing={editingSection === 'billing'}
+                onEdit={() => setEditingSection('billing')}
+                onSave={(address) => saveAddress('billing', address)}
+              />
+            )}
+
+            {isAuthenticated && (
+              <section className="checkout-line-section">
+                <div className="checkout-section-header">
+                  <h2>Payment</h2>
+                  <div className="card-brands" aria-label="Accepted cards">
+                    <span>Visa</span>
+                    <span>Mastercard</span>
+                    <span>Amex</span>
+                    <span>Discover</span>
+                  </div>
+                </div>
+                <p className="checkout-payment-label">Credit card payment</p>
+                <form className="payment-form">
+                  <label className="checkout-field checkout-field-wide">
+                    <span>Credit Card Number</span>
+                    <input name="cardNumber" type="text" inputMode="numeric" autoComplete="cc-number" placeholder="0000 0000 0000 0000" maxLength={23} />
+                  </label>
+                  <label className="checkout-field">
+                    <span>Name on Card</span>
+                    <input name="cardName" type="text" autoComplete="cc-name" placeholder="Name on card" maxLength={180} />
+                  </label>
+                  <label className="checkout-field">
+                    <span>Expiration date</span>
+                    <input name="cardExpiry" type="text" inputMode="numeric" autoComplete="cc-exp" placeholder="MM / YY" maxLength={7} />
+                  </label>
+                  <label className="checkout-field">
+                    <span>CVV</span>
+                    <input name="cardCvv" type="text" inputMode="numeric" autoComplete="cc-csc" placeholder="CVV" maxLength={4} />
+                  </label>
+                  <button className="btn btn-gold checkout-save" type="button">
+                    Complete Registration
+                  </button>
+                </form>
+              </section>
+            )}
           </div>
-        </section>
 
-        {isAuthenticated && (
-          <div className="checkout-body">
-            <AddressSection
-              title="Shipping"
-              address={profile.shipping}
-              isEditing={editingSection === 'shipping'}
-              onEdit={() => setEditingSection('shipping')}
-              onSave={(address) => saveAddress('shipping', address)}
-            />
-            <AddressSection
-              title="Billing"
-              address={profile.billing}
-              isEditing={editingSection === 'billing'}
-              onEdit={() => setEditingSection('billing')}
-              onSave={(address) => saveAddress('billing', address)}
-            />
-            <section className="checkout-section">
-              <div className="checkout-section-header">
-                <h2>Payment</h2>
-                <div className="card-brands" aria-label="Accepted cards">
-                  <span>Visa</span>
-                  <span>Mastercard</span>
-                  <span>Amex</span>
-                  <span>Discover</span>
+          <aside className="checkout-sidebar">
+            <section className="checkout-summary">
+              <div className="checkout-summary-header">
+                <h2>Order Summary</h2>
+                <a className="checkout-summary-link" href={`#/events/${event.id}`}>
+                  Edit Cart
+                </a>
+              </div>
+
+              <div className="checkout-summary-item">
+                <img src={event.imagePath} alt="" />
+                <div className="checkout-summary-copy">
+                  <div className="checkout-summary-title-row">
+                    <h3>{event.title}</h3>
+                    <strong>{event.entryFee}</strong>
+                  </div>
+                  <p>{event.date}</p>
+                  <p>{event.time}</p>
+                  <p>{event.location}</p>
+                  {event.attendance && <p>Attendance: {event.attendance}</p>}
+                  <span>{event.status}</span>
                 </div>
               </div>
-              <form className="payment-form">
-                <label className="checkout-field checkout-field-wide">
-                  <span>Credit Card Number</span>
-                  <input name="cardNumber" type="text" inputMode="numeric" autoComplete="cc-number" placeholder="0000 0000 0000 0000" maxLength={23} />
-                </label>
-                <label className="checkout-field">
-                  <span>Name on Card</span>
-                  <input name="cardName" type="text" autoComplete="cc-name" placeholder="Name on card" maxLength={180} />
-                </label>
-                <label className="checkout-field">
-                  <span>Expiration date</span>
-                  <input name="cardExpiry" type="text" inputMode="numeric" autoComplete="cc-exp" placeholder="MM / YY" maxLength={7} />
-                </label>
-                <label className="checkout-field">
-                  <span>CVV</span>
-                  <input name="cardCvv" type="text" inputMode="numeric" autoComplete="cc-csc" placeholder="CVV" maxLength={4} />
-                </label>
-                <button className="btn btn-gold checkout-save" type="button">
-                  Complete Registration
-                </button>
-              </form>
+
+              <dl className="checkout-summary-totals">
+                <SummaryRow label="Registration" value={event.entryFee} />
+                <SummaryRow label="Processing" value="Free" />
+                <SummaryRow label="Total" value={event.entryFee} />
+              </dl>
             </section>
-          </div>
-        )}
+          </aside>
+        </div>
       </section>
     </main>
   );
