@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { BannerSlider } from './components/BannerSlider';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { PackageOffer } from './components/PackageOffer';
 import { Events } from './components/Events';
 import { Gallery } from './components/Gallery';
 import { Rules } from './components/Rules';
@@ -118,6 +119,7 @@ export default function App() {
           <BannerSlider slides={siteContent.heroSlides} />
           <Hero content={siteContent.hero} />
           <About content={siteContent.about} />
+          <PackageOffer content={siteContent.packageOffer} />
           <Events events={siteContent.events.slice(0, 3)} viewAllHref="#/events" />
           <Rules rules={siteContent.rules} />
           <Gallery items={siteContent.gallery} />

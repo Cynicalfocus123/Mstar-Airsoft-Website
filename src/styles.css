@@ -371,6 +371,7 @@ textarea {
 }
 
 .card-grid,
+.package-offer-grid,
 .gallery-grid,
 .rule-list,
 .contact-grid {
@@ -382,8 +383,37 @@ textarea {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.package-offer-grid {
+  grid-template-columns: minmax(0, 440px);
+}
+
 .event-card {
   padding: 22px;
+}
+
+.package-offer-card {
+  gap: 0;
+}
+
+.package-offer-card h3 {
+  min-height: auto;
+}
+
+.package-offer-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.package-offer-list li {
+  padding: 14px 16px;
+  border-left: 4px solid var(--gold);
+  background: rgba(255, 255, 255, 0.055);
+  color: #e9e0c8;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .card-topline {
@@ -633,6 +663,7 @@ select:focus {
     grid-template-columns: 1fr;
   }
 
+  .package-offer-grid,
   .card-grid,
   .rule-list,
   .gallery-grid,
@@ -688,6 +719,7 @@ select:focus {
 
   .hero-grid,
   .registration-form,
+  .package-offer-grid,
   .card-grid,
   .rule-list,
   .gallery-grid,

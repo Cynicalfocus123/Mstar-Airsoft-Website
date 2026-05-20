@@ -63,6 +63,16 @@ export const siteContent: SiteContent = {
     backgroundImagePath: '/images/about-background.webp',
     mobileBackgroundImagePath: '/images/about-background.webp',
   },
+  packageOffer: {
+    eyebrow: 'Stay and Play',
+    title: 'Package Offer',
+    price: 'Ticket Price - $120.00',
+    duration: '3 days / 2 nights',
+    perks: [
+      'Live music',
+      'Food Court',
+    ],
+  },
   events: [
     {
       id: 'urban-rush',

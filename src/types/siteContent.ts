@@ -53,6 +53,14 @@ export interface AboutContent {
   mobileBackgroundImagePath?: string;
 }
 
+export interface PackageOfferContent {
+  eyebrow: string;
+  title: string;
+  price: string;
+  duration: string;
+  perks: string[];
+}
+
 export interface EventCard {
   id: string;
   title: string;
@@ -134,6 +142,7 @@ export interface SiteContent {
   heroSlides: HeroSlide[];
   hero: HeroContent;
   about: AboutContent;
+  packageOffer: PackageOfferContent;
   events: EventCard[];
   registrationFields: FormField[];
   gallery: GalleryItem[];

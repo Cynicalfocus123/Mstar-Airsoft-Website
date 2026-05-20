@@ -83,6 +83,7 @@
 - Homepage hero video should keep the poster visible until video playback is actually ready, and should prefer native media-based source selection for mobile versus desktop when separate MP4 assets exist.
 - Homepage hero video may use external Cloudflare R2 public MP4 URLs for desktop and mobile, but it must remain native HTML5 video with poster-first loading, hidden controls, pointer-events disabled, and the CTA plus dark overlay layered above it.
 - Homepage hero poster should use the latest uploaded WebP fallback asset, preload at high priority, and remain visible until the R2 video can actually play, including during stalls or load errors.
+- Homepage must place a clearly visible Package Offer section above Game Schedules, and the offer card should follow the same tactical event-card language while staying easy to scan on desktop and mobile.
 - FAQ and travel-guide pages should use the same tactical banner-card language as the Events page, but without event-only metadata like date, location, entry fee, teams, or attendance.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
@@ -188,3 +189,4 @@
 - 2026-05-17: Connected the homepage hero desktop and mobile videos to Cloudflare R2 public MP4 URLs and added browser connection hints for both media domains.
 - 2026-05-17: Replaced the homepage hero fallback poster with the uploaded WebP and strengthened the no-blank-frame fallback behavior around hero video loading.
 - 2026-05-20: Expanded header navigation, rebuilt the footer into taller vertical link columns, and added placeholder FAQ and Thailand-planning pages using event-inspired banner cards without event metadata.
+- 2026-05-20: Added a Package Offer section above the homepage Game Schedules block with a single tactical offer card for price, stay length, live music, and food court perks.
