@@ -399,27 +399,27 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+  align-items: end;
 }
 
 .package-offer-value {
   display: grid;
-  gap: 8px;
-  padding: 18px;
-  border: 1px solid rgba(240, 185, 11, 0.22);
-  background: rgba(255, 255, 255, 0.035);
+  gap: 6px;
 }
 
 .package-offer-value span {
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 900;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .package-offer-value strong {
   color: var(--gold);
-  font-size: clamp(1.6rem, 3vw, 2.25rem);
-  line-height: 1.05;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.15;
+  font-weight: 800;
   text-transform: uppercase;
 }
 

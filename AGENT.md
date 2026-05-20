@@ -176,6 +176,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Expanded the site navigation with Products and Things to Know, rebuilt the footer into taller vertical link columns, and added placeholder info pages including FAQ and Thailand travel-prep routes.
 - Added a homepage Package Offer section above Game Schedules using the same tactical card system and surfaced the ticket price, stay length, live music, and food court perks for desktop and mobile.
 - Refined the homepage Package Offer card by removing the duplicate inner title, enlarging the price and stay length equally, and reducing the visual weight of the live music and food court lines.
+- Softened the homepage Package Offer typography by removing the boxed value treatment and resizing the price and stay length to a cleaner medium-weight presentation.
 
 ## Completed Changes
 
@@ -224,6 +225,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-20: Added Products and Things to Know to the header, converted the footer into vertical multi-column link groups, and created placeholder info pages including FAQ and Thailand travel-prep routes.
 - 2026-05-20: Added a homepage Package Offer section above Game Schedules with a single offer card for price, duration, live music, and food court perks.
 - 2026-05-20: Refined the homepage Package Offer card hierarchy so price and stay length lead the card and the perk lines read smaller.
+- 2026-05-20: Removed the boxed Package Offer value treatment and resized the price and stay length to a more modern medium scale.
 
 ## Next Steps
 
