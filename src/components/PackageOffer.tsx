@@ -13,11 +13,16 @@ export function PackageOffer({ content }: PackageOfferProps) {
       </div>
       <div className="package-offer-grid">
         <article className="event-card package-offer-card">
-          <div className="card-topline">
-            <span>{content.duration}</span>
-            <strong>{content.price}</strong>
+          <div className="package-offer-values">
+            <div className="package-offer-value">
+              <span>Price</span>
+              <strong>{content.price}</strong>
+            </div>
+            <div className="package-offer-value">
+              <span>Stay</span>
+              <strong>{content.duration}</strong>
+            </div>
           </div>
-          <h3>Package Offer</h3>
           <ul className="package-offer-list">
             {content.perks.map((perk) => (
               <li key={perk}>{perk}</li>

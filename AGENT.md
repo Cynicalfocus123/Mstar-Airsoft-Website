@@ -175,6 +175,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Replaced the homepage hero poster with the new uploaded WebP asset, preloaded it for first paint, and kept it visible during video load, stalls, and load failures so the splash never appears blank.
 - Expanded the site navigation with Products and Things to Know, rebuilt the footer into taller vertical link columns, and added placeholder info pages including FAQ and Thailand travel-prep routes.
 - Added a homepage Package Offer section above Game Schedules using the same tactical card system and surfaced the ticket price, stay length, live music, and food court perks for desktop and mobile.
+- Refined the homepage Package Offer card by removing the duplicate inner title, enlarging the price and stay length equally, and reducing the visual weight of the live music and food court lines.
 
 ## Completed Changes
 
@@ -222,6 +223,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Swapped the homepage hero poster to the uploaded WebP, added poster preload, and reinforced the poster fallback logic for loading, buffering, and video errors.
 - 2026-05-20: Added Products and Things to Know to the header, converted the footer into vertical multi-column link groups, and created placeholder info pages including FAQ and Thailand travel-prep routes.
 - 2026-05-20: Added a homepage Package Offer section above Game Schedules with a single offer card for price, duration, live music, and food court perks.
+- 2026-05-20: Refined the homepage Package Offer card hierarchy so price and stay length lead the card and the perk lines read smaller.
 
 ## Next Steps
 
