@@ -173,6 +173,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Reworked the homepage hero video to use a poster image fallback that stays visible until playback starts, and let the browser choose mobile versus desktop MP4 sources through native media-based video sources.
 - Switched the homepage hero video from local assets to Cloudflare R2 public desktop and mobile MP4 URLs, and added DNS prefetch plus preconnect hints for both R2 domains.
 - Replaced the homepage hero poster with the new uploaded WebP asset, preloaded it for first paint, and kept it visible during video load, stalls, and load failures so the splash never appears blank.
+- Expanded the site navigation with Products and Things to Know, rebuilt the footer into taller vertical link columns, and added placeholder info pages including FAQ and Thailand travel-prep routes.
 
 ## Completed Changes
 
@@ -218,6 +219,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-17: Updated the homepage hero video to use a real poster fallback plus native mobile/desktop source selection, improving first paint and reducing blank video flashes.
 - 2026-05-17: Moved the homepage hero desktop and mobile videos to Cloudflare R2 public URLs and added connection hints for both video origins.
 - 2026-05-17: Swapped the homepage hero poster to the uploaded WebP, added poster preload, and reinforced the poster fallback logic for loading, buffering, and video errors.
+- 2026-05-20: Added Products and Things to Know to the header, converted the footer into vertical multi-column link groups, and created placeholder info pages including FAQ and Thailand travel-prep routes.
 
 ## Next Steps
 

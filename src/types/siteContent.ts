@@ -3,6 +3,11 @@ export interface NavLink {
   href: string;
 }
 
+export interface FooterSection {
+  title: string;
+  links: NavLink[];
+}
+
 export interface CtaButton {
   label: string;
   href: string;
@@ -105,6 +110,23 @@ export interface CountryRegion {
   regions: string[];
 }
 
+export interface InfoCard {
+  id: string;
+  title: string;
+  summary: string;
+  imagePath: string;
+  badge?: string;
+  placeholderLabel?: string;
+}
+
+export interface InfoPageContent {
+  slug: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  cards: InfoCard[];
+}
+
 export interface SiteContent {
   identity: SiteIdentity;
   navLinks: NavLink[];
@@ -117,7 +139,8 @@ export interface SiteContent {
   gallery: GalleryItem[];
   rules: RuleItem[];
   contact: ContactContent;
-  footerLinks: NavLink[];
+  footerSections: FooterSection[];
+  infoPages: InfoPageContent[];
   signIn: SignInContent;
   createAccount: CreateAccountContent;
   countryRegions: CountryRegion[];

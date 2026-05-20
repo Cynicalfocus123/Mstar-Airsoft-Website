@@ -14,6 +14,7 @@ import { CreateAccountPage } from './components/CreateAccountPage';
 import { AccountSettingsPage } from './components/AccountSettingsPage';
 import { EventDetailPage } from './components/EventDetailPage';
 import { EventCheckoutPage } from './components/EventCheckoutPage';
+import { InfoPage } from './components/InfoPage';
 import { siteContent } from './data/siteContent';
 
 function getRoute() {
@@ -26,6 +27,10 @@ function getRoute() {
   if (hash.startsWith('#/account')) return { name: 'account' };
   if (hash.startsWith('#/')) {
     const section = hash.replace('#/', '') || 'home';
+    const slug = section.split('/')[0];
+    if (siteContent.infoPages.some((page) => page.slug === slug)) {
+      return { name: 'info', slug };
+    }
     return { name: 'home', section };
   }
   if (hash.startsWith('#')) {
@@ -82,6 +87,9 @@ export default function App() {
   const selectedEvent = route.name === 'eventDetail' || route.name === 'checkout'
     ? siteContent.events.find((event) => event.id === route.eventId)
     : undefined;
+  const selectedInfoPage = route.name === 'info'
+    ? siteContent.infoPages.find((page) => page.slug === route.slug)
+    : undefined;
 
   useEffect(() => {
     if (route.name === 'home' && route.section && route.section !== 'home') {
@@ -93,7 +101,7 @@ export default function App() {
     }
 
     window.scrollTo({ top: 0, left: 0 });
-  }, [route.name, route.section, selectedEvent?.id]);
+  }, [route.name, route.section, route.slug, selectedEvent?.id]);
 
   return (
     <>
@@ -119,6 +127,7 @@ export default function App() {
       {route.name === 'events' && <EventsPage events={siteContent.events} />}
       {route.name === 'eventDetail' && <EventDetailPage event={selectedEvent} isAuthenticated={isAuthenticated} />}
       {route.name === 'checkout' && <EventCheckoutPage event={selectedEvent} isAuthenticated={isAuthenticated} />}
+      {route.name === 'info' && <InfoPage content={selectedInfoPage} />}
       {route.name === 'signin' && <SignInPage content={siteContent.signIn} onSuccess={markSignedIn} />}
       {route.name === 'signup' && (
         <CreateAccountPage
@@ -135,7 +144,7 @@ export default function App() {
       )}
       <Footer
         identity={siteContent.identity}
-        links={siteContent.footerLinks}
+        sections={siteContent.footerSections}
         contact={siteContent.contact}
       />
     </>

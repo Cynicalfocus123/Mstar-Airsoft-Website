@@ -95,11 +95,26 @@ textarea {
   letter-spacing: 0;
 }
 
+.footer-heading {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .nav,
 .footer-links {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.nav {
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav a,
@@ -526,10 +541,10 @@ select:focus {
 
 .site-footer {
   display: grid;
-  grid-template-columns: minmax(240px, 1fr) auto minmax(220px, 0.7fr);
-  gap: 28px;
-  align-items: center;
-  padding: 32px clamp(18px, 4vw, 64px);
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.6fr) minmax(220px, 0.8fr);
+  gap: 40px;
+  align-items: start;
+  padding: 46px clamp(18px, 4vw, 64px);
   border-top: 1px solid var(--line);
   background: #050605;
 }
@@ -543,7 +558,7 @@ select:focus {
 .footer-brand div,
 .footer-contact {
   display: grid;
-  gap: 4px;
+  gap: 8px;
 }
 
 .footer-brand span {
@@ -551,8 +566,30 @@ select:focus {
   font-size: 0.86rem;
 }
 
+.footer-link-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.footer-link-group {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-links {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-links a {
+  width: 100%;
+}
+
 .footer-contact {
-  justify-items: end;
+  justify-items: start;
 }
 
 @media (max-width: 900px) {
@@ -605,6 +642,10 @@ select:focus {
 
   .footer-contact {
     justify-items: start;
+  }
+
+  .footer-link-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -666,6 +707,15 @@ select:focus {
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .site-footer,
+  .footer-link-columns {
+    gap: 22px;
+  }
+
+  .footer-link-columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Updated MSTAR black, white, and gold page system. */
@@ -706,6 +756,7 @@ select:focus {
 .header-actions {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   margin-left: 8px;
 }
@@ -913,6 +964,7 @@ select:focus {
 
 .page-hero,
 .event-banner-list,
+.info-banner-list,
 .auth-layout,
 .create-account-panel {
   width: min(1160px, 100%);
@@ -924,6 +976,12 @@ select:focus {
 }
 
 .event-banner-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.info-banner-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
@@ -1017,6 +1075,20 @@ select:focus {
   text-transform: uppercase;
 }
 
+.info-banner-content {
+  align-content: start;
+}
+
+.info-card-placeholder {
+  padding: 14px 16px;
+  border: 1px solid rgba(240, 185, 11, 0.2);
+  background: rgba(255, 255, 255, 0.045);
+  color: #d5d0be;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .event-banner-content dl {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px 16px;
@@ -1099,8 +1171,8 @@ select:focus {
   color: var(--white);
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   background:
-    linear-gradient(180deg, rgba(240, 185, 11, 0.12), transparent 56%),
-    linear-gradient(180deg, #686868, #303030);
+      linear-gradient(180deg, rgba(240, 185, 11, 0.12), transparent 56%),
+      linear-gradient(180deg, #686868, #303030);
 }
 
 .footer-brand {
@@ -1585,12 +1657,14 @@ select:focus {
   }
 
   .event-banner-content dl,
+  .info-banner-list,
   .auth-layout,
   .account-form {
     grid-template-columns: 1fr;
   }
 
   .event-banner-list,
+  .info-banner-list,
   .event-detail-layout,
   .checkout-event-card {
     grid-template-columns: 1fr;

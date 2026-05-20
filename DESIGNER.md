@@ -18,7 +18,7 @@
 - Use the transparent MSTAR Airsoft logo from `src/assets/mstar-airsoft-logo.png`.
 - Do not place the logo on a yellow or solid background plate.
 - Header background should be grey/dark grey so transparent artwork is visible directly.
-- Header navigation: Home, About, Events, Rules, Gallery, Contact.
+- Header navigation: Home, About, Events, Products, Things to Know, Rules, Gallery, Contact.
 - Header includes Login and Sign Up actions.
 - No Shop link.
 - Mobile menu must remain responsive and easy to tap.
@@ -30,6 +30,8 @@
 - Footer logo must stay clearly visible with transparent artwork.
 - Do not place footer logo on a yellow or solid background plate.
 - Footer links must come from config/data.
+- Footer link groups should stack vertically inside roomy columns with enough spacing for longer labels and travel-guide sections.
+- Footer must include a clearly linked FAQ destination and collapse into an easy-tap vertical stack on mobile.
 - No Shop link.
 
 ## Logo Placement Rules
@@ -81,6 +83,7 @@
 - Homepage hero video should keep the poster visible until video playback is actually ready, and should prefer native media-based source selection for mobile versus desktop when separate MP4 assets exist.
 - Homepage hero video may use external Cloudflare R2 public MP4 URLs for desktop and mobile, but it must remain native HTML5 video with poster-first loading, hidden controls, pointer-events disabled, and the CTA plus dark overlay layered above it.
 - Homepage hero poster should use the latest uploaded WebP fallback asset, preload at high priority, and remain visible until the R2 video can actually play, including during stalls or load errors.
+- FAQ and travel-guide pages should use the same tactical banner-card language as the Events page, but without event-only metadata like date, location, entry fee, teams, or attendance.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
 
@@ -184,3 +187,4 @@
 - 2026-05-17: Improved the homepage hero media loading with a persistent poster fallback and native browser source selection for mobile and desktop video assets.
 - 2026-05-17: Connected the homepage hero desktop and mobile videos to Cloudflare R2 public MP4 URLs and added browser connection hints for both media domains.
 - 2026-05-17: Replaced the homepage hero fallback poster with the uploaded WebP and strengthened the no-blank-frame fallback behavior around hero video loading.
+- 2026-05-20: Expanded header navigation, rebuilt the footer into taller vertical link columns, and added placeholder FAQ and Thailand-planning pages using event-inspired banner cards without event metadata.
