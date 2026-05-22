@@ -327,7 +327,7 @@ export const siteContent: SiteContent = {
           summary: 'Placeholder guidance box for field compliance, allowed gear, and conduct expectations during the event.',
           imagePath: '/banners/event-final.svg',
           badge: 'Placeholder',
-          placeholderLabel: 'Guide box',
+          placeholderLabel: 'Open guide',
         },
         {
           id: 'accommodation-and-campground',
@@ -335,7 +335,7 @@ export const siteContent: SiteContent = {
           summary: 'Placeholder guidance box for nearby stays, campground setup, and overnight planning for teams.',
           imagePath: '/banners/event-ridge.svg',
           badge: 'Placeholder',
-          placeholderLabel: 'Guide box',
+          placeholderLabel: 'Open guide',
         },
         {
           id: 'activity',
@@ -343,7 +343,7 @@ export const siteContent: SiteContent = {
           summary: 'Placeholder guidance box for off-field downtime, side activities, and between-match planning.',
           imagePath: '/banners/event-urban.svg',
           badge: 'Placeholder',
-          placeholderLabel: 'Guide box',
+          placeholderLabel: 'Open guide',
         },
       ],
     },

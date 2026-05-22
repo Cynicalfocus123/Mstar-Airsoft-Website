@@ -182,6 +182,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Centered the Things to Know hero tagline, added footer legal/support links, and extended the info-page system to support full responsive Terms & Conditions, Privacy, and Complaints pages from typed content data.
 - Refined the Terms & Conditions, Privacy, and Complaints page headers with smaller aligned legal-page hero typography and responsive spacing for desktop, tablet, and mobile.
 - Added three Things to Know detail routes for transport, immigration visa, and equipment shipping, and linked the first three Things to Know cards directly to those full guide pages.
+- Reduced the main Things to Know heading scale and pinned every card CTA to a shared bottom alignment with consistent Open Guide labels across the full Things to Know grid.
 
 ## Completed Changes
 
@@ -236,6 +237,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Added responsive legal/support pages for Terms & Conditions, Privacy, and Complaints, centered the Things to Know FORCE OF CONQUEST hero copy, and expanded the footer Site Links section with legal/support destinations.
 - 2026-05-22: Reduced and realigned the legal/support page hero headings so Terms & Conditions, Privacy, and Complaints display cleanly across desktop, tablet, and mobile.
 - 2026-05-22: Added routed detail pages for How to Get to the Event, Immigration Visa, and Equipment, with the supplied travel and shipping copy rendered as responsive long-form guide content.
+- 2026-05-22: Tightened the Things to Know index hero typography and standardized all six card CTA labels to Open Guide with aligned bottom placement.
 
 ## Next Steps
 
