@@ -385,6 +385,7 @@ textarea {
 
 .package-offer-grid {
   grid-template-columns: minmax(0, 440px);
+  justify-content: center;
 }
 
 .event-card {
@@ -393,6 +394,14 @@ textarea {
 
 .package-offer-card {
   gap: 18px;
+  width: min(100%, 440px);
+  margin: 0 auto;
+}
+
+.package-offer-heading {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 .package-offer-values {

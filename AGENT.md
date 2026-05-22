@@ -190,6 +190,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Updated footer travel-planning links so Immigration now opens Immigration Visa, How to Pack is renamed to Ship Your Equipment, and the Thailand laws footer entry is removed.
 - Expanded the homepage Package Offer card perks so 2 Person Tent and Camping Equipment appear beneath Food Court in the offer list.
 - Removed the homepage Contact section while keeping contact details available in the footer and other shared site surfaces.
+- Removed the homepage Join Tournament CTA, centered the Package Offer heading/card presentation for desktop and mobile, and replaced the remaining Things to Know placeholder art with the supplied regulation, campground, and activities images.
 
 ## Completed Changes
 
@@ -252,6 +253,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Simplified the footer travel links by pointing Immigration to Immigration Visa, renaming How to Pack to Ship Your Equipment, and removing the Thailand laws footer item.
 - 2026-05-22: Added 2 Person Tent and Camping Equipment to the homepage Package Offer perk list below Food Court.
 - 2026-05-22: Removed the homepage Contact section to keep the landing page tighter while preserving footer contact details.
+- 2026-05-22: Removed the homepage Join Tournament button, centered the Package Offer section card on desktop/mobile, and swapped the last three Things to Know card images to the supplied regulation, campground, and activities artwork.
 
 ## Next Steps
 

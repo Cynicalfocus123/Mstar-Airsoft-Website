@@ -102,6 +102,7 @@
 - Footer travel-planning labels should match the live guide pages, including Immigration Visa and Ship Your Equipment, and should avoid obsolete footer links like Thailand laws once the main Things to Know guides are in place.
 - The homepage Package Offer card may list included stay perks as compact rows beneath Food Court, including 2 Person Tent and Camping Equipment when requested.
 - The homepage does not need a separate Contact section when footer contact details remain visible; removing it should keep the landing page cleaner without losing basic contact access.
+- The homepage hero should no longer show the Join Tournament CTA if only View Events remains, and the Package Offer section should center its heading and offer card cleanly on desktop while staying comfortable on tablet and mobile. The last three Things to Know cards should use the supplied regulation, campground, and activity imagery instead of generic placeholder banners.
 
 ## Responsive Design Rules
 
@@ -220,3 +221,4 @@
 - 2026-05-22: Updated the footer travel-planning links to match the live guide-page naming and removed the Thailand laws footer entry.
 - 2026-05-22: Extended the homepage Package Offer perk list with 2 Person Tent and Camping Equipment under Food Court.
 - 2026-05-22: Removed the homepage Contact section so the main landing flow stays tighter while contact details remain in the footer.
+- 2026-05-22: Removed the hero Join Tournament button, centered the homepage Package Offer presentation, and replaced the remaining Things to Know card artwork with the supplied regulation, campground, and activity images.

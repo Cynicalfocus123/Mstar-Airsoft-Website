@@ -41,7 +41,6 @@ export const siteContent: SiteContent = {
     subtitle:
       'Tactical airsoft tournaments and competitive events built for organized teams, clear rules, and mission-focused play.',
     buttons: [
-      { label: 'Join Tournament', href: '#/events', variant: 'primary' },
       { label: 'View Events', href: '#/events', variant: 'secondary' },
     ],
     stats: [
@@ -326,7 +325,7 @@ export const siteContent: SiteContent = {
           id: 'rules-and-regulation',
           title: 'Rules & Regulation',
           summary: 'Official event rules covering protective gear, weapon checks, gameplay standards, and player conduct.',
-          imagePath: '/banners/event-final.svg',
+          imagePath: '/images/things-to-know/regulation.png',
           href: '#/rules-and-regulation',
           badge: 'Guide',
           placeholderLabel: 'Open guide',
@@ -335,7 +334,7 @@ export const siteContent: SiteContent = {
           id: 'accommodation-and-campground',
           title: 'Accommodation & Campground',
           summary: 'Campground facilities, equipment rental, and festival-style overnight planning for players and teams.',
-          imagePath: '/banners/event-ridge.svg',
+          imagePath: '/images/things-to-know/campground.png',
           href: '#/accommodation-and-campground',
           badge: 'Guide',
           placeholderLabel: 'Open guide',
@@ -344,7 +343,7 @@ export const siteContent: SiteContent = {
           id: 'activity',
           title: 'Activity',
           summary: 'Outdoor adventure, international food, music, nightlife, and festival entertainment around the event.',
-          imagePath: '/banners/event-urban.svg',
+          imagePath: '/images/things-to-know/activities.jpg',
           href: '#/activity',
           badge: 'Guide',
           placeholderLabel: 'Open guide',

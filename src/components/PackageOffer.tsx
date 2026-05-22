@@ -6,8 +6,8 @@ interface PackageOfferProps {
 
 export function PackageOffer({ content }: PackageOfferProps) {
   return (
-    <section className="section section-anchor section-rib" id="package-offer">
-      <div className="section-heading">
+    <section className="section section-anchor section-rib package-offer-section" id="package-offer">
+      <div className="section-heading package-offer-heading">
         <p className="eyebrow">{content.eyebrow}</p>
         <h2>{content.title}</h2>
       </div>
