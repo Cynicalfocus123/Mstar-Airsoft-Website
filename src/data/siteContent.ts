@@ -709,23 +709,52 @@ export const siteContent: SiteContent = {
       slug: 'what-to-do-in-thailand',
       eyebrow: 'Travel Guide',
       title: 'What to Do in Thailand',
-      description: 'Placeholder recommendations for downtime, local experiences, and recovery days around the event trip.',
-      cards: [
+      description: 'Discover scenic attractions and memorable side trips to enjoy before or after the MSTAR Airsoft event.',
+      sections: [
         {
-          id: 'city-explore',
-          title: 'City Explore',
-          summary: 'Placeholder box for recommended city activities before or after a tournament weekend.',
-          imagePath: '/banners/event-urban.svg',
-          badge: 'Placeholder',
-          placeholderLabel: 'Guide box',
+          id: 'what-to-do-overview',
+          title: 'Explore More of Thailand',
+          paragraphs: [
+            'Make the most of your trip with nearby nature, culture, and landmark destinations that add even more adventure to your MSTAR Airsoft experience.',
+          ],
+          bullets: [
+            'Narong Waterfall',
+            'Haew Narok Waterfall',
+            'Khun Dan Prakarn Chon Dam',
+            'Wat Maneewong',
+          ],
         },
         {
-          id: 'food-and-rest',
-          title: 'Food and Rest',
-          summary: 'Placeholder box for recovery meals, hydration stops, and easy downtime planning.',
-          imagePath: '/banners/event-night.svg',
-          badge: 'Placeholder',
-          placeholderLabel: 'Guide box',
+          id: 'narong-waterfall',
+          title: 'Narong Waterfall',
+          images: [
+            {
+              src: '/images/activities/waterfall.png',
+              alt: 'Narong Waterfall surrounded by tropical forest',
+              title: 'Narong Waterfall',
+            },
+          ],
+        },
+        {
+          id: 'haew-narok-waterfall',
+          title: 'Haew Narok Waterfall',
+          paragraphs: [
+            'A dramatic waterfall destination for travelers who want to experience more of Thailand’s lush forest scenery during their trip.',
+          ],
+        },
+        {
+          id: 'khun-dan-prakarn-chon-dam',
+          title: 'Khun Dan Prakarn Chon Dam',
+          paragraphs: [
+            'A landmark stop known for wide scenic views and a memorable atmosphere that adds a different pace to your event journey.',
+          ],
+        },
+        {
+          id: 'wat-maneewong',
+          title: 'Wat Maneewong',
+          paragraphs: [
+            'A striking temple destination that offers a unique cultural stop alongside the natural and adventure experiences around the event.',
+          ],
         },
       ],
     },
