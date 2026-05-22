@@ -14,7 +14,7 @@ export const siteContent: SiteContent = {
     { label: 'Events', href: '#/events' },
     { label: 'Products', href: '#/products' },
     { label: 'Things to Know', href: '#/things-to-know' },
-    { label: 'Rules', href: '#/rules' },
+    { label: 'Rules', href: '#/rules-and-regulation' },
     { label: 'Gallery', href: '#/gallery' },
     { label: 'Contact', href: '#/contact' },
   ],
@@ -245,7 +245,7 @@ export const siteContent: SiteContent = {
       title: 'Site Links',
       links: [
         { label: 'About', href: '#/about' },
-        { label: 'Rules', href: '#/rules' },
+        { label: 'Rules', href: '#/rules-and-regulation' },
         { label: 'Gallery', href: '#/gallery' },
         { label: 'Contact', href: '#/contact' },
         { label: 'Terms & Conditions', href: '#/terms-and-conditions' },
