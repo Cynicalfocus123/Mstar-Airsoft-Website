@@ -6,7 +6,6 @@ import { About } from './components/About';
 import { PackageOffer } from './components/PackageOffer';
 import { Events } from './components/Events';
 import { Gallery } from './components/Gallery';
-import { Rules } from './components/Rules';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { EventsPage } from './components/EventsPage';
@@ -121,7 +120,6 @@ export default function App() {
           <About content={siteContent.about} />
           <PackageOffer content={siteContent.packageOffer} />
           <Events events={siteContent.events.slice(0, 3)} viewAllHref="#/events" />
-          <Rules rules={siteContent.rules} />
           <Gallery items={siteContent.gallery} />
           <Contact contact={siteContent.contact} />
         </main>

@@ -98,6 +98,7 @@
 - All six Things to Know cards should ultimately route to dedicated guide pages; rules, campground, and activities pages should use the same dark long-form reading layout as the other guide pages and remain comfortable on mobile.
 - Guide pages may include responsive supporting image grids inside content sections when supplied, and the Activities page should show the provided outdoor activity imagery directly beneath the Outdoor Adventure Activities section.
 - When a dedicated Rules & Regulation guide page exists, the shared header and footer Rules navigation should link to that page instead of an older homepage anchor section.
+- The homepage no longer needs a separate Rules and Safety section once the standalone Rules & Regulation guide page is in place; that content should live off the homepage to keep the main landing flow cleaner.
 
 ## Responsive Design Rules
 
@@ -212,3 +213,4 @@
 - 2026-05-22: Added dedicated long-form guide pages for rules, campground, and activities, and connected the remaining Things to Know cards to live guide routes.
 - 2026-05-22: Added a responsive two-column activity image grid to the Activities guide section, stacking cleanly on mobile and keeping the same dark editorial reading style.
 - 2026-05-22: Pointed the header and footer Rules navigation to the standalone Rules & Regulation guide page for consistency.
+- 2026-05-22: Removed the homepage Rules and Safety section so the landing page stays tighter while rules remain available through the dedicated guide page.

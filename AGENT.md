@@ -186,6 +186,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Added full responsive guide pages for Rules & Regulation, Accommodation & Campground Experience, and Activities & Entertainment Experience, and linked the remaining Things to Know cards to those routes.
 - Added a responsive image gallery under the Activities guide's Outdoor Adventure Activities section using the supplied Jungle Trip, ATV Ride, Zip Line, and Waterfall assets.
 - Redirected the shared header and footer Rules navigation links to the dedicated Rules & Regulation guide page instead of the old homepage rules anchor.
+- Removed the Rules and Safety block from the homepage while keeping rules available through the standalone Rules & Regulation guide page and shared nav links.
 
 ## Completed Changes
 
@@ -244,6 +245,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Converted the remaining three Things to Know placeholders into full guide pages for rules, campground, and activities with supplied event copy and live card links.
 - 2026-05-22: Added the supplied activity images under Outdoor Adventure Activities on the Activity guide page with responsive grid rendering.
 - 2026-05-22: Updated header and footer Rules links to open the standalone Rules & Regulation guide page.
+- 2026-05-22: Removed the homepage Rules and Safety section now that rules content lives on the dedicated Rules & Regulation page.
 
 ## Next Steps
 
