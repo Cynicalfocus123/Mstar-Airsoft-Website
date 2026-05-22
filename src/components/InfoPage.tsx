@@ -70,6 +70,16 @@ export function InfoPage({ content }: InfoPageProps) {
               {section.paragraphs?.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+              {section.images && (
+                <div className="policy-image-grid">
+                  {section.images.map((image) => (
+                    <figure className="policy-image-card" key={image.src}>
+                      <img src={getPublicAssetPath(image.src)} alt={image.alt} loading="lazy" />
+                      {image.title && <figcaption>{image.title}</figcaption>}
+                    </figure>
+                  ))}
+                </div>
+              )}
               {section.bullets && (
                 <ul className="policy-bullet-list">
                   {section.bullets.map((bullet) => (

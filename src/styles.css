@@ -1251,6 +1251,34 @@ select:focus {
   line-height: 1.65;
 }
 
+.policy-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.policy-image-card {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.policy-image-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(240, 185, 11, 0.2);
+  background: #050505;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+}
+
+.policy-image-card figcaption {
+  color: var(--gold);
+  font-size: 0.86rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .event-banner-content dl {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px 16px;
@@ -1851,6 +1879,10 @@ select:focus {
     font-size: clamp(2.1rem, 7vw, 4rem);
   }
 
+  .policy-image-grid {
+    grid-template-columns: 1fr;
+  }
+
   .event-detail-layout {
     margin-top: -42px;
   }
@@ -1940,6 +1972,10 @@ select:focus {
   .page-hero-guide-index h1 {
     font-size: clamp(1.85rem, 9vw, 3rem);
     line-height: 1;
+  }
+
+  .policy-image-card img {
+    aspect-ratio: 16 / 10;
   }
 
   .info-card-placeholder {

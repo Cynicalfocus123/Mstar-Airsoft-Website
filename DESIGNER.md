@@ -96,6 +96,7 @@
 - The first three Things to Know cards should behave like real guide entry points, linking into full responsive detail pages that use the same long-form dark-panel reading treatment as other structured info pages.
 - The main Things to Know landing page should use a smaller centered title than event/legal hero pages, and every card CTA should read Open Guide with the CTA row locked to a consistent bottom alignment across the grid.
 - All six Things to Know cards should ultimately route to dedicated guide pages; rules, campground, and activities pages should use the same dark long-form reading layout as the other guide pages and remain comfortable on mobile.
+- Guide pages may include responsive supporting image grids inside content sections when supplied, and the Activities page should show the provided outdoor activity imagery directly beneath the Outdoor Adventure Activities section.
 
 ## Responsive Design Rules
 
@@ -208,3 +209,4 @@
 - 2026-05-22: Connected the first three Things to Know cards to dedicated travel and equipment guide pages with mobile-friendly long-form layouts and clearer guide-style card labels.
 - 2026-05-22: Reduced the Things to Know index hero scale and aligned all card CTA buttons to a consistent Open Guide baseline.
 - 2026-05-22: Added dedicated long-form guide pages for rules, campground, and activities, and connected the remaining Things to Know cards to live guide routes.
+- 2026-05-22: Added a responsive two-column activity image grid to the Activities guide section, stacking cleanly on mobile and keeping the same dark editorial reading style.

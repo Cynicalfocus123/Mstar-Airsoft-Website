@@ -642,6 +642,28 @@ export const siteContent: SiteContent = {
           paragraphs: [
             'Participants can enjoy a wide range of exciting outdoor experiences, including:',
           ],
+          images: [
+            {
+              src: '/images/activities/jungle-trip.png',
+              alt: 'Jungle trip activity at the MSTAR event',
+              title: 'Jungle Trip',
+            },
+            {
+              src: '/images/activities/atv-ride.png',
+              alt: 'ATV ride activity at the MSTAR event',
+              title: 'ATV Ride',
+            },
+            {
+              src: '/images/activities/zip-line.png',
+              alt: 'Zip line activity at the MSTAR event',
+              title: 'Zip Line',
+            },
+            {
+              src: '/images/activities/waterfall.png',
+              alt: 'Waterfall destination activity at the MSTAR event',
+              title: 'Waterfall',
+            },
+          ],
           bullets: [
             'Jungle and nature tours through scenic forest trails',
             'ATV off-road adventures',

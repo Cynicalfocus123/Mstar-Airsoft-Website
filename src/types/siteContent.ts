@@ -133,6 +133,11 @@ export interface InfoSection {
   title: string;
   paragraphs?: string[];
   bullets?: string[];
+  images?: Array<{
+    src: string;
+    alt: string;
+    title?: string;
+  }>;
 }
 
 export interface InfoPageContent {
