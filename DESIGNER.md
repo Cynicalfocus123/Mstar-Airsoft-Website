@@ -6,6 +6,7 @@
 - Dark base with red, white, black, and military green accents.
 - Professional event-operations feel, not generic landing page.
 - First screen must show actual Mstar Airsoft brand signal and tournament CTA.
+- `DESIGNER.md` must be updated alongside `AGENT.md` whenever design, layout, media behavior, navigation behavior, responsive behavior, or visual decisions change.
 
 ## Reference Site Notes
 
@@ -139,6 +140,7 @@
 
 ## Automatic Workflow Rules
 
+- Highest priority workflow rule: after every completed normal site change, update `AGENT.md` and `DESIGNER.md` and push the finished work immediately.
 - For every completed design update, layout fix, content update, style update, deployment update, or normal repo change, commit and push automatically.
 - Do not ask for approval before normal GitHub commit or push.
 - Normal frontend changes, style changes, image optimization, README updates, memory file updates, and deployment workflow fixes are approved by default.
@@ -147,6 +149,7 @@
 ## Project Memory Rules
 
 - Always update `AGENT.md` and `DESIGNER.md` for every design change or fix.
+- Treat memory-file updates plus commit/push as part of completion, not as optional cleanup.
 - Add a short changelog entry before commit.
 - Commit memory files with the related code/design change.
 
@@ -222,3 +225,5 @@
 - 2026-05-22: Extended the homepage Package Offer perk list with 2 Person Tent and Camping Equipment under Food Court.
 - 2026-05-22: Removed the homepage Contact section so the main landing flow stays tighter while contact details remain in the footer.
 - 2026-05-22: Removed the hero Join Tournament button, centered the homepage Package Offer presentation, and replaced the remaining Things to Know card artwork with the supplied regulation, campground, and activity images.
+- 2026-05-22: Swapped the homepage hero from native background video to a responsive YouTube embed player with a touch-safe CTA placement below the video frame.
+- 2026-05-22: Elevated automatic memory updates plus immediate commit/push to the highest-priority normal workflow rule.

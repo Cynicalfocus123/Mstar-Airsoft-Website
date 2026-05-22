@@ -38,6 +38,8 @@ export interface HeroSlide {
   videoMp4Path: string;
   mobileVideoMp4Path?: string;
   videoWebmPath?: string;
+  videoEmbedUrl?: string;
+  videoEmbedTitle?: string;
   eyebrow: string;
   title: string;
   body: string;
