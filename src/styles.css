@@ -616,7 +616,7 @@ select:focus {
 
 .site-footer {
   display: grid;
-  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.6fr) minmax(220px, 0.8fr);
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 2.1fr);
   gap: 40px;
   align-items: start;
   padding: 46px clamp(18px, 4vw, 64px);
@@ -630,8 +630,7 @@ select:focus {
   object-fit: contain;
 }
 
-.footer-brand div,
-.footer-contact {
+.footer-brand div {
   display: grid;
   gap: 8px;
 }
@@ -661,10 +660,6 @@ select:focus {
 
 .footer-links a {
   width: 100%;
-}
-
-.footer-contact {
-  justify-items: start;
 }
 
 @media (max-width: 900px) {
@@ -714,10 +709,6 @@ select:focus {
   .gallery-grid,
   .contact-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-contact {
-    justify-items: start;
   }
 
   .footer-link-columns {

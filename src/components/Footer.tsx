@@ -1,12 +1,11 @@
-import type { ContactContent, FooterSection, SiteIdentity } from '../types/siteContent';
+import type { FooterSection, SiteIdentity } from '../types/siteContent';
 
 interface FooterProps {
   identity: SiteIdentity;
   sections: FooterSection[];
-  contact: ContactContent;
 }
 
-export function Footer({ identity, sections, contact }: FooterProps) {
+export function Footer({ identity, sections }: FooterProps) {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
@@ -29,12 +28,6 @@ export function Footer({ identity, sections, contact }: FooterProps) {
             </div>
           </nav>
         ))}
-      </div>
-      <div className="footer-contact">
-        <p className="footer-heading">Contact</p>
-        <span>{contact.email}</span>
-        <span>{contact.social}</span>
-        <span>{contact.location}</span>
       </div>
     </footer>
   );

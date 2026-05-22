@@ -143,7 +143,6 @@ export default function App() {
       <Footer
         identity={siteContent.identity}
         sections={siteContent.footerSections}
-        contact={siteContent.contact}
       />
     </>
   );
