@@ -722,6 +722,10 @@ export const siteContent: SiteContent = {
             'Haew Narok Waterfall',
             'Khun Dan Prakarn Chon Dam',
             'Wat Maneewong',
+            'Pak Chong',
+            'Kaeng Khoi',
+            'Wang Takrai National Park',
+            'Khao Yai National Park',
           ],
         },
         {
@@ -754,6 +758,62 @@ export const siteContent: SiteContent = {
           title: 'Wat Maneewong',
           paragraphs: [
             'A striking temple destination that offers a unique cultural stop alongside the natural and adventure experiences around the event.',
+          ],
+        },
+        {
+          id: 'pak-chong',
+          title: 'Pak Chong',
+          paragraphs: [
+            'Pak Chong is a popular getaway area for travelers who want sweeping viewpoints, cool mountain scenery, local food stops, and easy access to some of the region’s best outdoor experiences.',
+          ],
+          images: [
+            {
+              src: '/images/activities/jungle-trip.png',
+              alt: 'Scenic mountain and forest view representing Pak Chong',
+              title: 'Pak Chong',
+            },
+          ],
+        },
+        {
+          id: 'kaeng-khoi',
+          title: 'Kaeng Khoi',
+          paragraphs: [
+            'Kaeng Khoi offers a relaxed nature-focused stop with river scenery, waterfalls, and a quieter atmosphere for visitors looking to add a refreshing break to their event trip.',
+          ],
+          images: [
+            {
+              src: '/images/activities/waterfall.png',
+              alt: 'Waterfall destination representing Kaeng Khoi',
+              title: 'Kaeng Khoi',
+            },
+          ],
+        },
+        {
+          id: 'wang-takrai-national-park',
+          title: 'Wang Takrai National Park',
+          paragraphs: [
+            'Wang Takrai National Park is a favorite for family-friendly outdoor fun, natural streams, green surroundings, and all-day adventure activities in a lush tropical setting.',
+          ],
+          images: [
+            {
+              src: '/images/things-to-know/activities.jpg',
+              alt: 'Outdoor park scenery representing Wang Takrai National Park',
+              title: 'Wang Takrai National Park',
+            },
+          ],
+        },
+        {
+          id: 'khao-yai-national-park',
+          title: 'Khao Yai National Park',
+          paragraphs: [
+            'Khao Yai National Park is one of Thailand’s most iconic natural destinations, known for dramatic landscapes, forest roads, wildlife encounters, and unforgettable day trips into the mountains.',
+          ],
+          images: [
+            {
+              src: '/images/activities/atv-ride.png',
+              alt: 'Adventure landscape representing Khao Yai National Park',
+              title: 'Khao Yai National Park',
+            },
           ],
         },
       ],

@@ -234,3 +234,4 @@
 - 2026-05-22: Removed the top-header Contact navigation item while preserving footer contact access and the rest of the site structure.
 - 2026-05-22: Turned the footer What to Do in Thailand link into a real guide page using the long-form travel layout and the available local waterfall artwork.
 - 2026-05-22: Tightened the homepage About-section headline scale, width, and wrapping so the long festival message reads cleanly across all device sizes.
+- 2026-05-22: Expanded the What to Do in Thailand page with four additional destination sections and added more scenic imagery using the existing local travel/activity assets.
