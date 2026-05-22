@@ -266,6 +266,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Rewrote the homepage About section headline, body copy, and highlights to emphasize the Southeast Asia festival atmosphere, entertainment, and adventure activities.
 - 2026-05-22: Removed the Contact link from the top header navigation while leaving footer contact details and other contact content unchanged.
 - 2026-05-22: Replaced the footer What to Do in Thailand placeholder with a live guide page and added the available local waterfall image plus the requested attraction list.
+- 2026-05-22: Reduced and rebalanced the long homepage About-section headline so it fits more cleanly across mobile, tablet, laptop, and desktop.
 
 ## Next Steps
 

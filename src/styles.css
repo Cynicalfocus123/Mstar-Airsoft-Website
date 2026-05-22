@@ -347,6 +347,17 @@ textarea {
   margin: 0 auto;
 }
 
+.about-section .section-heading {
+  max-width: min(900px, 100%);
+}
+
+.about-section .section-heading h2 {
+  max-width: 18ch;
+  font-size: clamp(1.7rem, 4.2vw, 3.2rem);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
@@ -749,6 +760,12 @@ select:focus {
     background:
       linear-gradient(180deg, rgba(7, 8, 7, 0.78), rgba(7, 8, 7, 0.88) 42%, rgba(7, 8, 7, 0.96)),
       linear-gradient(90deg, rgba(240, 185, 11, 0.1), rgba(0, 0, 0, 0.24));
+  }
+
+  .about-section .section-heading h2 {
+    max-width: 100%;
+    font-size: clamp(1.45rem, 7.2vw, 2.2rem);
+    line-height: 1.12;
   }
 
   .hero-grid,

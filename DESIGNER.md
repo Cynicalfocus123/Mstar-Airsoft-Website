@@ -233,3 +233,4 @@
 - 2026-05-22: Updated the homepage About section messaging to focus on the large-scale festival experience, rainforest battlefield setting, and entertainment-led activity highlights.
 - 2026-05-22: Removed the top-header Contact navigation item while preserving footer contact access and the rest of the site structure.
 - 2026-05-22: Turned the footer What to Do in Thailand link into a real guide page using the long-form travel layout and the available local waterfall artwork.
+- 2026-05-22: Tightened the homepage About-section headline scale, width, and wrapping so the long festival message reads cleanly across all device sizes.
