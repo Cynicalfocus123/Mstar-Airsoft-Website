@@ -84,6 +84,8 @@
 - Homepage hero video should keep the poster visible until video playback is actually ready, and should prefer native media-based source selection for mobile versus desktop when separate MP4 assets exist.
 - Homepage hero video may use external Cloudflare R2 public MP4 URLs for desktop and mobile, but it must remain native HTML5 video with poster-first loading, hidden controls, pointer-events disabled, and the CTA plus dark overlay layered above it.
 - Homepage hero poster should use the latest uploaded WebP fallback asset, preload at high priority, and remain visible until the R2 video can actually play, including during stalls or load errors.
+- Homepage splash banner should remain the native background-video treatment with poster fallback and centered CTA unless the user explicitly asks to replace the splash banner itself.
+- The separate Home intro section directly under the splash banner may be replaced with a standard responsive YouTube player, and that embed should be interactive, device-safe, and should not change the splash banner or header treatment.
 - Homepage must place a clearly visible Package Offer section above Game Schedules, and the offer card should follow the same tactical event-card language while staying easy to scan on desktop and mobile.
 - Package Offer cards should prioritize the price and stay length as equal-size headline values, with supporting perks visually reduced so the card reads cleanly at a glance.
 - Package Offer value lines should stay modern and medium in scale, without extra inner boxes around the price or stay-length text.
@@ -227,3 +229,4 @@
 - 2026-05-22: Removed the hero Join Tournament button, centered the homepage Package Offer presentation, and replaced the remaining Things to Know card artwork with the supplied regulation, campground, and activity images.
 - 2026-05-22: Swapped the homepage hero from native background video to a responsive YouTube embed player with a touch-safe CTA placement below the video frame.
 - 2026-05-22: Elevated automatic memory updates plus immediate commit/push to the highest-priority normal workflow rule.
+- 2026-05-22: Restored the homepage splash banner to native video and replaced only the lower Home intro section with a responsive YouTube player.

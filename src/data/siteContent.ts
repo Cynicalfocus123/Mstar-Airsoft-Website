@@ -29,8 +29,6 @@ export const siteContent: SiteContent = {
       posterPath: '/images/home-hero-poster.webp',
       videoMp4Path: 'https://pub-f5e1fd2c513f432b9abc4e51398be430.r2.dev/Largest%20Airsoft%20Game%20in%20Southeast%20Asia%20-%20youtube.mp4',
       mobileVideoMp4Path: 'https://pub-f6fca3f41b8943aaac45cf128d4740d7.r2.dev/mobile%20video%20test%201.mp4',
-      videoEmbedUrl: 'https://www.youtube.com/embed/tyf3cAAct74',
-      videoEmbedTitle: 'Largest Airsoft Game in Southeast Asia',
       eyebrow: 'Featured Tournament',
       title: 'Gold Rush Open',
       body: 'Squad-based tournament registration is open now for the next Mstar Airsoft operation.',
@@ -42,6 +40,8 @@ export const siteContent: SiteContent = {
     title: 'MSTAR AIRSOFT',
     subtitle:
       'Tactical airsoft tournaments and competitive events built for organized teams, clear rules, and mission-focused play.',
+    videoEmbedUrl: 'https://www.youtube.com/embed/tyf3cAAct74',
+    videoEmbedTitle: 'Largest Airsoft Game in Southeast Asia',
     buttons: [
       { label: 'View Events', href: '#/events', variant: 'secondary' },
     ],

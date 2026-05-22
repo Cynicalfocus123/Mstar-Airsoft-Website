@@ -102,6 +102,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Always update `AGENT.md` and `DESIGNER.md` for every change/fix.
 - Never leave a completed project change without matching `AGENT.md` and `DESIGNER.md` updates.
 - Never leave a completed normal project change uncommitted or unpushed.
+- Keep the homepage splash banner as the native background video version unless the user explicitly asks to change the splash banner itself.
 - Do not add Shop page/link in header or footer.
 - Keep logo top-left and responsive.
 - Do not copy American Milsim text, images, brand, logo, or copyrighted assets.
@@ -261,6 +262,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Removed the homepage Join Tournament button, centered the Package Offer section card on desktop/mobile, and swapped the last three Things to Know card images to the supplied regulation, campground, and activities artwork.
 - 2026-05-22: Replaced the homepage hero banner with a responsive YouTube embed player, moved the CTA below the player for touch-safe controls, and added explicit memory-file update rules for every project change.
 - 2026-05-22: Elevated automatic `git add` + `git commit` + `git push` to a highest-priority workflow rule after every completed normal change.
+- 2026-05-22: Restored the homepage splash banner to the previous native background video treatment and replaced only the lower Home intro section with a responsive YouTube player.
 
 ## Next Steps
 

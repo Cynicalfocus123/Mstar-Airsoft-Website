@@ -24,6 +24,8 @@ export interface HeroContent {
   kicker: string;
   title: string;
   subtitle: string;
+  videoEmbedUrl: string;
+  videoEmbedTitle: string;
   buttons: CtaButton[];
   stats: Array<{
     value: string;
@@ -38,8 +40,6 @@ export interface HeroSlide {
   videoMp4Path: string;
   mobileVideoMp4Path?: string;
   videoWebmPath?: string;
-  videoEmbedUrl?: string;
-  videoEmbedTitle?: string;
   eyebrow: string;
   title: string;
   body: string;
