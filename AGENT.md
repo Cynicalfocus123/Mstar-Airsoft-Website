@@ -189,6 +189,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Removed the Rules and Safety block from the homepage while keeping rules available through the standalone Rules & Regulation guide page and shared nav links.
 - Updated footer travel-planning links so Immigration now opens Immigration Visa, How to Pack is renamed to Ship Your Equipment, and the Thailand laws footer entry is removed.
 - Expanded the homepage Package Offer card perks so 2 Person Tent and Camping Equipment appear beneath Food Court in the offer list.
+- Removed the homepage Contact section while keeping contact details available in the footer and other shared site surfaces.
 
 ## Completed Changes
 
@@ -250,6 +251,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Removed the homepage Rules and Safety section now that rules content lives on the dedicated Rules & Regulation page.
 - 2026-05-22: Simplified the footer travel links by pointing Immigration to Immigration Visa, renaming How to Pack to Ship Your Equipment, and removing the Thailand laws footer item.
 - 2026-05-22: Added 2 Person Tent and Camping Equipment to the homepage Package Offer perk list below Food Court.
+- 2026-05-22: Removed the homepage Contact section to keep the landing page tighter while preserving footer contact details.
 
 ## Next Steps
 

@@ -6,7 +6,6 @@ import { About } from './components/About';
 import { PackageOffer } from './components/PackageOffer';
 import { Events } from './components/Events';
 import { Gallery } from './components/Gallery';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { EventsPage } from './components/EventsPage';
 import { SignInPage } from './components/SignInPage';
@@ -121,7 +120,6 @@ export default function App() {
           <PackageOffer content={siteContent.packageOffer} />
           <Events events={siteContent.events.slice(0, 3)} viewAllHref="#/events" />
           <Gallery items={siteContent.gallery} />
-          <Contact contact={siteContent.contact} />
         </main>
       )}
       {route.name === 'events' && <EventsPage events={siteContent.events} />}

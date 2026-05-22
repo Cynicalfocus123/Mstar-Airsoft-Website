@@ -101,6 +101,7 @@
 - The homepage no longer needs a separate Rules and Safety section once the standalone Rules & Regulation guide page is in place; that content should live off the homepage to keep the main landing flow cleaner.
 - Footer travel-planning labels should match the live guide pages, including Immigration Visa and Ship Your Equipment, and should avoid obsolete footer links like Thailand laws once the main Things to Know guides are in place.
 - The homepage Package Offer card may list included stay perks as compact rows beneath Food Court, including 2 Person Tent and Camping Equipment when requested.
+- The homepage does not need a separate Contact section when footer contact details remain visible; removing it should keep the landing page cleaner without losing basic contact access.
 
 ## Responsive Design Rules
 
@@ -218,3 +219,4 @@
 - 2026-05-22: Removed the homepage Rules and Safety section so the landing page stays tighter while rules remain available through the dedicated guide page.
 - 2026-05-22: Updated the footer travel-planning links to match the live guide-page naming and removed the Thailand laws footer entry.
 - 2026-05-22: Extended the homepage Package Offer perk list with 2 Person Tent and Camping Equipment under Food Court.
+- 2026-05-22: Removed the homepage Contact section so the main landing flow stays tighter while contact details remain in the footer.
