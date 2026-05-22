@@ -127,12 +127,21 @@ export interface InfoCard {
   placeholderLabel?: string;
 }
 
+export interface InfoSection {
+  id: string;
+  title: string;
+  paragraphs?: string[];
+  bullets?: string[];
+}
+
 export interface InfoPageContent {
   slug: string;
   eyebrow: string;
   title: string;
   description: string;
-  cards: InfoCard[];
+  heroAlign?: 'start' | 'center';
+  cards?: InfoCard[];
+  sections?: InfoSection[];
 }
 
 export interface SiteContent {

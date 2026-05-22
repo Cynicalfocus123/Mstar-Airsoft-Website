@@ -248,6 +248,9 @@ export const siteContent: SiteContent = {
         { label: 'Rules', href: '#/rules' },
         { label: 'Gallery', href: '#/gallery' },
         { label: 'Contact', href: '#/contact' },
+        { label: 'Terms & Conditions', href: '#/terms-and-conditions' },
+        { label: 'Privacy', href: '#/privacy' },
+        { label: 'Complaints', href: '#/complaints' },
       ],
     },
   ],
@@ -289,6 +292,7 @@ export const siteContent: SiteContent = {
       eyebrow: 'Trip Basics',
       title: 'Things to Know',
       description: 'FORCE OF CONQUEST',
+      heroAlign: 'center',
       cards: [
         {
           id: 'arrival-basics',
@@ -489,6 +493,469 @@ export const siteContent: SiteContent = {
           imagePath: '/banners/event-night.svg',
           badge: 'FAQ',
           placeholderLabel: 'FAQ answer box',
+        },
+      ],
+    },
+    {
+      slug: 'terms-and-conditions',
+      eyebrow: 'Legal',
+      title: 'Terms & Conditions',
+      description: 'Event participation terms, safety requirements, and legal conditions for MSTAR Airsoft (Force of Conquest).',
+      sections: [
+        {
+          id: 'terms-intro',
+          title: 'MSTAR Airsoft (Force of Conquest)',
+          paragraphs: [
+            'Promoter: Mstar (Asia) Co., Ltd.',
+            'These Terms & Conditions govern participation in the MSTAR Airsoft (Force of Conquest) event, including all related activities, campground access, competitions, entertainment zones, vendor areas, and operational facilities. By registering, attending, participating, or entering the event premises, all participants, spectators, vendors, sponsors, media personnel, and guests acknowledge and agree to comply with the following Terms & Conditions.',
+          ],
+        },
+        {
+          id: 'terms-general-event-policy',
+          title: '1. General Event Policy',
+          bullets: [
+            '1.1 MSTAR Airsoft (Force of Conquest) is a large-scale international airsoft event organized and promoted by Mstar (Asia) Co., Ltd.',
+            '1.2 All participants must comply with all event rules, safety procedures, local laws, Thai regulations, and instructions issued by event organizers, referees, marshals, security personnel, and staff members.',
+            '1.3 Mstar (Asia) Co., Ltd. reserves the right to modify, update, suspend, or cancel any part of the event, schedule, activities, gameplay, facilities, or services without prior notice when necessary for safety, operational, legal, environmental, or unforeseen circumstances.',
+            '1.4 Participation in the event is entirely voluntary and at the participant’s own risk.',
+          ],
+        },
+        {
+          id: 'terms-registration-entry',
+          title: '2. Registration & Entry',
+          bullets: [
+            '2.1 All attendees must complete official registration procedures before entering the event premises.',
+            '2.2 Participants may be required to provide valid government-issued identification or passport, proof of registration or ticket purchase, signed liability waiver, emergency contact information, and additional travel or customs documentation when applicable.',
+            '2.3 Event tickets, camping reservations, and activity bookings are non-transferable unless approved in writing by the organizer.',
+            '2.4 The organizer reserves the right to deny entry or remove any individual who violates event policies, safety rules, local laws, or engages in disruptive behavior.',
+          ],
+        },
+        {
+          id: 'terms-age-requirements',
+          title: '3. Age Requirements',
+          bullets: [
+            '3.1 Participants under 18 years of age must have written consent from a parent or legal guardian.',
+            '3.2 Certain activities, gameplay zones, equipment usage, or entertainment areas may require minimum age restrictions.',
+            '3.3 The organizer reserves the right to request identification for age verification at any time.',
+          ],
+        },
+        {
+          id: 'terms-safety-regulations',
+          title: '4. Safety Regulations',
+          bullets: [
+            '4.1 Safety is the highest priority of the event.',
+            '4.2 All participants must wear approved full-seal eye protection at all times within active gameplay zones.',
+            '4.3 Additional face protection may be mandatory depending on age category, gameplay area, or safety requirements.',
+            '4.4 Barrel covers or barrel blocking devices must remain attached to all airsoft replicas in staging areas, parking zones, campground areas, and all non-active zones.',
+            '4.5 Real firearms, live ammunition, explosives, illegal weapons, unauthorized pyrotechnics, dangerous materials, narcotics, or prohibited substances are strictly forbidden.',
+            '4.6 All airsoft replicas must pass chronograph inspections before use.',
+            '4.7 Event organizers reserve the right to inspect, test, restrict, or prohibit any equipment deemed unsafe.',
+            '4.8 Participants must immediately follow all emergency instructions, cease gameplay when instructed, and cooperate with safety personnel.',
+          ],
+        },
+        {
+          id: 'terms-gameplay-rules',
+          title: '5. Gameplay Rules',
+          bullets: [
+            '5.1 Airsoft gameplay operates under an honor-based system.',
+            '5.2 Any direct BB impact to a participant’s body, gear, or replica counts as a valid hit unless otherwise specified under official game rules.',
+            '5.3 Cheating, aggressive conduct, blind firing, unsafe engagement, overshooting, physical altercations, harassment, or unsportsmanlike behavior are strictly prohibited.',
+            '5.4 The decisions of referees, marshals, and event officials are final.',
+            '5.5 Players removed for rule violations may be permanently banned from the event without refund.',
+          ],
+        },
+        {
+          id: 'terms-equipment-shipping',
+          title: '6. Equipment & Shipping',
+          bullets: [
+            '6.1 Participants are solely responsible for ensuring compliance with all airline, customs, import/export, and transportation regulations regarding airsoft equipment.',
+            '6.2 Participants shipping equipment internationally must provide accurate declarations and required documentation.',
+            '6.3 Mstar (Asia) Co., Ltd. may assist participants with event-related documentation; however, the participant remains fully responsible for legal compliance in their home country and Thailand.',
+            '6.4 The organizer reserves the right to refuse possession, transport, or use of any equipment deemed unsafe, prohibited, damaged, or non-compliant.',
+          ],
+        },
+        {
+          id: 'terms-campground-accommodation',
+          title: '7. Campground & Accommodation Policy',
+          bullets: [
+            '7.1 Campground access is limited to registered participants and authorized guests.',
+            '7.2 Campground bookings are subject to availability and must be reserved in advance.',
+            '7.3 Participants are responsible for maintaining cleanliness, respecting campground property, and disposing of waste properly.',
+            '7.4 Excessive noise, dangerous behavior, vandalism, illegal substances, violence, harassment, or disruptive conduct may result in immediate removal from the campground and event premises.',
+            '7.5 The organizer is not responsible for lost, stolen, or damaged personal belongings.',
+          ],
+        },
+        {
+          id: 'terms-food-alcohol',
+          title: '8. Food, Alcohol & Controlled Substances',
+          bullets: [
+            '8.1 Participants must comply with all Thai laws regarding alcohol consumption and prohibited substances.',
+            '8.2 Illegal drugs, narcotics, or controlled substances are strictly prohibited.',
+            '8.3 Intoxicated participants may be denied gameplay access or removed from the event for safety reasons.',
+            '8.4 The organizer reserves the right to conduct security inspections where permitted by law.',
+          ],
+        },
+        {
+          id: 'terms-media-publicity',
+          title: '9. Media, Photography & Publicity',
+          bullets: [
+            '9.1 By attending the event, participants grant Mstar (Asia) Co., Ltd. and its partners the unrestricted right to photograph, video record, livestream, reproduce, publish, and use their image, likeness, voice, gameplay footage, or appearance for marketing, promotional, advertising, documentary, commercial, and media purposes worldwide without compensation.',
+            '9.2 Participants may not commercially reproduce or distribute official event content without written approval from the organizer.',
+            '9.3 Media personnel and content creators may require separate accreditation approval.',
+          ],
+        },
+        {
+          id: 'terms-liability-disclaimer',
+          title: '10. Liability Disclaimer',
+          paragraphs: [
+            '10.1 Participation in airsoft activities and outdoor adventure events involves inherent risks including, but not limited to:',
+          ],
+          bullets: [
+            'Physical injury',
+            'Accidents',
+            'Falls',
+            'Equipment malfunction',
+            'Weather-related hazards',
+            'Terrain hazards',
+            'Heat exhaustion',
+            'Property damage',
+            'Transportation risks',
+            '10.2 By participating, attendees voluntarily assume all risks associated with the event.',
+            '10.3 Mstar (Asia) Co., Ltd., event staff, sponsors, venue owners, affiliates, contractors, volunteers, and partners shall not be liable for any injury, loss, death, theft, property damage, delay, accident, cancellation, or consequential damages arising from participation in the event.',
+            '10.4 Participants are encouraged to obtain personal travel, medical, accident, and property insurance coverage.',
+          ],
+        },
+        {
+          id: 'terms-force-majeure',
+          title: '11. Force Majeure',
+          paragraphs: [
+            '11.1 The organizer shall not be held responsible for delays, cancellations, interruptions, or modifications caused by circumstances beyond reasonable control including:',
+          ],
+          bullets: [
+            'Natural disasters',
+            'Floods',
+            'Storms',
+            'Government actions',
+            'Pandemic restrictions',
+            'Civil unrest',
+            'Power outages',
+            'Venue restrictions',
+            'Transportation disruption',
+            'Security threats',
+            'Acts of God',
+            '11.2 In such cases, refunds, rescheduling, or credits shall be determined solely at the discretion of the organizer.',
+          ],
+        },
+        {
+          id: 'terms-refunds-cancellations',
+          title: '12. Refund & Cancellation Policy',
+          bullets: [
+            '12.1 All ticket sales, campground reservations, rental equipment fees, and event registrations are non-refundable unless otherwise specified by the organizer.',
+            '12.2 The organizer reserves the right to cancel or modify event activities, schedules, locations, or services.',
+            '12.3 Participants removed from the event for misconduct, safety violations, illegal activity, or breach of these Terms & Conditions shall not be eligible for refunds.',
+          ],
+        },
+        {
+          id: 'terms-environmental-policy',
+          title: '13. Environmental Policy',
+          bullets: [
+            '13.1 Participants must respect the natural environment, wildlife, campground facilities, and event property.',
+            '13.2 Littering, property destruction, environmental damage, or unauthorized disposal of waste is prohibited.',
+            '13.3 Biodegradable BBs may be mandatory in designated outdoor gameplay areas.',
+          ],
+        },
+        {
+          id: 'terms-governing-law',
+          title: '14. Governing Law',
+          bullets: [
+            '14.1 These Terms & Conditions shall be governed and interpreted in accordance with the laws and regulations of the Kingdom of Thailand.',
+            '14.2 Any disputes arising from participation in the event shall be subject to the jurisdiction of Thai courts.',
+          ],
+        },
+        {
+          id: 'terms-acceptance',
+          title: '15. Acceptance of Terms',
+          paragraphs: [
+            'By registering for, attending, or participating in MSTAR Airsoft (Force of Conquest), all attendees confirm that they:',
+          ],
+          bullets: [
+            'Have read and understood these Terms & Conditions',
+            'Agree to comply with all event rules and safety requirements',
+            'Accept all risks associated with participation',
+            'Release Mstar (Asia) Co., Ltd. and associated parties from liability to the maximum extent permitted by law',
+          ],
+        },
+        {
+          id: 'terms-contact-information',
+          title: 'Contact Information',
+          paragraphs: [
+            'Mstar (Asia) Co., Ltd.',
+            'Official Event: MSTAR Airsoft (Force of Conquest)',
+            'For customer support, registration assistance, sponsorship inquiries, media accreditation, or travel assistance, please contact the official MSTAR support team through the event website or authorized communication channels.',
+          ],
+        },
+      ],
+    },
+    {
+      slug: 'privacy',
+      eyebrow: 'Legal',
+      title: 'Privacy',
+      description: 'How MSTAR Airsoft (Force of Conquest) collects, uses, stores, and protects personal information.',
+      sections: [
+        {
+          id: 'privacy-intro',
+          title: 'MSTAR Airsoft (Force of Conquest) Privacy Policy',
+          paragraphs: [
+            'Effective Date: May 20, 2026',
+            'Operated By: Mstar (Asia) Co., Ltd.',
+            'Mstar (Asia) Co., Ltd. (“MSTAR,” “we,” “our,” or “us”) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, process, store, disclose, and safeguard information obtained through the MSTAR Airsoft (Force of Conquest) website, mobile application, event registration systems, ticketing platforms, campground services, and related event operations.',
+            'By accessing or using our website, mobile application, services, or participating in MSTAR Airsoft events, you acknowledge and agree to the terms of this Privacy Policy.',
+          ],
+        },
+        {
+          id: 'privacy-information-collected',
+          title: '1. Information We Collect',
+          paragraphs: [
+            'We may collect personal information directly from users, automatically through our systems, or from third-party partners and service providers.',
+          ],
+          bullets: [
+            '1.1 Personal Information may include full name, nationality, passport or identification details, date of birth, phone number, email address, residential address, emergency contact information, billing and payment information, event registration details, campground booking information, equipment shipment details, travel and transportation information, and social media account information when voluntarily connected.',
+            '1.2 Technical & Device Information may include IP address, browser type, device identifiers, operating system, mobile device information, app usage statistics, website activity and interaction data, cookies and tracking technologies, and GPS or location data when enabled.',
+            '1.3 Media & User Content may include photographs, video recordings, livestream footage, user-generated content, gameplay footage, comments, messages, reviews, media submissions, and uploaded content.',
+          ],
+        },
+        {
+          id: 'privacy-how-we-use',
+          title: '2. How We Use Your Information',
+          paragraphs: [
+            'We use collected information for legitimate business and operational purposes, including:',
+          ],
+          bullets: [
+            'Event registration and participant verification',
+            'Ticket processing and campground reservations',
+            'Customer support and communication',
+            'Event safety and security monitoring',
+            'Identity verification and fraud prevention',
+            'Equipment shipment coordination',
+            'Payment processing',
+            'Mobile app functionality and account management',
+            'Personalized user experience',
+            'Marketing, advertising, and promotional campaigns',
+            'Event photography, livestreaming, and media production',
+            'Statistical analysis and service improvement',
+            'Legal compliance and enforcement of policies',
+          ],
+        },
+        {
+          id: 'privacy-location-gps',
+          title: '3. Location & GPS Data',
+          paragraphs: [
+            'When permitted by users, the mobile application may collect location data to assist with navigation and event mapping, improve user safety and emergency response, provide event notifications and activity updates, and enable location-based features and services.',
+            'Users may disable location access through their device settings; however, certain app features may become limited.',
+          ],
+        },
+        {
+          id: 'privacy-cookies',
+          title: '4. Cookies & Tracking Technologies',
+          paragraphs: [
+            'Our website and mobile application may use cookies, analytics tools, pixels, and similar technologies to:',
+          ],
+          bullets: [
+            'Improve website performance',
+            'Remember user preferences',
+            'Analyze traffic and engagement',
+            'Personalize content and advertisements',
+            'Enhance platform functionality',
+          ],
+        },
+        {
+          id: 'privacy-cookies-note',
+          title: 'Cookie Controls',
+          paragraphs: [
+            'Users may modify browser settings to disable cookies, though some services may not function properly.',
+          ],
+        },
+        {
+          id: 'privacy-sharing',
+          title: '5. Sharing of Information',
+          paragraphs: [
+            'We may share information with event partners and service providers, payment processors, security personnel and emergency responders, government authorities when legally required, logistics and transportation providers, marketing and advertising partners, IT and cloud service providers, sponsors, and authorized affiliates.',
+            'We do not sell personal information to unauthorized third parties.',
+          ],
+        },
+        {
+          id: 'privacy-transfers',
+          title: '6. International Data Transfers',
+          paragraphs: [
+            'As MSTAR Airsoft operates internationally, user information may be transferred, processed, or stored in multiple countries where our service providers, partners, or operational systems are located.',
+            'By using our services, users consent to such international data transfers where permitted by law.',
+          ],
+        },
+        {
+          id: 'privacy-security',
+          title: '7. Data Security',
+          paragraphs: [
+            'We implement commercially reasonable technical, administrative, and physical safeguards designed to protect personal information from unauthorized access, disclosure, alteration, misuse, or destruction.',
+            'Security measures may include:',
+          ],
+          bullets: [
+            'Encrypted data transmission',
+            'Secure payment processing',
+            'Access controls and authentication systems',
+            'CCTV monitoring and operational security',
+            'Internal data protection procedures',
+          ],
+        },
+        {
+          id: 'privacy-security-note',
+          title: 'Security Limitations',
+          paragraphs: [
+            'However, no electronic transmission or storage system can be guaranteed to be completely secure.',
+          ],
+        },
+        {
+          id: 'privacy-user-accounts',
+          title: '8. User Accounts & Mobile Application',
+          paragraphs: [
+            'Users may create accounts through the MSTAR website or mobile application.',
+            'Users are responsible for maintaining account confidentiality, protecting login credentials, restricting unauthorized access to their account, and providing accurate information.',
+            'MSTAR reserves the right to suspend or terminate accounts involved in fraud, abuse, illegal activity, or policy violations.',
+          ],
+        },
+        {
+          id: 'privacy-media-consent',
+          title: '9. Media Consent & Event Recording',
+          paragraphs: [
+            'By attending MSTAR Airsoft (Force of Conquest), participants acknowledge and agree that event areas may be photographed or video recorded, gameplay footage may be livestreamed globally, and participant images, voice, likeness, and appearance may appear in promotional materials, documentaries, social media, advertising campaigns, and future event marketing.',
+            'Mstar (Asia) Co., Ltd. retains the unrestricted right to use such content without additional compensation unless prohibited by applicable law.',
+          ],
+        },
+        {
+          id: 'privacy-third-party',
+          title: '10. Third-Party Services & Links',
+          paragraphs: [
+            'Our website and mobile application may contain links to third-party websites, payment systems, social media platforms, booking systems, sponsors, or partner services.',
+            'MSTAR is not responsible for the privacy practices, content, or security of third-party platforms.',
+            'Users are encouraged to review the privacy policies of external services before providing information.',
+          ],
+        },
+        {
+          id: 'privacy-children',
+          title: '11. Children’s Privacy',
+          paragraphs: [
+            'MSTAR does not knowingly collect personal information from children without appropriate parental or guardian consent where required by law.',
+            'Participants under legal age may require parental authorization to register or participate in event activities.',
+          ],
+        },
+        {
+          id: 'privacy-retention',
+          title: '12. Data Retention',
+          paragraphs: [
+            'We retain personal information for as long as necessary to operate and manage event services, comply with legal obligations, resolve disputes, enforce agreements, and maintain business and operational records.',
+            'Retention periods may vary depending on applicable laws and operational requirements.',
+          ],
+        },
+        {
+          id: 'privacy-user-rights',
+          title: '13. User Rights',
+          paragraphs: [
+            'Subject to applicable laws, users may have the right to access personal information, request corrections or updates, request deletion of personal information, withdraw consent where applicable, object to certain processing activities, and request data portability where legally applicable.',
+            'Requests may be subject to identity verification and legal limitations.',
+          ],
+        },
+        {
+          id: 'privacy-surveillance',
+          title: '14. Security Cameras & Surveillance',
+          paragraphs: [
+            'For participant safety and operational security, MSTAR event grounds, campgrounds, staging zones, parking areas, and operational facilities may utilize CCTV monitoring and security surveillance systems.',
+            'Recorded footage may be used for safety enforcement, incident investigations, security operations, legal compliance, and event management.',
+          ],
+        },
+        {
+          id: 'privacy-changes',
+          title: '15. Changes to This Privacy Policy',
+          paragraphs: [
+            'Mstar (Asia) Co., Ltd. reserves the right to modify or update this Privacy Policy at any time without prior notice.',
+            'Updated versions will be published through the official website and/or mobile application.',
+            'Continued use of our services following updates constitutes acceptance of the revised policy.',
+          ],
+        },
+        {
+          id: 'privacy-governing-law',
+          title: '16. Governing Law',
+          paragraphs: [
+            'This Privacy Policy shall be governed and interpreted in accordance with the laws of the Kingdom of Thailand.',
+            'Any disputes relating to this Privacy Policy shall fall under the jurisdiction of the courts of Thailand.',
+          ],
+        },
+        {
+          id: 'privacy-contact',
+          title: '17. Contact Information',
+          paragraphs: [
+            'Mstar (Asia) Co., Ltd.',
+            'Official Event: MSTAR Airsoft (Force of Conquest)',
+            'For questions regarding this Privacy Policy, data protection matters, event registration, or account support, please contact the official MSTAR support team through the authorized website, mobile application, or customer support channels.',
+          ],
+        },
+      ],
+    },
+    {
+      slug: 'complaints',
+      eyebrow: 'Support',
+      title: 'Complaints',
+      description: 'How to raise event, service, booking, conduct, or operational complaints with the MSTAR support team.',
+      sections: [
+        {
+          id: 'complaints-overview',
+          title: 'Complaints Procedure',
+          paragraphs: [
+            'MSTAR Airsoft (Force of Conquest) aims to handle complaints fairly, respectfully, and as quickly as possible. This page explains how participants, guests, vendors, media, and partners can report concerns relating to registration, event operations, campground services, conduct, safety, media, logistics, or customer support.',
+          ],
+        },
+        {
+          id: 'complaints-submit',
+          title: 'How to Submit a Complaint',
+          paragraphs: [
+            'Please contact the official MSTAR support team through the website or other authorized communication channels and include as much detail as possible so the issue can be reviewed quickly.',
+          ],
+          bullets: [
+            'Your full name and contact details',
+            'Registration or booking reference when available',
+            'The date, time, and location of the issue',
+            'A clear summary of the complaint',
+            'Names of any staff, teams, or participants involved if known',
+            'Photos, screenshots, or supporting documents where relevant',
+          ],
+        },
+        {
+          id: 'complaints-review',
+          title: 'Review & Response',
+          paragraphs: [
+            'After a complaint is received, the MSTAR team may review event records, registration details, staff reports, footage, or other relevant information. Response time may vary depending on the seriousness and complexity of the issue, but operational and safety complaints will be prioritized.',
+          ],
+        },
+        {
+          id: 'complaints-conduct',
+          title: 'Conduct, Safety, and On-Site Incidents',
+          paragraphs: [
+            'If your complaint involves player conduct, staff conduct, harassment, unsafe gameplay, medical concerns, or immediate safety risks, report it to marshals, security personnel, or event staff on site as soon as possible so action can be taken without delay.',
+          ],
+        },
+        {
+          id: 'complaints-resolution',
+          title: 'Resolution Options',
+          paragraphs: [
+            'Depending on the issue, MSTAR may provide clarification, operational follow-up, corrective action, access review, policy enforcement, or another appropriate resolution. Outcomes are determined based on the available information, applicable policies, safety considerations, and legal obligations.',
+          ],
+        },
+        {
+          id: 'complaints-contact',
+          title: 'Contact Information',
+          paragraphs: [
+            'Mstar (Asia) Co., Ltd.',
+            'Official Event: MSTAR Airsoft (Force of Conquest)',
+            'For complaint support, please contact the official MSTAR support team through the event website or authorized communication channels.',
+          ],
         },
       ],
     },

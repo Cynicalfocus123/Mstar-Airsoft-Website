@@ -91,6 +91,7 @@
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
 - The Things to Know page should use the supplied travel/equipment imagery on its first three cards, then continue the same tactical card system for added placeholder guides like Rules & Regulation, Accommodation & Campground, and Activity.
 - Data-driven images used by Things to Know, event detail, checkout, and gallery surfaces must resolve through the deployed Vite base path so GitHub Pages always shows the intended artwork.
+- The Things to Know hero copy should center cleanly on desktop and mobile, and legal/support pages like Terms & Conditions, Privacy, and Complaints should use readable long-form dark panels with strong spacing and mobile-safe typography.
 
 ## Responsive Design Rules
 
@@ -198,3 +199,4 @@
 - 2026-05-20: Removed boxed value styling from the Package Offer card and shifted the price and stay length to a cleaner medium-size treatment.
 - 2026-05-22: Replaced the first three Things to Know placeholder banners with the supplied visa, transport, and equipment images and extended the page with three more tactical placeholder guide cards.
 - 2026-05-22: Fixed data-driven image rendering to respect the repo-scoped GitHub Pages base path across info, event, checkout, and gallery surfaces.
+- 2026-05-22: Added footer legal/support links and introduced a responsive long-form legal page treatment for Terms & Conditions, Privacy, and Complaints while centering the Things to Know hero tagline.

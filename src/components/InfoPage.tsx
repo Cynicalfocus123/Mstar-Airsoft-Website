@@ -20,28 +20,49 @@ export function InfoPage({ content }: InfoPageProps) {
 
   return (
     <main className="page-shell">
-      <section className="page-hero">
+      <section className={`page-hero ${content.heroAlign === 'center' ? 'page-hero-centered' : ''}`}>
         <p className="eyebrow">{content.eyebrow}</p>
         <h1>{content.title}</h1>
         <p>{content.description}</p>
       </section>
-      <section className="info-banner-list" aria-label={content.title}>
-        {content.cards.map((card) => (
-          <article className="event-banner-card info-banner-card" key={card.id}>
-            <div className="event-card-image info-card-image">
-              <img src={getPublicAssetPath(card.imagePath)} alt="" loading="lazy" />
-              {card.badge && <strong>{card.badge}</strong>}
-            </div>
-            <div className="event-banner-content info-banner-content">
-              <h2>{card.title}</h2>
-              <p>{card.summary}</p>
-              <div className="info-card-placeholder">
-                {card.placeholderLabel ?? 'Placeholder content box'}
+      {content.cards && (
+        <section className="info-banner-list" aria-label={content.title}>
+          {content.cards.map((card) => (
+            <article className="event-banner-card info-banner-card" key={card.id}>
+              <div className="event-card-image info-card-image">
+                <img src={getPublicAssetPath(card.imagePath)} alt="" loading="lazy" />
+                {card.badge && <strong>{card.badge}</strong>}
               </div>
-            </div>
-          </article>
-        ))}
-      </section>
+              <div className="event-banner-content info-banner-content">
+                <h2>{card.title}</h2>
+                <p>{card.summary}</p>
+                <div className="info-card-placeholder">
+                  {card.placeholderLabel ?? 'Placeholder content box'}
+                </div>
+              </div>
+            </article>
+          ))}
+        </section>
+      )}
+      {content.sections && (
+        <section className="policy-layout" aria-label={content.title}>
+          {content.sections.map((section) => (
+            <article className="policy-section" key={section.id}>
+              <h2>{section.title}</h2>
+              {section.paragraphs?.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+              {section.bullets && (
+                <ul className="policy-bullet-list">
+                  {section.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
+            </article>
+          ))}
+        </section>
+      )}
     </main>
   );
 }
