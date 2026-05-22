@@ -16,7 +16,6 @@ export const siteContent: SiteContent = {
     { label: 'Things to Know', href: '#/things-to-know' },
     { label: 'Rules', href: '#/rules-and-regulation' },
     { label: 'Gallery', href: '#/gallery' },
-    { label: 'Contact', href: '#/contact' },
   ],
   authLinks: [
     { label: 'Login', href: '#/signin' },

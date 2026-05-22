@@ -231,3 +231,4 @@
 - 2026-05-22: Elevated automatic memory updates plus immediate commit/push to the highest-priority normal workflow rule.
 - 2026-05-22: Restored the homepage splash banner to native video and replaced only the lower Home intro section with a responsive YouTube player.
 - 2026-05-22: Updated the homepage About section messaging to focus on the large-scale festival experience, rainforest battlefield setting, and entertainment-led activity highlights.
+- 2026-05-22: Removed the top-header Contact navigation item while preserving footer contact access and the rest of the site structure.
