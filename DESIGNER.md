@@ -89,6 +89,7 @@
 - FAQ and travel-guide pages should use the same tactical banner-card language as the Events page, but without event-only metadata like date, location, entry fee, teams, or attendance.
 - Header auth changes to a My Account dropdown after frontend sign-in/register state is active.
 - Full-page navigation routes must start at the top of the page instead of preserving the previous scroll position.
+- The Things to Know page should use the supplied travel/equipment imagery on its first three cards, then continue the same tactical card system for added placeholder guides like Rules & Regulation, Accommodation & Campground, and Activity.
 
 ## Responsive Design Rules
 
@@ -194,3 +195,4 @@
 - 2026-05-20: Added a Package Offer section above the homepage Game Schedules block with a single tactical offer card for price, stay length, live music, and food court perks.
 - 2026-05-20: Rebalanced the Package Offer card typography so the price and stay length dominate while the perk lines step back visually.
 - 2026-05-20: Removed boxed value styling from the Package Offer card and shifted the price and stay length to a cleaner medium-size treatment.
+- 2026-05-22: Replaced the first three Things to Know placeholder banners with the supplied visa, transport, and equipment images and extended the page with three more tactical placeholder guide cards.
