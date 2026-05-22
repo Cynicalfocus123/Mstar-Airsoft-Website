@@ -324,25 +324,28 @@ export const siteContent: SiteContent = {
         {
           id: 'rules-and-regulation',
           title: 'Rules & Regulation',
-          summary: 'Placeholder guidance box for field compliance, allowed gear, and conduct expectations during the event.',
+          summary: 'Official event rules covering protective gear, weapon checks, gameplay standards, and player conduct.',
           imagePath: '/banners/event-final.svg',
-          badge: 'Placeholder',
+          href: '#/rules-and-regulation',
+          badge: 'Guide',
           placeholderLabel: 'Open guide',
         },
         {
           id: 'accommodation-and-campground',
           title: 'Accommodation & Campground',
-          summary: 'Placeholder guidance box for nearby stays, campground setup, and overnight planning for teams.',
+          summary: 'Campground facilities, equipment rental, and festival-style overnight planning for players and teams.',
           imagePath: '/banners/event-ridge.svg',
-          badge: 'Placeholder',
+          href: '#/accommodation-and-campground',
+          badge: 'Guide',
           placeholderLabel: 'Open guide',
         },
         {
           id: 'activity',
           title: 'Activity',
-          summary: 'Placeholder guidance box for off-field downtime, side activities, and between-match planning.',
+          summary: 'Outdoor adventure, international food, music, nightlife, and festival entertainment around the event.',
           imagePath: '/banners/event-urban.svg',
-          badge: 'Placeholder',
+          href: '#/activity',
+          badge: 'Guide',
           placeholderLabel: 'Open guide',
         },
       ],
@@ -506,6 +509,175 @@ export const siteContent: SiteContent = {
             'After the tournament concludes, MSTAR staff will transport your equipment back to the airport for your departing flight',
             'You will receive a WhatsApp notification once your equipment arrives at the airport',
             'Participants must check in with airport security to verify and confirm the collection of their equipment before departure',
+          ],
+        },
+      ],
+    },
+    {
+      slug: 'rules-and-regulation',
+      eyebrow: 'Event Guide',
+      title: 'Rules & Regulation',
+      description: 'Official gameplay, safety, chronograph, and conduct requirements for MSTAR Airsoft - Force of Conquest.',
+      sections: [
+        {
+          id: 'rules-overview',
+          title: 'MSTAR Airsoft Rules & Regulations',
+          paragraphs: [
+            'MSTAR Airsoft - Force of Conquest is committed to maintaining the highest standards of safety, professionalism, and fair play throughout the event. All participants are required to follow official event regulations, safety procedures, and game rules at all times.',
+            'The success of large-scale airsoft operations depends on strict safety enforcement, responsible player conduct, and adherence to the honor system. Every participant must complete weapon chronograph inspections, wear approved protective equipment, and comply with all staging and firing regulations.',
+          ],
+        },
+        {
+          id: 'safety-protective-gear',
+          title: 'Safety & Protective Gear Requirements',
+          bullets: [
+            'Eye & Face Protection: Full-seal ANSI-rated eye protection (Z87.1 standard or equivalent) is mandatory for all players. Participants under 18 years old, and in some cases adults depending on event requirements, must wear full-face protection.',
+            'Barrel Covers / Safety Socks: All airsoft replicas must have approved barrel blocking devices installed at all times within staging areas, safe zones, parking areas, and non-active zones.',
+            'Prohibited Items: Real firearms, live weapons, fixed-blade knives, explosives, and unauthorized pyrotechnics are strictly prohibited within the event premises.',
+            'Liability Waiver: All players, spectators, media personnel, and staff members must sign an official liability waiver before entering the Active Operating Area.',
+          ],
+        },
+        {
+          id: 'weapon-chronograph-regulations',
+          title: 'Weapon & Chronograph Regulations',
+          bullets: [
+            'FPS / Joule Limits: All airsoft replicas must pass a chronograph inspection using the exact BB weight intended for gameplay. Power limits are regulated in Joules to prevent joule creep and may vary depending on weapon classifications such as assault rifles, DMRs, or sniper platforms.',
+            'Minimum Engagement Distance (MED): High-power replicas are subject to minimum engagement distance requirements. Players using designated sniper or high-velocity weapons must maintain safe firing distances and switch to secondary weapons or call a Bang Kill during close encounters.',
+            'Semi-Automatic Fire: To reduce the risk of injury during close-quarter combat (CQB), most replicas are restricted to semi-automatic firing mode. Fully automatic fire is only permitted for approved support weapon systems under designated rules.',
+          ],
+        },
+        {
+          id: 'gameplay-field-rules',
+          title: 'Gameplay & Field Rules',
+          bullets: [
+            "Honor System: Airsoft operates entirely on the honor system. Any direct BB impact to a player's body, equipment, or weapon is considered a valid hit and elimination.",
+            'Dead Rag Requirement: Eliminated players must immediately display a visible red dead rag on their head or gear while returning to respawn or safe zones.',
+            'Medic & Respawn Rules: Certain game modes may include medic or revive systems, allowing teammates to revive eliminated players a limited number of times before respawn is required.',
+            'Emergency Blind Man Call: The phrase Blind Man is reserved exclusively for real-world emergencies, injuries, or safety hazards. Upon hearing this call, all players must immediately stop gameplay, unload magazines if instructed, and await directions from event staff.',
+          ],
+        },
+        {
+          id: 'player-conduct-event-policies',
+          title: 'Player Conduct & Event Policies',
+          bullets: [
+            'Authority of Referees & Staff: Event referees, marshals, and organizers hold full authority throughout the event. Disrespectful behavior, excessive profanity, cheating, unsafe conduct, or arguing with staff may result in immediate removal from the event without refund.',
+            'Safe Zones & Staging Areas: No firing, dry firing, or loaded magazines are permitted within designated safe zones and staging areas.',
+            'Environmental Responsibility: To protect the environment and maintain field sustainability, biodegradable BBs are strongly encouraged and may be mandatory at designated outdoor locations.',
+          ],
+        },
+        {
+          id: 'rules-acknowledgement',
+          title: 'Participant Acknowledgement',
+          paragraphs: [
+            'By participating in the MSTAR Airsoft - Force of Conquest event, all attendees acknowledge and agree to comply with these rules and regulations to ensure a safe, fair, and enjoyable experience for everyone involved.',
+          ],
+        },
+      ],
+    },
+    {
+      slug: 'accommodation-and-campground',
+      eyebrow: 'Event Guide',
+      title: 'Accommodation & Campground Experience',
+      description: 'Campground atmosphere, facilities, and rental gear for players staying on site during the MSTAR Airsoft festival.',
+      sections: [
+        {
+          id: 'campground-overview',
+          title: 'Accommodation & Campground Experience',
+          paragraphs: [
+            'Experience the ultimate outdoor airsoft lifestyle at the official MSTAR Airsoft Event Campground - a massive recreational camping area spanning more than 80,000 square meters, designed to deliver an immersive festival atmosphere for players and visitors from around the world.',
+            'The campground combines tactical gameplay with entertainment, community activities, and outdoor relaxation, creating a complete international airsoft festival experience.',
+          ],
+        },
+        {
+          id: 'campground-features',
+          title: 'Campground Features & Facilities',
+          bullets: [
+            'Large-scale camping environment surrounded by live entertainment zones',
+            'Dedicated BBQ and social gathering areas for players and teams',
+            'Clean restroom and hot shower facilities',
+            '24-hour CCTV security monitoring throughout the campground and airsoft field for participant safety',
+            'On-site convenience stores, pubs, and coffee shops within the camping area',
+            'Comfortable atmosphere for both casual campers and competitive teams',
+          ],
+        },
+        {
+          id: 'camping-rental',
+          title: 'Camping Equipment Rental',
+          paragraphs: [
+            'For the convenience of international travelers and participants, rental equipment is available directly at the campground:',
+          ],
+          bullets: [
+            '2-Person Tent - 20 EUR per night',
+            '4-Person Tent - 30 EUR per night',
+            'BBQ Stove - 20 EUR per night',
+            'Lantern - 10 EUR per night',
+          ],
+        },
+        {
+          id: 'camping-rental-note',
+          title: 'Availability Note',
+          paragraphs: [
+            'Additional camping equipment and supplies may also be available upon request, subject to availability.',
+          ],
+        },
+      ],
+    },
+    {
+      slug: 'activity',
+      eyebrow: 'Event Guide',
+      title: 'Activities & Entertainment Experience',
+      description: 'Outdoor adventure, food, music, nightlife, and festival entertainment built around the MSTAR Airsoft experience.',
+      sections: [
+        {
+          id: 'activity-overview',
+          title: 'Activities & Entertainment Experience',
+          paragraphs: [
+            'Prepare for a nonstop adrenaline-filled adventure at the MSTAR Airsoft Festival, where tactical combat meets outdoor exploration, music, nightlife, and world-class entertainment.',
+            'Surrounded by breathtaking natural scenery, waterfalls, and tropical forest landscapes, attendees will experience far more than just an airsoft tournament - this is a full-scale international adventure festival designed for thrill-seekers, travelers, and outdoor enthusiasts from around the world.',
+          ],
+        },
+        {
+          id: 'outdoor-adventure-activities',
+          title: 'Outdoor Adventure Activities',
+          paragraphs: [
+            'Participants can enjoy a wide range of exciting outdoor experiences, including:',
+          ],
+          bullets: [
+            'Jungle and nature tours through scenic forest trails',
+            'ATV off-road adventures',
+            'Zipline attractions across natural landscapes',
+            'Mountain climbing and exploration activities',
+            'Team games, challenges, and interactive festival activities',
+          ],
+        },
+        {
+          id: 'international-food-festival',
+          title: 'International Food Festival',
+          paragraphs: [
+            'Explore an incredible international food marketplace featuring more than 50 food vendors serving flavors and cuisines from around the world. From authentic Asian street food to Western BBQ, grilled specialties, desserts, beverages, and local Thai favorites - the festival delivers a true global culinary experience.',
+          ],
+        },
+        {
+          id: 'nightlife-music-entertainment',
+          title: 'Nightlife, Music & Entertainment',
+          paragraphs: [
+            'As the sun sets, the festival transforms into an unforgettable entertainment destination featuring:',
+          ],
+          bullets: [
+            'Live international bands and music performances',
+            'EDM party zones with DJs and festival lighting',
+            'Mini carnival attractions and games',
+            'BBQ party areas and social gathering spaces',
+            'Nighttime entertainment and interactive activities',
+          ],
+        },
+        {
+          id: 'festival-experience',
+          title: 'A Festival Experience You Will Never Forget',
+          paragraphs: [
+            'Spend your days battling through intense airsoft missions and outdoor adventures, then celebrate your nights with music, food, entertainment, and an international community of players and travelers.',
+            'From sunrise to late night, the energy never stops.',
+            'MSTAR Airsoft Festival is more than an event - it is a once-in-a-lifetime experience filled with excitement, friendship, adventure, and memories that will bring you back year after year.',
           ],
         },
       ],

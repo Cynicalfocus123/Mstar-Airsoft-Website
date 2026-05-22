@@ -183,6 +183,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Refined the Terms & Conditions, Privacy, and Complaints page headers with smaller aligned legal-page hero typography and responsive spacing for desktop, tablet, and mobile.
 - Added three Things to Know detail routes for transport, immigration visa, and equipment shipping, and linked the first three Things to Know cards directly to those full guide pages.
 - Reduced the main Things to Know heading scale and pinned every card CTA to a shared bottom alignment with consistent Open Guide labels across the full Things to Know grid.
+- Added full responsive guide pages for Rules & Regulation, Accommodation & Campground Experience, and Activities & Entertainment Experience, and linked the remaining Things to Know cards to those routes.
 
 ## Completed Changes
 
@@ -238,6 +239,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Reduced and realigned the legal/support page hero headings so Terms & Conditions, Privacy, and Complaints display cleanly across desktop, tablet, and mobile.
 - 2026-05-22: Added routed detail pages for How to Get to the Event, Immigration Visa, and Equipment, with the supplied travel and shipping copy rendered as responsive long-form guide content.
 - 2026-05-22: Tightened the Things to Know index hero typography and standardized all six card CTA labels to Open Guide with aligned bottom placement.
+- 2026-05-22: Converted the remaining three Things to Know placeholders into full guide pages for rules, campground, and activities with supplied event copy and live card links.
 
 ## Next Steps
 
