@@ -93,6 +93,7 @@
 - Data-driven images used by Things to Know, event detail, checkout, and gallery surfaces must resolve through the deployed Vite base path so GitHub Pages always shows the intended artwork.
 - The Things to Know hero copy should center cleanly on desktop and mobile, and legal/support pages like Terms & Conditions, Privacy, and Complaints should use readable long-form dark panels with strong spacing and mobile-safe typography.
 - Legal/support page hero headers must not use oversized event-style display text; they should use a tighter legal-page scale with properly aligned eyebrow, title, and summary across desktop, tablet, and mobile.
+- The first three Things to Know cards should behave like real guide entry points, linking into full responsive detail pages that use the same long-form dark-panel reading treatment as other structured info pages.
 
 ## Responsive Design Rules
 
@@ -202,3 +203,4 @@
 - 2026-05-22: Fixed data-driven image rendering to respect the repo-scoped GitHub Pages base path across info, event, checkout, and gallery surfaces.
 - 2026-05-22: Added footer legal/support links and introduced a responsive long-form legal page treatment for Terms & Conditions, Privacy, and Complaints while centering the Things to Know hero tagline.
 - 2026-05-22: Refined the legal/support hero headers to a smaller aligned responsive layout so long titles like Terms & Conditions do not overwhelm the page.
+- 2026-05-22: Connected the first three Things to Know cards to dedicated travel and equipment guide pages with mobile-friendly long-form layouts and clearer guide-style card labels.

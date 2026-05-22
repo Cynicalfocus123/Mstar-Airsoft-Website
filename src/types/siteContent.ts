@@ -123,6 +123,7 @@ export interface InfoCard {
   title: string;
   summary: string;
   imagePath: string;
+  href?: string;
   badge?: string;
   placeholderLabel?: string;
 }

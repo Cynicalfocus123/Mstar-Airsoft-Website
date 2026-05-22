@@ -29,21 +29,37 @@ export function InfoPage({ content }: InfoPageProps) {
       </section>
       {content.cards && (
         <section className="info-banner-list" aria-label={content.title}>
-          {content.cards.map((card) => (
-            <article className="event-banner-card info-banner-card" key={card.id}>
-              <div className="event-card-image info-card-image">
-                <img src={getPublicAssetPath(card.imagePath)} alt="" loading="lazy" />
-                {card.badge && <strong>{card.badge}</strong>}
-              </div>
-              <div className="event-banner-content info-banner-content">
-                <h2>{card.title}</h2>
-                <p>{card.summary}</p>
-                <div className="info-card-placeholder">
-                  {card.placeholderLabel ?? 'Placeholder content box'}
+          {content.cards.map((card) => {
+            const cardBody = (
+              <>
+                <div className="event-card-image info-card-image">
+                  <img src={getPublicAssetPath(card.imagePath)} alt="" loading="lazy" />
+                  {card.badge && <strong>{card.badge}</strong>}
                 </div>
-              </div>
-            </article>
-          ))}
+                <div className="event-banner-content info-banner-content">
+                  <h2>{card.title}</h2>
+                  <p>{card.summary}</p>
+                  <div className="info-card-placeholder">
+                    {card.placeholderLabel ?? 'Placeholder content box'}
+                  </div>
+                </div>
+              </>
+            );
+
+            if (card.href) {
+              return (
+                <a className="event-banner-card info-banner-card" key={card.id} href={card.href} aria-label={`Open ${card.title}`}>
+                  {cardBody}
+                </a>
+              );
+            }
+
+            return (
+              <article className="event-banner-card info-banner-card" key={card.id}>
+                {cardBody}
+              </article>
+            );
+          })}
         </section>
       )}
       {content.sections && (

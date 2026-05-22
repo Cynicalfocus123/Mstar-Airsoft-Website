@@ -299,24 +299,27 @@ export const siteContent: SiteContent = {
           title: 'How to Get to the Event',
           summary: 'Placeholder guidance box for airport timing, arrival flow, and first-day planning.',
           imagePath: '/images/things-to-know/how-to-get-to-the-event.png',
-          badge: 'Placeholder',
-          placeholderLabel: 'Guide box',
+          href: '#/how-to-get-to-the-event',
+          badge: 'Guide',
+          placeholderLabel: 'Open guide',
         },
         {
           id: 'field-day-rhythm',
           title: 'Immigration Visa',
           summary: 'Placeholder guidance box for what players should expect before, during, and after match day.',
           imagePath: '/images/things-to-know/immigration-visa.png',
-          badge: 'Placeholder',
-          placeholderLabel: 'Guide box',
+          href: '#/immigration-visa',
+          badge: 'Guide',
+          placeholderLabel: 'Open guide',
         },
         {
           id: 'support-checklist',
           title: 'How to Ship Your Equipment to Us',
           summary: 'Placeholder guidance box for the practical items teams should line up before travel.',
           imagePath: '/images/things-to-know/equipment.png',
-          badge: 'Placeholder',
-          placeholderLabel: 'Guide box',
+          href: '#/equipment',
+          badge: 'Guide',
+          placeholderLabel: 'Open guide',
         },
         {
           id: 'rules-and-regulation',
@@ -341,6 +344,169 @@ export const siteContent: SiteContent = {
           imagePath: '/banners/event-urban.svg',
           badge: 'Placeholder',
           placeholderLabel: 'Guide box',
+        },
+      ],
+    },
+    {
+      slug: 'how-to-get-to-the-event',
+      eyebrow: 'Travel Guide',
+      title: 'How to Get to the Event',
+      description: 'Travel options, transfer timing, and support contacts for getting from Bangkok to the MSTAR Airsoft event in Saraburi.',
+      sections: [
+        {
+          id: 'arrival-overview',
+          title: 'How to Get to the MSTAR Airsoft Event in Saraburi',
+          paragraphs: [
+            'Upon arriving at Suvarnabhumi Airport, you may purchase a local SIM card at the airport or directly at the event venue for convenient communication during your stay.',
+            'There are several transportation options for traveling from Bangkok to the MSTAR Airsoft Event in Saraburi, including private car services, buses, minibuses, and ride-hailing services such as Grab.',
+          ],
+        },
+        {
+          id: 'estimated-travel-time',
+          title: 'Estimated Travel Time',
+          bullets: [
+            'Private Car / Taxi: Approximately 1 hour 45 minutes',
+            'Bus: Approximately 2 hours 45 minutes',
+            'Mini Van: Approximately 3 hours 15 minutes',
+          ],
+        },
+        {
+          id: 'budget-friendly-option',
+          title: 'Budget-Friendly Transportation Option',
+          paragraphs: [
+            'For travelers looking to save on transportation costs, the recommended option is to take a local taxi or book a Grab ride to Mo Chit Bus Terminal. Upon arrival at the terminal, you can purchase a bus ticket to Saraburi.',
+            'Once you arrive at the Saraburi Bus Terminal, you will find a designated minivan displaying the sign “MSTAR Airsoft Event.”',
+          ],
+          bullets: [
+            'Transfer Fee: 500 THB per person',
+            'Destination: Direct transfer to the event campground and airsoft field.',
+          ],
+        },
+        {
+          id: 'shared-private-transport',
+          title: 'Shared Private Transport',
+          paragraphs: [
+            'Alternatively, attendees may hire a private Grab car, minivan, or local taxi service and share the transportation with other participants for greater convenience and a lower cost per person.',
+          ],
+        },
+        {
+          id: 'transport-support',
+          title: 'Transport Support',
+          paragraphs: [
+            'If you require any assistance regarding transportation or travel arrangements, do not hesitate to get in touch with our support team via WhatsApp or hotline:',
+          ],
+          bullets: [
+            'WhatsApp / Tel: +66-97-392-4632',
+            'Hotline: +66-81-392-5429',
+          ],
+        },
+      ],
+    },
+    {
+      slug: 'immigration-visa',
+      eyebrow: 'Travel Guide',
+      title: 'Immigration Visa',
+      description: 'Entry guidance and arrival documents for international attendees traveling to Thailand for the MSTAR Airsoft event.',
+      sections: [
+        {
+          id: 'visa-overview',
+          title: 'Visa Guidance',
+          paragraphs: [
+            'Thailand currently offers a 30-day visa exemption for travelers from approved countries. Visitors are advised to check with the Royal Thai Embassy or Thai consulate in their country for the latest visa requirements, regulations, and immigration policies prior to departure.',
+          ],
+        },
+        {
+          id: 'immigration-documents',
+          title: 'Documents & Information to Prepare for Immigration Inspection',
+          paragraphs: [
+            'Please ensure you have the following documents and information ready upon arrival in Thailand:',
+          ],
+          bullets: [
+            'Valid passport',
+            'Round-trip airline ticket',
+            'Hotel or accommodation reservation during your stay',
+            'Declaration of the amount of cash or funds brought into Thailand',
+            'Event confirmation letter and booking ticket from MSTAR Airsoft Event',
+          ],
+        },
+      ],
+    },
+    {
+      slug: 'equipment',
+      eyebrow: 'Travel Guide',
+      title: 'Equipment',
+      description: 'Shipping rules, customs prep, and airport handling steps for bringing tournament equipment to Thailand.',
+      sections: [
+        {
+          id: 'equipment-overview',
+          title: 'How to Ship Your Equipment for the Airsoft Tournament',
+          paragraphs: [
+            'All participants are required to ship their airsoft equipment to our office in Thailand at least 3 weeks prior to the tournament date to allow sufficient time for customs clearance, inspection, and transportation arrangements.',
+          ],
+        },
+        {
+          id: 'equipment-required-items',
+          title: 'Equipment Required to Be Shipped in Advance',
+          paragraphs: [
+            'The following items must be shipped prior to arrival:',
+          ],
+          bullets: [
+            'All types of airsoft guns with orange/red safety markings and user manuals',
+            'All ammunition, including biodegradable plastic BBs',
+            'Air tanks must be completely empty with caps removed',
+            'Tactical gear, including helmets, body armor, gloves, knee pads, and military uniforms',
+          ],
+        },
+        {
+          id: 'packing-shipping-instructions',
+          title: 'Packing & Shipping Instructions',
+          paragraphs: [
+            'To ensure smooth customs processing and safe delivery, please follow the instructions below:',
+          ],
+          bullets: [
+            'Use high-quality protective packaging materials to secure your equipment during transit',
+            'Clearly declare all items being imported into Thailand',
+            'Attach the official MSTAR Airsoft approval letter to the outside of the shipping box',
+            'The Bill of Lading or shipping invoice must clearly specify the type of airsoft gun, model number, total quantity of units, ammunition details, and a list of all additional equipment included in the shipment',
+            'For multiple boxes, clearly label each package as Box 1 of 3, Box 2 of 3, and Box 3 of 3',
+          ],
+        },
+        {
+          id: 'emergency-shipment-procedures',
+          title: 'Emergency Shipment Procedures',
+          paragraphs: [
+            'If you are unable to ship your equipment 3 weeks in advance and plan to travel with your airsoft equipment by air, you must notify the MSTAR team at least 5 days before departure.',
+            'Before boarding your flight:',
+          ],
+          bullets: [
+            'Inform your airline security department in your home country that you are traveling with airsoft tournament equipment for Thailand',
+            'Present the official MSTAR approval letter to airline security personnel',
+            'Your airline security team may transport the equipment separately according to airline and airport regulations',
+          ],
+        },
+        {
+          id: 'arrival-thailand-equipment',
+          title: 'Upon Arrival in Thailand',
+          bullets: [
+            'Proceed to airport security and present your MSTAR approval letter',
+            'Inform airport authorities that your equipment was transported separately',
+            'Airport security officials will inspect and verify the shipment documentation',
+            'Your equipment will be secured and safely stored until collected by MSTAR staff',
+            'MSTAR personnel will transport your equipment directly to the designated airsoft field',
+          ],
+        },
+        {
+          id: 'equipment-important-notice',
+          title: 'Important Notice',
+          paragraphs: [
+            'For safety and legal compliance, participants are not permitted to handle or transport airsoft equipment outside of the official event premises.',
+          ],
+          bullets: [
+            'All airsoft equipment may only be handled within the designated airsoft field and event area',
+            'After the tournament concludes, MSTAR staff will transport your equipment back to the airport for your departing flight',
+            'You will receive a WhatsApp notification once your equipment arrives at the airport',
+            'Participants must check in with airport security to verify and confirm the collection of their equipment before departure',
+          ],
         },
       ],
     },
