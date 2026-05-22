@@ -237,3 +237,4 @@
 - 2026-05-22: Expanded the What to Do in Thailand page with four additional destination sections and added more scenic imagery using the existing local travel/activity assets.
 - 2026-05-22: Reduced the homepage About-section title to a much smaller non-display heading scale so the long festival message reads more like a supporting H3/H4 across devices.
 - 2026-05-22: Removed the footer Contact column and tightened the footer into a cleaner two-column desktop layout while preserving the existing link groups.
+- 2026-05-22: Expanded the What to Do in Thailand page with Kayaking and a Food & Entertainment section so the guide blends outdoor activities with venue recommendations.

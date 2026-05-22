@@ -726,6 +726,8 @@ export const siteContent: SiteContent = {
             'Kaeng Khoi',
             'Wang Takrai National Park',
             'Khao Yai National Park',
+            'Kayaking',
+            'Food & Entertainment',
           ],
         },
         {
@@ -814,6 +816,34 @@ export const siteContent: SiteContent = {
               alt: 'Adventure landscape representing Khao Yai National Park',
               title: 'Khao Yai National Park',
             },
+          ],
+        },
+        {
+          id: 'kayaking',
+          title: 'Kayaking',
+          paragraphs: [
+            'Kayaking adds another high-energy outdoor option for visitors who want moving water, fresh scenery, and a fun group activity between tournament days and nightlife.',
+          ],
+          images: [
+            {
+              src: '/images/things-to-know/activities.jpg',
+              alt: 'Outdoor adventure scene representing kayaking near the event area',
+              title: 'Kayaking',
+            },
+          ],
+        },
+        {
+          id: 'food-and-entertainment',
+          title: 'Food & Entertainment',
+          paragraphs: [
+            'After a full day of action, visitors can explore more local dining and nightlife experiences around the area.',
+          ],
+          bullets: [
+            'Nay Hua cafe',
+            'Café Laura Bar and restaurant',
+            'Kin Do Funk',
+            'Jasmine Restaurant',
+            'Sagadok',
           ],
         },
       ],

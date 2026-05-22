@@ -270,6 +270,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Expanded the What to Do in Thailand guide with Pak Chong, Kaeng Khoi, Wang Takrai National Park, and Khao Yai National Park using the best available local scenic images already in the repo.
 - 2026-05-22: Reduced the homepage About-section title again to a much smaller heading scale closer to H3/H4 sizing for better readability across devices.
 - 2026-05-22: Removed the footer Contact column and rebalanced the footer layout so only the brand block and link columns remain.
+- 2026-05-22: Expanded the What to Do in Thailand guide again with Kayaking plus a Food & Entertainment section listing the requested venues.
 
 ## Next Steps
 
