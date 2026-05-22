@@ -1046,6 +1046,31 @@ select:focus {
   text-align: center;
 }
 
+.page-hero-legal {
+  display: grid;
+  gap: 14px;
+  width: min(960px, 100%);
+  margin-bottom: 28px;
+}
+
+.page-hero-legal .eyebrow {
+  margin: 0;
+}
+
+.page-hero-legal h1 {
+  max-width: 10ch;
+  font-size: clamp(2.5rem, 5.6vw, 4.9rem);
+  line-height: 0.96;
+}
+
+.page-hero-legal p:not(.eyebrow) {
+  max-width: 760px;
+  margin-left: 0;
+  color: #e9e0c8;
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+  line-height: 1.6;
+}
+
 .event-banner-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1786,6 +1811,20 @@ select:focus {
     grid-template-columns: 1fr;
   }
 
+  .page-hero-legal {
+    width: min(820px, 100%);
+    gap: 12px;
+  }
+
+  .page-hero-legal h1 {
+    max-width: 12ch;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+  }
+
+  .page-hero-legal p:not(.eyebrow) {
+    max-width: 100%;
+  }
+
   .event-detail-layout {
     margin-top: -42px;
   }
@@ -1854,6 +1893,22 @@ select:focus {
   .page-hero-centered h1,
   .page-hero-centered p {
     text-align: center;
+  }
+
+  .page-hero-legal {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .page-hero-legal h1 {
+    max-width: none;
+    font-size: clamp(1.9rem, 10vw, 3rem);
+    line-height: 1;
+  }
+
+  .page-hero-legal p:not(.eyebrow) {
+    font-size: 1rem;
+    line-height: 1.55;
   }
 
   .policy-section {

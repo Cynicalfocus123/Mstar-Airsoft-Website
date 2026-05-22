@@ -180,6 +180,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Updated the Things to Know page so the Immigration Visa, How to Get to the Event, and How to Ship Your Equipment to Us cards use the supplied PNG images, and added new placeholder cards for Rules & Regulation, Accommodation & Campground, and Activity.
 - Fixed public image path handling for data-driven cards and gallery/info/event imagery so Things to Know and similar pages resolve correctly under the GitHub Pages repo base path.
 - Centered the Things to Know hero tagline, added footer legal/support links, and extended the info-page system to support full responsive Terms & Conditions, Privacy, and Complaints pages from typed content data.
+- Refined the Terms & Conditions, Privacy, and Complaints page headers with smaller aligned legal-page hero typography and responsive spacing for desktop, tablet, and mobile.
 
 ## Completed Changes
 
@@ -232,6 +233,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Added the supplied PNG artwork to the three existing Things to Know cards and expanded the page with new placeholder cards for Rules & Regulation, Accommodation & Campground, and Activity.
 - 2026-05-22: Added a shared public asset path resolver and applied it to info-page, event-page, checkout, detail, and gallery images so repo-scoped GitHub Pages URLs load correctly.
 - 2026-05-22: Added responsive legal/support pages for Terms & Conditions, Privacy, and Complaints, centered the Things to Know FORCE OF CONQUEST hero copy, and expanded the footer Site Links section with legal/support destinations.
+- 2026-05-22: Reduced and realigned the legal/support page hero headings so Terms & Conditions, Privacy, and Complaints display cleanly across desktop, tablet, and mobile.
 
 ## Next Steps
 

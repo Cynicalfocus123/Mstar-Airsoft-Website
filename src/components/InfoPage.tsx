@@ -20,7 +20,9 @@ export function InfoPage({ content }: InfoPageProps) {
 
   return (
     <main className="page-shell">
-      <section className={`page-hero ${content.heroAlign === 'center' ? 'page-hero-centered' : ''}`}>
+      <section
+        className={`page-hero ${content.heroAlign === 'center' ? 'page-hero-centered' : ''} ${content.sections ? 'page-hero-legal' : ''}`}
+      >
         <p className="eyebrow">{content.eyebrow}</p>
         <h1>{content.title}</h1>
         <p>{content.description}</p>
