@@ -1,4 +1,5 @@
 import type { GalleryItem } from '../types/siteContent';
+import { getPublicAssetPath } from '../utils/publicAssetPath';
 
 interface GalleryProps {
   items: GalleryItem[];
@@ -14,7 +15,7 @@ export function Gallery({ items }: GalleryProps) {
       <div className="gallery-grid">
         {items.map((item) => (
           <figure className="gallery-card" key={item.id}>
-            <img src={item.imagePath} alt={item.alt} loading="lazy" width="640" height="420" />
+            <img src={getPublicAssetPath(item.imagePath)} alt={item.alt} loading="lazy" width="640" height="420" />
             <figcaption>{item.title}</figcaption>
           </figure>
         ))}

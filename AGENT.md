@@ -178,6 +178,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Refined the homepage Package Offer card by removing the duplicate inner title, enlarging the price and stay length equally, and reducing the visual weight of the live music and food court lines.
 - Softened the homepage Package Offer typography by removing the boxed value treatment and resizing the price and stay length to a cleaner medium-weight presentation.
 - Updated the Things to Know page so the Immigration Visa, How to Get to the Event, and How to Ship Your Equipment to Us cards use the supplied PNG images, and added new placeholder cards for Rules & Regulation, Accommodation & Campground, and Activity.
+- Fixed public image path handling for data-driven cards and gallery/info/event imagery so Things to Know and similar pages resolve correctly under the GitHub Pages repo base path.
 
 ## Completed Changes
 
@@ -228,6 +229,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-20: Refined the homepage Package Offer card hierarchy so price and stay length lead the card and the perk lines read smaller.
 - 2026-05-20: Removed the boxed Package Offer value treatment and resized the price and stay length to a more modern medium scale.
 - 2026-05-22: Added the supplied PNG artwork to the three existing Things to Know cards and expanded the page with new placeholder cards for Rules & Regulation, Accommodation & Campground, and Activity.
+- 2026-05-22: Added a shared public asset path resolver and applied it to info-page, event-page, checkout, detail, and gallery images so repo-scoped GitHub Pages URLs load correctly.
 
 ## Next Steps
 

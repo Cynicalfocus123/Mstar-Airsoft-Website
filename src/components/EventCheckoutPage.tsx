@@ -7,6 +7,7 @@ import {
   saveAccountProfile,
 } from '../utils/accountProfile';
 import { getCleanFormData } from '../utils/formSecurity';
+import { getPublicAssetPath } from '../utils/publicAssetPath';
 
 interface EventCheckoutPageProps {
   event?: EventCard;
@@ -243,7 +244,7 @@ export function EventCheckoutPage({ event, isAuthenticated }: EventCheckoutPageP
               </div>
 
               <div className="checkout-summary-item">
-                <img src={event.imagePath} alt="" />
+                <img src={getPublicAssetPath(event.imagePath)} alt="" />
                 <div className="checkout-summary-copy">
                   <div className="checkout-summary-title-row">
                     <h3>{event.title}</h3>

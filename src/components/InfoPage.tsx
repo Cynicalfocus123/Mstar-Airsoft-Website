@@ -1,4 +1,5 @@
 import type { InfoPageContent } from '../types/siteContent';
+import { getPublicAssetPath } from '../utils/publicAssetPath';
 
 interface InfoPageProps {
   content?: InfoPageContent;
@@ -28,7 +29,7 @@ export function InfoPage({ content }: InfoPageProps) {
         {content.cards.map((card) => (
           <article className="event-banner-card info-banner-card" key={card.id}>
             <div className="event-card-image info-card-image">
-              <img src={card.imagePath} alt="" loading="lazy" />
+              <img src={getPublicAssetPath(card.imagePath)} alt="" loading="lazy" />
               {card.badge && <strong>{card.badge}</strong>}
             </div>
             <div className="event-banner-content info-banner-content">

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { EventCard } from '../types/siteContent';
+import { getPublicAssetPath } from '../utils/publicAssetPath';
 
 interface EventsPageProps {
   events: EventCard[];
@@ -21,7 +22,7 @@ export function EventsPage({ events }: EventsPageProps) {
         {visibleEvents.map((event) => (
           <a className="event-banner-card" key={event.id} href={`#/events/${event.id}`} aria-label={`Open ${event.title}`}>
             <div className="event-card-image">
-              <img src={event.imagePath} alt="" loading="lazy" />
+              <img src={getPublicAssetPath(event.imagePath)} alt="" loading="lazy" />
               <strong>{event.status}</strong>
             </div>
             <div className="event-banner-content">

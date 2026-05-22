@@ -1,19 +1,12 @@
 import type { CSSProperties } from 'react';
 import type { AboutContent } from '../types/siteContent';
+import { getPublicAssetPath } from '../utils/publicAssetPath';
 
 interface AboutProps {
   content: AboutContent;
 }
 
 export function About({ content }: AboutProps) {
-  const getPublicAssetPath = (path?: string) => {
-    if (!path) {
-      return undefined;
-    }
-
-    return path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path;
-  };
-
   const backgroundImagePath = getPublicAssetPath(content.backgroundImagePath);
   const mobileBackgroundImagePath = getPublicAssetPath(content.mobileBackgroundImagePath ?? content.backgroundImagePath);
   const backgroundStyle = {

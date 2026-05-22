@@ -1,4 +1,5 @@
 import type { EventCard } from '../types/siteContent';
+import { getPublicAssetPath } from '../utils/publicAssetPath';
 
 interface EventDetailPageProps {
   event?: EventCard;
@@ -24,7 +25,7 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
   return (
     <main className="event-detail-page">
       <section className="event-detail-hero">
-        <img src={event.imagePath} alt="" />
+        <img src={getPublicAssetPath(event.imagePath)} alt="" />
       </section>
       <section className="event-detail-layout">
         <article className="event-detail-main">
