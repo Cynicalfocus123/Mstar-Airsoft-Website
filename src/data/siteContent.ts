@@ -236,9 +236,8 @@ export const siteContent: SiteContent = {
       links: [
         { label: 'What to Do in Thailand', href: '#/what-to-do-in-thailand' },
         { label: 'Travel Preparation', href: '#/travel-preparation' },
-        { label: 'Immigration', href: '#/immigration' },
-        { label: 'How to Pack', href: '#/how-to-pack' },
-        { label: 'Thailand Laws and Regulations', href: '#/thailand-laws-and-regulations' },
+        { label: 'Immigration Visa', href: '#/immigration-visa' },
+        { label: 'Ship Your Equipment', href: '#/equipment' },
       ],
     },
     {

@@ -187,6 +187,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Added a responsive image gallery under the Activities guide's Outdoor Adventure Activities section using the supplied Jungle Trip, ATV Ride, Zip Line, and Waterfall assets.
 - Redirected the shared header and footer Rules navigation links to the dedicated Rules & Regulation guide page instead of the old homepage rules anchor.
 - Removed the Rules and Safety block from the homepage while keeping rules available through the standalone Rules & Regulation guide page and shared nav links.
+- Updated footer travel-planning links so Immigration now opens Immigration Visa, How to Pack is renamed to Ship Your Equipment, and the Thailand laws footer entry is removed.
 
 ## Completed Changes
 
@@ -246,6 +247,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Added the supplied activity images under Outdoor Adventure Activities on the Activity guide page with responsive grid rendering.
 - 2026-05-22: Updated header and footer Rules links to open the standalone Rules & Regulation guide page.
 - 2026-05-22: Removed the homepage Rules and Safety section now that rules content lives on the dedicated Rules & Regulation page.
+- 2026-05-22: Simplified the footer travel links by pointing Immigration to Immigration Visa, renaming How to Pack to Ship Your Equipment, and removing the Thailand laws footer item.
 
 ## Next Steps
 

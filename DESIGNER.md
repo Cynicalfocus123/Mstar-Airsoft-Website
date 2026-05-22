@@ -99,6 +99,7 @@
 - Guide pages may include responsive supporting image grids inside content sections when supplied, and the Activities page should show the provided outdoor activity imagery directly beneath the Outdoor Adventure Activities section.
 - When a dedicated Rules & Regulation guide page exists, the shared header and footer Rules navigation should link to that page instead of an older homepage anchor section.
 - The homepage no longer needs a separate Rules and Safety section once the standalone Rules & Regulation guide page is in place; that content should live off the homepage to keep the main landing flow cleaner.
+- Footer travel-planning labels should match the live guide pages, including Immigration Visa and Ship Your Equipment, and should avoid obsolete footer links like Thailand laws once the main Things to Know guides are in place.
 
 ## Responsive Design Rules
 
@@ -214,3 +215,4 @@
 - 2026-05-22: Added a responsive two-column activity image grid to the Activities guide section, stacking cleanly on mobile and keeping the same dark editorial reading style.
 - 2026-05-22: Pointed the header and footer Rules navigation to the standalone Rules & Regulation guide page for consistency.
 - 2026-05-22: Removed the homepage Rules and Safety section so the landing page stays tighter while rules remain available through the dedicated guide page.
+- 2026-05-22: Updated the footer travel-planning links to match the live guide-page naming and removed the Thailand laws footer entry.
