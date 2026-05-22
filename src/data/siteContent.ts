@@ -53,13 +53,13 @@ export const siteContent: SiteContent = {
   },
   about: {
     eyebrow: 'Built For Teams',
-    title: 'Competitive airsoft with clean structure and strong field discipline.',
+    title: 'Experience the Largest Airsoft Festival in Southeast Asia — where adrenaline, entertainment, and adventure come together day and night.',
     body:
-      'Mstar Airsoft is a tournament-focused brand for players who want organized schedules, balanced match formats, safety-first operations, and a serious event-day experience.',
+      'The Mstar Airsoft Tournament delivers an immersive battlefield experience set in Thailand’s stunning tropical rainforest, complete with natural creeks and realistic combat environments that replicate real tactical scenarios. Beyond the battlefield, guests can enjoy the vibrant atmosphere of an international music festival featuring global food vendors, carnival attractions, live entertainment, and adventure activities for all ages. Step into a world of nonstop excitement, competition, and unforgettable experiences surrounded by the breathtaking beauty of Thailand.',
     highlights: [
-      'Structured brackets and objective-based matches',
-      'Clear registration flow for teams and solo players',
-      'Rules, safety, and gear details ready for admin updates',
+      'LIVE BAND, EDM ZONE, INTERNATIONAL FOOD COURT, CARNIVAL',
+      'ZIP-LINE, ATV RIDE, JUNGLE TOUR',
+      'FUNS & GAME, CAMPING, BBQ CONTEST',
     ],
     backgroundImagePath: '/images/about-background.webp',
     mobileBackgroundImagePath: '/images/about-background.webp',

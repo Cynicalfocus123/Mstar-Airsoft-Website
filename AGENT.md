@@ -263,6 +263,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Replaced the homepage hero banner with a responsive YouTube embed player, moved the CTA below the player for touch-safe controls, and added explicit memory-file update rules for every project change.
 - 2026-05-22: Elevated automatic `git add` + `git commit` + `git push` to a highest-priority workflow rule after every completed normal change.
 - 2026-05-22: Restored the homepage splash banner to the previous native background video treatment and replaced only the lower Home intro section with a responsive YouTube player.
+- 2026-05-22: Rewrote the homepage About section headline, body copy, and highlights to emphasize the Southeast Asia festival atmosphere, entertainment, and adventure activities.
 
 ## Next Steps
 
