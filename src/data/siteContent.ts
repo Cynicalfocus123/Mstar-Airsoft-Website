@@ -71,6 +71,8 @@ export const siteContent: SiteContent = {
     perks: [
       'Live music',
       'Food Court',
+      '2 Person Tent',
+      'Camping Equipment',
     ],
   },
   events: [
