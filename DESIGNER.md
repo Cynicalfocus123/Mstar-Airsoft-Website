@@ -241,4 +241,5 @@
 - 2026-05-23: Updated the What to Do in Thailand guide to use the supplied Narong Waterfall, Haew Narok Waterfall, and Khun Dan Prakarn Chon Dam images from dedicated public travel-image assets.
 - 2026-05-23: Updated the What to Do in Thailand guide again so Wat Maneewong, Pak Chong, Kaeng Khoi, and Wang Takrai National Park each use their supplied travel images.
 - 2026-05-23: Updated the What to Do in Thailand guide again so Khao Yai, Kayaking, and the Food & Entertainment venues display the latest supplied imagery and corrected naming.
+- 2026-05-23: Removed Products from the header/footer nav and regrouped the footer so About now sits under the renamed Mstar Airsoft link column.
 

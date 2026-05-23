@@ -12,7 +12,6 @@ export const siteContent: SiteContent = {
     { label: 'Home', href: '#/home' },
     { label: 'About', href: '#/about' },
     { label: 'Events', href: '#/events' },
-    { label: 'Products', href: '#/products' },
     { label: 'Things to Know', href: '#/things-to-know' },
     { label: 'Rules', href: '#/rules-and-regulation' },
     { label: 'Gallery', href: '#/gallery' },
@@ -224,10 +223,10 @@ export const siteContent: SiteContent = {
   },
   footerSections: [
     {
-      title: 'Explore MSTAR',
+      title: 'Mstar Airsoft',
       links: [
         { label: 'Home', href: '#/home' },
-        { label: 'Products', href: '#/products' },
+        { label: 'About', href: '#/about' },
         { label: 'Things to Know', href: '#/things-to-know' },
         { label: 'Events', href: '#/events' },
         { label: 'FAQ', href: '#/faq' },
@@ -245,7 +244,6 @@ export const siteContent: SiteContent = {
     {
       title: 'Site Links',
       links: [
-        { label: 'About', href: '#/about' },
         { label: 'Rules', href: '#/rules-and-regulation' },
         { label: 'Gallery', href: '#/gallery' },
         { label: 'Contact', href: '#/contact' },

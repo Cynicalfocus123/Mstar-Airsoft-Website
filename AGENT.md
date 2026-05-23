@@ -274,6 +274,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-23: Replaced the What to Do in Thailand images for Narong Waterfall, Haew Narok Waterfall, and Khun Dan Prakarn Chon Dam with the exact supplied local files copied into deploy-safe public assets.
 - 2026-05-23: Updated the What to Do in Thailand guide again to use the supplied images for Wat Maneewong, Pak Chong, Kaeng Khoi, and Wang Takrai National Park from copied public travel-image assets.
 - 2026-05-23: Updated the What to Do in Thailand guide again so Khao Yai, Kayaking, Nay Hua cafe, Cafe Laura Bar and Restaurant, Kin Do Funk, Jasmine Restaurant, and Montreux Cafe and Farm use the newly supplied local images and naming.
+- 2026-05-23: Removed Products from the header and footer nav, moved About into the Mstar Airsoft footer group, and renamed that footer group from Explore MSTAR to Mstar Airsoft.
 
 ## Next Steps
 
