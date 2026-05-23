@@ -660,7 +660,7 @@ export const siteContent: SiteContent = {
               title: 'Zip Line',
             },
             {
-              src: '/images/activities/waterfall.png',
+              src: '/images/what-to-do-thailand/narong-waterfall.webp',
               alt: 'Waterfall destination activity at the MSTAR event',
               title: 'Waterfall',
             },
@@ -735,7 +735,7 @@ export const siteContent: SiteContent = {
           title: 'Narong Waterfall',
           images: [
             {
-              src: '/images/activities/waterfall.png',
+              src: '/images/what-to-do-thailand/narong-waterfall.webp',
               alt: 'Narong Waterfall surrounded by tropical forest',
               title: 'Narong Waterfall',
             },
@@ -747,12 +747,26 @@ export const siteContent: SiteContent = {
           paragraphs: [
             'A dramatic waterfall destination for travelers who want to experience more of Thailand’s lush forest scenery during their trip.',
           ],
+          images: [
+            {
+              src: '/images/what-to-do-thailand/haew-narok-waterfall.jpg',
+              alt: 'Haew Narok Waterfall dropping through a steep rock face',
+              title: 'Haew Narok Waterfall',
+            },
+          ],
         },
         {
           id: 'khun-dan-prakarn-chon-dam',
           title: 'Khun Dan Prakarn Chon Dam',
           paragraphs: [
             'A landmark stop known for wide scenic views and a memorable atmosphere that adds a different pace to your event journey.',
+          ],
+          images: [
+            {
+              src: '/images/what-to-do-thailand/khun-dan-prakarn-chon-dam.webp',
+              alt: 'Khun Dan Prakarn Chon Dam with surrounding hills and reservoir',
+              title: 'Khun Dan Prakarn Chon Dam',
+            },
           ],
         },
         {
@@ -784,7 +798,7 @@ export const siteContent: SiteContent = {
           ],
           images: [
             {
-              src: '/images/activities/waterfall.png',
+              src: '/images/what-to-do-thailand/narong-waterfall.webp',
               alt: 'Waterfall destination representing Kaeng Khoi',
               title: 'Kaeng Khoi',
             },
@@ -1470,3 +1484,4 @@ export const siteContent: SiteContent = {
   },
   countryRegions,
 };
+
