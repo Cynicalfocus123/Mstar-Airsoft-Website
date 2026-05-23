@@ -272,6 +272,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Removed the footer Contact column and rebalanced the footer layout so only the brand block and link columns remain.
 - 2026-05-22: Expanded the What to Do in Thailand guide again with Kayaking plus a Food & Entertainment section listing the requested venues.
 - 2026-05-23: Replaced the What to Do in Thailand images for Narong Waterfall, Haew Narok Waterfall, and Khun Dan Prakarn Chon Dam with the exact supplied local files copied into deploy-safe public assets.
+- 2026-05-23: Updated the What to Do in Thailand guide again to use the supplied images for Wat Maneewong, Pak Chong, Kaeng Khoi, and Wang Takrai National Park from copied public travel-image assets.
 
 ## Next Steps
 

@@ -775,6 +775,13 @@ export const siteContent: SiteContent = {
           paragraphs: [
             'A striking temple destination that offers a unique cultural stop alongside the natural and adventure experiences around the event.',
           ],
+          images: [
+            {
+              src: '/images/what-to-do-thailand/wat-maneewong.webp',
+              alt: 'Wat Maneewong cave temple interior with ornate statues',
+              title: 'Wat Maneewong',
+            },
+          ],
         },
         {
           id: 'pak-chong',
@@ -784,7 +791,7 @@ export const siteContent: SiteContent = {
           ],
           images: [
             {
-              src: '/images/activities/jungle-trip.png',
+              src: '/images/what-to-do-thailand/pak-chong.avif',
               alt: 'Scenic mountain and forest view representing Pak Chong',
               title: 'Pak Chong',
             },
@@ -798,7 +805,7 @@ export const siteContent: SiteContent = {
           ],
           images: [
             {
-              src: '/images/what-to-do-thailand/narong-waterfall.webp',
+              src: '/images/what-to-do-thailand/kaeng-khoi.jpg',
               alt: 'Waterfall destination representing Kaeng Khoi',
               title: 'Kaeng Khoi',
             },
@@ -812,7 +819,7 @@ export const siteContent: SiteContent = {
           ],
           images: [
             {
-              src: '/images/things-to-know/activities.jpg',
+              src: '/images/what-to-do-thailand/wang-takrai-national-park.jpg',
               alt: 'Outdoor park scenery representing Wang Takrai National Park',
               title: 'Wang Takrai National Park',
             },
