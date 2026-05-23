@@ -240,3 +240,4 @@
 - 2026-05-22: Expanded the What to Do in Thailand page with Kayaking and a Food & Entertainment section so the guide blends outdoor activities with venue recommendations.
 - 2026-05-23: Updated the What to Do in Thailand guide to use the supplied Narong Waterfall, Haew Narok Waterfall, and Khun Dan Prakarn Chon Dam images from dedicated public travel-image assets.
 - 2026-05-23: Updated the What to Do in Thailand guide again so Wat Maneewong, Pak Chong, Kaeng Khoi, and Wang Takrai National Park each use their supplied travel images.
+- 2026-05-23: Updated the What to Do in Thailand guide again so Khao Yai, Kayaking, Nay Hua cafe, and Café Laura Bar and restaurant display the supplied local imagery.

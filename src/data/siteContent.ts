@@ -344,7 +344,7 @@ export const siteContent: SiteContent = {
           id: 'activity',
           title: 'Activity',
           summary: 'Outdoor adventure, international food, music, nightlife, and festival entertainment around the event.',
-          imagePath: '/images/things-to-know/activities.jpg',
+          imagePath: '/images/what-to-do-thailand/kayaking.jfif',
           href: '#/activity',
           badge: 'Guide',
           placeholderLabel: 'Open guide',
@@ -650,7 +650,7 @@ export const siteContent: SiteContent = {
               title: 'Jungle Trip',
             },
             {
-              src: '/images/activities/atv-ride.png',
+              src: '/images/what-to-do-thailand/khao-yai-national-park.jpg',
               alt: 'ATV ride activity at the MSTAR event',
               title: 'ATV Ride',
             },
@@ -833,7 +833,7 @@ export const siteContent: SiteContent = {
           ],
           images: [
             {
-              src: '/images/activities/atv-ride.png',
+              src: '/images/what-to-do-thailand/khao-yai-national-park.jpg',
               alt: 'Adventure landscape representing Khao Yai National Park',
               title: 'Khao Yai National Park',
             },
@@ -847,7 +847,7 @@ export const siteContent: SiteContent = {
           ],
           images: [
             {
-              src: '/images/things-to-know/activities.jpg',
+              src: '/images/what-to-do-thailand/kayaking.jfif',
               alt: 'Outdoor adventure scene representing kayaking near the event area',
               title: 'Kayaking',
             },
@@ -858,6 +858,18 @@ export const siteContent: SiteContent = {
           title: 'Food & Entertainment',
           paragraphs: [
             'After a full day of action, visitors can explore more local dining and nightlife experiences around the area.',
+          ],
+          images: [
+            {
+              src: '/images/what-to-do-thailand/nayhua-cafe.avif',
+              alt: 'Nay Hua cafe destination image',
+              title: 'Nay Hua cafe',
+            },
+            {
+              src: '/images/what-to-do-thailand/cafe-laura-bar-and-restaurant.jpg',
+              alt: 'Café Laura Bar and restaurant destination image',
+              title: 'Café Laura Bar and restaurant',
+            },
           ],
           bullets: [
             'Nay Hua cafe',
@@ -1491,4 +1503,5 @@ export const siteContent: SiteContent = {
   },
   countryRegions,
 };
+
 
