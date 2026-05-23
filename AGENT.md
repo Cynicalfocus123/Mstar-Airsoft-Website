@@ -273,10 +273,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - 2026-05-22: Expanded the What to Do in Thailand guide again with Kayaking plus a Food & Entertainment section listing the requested venues.
 - 2026-05-23: Replaced the What to Do in Thailand images for Narong Waterfall, Haew Narok Waterfall, and Khun Dan Prakarn Chon Dam with the exact supplied local files copied into deploy-safe public assets.
 - 2026-05-23: Updated the What to Do in Thailand guide again to use the supplied images for Wat Maneewong, Pak Chong, Kaeng Khoi, and Wang Takrai National Park from copied public travel-image assets.
-- 2026-05-23: Updated the What to Do in Thailand guide again so Khao Yai, Kayaking, Nay Hua cafe, and Café Laura Bar and restaurant use the newly supplied local images.
+- 2026-05-23: Updated the What to Do in Thailand guide again so Khao Yai, Kayaking, Nay Hua cafe, Cafe Laura Bar and Restaurant, Kin Do Funk, Jasmine Restaurant, and Montreux Cafe and Farm use the newly supplied local images and naming.
 
 ## Next Steps
 
 - Replace placeholder/current logo file with final approved logo at `src/assets/mstar-airsoft-logo.png`.
 - Connect `src/data/siteContent.ts` to backend/admin API when backend work begins.
 - Check GitHub Actions Pages run after push and enable Pages source as GitHub Actions if repository settings require it.
+

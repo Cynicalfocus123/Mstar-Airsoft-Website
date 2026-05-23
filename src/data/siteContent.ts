@@ -344,7 +344,7 @@ export const siteContent: SiteContent = {
           id: 'activity',
           title: 'Activity',
           summary: 'Outdoor adventure, international food, music, nightlife, and festival entertainment around the event.',
-          imagePath: '/images/what-to-do-thailand/kayaking.jfif',
+          imagePath: '/images/what-to-do-thailand/kayaking-rapids.jpg',
           href: '#/activity',
           badge: 'Guide',
           placeholderLabel: 'Open guide',
@@ -847,7 +847,7 @@ export const siteContent: SiteContent = {
           ],
           images: [
             {
-              src: '/images/what-to-do-thailand/kayaking.jfif',
+              src: '/images/what-to-do-thailand/kayaking-rapids.jpg',
               alt: 'Outdoor adventure scene representing kayaking near the event area',
               title: 'Kayaking',
             },
@@ -867,16 +867,31 @@ export const siteContent: SiteContent = {
             },
             {
               src: '/images/what-to-do-thailand/cafe-laura-bar-and-restaurant.jpg',
-              alt: 'Café Laura Bar and restaurant destination image',
-              title: 'Café Laura Bar and restaurant',
+              alt: 'Cafe Laura Bar and Restaurant destination image',
+              title: 'Cafe Laura Bar and Restaurant',
+            },
+            {
+              src: '/images/what-to-do-thailand/kin-do-funk.jpg',
+              alt: 'Kin Do Funk destination image',
+              title: 'Kin Do Funk',
+            },
+            {
+              src: '/images/what-to-do-thailand/jasmine-restaurant.jpg',
+              alt: 'Jasmine Restaurant destination image',
+              title: 'Jasmine Restaurant',
+            },
+            {
+              src: '/images/what-to-do-thailand/montreux-cafe-and-farm.webp',
+              alt: 'Montreux Cafe and Farm destination image',
+              title: 'Montreux Cafe and Farm',
             },
           ],
           bullets: [
             'Nay Hua cafe',
-            'CafÃ© Laura Bar and restaurant',
+            'Cafe Laura Bar and Restaurant',
             'Kin Do Funk',
             'Jasmine Restaurant',
-            'Sagadok',
+            'Montreux Cafe and Farm',
           ],
         },
       ],
@@ -1503,5 +1518,6 @@ export const siteContent: SiteContent = {
   },
   countryRegions,
 };
+
 
 
