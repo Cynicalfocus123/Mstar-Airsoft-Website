@@ -128,6 +128,13 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-13: Updated only the Beautiful Scenery Game Terrain video so the card plays the complete land drone source instead of the previous 8-second cut.
+- Files changed: `public/videos/game-terrain/beautiful-scenery.webm`, `AGENT.md`, and `DESIGNER.md`.
+- Summary: Re-encoded the full `land drone.webm` source as a silent 24.945-second 960x540 VP9 WebM loop at 18 fps; the deployed file remains lightweight at about 1.6 MB and keeps the existing poster, card layout, autoplay, muted, loop, and playsInline behavior.
+- Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.
+- Results: TypeScript passed; the Vite production build passed; `git diff --check` passed with only expected LF-to-CRLF conversion warnings.
+- Next steps: None planned after successful verification, commit, and push.
+
 - 2026-06-13: Replaced the homepage Gallery section with a typed, responsive Game Terrain section using four native HTML5 video loops while preserving the existing `#gallery` navigation anchor and leaving other homepage/page sections unchanged.
 - Files changed: `src/App.tsx`, `src/components/GameTerrain.tsx`, removed `src/components/Gallery.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, eight optimized terrain media assets under `public/videos/game-terrain` and `public/images/game-terrain`, `AGENT.md`, and `DESIGNER.md`.
 - Video assets used: `IMG_0749.webm` for Forest Movement, `IMG_0747.webm` for Large Open Area, `land drone.webm` for Beautiful Scenery, and `IMG_0752.webm` for Fun Combat Terrains. Sources were converted to silent 8-second 960x540 VP9 WebM loops at 18 fps with static WebP poster frames; combined video size is about 7 MB instead of roughly 330 MB of source media.
