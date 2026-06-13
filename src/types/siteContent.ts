@@ -58,14 +58,27 @@ export interface AboutContent {
   mobileBackgroundImagePath?: string;
 }
 
+export interface PackageOfferItem {
+  label: string;
+  price: string;
+  details: string[];
+  perks: string[];
+}
+
 export interface PackageOfferContent {
   eyebrow: string;
   title: string;
-  offers: Array<{
-    label: string;
+  offers: PackageOfferItem[];
+}
+
+export interface TicketPageContent {
+  eyebrow: string;
+  title: string;
+  description: string;
+  packages: PackageOfferItem[];
+  addons: Array<{
+    title: string;
     price: string;
-    detail: string;
-    perks: string[];
   }>;
 }
 
@@ -166,6 +179,7 @@ export interface SiteContent {
   hero: HeroContent;
   about: AboutContent;
   packageOffer: PackageOfferContent;
+  ticketPage: TicketPageContent;
   events: EventCard[];
   registrationFields: FormField[];
   gallery: GalleryItem[];

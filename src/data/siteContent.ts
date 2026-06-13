@@ -12,6 +12,7 @@ export const siteContent: SiteContent = {
     { label: 'Home', href: '#/home' },
     { label: 'About', href: '#/about' },
     { label: 'Events', href: '#/events' },
+    { label: 'Ticket', href: '#/ticket' },
     { label: 'Things to Know', href: '#/things-to-know' },
     { label: 'Rules', href: '#/rules-and-regulation' },
     { label: 'Gallery', href: '#/gallery' },
@@ -40,14 +41,14 @@ export const siteContent: SiteContent = {
       'Tactical airsoft tournaments and competitive events built for organized teams, clear rules, and mission-focused play.',
     videos: [
       {
-        language: 'TH Language',
-        embedUrl: 'https://www.youtube.com/embed/VYv1pw_dM1Y',
-        title: 'Mstar Airsoft event video in Thai',
+        language: 'Thai Language',
+        embedUrl: 'https://www.youtube.com/embed/VYv1pw_dM1Y?rel=0&modestbranding=1&playsinline=1',
+        title: 'Thai Language Video',
       },
       {
         language: 'English Language',
-        embedUrl: 'https://www.youtube.com/embed/c9EP32Ptv2Y',
-        title: 'Mstar Airsoft event video in English',
+        embedUrl: 'https://www.youtube.com/embed/c9EP32Ptv2Y?rel=0&modestbranding=1&playsinline=1',
+        title: 'English Language Video',
       },
     ],
     buttons: [
@@ -79,7 +80,7 @@ export const siteContent: SiteContent = {
       {
         label: 'Early Bird',
         price: 'Ticket Price - $120.00',
-        detail: 'Early Bird Ends - November 20, 2026',
+        details: ['Early Bird Ends - November 20, 2026'],
         perks: [
           'Live Music',
           'Food Court',
@@ -90,7 +91,7 @@ export const siteContent: SiteContent = {
       {
         label: 'Regular Package',
         price: 'Ticket Price - $160.00',
-        detail: '3 Days / 2 Nights',
+        details: ['3 Days / 2 Nights'],
         perks: [
           'Live Music',
           'Food Court',
@@ -98,6 +99,30 @@ export const siteContent: SiteContent = {
           'Camping Equipment',
         ],
       },
+    ],
+  },
+  ticketPage: {
+    eyebrow: 'Stay and Play',
+    title: 'Ticket',
+    description: 'Choose your event package and reserve the camping extras you need for the full operation.',
+    packages: [
+      {
+        label: 'Early Bird',
+        price: '$120',
+        details: ['Early Bird Ends - November 20, 2026', '3 Days / 2 Nights'],
+        perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
+      },
+      {
+        label: 'Normal Ticket',
+        price: '$160',
+        details: ['3 Days / 2 Nights'],
+        perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
+      },
+    ],
+    addons: [
+      { title: '2 Person Tent', price: '$15 USD Per Day' },
+      { title: 'Pillow / Blanket', price: '$5 USD' },
+      { title: 'Matress', price: '$5 USD' },
     ],
   },
   events: [

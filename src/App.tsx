@@ -14,6 +14,7 @@ import { AccountSettingsPage } from './components/AccountSettingsPage';
 import { EventDetailPage } from './components/EventDetailPage';
 import { EventCheckoutPage } from './components/EventCheckoutPage';
 import { InfoPage } from './components/InfoPage';
+import { TicketPage } from './components/TicketPage';
 import { siteContent } from './data/siteContent';
 
 function getRoute() {
@@ -21,6 +22,7 @@ function getRoute() {
   if (hash.startsWith('#/events/')) return { name: 'eventDetail', eventId: hash.replace('#/events/', '') };
   if (hash.startsWith('#/checkout/')) return { name: 'checkout', eventId: hash.replace('#/checkout/', '') };
   if (hash.startsWith('#/events')) return { name: 'events' };
+  if (hash.startsWith('#/ticket')) return { name: 'ticket' };
   if (hash.startsWith('#/signin')) return { name: 'signin' };
   if (hash.startsWith('#/signup')) return { name: 'signup' };
   if (hash.startsWith('#/account')) return { name: 'account' };
@@ -123,6 +125,7 @@ export default function App() {
         </main>
       )}
       {route.name === 'events' && <EventsPage events={siteContent.events} />}
+      {route.name === 'ticket' && <TicketPage content={siteContent.ticketPage} />}
       {route.name === 'eventDetail' && <EventDetailPage event={selectedEvent} isAuthenticated={isAuthenticated} />}
       {route.name === 'checkout' && <EventCheckoutPage event={selectedEvent} isAuthenticated={isAuthenticated} />}
       {route.name === 'info' && <InfoPage content={selectedInfoPage} />}
