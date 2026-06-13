@@ -41,13 +41,11 @@ export const siteContent: SiteContent = {
     videos: [
       {
         language: 'TH Language',
-        youtubeUrl: 'https://www.youtube.com/watch?v=VYv1pw_dM1Y',
         embedUrl: 'https://www.youtube.com/embed/VYv1pw_dM1Y',
         title: 'Mstar Airsoft event video in Thai',
       },
       {
         language: 'English Language',
-        youtubeUrl: 'https://www.youtube.com/watch?v=c9EP32Ptv2Y',
         embedUrl: 'https://www.youtube.com/embed/c9EP32Ptv2Y',
         title: 'Mstar Airsoft event video in English',
       },

@@ -26,7 +26,6 @@ export interface HeroContent {
   subtitle: string;
   videos: Array<{
     language: string;
-    youtubeUrl: string;
     embedUrl: string;
     title: string;
   }>;

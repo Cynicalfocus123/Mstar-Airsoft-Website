@@ -128,6 +128,13 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-13: Improved the separate homepage TH/English YouTube cards for mobile without changing the splash banner, Package Offer, About section, navigation, or routes.
+- Files changed: `src/components/Hero.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Summary: Made mobile video tiles taller with square media at normal phone widths and 4:3 stacked media below 360px; reduced mobile label height; added `rel=0`, `modestbranding=1`, and `playsinline=1`; removed unused watch-page URLs; and added a deliberate first-tap play overlay that keeps the iframe non-interactive until inline playback starts.
+- Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.
+- Results: TypeScript passed; the Vite production build passed; `git diff --check` passed with only expected LF-to-CRLF conversion warnings.
+- Next steps: None planned after successful verification, commit, and push.
+
 - 2026-06-13: Reworked the separate homepage YouTube section into two typed, responsive language video cards without changing the native splash banner, Package Offer section, navigation, or routes.
 - Files changed: `src/components/Hero.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
 - Summary: Kept `VYv1pw_dM1Y` as the TH Language video, added `c9EP32Ptv2Y` as the English Language video, and added a dark tactical two-column card grid with gold labels, 16:9 iframe wrappers, lazy loading, and a very-small-screen stack below 421px.
