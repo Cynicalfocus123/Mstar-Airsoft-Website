@@ -177,6 +177,8 @@
 
 ## Changelog
 
+- 2026-06-13: Updated the homepage Package Offer section to use two balanced tactical cards: Early Bird at $120 ending November 20, 2026, and Regular Package at $160 for 3 Days / 2 Nights. Both retain the same four feature rows, display side by side on desktop, stack on tablet/mobile, and use responsive title/card sizing to prevent cropping or overflow. Replaced the separate homepage YouTube player with embed `VYv1pw_dM1Y` while preserving its existing frame styling.
+
 - 2026-05-17: Established tactical visual system, responsive rules, logo/header/footer constraints, lightweight image strategy, and backend-ready design rules for initial site build.
 - 2026-05-17: Confirmed build-readiness work did not change visual rules; kept logo and gallery asset paths compatible with Vite.
 - 2026-05-17: Kept generated artifacts out of source control so deployed design stays lightweight and maintainable.

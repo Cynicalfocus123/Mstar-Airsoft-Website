@@ -38,8 +38,8 @@ export const siteContent: SiteContent = {
     title: 'MSTAR AIRSOFT',
     subtitle:
       'Tactical airsoft tournaments and competitive events built for organized teams, clear rules, and mission-focused play.',
-    videoEmbedUrl: 'https://www.youtube.com/embed/tyf3cAAct74',
-    videoEmbedTitle: 'Largest Airsoft Game in Southeast Asia',
+    videoEmbedUrl: 'https://www.youtube.com/embed/VYv1pw_dM1Y',
+    videoEmbedTitle: 'Mstar Airsoft event video',
     buttons: [
       { label: 'View Events', href: '#/events', variant: 'secondary' },
     ],
@@ -65,13 +65,29 @@ export const siteContent: SiteContent = {
   packageOffer: {
     eyebrow: 'Stay and Play',
     title: 'Package Offer',
-    price: 'Ticket Price - $120.00',
-    duration: '3 days / 2 nights',
-    perks: [
-      'Live music',
-      'Food Court',
-      '2 Person Tent',
-      'Camping Equipment',
+    offers: [
+      {
+        label: 'Early Bird',
+        price: 'Ticket Price - $120.00',
+        detail: 'Early Bird Ends - November 20, 2026',
+        perks: [
+          'Live Music',
+          'Food Court',
+          '2 Person Tent',
+          'Camping Equipment',
+        ],
+      },
+      {
+        label: 'Regular Package',
+        price: 'Ticket Price - $160.00',
+        detail: '3 Days / 2 Nights',
+        perks: [
+          'Live Music',
+          'Food Court',
+          '2 Person Tent',
+          'Camping Equipment',
+        ],
+      },
     ],
   },
   events: [

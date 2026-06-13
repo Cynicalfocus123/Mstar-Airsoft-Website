@@ -128,6 +128,12 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-13: Changed the homepage Package Offer data and component from one card to responsive Early Bird and Regular Package cards, updated prices/details, replaced the separate homepage YouTube iframe with `VYv1pw_dM1Y`, and verified the repository has no product listing/detail routes or Back to products control to modify.
+- Files changed: `src/components/PackageOffer.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.
+- Results: TypeScript passed; the Vite production build passed; `git diff --check` passed with only expected LF-to-CRLF conversion warnings.
+- Next steps: None planned after commit and push.
+
 - Initialized empty local repo in workspace.
 - Added GitHub remote.
 - Created React + Vite + TypeScript project from scratch.

@@ -58,9 +58,12 @@ export interface AboutContent {
 export interface PackageOfferContent {
   eyebrow: string;
   title: string;
-  price: string;
-  duration: string;
-  perks: string[];
+  offers: Array<{
+    label: string;
+    price: string;
+    detail: string;
+    perks: string[];
+  }>;
 }
 
 export interface EventCard {

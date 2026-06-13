@@ -395,8 +395,9 @@ textarea {
 }
 
 .package-offer-grid {
-  grid-template-columns: minmax(0, 440px);
+  grid-template-columns: repeat(2, minmax(0, 440px));
   justify-content: center;
+  align-items: stretch;
 }
 
 .event-card {
@@ -404,22 +405,43 @@ textarea {
 }
 
 .package-offer-card {
+  display: flex;
+  flex-direction: column;
   gap: 18px;
-  width: min(100%, 440px);
-  margin: 0 auto;
+  width: 100%;
+  min-width: 0;
 }
 
 .package-offer-heading {
   margin-right: auto;
   margin-left: auto;
+  padding-inline: clamp(4px, 1vw, 12px);
   text-align: center;
+}
+
+.package-offer-heading h2 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.package-offer-card-header {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.package-offer-card-header h3 {
+  min-height: 0;
+  margin: 0;
+  color: var(--gold);
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .package-offer-values {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  align-items: end;
+  gap: 12px;
 }
 
 .package-offer-value {
@@ -440,6 +462,19 @@ textarea {
   font-size: clamp(1.15rem, 2vw, 1.55rem);
   line-height: 1.15;
   font-weight: 800;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.package-offer-detail {
+  min-height: 2.4em;
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(0.88rem, 1.4vw, 1rem);
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  overflow-wrap: anywhere;
   text-transform: uppercase;
 }
 
@@ -447,7 +482,7 @@ textarea {
   display: grid;
   gap: 10px;
   padding: 0;
-  margin: 0;
+  margin: auto 0 0;
   list-style: none;
 }
 
@@ -703,12 +738,15 @@ select:focus {
     grid-template-columns: 1fr;
   }
 
-  .package-offer-grid,
   .card-grid,
   .rule-list,
   .gallery-grid,
   .contact-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .package-offer-grid {
+    grid-template-columns: minmax(0, 560px);
   }
 
   .footer-link-columns {
@@ -773,8 +811,8 @@ select:focus {
     width: 100%;
   }
 
-  .package-offer-values {
-    grid-template-columns: 1fr;
+  .package-offer-heading h2 {
+    font-size: clamp(1.85rem, 10vw, 3rem);
   }
 
   .event-card h3 {
