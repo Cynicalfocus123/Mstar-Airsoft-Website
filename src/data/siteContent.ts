@@ -38,8 +38,20 @@ export const siteContent: SiteContent = {
     title: 'MSTAR AIRSOFT',
     subtitle:
       'Tactical airsoft tournaments and competitive events built for organized teams, clear rules, and mission-focused play.',
-    videoEmbedUrl: 'https://www.youtube.com/embed/VYv1pw_dM1Y',
-    videoEmbedTitle: 'Mstar Airsoft event video',
+    videos: [
+      {
+        language: 'TH Language',
+        youtubeUrl: 'https://www.youtube.com/watch?v=VYv1pw_dM1Y',
+        embedUrl: 'https://www.youtube.com/embed/VYv1pw_dM1Y',
+        title: 'Mstar Airsoft event video in Thai',
+      },
+      {
+        language: 'English Language',
+        youtubeUrl: 'https://www.youtube.com/watch?v=c9EP32Ptv2Y',
+        embedUrl: 'https://www.youtube.com/embed/c9EP32Ptv2Y',
+        title: 'Mstar Airsoft event video in English',
+      },
+    ],
     buttons: [
       { label: 'View Events', href: '#/events', variant: 'secondary' },
     ],

@@ -24,8 +24,12 @@ export interface HeroContent {
   kicker: string;
   title: string;
   subtitle: string;
-  videoEmbedUrl: string;
-  videoEmbedTitle: string;
+  videos: Array<{
+    language: string;
+    youtubeUrl: string;
+    embedUrl: string;
+    title: string;
+  }>;
   buttons: CtaButton[];
   stats: Array<{
     value: string;

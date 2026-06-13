@@ -128,6 +128,13 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-13: Reworked the separate homepage YouTube section into two typed, responsive language video cards without changing the native splash banner, Package Offer section, navigation, or routes.
+- Files changed: `src/components/Hero.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Summary: Kept `VYv1pw_dM1Y` as the TH Language video, added `c9EP32Ptv2Y` as the English Language video, and added a dark tactical two-column card grid with gold labels, 16:9 iframe wrappers, lazy loading, and a very-small-screen stack below 421px.
+- Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.
+- Results: TypeScript passed; the Vite production build passed; `git diff --check` passed with only expected LF-to-CRLF conversion warnings.
+- Next steps: None planned after successful verification, commit, and push.
+
 - 2026-06-13: Changed the homepage Package Offer data and component from one card to responsive Early Bird and Regular Package cards, updated prices/details, replaced the separate homepage YouTube iframe with `VYv1pw_dM1Y`, and verified the repository has no product listing/detail routes or Back to products control to modify.
 - Files changed: `src/components/PackageOffer.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
 - Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.

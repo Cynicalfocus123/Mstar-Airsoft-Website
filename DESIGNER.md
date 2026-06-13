@@ -177,6 +177,8 @@
 
 ## Changelog
 
+- 2026-06-13: Changed the separate homepage YouTube section to two responsive language video cards while preserving the native splash banner and surrounding homepage structure. The TH LANGUAGE card uses `VYv1pw_dM1Y`; the ENGLISH LANGUAGE card uses `c9EP32Ptv2Y`. Both use dark tactical surfaces, thin gold-accent borders, compact uppercase gold labels, and responsive 16:9 iframe wrappers. Desktop and tablet use a balanced two-card row; standard mobile widths retain two compact cards when space allows; screens below 421px stack the cards to prevent overflow. The polish follows premium card-layout principles through clear hierarchy, restrained spacing, grouped media, and responsive scaling without copying an external design or adding new decorative effects.
+
 - 2026-06-13: Updated the homepage Package Offer section to use two balanced tactical cards: Early Bird at $120 ending November 20, 2026, and Regular Package at $160 for 3 Days / 2 Nights. Both retain the same four feature rows, display side by side on desktop, stack on tablet/mobile, and use responsive title/card sizing to prevent cropping or overflow. Replaced the separate homepage YouTube player with embed `VYv1pw_dM1Y` while preserving its existing frame styling.
 
 - 2026-05-17: Established tactical visual system, responsive rules, logo/header/footer constraints, lightweight image strategy, and backend-ready design rules for initial site build.
