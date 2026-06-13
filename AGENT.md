@@ -128,6 +128,14 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-13: Replaced the homepage Gallery section with a typed, responsive Game Terrain section using four native HTML5 video loops while preserving the existing `#gallery` navigation anchor and leaving other homepage/page sections unchanged.
+- Files changed: `src/App.tsx`, `src/components/GameTerrain.tsx`, removed `src/components/Gallery.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, eight optimized terrain media assets under `public/videos/game-terrain` and `public/images/game-terrain`, `AGENT.md`, and `DESIGNER.md`.
+- Video assets used: `IMG_0749.webm` for Forest Movement, `IMG_0747.webm` for Large Open Area, `land drone.webm` for Beautiful Scenery, and `IMG_0752.webm` for Fun Combat Terrains. Sources were converted to silent 8-second 960x540 VP9 WebM loops at 18 fps with static WebP poster frames; combined video size is about 7 MB instead of roughly 330 MB of source media.
+- Summary: Added an editorial Game Terrain heading and description, four cinematic native video cards, direct GitHub Pages-safe asset paths through `getPublicAssetPath`, desktop/tablet two-column presentation, mobile video-left/text-right cards, and a below-360px stacked fallback. Videos use autoplay, muted, loop, playsInline, metadata preload, no controls, no audio, and no external player/library.
+- Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.
+- Results: TypeScript passed; the Vite production build passed; `git diff --check` passed with only expected LF-to-CRLF conversion warnings.
+- Next steps: None planned after successful verification, commit, and push.
+
 - 2026-06-13: Compacted only the Ticket page package-card spacing while preserving all ticket content, add-ons, homepage cards, navigation, videos, and unrelated pages.
 - Files changed: `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
 - Summary: Added Ticket-grid-scoped overrides that remove the global event-card heading minimum height and 22px title margins, reduce header/body gaps and padding responsively, and stop feature rows from being pushed down by flex auto margins.

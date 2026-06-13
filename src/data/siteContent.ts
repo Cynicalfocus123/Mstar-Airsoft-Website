@@ -225,26 +225,41 @@ export const siteContent: SiteContent = {
     { id: 'players', label: 'Number of players', type: 'number', placeholder: '5', required: true },
     { id: 'message', label: 'Message', type: 'textarea', placeholder: 'Event, roster, or special notes', required: false },
   ],
-  gallery: [
-    {
-      id: 'staging-zone',
-      title: 'Staging Zone',
-      imagePath: '/gallery/staging-zone.webp',
-      alt: 'Airsoft staging zone placeholder',
-    },
-    {
-      id: 'field-layout',
-      title: 'Field Layout',
-      imagePath: '/gallery/field-layout.webp',
-      alt: 'Airsoft field layout placeholder',
-    },
-    {
-      id: 'match-brief',
-      title: 'Match Brief',
-      imagePath: '/gallery/match-brief.webp',
-      alt: 'Tournament briefing placeholder',
-    },
-  ],
+  gameTerrain: {
+    eyebrow: 'Game Terrain',
+    title: 'Game Terrain',
+    description: 'Explore the battlefield. Real locations, immersive environments, built for tactical gameplay.',
+    items: [
+      {
+        id: 'forest-movement',
+        title: 'Forest Movement',
+        description: 'Navigate dense woodland paths, natural cover, and tactical movement routes.',
+        videoPath: '/videos/game-terrain/forest-movement.webm',
+        posterPath: '/images/game-terrain/forest-movement.webp',
+      },
+      {
+        id: 'large-open-area',
+        title: 'Large Open Area',
+        description: 'Wide engagement zones with long sightlines and strategic positioning.',
+        videoPath: '/videos/game-terrain/large-open-area.webm',
+        posterPath: '/images/game-terrain/large-open-area.webp',
+      },
+      {
+        id: 'beautiful-scenery',
+        title: 'Beautiful Scenery',
+        description: 'Immersive landscapes and visually striking environments across the field.',
+        videoPath: '/videos/game-terrain/beautiful-scenery.webm',
+        posterPath: '/images/game-terrain/beautiful-scenery.webp',
+      },
+      {
+        id: 'fun-combat-terrains',
+        title: 'Fun Combat Terrains',
+        description: 'Diverse battle zones designed for exciting and dynamic gameplay.',
+        videoPath: '/videos/game-terrain/fun-combat-terrains.webm',
+        posterPath: '/images/game-terrain/fun-combat-terrains.webp',
+      },
+    ],
+  },
   rules: [
     {
       title: 'Safety rules',

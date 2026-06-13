@@ -105,11 +105,19 @@ export interface FormField {
   required: boolean;
 }
 
-export interface GalleryItem {
+export interface GameTerrainItem {
   id: string;
   title: string;
-  imagePath: string;
-  alt: string;
+  description: string;
+  videoPath: string;
+  posterPath?: string;
+}
+
+export interface GameTerrainContent {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: GameTerrainItem[];
 }
 
 export interface RuleItem {
@@ -182,7 +190,7 @@ export interface SiteContent {
   ticketPage: TicketPageContent;
   events: EventCard[];
   registrationFields: FormField[];
-  gallery: GalleryItem[];
+  gameTerrain: GameTerrainContent;
   rules: RuleItem[];
   contact: ContactContent;
   footerSections: FooterSection[];

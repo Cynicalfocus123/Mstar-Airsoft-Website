@@ -5,7 +5,7 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { PackageOffer } from './components/PackageOffer';
 import { Events } from './components/Events';
-import { Gallery } from './components/Gallery';
+import { GameTerrain } from './components/GameTerrain';
 import { Footer } from './components/Footer';
 import { EventsPage } from './components/EventsPage';
 import { SignInPage } from './components/SignInPage';
@@ -121,7 +121,7 @@ export default function App() {
           <About content={siteContent.about} />
           <PackageOffer content={siteContent.packageOffer} />
           <Events events={siteContent.events.slice(0, 3)} viewAllHref="#/events" />
-          <Gallery items={siteContent.gallery} />
+          <GameTerrain content={siteContent.gameTerrain} />
         </main>
       )}
       {route.name === 'events' && <EventsPage events={siteContent.events} />}
