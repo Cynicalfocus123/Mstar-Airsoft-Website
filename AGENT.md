@@ -128,6 +128,13 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-13: Compacted only the Ticket page package-card spacing while preserving all ticket content, add-ons, homepage cards, navigation, videos, and unrelated pages.
+- Files changed: `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Summary: Added Ticket-grid-scoped overrides that remove the global event-card heading minimum height and 22px title margins, reduce header/body gaps and padding responsively, and stop feature rows from being pushed down by flex auto margins.
+- Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.
+- Results: TypeScript passed; the Vite production build passed; `git diff --check` passed with only expected LF-to-CRLF conversion warnings.
+- Next steps: None planned after successful verification, commit, and push.
+
 - 2026-06-13: Added a config-driven Ticket destination to the main header and hash router, created a dedicated responsive Ticket page, reused shared package-card markup, and restored direct one-tap YouTube iframe interaction in the homepage language cards.
 - Files changed: `src/App.tsx`, `src/components/Hero.tsx`, `src/components/PackageCard.tsx`, `src/components/PackageOffer.tsx`, `src/components/TicketPage.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
 - Summary: Added Early Bird and Normal Ticket cards plus 2 Person Tent, Pillow / Blanket, and Matress add-ons; added responsive two/three-column desktop grids and stacked mobile layouts; changed TH LANGUAGE to THAI LANGUAGE; removed the custom play overlay, state, click handler, and iframe pointer-event gate; and now uses exact parameterized embed URLs directly.

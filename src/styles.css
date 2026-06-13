@@ -1206,6 +1206,33 @@ select:focus {
   align-items: stretch;
 }
 
+.ticket-package-grid .package-offer-card {
+  gap: clamp(12px, 1.5vw, 16px);
+  padding: clamp(18px, 2.5vw, 22px);
+}
+
+.ticket-package-grid .package-offer-card-header {
+  padding-bottom: clamp(8px, 1vw, 11px);
+}
+
+.ticket-package-grid .package-offer-card-header h3 {
+  min-height: 0;
+  margin: 0;
+}
+
+.ticket-package-grid .package-offer-values {
+  gap: 9px;
+}
+
+.ticket-package-grid .package-offer-details {
+  gap: 6px;
+  min-height: 0;
+}
+
+.ticket-package-grid .package-offer-list {
+  margin: 4px 0 0;
+}
+
 .ticket-addons {
   width: min(1160px, 100%);
   margin: clamp(48px, 7vw, 76px) auto 0;
