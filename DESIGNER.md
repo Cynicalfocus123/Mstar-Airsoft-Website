@@ -178,6 +178,8 @@
 
 ## Changelog
 
+- 2026-06-15: Corrected the visible Stripe simple-button offset by capping each Stripe custom-element host at its actual 360px button width instead of 560px. This keeps Pre Sale and Extra Camping Gears visually centered like General Ticket across desktop and mobile while preserving the full-width centered wrapper and safe card padding.
+
 - 2026-06-15: Updated only Ticket page copy by removing the General Ticket date line and replacing the Extra Camping Gears description with `Add additional camping set.` All card styling, prices, perks, payment controls, and responsive behavior remain unchanged.
 
 - 2026-06-15: Refined only Ticket page Stripe control alignment across desktop, tablet, standard mobile, and iPhone Safari mobile-desktop sizing. Wrappers now center against the full card width with symmetric responsive padding and a 560px cap; existing ticket/add-on cards use border-box flex columns and gain safe small-screen side padding without changing content or visual direction.

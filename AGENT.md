@@ -128,6 +128,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Fixed the visible Pre Sale and Extra Camping Gears Stripe button offset caused by expanding the Stripe custom-element host to 560px. Restored a responsive 360px host cap at all breakpoints so Stripe's internally rendered simple green button cannot sit left-aligned inside an oversized invisible iframe.
+- Files changed: `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: TypeScript, Vite production build, one-time Stripe script check, browser geometry, and visual screenshots at desktop/mobile widths confirmed Pre Sale, General Ticket, and Extra Camping Gears controls are centered within their cards without overflow.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Removed the `Jan 8-10, 2027` detail from the General Ticket card and changed the Extra Camping Gears description to `Add additional camping set.` No prices, perks, Stripe buttons, or layout changed.
 - Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
 - Verification: TypeScript, Vite production build, and `git diff --check` passed.
