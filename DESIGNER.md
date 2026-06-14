@@ -178,6 +178,8 @@
 
 ## Changelog
 
+- 2026-06-15: Updated only the Ticket page price labels to euro formatting: Pre Sale now displays `€120.00 EURO` and General Ticket displays `€160.00 EURO`. No other card copy, payment control, or styling changed.
+
 - 2026-06-15: Removed the Pre Sale `2027` line and standardized all three Ticket page payment controls on one identical Stripe wrapper class. General Ticket no longer has a separate alignment class, preventing wrapper behavior from diverging between Pre Sale, General Ticket, and Extra Camping Gears across mobile-desktop views.
 
 - 2026-06-15: Corrected the visible Stripe simple-button offset by capping each Stripe custom-element host at its actual 360px button width instead of 560px. This keeps Pre Sale and Extra Camping Gears visually centered like General Ticket across desktop and mobile while preserving the full-width centered wrapper and safe card padding.

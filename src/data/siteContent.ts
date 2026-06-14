@@ -108,7 +108,7 @@ export const siteContent: SiteContent = {
     packages: [
       {
         label: 'Pre Sale',
-        price: '$120.00 USD',
+        price: '€120.00 EURO',
         details: ['3 Days / 2 Nights'],
         perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
         stripeBuyButtonId: 'buy_btn_1TiFmd5Kev5Ia2Rir5v4MnHw',
@@ -116,7 +116,7 @@ export const siteContent: SiteContent = {
       },
       {
         label: 'General Ticket',
-        price: '$160.00 USD',
+        price: '€160.00 EURO',
         details: ['3 Days / 2 Nights'],
         perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
         stripeBuyButtonId: 'buy_btn_1TiGSe5Kev5Ia2RiIXVYRKHY',

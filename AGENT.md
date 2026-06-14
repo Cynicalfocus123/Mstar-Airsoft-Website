@@ -128,6 +128,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Changed only the Ticket page Pre Sale and General Ticket display prices from `$120.00 USD` / `$160.00 USD` to `€120.00 EURO` / `€160.00 EURO`. Homepage pricing, Stripe IDs, card content, and layout remain unchanged.
+- Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: TypeScript, Vite production build, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Removed `2027` from Pre Sale and eliminated the General Ticket-only Stripe wrapper class so Pre Sale, General Ticket, and Extra Camping Gears now use the exact same shared wrapper markup and centering CSS with no special-case alignment path.
 - Files changed: `src/data/siteContent.ts`, `src/components/StripeBuyButton.tsx`, `src/components/PackageCard.tsx`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
 - Verification: TypeScript, Vite production build, one-time Stripe script check, and browser measurements at mobile/mobile-desktop/desktop widths confirmed all three shared wrappers have zero center offset and remain contained without overflow.
