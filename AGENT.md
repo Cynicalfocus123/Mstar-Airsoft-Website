@@ -128,6 +128,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Updated only Stripe Buy Button centering/scaling CSS across Ticket package and add-on cards. Added full-width flex centering, self-centering, symmetric responsive padding, border-box sizing, a 560px component cap, and mobile-specific card-safe spacing using the existing card classes.
+- Files changed: `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: TypeScript, Vite production build, one-time Stripe script check, and browser measurements at 390px, 430px, 768px, 1024px, and 1280px confirmed equal left/right gaps, card containment, and no horizontal overflow for all three Stripe components.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Removed only `To Be Announced Soon` from the Pre Sale Ticket card while retaining `2027`, `3 Days / 2 Nights`, price, perks, Stripe button, and all other Ticket page content.
 - Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
 - Verification: TypeScript, Vite production build, and `git diff --check` passed.

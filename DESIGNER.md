@@ -178,6 +178,8 @@
 
 ## Changelog
 
+- 2026-06-15: Refined only Ticket page Stripe control alignment across desktop, tablet, standard mobile, and iPhone Safari mobile-desktop sizing. Wrappers now center against the full card width with symmetric responsive padding and a 560px cap; existing ticket/add-on cards use border-box flex columns and gain safe small-screen side padding without changing content or visual direction.
+
 - 2026-06-15: Removed the `To Be Announced Soon` detail line from the Pre Sale Ticket card. Its remaining date/year, stay length, price, perks, payment control, and visual styling remain unchanged.
 
 - 2026-06-15: Simplified only the Ticket page hero by removing the `Stay and Play` eyebrow and its package/camping description. The Ticket title and all ticket/add-on card content and payment controls remain unchanged.
