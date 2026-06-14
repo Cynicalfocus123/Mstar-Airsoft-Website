@@ -128,6 +128,12 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-14: Updated the three published event locations: Force of Conquest now uses Mstar Jungle Land, while both future TBA events use TBA.
+- Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
+- Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.
+- Results: TypeScript passed; the Vite production build passed; `git diff --check` passed with only expected LF-to-CRLF conversion warnings.
+- Next steps: None planned after successful verification, commit, and push.
+
 - 2026-06-14: Simplified the Events page to three cards only: Force of Conquest and two unnamed TBA events.
 - Files changed: `src/data/siteContent.ts`, `src/components/EventsPage.tsx`, `AGENT.md`, and `DESIGNER.md`.
 - Summary: Replaced the second and third event operation names with TBA, removed their operation-description paragraphs, changed both attendance values to 2000+, deleted the final three event records, and removed Events page pagination/Load More logic.

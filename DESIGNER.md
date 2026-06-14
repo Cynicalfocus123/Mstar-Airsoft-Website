@@ -177,6 +177,8 @@
 
 ## Changelog
 
+- 2026-06-14: Updated event location content so Force of Conquest displays Mstar Jungle Land and both future TBA cards display TBA, with all existing card styling and responsive behavior preserved.
+
 - 2026-06-14: Reduced the Events collection to three cards and removed the Load More control. The second and third cards now use TBA instead of operation names, omit their descriptive operation copy, and show attendance as 2000+, while retaining the existing tactical card styling and responsive grid.
 
 - 2026-06-14: Renamed the first homepage event card to Force of Conquest and updated it to Jan 8-10, 2027 and $160.00 USD. The next two cards now show 2027, $120.00 USD, and To Be Announced Soon. The Ticket page presents the same date/price hierarchy in its Normal Ticket and Early Bird cards without changing card styling or responsive behavior.
