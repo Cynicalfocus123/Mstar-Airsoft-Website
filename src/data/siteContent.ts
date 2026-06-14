@@ -119,7 +119,7 @@ export const siteContent: SiteContent = {
         price: '$160.00 USD',
         details: ['Jan 8-10, 2027', '3 Days / 2 Nights'],
         perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
-        stripeBuyButtonId: 'buy_btn_1TiFmd5Kev5Ia2Rir5v4MnHw',
+        stripeBuyButtonId: 'buy_btn_1TiGSe5Kev5Ia2RiIXVYRKHY',
         stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },
     ],

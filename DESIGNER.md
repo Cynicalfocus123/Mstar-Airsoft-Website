@@ -178,6 +178,8 @@
 
 ## Changelog
 
+- 2026-06-15: Preserved the established centered, responsive Stripe wrapper and changed only the General Ticket payment target to buy-button ID `buy_btn_1TiGSe5Kev5Ia2RiIXVYRKHY`. Pre Sale, Extra Camping Gears, card copy, pricing, colors, feature lists, and page structure remain unchanged.
+
 - 2026-06-14: Refined only the Ticket page Stripe payment alignment. Every Stripe Buy Button now sits in a full-card-width flex wrapper, is centered horizontally, scales up to 360px, retains safe card padding on mobile, and remains bottom-aligned within the existing flex-column ticket and add-on cards. No text, pricing, colors, features, navigation, or page layout changed.
 
 - 2026-06-14: Updated only the Ticket page card content and payment area. The two package cards are now Pre Sale and General Ticket, each retaining its existing price/details/features hierarchy with a responsive Stripe Buy Button anchored at the bottom inside the card. Replaced the three small camping add-on cards with one centered Extra Camping Gears card showing €69 EURO, short supporting copy, and its own contained Stripe Buy Button. The Stripe script loads once at page level; no header, footer, homepage, or unrelated section styling changed.

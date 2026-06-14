@@ -128,6 +128,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Corrected only the General Ticket Stripe Buy Button ID to `buy_btn_1TiGSe5Kev5Ia2RiIXVYRKHY`. Preserved the existing centered `stripe-buy-button-wrap`, responsive 360px cap, flex-column card layout, Pre Sale button, Extra Camping Gears button, ticket content, and single Stripe script load.
+- Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: TypeScript, Vite production build, exact button-ID/script-count checks, and local browser measurements at desktop, tablet, and mobile widths confirmed all three buttons render centered with equal side spacing and no overflow; the General Ticket custom element uses the corrected ID.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-14: Corrected Stripe Buy Button alignment only on the Ticket page by replacing the full-width block shell with a dedicated flex-centered wrapper capped at 360px and confirming ticket/add-on cards remain flex columns with bottom-anchored payment controls.
 - Files changed: `src/components/StripeBuyButton.tsx`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
 - Verification: TypeScript, Vite production build, script-count check, and local browser measurements at desktop, tablet, and mobile widths confirmed all three buttons are horizontally centered with equal card-side spacing and no overflow.
