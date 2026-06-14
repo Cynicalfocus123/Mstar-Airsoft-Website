@@ -108,14 +108,14 @@ export const siteContent: SiteContent = {
     packages: [
       {
         label: 'Early Bird',
-        price: '$120',
-        details: ['Early Bird Ends - November 20, 2026', '3 Days / 2 Nights'],
+        price: '$120.00 USD',
+        details: ['2027', 'To Be Announced Soon', '3 Days / 2 Nights'],
         perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
       },
       {
         label: 'Normal Ticket',
-        price: '$160',
-        details: ['3 Days / 2 Nights'],
+        price: '$160.00 USD',
+        details: ['Jan 8-10, 2027', '3 Days / 2 Nights'],
         perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
       },
     ],
@@ -128,11 +128,11 @@ export const siteContent: SiteContent = {
   events: [
     {
       id: 'urban-rush',
-      title: 'Urban Rush Qualifier',
-      date: 'June 21, 2026',
+      title: 'Force of Conquest',
+      date: 'Jan 8-10, 2027',
       time: '09:00 AM - 05:30 PM',
       location: 'Bangkok Tactical Field',
-      entryFee: 'THB 1,500 / player',
+      entryFee: '$160.00 USD',
       teams: 'Alpha Coalition vs Bravo Unit',
       attendance: '2,000 players',
       status: 'Registration Open',
@@ -144,13 +144,13 @@ export const siteContent: SiteContent = {
     {
       id: 'night-grid',
       title: 'Night Grid Invitational',
-      date: 'July 12, 2026',
+      date: '2027',
       time: '04:00 PM - 11:30 PM',
       location: 'Eastern Training Zone',
-      entryFee: 'THB 2,000 / player',
+      entryFee: '$120.00 USD',
       teams: 'Night Squad vs Grid Command',
       attendance: '1,200 players',
-      status: 'Limited Slots',
+      status: 'To Be Announced Soon',
       summary: 'Low-light missions with tight objective windows and strict safety control.',
       overview:
         'Night Grid Invitational uses low-light lanes, visible team markings, and marshal-held pause points. The format rewards communication, disciplined movement, and clean hit calling across timed mission sets.',
@@ -159,13 +159,13 @@ export const siteContent: SiteContent = {
     {
       id: 'final-front',
       title: 'Final Front Championship',
-      date: 'August 30, 2026',
+      date: '2027',
       time: '08:00 AM - 06:00 PM',
       location: 'Mstar Event Arena',
-      entryFee: 'THB 10,000 / team',
+      entryFee: '$120.00 USD',
       teams: 'Qualified Teams Bracket',
       attendance: '2,500 players',
-      status: 'Coming Soon',
+      status: 'To Be Announced Soon',
       summary: 'Season-end championship bracket for qualified teams and invited squads.',
       overview:
         'Final Front Championship closes the season with seeded brackets, staged finals, field briefings, and objective-based scoring. Qualified teams should arrive roster-ready with approved gear and captain check-in complete.',

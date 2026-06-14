@@ -177,6 +177,8 @@
 
 ## Changelog
 
+- 2026-06-14: Renamed the first homepage event card to Force of Conquest and updated it to Jan 8-10, 2027 and $160.00 USD. The next two cards now show 2027, $120.00 USD, and To Be Announced Soon. The Ticket page presents the same date/price hierarchy in its Normal Ticket and Early Bird cards without changing card styling or responsive behavior.
+
 - 2026-06-13: Extended the Beautiful Scenery Game Terrain card from the optimized 8-second excerpt to the complete 24.945-second land drone video. The card retains the same cinematic framing, poster, responsive layout, silent native autoplay loop, and lightweight VP9 delivery.
 
 - 2026-06-13: Replaced the homepage Gallery with Game Terrain, using four large native HTML5 video cards for Forest Movement, Large Open Area, Beautiful Scenery, and Fun Combat Terrains. The optimized videos behave as silent GIF-style loops with autoplay, muted, loop, playsInline, metadata preload, poster fallbacks, no controls, and no audio. Desktop and tablet use a premium editorial heading plus large two-column cinematic cards with restrained dark readability overlays; mobile uses tactical list cards with video left and copy right; screens below 360px stack video above copy. The section stays within the Mstar dark charcoal, gold, military green, white, and muted-grey language with thin borders and bold boxy typography. No YouTube, Vimeo, iframe player, real GIF, external branding, or heavy video library is used.

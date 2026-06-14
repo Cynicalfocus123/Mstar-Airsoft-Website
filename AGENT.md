@@ -128,6 +128,13 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-14: Updated the first three homepage event cards and matching Ticket page packages with the new 2027 dates, USD entry fees, and announcement state.
+- Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
+- Summary: The first event is now titled Force of Conquest and shows Jan 8-10, 2027 with a $160.00 USD entry fee; the next two show 2027, $120.00 USD, and To Be Announced Soon. The Ticket page now mirrors $160.00 USD with Jan 8-10, 2027 for Normal Ticket and $120.00 USD with 2027 / To Be Announced Soon for Early Bird.
+- Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.
+- Results: TypeScript passed; the Vite production build passed; `git diff --check` passed with only expected LF-to-CRLF conversion warnings.
+- Next steps: None planned after successful verification, commit, and push.
+
 - 2026-06-13: Updated only the Beautiful Scenery Game Terrain video so the card plays the complete land drone source instead of the previous 8-second cut.
 - Files changed: `public/videos/game-terrain/beautiful-scenery.webm`, `AGENT.md`, and `DESIGNER.md`.
 - Summary: Re-encoded the full `land drone.webm` source as a silent 24.945-second 960x540 VP9 WebM loop at 18 fps; the deployed file remains lightweight at about 1.6 MB and keeps the existing poster, card layout, autoplay, muted, loop, and playsInline behavior.
