@@ -136,9 +136,9 @@ export const siteContent: SiteContent = {
       teams: 'Alpha Coalition vs Bravo Unit',
       attendance: '2,000 players',
       status: 'Registration Open',
-      summary: 'A fast-paced qualifier built around urban lanes, short rotations, and clean team scoring.',
+      summary: 'An intense, realistic large-scale airsoft combat experience set deep in the jungle.',
       overview:
-        'Urban Rush Qualifier is a controlled tournament day for squads that want fast objective cycles, clear marshal calls, and structured scoring. Teams rotate through urban lanes, capture points, and timed pressure rounds before final bracket placement.',
+        'Force of Conquest delivers immersive large-scale jungle warfare with natural cover, demanding terrain, coordinated objectives, and realistic airsoft combat built for organized squads.',
       imagePath: '/banners/event-urban.svg',
     },
     {

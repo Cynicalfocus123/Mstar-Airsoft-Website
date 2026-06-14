@@ -177,6 +177,8 @@
 
 ## Changelog
 
+- 2026-06-14: Updated Force of Conquest card and detail copy to describe an intense, realistic large-scale airsoft combat experience in jungle terrain, replacing the unrelated urban qualifier language without changing layout or styling.
+
 - 2026-06-14: Updated event location content so Force of Conquest displays Mstar Jungle Land and both future TBA cards display TBA, with all existing card styling and responsive behavior preserved.
 
 - 2026-06-14: Reduced the Events collection to three cards and removed the Load More control. The second and third cards now use TBA instead of operation names, omit their descriptive operation copy, and show attendance as 2000+, while retaining the existing tactical card styling and responsive grid.
