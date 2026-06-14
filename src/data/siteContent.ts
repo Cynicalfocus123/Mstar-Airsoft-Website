@@ -107,22 +107,30 @@ export const siteContent: SiteContent = {
     description: 'Choose your event package and reserve the camping extras you need for the full operation.',
     packages: [
       {
-        label: 'Early Bird',
+        label: 'Pre Sale',
         price: '$120.00 USD',
         details: ['2027', 'To Be Announced Soon', '3 Days / 2 Nights'],
         perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
+        stripeBuyButtonId: 'buy_btn_1TiFmd5Kev5Ia2Rir5v4MnHw',
+        stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },
       {
-        label: 'Normal Ticket',
+        label: 'General Ticket',
         price: '$160.00 USD',
         details: ['Jan 8-10, 2027', '3 Days / 2 Nights'],
         perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
+        stripeBuyButtonId: 'buy_btn_1TiFmd5Kev5Ia2Rir5v4MnHw',
+        stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },
     ],
     addons: [
-      { title: '2 Person Tent', price: '$15 USD Per Day' },
-      { title: 'Pillow / Blanket', price: '$5 USD' },
-      { title: 'Matress', price: '$5 USD' },
+      {
+        title: 'Extra Camping Gears',
+        price: '€69 EURO',
+        description: 'Complete your campsite with additional essential camping equipment.',
+        stripeBuyButtonId: 'buy_btn_1TiFro5Kev5Ia2RilQzPvFMo',
+        stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
+      },
     ],
   },
   events: [

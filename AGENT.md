@@ -128,6 +128,13 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-14: Updated only the Ticket page payment cards: renamed Early Bird to Pre Sale and Normal Ticket to General Ticket, replaced the three camping add-ons with one Extra Camping Gears card at €69 EURO, and embedded three responsive Stripe Buy Buttons inside their respective cards.
+- Files changed: `index.html`, `src/components/PackageCard.tsx`, `src/components/StripeBuyButton.tsx`, `src/components/TicketPage.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Implementation: Stripe's Buy Button script is loaded once in `index.html`; only the supplied publishable key is used; button IDs remain typed content data; card-local wrappers constrain the web components on desktop, tablet, and mobile.
+- Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, local browser verification, and `git diff --check`.
+- Results: TypeScript and the Vite production build passed. Browser verification confirmed all three Stripe Buy Button components render inside the intended cards without horizontal overflow.
+- Next steps: None planned after successful verification, commit, and push.
+
 - 2026-06-14: Replaced the outdated urban-qualifier wording for Force of Conquest with polished large-scale jungle airsoft combat copy on both the event card and detail page.
 - Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
 - Commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`.

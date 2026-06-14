@@ -56,6 +56,7 @@
 - Primary CTA uses yellow/gold.
 - Secondary CTA uses dark panel and light border.
 - Cards: bordered, dark, structured, boxy, event-focused.
+- Ticket page payment controls must remain inside their dark tactical cards, below all card copy and feature rows. Stripe Buy Button web components use full-width constrained wrappers so they cannot overflow on desktop, tablet, or mobile.
 - Avoid soft rounded generic SaaS style.
 - Event page banners must have large image treatment with animated hover movement.
 - All Events page cards should stay compact: image banner on top, event information underneath, and responsive grid/list behavior across desktop, tablet, and mobile.
@@ -176,6 +177,8 @@
 - Do not make registration look connected to backend before backend exists.
 
 ## Changelog
+
+- 2026-06-14: Updated only the Ticket page card content and payment area. The two package cards are now Pre Sale and General Ticket, each retaining its existing price/details/features hierarchy with a responsive Stripe Buy Button anchored at the bottom inside the card. Replaced the three small camping add-on cards with one centered Extra Camping Gears card showing €69 EURO, short supporting copy, and its own contained Stripe Buy Button. The Stripe script loads once at page level; no header, footer, homepage, or unrelated section styling changed.
 
 - 2026-06-14: Updated Force of Conquest card and detail copy to describe an intense, realistic large-scale airsoft combat experience in jungle terrain, replacing the unrelated urban qualifier language without changing layout or styling.
 

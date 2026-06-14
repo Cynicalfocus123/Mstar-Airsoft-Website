@@ -1,4 +1,5 @@
 import type { PackageOfferItem } from '../types/siteContent';
+import { StripeBuyButton } from './StripeBuyButton';
 
 interface PackageCardProps {
   offer: PackageOfferItem;
@@ -26,6 +27,12 @@ export function PackageCard({ offer }: PackageCardProps) {
           <li key={perk}>{perk}</li>
         ))}
       </ul>
+      {offer.stripeBuyButtonId && offer.stripePublishableKey ? (
+        <StripeBuyButton
+          buyButtonId={offer.stripeBuyButtonId}
+          publishableKey={offer.stripePublishableKey}
+        />
+      ) : null}
     </article>
   );
 }

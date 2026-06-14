@@ -1,5 +1,6 @@
 import type { TicketPageContent } from '../types/siteContent';
 import { PackageCard } from './PackageCard';
+import { StripeBuyButton } from './StripeBuyButton';
 
 interface TicketPageProps {
   content: TicketPageContent;
@@ -27,7 +28,12 @@ export function TicketPage({ content }: TicketPageProps) {
           {content.addons.map((addon) => (
             <article className="ticket-addon-card" key={addon.title}>
               <h3>{addon.title}</h3>
-              <p>{addon.price}</p>
+              <p className="ticket-addon-price">{addon.price}</p>
+              <p className="ticket-addon-description">{addon.description}</p>
+              <StripeBuyButton
+                buyButtonId={addon.stripeBuyButtonId}
+                publishableKey={addon.stripePublishableKey}
+              />
             </article>
           ))}
         </div>

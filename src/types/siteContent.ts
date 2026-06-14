@@ -63,6 +63,8 @@ export interface PackageOfferItem {
   price: string;
   details: string[];
   perks: string[];
+  stripeBuyButtonId?: string;
+  stripePublishableKey?: string;
 }
 
 export interface PackageOfferContent {
@@ -79,6 +81,9 @@ export interface TicketPageContent {
   addons: Array<{
     title: string;
     price: string;
+    description: string;
+    stripeBuyButtonId: string;
+    stripePublishableKey: string;
   }>;
 }
 
