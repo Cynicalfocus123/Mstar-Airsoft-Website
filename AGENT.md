@@ -128,6 +128,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Removed only the Ticket page hero eyebrow `Stay and Play` and the package/camping description sentence, while preserving the Ticket heading, all cards, Stripe embeds, prices, features, and layout.
+- Files changed: `src/data/siteContent.ts`, `src/components/TicketPage.tsx`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: TypeScript, Vite production build, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Added a General Ticket-specific wrapper class around the existing Stripe Buy Button while retaining buy-button ID `buy_btn_1TiGSe5Kev5Ia2RiIXVYRKHY`, the supplied publishable key, the shared centered wrapper behavior, and the single page-level Stripe script.
 - Files changed: `src/components/PackageCard.tsx`, `src/components/StripeBuyButton.tsx`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
 - Scope: General Ticket wrapper targeting only; Pre Sale, Extra Camping Gears, ticket content, prices, features, colors, header, footer, and page layout remain unchanged.

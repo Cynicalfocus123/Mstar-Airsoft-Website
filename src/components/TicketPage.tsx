@@ -10,9 +10,9 @@ export function TicketPage({ content }: TicketPageProps) {
   return (
     <main className="page-shell ticket-page">
       <section className="page-hero ticket-page-hero">
-        <p className="eyebrow">{content.eyebrow}</p>
+        {content.eyebrow ? <p className="eyebrow">{content.eyebrow}</p> : null}
         <h1>{content.title}</h1>
-        <p>{content.description}</p>
+        {content.description ? <p>{content.description}</p> : null}
       </section>
       <section className="ticket-package-grid" aria-label="Ticket packages">
         {content.packages.map((offer) => (

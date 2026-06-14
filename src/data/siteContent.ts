@@ -102,9 +102,9 @@ export const siteContent: SiteContent = {
     ],
   },
   ticketPage: {
-    eyebrow: 'Stay and Play',
+    eyebrow: '',
     title: 'Ticket',
-    description: 'Choose your event package and reserve the camping extras you need for the full operation.',
+    description: '',
     packages: [
       {
         label: 'Pre Sale',

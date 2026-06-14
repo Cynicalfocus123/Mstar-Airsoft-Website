@@ -178,6 +178,8 @@
 
 ## Changelog
 
+- 2026-06-15: Simplified only the Ticket page hero by removing the `Stay and Play` eyebrow and its package/camping description. The Ticket title and all ticket/add-on card content and payment controls remain unchanged.
+
 - 2026-06-15: Added the dedicated `general-ticket-button-wrap` class to the existing General Ticket Stripe embed while preserving the shared centered responsive wrapper, correct Buy Button ID, and all other Ticket page content and styling.
 
 - 2026-06-15: Preserved the established centered, responsive Stripe wrapper and changed only the General Ticket payment target to buy-button ID `buy_btn_1TiGSe5Kev5Ia2RiIXVYRKHY`. Pre Sale, Extra Camping Gears, card copy, pricing, colors, feature lists, and page structure remain unchanged.
