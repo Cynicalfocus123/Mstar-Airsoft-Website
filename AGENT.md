@@ -128,6 +128,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Removed only `To Be Announced Soon` from the Pre Sale Ticket card while retaining `2027`, `3 Days / 2 Nights`, price, perks, Stripe button, and all other Ticket page content.
+- Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: TypeScript, Vite production build, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Removed only the Ticket page hero eyebrow `Stay and Play` and the package/camping description sentence, while preserving the Ticket heading, all cards, Stripe embeds, prices, features, and layout.
 - Files changed: `src/data/siteContent.ts`, `src/components/TicketPage.tsx`, `AGENT.md`, and `DESIGNER.md`.
 - Verification: TypeScript, Vite production build, and `git diff --check` passed.
