@@ -178,6 +178,8 @@
 
 ## Changelog
 
+- 2026-06-15: Added the dedicated `general-ticket-button-wrap` class to the existing General Ticket Stripe embed while preserving the shared centered responsive wrapper, correct Buy Button ID, and all other Ticket page content and styling.
+
 - 2026-06-15: Preserved the established centered, responsive Stripe wrapper and changed only the General Ticket payment target to buy-button ID `buy_btn_1TiGSe5Kev5Ia2RiIXVYRKHY`. Pre Sale, Extra Camping Gears, card copy, pricing, colors, feature lists, and page structure remain unchanged.
 
 - 2026-06-14: Refined only the Ticket page Stripe payment alignment. Every Stripe Buy Button now sits in a full-card-width flex wrapper, is centered horizontally, scales up to 360px, retains safe card padding on mobile, and remains bottom-aligned within the existing flex-column ticket and add-on cards. No text, pricing, colors, features, navigation, or page layout changed.

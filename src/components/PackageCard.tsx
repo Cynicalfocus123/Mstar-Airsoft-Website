@@ -30,6 +30,7 @@ export function PackageCard({ offer }: PackageCardProps) {
       {offer.stripeBuyButtonId && offer.stripePublishableKey ? (
         <StripeBuyButton
           buyButtonId={offer.stripeBuyButtonId}
+          className={offer.label === 'General Ticket' ? 'general-ticket-button-wrap' : undefined}
           publishableKey={offer.stripePublishableKey}
         />
       ) : null}
