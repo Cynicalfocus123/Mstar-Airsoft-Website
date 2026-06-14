@@ -1369,6 +1369,8 @@ select:focus {
 }
 
 .ticket-package-grid .package-offer-card {
+  display: flex;
+  flex-direction: column;
   gap: clamp(12px, 1.5vw, 16px);
   padding: clamp(18px, 2.5vw, 22px);
 }
@@ -1395,18 +1397,20 @@ select:focus {
   margin: 4px 0 0;
 }
 
-.stripe-buy-button-shell {
+.stripe-buy-button-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   min-width: 0;
   margin-top: auto;
-  padding-top: clamp(12px, 2vw, 18px);
-  overflow: hidden;
+  padding-top: clamp(24px, 4vw, 42px);
 }
 
-.stripe-buy-button-shell stripe-buy-button {
+.stripe-buy-button-wrap stripe-buy-button {
   display: block;
-  width: 100%;
-  max-width: 100%;
+  width: min(100%, 360px);
+  max-width: 360px;
 }
 
 .ticket-addons {

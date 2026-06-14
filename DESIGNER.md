@@ -178,6 +178,8 @@
 
 ## Changelog
 
+- 2026-06-14: Refined only the Ticket page Stripe payment alignment. Every Stripe Buy Button now sits in a full-card-width flex wrapper, is centered horizontally, scales up to 360px, retains safe card padding on mobile, and remains bottom-aligned within the existing flex-column ticket and add-on cards. No text, pricing, colors, features, navigation, or page layout changed.
+
 - 2026-06-14: Updated only the Ticket page card content and payment area. The two package cards are now Pre Sale and General Ticket, each retaining its existing price/details/features hierarchy with a responsive Stripe Buy Button anchored at the bottom inside the card. Replaced the three small camping add-on cards with one centered Extra Camping Gears card showing €69 EURO, short supporting copy, and its own contained Stripe Buy Button. The Stripe script loads once at page level; no header, footer, homepage, or unrelated section styling changed.
 
 - 2026-06-14: Updated Force of Conquest card and detail copy to describe an intense, realistic large-scale airsoft combat experience in jungle terrain, replacing the unrelated urban qualifier language without changing layout or styling.
