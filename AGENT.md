@@ -128,6 +128,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Removed `2027` from Pre Sale and eliminated the General Ticket-only Stripe wrapper class so Pre Sale, General Ticket, and Extra Camping Gears now use the exact same shared wrapper markup and centering CSS with no special-case alignment path.
+- Files changed: `src/data/siteContent.ts`, `src/components/StripeBuyButton.tsx`, `src/components/PackageCard.tsx`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: TypeScript, Vite production build, one-time Stripe script check, and browser measurements at mobile/mobile-desktop/desktop widths confirmed all three shared wrappers have zero center offset and remain contained without overflow.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Fixed the visible Pre Sale and Extra Camping Gears Stripe button offset caused by expanding the Stripe custom-element host to 560px. Restored a responsive 360px host cap at all breakpoints so Stripe's internally rendered simple green button cannot sit left-aligned inside an oversized invisible iframe.
 - Files changed: `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
 - Verification: TypeScript, Vite production build, one-time Stripe script check, browser geometry, and visual screenshots at desktop/mobile widths confirmed Pre Sale, General Ticket, and Extra Camping Gears controls are centered within their cards without overflow.

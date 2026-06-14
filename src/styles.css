@@ -1422,12 +1422,6 @@ select:focus {
   margin-left: auto;
 }
 
-.general-ticket-button-wrap {
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-}
-
 .ticket-addons {
   width: min(1160px, 100%);
   margin: clamp(48px, 7vw, 76px) auto 0;

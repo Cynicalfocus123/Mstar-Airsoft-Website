@@ -3,14 +3,11 @@ import { createElement } from 'react';
 interface StripeBuyButtonProps {
   buyButtonId: string;
   publishableKey: string;
-  className?: string;
 }
 
-export function StripeBuyButton({ buyButtonId, publishableKey, className }: StripeBuyButtonProps) {
-  const wrapperClassName = ['stripe-buy-button-wrap', className].filter(Boolean).join(' ');
-
+export function StripeBuyButton({ buyButtonId, publishableKey }: StripeBuyButtonProps) {
   return (
-    <div className={wrapperClassName}>
+    <div className="stripe-buy-button-wrap">
       {createElement('stripe-buy-button', {
         'buy-button-id': buyButtonId,
         'publishable-key': publishableKey,
