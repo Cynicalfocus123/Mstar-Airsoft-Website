@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import type { EventCard } from '../types/siteContent';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
 
@@ -7,10 +6,6 @@ interface EventsPageProps {
 }
 
 export function EventsPage({ events }: EventsPageProps) {
-  const [visibleCount, setVisibleCount] = useState(3);
-  const visibleEvents = events.slice(0, visibleCount);
-  const hasMore = visibleCount < events.length;
-
   return (
     <main className="page-shell">
       <section className="page-hero">
@@ -19,7 +14,7 @@ export function EventsPage({ events }: EventsPageProps) {
         <p>Browse Mstar Airsoft tournaments, qualifiers, night games, and championship events.</p>
       </section>
       <section className="event-banner-list" aria-label="All events">
-        {visibleEvents.map((event) => (
+        {events.map((event) => (
           <a className="event-banner-card" key={event.id} href={`#/events/${event.id}`} aria-label={`Open ${event.title}`}>
             <div className="event-card-image">
               <img src={getPublicAssetPath(event.imagePath)} alt="" loading="lazy" />
@@ -27,7 +22,7 @@ export function EventsPage({ events }: EventsPageProps) {
             </div>
             <div className="event-banner-content">
               <h2>{event.title}</h2>
-              <p>{event.summary}</p>
+              {event.summary && <p>{event.summary}</p>}
               <dl>
                 <div>
                   <dt>Date</dt>
@@ -50,11 +45,6 @@ export function EventsPage({ events }: EventsPageProps) {
           </a>
         ))}
       </section>
-      {hasMore && (
-        <button className="btn btn-gold load-more" type="button" onClick={() => setVisibleCount((count) => count + 3)}>
-          Load More
-        </button>
-      )}
     </main>
   );
 }
