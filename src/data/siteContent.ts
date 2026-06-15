@@ -61,7 +61,7 @@ export const siteContent: SiteContent = {
     ],
   },
   about: {
-    eyebrow: 'Built For Teams',
+    eyebrow: '',
     title: 'Experience the Largest Airsoft Festival in Southeast Asia — where adrenaline, entertainment, and adventure come together day and night.',
     body:
       'The Mstar Airsoft Tournament delivers an immersive battlefield experience set in Thailand’s stunning tropical rainforest, complete with natural creeks and realistic combat environments that replicate real tactical scenarios. Beyond the battlefield, guests can enjoy the vibrant atmosphere of an international music festival featuring global food vendors, carnival attractions, live entertainment, and adventure activities for all ages. Step into a world of nonstop excitement, competition, and unforgettable experiences surrounded by the breathtaking beauty of Thailand.',
@@ -74,7 +74,7 @@ export const siteContent: SiteContent = {
     mobileBackgroundImagePath: '/images/about-background.webp',
   },
   packageOffer: {
-    eyebrow: 'Stay and Play',
+    eyebrow: '',
     title: 'Package Offer',
     offers: [
       {
@@ -189,7 +189,7 @@ export const siteContent: SiteContent = {
     { id: 'message', label: 'Message', type: 'textarea', placeholder: 'Event, roster, or special notes', required: false },
   ],
   gameTerrain: {
-    eyebrow: 'Game Terrain',
+    eyebrow: '',
     title: 'Game Terrain',
     description: 'Explore the battlefield. Real locations, immersive environments, built for tactical gameplay.',
     items: [

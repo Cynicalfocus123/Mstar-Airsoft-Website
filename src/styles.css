@@ -357,6 +357,19 @@ textarea {
   text-wrap: balance;
 }
 
+@media (min-width: 901px) {
+  .about-section .section-heading {
+    max-width: 620px;
+  }
+
+  .about-section .section-heading h2 {
+    max-width: 19ch;
+    font-size: clamp(2rem, 3vw, 2.65rem);
+    line-height: 1.02;
+    text-wrap: wrap;
+  }
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);

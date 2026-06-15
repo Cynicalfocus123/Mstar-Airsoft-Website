@@ -178,6 +178,8 @@
 
 ## Changelog
 
+- 2026-06-15: Removed the homepage eyebrow labels above About, Package Offer, and Game Terrain. On desktop only, constrained the About headline to a narrower left-aligned text column with tighter controlled sizing so the long festival message wraps in a compact horizontal block like the supplied mobile-desktop reference; existing tablet/mobile typography remains unchanged.
+
 - 2026-06-15: Removed the word `ZIP-LINE` from the homepage About activity highlight and updated both TBA Events cards to display a `$160.00 USD` entry fee. No event-card styling, layout, or unrelated guide content changed.
 
 - 2026-06-15: Updated only the Ticket page price labels to euro formatting: Pre Sale now displays `€120.00 EURO` and General Ticket displays `€160.00 EURO`. No other card copy, payment control, or styling changed.

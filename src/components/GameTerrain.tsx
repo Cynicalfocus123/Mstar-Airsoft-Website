@@ -11,7 +11,7 @@ export function GameTerrain({ content }: GameTerrainProps) {
       <div className="game-terrain-inner">
         <header className="game-terrain-heading">
           <div>
-            <p className="eyebrow">{content.eyebrow}</p>
+            {content.eyebrow ? <p className="eyebrow">{content.eyebrow}</p> : null}
             <h2>{content.title}</h2>
           </div>
           <p>{content.description}</p>

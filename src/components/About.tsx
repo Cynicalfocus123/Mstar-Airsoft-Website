@@ -22,7 +22,7 @@ export function About({ content }: AboutProps) {
     >
       <div className="about-section-inner">
         <div className="section-heading">
-          <p className="eyebrow">{content.eyebrow}</p>
+          {content.eyebrow ? <p className="eyebrow">{content.eyebrow}</p> : null}
           <h2>{content.title}</h2>
         </div>
         <div className="about-grid">

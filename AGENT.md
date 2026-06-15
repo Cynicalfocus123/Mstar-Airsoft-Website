@@ -128,6 +128,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Removed the homepage eyebrow labels `Built For Teams`, `Stay and Play`, and the small green `Game Terrain` label. Added conditional eyebrow rendering and changed only the desktop About headline to a narrower 19-character text column with controlled sizing so it wraps like the mobile-desktop reference; tablet/mobile rules remain unchanged.
+- Files changed: `src/data/siteContent.ts`, `src/components/About.tsx`, `src/components/PackageOffer.tsx`, `src/components/GameTerrain.tsx`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: TypeScript, Vite production build, desktop/mobile browser checks, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Removed `ZIP-LINE` from the homepage About highlight so it now reads `ATV RIDE, JUNGLE TOUR`, and changed both TBA event-card entry fees from `$120.00 USD` to `$160.00 USD`.
 - Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
 - Scope: The first Force of Conquest event, guide-page Zipline copy, Ticket page pricing, and all layouts remain unchanged.

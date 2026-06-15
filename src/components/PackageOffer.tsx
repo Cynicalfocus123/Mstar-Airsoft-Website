@@ -9,7 +9,7 @@ export function PackageOffer({ content }: PackageOfferProps) {
   return (
     <section className="section section-anchor section-rib package-offer-section" id="package-offer">
       <div className="section-heading package-offer-heading">
-        <p className="eyebrow">{content.eyebrow}</p>
+        {content.eyebrow ? <p className="eyebrow">{content.eyebrow}</p> : null}
         <h2>{content.title}</h2>
       </div>
       <div className="package-offer-grid">
