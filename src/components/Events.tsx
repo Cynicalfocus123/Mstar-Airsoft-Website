@@ -19,29 +19,41 @@ export function Events({ events, viewAllHref }: EventsProps) {
         </a>
       </div>
       <div className="card-grid">
-        {events.map((event) => (
-          <a className="event-card" key={event.id} href={event.href ?? `/events/${event.id}`}>
-            <div className="card-topline">
-              <span>{event.date}</span>
-              <strong>{event.status}</strong>
-            </div>
-            <h3>{event.title}</h3>
-            <dl>
-              <div>
-                <dt>Location</dt>
-                <dd>{event.location}</dd>
+        {events.map((event) => {
+          const cardBody = (
+            <>
+              <div className="card-topline">
+                <span>{event.date}</span>
+                <strong>{event.status}</strong>
               </div>
-              <div>
-                <dt>Entry fee</dt>
-                <dd>{event.entryFee}</dd>
-              </div>
-              <div>
-                <dt>Attendance</dt>
-                <dd>{event.attendance}</dd>
-              </div>
-            </dl>
-          </a>
-        ))}
+              <h3>{event.title}</h3>
+              <dl>
+                <div>
+                  <dt>Location</dt>
+                  <dd>{event.location}</dd>
+                </div>
+                <div>
+                  <dt>Entry fee</dt>
+                  <dd>{event.entryFee}</dd>
+                </div>
+                <div>
+                  <dt>Attendance</dt>
+                  <dd>{event.attendance}</dd>
+                </div>
+              </dl>
+            </>
+          );
+
+          return event.href ? (
+            <a className="event-card" key={event.id} href={event.href}>
+              {cardBody}
+            </a>
+          ) : (
+            <article className="event-card event-card-static" key={event.id}>
+              {cardBody}
+            </article>
+          );
+        })}
       </div>
     </section>
   );

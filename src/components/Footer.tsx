@@ -22,7 +22,15 @@ export function Footer({ identity, sections }: FooterProps) {
             <p className="footer-heading">{section.title}</p>
             <div className="footer-links">
               {section.links.map((link) => (
-                <a href={getSafeInternalPath(link.href)} key={link.href}>
+                <a
+                  href={getSafeInternalPath(link.href)}
+                  key={link.href}
+                  onClick={(event) => {
+                    if (link.label.toLowerCase() === 'gallery' || link.href === '/gallery') {
+                      event.preventDefault();
+                    }
+                  }}
+                >
                   {link.label}
                 </a>
               ))}

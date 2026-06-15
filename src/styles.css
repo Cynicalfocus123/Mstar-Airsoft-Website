@@ -1864,13 +1864,16 @@ select:focus {
 
 .activity-section-heading {
   display: grid;
-  width: fit-content;
-  max-width: min(100%, 780px);
+  justify-items: center;
+  width: min(100%, 820px);
   gap: 0.02em;
+  text-align: center;
 }
 
 .activity-section-heading span {
   display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .activity-section-heading-amp {

@@ -232,6 +232,17 @@ When the user asks for a future deployment ZIP, report:
 
 ## Current Task Log
 
+- 2026-06-15: Fixed navigation dead links and page text cleanup for the live site. Files changed: `src/components/Footer.tsx`, `src/components/Events.tsx`, `src/components/EventsPage.tsx`, `src/components/InfoPage.tsx`, `src/data/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Footer Gallery link remains visually present but now prevents default click behavior, so it does not navigate to `/gallery`, reload, or open a 403. Header Gallery link behavior was confirmed still guarded the same way and safely does nothing on click.
+- Activity heading alignment was refined across desktop, tablet, and mobile by centering the three-line `ACTIVITIES / & / ENTERTAINMENT EXPERIENCE` block with responsive width and safe overflow handling.
+- Rules & Regulation intro description text `Official gameplay, safety, chronograph, and conduct requirements for MSTAR Airsoft - Force of Conquest.` was removed while keeping the page title and content below.
+- Complaints page Contact Information now includes a clickable `support@mstarairsoft.com` mailto link. No backend form was added.
+- Homepage TBA event boxes and Events page TBA event boxes now render as non-navigating static cards, while the Force of Conquest ticket card keeps its `/ticket` link. Event text, Ticket page/payment behavior, Stripe buttons, Game Terrain, language video cards, DNS/SSL/cPanel setup, and unrelated header/footer links were not changed.
+- Vite/cPanel base path confirmed as `base: '/'`. Built `dist/index.html` was checked to confirm `/assets/` references are present and `/Mstar-Airsoft-Website/` is absent.
+- Verification commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`. All passed.
+- Deployment artifact: created `mstarairsoft-cpanel-live-fix.zip` for manual cPanel upload with root-level `index.html`, `assets/`, `.htaccess`, and required static folders. No automatic cPanel upload or deployment was performed.
+- Next steps: Manually upload `mstarairsoft-cpanel-live-fix.zip` to `/mstarairsoft.com`, extract there, overwrite existing files, then delete the ZIP.
+
 - 2026-06-15: Refined live site guide pages, header navigation, footer navigation, and cPanel deployment build for manual live deployment. Files changed: `src/App.tsx`, `src/components/Header.tsx`, `src/components/InfoPage.tsx`, `src/data/siteContent.ts`, `src/styles.css`, `src/types/siteContent.ts`, `public/images/activities/atv-ride-live.png`, `AGENT.md`, and `DESIGNER.md`.
 - Activity page: removed the top intro/header block containing `Activities`, `&`, `Entertainment Experience`, and its description so the remaining content starts higher. The remaining `Activities & Entertainment Experience` section heading uses a responsive stacked treatment with the `&` centered across desktop, tablet, and mobile. Replaced the ATV Ride image reference with the exact uploaded `ATV ride.png`, copied to `public/images/activities/atv-ride-live.png` with a matching SHA-256 hash.
 - Guide/info intro cleanup: removed the top intro/header blocks from How to Get to the Event, Immigration Visa, and Equipment while preserving the useful content sections below and bringing content upward.

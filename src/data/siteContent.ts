@@ -506,7 +506,7 @@ export const siteContent: SiteContent = {
       slug: 'rules-and-regulation',
       eyebrow: 'Event Guide',
       title: 'Rules & Regulation',
-      description: 'Official gameplay, safety, chronograph, and conduct requirements for MSTAR Airsoft - Force of Conquest.',
+      description: '',
       sections: [
         {
           id: 'rules-overview',
@@ -1482,6 +1482,9 @@ export const siteContent: SiteContent = {
             'Mstar (Asia) Co., Ltd.',
             'Official Event: MSTAR Airsoft (Force of Conquest)',
             'For complaint support, please contact the official MSTAR support team through the event website or authorized communication channels.',
+          ],
+          links: [
+            { label: 'support@mstarairsoft.com', href: 'mailto:support@mstarairsoft.com' },
           ],
         },
       ],

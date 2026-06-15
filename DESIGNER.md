@@ -284,6 +284,12 @@ When the user asks for a future deployment ZIP, report:
 
 ## Changelog
 
+- 2026-06-15: Footer Gallery remains visually present in the Site Links column but no longer navigates to `/gallery` or a broken/403 page. Header Gallery keeps the same safe non-navigating behavior. Both desktop and mobile navigation keep their existing visual styling.
+
+- 2026-06-15: Activity heading alignment now follows the intended three-line structure: `ACTIVITIES` / `&` / `ENTERTAINMENT EXPERIENCE`, with the ampersand visually centered and responsive across desktop, tablet, and mobile without overflow.
+
+- 2026-06-15: Rules & Regulation no longer shows the removed intro description, while its title and useful rules content remain. Complaints Contact Information now includes a clickable `support@mstarairsoft.com` email link. Event cards remain visually unchanged, but TBA event cards are non-navigating for now on both the homepage and Events page. Live cPanel builds continue to use root `/assets/` paths.
+
 - 2026-06-15: Refined the live guide/navigation update for desktop, tablet, and mobile. Activity now starts directly with its content after the intro/header removal, keeps the remaining `Activities & Entertainment Experience` section heading responsive with the `&` visually centered, and uses the exact uploaded ATV Ride image asset. How to Get to the Event, Immigration Visa, and Equipment no longer show unnecessary intro/header description blocks.
 
 - 2026-06-15: Accommodation & Campground content now sits directly on the main dark page background instead of boxed panels. Its `Accommodation & Campground Experience` heading has been reduced to a better aligned H2-like scale while preserving the premium tactical typography and readable long-form spacing.

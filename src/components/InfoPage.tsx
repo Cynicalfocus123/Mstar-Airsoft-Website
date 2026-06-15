@@ -56,7 +56,7 @@ export function InfoPage({ content }: InfoPageProps) {
         >
           <p className="eyebrow">{content.eyebrow}</p>
           <h1>{content.title}</h1>
-          <p>{content.description}</p>
+          {content.description && <p>{content.description}</p>}
         </section>
       )}
       {content.cards && (
