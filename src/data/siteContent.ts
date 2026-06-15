@@ -84,8 +84,6 @@ export const siteContent: SiteContent = {
         perks: [
           'Live Music',
           'Food Court',
-          '2 Person Tent',
-          'Camping Equipment',
         ],
       },
       {
@@ -95,8 +93,6 @@ export const siteContent: SiteContent = {
         perks: [
           'Live Music',
           'Food Court',
-          '2 Person Tent',
-          'Camping Equipment',
         ],
       },
     ],
@@ -110,7 +106,7 @@ export const siteContent: SiteContent = {
         label: 'Pre Sale',
         price: '€120.00 EURO',
         details: ['3 Days / 2 Nights'],
-        perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
+        perks: ['Live Music', 'Food Court'],
         stripeBuyButtonId: 'buy_btn_1TiFmd5Kev5Ia2Rir5v4MnHw',
         stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },
@@ -118,7 +114,7 @@ export const siteContent: SiteContent = {
         label: 'General Ticket',
         price: '€160.00 EURO',
         details: ['3 Days / 2 Nights'],
-        perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
+        perks: ['Live Music', 'Food Court'],
         stripeBuyButtonId: 'buy_btn_1TiGSe5Kev5Ia2RiIXVYRKHY',
         stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },
