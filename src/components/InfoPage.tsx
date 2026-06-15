@@ -63,7 +63,10 @@ export function InfoPage({ content }: InfoPageProps) {
         </section>
       )}
       {content.sections && (
-        <section className="policy-layout" aria-label={content.title}>
+        <section
+          className={`policy-layout ${content.slug === 'rules-and-regulation' ? 'policy-layout-rules' : ''}`}
+          aria-label={content.title}
+        >
           {content.sections.map((section) => (
             <article className="policy-section" key={section.id}>
               <h2>{section.title}</h2>

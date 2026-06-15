@@ -15,7 +15,12 @@ export function EventsPage({ events }: EventsPageProps) {
       </section>
       <section className="event-banner-list" aria-label="All events">
         {events.map((event) => (
-          <a className="event-banner-card" key={event.id} href={`#/events/${event.id}`} aria-label={`Open ${event.title}`}>
+          <a
+            className={`event-banner-card ${event.id === 'urban-rush' ? 'event-banner-card-force-of-conquest' : ''}`}
+            key={event.id}
+            href={event.href ?? `#/events/${event.id}`}
+            aria-label={event.href === '#/ticket' ? `Get tickets for ${event.title}` : `Open ${event.title}`}
+          >
             <div className="event-card-image">
               <img src={getPublicAssetPath(event.imagePath)} alt="" loading="lazy" />
               <strong>{event.status}</strong>

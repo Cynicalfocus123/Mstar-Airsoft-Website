@@ -1639,9 +1639,23 @@ select:focus {
   transition: transform 600ms ease, filter 600ms ease;
 }
 
+.event-banner-card-force-of-conquest .event-card-image {
+  aspect-ratio: 1793 / 798;
+  background: #050505;
+}
+
+.event-banner-card-force-of-conquest .event-card-image img {
+  object-fit: contain;
+}
+
 .event-banner-card:hover .event-card-image img {
   filter: contrast(1.14) saturate(1.18);
   transform: scale(1.06);
+}
+
+.event-banner-card-force-of-conquest:hover .event-card-image img {
+  filter: none;
+  transform: none;
 }
 
 .event-card-image::after {
@@ -1649,6 +1663,10 @@ select:focus {
   inset: 0;
   content: "";
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.68));
+}
+
+.event-banner-card-force-of-conquest .event-card-image::after {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.16));
 }
 
 .event-card-image strong {
@@ -1732,6 +1750,33 @@ select:focus {
   border: 1px solid rgba(240, 185, 11, 0.24);
   background: linear-gradient(180deg, rgba(22, 22, 22, 0.97), rgba(8, 8, 8, 0.97));
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+}
+
+.policy-layout-rules {
+  gap: clamp(28px, 5vw, 48px);
+  width: min(900px, 100%);
+}
+
+.policy-layout-rules .policy-section {
+  gap: 16px;
+  padding: 0 0 clamp(28px, 5vw, 44px);
+  border: 0;
+  border-bottom: 1px solid rgba(240, 185, 11, 0.2);
+  background: transparent;
+  box-shadow: none;
+}
+
+.policy-layout-rules .policy-section:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.policy-layout-rules .policy-section h2 {
+  font-size: clamp(1.3rem, 2.6vw, 2rem);
+}
+
+.policy-layout-rules .policy-bullet-list {
+  gap: 14px;
 }
 
 .policy-section h2 {
@@ -2458,6 +2503,10 @@ select:focus {
     aspect-ratio: 16 / 8.5;
   }
 
+  .event-banner-card-force-of-conquest .event-card-image {
+    aspect-ratio: 1793 / 798;
+  }
+
   .page-hero-centered .eyebrow,
   .page-hero-centered h1,
   .page-hero-centered p {
@@ -2500,6 +2549,10 @@ select:focus {
 
   .policy-section {
     padding: 18px;
+  }
+
+  .policy-layout-rules .policy-section {
+    padding: 0 0 28px;
   }
 
   .event-detail-main h1 {

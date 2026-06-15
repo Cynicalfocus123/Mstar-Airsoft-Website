@@ -102,8 +102,9 @@ export const siteContent: SiteContent = {
   events: [
     {
       id: 'urban-rush',
+      href: '#/ticket',
       title: 'Force of Conquest',
-      date: 'Jan 8-10, 2027',
+      date: 'Jan 8–10, 2027',
       time: '09:00 AM - 05:30 PM',
       location: 'Mstar Jungle Land',
       entryFee: '€160.00 EURO',
@@ -113,7 +114,7 @@ export const siteContent: SiteContent = {
       summary: 'An intense, realistic large-scale airsoft combat experience set deep in the jungle.',
       overview:
         'Force of Conquest delivers immersive large-scale jungle warfare with natural cover, demanding terrain, coordinated objectives, and realistic airsoft combat built for organized squads.',
-      imagePath: '/banners/event-urban.svg',
+      imagePath: '/images/events/force-of-conquest-card.png',
     },
     {
       id: 'night-grid',

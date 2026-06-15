@@ -20,7 +20,7 @@ export function Events({ events, viewAllHref }: EventsProps) {
       </div>
       <div className="card-grid">
         {events.map((event) => (
-          <a className="event-card" key={event.id} href={`#/events/${event.id}`}>
+          <a className="event-card" key={event.id} href={event.href ?? `#/events/${event.id}`}>
             <div className="card-topline">
               <span>{event.date}</span>
               <strong>{event.status}</strong>

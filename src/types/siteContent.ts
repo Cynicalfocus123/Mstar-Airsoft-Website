@@ -85,6 +85,7 @@ export interface TicketPageContent {
 
 export interface EventCard {
   id: string;
+  href?: string;
   title: string;
   date: string;
   time: string;

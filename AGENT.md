@@ -132,6 +132,13 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Updated the Force of Conquest event record with a data-driven `#/ticket` destination so the whole card routes directly to the Ticket page on both the Events page and homepage Game Schedules. Other event cards retain their existing event-detail routes, with no nested links or external redirects.
+- Official event image: Copied the supplied unchanged `site content/Screenshot_1.png` artwork to `public/images/events/force-of-conquest-card.png` and updated the first event image path. The Events page uses the existing deployment-safe asset helper, the image's native `1793 / 798` ratio, `object-fit: contain`, a dark background, a reduced overlay, and no hover zoom so the MSTAR logo, Force of Conquest title, January 8-10, 2027 date, and Thailand text remain readable across desktop, tablet, and mobile.
+- Rules & Regulation: Added a slug-specific `policy-layout-rules` treatment that removes panel borders, filled backgrounds, box shadows, and boxed padding from the main rules sections only. Rules text now sits directly on the tactical page background with a comfortable 900px reading width, normal section spacing, subtle gold dividers, readable typography/lists, and inherited mobile-safe page padding. Other guide/legal pages keep their existing panel layouts.
+- Files changed: `src/types/siteContent.ts`, `src/data/siteContent.ts`, `src/components/EventsPage.tsx`, `src/components/Events.tsx`, `src/components/InfoPage.tsx`, `src/styles.css`, `public/images/events/force-of-conquest-card.png`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Removed the homepage Package Offer section completely, including its `App.tsx` render, standalone component, typed homepage data contract, content block, and section-only CSS. The homepage now flows directly from About into Events with no empty section gap.
 - Homepage hero CTA: Changed `Sign Up Now` to `Get Ticket Now` and changed its existing hash route from `#/signup` to `#/ticket`; the centered responsive splash-button treatment is unchanged.
 - Ticket page: Retained one centered Early Bird card with `€120.00 EURO`, `(Original Price €160.00 EURO)`, `Expire November 20, 2026`, and `3 Days / 2 Nights`. Reduced feature rows to `Live Music` and `Food Court` only; removed `2 Person Tent` and `Camping Equipment` from remaining ticket data.
