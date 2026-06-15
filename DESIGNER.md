@@ -178,6 +178,8 @@
 
 ## Changelog
 
+- 2026-06-15: Updated all three Events page cards to display `€160.00 EURO` instead of `$160.00 USD`, without changing event-card layout, hierarchy, or any unrelated pricing surfaces.
+
 - 2026-06-15: Simplified the feature lists on the homepage $120/$160 Package Offer cards and Ticket page €120/€160 cards by removing `2 Person Tent` and `Camping Equipment`. Both card groups now show only `Live Music` and `Food Court`, without changing card styling or the separate camping add-on.
 
 - 2026-06-15: Removed the homepage eyebrow labels above About, Package Offer, and Game Terrain. On desktop only, constrained the About headline to a narrower left-aligned text column with tighter controlled sizing so the long festival message wraps in a compact horizontal block like the supplied mobile-desktop reference; existing tablet/mobile typography remains unchanged.

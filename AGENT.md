@@ -128,6 +128,11 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Changed all three Events page entry-fee values from `$160.00 USD` to `€160.00 EURO`. Event titles, dates, locations, attendance, Ticket page prices, and homepage packages remain unchanged.
+- Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: TypeScript, Vite production build, exact three-event euro-value check, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Removed `2 Person Tent` and `Camping Equipment` from both homepage Package Offer cards ($120/$160) and both Ticket page cards (€120/€160). `Live Music` and `Food Court` remain; the separate Extra Camping Gears add-on is unchanged.
 - Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
 - Verification: TypeScript, Vite production build, homepage/Ticket targeted content checks, and `git diff --check` passed.
