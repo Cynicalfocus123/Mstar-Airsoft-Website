@@ -134,7 +134,8 @@
 
 ## Deployment Design Rules
 
-- GitHub Pages path must use Vite base `/Mstar-Airsoft-Website/`.
+- Standard production builds now use Vite base `/` for the live cPanel root domain.
+- Do not allow cPanel redeploy builds to reference `/Mstar-Airsoft-Website/` asset paths.
 - cPanel/TMDHosting builds use `npm run build:cpanel` with root-safe `/assets/`, `/images/`, and `/videos/` paths for `https://mstarairsoft.com`.
 - cPanel deployment includes `.htaccess` SPA fallback and security headers/CSP without changing the visible design. Native HTML5 splash/Game Terrain videos remain local or restricted to the two approved R2 hosts, and iframe usage remains limited to the approved Thai/English YouTube cards plus Stripe's payment component.
 - Deploy only `dist` contents; do not package source, project memory, credentials, local editing projects, dependencies, or source maps.
@@ -280,6 +281,8 @@ When the user asks for a future deployment ZIP, report:
 - Do not make registration look connected to backend before backend exists.
 
 ## Changelog
+
+- 2026-06-15: Updated the production build base for cPanel redeploys so generated `index.html` points to root-domain `/assets/...` files instead of the old GitHub Pages `/Mstar-Airsoft-Website/assets/...` path. The redeploy export keeps the existing live `.htaccess` behavior, includes only deployment-ready built files and required public asset folders, and does not change DNS, SSL, hosting, document root, routes, content, Stripe, or header/footer design.
 
 - 2026-06-15: Legal, support, and guide long-form pages now use the main dark tactical page background directly instead of boxed text panels. Terms & Conditions, Privacy, Complaints, Ship Your Equipment/Equipment, How to Get to the Event, Immigration Visa, Activity, and Contact keep a readable max-width, comfortable line-height, strong white headings, muted body text, clean aligned lists, and safe desktop/tablet/mobile padding without heavy borders or card containers.
 
