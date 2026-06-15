@@ -14,7 +14,9 @@ import { EventDetailPage } from './components/EventDetailPage';
 import { EventCheckoutPage } from './components/EventCheckoutPage';
 import { InfoPage } from './components/InfoPage';
 import { TicketPage } from './components/TicketPage';
+import { SeoHead } from './components/SeoHead';
 import { siteContent } from './data/siteContent';
+import { getSeoForPath } from './data/seoContent';
 import { getSafeInternalPath } from './utils/safeUrl';
 
 function getRoute() {
@@ -29,7 +31,12 @@ function getRoute() {
   if (path === '/account') return { name: 'account' };
   if (path !== '/') {
     const section = path.slice(1) || 'home';
-    const slug = section.split('/')[0];
+    const routeSlug = section.split('/')[0];
+    const slugAliases: Record<string, string> = {
+      'ship-your-equipment': 'equipment',
+      accommodation: 'accommodation-and-campground',
+    };
+    const slug = slugAliases[routeSlug] ?? routeSlug;
 
     if (siteContent.infoPages.some((page) => page.slug === slug)) return { name: 'info', slug };
 
@@ -96,6 +103,7 @@ export default function App() {
   const selectedInfoPage = route.name === 'info'
     ? siteContent.infoPages.find((page) => page.slug === route.slug)
     : undefined;
+  const seo = getSeoForPath(window.location.pathname);
 
   useEffect(() => {
     if (route.name === 'home' && route.section && route.section !== 'home') {
@@ -118,6 +126,7 @@ export default function App() {
         onHomeClick={goHomeTop}
         onLogout={logout}
       />
+      <SeoHead seo={seo} />
       {isHome && (
         <main>
           <BannerSlider slides={siteContent.heroSlides} />

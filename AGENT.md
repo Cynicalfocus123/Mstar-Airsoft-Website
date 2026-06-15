@@ -550,6 +550,7 @@ When the user asks for a future deployment ZIP, report:
 
 ## Changelog
 
+- 2026-06-15: Added static SEO and Google snippet readiness for the live cPanel domain with typed SEO data, route-aware head metadata, JSON-LD structured data, `sitemap.xml`, and `robots.txt`. No backend was added, no DNS/SSL/cPanel hosting setup was changed, no HSTS was added, no cPanel deployment ZIP was created, and visible design/routes/buttons/Stripe behavior remain unchanged.
 - 2026-05-17: Created first full frontend version with data-driven architecture, tactical visual direction, replaceable logo path, README, and project memory files.
 - 2026-05-17: Fixed TypeScript build readiness by adding React DOM types and Vite env declarations after initial build check.
 - 2026-05-17: Added repository ignore rules for node modules, build output, dev logs, env files, tsbuildinfo, and original loose logo file.

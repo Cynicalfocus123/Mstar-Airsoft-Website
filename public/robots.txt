@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /signin
+Disallow: /signup
+Disallow: /account
+Disallow: /checkout
+Disallow: /event-checkout
+
+Sitemap: https://mstarairsoft.com/sitemap.xml

@@ -370,6 +370,8 @@ When the user asks for a future deployment ZIP, report:
 
 - 2026-06-13: Updated the homepage Package Offer section to use two balanced tactical cards: Early Bird at $120 ending November 20, 2026, and Regular Package at $160 for 3 Days / 2 Nights. Both retain the same four feature rows, display side by side on desktop, stack on tablet/mobile, and use responsive title/card sizing to prevent cropping or overflow. Replaced the separate homepage YouTube player with embed `VYv1pw_dM1Y` while preserving its existing frame styling.
 
+- 2026-06-15: Added static SEO, route-aware metadata, JSON-LD structured data, `sitemap.xml`, and `robots.txt` for the live cPanel domain. This was a non-visual SEO update only: no backend was added, no DNS/SSL/cPanel hosting setup was changed, no deployment ZIP was created, and no design, layout, navigation, Stripe, video, or image presentation was changed.
+
 - 2026-05-17: Established tactical visual system, responsive rules, logo/header/footer constraints, lightweight image strategy, and backend-ready design rules for initial site build.
 - 2026-05-17: Confirmed build-readiness work did not change visual rules; kept logo and gallery asset paths compatible with Vite.
 - 2026-05-17: Kept generated artifacts out of source control so deployed design stays lightweight and maintainable.
