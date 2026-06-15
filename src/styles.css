@@ -1752,12 +1752,14 @@ select:focus {
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
 }
 
-.policy-layout-rules {
+.policy-layout-rules,
+.policy-layout-plain {
   gap: clamp(28px, 5vw, 48px);
   width: min(900px, 100%);
 }
 
-.policy-layout-rules .policy-section {
+.policy-layout-rules .policy-section,
+.policy-layout-plain .policy-section {
   gap: 16px;
   padding: 0 0 clamp(28px, 5vw, 44px);
   border: 0;
@@ -1766,16 +1768,19 @@ select:focus {
   box-shadow: none;
 }
 
-.policy-layout-rules .policy-section:last-child {
+.policy-layout-rules .policy-section:last-child,
+.policy-layout-plain .policy-section:last-child {
   padding-bottom: 0;
   border-bottom: 0;
 }
 
-.policy-layout-rules .policy-section h2 {
+.policy-layout-rules .policy-section h2,
+.policy-layout-plain .policy-section h2 {
   font-size: clamp(1.3rem, 2.6vw, 2rem);
 }
 
-.policy-layout-rules .policy-bullet-list {
+.policy-layout-rules .policy-bullet-list,
+.policy-layout-plain .policy-bullet-list {
   gap: 14px;
 }
 
@@ -1805,6 +1810,52 @@ select:focus {
 
 .policy-bullet-list li {
   line-height: 1.65;
+}
+
+.policy-link-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.policy-link-list a {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  align-items: center;
+  color: var(--gold);
+  font-weight: 900;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.policy-link-list a:hover {
+  color: var(--white);
+}
+
+.policy-layout-contact {
+  width: min(780px, 100%);
+}
+
+.page-hero-legal h1.activity-page-heading {
+  display: grid;
+  width: fit-content;
+  max-width: min(100%, 960px);
+  gap: 0.02em;
+}
+
+.page-hero-legal h1.activity-page-heading span {
+  display: block;
+}
+
+.page-hero-legal h1 .activity-page-heading-amp {
+  justify-self: center;
+  line-height: 0.82;
 }
 
 .policy-image-grid {
@@ -2551,7 +2602,8 @@ select:focus {
     padding: 18px;
   }
 
-  .policy-layout-rules .policy-section {
+  .policy-layout-rules .policy-section,
+  .policy-layout-plain .policy-section {
     padding: 0 0 28px;
   }
 

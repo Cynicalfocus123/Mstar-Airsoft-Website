@@ -1,4 +1,4 @@
-const internalHashPattern = /^#\/[a-z0-9][a-z0-9-]*(?:\/[a-z0-9][a-z0-9-]*)?(?:#[a-z0-9][a-z0-9-]*)?$/i;
+const internalPathPattern = /^\/(?:[a-z0-9][a-z0-9-]*(?:\/[a-z0-9][a-z0-9-]*)?)?$/i;
 const localAssetPattern = /^\/(?:[a-z0-9._-]+\/)*[a-z0-9._-]+$/i;
 const youtubeEmbedHosts = new Set(['www.youtube.com', 'www.youtube-nocookie.com']);
 const approvedVideoHosts = new Set([
@@ -6,8 +6,12 @@ const approvedVideoHosts = new Set([
   'pub-f6fca3f41b8943aaac45cf128d4740d7.r2.dev',
 ]);
 
-export function getSafeInternalHash(value: string, fallback = '#/home') {
-  return internalHashPattern.test(value) ? value : fallback;
+export function getSafeInternalPath(value: string, fallback = '/') {
+  return internalPathPattern.test(value) ? value : fallback;
+}
+
+export function getSafeMailtoHref(value: string) {
+  return /^mailto:[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(value) ? value : undefined;
 }
 
 export function getSafeLocalAssetPath(value?: string) {

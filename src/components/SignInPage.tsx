@@ -35,7 +35,7 @@ export function SignInPage({ content, onSuccess }: SignInPageProps) {
             <button className="btn btn-gold" type="submit">
               Sign In
             </button>
-            <a className="forgot-link" href="#/signin">
+            <a className="forgot-link" href="/signin">
               Forgot your password?
             </a>
           </form>
@@ -47,7 +47,7 @@ export function SignInPage({ content, onSuccess }: SignInPageProps) {
               <li key={benefit}>{benefit}</li>
             ))}
           </ul>
-          <a className="btn btn-secondary" href="#/signup">
+          <a className="btn btn-secondary" href="/signup">
             Create Account
           </a>
         </aside>

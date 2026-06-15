@@ -15,28 +15,27 @@ import { EventCheckoutPage } from './components/EventCheckoutPage';
 import { InfoPage } from './components/InfoPage';
 import { TicketPage } from './components/TicketPage';
 import { siteContent } from './data/siteContent';
-import { getSafeInternalHash } from './utils/safeUrl';
+import { getSafeInternalPath } from './utils/safeUrl';
 
 function getRoute() {
-  const hash = window.location.hash;
-  if (hash.startsWith('#/events/')) return { name: 'eventDetail', eventId: hash.replace('#/events/', '') };
-  if (hash.startsWith('#/checkout/')) return { name: 'checkout', eventId: hash.replace('#/checkout/', '') };
-  if (hash.startsWith('#/events')) return { name: 'events' };
-  if (hash.startsWith('#/ticket')) return { name: 'ticket' };
-  if (hash.startsWith('#/signin')) return { name: 'signin' };
-  if (hash.startsWith('#/signup')) return { name: 'signup' };
-  if (hash.startsWith('#/account')) return { name: 'account' };
-  if (hash.startsWith('#/')) {
-    const section = hash.replace('#/', '') || 'home';
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+
+  if (path.startsWith('/events/')) return { name: 'eventDetail', eventId: path.replace('/events/', '') };
+  if (path.startsWith('/checkout/')) return { name: 'checkout', eventId: path.replace('/checkout/', '') };
+  if (path === '/events') return { name: 'events' };
+  if (path === '/ticket') return { name: 'ticket' };
+  if (path === '/signin') return { name: 'signin' };
+  if (path === '/signup') return { name: 'signup' };
+  if (path === '/account') return { name: 'account' };
+  if (path !== '/') {
+    const section = path.slice(1) || 'home';
     const slug = section.split('/')[0];
-    if (siteContent.infoPages.some((page) => page.slug === slug)) {
-      return { name: 'info', slug };
-    }
+
+    if (siteContent.infoPages.some((page) => page.slug === slug)) return { name: 'info', slug };
+
     return { name: 'home', section };
   }
-  if (hash.startsWith('#')) {
-    return { name: 'home', section: hash.replace('#', '') || 'home' };
-  }
+
   return { name: 'home', section: 'home' };
 }
 
@@ -45,13 +44,18 @@ export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(() => localStorage.getItem('mstarAccountStatus') === 'active');
 
   useEffect(() => {
-    function handleHashChange() {
+    function handleRouteChange() {
       setRoute(getRoute());
     }
 
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleRouteChange);
+    return () => window.removeEventListener('popstate', handleRouteChange);
   }, []);
+
+  function navigateTo(path: string) {
+    window.history.pushState(null, '', path);
+    setRoute(getRoute());
+  }
 
   function markSignedIn() {
     localStorage.setItem('mstarAccountStatus', 'active');
@@ -59,9 +63,9 @@ export default function App() {
     const returnTo = sessionStorage.getItem('mstarAuthReturnTo');
     sessionStorage.removeItem('mstarAuthReturnTo');
 
-    const safeReturnTo = returnTo ? getSafeInternalHash(returnTo) : undefined;
-    if (safeReturnTo && !safeReturnTo.startsWith('#/signin') && !safeReturnTo.startsWith('#/signup')) {
-      window.location.hash = safeReturnTo;
+    const safeReturnTo = returnTo ? getSafeInternalPath(returnTo) : undefined;
+    if (safeReturnTo && !safeReturnTo.startsWith('/signin') && !safeReturnTo.startsWith('/signup')) {
+      navigateTo(safeReturnTo);
       return;
     }
 
@@ -69,13 +73,13 @@ export default function App() {
   }
 
   function goHomeTop() {
-    if (window.location.hash === '#/home' || window.location.hash === '#/' || window.location.hash === '') {
+    if (window.location.pathname === '/') {
       setRoute({ name: 'home', section: 'home' });
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
-    window.location.hash = '#/home';
+    navigateTo('/');
     window.setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
   }
 
@@ -120,7 +124,7 @@ export default function App() {
           <BannerSlider slides={siteContent.heroSlides} />
           <Hero content={siteContent.hero} />
           <About content={siteContent.about} />
-          <Events events={siteContent.events.slice(0, 3)} viewAllHref="#/events" />
+          <Events events={siteContent.events.slice(0, 3)} viewAllHref="/events" />
           <GameTerrain content={siteContent.gameTerrain} />
         </main>
       )}

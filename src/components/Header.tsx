@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { NavLink, SiteIdentity } from '../types/siteContent';
-import { getSafeInternalHash } from '../utils/safeUrl';
+import { getSafeInternalPath } from '../utils/safeUrl';
 
 interface HeaderProps {
   identity: SiteIdentity;
@@ -19,7 +19,7 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
     <header className="site-header">
       <a
         className="brand"
-        href="#/home"
+        href="/"
         aria-label={`${identity.name} home`}
         onClick={(event) => {
           event.preventDefault();
@@ -45,11 +45,11 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
         {navLinks.map((link) => (
           <a
             key={link.href}
-            href={getSafeInternalHash(link.href)}
+            href={getSafeInternalPath(link.href)}
             onClick={(event) => {
               setIsOpen(false);
               setIsAccountOpen(false);
-              if (link.href === '#/home') {
+              if (link.href === '/') {
                 event.preventDefault();
                 onHomeClick();
               }
@@ -71,10 +71,10 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
                 My Account
               </button>
               <div className="account-dropdown" role="menu">
-                <a href="#/account" role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
+                <a href="/account" role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
                   Account Settings
                 </a>
-                <a href="#/account#orders" role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
+                <a href="/account" role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
                   Orders
                 </a>
                 <button
@@ -96,11 +96,11 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
               <a
                 className={index === 0 ? 'auth-link auth-link-login' : 'auth-link auth-link-signup'}
                 key={link.href}
-                href={getSafeInternalHash(link.href)}
+                href={getSafeInternalPath(link.href)}
                 onClick={() => {
-                  const currentHash = getSafeInternalHash(window.location.hash || '#/home');
-                  if (!currentHash.startsWith('#/signin') && !currentHash.startsWith('#/signup')) {
-                    sessionStorage.setItem('mstarAuthReturnTo', currentHash);
+                  const currentPath = getSafeInternalPath(window.location.pathname || '/');
+                  if (!currentPath.startsWith('/signin') && !currentPath.startsWith('/signup')) {
+                    sessionStorage.setItem('mstarAuthReturnTo', currentPath);
                   }
                   setIsOpen(false);
                 }}

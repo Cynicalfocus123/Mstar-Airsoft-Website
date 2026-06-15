@@ -164,6 +164,10 @@ export interface InfoSection {
   title: string;
   paragraphs?: string[];
   bullets?: string[];
+  links?: Array<{
+    label: string;
+    href: string;
+  }>;
   images?: Array<{
     src: string;
     alt: string;

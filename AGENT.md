@@ -43,6 +43,106 @@ npm run build
 
 On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `npm.ps1`.
 
+## Live cPanel Deployment Rule Update
+
+- Live domain: `https://mstarairsoft.com`
+- TMDHosting cPanel document root: `/home/mstarhol/mstarairsoft.com`
+- cPanel displays the document root as `/mstarairsoft.com`
+- DNS is already fixed.
+- HTTPS/SSL is already working.
+- cPanel document root is already correct.
+- `.htaccess` routing and HTTPS redirect are already working.
+- Do not redo DNS, SSL, AutoSSL, cPanel domain setup, or hosting setup.
+- Do not deploy anything unless the user specifically asks: `prepare cPanel ZIP` or `make deployment ZIP`.
+- Do not create a deployment ZIP unless the user specifically asks: `prepare cPanel ZIP` or `make deployment ZIP`.
+- Do not add HSTS unless the user specifically asks. SSL was recently fixed, so keep HSTS disabled for now.
+
+### Future CSS/Design Update Workflow
+
+When the user asks for future CSS/design changes:
+
+1. Only edit the requested CSS/layout/design files.
+2. Do not change working routes, page links, buttons, Stripe button, login/signup behavior, or content unless the user specifically requests it.
+3. Keep desktop, tablet, and mobile responsive behavior safe.
+4. After edits, run `npm run build`.
+5. Only when the user asks for a deployment ZIP, create a cPanel-ready ZIP.
+6. The ZIP must extract directly into `/mstarairsoft.com`.
+
+### Future cPanel ZIP Structure
+
+Correct ZIP root structure:
+
+- `index.html`
+- `assets/`
+- `images/`
+- `videos/`
+- `.htaccess`
+
+Wrong ZIP structure:
+
+- `dist/index.html`
+- `dist/assets/`
+- full source project
+- `node_modules/`
+- `.git/`
+- `src/`
+
+Very important: deployment ZIPs must contain the contents of `dist`, not the `dist` folder itself.
+
+Use this production `.htaccess` for future deployment ZIPs unless the user specifically asks to change it:
+
+```apache
+DirectoryIndex index.html
+Options -Indexes -MultiViews
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Force www to non-www root domain
+  RewriteCond %{HTTP_HOST} ^www\.mstarairsoft\.com$ [NC]
+  RewriteRule ^ https://mstarairsoft.com%{REQUEST_URI} [L,R=301]
+
+  # Force HTTP to HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://mstarairsoft.com%{REQUEST_URI} [L,R=301]
+
+  # Allow real files/folders to load normally
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Static app fallback for inner pages
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://js.stripe.com https://checkout.stripe.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; media-src 'self' blob: https:; font-src 'self' data:; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://js.stripe.com; frame-src 'self' https: data: blob:; child-src 'self' https: data: blob:; object-src 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com; frame-ancestors 'self'; upgrade-insecure-requests"
+</IfModule>
+
+<FilesMatch "(\.env|\.log|\.map|\.md|\.ts|\.tsx)$">
+  Require all denied
+</FilesMatch>
+```
+
+When the user asks for a future deployment ZIP, report:
+
+1. Exact ZIP filename.
+2. Confirmation that ZIP root contains `index.html`, `assets/`, and `.htaccess`.
+3. Confirmation that ZIP does not contain parent `dist/` folder.
+4. Files changed.
+5. Quick test checklist:
+   - `https://mstarairsoft.com/`
+   - `https://mstarairsoft.com/ticket`
+   - `https://mstarairsoft.com/events`
+   - `https://mstarairsoft.com/rules-and-regulation`
+   - `https://mstarairsoft.com/gallery`
+
 ## Git Rules
 
 - Highest priority workflow rule: after any completed non-destructive project change, immediately update `AGENT.md` and `DESIGNER.md`, then run `git add`, `git commit`, and `git push` in the same task.
@@ -131,6 +231,20 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Do not add heavy unoptimized assets.
 
 ## Current Task Log
+
+- 2026-06-15: Cleaned the requested long-form information page layouts without creating a cPanel ZIP or performing any cPanel deployment. Live deployment status remains preserved: DNS, SSL/HTTPS, document root, hosting setup, and live `.htaccess` were not redone or changed.
+- Pages updated to remove boxed text panels from the main long-form content: Terms & Conditions, Privacy, Complaints, Ship Your Equipment/Equipment, How to Get to the Event, Immigration Visa, Activity, and the new Contact page. The shared `InfoPage` renderer now applies an unboxed policy layout for these pages so text sits directly on the dark tactical page background with readable width, line-height, headings, bullets, and mobile-safe padding.
+- Activity page update: removed the Zip Line image entry, Zip Line title/caption, and Zipline bullet content. Remaining activity content, including Waterfall, reflows through the existing responsive image grid. The desktop Activity heading now renders the ampersand as a centered middle line between `Activities` and `Entertainment Experience`.
+- Contact page created as a data-driven info page at `/contact` with the requested intro copy and clickable `mailto:` links for General Inquiry, Support and Issues, and Media and Press. The existing footer Contact link already targets `/contact` and now opens the dedicated Contact page through the existing router/info-page logic.
+- Files changed for this task: `src/types/siteContent.ts`, `src/utils/safeUrl.ts`, `src/components/InfoPage.tsx`, `src/data/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Verification commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`. All passed.
+- Next steps: No cPanel action. Only create a future deployment ZIP if the user explicitly asks `prepare cPanel ZIP` or `make deployment ZIP`.
+
+- 2026-06-15: Prepared the completed site for TMDHosting/cPanel upload without pushing to Git per user instruction. Converted production routing from hash URLs to clean browser paths: `/`, `/ticket`, `/events`, `/rules-and-regulation`, `/contact`, and the existing info/event/account paths. The app now reads `window.location.pathname`, uses browser history for in-app home/sign-in return navigation, and all source navigation/data links use clean internal paths instead of `#/` hash routes.
+- cPanel production build/package: Confirmed the correct command is `npm run build:cpanel` because the normal build is GitHub Pages-based. Built `dist`, added HTTPS redirect plus SPA fallback in `.htaccess`, verified root-safe `/assets/`, `/images/`, and `/videos/` output paths, removed unreferenced legacy MP4 copies from `dist`, and created `mstarairsoft-cpanel-production.zip` from `dist` contents only. The ZIP extracts directly with `index.html`, `.htaccess`, `assets/`, `images/`, and `videos/` at root, with no `dist/`, `build/`, or wrapper folder.
+- Verification: `cmd /c npx tsc --noEmit` passed. `cmd /c npm run build:cpanel` completed successfully; Vite 8 emitted a post-build plugin timing notice on stderr after output. Local temporary fallback-server checks returned HTTP 200 for `/`, `/ticket`, `/events`, `/rules-and-regulation`, and `/contact`. Production checks found no `#/`, `/#/`, or `#home` route strings in `dist`, confirmed `.htaccess`, header video, event image, and four Game Terrain videos are present, and confirmed ZIP root structure. `git diff --check` passed.
+- Files changed: `src/App.tsx`, `src/components/Header.tsx`, `src/components/Footer.tsx`, `src/components/BannerSlider.tsx`, `src/components/SignInPage.tsx`, `src/components/EventDetailPage.tsx`, `src/components/EventCheckoutPage.tsx`, `src/components/Events.tsx`, `src/components/EventsPage.tsx`, `src/components/InfoPage.tsx`, `src/data/siteContent.ts`, `src/utils/safeUrl.ts`, `public/.htaccess`, `AGENT.md`, and `DESIGNER.md`. Production artifact created: `mstarairsoft-cpanel-production.zip`.
+- Next steps: Upload `mstarairsoft-cpanel-production.zip` into the TMDHosting cPanel folder `mstarairsoft.com` and extract it there so `mstarairsoft.com/index.html` and `mstarairsoft.com/.htaccess` are at the folder root. No git commit or push was performed for this task by user request.
 
 - 2026-06-15: Replaced only the homepage splash/header background-video source with the newly supplied optimized MP4 at `public/videos/force-of-conquest-header-compress-video.mp4`. Removed the prior separate remote desktop/mobile source values so the hero now uses one local deployment-safe MP4 through the existing asset helper.
 - Preserved the existing `BannerSlider` component, hero CSS classes, object-fit, sizing, height, poster fallback, overlay, `Get Ticket Now` CTA, text, navigation, spacing, and responsive layout. The native video remains `autoPlay`, `muted`, `loop`, and `playsInline`; changed only preload behavior from `auto` to `metadata` for the requested mobile-friendly loading behavior.

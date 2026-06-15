@@ -14,7 +14,7 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
           <p className="eyebrow">Event Not Found</p>
           <h1>Operation Missing</h1>
           <p>This event is not available. Return to the events page to choose another operation.</p>
-          <a className="btn btn-gold" href="#/events">
+          <a className="btn btn-gold" href="/events">
             View Events
           </a>
         </section>
@@ -42,10 +42,10 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
         <aside className="event-detail-sidebar">
           <a
             className="btn btn-gold join-now-button"
-            href={isAuthenticated ? `#/checkout/${event.id}` : '#/signup'}
+            href={isAuthenticated ? `/checkout/${event.id}` : '/signup'}
             onClick={() => {
               if (!isAuthenticated) {
-                sessionStorage.setItem('mstarAuthReturnTo', `#/checkout/${event.id}`);
+                sessionStorage.setItem('mstarAuthReturnTo', `/checkout/${event.id}`);
               }
             }}
           >

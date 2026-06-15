@@ -144,6 +144,106 @@
 - Keep deployment workflow working under `.github/workflows/deploy.yml`.
 - After pushing, confirm live site URL: `https://cynicalfocus123.github.io/Mstar-Airsoft-Website/`.
 
+## Live cPanel Deployment Rule Update
+
+- Live domain: `https://mstarairsoft.com`
+- TMDHosting cPanel document root: `/home/mstarhol/mstarairsoft.com`
+- cPanel displays the document root as `/mstarairsoft.com`
+- DNS is already fixed.
+- HTTPS/SSL is already working.
+- cPanel document root is already correct.
+- `.htaccess` routing and HTTPS redirect are already working.
+- Do not redo DNS, SSL, AutoSSL, cPanel domain setup, or hosting setup.
+- Do not deploy anything unless the user specifically asks: `prepare cPanel ZIP` or `make deployment ZIP`.
+- Do not create a deployment ZIP unless the user specifically asks: `prepare cPanel ZIP` or `make deployment ZIP`.
+- Do not add HSTS unless the user specifically asks. SSL was recently fixed, so keep HSTS disabled for now.
+
+### Future CSS/Design Update Workflow
+
+When the user asks for future CSS/design changes:
+
+1. Only edit the requested CSS/layout/design files.
+2. Do not change working routes, page links, buttons, Stripe button, login/signup behavior, or content unless the user specifically requests it.
+3. Keep desktop, tablet, and mobile responsive behavior safe.
+4. After edits, run `npm run build`.
+5. Only when the user asks for a deployment ZIP, create a cPanel-ready ZIP.
+6. The ZIP must extract directly into `/mstarairsoft.com`.
+
+### Future cPanel ZIP Structure
+
+Correct ZIP root structure:
+
+- `index.html`
+- `assets/`
+- `images/`
+- `videos/`
+- `.htaccess`
+
+Wrong ZIP structure:
+
+- `dist/index.html`
+- `dist/assets/`
+- full source project
+- `node_modules/`
+- `.git/`
+- `src/`
+
+Very important: deployment ZIPs must contain the contents of `dist`, not the `dist` folder itself.
+
+Use this production `.htaccess` for future deployment ZIPs unless the user specifically asks to change it:
+
+```apache
+DirectoryIndex index.html
+Options -Indexes -MultiViews
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Force www to non-www root domain
+  RewriteCond %{HTTP_HOST} ^www\.mstarairsoft\.com$ [NC]
+  RewriteRule ^ https://mstarairsoft.com%{REQUEST_URI} [L,R=301]
+
+  # Force HTTP to HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://mstarairsoft.com%{REQUEST_URI} [L,R=301]
+
+  # Allow real files/folders to load normally
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Static app fallback for inner pages
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://js.stripe.com https://checkout.stripe.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; media-src 'self' blob: https:; font-src 'self' data:; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://js.stripe.com; frame-src 'self' https: data: blob:; child-src 'self' https: data: blob:; object-src 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com; frame-ancestors 'self'; upgrade-insecure-requests"
+</IfModule>
+
+<FilesMatch "(\.env|\.log|\.map|\.md|\.ts|\.tsx)$">
+  Require all denied
+</FilesMatch>
+```
+
+When the user asks for a future deployment ZIP, report:
+
+1. Exact ZIP filename.
+2. Confirmation that ZIP root contains `index.html`, `assets/`, and `.htaccess`.
+3. Confirmation that ZIP does not contain parent `dist/` folder.
+4. Files changed.
+5. Quick test checklist:
+   - `https://mstarairsoft.com/`
+   - `https://mstarairsoft.com/ticket`
+   - `https://mstarairsoft.com/events`
+   - `https://mstarairsoft.com/rules-and-regulation`
+   - `https://mstarairsoft.com/gallery`
+
 ## Automatic Workflow Rules
 
 - Highest priority workflow rule: after every completed normal site change, update `AGENT.md` and `DESIGNER.md` and push the finished work immediately.
@@ -180,6 +280,14 @@
 - Do not make registration look connected to backend before backend exists.
 
 ## Changelog
+
+- 2026-06-15: Legal, support, and guide long-form pages now use the main dark tactical page background directly instead of boxed text panels. Terms & Conditions, Privacy, Complaints, Ship Your Equipment/Equipment, How to Get to the Event, Immigration Visa, Activity, and Contact keep a readable max-width, comfortable line-height, strong white headings, muted body text, clean aligned lists, and safe desktop/tablet/mobile padding without heavy borders or card containers.
+
+- 2026-06-15: Updated the Activity page so Zip Line no longer appears as an image, caption/title, bullet, or content entry. The remaining activity media reflows cleanly with Waterfall and the other activity content intact. On desktop, the Activity heading now centers the `&` between `Activities` and `Entertainment Experience` while preserving bold tactical typography and responsive scaling.
+
+- 2026-06-15: Added a dedicated Contact page that uses the same unboxed long-form page treatment instead of cards or panels. It includes the requested intro copy plus clickable mail links for General Inquiry, Support and Issues, and Media and Press. The footer Contact link now routes to the dedicated Contact page through the existing data-driven footer navigation. Future cPanel deployment ZIPs remain blocked unless explicitly requested.
+
+- 2026-06-15: Prepared the cPanel production package without visual redesign. All internal navigation now uses clean live URLs like `/`, `/ticket`, `/events`, `/rules-and-regulation`, and `/contact` instead of hash routes, while preserving the existing header, footer, hero, cards, buttons, media, spacing, and responsive layout. The cPanel ZIP was built from production output contents only, with root-level `index.html`, `.htaccess`, assets, images, and videos. The `.htaccess` file provides HTTPS redirect and SPA fallback so direct clean-route visits keep the existing React page designs intact after upload.
 
 - 2026-06-15: Replaced only the homepage splash/header video asset with `force-of-conquest-header-compress-video.mp4`. The hero keeps the exact existing class names, crop/object-fit behavior, height, poster fallback, overlay, CTA, typography, spacing, and responsive composition. Desktop, tablet, iPhone/mobile Safari, and Android continue using the same muted looping inline native-video treatment, now from one local MP4 with metadata preload.
 

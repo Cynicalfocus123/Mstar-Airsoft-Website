@@ -1,9 +1,21 @@
 import type { InfoPageContent } from '../types/siteContent';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
+import { getSafeMailtoHref } from '../utils/safeUrl';
 
 interface InfoPageProps {
   content?: InfoPageContent;
 }
+
+const unboxedPolicySlugs = new Set([
+  'terms-and-conditions',
+  'privacy',
+  'complaints',
+  'equipment',
+  'how-to-get-to-the-event',
+  'immigration-visa',
+  'activity',
+  'contact',
+]);
 
 export function InfoPage({ content }: InfoPageProps) {
   if (!content) {
@@ -18,13 +30,29 @@ export function InfoPage({ content }: InfoPageProps) {
     );
   }
 
+  const isActivityPage = content.slug === 'activity';
+  const policyClassName = [
+    'policy-layout',
+    content.slug === 'rules-and-regulation' ? 'policy-layout-rules' : '',
+    unboxedPolicySlugs.has(content.slug) ? 'policy-layout-plain' : '',
+    content.slug === 'contact' ? 'policy-layout-contact' : '',
+  ].filter(Boolean).join(' ');
+
   return (
     <main className="page-shell">
       <section
         className={`page-hero ${content.heroAlign === 'center' ? 'page-hero-centered' : ''} ${content.sections ? 'page-hero-legal' : ''} ${content.slug === 'things-to-know' ? 'page-hero-guide-index' : ''}`}
       >
         <p className="eyebrow">{content.eyebrow}</p>
-        <h1>{content.title}</h1>
+        <h1 className={isActivityPage ? 'activity-page-heading' : undefined}>
+          {isActivityPage ? (
+            <>
+              <span>Activities</span>
+              <span className="activity-page-heading-amp">&amp;</span>
+              <span>Entertainment Experience</span>
+            </>
+          ) : content.title}
+        </h1>
         <p>{content.description}</p>
       </section>
       {content.cards && (
@@ -64,7 +92,7 @@ export function InfoPage({ content }: InfoPageProps) {
       )}
       {content.sections && (
         <section
-          className={`policy-layout ${content.slug === 'rules-and-regulation' ? 'policy-layout-rules' : ''}`}
+          className={policyClassName}
           aria-label={content.title}
         >
           {content.sections.map((section) => (
@@ -88,6 +116,19 @@ export function InfoPage({ content }: InfoPageProps) {
                   {section.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>
                   ))}
+                </ul>
+              )}
+              {section.links && (
+                <ul className="policy-link-list">
+                  {section.links.map((link) => {
+                    const safeHref = getSafeMailtoHref(link.href);
+
+                    return safeHref ? (
+                      <li key={link.href}>
+                        <a href={safeHref}>{link.label}</a>
+                      </li>
+                    ) : null;
+                  })}
                 </ul>
               )}
             </article>

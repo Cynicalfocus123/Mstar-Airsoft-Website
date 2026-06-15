@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { HeroSlide } from '../types/siteContent';
-import { getSafeInternalHash, getSafeLocalAssetPath, getSafeVideoUrl } from '../utils/safeUrl';
+import { getSafeInternalPath, getSafeLocalAssetPath, getSafeVideoUrl } from '../utils/safeUrl';
 
 interface BannerSliderProps {
   slides: HeroSlide[];
@@ -62,7 +62,7 @@ export function BannerSlider({ slides }: BannerSliderProps) {
         </div>
       </article>
       <div className="banner-overlay">
-        <a className="btn btn-gold" href={getSafeInternalHash(activeSlide.cta.href)}>
+        <a className="btn btn-gold" href={getSafeInternalPath(activeSlide.cta.href)}>
           {activeSlide.cta.label}
         </a>
       </div>
