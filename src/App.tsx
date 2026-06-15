@@ -114,7 +114,6 @@ export default function App() {
       <Header
         identity={siteContent.identity}
         navLinks={siteContent.navLinks}
-        authLinks={siteContent.authLinks}
         isAuthenticated={isAuthenticated}
         onHomeClick={goHomeTop}
         onLogout={logout}

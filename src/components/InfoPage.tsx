@@ -13,8 +13,16 @@ const unboxedPolicySlugs = new Set([
   'equipment',
   'how-to-get-to-the-event',
   'immigration-visa',
+  'accommodation-and-campground',
   'activity',
   'contact',
+]);
+
+const hiddenHeroSlugs = new Set([
+  'activity',
+  'how-to-get-to-the-event',
+  'immigration-visa',
+  'equipment',
 ]);
 
 export function InfoPage({ content }: InfoPageProps) {
@@ -31,30 +39,26 @@ export function InfoPage({ content }: InfoPageProps) {
   }
 
   const isActivityPage = content.slug === 'activity';
+  const shouldShowHero = !hiddenHeroSlugs.has(content.slug);
   const policyClassName = [
     'policy-layout',
     content.slug === 'rules-and-regulation' ? 'policy-layout-rules' : '',
     unboxedPolicySlugs.has(content.slug) ? 'policy-layout-plain' : '',
     content.slug === 'contact' ? 'policy-layout-contact' : '',
+    content.slug === 'accommodation-and-campground' ? 'policy-layout-accommodation' : '',
   ].filter(Boolean).join(' ');
 
   return (
     <main className="page-shell">
-      <section
-        className={`page-hero ${content.heroAlign === 'center' ? 'page-hero-centered' : ''} ${content.sections ? 'page-hero-legal' : ''} ${content.slug === 'things-to-know' ? 'page-hero-guide-index' : ''}`}
-      >
-        <p className="eyebrow">{content.eyebrow}</p>
-        <h1 className={isActivityPage ? 'activity-page-heading' : undefined}>
-          {isActivityPage ? (
-            <>
-              <span>Activities</span>
-              <span className="activity-page-heading-amp">&amp;</span>
-              <span>Entertainment Experience</span>
-            </>
-          ) : content.title}
-        </h1>
-        <p>{content.description}</p>
-      </section>
+      {shouldShowHero && (
+        <section
+          className={`page-hero ${content.heroAlign === 'center' ? 'page-hero-centered' : ''} ${content.sections ? 'page-hero-legal' : ''} ${content.slug === 'things-to-know' ? 'page-hero-guide-index' : ''} ${content.slug === 'accommodation-and-campground' ? 'page-hero-accommodation' : ''}`}
+        >
+          <p className="eyebrow">{content.eyebrow}</p>
+          <h1>{content.title}</h1>
+          <p>{content.description}</p>
+        </section>
+      )}
       {content.cards && (
         <section className="info-banner-list" aria-label={content.title}>
           {content.cards.map((card) => {
@@ -97,7 +101,15 @@ export function InfoPage({ content }: InfoPageProps) {
         >
           {content.sections.map((section) => (
             <article className="policy-section" key={section.id}>
-              <h2>{section.title}</h2>
+              <h2 className={isActivityPage && section.id === 'activity-overview' ? 'activity-section-heading' : undefined}>
+                {isActivityPage && section.id === 'activity-overview' ? (
+                  <>
+                    <span>Activities</span>
+                    <span className="activity-section-heading-amp">&amp;</span>
+                    <span>Entertainment Experience</span>
+                  </>
+                ) : section.title}
+              </h2>
               {section.paragraphs?.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

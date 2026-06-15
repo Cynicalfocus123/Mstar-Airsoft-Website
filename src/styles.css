@@ -1842,18 +1842,38 @@ select:focus {
   width: min(780px, 100%);
 }
 
-.page-hero-legal h1.activity-page-heading {
+.page-hero-accommodation {
+  width: min(900px, 100%);
+}
+
+.page-hero-accommodation h1 {
+  max-width: 760px;
+  font-size: clamp(1.75rem, 3.8vw, 2.45rem);
+  line-height: 1.08;
+}
+
+.page-hero-accommodation p:not(.eyebrow) {
+  max-width: 760px;
+}
+
+.policy-layout-accommodation .policy-section:first-child h2 {
+  max-width: 760px;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  line-height: 1.12;
+}
+
+.activity-section-heading {
   display: grid;
   width: fit-content;
-  max-width: min(100%, 960px);
+  max-width: min(100%, 780px);
   gap: 0.02em;
 }
 
-.page-hero-legal h1.activity-page-heading span {
+.activity-section-heading span {
   display: block;
 }
 
-.page-hero-legal h1 .activity-page-heading-amp {
+.activity-section-heading-amp {
   justify-self: center;
   line-height: 0.82;
 }

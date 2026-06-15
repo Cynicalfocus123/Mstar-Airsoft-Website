@@ -5,13 +5,12 @@ import { getSafeInternalPath } from '../utils/safeUrl';
 interface HeaderProps {
   identity: SiteIdentity;
   navLinks: NavLink[];
-  authLinks: NavLink[];
   isAuthenticated: boolean;
   onHomeClick: () => void;
   onLogout: () => void;
 }
 
-export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeClick, onLogout }: HeaderProps) {
+export function Header({ identity, navLinks, isAuthenticated, onHomeClick, onLogout }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAccountOpen, setIsAccountOpen] = useState(false);
 
@@ -49,6 +48,10 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
             onClick={(event) => {
               setIsOpen(false);
               setIsAccountOpen(false);
+              if (link.label.toLowerCase() === 'gallery' || link.href === '/gallery') {
+                event.preventDefault();
+                return;
+              }
               if (link.href === '/') {
                 event.preventDefault();
                 onHomeClick();
@@ -58,8 +61,8 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
             {link.label}
           </a>
         ))}
-        <div className="header-actions">
-          {isAuthenticated ? (
+        {isAuthenticated && (
+          <div className="header-actions">
             <div className={isAccountOpen ? 'account-menu account-menu-open' : 'account-menu'}>
               <button
                 className="auth-link auth-link-signup account-menu-button"
@@ -91,25 +94,8 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
                 </button>
               </div>
             </div>
-          ) : (
-            authLinks.map((link, index) => (
-              <a
-                className={index === 0 ? 'auth-link auth-link-login' : 'auth-link auth-link-signup'}
-                key={link.href}
-                href={getSafeInternalPath(link.href)}
-                onClick={() => {
-                  const currentPath = getSafeInternalPath(window.location.pathname || '/');
-                  if (!currentPath.startsWith('/signin') && !currentPath.startsWith('/signup')) {
-                    sessionStorage.setItem('mstarAuthReturnTo', currentPath);
-                  }
-                  setIsOpen(false);
-                }}
-              >
-                {link.label}
-              </a>
-            ))
-          )}
-        </div>
+          </div>
+        )}
       </nav>
     </header>
   );

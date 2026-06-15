@@ -188,7 +188,6 @@ export interface InfoPageContent {
 export interface SiteContent {
   identity: SiteIdentity;
   navLinks: NavLink[];
-  authLinks: NavLink[];
   heroSlides: HeroSlide[];
   hero: HeroContent;
   about: AboutContent;

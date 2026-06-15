@@ -17,10 +17,6 @@ export const siteContent: SiteContent = {
     { label: 'Rules', href: '/rules-and-regulation' },
     { label: 'Gallery', href: '/gallery' },
   ],
-  authLinks: [
-    { label: 'Login', href: '/signin' },
-    { label: 'Sign Up', href: '/signup' },
-  ],
   heroSlides: [
     {
       id: 'gold-rush',
@@ -224,7 +220,6 @@ export const siteContent: SiteContent = {
         { label: 'About', href: '/about' },
         { label: 'Things to Know', href: '/things-to-know' },
         { label: 'Events', href: '/events' },
-        { label: 'FAQ', href: '/faq' },
       ],
     },
     {
@@ -643,7 +638,7 @@ export const siteContent: SiteContent = {
               title: 'Jungle Trip',
             },
             {
-              src: '/images/what-to-do-thailand/khao-yai-national-park.jpg',
+              src: '/images/activities/atv-ride-live.png',
               alt: 'ATV ride activity at the MSTAR event',
               title: 'ATV Ride',
             },

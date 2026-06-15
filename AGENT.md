@@ -29,7 +29,7 @@ npm run build
 ## Deployment
 
 - GitHub Pages workflow: `.github/workflows/deploy.yml`
-- Vite base path: `/Mstar-Airsoft-Website/`
+- Vite production base path for the live cPanel root domain: `/`
 - cPanel/TMDHosting production command: `npm run build:cpanel`
 - cPanel output uses root-safe `/assets/`, `/images/`, and `/videos/` paths for `https://mstarairsoft.com`.
 - `public/.htaccess` is copied into `dist` and provides SPA fallback, directory-index blocking, security headers, and a CSP limited to local assets plus the approved Stripe, YouTube, and Cloudflare R2 hosts.
@@ -231,6 +231,16 @@ When the user asks for a future deployment ZIP, report:
 - Do not add heavy unoptimized assets.
 
 ## Current Task Log
+
+- 2026-06-15: Refined live site guide pages, header navigation, footer navigation, and cPanel deployment build for manual live deployment. Files changed: `src/App.tsx`, `src/components/Header.tsx`, `src/components/InfoPage.tsx`, `src/data/siteContent.ts`, `src/styles.css`, `src/types/siteContent.ts`, `public/images/activities/atv-ride-live.png`, `AGENT.md`, and `DESIGNER.md`.
+- Activity page: removed the top intro/header block containing `Activities`, `&`, `Entertainment Experience`, and its description so the remaining content starts higher. The remaining `Activities & Entertainment Experience` section heading uses a responsive stacked treatment with the `&` centered across desktop, tablet, and mobile. Replaced the ATV Ride image reference with the exact uploaded `ATV ride.png`, copied to `public/images/activities/atv-ride-live.png` with a matching SHA-256 hash.
+- Guide/info intro cleanup: removed the top intro/header blocks from How to Get to the Event, Immigration Visa, and Equipment while preserving the useful content sections below and bringing content upward.
+- Accommodation page: removed boxed/card panel styling from the main content by applying the shared unboxed long-form layout, keeping text on the dark tactical page background with readable width and mobile-safe spacing. The `Accommodation & Campground Experience` heading is now smaller, better aligned with the paragraph content, and H2-like.
+- Navigation updates: removed FAQ from footer display while keeping the FAQ route data intact. Removed Login and Sign Up from the header/site-wide navigation on desktop and mobile. Header Gallery remains visually present, but its click is prevented so it does not navigate to `/gallery` or any broken/403 page until the Gallery route is ready.
+- Live deployment safeguards: confirmed Vite/cPanel base path remains `base: '/'`; built `dist/index.html` uses `/assets/` and does not contain `/Mstar-Airsoft-Website/`. DNS, SSL/HTTPS, AutoSSL, hosting setup, document root, cPanel domain settings, Stripe buttons, Ticket page, Events routing, Game Terrain, language video cards, and live cPanel files were not changed.
+- Verification commands run: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check`. All passed. Responsive behavior was checked through shared desktop/tablet/mobile CSS paths for hidden intro spacing, unboxed policy layout, Activity heading alignment, header reflow, and mobile-safe page padding.
+- Deployment artifact: created `mstarairsoft-cpanel-live-update.zip` for manual cPanel upload. The ZIP extracts directly into `/home/mstarhol/mstarairsoft.com` with root-level `index.html`, `assets/`, `.htaccess`, and required static folders. No automatic cPanel upload or deployment was performed.
+- Next steps: Manually upload `mstarairsoft-cpanel-live-update.zip` to `/mstarairsoft.com` in cPanel, extract there, overwrite existing files, then delete the ZIP.
 
 - 2026-06-15: Fixed the cPanel redeploy build base so the standard `npm run build` output now uses root-domain asset paths (`/assets/...`) instead of the old GitHub Pages path (`/Mstar-Airsoft-Website/assets/...`). DNS, SSL/HTTPS, AutoSSL, cPanel domain setup, hosting setup, document root, app content, Stripe buttons, routes/pages, header/footer design, and live cPanel files were not changed.
 - Created `mstarairsoft-cpanel-redeploy.zip` from a clean deploy export that extracts directly into `/home/mstarhol/mstarairsoft.com` with root-level `index.html`, `assets/`, `.htaccess`, and required static public folders from the latest build/export. The ZIP contains no parent `dist/` folder, no source files, no `node_modules`, no `.git`, no package/config files, and no project memory files.

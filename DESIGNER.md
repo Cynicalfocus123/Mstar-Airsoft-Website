@@ -19,8 +19,9 @@
 - Use the transparent MSTAR Airsoft logo from `src/assets/mstar-airsoft-logo.png`.
 - Do not place the logo on a yellow or solid background plate.
 - Header background should be grey/dark grey so transparent artwork is visible directly.
-- Header navigation: Home, About, Events, Products, Things to Know, Rules, Gallery, Contact.
-- Header includes Login and Sign Up actions.
+- Header navigation: Home, About, Events, Ticket, Things to Know, Rules, and Gallery.
+- Header does not display Login or Sign Up actions.
+- Header Gallery remains visually present but should not navigate to `/gallery` until the route is ready.
 - No Shop link.
 - Mobile menu must remain responsive and easy to tap.
 - Navigation must come from config/data.
@@ -32,7 +33,8 @@
 - Do not place footer logo on a yellow or solid background plate.
 - Footer links must come from config/data.
 - Footer link groups should stack vertically inside roomy columns with enough spacing for longer labels and travel-guide sections.
-- Footer must include a clearly linked FAQ destination and collapse into an easy-tap vertical stack on mobile.
+- Footer should collapse into an easy-tap vertical stack on mobile.
+- Footer does not display FAQ.
 - No Shop link.
 
 ## Logo Placement Rules
@@ -281,6 +283,12 @@ When the user asks for a future deployment ZIP, report:
 - Do not make registration look connected to backend before backend exists.
 
 ## Changelog
+
+- 2026-06-15: Refined the live guide/navigation update for desktop, tablet, and mobile. Activity now starts directly with its content after the intro/header removal, keeps the remaining `Activities & Entertainment Experience` section heading responsive with the `&` visually centered, and uses the exact uploaded ATV Ride image asset. How to Get to the Event, Immigration Visa, and Equipment no longer show unnecessary intro/header description blocks.
+
+- 2026-06-15: Accommodation & Campground content now sits directly on the main dark page background instead of boxed panels. Its `Accommodation & Campground Experience` heading has been reduced to a better aligned H2-like scale while preserving the premium tactical typography and readable long-form spacing.
+
+- 2026-06-15: Header and footer navigation were simplified for the live site: Footer no longer displays FAQ, Header no longer displays Login or Sign Up, and Header Gallery remains visually present while safely doing nothing instead of navigating to a broken/403 route. Live cPanel builds continue to require root `/assets/` paths.
 
 - 2026-06-15: Updated the production build base for cPanel redeploys so generated `index.html` points to root-domain `/assets/...` files instead of the old GitHub Pages `/Mstar-Airsoft-Website/assets/...` path. The redeploy export keeps the existing live `.htaccess` behavior, includes only deployment-ready built files and required public asset folders, and does not change DNS, SSL, hosting, document root, routes, content, Stripe, or header/footer design.
 
