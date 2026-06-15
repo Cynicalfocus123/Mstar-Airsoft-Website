@@ -132,6 +132,13 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Replaced the two-card homepage Package Offer and Ticket page package grids with one centered Early Bird card. Removed the separate Regular Package / General Ticket €160 card and its Stripe Buy Button data everywhere from the package/ticket surfaces.
+- Early Bird content: `€120.00 EURO`, `(Original Price €160.00 EURO)`, `Expire November 20, 2026`, `3 Days / 2 Nights`, `Live Music`, `Food Court`, `2 Person Tent`, and `Camping Equipment`. The Ticket page retains the existing Early Bird Stripe Buy Button.
+- Responsive layout: Homepage uses one centered card capped at 520px. Ticket page uses one centered card capped at 560px; tablet stays centered with the existing page spacing, and mobile uses near-full width with a safe 12px side gutter and no overflow.
+- Files changed: `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/components/PackageCard.tsx`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Completed a full static-frontend security hardening pass before cPanel/TMDHosting deployment. Confirmed React text rendering has no raw HTML injection APIs; added allowlists for internal hash routes, local assets, approved R2 videos, and YouTube embed URLs; retained required lazy iframe attributes; removed sensitive form console logging; changed mock account profiles from persistent `localStorage` PII to memory-only state while keeping only the non-sensitive mock auth flag in storage; removed raw card/CVV collection from the backendless checkout; and added safer form autocomplete, telephone input modes, and length limits.
 - Deployment fixes: Added `npm run build:cpanel`, root `/` cPanel paths, explicit source-map disablement, `public/.htaccess` SPA fallback, `nosniff`, strict referrer policy, SAMEORIGIN framing, restrictive permissions policy, CSP, directory-index blocking, and denial rules for source/development file extensions. Added ignore rules that prevent local credential/media-project files from being staged accidentally. No cPanel ZIP was created; deploy only validated `dist` contents after the cPanel build.
 - Dependency hygiene: `npm audit --audit-level=moderate` initially found two esbuild advisories, including high-severity GHSA-gv7w-rqvm-qjhr. Upgraded Vite from 7 to 8.0.16 after checking the official migration requirements; the project already uses supported Node 24. The final audit reports zero vulnerabilities.

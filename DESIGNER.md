@@ -181,6 +181,8 @@
 
 ## Changelog
 
+- 2026-06-15: Homepage Package Offer and the Ticket page now each show one centered Early Bird ticket card instead of separate €120 and €160 cards. The removed €160 General/Regular ticket no longer renders. The remaining card emphasizes `€120.00 EURO` in gold, shows `(Original Price €160.00 EURO)` as smaller secondary text, includes `Expire November 20, 2026`, `3 Days / 2 Nights`, Live Music, Food Court, 2 Person Tent, and Camping Equipment, and retains the Ticket page Early Bird Stripe button. Desktop uses controlled 520px/560px card caps, tablet remains centered with comfortable spacing, and mobile uses near-full width with safe padding and no overflow.
+
 - 2026-06-15: Hardened the frontend and cPanel deployment without changing the tactical visual system, published Ticket/Package content, homepage splash treatment, Game Terrain card design, language-video content, navigation labels, About section, branding, colors, or layout. Approved media and navigation values now pass strict URL/path allowlists; native HTML5 videos remain deployment-safe; only approved language cards use YouTube iframes. Removed backendless card/CVV inputs from the white event-checkout preview and replaced them with a disabled, honest payment-status message. Added cPanel root paths, SPA fallback, security headers/CSP, source-map exclusion, and Vite 8 dependency hardening.
 
 - 2026-06-15: Updated all three Events page cards to display `€160.00 EURO` instead of `$160.00 USD`, without changing event-card layout, hierarchy, or any unrelated pricing surfaces.

@@ -61,6 +61,8 @@ export interface AboutContent {
 export interface PackageOfferItem {
   label: string;
   price: string;
+  originalPrice?: string;
+  expiry?: string;
   details: string[];
   perks: string[];
   stripeBuyButtonId?: string;

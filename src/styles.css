@@ -412,7 +412,7 @@ textarea {
 }
 
 .package-offer-grid {
-  grid-template-columns: repeat(2, minmax(0, 440px));
+  grid-template-columns: minmax(0, 520px);
   justify-content: center;
   align-items: stretch;
 }
@@ -476,10 +476,31 @@ textarea {
 
 .package-offer-value strong {
   color: var(--gold);
-  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
   line-height: 1.15;
   font-weight: 800;
   overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.package-offer-original-price,
+.package-offer-expiry {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.package-offer-original-price {
+  color: var(--muted);
+  font-size: clamp(0.78rem, 1.2vw, 0.92rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.package-offer-expiry {
+  color: var(--white);
+  font-size: clamp(0.88rem, 1.4vw, 1rem);
+  font-weight: 800;
+  line-height: 1.35;
   text-transform: uppercase;
 }
 
@@ -1383,7 +1404,8 @@ select:focus {
 }
 
 .ticket-package-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 560px);
+  justify-content: center;
   align-items: stretch;
 }
 
@@ -1522,6 +1544,10 @@ select:focus {
   .ticket-package-grid,
   .ticket-addon-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ticket-package-grid {
+    width: calc(100% - 24px);
   }
 }
 

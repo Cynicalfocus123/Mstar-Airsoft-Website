@@ -15,7 +15,9 @@ export function PackageCard({ offer }: PackageCardProps) {
         <div className="package-offer-value">
           <span>Price</span>
           <strong>{offer.price}</strong>
+          {offer.originalPrice ? <p className="package-offer-original-price">{offer.originalPrice}</p> : null}
         </div>
+        {offer.expiry ? <p className="package-offer-expiry">{offer.expiry}</p> : null}
         <div className="package-offer-details">
           {offer.details.map((detail) => (
             <p className="package-offer-detail" key={detail}>{detail}</p>

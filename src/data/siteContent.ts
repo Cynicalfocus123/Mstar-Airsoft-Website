@@ -79,20 +79,15 @@ export const siteContent: SiteContent = {
     offers: [
       {
         label: 'Early Bird',
-        price: 'Ticket Price - $120.00',
-        details: ['Early Bird Ends - November 20, 2026'],
-        perks: [
-          'Live Music',
-          'Food Court',
-        ],
-      },
-      {
-        label: 'Regular Package',
-        price: 'Ticket Price - $160.00',
+        price: '€120.00 EURO',
+        originalPrice: '(Original Price €160.00 EURO)',
+        expiry: 'Expire November 20, 2026',
         details: ['3 Days / 2 Nights'],
         perks: [
           'Live Music',
           'Food Court',
+          '2 Person Tent',
+          'Camping Equipment',
         ],
       },
     ],
@@ -103,19 +98,13 @@ export const siteContent: SiteContent = {
     description: '',
     packages: [
       {
-        label: 'Pre Sale',
+        label: 'Early Bird',
         price: '€120.00 EURO',
+        originalPrice: '(Original Price €160.00 EURO)',
+        expiry: 'Expire November 20, 2026',
         details: ['3 Days / 2 Nights'],
-        perks: ['Live Music', 'Food Court'],
+        perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
         stripeBuyButtonId: 'buy_btn_1TiFmd5Kev5Ia2Rir5v4MnHw',
-        stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
-      },
-      {
-        label: 'General Ticket',
-        price: '€160.00 EURO',
-        details: ['3 Days / 2 Nights'],
-        perks: ['Live Music', 'Food Court'],
-        stripeBuyButtonId: 'buy_btn_1TiGSe5Kev5Ia2RiIXVYRKHY',
         stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },
     ],
