@@ -1,7 +1,5 @@
-export function getPublicAssetPath(path?: string) {
-  if (!path) {
-    return undefined;
-  }
+import { getSafeLocalAssetPath } from './safeUrl';
 
-  return path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path;
+export function getPublicAssetPath(path?: string) {
+  return getSafeLocalAssetPath(path);
 }

@@ -17,7 +17,6 @@ export function SignInPage({ content, onSuccess }: SignInPageProps) {
       ...profile,
       email: String(formPayload.email ?? profile.email),
     });
-    console.info('Sign in payload ready for future API integration:', formPayload);
     onSuccess();
   }
 
@@ -30,7 +29,7 @@ export function SignInPage({ content, onSuccess }: SignInPageProps) {
             {content.fields.map((field) => (
               <label className="field" key={field.id}>
                 <span>{field.label}</span>
-                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={128} />
+                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={128} autoComplete={field.type === 'email' ? 'email' : 'current-password'} />
               </label>
             ))}
             <button className="btn btn-gold" type="submit">

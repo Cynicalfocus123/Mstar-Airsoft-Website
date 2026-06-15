@@ -67,7 +67,7 @@
 - Homepage video hero CTA sits bottom-center inside the video and remains easy to tap on mobile.
 - Event detail pages use a large top banner, content panel, and right-side Join Now/details panel that collapses cleanly on mobile.
 - Event detail titles must wrap inside their panel without clipping or oversized overflow.
-- Event registration checkout uses a clean white cart layout with bold headers, clear event summary, yellow EDIT buttons, editable shipping/billing sections, and responsive payment fields.
+- Event registration checkout uses a clean white cart layout with bold headers, clear event summary, yellow EDIT buttons, and editable shipping/billing sections. The static preview must not collect card numbers or CVVs; live payments remain limited to the existing Stripe Buy Buttons until a secure backend/payment flow is connected.
 - Unauthenticated checkout views show clear Login and Register actions at the top before the event summary.
 - Homepage video hero CTA must sit on a full-width bottom overlay so the Sign Up Now button remains truly centered instead of drifting right on large screens.
 - Homepage video hero may use the supplied YouTube embed, but it must autoplay muted, hide player chrome, avoid exposing a play button, and feel immediate when the user lands on Home.
@@ -135,6 +135,9 @@
 ## Deployment Design Rules
 
 - GitHub Pages path must use Vite base `/Mstar-Airsoft-Website/`.
+- cPanel/TMDHosting builds use `npm run build:cpanel` with root-safe `/assets/`, `/images/`, and `/videos/` paths for `https://mstarairsoft.com`.
+- cPanel deployment includes `.htaccess` SPA fallback and security headers/CSP without changing the visible design. Native HTML5 splash/Game Terrain videos remain local or restricted to the two approved R2 hosts, and iframe usage remains limited to the approved Thai/English YouTube cards plus Stripe's payment component.
+- Deploy only `dist` contents; do not package source, project memory, credentials, local editing projects, dependencies, or source maps.
 - Asset references must remain compatible with repository-scoped GitHub Pages hosting.
 - Deployment changes must not alter visual direction or add heavy assets.
 - Workflow must use Node 24 and Pages artifact deployment from `./dist`.
@@ -177,6 +180,8 @@
 - Do not make registration look connected to backend before backend exists.
 
 ## Changelog
+
+- 2026-06-15: Hardened the frontend and cPanel deployment without changing the tactical visual system, published Ticket/Package content, homepage splash treatment, Game Terrain card design, language-video content, navigation labels, About section, branding, colors, or layout. Approved media and navigation values now pass strict URL/path allowlists; native HTML5 videos remain deployment-safe; only approved language cards use YouTube iframes. Removed backendless card/CVV inputs from the white event-checkout preview and replaced them with a disabled, honest payment-status message. Added cPanel root paths, SPA fallback, security headers/CSP, source-map exclusion, and Vite 8 dependency hardening.
 
 - 2026-06-15: Updated all three Events page cards to display `€160.00 EURO` instead of `$160.00 USD`, without changing event-card layout, hierarchy, or any unrelated pricing surfaces.
 

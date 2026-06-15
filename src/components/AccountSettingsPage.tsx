@@ -27,7 +27,6 @@ export function AccountSettingsPage({ content, countryRegions }: AccountSettings
       shipping: updatedAddress,
       billing: savedProfile.billing.fullName ? savedProfile.billing : updatedAddress,
     });
-    console.info('Account settings payload ready for future API integration:', formPayload);
   }
 
   return (
@@ -74,7 +73,7 @@ export function AccountSettingsPage({ content, countryRegions }: AccountSettings
             return (
               <label className="field" key={field.id}>
                 <span>{field.label}</span>
-                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={180} defaultValue={field.id === 'email' ? savedProfile.email : savedProfile.shipping[field.id as keyof typeof savedProfile.shipping] ?? ''} />
+                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={180} inputMode={field.type === 'tel' ? 'tel' : undefined} autoComplete={field.id === 'email' ? 'email' : field.id === 'phone' ? 'tel' : field.id === 'address1' ? 'street-address' : field.id === 'city' ? 'address-level2' : field.id === 'zip' ? 'postal-code' : 'off'} defaultValue={field.id === 'email' ? savedProfile.email : savedProfile.shipping[field.id as keyof typeof savedProfile.shipping] ?? ''} />
               </label>
             );
           })}

@@ -9,7 +9,7 @@ interface RegistrationProps {
 export function Registration({ fields }: RegistrationProps) {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.info('Registration payload ready for future API integration:', getCleanFormData(event.currentTarget));
+    getCleanFormData(event.currentTarget);
   }
 
   return (
@@ -28,6 +28,7 @@ export function Registration({ fields }: RegistrationProps) {
                 placeholder={field.placeholder}
                 required={field.required}
                 rows={5}
+                maxLength={1000}
               />
             ) : (
               <input
@@ -37,6 +38,8 @@ export function Registration({ fields }: RegistrationProps) {
                 required={field.required}
                 min={field.type === 'number' ? 1 : undefined}
                 maxLength={field.type === 'number' ? undefined : 180}
+                inputMode={field.type === 'tel' ? 'tel' : undefined}
+                autoComplete={field.type === 'email' ? 'email' : field.type === 'tel' ? 'tel' : 'off'}
               />
             )}
           </label>

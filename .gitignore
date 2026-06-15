@@ -5,3 +5,12 @@ dev-server.log
 .env.local
 *.tsbuildinfo
 logo site.png
+.serena/
+.vite-*.log
+.vite-*.err.log
+Adobe Premiere Pro Auto-Save/
+*.prproj
+*credential*.txt
+site content/
+website video/
+~$*.docx

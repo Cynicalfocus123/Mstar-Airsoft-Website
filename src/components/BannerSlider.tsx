@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { HeroSlide } from '../types/siteContent';
+import { getSafeInternalHash, getSafeLocalAssetPath, getSafeVideoUrl } from '../utils/safeUrl';
 
 interface BannerSliderProps {
   slides: HeroSlide[];
@@ -20,14 +21,10 @@ export function BannerSlider({ slides }: BannerSliderProps) {
     void video.play();
   }, [activeSlide.videoMp4Path, activeSlide.videoWebmPath, activeSlide.mobileVideoMp4Path]);
 
-  function getPublicAssetPath(path: string) {
-    return path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path;
-  }
-
-  const posterUrl = `${import.meta.env.BASE_URL}images/home-hero-poster.webp`;
-  const desktopVideoUrl = getPublicAssetPath(activeSlide.videoMp4Path);
+  const posterUrl = getSafeLocalAssetPath('/images/home-hero-poster.webp');
+  const desktopVideoUrl = getSafeVideoUrl(activeSlide.videoMp4Path);
   const mobileVideoUrl = activeSlide.mobileVideoMp4Path
-    ? getPublicAssetPath(activeSlide.mobileVideoMp4Path)
+    ? getSafeVideoUrl(activeSlide.mobileVideoMp4Path)
     : undefined;
 
   return (
@@ -57,7 +54,7 @@ export function BannerSlider({ slides }: BannerSliderProps) {
             onError={() => setVideoReady(false)}
           >
             {activeSlide.videoWebmPath && !mobileVideoUrl && (
-              <source src={getPublicAssetPath(activeSlide.videoWebmPath)} type="video/webm" />
+              <source src={getSafeVideoUrl(activeSlide.videoWebmPath)} type="video/webm" />
             )}
             {mobileVideoUrl && <source src={mobileVideoUrl} media="(max-width: 640px)" type="video/mp4" />}
             <source src={desktopVideoUrl} type="video/mp4" />
@@ -65,7 +62,7 @@ export function BannerSlider({ slides }: BannerSliderProps) {
         </div>
       </article>
       <div className="banner-overlay">
-        <a className="btn btn-gold" href={activeSlide.cta.href}>
+        <a className="btn btn-gold" href={getSafeInternalHash(activeSlide.cta.href)}>
           {activeSlide.cta.label}
         </a>
       </div>

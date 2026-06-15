@@ -30,6 +30,10 @@ npm run build
 
 - GitHub Pages workflow: `.github/workflows/deploy.yml`
 - Vite base path: `/Mstar-Airsoft-Website/`
+- cPanel/TMDHosting production command: `npm run build:cpanel`
+- cPanel output uses root-safe `/assets/`, `/images/`, and `/videos/` paths for `https://mstarairsoft.com`.
+- `public/.htaccess` is copied into `dist` and provides SPA fallback, directory-index blocking, security headers, and a CSP limited to local assets plus the approved Stripe, YouTube, and Cloudflare R2 hosts.
+- Production source maps are disabled. Deploy only the contents of `dist`; never include source, project memory, local media projects, credentials, `.env` files, Git metadata, or dependencies.
 - Live URL format: `https://cynicalfocus123.github.io/Mstar-Airsoft-Website/`
 - Workflow runs on pushes to `main` and manual dispatch.
 - Workflow builds `dist`, uploads Pages artifact, then deploys GitHub Pages.
@@ -127,6 +131,14 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Do not add heavy unoptimized assets.
 
 ## Current Task Log
+
+- 2026-06-15: Completed a full static-frontend security hardening pass before cPanel/TMDHosting deployment. Confirmed React text rendering has no raw HTML injection APIs; added allowlists for internal hash routes, local assets, approved R2 videos, and YouTube embed URLs; retained required lazy iframe attributes; removed sensitive form console logging; changed mock account profiles from persistent `localStorage` PII to memory-only state while keeping only the non-sensitive mock auth flag in storage; removed raw card/CVV collection from the backendless checkout; and added safer form autocomplete, telephone input modes, and length limits.
+- Deployment fixes: Added `npm run build:cpanel`, root `/` cPanel paths, explicit source-map disablement, `public/.htaccess` SPA fallback, `nosniff`, strict referrer policy, SAMEORIGIN framing, restrictive permissions policy, CSP, directory-index blocking, and denial rules for source/development file extensions. Added ignore rules that prevent local credential/media-project files from being staged accidentally. No cPanel ZIP was created; deploy only validated `dist` contents after the cPanel build.
+- Dependency hygiene: `npm audit --audit-level=moderate` initially found two esbuild advisories, including high-severity GHSA-gv7w-rqvm-qjhr. Upgraded Vite from 7 to 8.0.16 after checking the official migration requirements; the project already uses supported Node 24. The final audit reports zero vulnerabilities.
+- Files changed: `.gitignore`, `package.json`, `package-lock.json`, `vite.config.ts`, `public/.htaccess`, `src/utils/safeUrl.ts`, `src/utils/publicAssetPath.ts`, `src/utils/accountProfile.ts`, `src/App.tsx`, security-relevant components/forms, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Remaining risks: This remains a static frontend with mock authentication and no secure account, registration, order, or event-checkout backend. The Stripe Buy Buttons are the only live payment surface. Apache must have `mod_rewrite` and `mod_headers` enabled for the `.htaccess` rules; production CSP behavior should be checked in browser developer tools after hosting deployment. React's production bundle contains its own inert `javascript:` URL-blocking error string, but the site source and configured links contain no `javascript:` URLs.
+- Verification: TypeScript, GitHub Pages build, root-path cPanel build, output allowlist scans, `.htaccess` copy check, source-map/prohibited-file checks, unsafe source scans, final npm audit, and `git diff --check` passed.
+- Next steps: Upload only the contents of the cPanel-mode `dist` directory to the production document root and verify response headers/third-party embeds on the live domain.
 
 - 2026-06-15: Changed all three Events page entry-fee values from `$160.00 USD` to `€160.00 EURO`. Event titles, dates, locations, attendance, Ticket page prices, and homepage packages remain unchanged.
 - Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.

@@ -16,7 +16,7 @@ export interface AccountProfile {
   billing: AccountAddress;
 }
 
-const profileStorageKey = 'mstarAccountProfile';
+const legacyProfileStorageKey = 'mstarAccountProfile';
 
 export const emptyAddress: AccountAddress = {
   fullName: '',
@@ -38,31 +38,19 @@ const fallbackAddress: AccountAddress = {
   country: 'Thailand',
 };
 
+let mockProfile: AccountProfile = {
+  email: '',
+  shipping: fallbackAddress,
+  billing: fallbackAddress,
+};
+
 export function getStoredAccountProfile(): AccountProfile {
-  const savedProfile = localStorage.getItem(profileStorageKey);
-
-  if (savedProfile) {
-    try {
-      const parsedProfile = JSON.parse(savedProfile) as Partial<AccountProfile>;
-      return {
-        email: parsedProfile.email ?? '',
-        shipping: { ...fallbackAddress, ...parsedProfile.shipping },
-        billing: { ...fallbackAddress, ...parsedProfile.billing },
-      };
-    } catch {
-      localStorage.removeItem(profileStorageKey);
-    }
-  }
-
-  return {
-    email: '',
-    shipping: fallbackAddress,
-    billing: fallbackAddress,
-  };
+  localStorage.removeItem(legacyProfileStorageKey);
+  return mockProfile;
 }
 
 export function saveAccountProfile(profile: AccountProfile) {
-  localStorage.setItem(profileStorageKey, JSON.stringify(profile));
+  mockProfile = profile;
 }
 
 export function accountAddressFromForm(formData: Record<string, FormDataEntryValue>): AccountAddress {

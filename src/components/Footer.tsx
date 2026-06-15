@@ -1,4 +1,5 @@
 import type { FooterSection, SiteIdentity } from '../types/siteContent';
+import { getSafeInternalHash } from '../utils/safeUrl';
 
 interface FooterProps {
   identity: SiteIdentity;
@@ -21,7 +22,7 @@ export function Footer({ identity, sections }: FooterProps) {
             <p className="footer-heading">{section.title}</p>
             <div className="footer-links">
               {section.links.map((link) => (
-                <a href={link.href} key={link.href}>
+                <a href={getSafeInternalHash(link.href)} key={link.href}>
                   {link.label}
                 </a>
               ))}

@@ -22,7 +22,6 @@ export function CreateAccountPage({ content, countryRegions, onSuccess }: Create
       shipping: address,
       billing: address,
     });
-    console.info('Create account payload ready for future API integration:', formPayload);
     onSuccess();
   }
 
@@ -69,7 +68,7 @@ export function CreateAccountPage({ content, countryRegions, onSuccess }: Create
             return (
               <label className="field" key={field.id}>
                 <span>{field.label}</span>
-                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={field.type === 'password' ? 128 : 180} />
+                <input name={field.id} type={field.type} placeholder={field.placeholder} required={field.required} maxLength={field.type === 'password' ? 128 : 180} inputMode={field.type === 'tel' ? 'tel' : undefined} autoComplete={field.id === 'email' ? 'email' : field.id === 'password' ? 'new-password' : field.id === 'firstName' ? 'given-name' : field.id === 'lastName' ? 'family-name' : field.id === 'phone' ? 'tel' : field.id === 'address1' ? 'street-address' : field.id === 'city' ? 'address-level2' : field.id === 'zip' ? 'postal-code' : 'off'} />
               </label>
             );
           })}

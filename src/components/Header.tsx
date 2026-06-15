@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { NavLink, SiteIdentity } from '../types/siteContent';
+import { getSafeInternalHash } from '../utils/safeUrl';
 
 interface HeaderProps {
   identity: SiteIdentity;
@@ -44,7 +45,7 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
         {navLinks.map((link) => (
           <a
             key={link.href}
-            href={link.href}
+            href={getSafeInternalHash(link.href)}
             onClick={(event) => {
               setIsOpen(false);
               setIsAccountOpen(false);
@@ -95,9 +96,9 @@ export function Header({ identity, navLinks, authLinks, isAuthenticated, onHomeC
               <a
                 className={index === 0 ? 'auth-link auth-link-login' : 'auth-link auth-link-signup'}
                 key={link.href}
-                href={link.href}
+                href={getSafeInternalHash(link.href)}
                 onClick={() => {
-                  const currentHash = window.location.hash || '#/home';
+                  const currentHash = getSafeInternalHash(window.location.hash || '#/home');
                   if (!currentHash.startsWith('#/signin') && !currentHash.startsWith('#/signup')) {
                     sessionStorage.setItem('mstarAuthReturnTo', currentHash);
                   }

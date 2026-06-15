@@ -69,7 +69,8 @@ function AddressSection({ title, address, isEditing, onEdit, onSave }: AddressSe
               <span>{field.label}</span>
               <input
                 name={field.id}
-                type="text"
+                type={field.id === 'phone' ? 'tel' : 'text'}
+                inputMode={field.id === 'phone' ? 'tel' : undefined}
                 defaultValue={address[field.id]}
                 autoComplete={field.autoComplete}
                 required
@@ -208,28 +209,12 @@ export function EventCheckoutPage({ event, isAuthenticated }: EventCheckoutPageP
                     <span>Discover</span>
                   </div>
                 </div>
-                <p className="checkout-payment-label">Credit card payment</p>
-                <form className="payment-form">
-                  <label className="checkout-field checkout-field-wide">
-                    <span>Credit Card Number</span>
-                    <input name="cardNumber" type="text" inputMode="numeric" autoComplete="cc-number" placeholder="0000 0000 0000 0000" maxLength={23} />
-                  </label>
-                  <label className="checkout-field">
-                    <span>Name on Card</span>
-                    <input name="cardName" type="text" autoComplete="cc-name" placeholder="Name on card" maxLength={180} />
-                  </label>
-                  <label className="checkout-field">
-                    <span>Expiration date</span>
-                    <input name="cardExpiry" type="text" inputMode="numeric" autoComplete="cc-exp" placeholder="MM / YY" maxLength={7} />
-                  </label>
-                  <label className="checkout-field">
-                    <span>CVV</span>
-                    <input name="cardCvv" type="text" inputMode="numeric" autoComplete="cc-csc" placeholder="CVV" maxLength={4} />
-                  </label>
-                  <button className="btn btn-gold checkout-save" type="button">
+                <p className="checkout-payment-label">Secure payment is not connected on this static preview. No card details are collected here.</p>
+                <div className="payment-form">
+                  <button className="btn btn-gold checkout-save" type="button" disabled>
                     Complete Registration
                   </button>
-                </form>
+                </div>
               </section>
             )}
           </div>

@@ -16,6 +16,7 @@ import { EventCheckoutPage } from './components/EventCheckoutPage';
 import { InfoPage } from './components/InfoPage';
 import { TicketPage } from './components/TicketPage';
 import { siteContent } from './data/siteContent';
+import { getSafeInternalHash } from './utils/safeUrl';
 
 function getRoute() {
   const hash = window.location.hash;
@@ -59,8 +60,9 @@ export default function App() {
     const returnTo = sessionStorage.getItem('mstarAuthReturnTo');
     sessionStorage.removeItem('mstarAuthReturnTo');
 
-    if (returnTo && !returnTo.startsWith('#/signin') && !returnTo.startsWith('#/signup')) {
-      window.location.hash = returnTo;
+    const safeReturnTo = returnTo ? getSafeInternalHash(returnTo) : undefined;
+    if (safeReturnTo && !safeReturnTo.startsWith('#/signin') && !safeReturnTo.startsWith('#/signup')) {
+      window.location.hash = safeReturnTo;
       return;
     }
 
