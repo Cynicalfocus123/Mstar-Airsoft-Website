@@ -128,6 +128,12 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Removed `ZIP-LINE` from the homepage About highlight so it now reads `ATV RIDE, JUNGLE TOUR`, and changed both TBA event-card entry fees from `$120.00 USD` to `$160.00 USD`.
+- Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
+- Scope: The first Force of Conquest event, guide-page Zipline copy, Ticket page pricing, and all layouts remain unchanged.
+- Verification: TypeScript, Vite production build, targeted content checks, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Changed only the Ticket page Pre Sale and General Ticket display prices from `$120.00 USD` / `$160.00 USD` to `€120.00 EURO` / `€160.00 EURO`. Homepage pricing, Stripe IDs, card content, and layout remain unchanged.
 - Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
 - Verification: TypeScript, Vite production build, and `git diff --check` passed.
