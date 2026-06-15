@@ -45,7 +45,7 @@ export function BannerSlider({ slides }: BannerSliderProps) {
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             poster={posterUrl}
             onCanPlay={() => setVideoReady(true)}
             onPlaying={() => setVideoReady(true)}

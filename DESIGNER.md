@@ -181,6 +181,8 @@
 
 ## Changelog
 
+- 2026-06-15: Replaced only the homepage splash/header video asset with `force-of-conquest-header-compress-video.mp4`. The hero keeps the exact existing class names, crop/object-fit behavior, height, poster fallback, overlay, CTA, typography, spacing, and responsive composition. Desktop, tablet, iPhone/mobile Safari, and Android continue using the same muted looping inline native-video treatment, now from one local MP4 with metadata preload.
+
 - 2026-06-15: Renamed the Ticket package to Pre Sale and the €69 add-on to Camping Experience, and updated only their Stripe Buy Button targets. Both controls retain the existing shared centered wrapper, proven 360px host cap, bottom-of-card placement, and responsive desktop/tablet/mobile/mobile-desktop containment. Ticket/add-on pricing, supporting copy, features, spacing, colors, borders, and page layout remain unchanged.
 
 - 2026-06-15: The Events page Force of Conquest card now uses the supplied official `1793x798` event artwork and routes the entire card directly to the internal Ticket page for registration. The image keeps its native ratio with `object-fit: contain`, a dark backing surface, minimal overlay, and disabled hover zoom so the logo, event title, date, and Thailand text remain visible across desktop, tablet, and mobile. The Rules & Regulation page now places its long-form text directly on the existing dark tactical page background instead of inside boxed panels; it retains a comfortable 900px reading width, strong white headings, muted body copy, aligned bullets, normal section spacing, subtle gold dividers, and mobile-safe page padding.

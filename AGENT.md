@@ -132,6 +132,12 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Replaced only the homepage splash/header background-video source with the newly supplied optimized MP4 at `public/videos/force-of-conquest-header-compress-video.mp4`. Removed the prior separate remote desktop/mobile source values so the hero now uses one local deployment-safe MP4 through the existing asset helper.
+- Preserved the existing `BannerSlider` component, hero CSS classes, object-fit, sizing, height, poster fallback, overlay, `Get Ticket Now` CTA, text, navigation, spacing, and responsive layout. The native video remains `autoPlay`, `muted`, `loop`, and `playsInline`; changed only preload behavior from `auto` to `metadata` for the requested mobile-friendly loading behavior.
+- Files changed: `public/videos/force-of-conquest-header-compress-video.mp4`, `src/data/siteContent.ts`, `src/components/BannerSlider.tsx`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: Source/target SHA-256 matched; `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, production-output video presence/path checks, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Updated only the Ticket page Stripe product labels and Buy Button IDs. Renamed `Early Bird` to `Pre Sale` and replaced its button ID with `buy_btn_1TiUFN5Kev5Ia2RiD8wrJaVz`. Renamed `Extra Camping Gears` to `Camping Experience` and replaced its button ID with `buy_btn_1TiUMF5Kev5Ia2RiheGKvjgJ`.
 - Preserved the €120 ticket price, original-price text, expiry, stay text, Live Music/Food Court features, €69 add-on price, description, card design, shared centered wrapper, responsive 360px Stripe host cap, and single page-level Stripe script. The supplied publishable key remains unchanged and no secret key was added.
 - Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
