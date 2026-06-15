@@ -79,22 +79,22 @@ export const siteContent: SiteContent = {
     description: '',
     packages: [
       {
-        label: 'Early Bird',
+        label: 'Pre Sale',
         price: '€120.00 EURO',
         originalPrice: '(Original Price €160.00 EURO)',
         expiry: 'Expire November 20, 2026',
         details: ['3 Days / 2 Nights'],
         perks: ['Live Music', 'Food Court'],
-        stripeBuyButtonId: 'buy_btn_1TiFmd5Kev5Ia2Rir5v4MnHw',
+        stripeBuyButtonId: 'buy_btn_1TiUFN5Kev5Ia2RiD8wrJaVz',
         stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },
     ],
     addons: [
       {
-        title: 'Extra Camping Gears',
+        title: 'Camping Experience',
         price: '€69 EURO',
         description: 'Add additional camping set.',
-        stripeBuyButtonId: 'buy_btn_1TiFro5Kev5Ia2RilQzPvFMo',
+        stripeBuyButtonId: 'buy_btn_1TiUMF5Kev5Ia2RiheGKvjgJ',
         stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },
     ],

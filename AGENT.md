@@ -132,6 +132,12 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Updated only the Ticket page Stripe product labels and Buy Button IDs. Renamed `Early Bird` to `Pre Sale` and replaced its button ID with `buy_btn_1TiUFN5Kev5Ia2RiD8wrJaVz`. Renamed `Extra Camping Gears` to `Camping Experience` and replaced its button ID with `buy_btn_1TiUMF5Kev5Ia2RiheGKvjgJ`.
+- Preserved the €120 ticket price, original-price text, expiry, stay text, Live Music/Food Court features, €69 add-on price, description, card design, shared centered wrapper, responsive 360px Stripe host cap, and single page-level Stripe script. The supplied publishable key remains unchanged and no secret key was added.
+- Files changed: `src/data/siteContent.ts`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, exact Buy Button ID/script-count checks, and `git diff --check` passed.
+- Next steps: Stripe controls product availability; a `Sold out` state can only be changed in Stripe if the live product reports it.
+
 - 2026-06-15: Updated the Force of Conquest event record with a data-driven `#/ticket` destination so the whole card routes directly to the Ticket page on both the Events page and homepage Game Schedules. Other event cards retain their existing event-detail routes, with no nested links or external redirects.
 - Official event image: Copied the supplied unchanged `site content/Screenshot_1.png` artwork to `public/images/events/force-of-conquest-card.png` and updated the first event image path. The Events page uses the existing deployment-safe asset helper, the image's native `1793 / 798` ratio, `object-fit: contain`, a dark background, a reduced overlay, and no hover zoom so the MSTAR logo, Force of Conquest title, January 8-10, 2027 date, and Thailand text remain readable across desktop, tablet, and mobile.
 - Rules & Regulation: Added a slug-specific `policy-layout-rules` treatment that removes panel borders, filled backgrounds, box shadows, and boxed padding from the main rules sections only. Rules text now sits directly on the tactical page background with a comfortable 900px reading width, normal section spacing, subtle gold dividers, readable typography/lists, and inherited mobile-safe page padding. Other guide/legal pages keep their existing panel layouts.
