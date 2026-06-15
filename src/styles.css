@@ -400,7 +400,6 @@ textarea {
 }
 
 .card-grid,
-.package-offer-grid,
 .rule-list,
 .contact-grid {
   display: grid;
@@ -409,12 +408,6 @@ textarea {
 
 .card-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.package-offer-grid {
-  grid-template-columns: minmax(0, 520px);
-  justify-content: center;
-  align-items: stretch;
 }
 
 .event-card {
@@ -427,19 +420,6 @@ textarea {
   gap: 18px;
   width: 100%;
   min-width: 0;
-}
-
-.package-offer-heading {
-  margin-right: auto;
-  margin-left: auto;
-  padding-inline: clamp(4px, 1vw, 12px);
-  text-align: center;
-}
-
-.package-offer-heading h2 {
-  font-size: clamp(2rem, 6vw, 4rem);
-  overflow-wrap: anywhere;
-  text-wrap: balance;
 }
 
 .package-offer-card-header {
@@ -953,10 +933,6 @@ select:focus {
     grid-template-columns: 1fr 1fr;
   }
 
-  .package-offer-grid {
-    grid-template-columns: minmax(0, 560px);
-  }
-
   .footer-link-columns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1007,7 +983,6 @@ select:focus {
 
   .hero-grid,
   .registration-form,
-  .package-offer-grid,
   .card-grid,
   .rule-list,
   .contact-grid {
@@ -1016,10 +991,6 @@ select:focus {
 
   .btn {
     width: 100%;
-  }
-
-  .package-offer-heading h2 {
-    font-size: clamp(1.85rem, 10vw, 3rem);
   }
 
   .event-card h3 {
@@ -1390,9 +1361,22 @@ select:focus {
   margin-bottom: 34px;
 }
 
+.ticket-page-hero {
+  text-align: center;
+}
+
+.ticket-page-hero h1 {
+  width: 100%;
+  font-size: clamp(2.75rem, 10vw, 6.5rem);
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
 .ticket-page-hero p:not(.eyebrow) {
   max-width: 720px;
-  margin-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 .ticket-package-grid,

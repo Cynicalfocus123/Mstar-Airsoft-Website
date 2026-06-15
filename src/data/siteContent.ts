@@ -31,7 +31,7 @@ export const siteContent: SiteContent = {
       eyebrow: 'Featured Tournament',
       title: 'Gold Rush Open',
       body: 'Squad-based tournament registration is open now for the next Mstar Airsoft operation.',
-      cta: { label: 'Sign Up Now', href: '#/signup', variant: 'primary' },
+      cta: { label: 'Get Ticket Now', href: '#/ticket', variant: 'primary' },
     },
   ],
   hero: {
@@ -73,25 +73,6 @@ export const siteContent: SiteContent = {
     backgroundImagePath: '/images/about-background.webp',
     mobileBackgroundImagePath: '/images/about-background.webp',
   },
-  packageOffer: {
-    eyebrow: '',
-    title: 'Package Offer',
-    offers: [
-      {
-        label: 'Early Bird',
-        price: '€120.00 EURO',
-        originalPrice: '(Original Price €160.00 EURO)',
-        expiry: 'Expire November 20, 2026',
-        details: ['3 Days / 2 Nights'],
-        perks: [
-          'Live Music',
-          'Food Court',
-          '2 Person Tent',
-          'Camping Equipment',
-        ],
-      },
-    ],
-  },
   ticketPage: {
     eyebrow: '',
     title: 'Ticket',
@@ -103,7 +84,7 @@ export const siteContent: SiteContent = {
         originalPrice: '(Original Price €160.00 EURO)',
         expiry: 'Expire November 20, 2026',
         details: ['3 Days / 2 Nights'],
-        perks: ['Live Music', 'Food Court', '2 Person Tent', 'Camping Equipment'],
+        perks: ['Live Music', 'Food Court'],
         stripeBuyButtonId: 'buy_btn_1TiFmd5Kev5Ia2Rir5v4MnHw',
         stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },

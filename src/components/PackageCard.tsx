@@ -1,8 +1,8 @@
-import type { PackageOfferItem } from '../types/siteContent';
+import type { TicketPackageItem } from '../types/siteContent';
 import { StripeBuyButton } from './StripeBuyButton';
 
 interface PackageCardProps {
-  offer: PackageOfferItem;
+  offer: TicketPackageItem;
 }
 
 export function PackageCard({ offer }: PackageCardProps) {

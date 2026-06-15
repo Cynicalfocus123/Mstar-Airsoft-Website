@@ -58,7 +58,7 @@ export interface AboutContent {
   mobileBackgroundImagePath?: string;
 }
 
-export interface PackageOfferItem {
+export interface TicketPackageItem {
   label: string;
   price: string;
   originalPrice?: string;
@@ -69,17 +69,11 @@ export interface PackageOfferItem {
   stripePublishableKey?: string;
 }
 
-export interface PackageOfferContent {
-  eyebrow: string;
-  title: string;
-  offers: PackageOfferItem[];
-}
-
 export interface TicketPageContent {
   eyebrow: string;
   title: string;
   description: string;
-  packages: PackageOfferItem[];
+  packages: TicketPackageItem[];
   addons: Array<{
     title: string;
     price: string;
@@ -193,7 +187,6 @@ export interface SiteContent {
   heroSlides: HeroSlide[];
   hero: HeroContent;
   about: AboutContent;
-  packageOffer: PackageOfferContent;
   ticketPage: TicketPageContent;
   events: EventCard[];
   registrationFields: FormField[];

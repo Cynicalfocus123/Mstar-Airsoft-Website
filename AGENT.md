@@ -132,6 +132,14 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 
 ## Current Task Log
 
+- 2026-06-15: Removed the homepage Package Offer section completely, including its `App.tsx` render, standalone component, typed homepage data contract, content block, and section-only CSS. The homepage now flows directly from About into Events with no empty section gap.
+- Homepage hero CTA: Changed `Sign Up Now` to `Get Ticket Now` and changed its existing hash route from `#/signup` to `#/ticket`; the centered responsive splash-button treatment is unchanged.
+- Ticket page: Retained one centered Early Bird card with `€120.00 EURO`, `(Original Price €160.00 EURO)`, `Expire November 20, 2026`, and `3 Days / 2 Nights`. Reduced feature rows to `Live Music` and `Food Court` only; removed `2 Person Tent` and `Camping Equipment` from remaining ticket data.
+- Responsive layout: Centered the Ticket page title explicitly across desktop, tablet, and mobile with responsive `clamp()` sizing, full-width text alignment, and overflow-safe wrapping. The single card remains centered at its existing 560px maximum and near full-width with safe mobile gutters.
+- Files changed: `src/App.tsx`, removed `src/components/PackageOffer.tsx`, `src/components/PackageCard.tsx`, `src/data/siteContent.ts`, `src/types/siteContent.ts`, `src/styles.css`, `AGENT.md`, and `DESIGNER.md`.
+- Verification: `cmd /c npx tsc --noEmit`, `cmd /c npm run build`, and `git diff --check` passed.
+- Next steps: None planned after successful commit and push.
+
 - 2026-06-15: Replaced the two-card homepage Package Offer and Ticket page package grids with one centered Early Bird card. Removed the separate Regular Package / General Ticket €160 card and its Stripe Buy Button data everywhere from the package/ticket surfaces.
 - Early Bird content: `€120.00 EURO`, `(Original Price €160.00 EURO)`, `Expire November 20, 2026`, `3 Days / 2 Nights`, `Live Music`, `Food Court`, `2 Person Tent`, and `Camping Equipment`. The Ticket page retains the existing Early Bird Stripe Buy Button.
 - Responsive layout: Homepage uses one centered card capped at 520px. Ticket page uses one centered card capped at 560px; tablet stays centered with the existing page spacing, and mobile uses near-full width with a safe 12px side gutter and no overflow.
