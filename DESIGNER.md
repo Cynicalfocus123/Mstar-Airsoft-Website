@@ -375,6 +375,8 @@ When the user asks for a future deployment ZIP, report:
 
 - 2026-06-22: Added a premium tactical Ticket page registration guide above the first payment card, with a five-step card layout over the supplied airsoft background image, Thai/English registration form CTA buttons, and an Authorization of a Supervising Adult section. The new sections stack safely on mobile/tablet, preserve the existing Ticket cards and Stripe wrappers, leave the incomplete English authorization link disabled as link-pending, and were committed/pushed to GitHub for review with no cPanel ZIP or real server upload.
 
+- 2026-06-23: Fixed GitHub Pages preview routing without changing the visual design by using a GitHub Pages-specific build base `/Mstar-Airsoft-Website/`, adding a generated `404.html` SPA fallback for clean routes like `/ticket`, and making the app router understand the repo base path. The live cPanel/root-domain build remains base `/`, and no cPanel ZIP, server upload, DNS/SSL, hosting, layout, Stripe, media, or content behavior changed.
+
 - 2026-05-17: Established tactical visual system, responsive rules, logo/header/footer constraints, lightweight image strategy, and backend-ready design rules for initial site build.
 - 2026-05-17: Confirmed build-readiness work did not change visual rules; kept logo and gallery asset paths compatible with Vite.
 - 2026-05-17: Kept generated artifacts out of source control so deployed design stays lightweight and maintainable.

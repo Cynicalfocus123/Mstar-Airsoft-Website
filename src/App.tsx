@@ -20,7 +20,11 @@ import { getSeoForPath } from './data/seoContent';
 import { getSafeInternalPath } from './utils/safeUrl';
 
 function getRoute() {
-  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  const basePath = new URL(import.meta.env.BASE_URL, window.location.origin).pathname.replace(/\/+$/, '');
+  const rawPath = window.location.pathname.replace(/\/+$/, '') || '/';
+  const path = basePath && rawPath.startsWith(`${basePath}/`)
+    ? rawPath.slice(basePath.length) || '/'
+    : rawPath;
 
   if (path.startsWith('/events/')) return { name: 'eventDetail', eventId: path.replace('/events/', '') };
   if (path.startsWith('/checkout/')) return { name: 'checkout', eventId: path.replace('/checkout/', '') };
