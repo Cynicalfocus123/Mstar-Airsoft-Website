@@ -40,6 +40,7 @@ npm run build
 - Workflow opts JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`.
 - Workflow uses Node 24 for project build.
 - `actions/configure-pages@v5` uses `enablement: true` to handle repositories where Pages is not yet enabled.
+- README deployment links should list direct GitHub Pages preview URLs for the homepage, Ticket, Events, Things to Know, and Rules & Regulation pages so page links are easy to find from the GitHub repo.
 
 On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `npm.ps1`.
 
@@ -551,6 +552,7 @@ When the user asks for a future deployment ZIP, report:
 
 ## Changelog
 
+- 2026-06-23: Added direct GitHub Pages preview links under README Deployment Links and Changes so the repo makes the homepage, Ticket, Events, Things to Know, and Rules & Regulation page URLs easier to find. No cPanel ZIP was created and no real server upload was performed.
 - 2026-06-23: Fixed GitHub Pages internal links so header/footer, hero CTAs, event cards, guide cards, auth links, and checkout links use a base-aware href helper. GitHub Pages test links now stay under `/Mstar-Airsoft-Website/...` instead of jumping to `https://cynicalfocus123.github.io/ticket`; cPanel/root-domain links remain root-based because the standard build base stays `/`. No cPanel ZIP, DNS/SSL, hosting, or server upload changed.
 - 2026-06-23: Fixed GitHub Pages preview deployment after public repo enablement by adding a dedicated `npm run build:github-pages` mode with Vite base `/Mstar-Airsoft-Website/`, a generated `dist/404.html` SPA fallback, GitHub Pages workflow usage of the Pages build, and base-aware clean-route parsing in the app router. Standard and cPanel builds remain root-base `/` for `https://mstarairsoft.com`; no cPanel ZIP, DNS/SSL, hosting, or server upload changed.
 - 2026-06-22: Added a Ticket page registration guide above the first ticket/payment card, including the five-step player registration section with a dark tactical background image, Thai/English registration form buttons, and an Authorization of a Supervising Adult form section. The English Authorization Form URL remains link-pending because the supplied URL was incomplete. No Ticket prices, Stripe Buy Button IDs/wrappers, routes, DNS/SSL/cPanel settings, cPanel ZIP, or server upload changed; work is committed/pushed to GitHub for review before real cPanel deployment.

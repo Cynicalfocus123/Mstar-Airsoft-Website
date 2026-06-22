@@ -4,11 +4,35 @@ React + Vite + TypeScript frontend for Mstar Airsoft tournament and event pages.
 
 ## Live Site
 
-GitHub Pages URL format:
+GitHub Pages preview:
 
 ```text
 https://cynicalfocus123.github.io/Mstar-Airsoft-Website/
 ```
+
+Live production domain:
+
+```text
+https://mstarairsoft.com/
+```
+
+## Deployment Links
+
+- GitHub Pages preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/
+- Production site: https://mstarairsoft.com/
+- Ticket page preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/ticket
+- Events page preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/events
+- Rules page preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/rules-and-regulation
+
+## Changes
+
+Recent GitHub Pages routing fixes can be checked quickly from these links:
+
+- Home: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/
+- Ticket: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/ticket
+- Events: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/events
+- Things to Know: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/things-to-know
+- Rules & Regulation: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/rules-and-regulation
 
 ## Setup
 

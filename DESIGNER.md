@@ -146,6 +146,7 @@
 - Workflow must use Node 24 and Pages artifact deployment from `./dist`.
 - Keep deployment workflow working under `.github/workflows/deploy.yml`.
 - After pushing, confirm live site URL: `https://cynicalfocus123.github.io/Mstar-Airsoft-Website/`.
+- README deployment and changes sections should keep direct GitHub Pages preview links for key pages so the GitHub repo exposes the page URLs without hunting through workflow output.
 
 ## Live cPanel Deployment Rule Update
 
@@ -378,6 +379,8 @@ When the user asks for a future deployment ZIP, report:
 - 2026-06-23: Fixed GitHub Pages preview routing without changing the visual design by using a GitHub Pages-specific build base `/Mstar-Airsoft-Website/`, adding a generated `404.html` SPA fallback for clean routes like `/ticket`, and making the app router understand the repo base path. The live cPanel/root-domain build remains base `/`, and no cPanel ZIP, server upload, DNS/SSL, hosting, layout, Stripe, media, or content behavior changed.
 
 - 2026-06-23: Fixed GitHub Pages preview link behavior without changing layout or content. Internal anchors now use a base-aware href helper so Ticket and other navigation links remain inside `/Mstar-Airsoft-Website/...` on GitHub Pages instead of opening the user-root `https://cynicalfocus123.github.io/ticket` URL, while cPanel/root-domain links remain unchanged.
+
+- 2026-06-23: Added README Deployment Links and Changes page shortcuts for GitHub Pages preview URLs, including Home, Ticket, Events, Things to Know, and Rules & Regulation. This is a repo documentation/discoverability update only; no visual design, route behavior, cPanel ZIP, or server deployment changed.
 
 - 2026-05-17: Established tactical visual system, responsive rules, logo/header/footer constraints, lightweight image strategy, and backend-ready design rules for initial site build.
 - 2026-05-17: Confirmed build-readiness work did not change visual rules; kept logo and gallery asset paths compatible with Vite.
