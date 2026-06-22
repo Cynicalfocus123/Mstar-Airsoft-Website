@@ -1,6 +1,7 @@
 import type { TicketPageContent } from '../types/siteContent';
 import { PackageCard } from './PackageCard';
 import { StripeBuyButton } from './StripeBuyButton';
+import { TicketRegistrationGuide } from './TicketRegistrationGuide';
 
 interface TicketPageProps {
   content: TicketPageContent;
@@ -14,6 +15,7 @@ export function TicketPage({ content }: TicketPageProps) {
         <h1>{content.title}</h1>
         {content.description ? <p>{content.description}</p> : null}
       </section>
+      <TicketRegistrationGuide content={content.registrationGuide} />
       <section className="ticket-package-grid" aria-label="Ticket packages">
         {content.packages.map((offer) => (
           <PackageCard offer={offer} key={offer.label} />

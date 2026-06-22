@@ -1379,6 +1379,242 @@ select:focus {
   text-align: center;
 }
 
+.register-steps-section {
+  position: relative;
+  width: min(1380px, 100%);
+  box-sizing: border-box;
+  margin: 0 auto clamp(28px, 5vw, 48px);
+  overflow: hidden;
+  padding: clamp(42px, 6vw, 56px) clamp(16px, 4vw, 28px) clamp(32px, 5vw, 44px);
+  border: 1px solid rgba(132, 156, 87, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.28);
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.94)),
+    var(--register-bg-image) center top / cover no-repeat,
+    #080908;
+}
+
+.register-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.9)),
+    linear-gradient(180deg, rgba(240, 185, 11, 0.14), transparent 42%);
+  pointer-events: none;
+}
+
+.register-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.register-header {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.register-header h2 {
+  max-width: 980px;
+  margin: 0 auto;
+  color: #f5f5f5;
+  font-size: clamp(2.6rem, 5.4rem, 5.5rem);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.8);
+}
+
+.register-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--gold);
+  font-size: clamp(1rem, 1.5rem, 1.75rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.subtitle-line {
+  width: 150px;
+  max-width: 22%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.register-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 10px;
+}
+
+.register-step-card {
+  position: relative;
+  min-width: 0;
+  min-height: 390px;
+  box-sizing: border-box;
+  padding: 76px clamp(18px, 2vw, 28px) 30px;
+  border: 1px solid rgba(132, 156, 87, 0.55);
+  background: linear-gradient(180deg, rgba(23, 28, 22, 0.9), rgba(8, 10, 8, 0.94));
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.55), 0 16px 35px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.register-step-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78px;
+  height: 78px;
+  background: linear-gradient(135deg, #596d32, #2c3b1d);
+  clip-path: polygon(0 0, 100% 0, 72% 48%, 38% 48%, 0 100%);
+}
+
+.corner-number {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  margin-bottom: 28px;
+  color: #dce8d7;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 8px rgba(150, 180, 85, 0.45));
+}
+
+.step-icon span {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border: 1px solid rgba(240, 185, 11, 0.48);
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.register-step-card h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: clamp(1.3rem, 1.9rem, 1.95rem);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.register-step-card h4 {
+  min-height: 44px;
+  margin: 0;
+  color: #9fbd64;
+  font-size: clamp(0.9rem, 1.05rem, 1.1rem);
+  line-height: 1.12;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.step-divider {
+  width: 100%;
+  height: 1px;
+  margin: 22px auto 20px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24), transparent);
+}
+
+.register-step-card p {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(0.9rem, 1rem, 1.05rem);
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+.register-step-card strong {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.ticket-form-guide {
+  display: grid;
+  width: min(1160px, 100%);
+  margin: 0 auto clamp(34px, 5vw, 52px);
+  gap: clamp(16px, 2vw, 22px);
+}
+
+.ticket-form-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: clamp(18px, 3vw, 34px);
+  align-items: center;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: clamp(20px, 3vw, 28px);
+  border: 1px solid rgba(240, 185, 11, 0.36);
+  background:
+    linear-gradient(135deg, rgba(89, 109, 50, 0.22), transparent 46%),
+    rgba(11, 13, 10, 0.96);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.38);
+}
+
+.ticket-form-card h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.45rem, 2.35rem, 2.4rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.ticket-form-card p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.ticket-form-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.ticket-form-button {
+  width: 100%;
+  min-height: 52px;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: normal;
+}
+
+.ticket-form-button-disabled {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.08);
+  cursor: not-allowed;
+}
+
 .ticket-package-grid,
 .ticket-addon-grid {
   display: grid;
@@ -1503,6 +1739,24 @@ select:focus {
 }
 
 @media (max-width: 900px) {
+  .register-steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .register-step-card {
+    min-height: 340px;
+  }
+
+  .register-step-card:last-child {
+    grid-column: 1 / -1;
+    width: min(420px, 100%);
+    margin: 0 auto;
+  }
+
+  .ticket-form-card {
+    grid-template-columns: 1fr;
+  }
+
   .ticket-addon-grid {
     grid-template-columns: minmax(0, 560px);
   }
@@ -1525,6 +1779,59 @@ select:focus {
 }
 
 @media (max-width: 640px) {
+  .register-steps-section {
+    width: 100%;
+    padding: 42px 16px 32px;
+    background-position: center top;
+  }
+
+  .register-header {
+    margin-bottom: 28px;
+  }
+
+  .register-header h2 {
+    font-size: 2.45rem;
+  }
+
+  .register-subtitle {
+    align-items: stretch;
+    font-size: 1rem;
+  }
+
+  .subtitle-line {
+    width: 58px;
+  }
+
+  .register-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .register-step-card,
+  .register-step-card:last-child {
+    width: 100%;
+    min-height: 0;
+    padding: 72px 24px 26px;
+  }
+
+  .step-icon {
+    height: 60px;
+    margin-bottom: 24px;
+  }
+
+  .step-icon span {
+    width: 60px;
+    height: 60px;
+  }
+
+  .register-step-card p {
+    font-size: 0.9rem;
+  }
+
+  .ticket-form-actions {
+    grid-template-columns: 1fr;
+  }
+
   .ticket-package-grid,
   .ticket-addon-grid {
     grid-template-columns: 1fr;

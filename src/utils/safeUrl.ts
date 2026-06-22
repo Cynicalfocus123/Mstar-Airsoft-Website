@@ -14,6 +14,18 @@ export function getSafeMailtoHref(value: string) {
   return /^mailto:[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(value) ? value : undefined;
 }
 
+export function getSafeGoogleFormUrl(value?: string) {
+  if (!value) return undefined;
+
+  try {
+    const url = new URL(value);
+    const isGoogleForm = url.hostname === 'docs.google.com' && /^\/forms\/d\/e\/[a-z0-9_-]+\/viewform$/i.test(url.pathname);
+    return url.protocol === 'https:' && isGoogleForm ? url.toString() : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export function getSafeLocalAssetPath(value?: string) {
   if (!value || !localAssetPattern.test(value) || value.includes('..') || value.includes('\\')) {
     return undefined;

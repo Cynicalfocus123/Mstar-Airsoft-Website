@@ -160,6 +160,7 @@
 - Do not deploy anything unless the user specifically asks: `prepare cPanel ZIP` or `make deployment ZIP`.
 - Do not create a deployment ZIP unless the user specifically asks: `prepare cPanel ZIP` or `make deployment ZIP`.
 - Do not add HSTS unless the user specifically asks. SSL was recently fixed, so keep HSTS disabled for now.
+- Live-site changes must be committed and pushed to GitHub for review before any real server/cPanel deployment. Do not upload to cPanel or create a cPanel ZIP unless the user specifically asks `prepare cPanel ZIP` or `make deployment ZIP`.
 
 ### Future CSS/Design Update Workflow
 
@@ -371,6 +372,8 @@ When the user asks for a future deployment ZIP, report:
 - 2026-06-13: Updated the homepage Package Offer section to use two balanced tactical cards: Early Bird at $120 ending November 20, 2026, and Regular Package at $160 for 3 Days / 2 Nights. Both retain the same four feature rows, display side by side on desktop, stack on tablet/mobile, and use responsive title/card sizing to prevent cropping or overflow. Replaced the separate homepage YouTube player with embed `VYv1pw_dM1Y` while preserving its existing frame styling.
 
 - 2026-06-15: Added static SEO, route-aware metadata, JSON-LD structured data, `sitemap.xml`, and `robots.txt` for the live cPanel domain. This was a non-visual SEO update only: no backend was added, no DNS/SSL/cPanel hosting setup was changed, no deployment ZIP was created, and no design, layout, navigation, Stripe, video, or image presentation was changed.
+
+- 2026-06-22: Added a premium tactical Ticket page registration guide above the first payment card, with a five-step card layout over the supplied airsoft background image, Thai/English registration form CTA buttons, and an Authorization of a Supervising Adult section. The new sections stack safely on mobile/tablet, preserve the existing Ticket cards and Stripe wrappers, leave the incomplete English authorization link disabled as link-pending, and were committed/pushed to GitHub for review with no cPanel ZIP or real server upload.
 
 - 2026-05-17: Established tactical visual system, responsive rules, logo/header/footer constraints, lightweight image strategy, and backend-ready design rules for initial site build.
 - 2026-05-17: Confirmed build-readiness work did not change visual rules; kept logo and gallery asset paths compatible with Vite.

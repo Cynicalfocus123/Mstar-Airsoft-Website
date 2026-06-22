@@ -72,6 +72,81 @@ export const siteContent: SiteContent = {
     eyebrow: '',
     title: 'Ticket',
     description: '',
+    registrationGuide: {
+      title: 'How to Register as a Player or Participant',
+      subtitle: 'Follow these steps before arriving at the event.',
+      backgroundImagePath: '/images/airsoft-register-bg.avif',
+      steps: [
+        {
+          id: 'complete-registration',
+          eyebrow: 'Step 1',
+          title: 'Complete Your Registration',
+          body: 'Fill in your personal information and click Buy Ticket Now to proceed.',
+          highlight: 'Buy Ticket Now',
+          iconLabel: 'Form',
+        },
+        {
+          id: 'sign-waiver',
+          eyebrow: 'Step 2',
+          title: 'Sign the Waiver Form',
+          body: 'Review and sign the Waiver, Terms & Conditions Form. You may also download the form, print it, and bring a signed copy to the event.',
+          iconLabel: 'Sign',
+        },
+        {
+          id: 'make-payment',
+          eyebrow: 'Step 3',
+          title: 'Make Payment',
+          body: 'Complete your registration by submitting payment through the available payment methods.',
+          iconLabel: 'Pay',
+        },
+        {
+          id: 'receive-confirmation',
+          eyebrow: 'Step 4',
+          title: 'Receive Confirmation',
+          body: 'Once your payment has been verified, a confirmation receipt will be sent to your registered email address.',
+          iconLabel: 'Mail',
+        },
+        {
+          id: 'bring-documents',
+          eyebrow: 'Step 5',
+          title: 'Bring Required Documents',
+          body: 'Print your confirmation receipt and signed waiver form, and present them at the registration desk upon arrival at the event.',
+          iconLabel: 'Docs',
+        },
+      ],
+      formSections: [
+        {
+          id: 'registration-forms',
+          title: 'Registration Forms',
+          description: 'Choose the correct registration form below. Thai and English forms are available.',
+          links: [
+            {
+              label: 'Thai Registration Form',
+              href: 'https://docs.google.com/forms/d/e/1FAIpQLSco2e7dI8zymqGzfB1xcLm3jejRSn27WplT3FFmxPi7M0I_hg/viewform',
+            },
+            {
+              label: 'English Registration Form',
+              href: 'https://docs.google.com/forms/d/e/1FAIpQLSeFCydHWUcBifIjLaXED0OOsDmfprUmwt-_k5aHZ-RY1NN1lg/viewform?usp=send_form',
+            },
+          ],
+        },
+        {
+          id: 'adult-authorization',
+          title: 'Authorization of a Supervising Adult',
+          description: 'Required for participants who need adult authorization. Please complete the correct Thai or English form before arrival.',
+          links: [
+            {
+              label: 'Thai Authorization Form',
+              href: 'https://docs.google.com/forms/d/e/1FAIpQLSco2e7dI8zymqGzfB1xcLm3jejRSn27WplT3FFmxPi7M0I_hg/viewform',
+            },
+            {
+              label: 'English Authorization Form',
+              pendingLabel: 'English Authorization Form - Link Pending',
+            },
+          ],
+        },
+      ],
+    },
     packages: [
       {
         label: 'Pre Sale',

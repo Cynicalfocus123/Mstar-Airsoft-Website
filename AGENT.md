@@ -56,6 +56,7 @@ On this Windows shell, use `cmd /c npm ...` if PowerShell script policy blocks `
 - Do not deploy anything unless the user specifically asks: `prepare cPanel ZIP` or `make deployment ZIP`.
 - Do not create a deployment ZIP unless the user specifically asks: `prepare cPanel ZIP` or `make deployment ZIP`.
 - Do not add HSTS unless the user specifically asks. SSL was recently fixed, so keep HSTS disabled for now.
+- Live-site changes must be committed and pushed to GitHub for review before any real server/cPanel deployment. Do not upload to cPanel or create a cPanel ZIP unless the user specifically asks `prepare cPanel ZIP` or `make deployment ZIP`.
 
 ### Future CSS/Design Update Workflow
 
@@ -550,6 +551,7 @@ When the user asks for a future deployment ZIP, report:
 
 ## Changelog
 
+- 2026-06-22: Added a Ticket page registration guide above the first ticket/payment card, including the five-step player registration section with a dark tactical background image, Thai/English registration form buttons, and an Authorization of a Supervising Adult form section. The English Authorization Form URL remains link-pending because the supplied URL was incomplete. No Ticket prices, Stripe Buy Button IDs/wrappers, routes, DNS/SSL/cPanel settings, cPanel ZIP, or server upload changed; work is committed/pushed to GitHub for review before real cPanel deployment.
 - 2026-06-15: Added static SEO and Google snippet readiness for the live cPanel domain with typed SEO data, route-aware head metadata, JSON-LD structured data, `sitemap.xml`, and `robots.txt`. No backend was added, no DNS/SSL/cPanel hosting setup was changed, no HSTS was added, no cPanel deployment ZIP was created, and visible design/routes/buttons/Stripe behavior remain unchanged.
 - 2026-05-17: Created first full frontend version with data-driven architecture, tactical visual direction, replaceable logo path, README, and project memory files.
 - 2026-05-17: Fixed TypeScript build readiness by adding React DOM types and Vite env declarations after initial build check.

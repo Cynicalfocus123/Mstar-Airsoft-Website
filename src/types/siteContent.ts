@@ -69,10 +69,39 @@ export interface TicketPackageItem {
   stripePublishableKey?: string;
 }
 
+export interface TicketRegistrationStep {
+  id: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+  highlight?: string;
+  iconLabel: string;
+}
+
+export interface TicketFormLink {
+  label: string;
+  href?: string;
+  pendingLabel?: string;
+}
+
+export interface TicketFormSection {
+  id: string;
+  title: string;
+  description: string;
+  links: TicketFormLink[];
+}
+
 export interface TicketPageContent {
   eyebrow: string;
   title: string;
   description: string;
+  registrationGuide: {
+    title: string;
+    subtitle: string;
+    backgroundImagePath: string;
+    steps: TicketRegistrationStep[];
+    formSections: TicketFormSection[];
+  };
   packages: TicketPackageItem[];
   addons: Array<{
     title: string;
