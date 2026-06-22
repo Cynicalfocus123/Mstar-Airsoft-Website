@@ -191,6 +191,10 @@ export interface InfoCard {
 export interface InfoSection {
   id: string;
   title: string;
+  items?: Array<{
+    type: 'paragraph' | 'bullet';
+    text: string;
+  }>;
   paragraphs?: string[];
   bullets?: string[];
   links?: Array<{
@@ -204,6 +208,13 @@ export interface InfoSection {
   }>;
 }
 
+export interface InfoLanguageVersion {
+  id: string;
+  label: string;
+  lang: string;
+  sections: InfoSection[];
+}
+
 export interface InfoPageContent {
   slug: string;
   eyebrow: string;
@@ -212,6 +223,7 @@ export interface InfoPageContent {
   heroAlign?: 'start' | 'center';
   cards?: InfoCard[];
   sections?: InfoSection[];
+  languageVersions?: InfoLanguageVersion[];
 }
 
 export interface SiteContent {

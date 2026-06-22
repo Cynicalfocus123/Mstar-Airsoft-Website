@@ -1,4 +1,6 @@
-import type { InfoPageContent } from '../types/siteContent';
+import { useState } from 'react';
+import type { ReactNode } from 'react';
+import type { InfoPageContent, InfoSection } from '../types/siteContent';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
 import { getSafeInternalHref, getSafeMailtoHref } from '../utils/safeUrl';
 
@@ -25,6 +27,39 @@ const hiddenHeroSlugs = new Set([
   'equipment',
 ]);
 
+function renderPolicyItems(section: InfoSection) {
+  if (!section.items) return null;
+
+  const nodes: ReactNode[] = [];
+  let bulletGroup: string[] = [];
+
+  const flushBullets = () => {
+    if (!bulletGroup.length) return;
+
+    nodes.push(
+      <ul className="policy-bullet-list" key={`bullets-${nodes.length}`}>
+        {bulletGroup.map((bullet) => (
+          <li key={bullet}>{bullet}</li>
+        ))}
+      </ul>,
+    );
+    bulletGroup = [];
+  };
+
+  section.items.forEach((item, index) => {
+    if (item.type === 'bullet') {
+      bulletGroup.push(item.text);
+      return;
+    }
+
+    flushBullets();
+    nodes.push(<p key={`${section.id}-paragraph-${index}`}>{item.text}</p>);
+  });
+
+  flushBullets();
+  return nodes;
+}
+
 export function InfoPage({ content }: InfoPageProps) {
   if (!content) {
     return (
@@ -40,6 +75,9 @@ export function InfoPage({ content }: InfoPageProps) {
 
   const isActivityPage = content.slug === 'activity';
   const shouldShowHero = !hiddenHeroSlugs.has(content.slug);
+  const [activeLanguageId, setActiveLanguageId] = useState(content.languageVersions?.[0]?.id);
+  const activeLanguage = content.languageVersions?.find((language) => language.id === activeLanguageId) ?? content.languageVersions?.[0];
+  const visibleSections = activeLanguage?.sections ?? content.sections;
   const policyClassName = [
     'policy-layout',
     content.slug === 'rules-and-regulation' ? 'policy-layout-rules' : '',
@@ -94,12 +132,28 @@ export function InfoPage({ content }: InfoPageProps) {
           })}
         </section>
       )}
-      {content.sections && (
+      {content.languageVersions && (
+        <div className="policy-language-toggle" aria-label={`${content.title} language`}>
+          {content.languageVersions.map((language) => (
+            <button
+              className={`policy-language-button ${language.id === activeLanguage?.id ? 'policy-language-button-active' : ''}`}
+              type="button"
+              onClick={() => setActiveLanguageId(language.id)}
+              aria-pressed={language.id === activeLanguage?.id}
+              key={language.id}
+            >
+              {language.label}
+            </button>
+          ))}
+        </div>
+      )}
+      {visibleSections && (
         <section
           className={policyClassName}
           aria-label={content.title}
+          lang={activeLanguage?.lang}
         >
-          {content.sections.map((section) => (
+          {visibleSections.map((section) => (
             <article className="policy-section" key={section.id}>
               <h2 className={isActivityPage && section.id === 'activity-overview' ? 'activity-section-heading' : undefined}>
                 {isActivityPage && section.id === 'activity-overview' ? (
@@ -110,6 +164,7 @@ export function InfoPage({ content }: InfoPageProps) {
                   </>
                 ) : section.title}
               </h2>
+              {renderPolicyItems(section)}
               {section.paragraphs?.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

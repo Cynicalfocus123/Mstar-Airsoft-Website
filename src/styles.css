@@ -1577,7 +1577,7 @@ select:focus {
   display: grid;
   width: min(1160px, 100%);
   margin: 0 auto clamp(34px, 5vw, 52px);
-  gap: clamp(16px, 2vw, 22px);
+  gap: clamp(26px, 4vw, 42px);
 }
 
 .ticket-form-card {
@@ -1587,12 +1587,15 @@ select:focus {
   align-items: center;
   min-width: 0;
   box-sizing: border-box;
-  padding: clamp(20px, 3vw, 28px);
-  border: 1px solid rgba(240, 185, 11, 0.36);
-  background:
-    linear-gradient(135deg, rgba(89, 109, 50, 0.22), transparent 46%),
-    rgba(11, 13, 10, 0.96);
-  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.38);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.ticket-form-card + .ticket-form-card {
+  padding-top: clamp(22px, 4vw, 34px);
+  border-top: 1px solid rgba(240, 185, 11, 0.16);
 }
 
 .ticket-form-card h2 {
@@ -2112,6 +2115,31 @@ select:focus {
 .policy-layout-rules .policy-bullet-list,
 .policy-layout-plain .policy-bullet-list {
   gap: 14px;
+}
+
+.policy-language-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: min(900px, 100%);
+  margin: 0 auto clamp(28px, 5vw, 44px);
+}
+
+.policy-language-button {
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid rgba(240, 185, 11, 0.34);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.policy-language-button-active {
+  border-color: rgba(240, 185, 11, 0.9);
+  color: #080908;
+  background: var(--gold);
 }
 
 .policy-section h2 {
@@ -2953,6 +2981,15 @@ select:focus {
 
   .policy-section {
     padding: 18px;
+  }
+
+  .policy-language-toggle {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .policy-language-button {
+    width: 100%;
   }
 
   .policy-layout-rules .policy-section,

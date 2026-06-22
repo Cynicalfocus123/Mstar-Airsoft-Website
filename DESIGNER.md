@@ -286,6 +286,7 @@ When the user asks for a future deployment ZIP, report:
 
 ## Changelog
 
+- 2026-06-23: Updated the Ticket page Registration Forms and Authorization of a Supervising Adult sections to remove the large boxed/card treatment so copy and tactical gold form buttons sit directly on the dark page background. The sections keep clean desktop alignment and mobile stacking without horizontal overflow. Updated Terms & Conditions with unboxed English/Thai language buttons near the top, an active-language state, English content from `TERMS OF SERVICE airsoft.pdf`, Thai content from `ข้อกำหนดและเงื่อนไขการใช้บริการ airsoft terms and service.pdf`, and no PDF iframe/viewer. Removed the old generic Terms summary text from both language views. No cPanel ZIP was created and no real server upload was performed; changes were committed and pushed to GitHub for review before real server deployment.
 - 2026-06-15: Footer Gallery remains visually present in the Site Links column but no longer navigates to `/gallery` or a broken/403 page. Header Gallery keeps the same safe non-navigating behavior. Both desktop and mobile navigation keep their existing visual styling.
 
 - 2026-06-15: Activity heading alignment now follows the intended three-line structure: `ACTIVITIES` / `&` / `ENTERTAINMENT EXPERIENCE`, with the ampersand visually centered and responsive across desktop, tablet, and mobile without overflow.
