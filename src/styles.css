@@ -30,6 +30,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
   color: var(--text);
   background:
     linear-gradient(135deg, rgba(196, 33, 34, 0.12), transparent 32%),
@@ -1381,16 +1382,18 @@ select:focus {
 
 .register-steps-section {
   position: relative;
-  width: min(1380px, 100%);
+  width: 100vw;
+  max-width: none;
   box-sizing: border-box;
-  margin: 0 auto clamp(28px, 5vw, 48px);
+  margin: 0 calc(50% - 50vw) clamp(28px, 5vw, 48px);
   overflow: hidden;
-  padding: clamp(42px, 6vw, 56px) clamp(16px, 4vw, 28px) clamp(32px, 5vw, 44px);
-  border: 1px solid rgba(132, 156, 87, 0.5);
-  border-bottom-color: rgba(255, 255, 255, 0.28);
+  padding: clamp(56px, 7vw, 86px) clamp(18px, 4vw, 64px) clamp(42px, 6vw, 64px);
+  scroll-margin-top: 96px;
+  border-top: 1px solid rgba(132, 156, 87, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.26);
   background:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.94)),
-    var(--register-bg-image) center top / cover no-repeat,
+    linear-gradient(180deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.94)),
+    var(--register-bg-image) center center / cover no-repeat,
     #080908;
 }
 
@@ -1406,7 +1409,7 @@ select:focus {
 .register-inner {
   position: relative;
   z-index: 2;
-  max-width: 1380px;
+  width: min(1480px, 100%);
   margin: 0 auto;
 }
 
@@ -1421,11 +1424,12 @@ select:focus {
   max-width: 980px;
   margin: 0 auto;
   color: #f5f5f5;
-  font-size: clamp(2.6rem, 5.4rem, 5.5rem);
-  line-height: 0.95;
+  font-size: clamp(2.7rem, 6.6vw, 6.2rem);
+  line-height: 1;
   font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
+  white-space: pre-line;
   text-shadow: 0 4px 18px rgba(0, 0, 0, 0.8);
 }
 
@@ -1435,7 +1439,7 @@ select:focus {
   justify-content: center;
   gap: 14px;
   color: var(--gold);
-  font-size: clamp(1rem, 1.5rem, 1.75rem);
+  font-size: clamp(1rem, 1.55vw, 1.4rem);
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1.2;
@@ -1453,7 +1457,7 @@ select:focus {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: stretch;
-  gap: 10px;
+  gap: clamp(10px, 1vw, 16px);
 }
 
 .register-step-card {
@@ -1462,10 +1466,13 @@ select:focus {
   min-height: 390px;
   box-sizing: border-box;
   padding: 76px clamp(18px, 2vw, 28px) 30px;
-  border: 1px solid rgba(132, 156, 87, 0.55);
-  background: linear-gradient(180deg, rgba(23, 28, 22, 0.9), rgba(8, 10, 8, 0.94));
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.55), 0 16px 35px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(132, 156, 87, 0.48);
+  background:
+    linear-gradient(180deg, rgba(23, 28, 22, 0.56), rgba(8, 10, 8, 0.7)),
+    rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 0 26px rgba(0, 0, 0, 0.45);
   text-align: center;
+  backdrop-filter: blur(2px);
 }
 
 .register-step-card::before {
@@ -1475,7 +1482,7 @@ select:focus {
   left: 0;
   width: 78px;
   height: 78px;
-  background: linear-gradient(135deg, #596d32, #2c3b1d);
+  background: linear-gradient(135deg, rgba(89, 109, 50, 0.82), rgba(44, 59, 29, 0.58));
   clip-path: polygon(0 0, 100% 0, 72% 48%, 38% 48%, 0 100%);
 }
 
@@ -1511,7 +1518,18 @@ select:focus {
   height: 72px;
   place-items: center;
   border: 1px solid rgba(240, 185, 11, 0.48);
-  background: rgba(0, 0, 0, 0.38);
+  background: rgba(0, 0, 0, 0.22);
+  box-shadow: inset 0 0 20px rgba(240, 185, 11, 0.08);
+}
+
+.step-icon svg {
+  width: 42px;
+  height: 42px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .register-step-card h3 {
@@ -1738,9 +1756,9 @@ select:focus {
   line-height: 1.55;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .register-steps-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .register-step-card {
@@ -1748,8 +1766,8 @@ select:focus {
   }
 
   .register-step-card:last-child {
-    grid-column: 1 / -1;
-    width: min(420px, 100%);
+    grid-column: auto;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -1780,8 +1798,7 @@ select:focus {
 
 @media (max-width: 640px) {
   .register-steps-section {
-    width: 100%;
-    padding: 42px 16px 32px;
+    padding: 44px 16px 34px;
     background-position: center top;
   }
 
@@ -1790,7 +1807,8 @@ select:focus {
   }
 
   .register-header h2 {
-    font-size: 2.45rem;
+    font-size: clamp(2.1rem, 11vw, 2.8rem);
+    line-height: 1.04;
   }
 
   .register-subtitle {
@@ -1822,6 +1840,11 @@ select:focus {
   .step-icon span {
     width: 60px;
     height: 60px;
+  }
+
+  .step-icon svg {
+    width: 36px;
+    height: 36px;
   }
 
   .register-step-card p {

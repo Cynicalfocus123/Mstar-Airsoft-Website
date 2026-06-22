@@ -73,7 +73,7 @@ export const siteContent: SiteContent = {
     title: 'Ticket',
     description: '',
     registrationGuide: {
-      title: 'How to Register as a Player or Participant',
+      title: 'How to Register as\nA Player or\nParticipant',
       subtitle: 'Follow these steps before arriving at the event.',
       backgroundImagePath: '/images/airsoft-register-bg.avif',
       steps: [
@@ -141,7 +141,7 @@ export const siteContent: SiteContent = {
             },
             {
               label: 'English Authorization Form',
-              pendingLabel: 'English Authorization Form - Link Pending',
+              href: 'https://docs.google.com/forms/d/e/1FAIpQLSdg-_10tmUYcqrOAjxjsqrSIfaahzm_zZ0j16lmmFCb1RiXIA/viewform',
             },
           ],
         },

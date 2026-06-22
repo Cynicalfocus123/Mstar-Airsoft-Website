@@ -382,6 +382,8 @@ When the user asks for a future deployment ZIP, report:
 
 - 2026-06-23: Added README Deployment Links and Changes page shortcuts for GitHub Pages preview URLs, including Home, Ticket, Events, Things to Know, and Rules & Regulation. This is a repo documentation/discoverability update only; no visual design, route behavior, cPanel ZIP, or server deployment changed.
 
+- 2026-06-23: Refined the Ticket page registration guide into a true full-bleed tactical background section that touches the left and right viewport edges on desktop, correcting the centered/double-box issue. The guide now uses lighter transparent step panels integrated into the section, visible glass-style SVG icons for Form, Sign, Pay, Mail, and Docs, safe heading spacing with explicit line breaks, active Thai/English Registration Form buttons, and active Thai/English Authorization of a Supervising Adult links. The English Authorization Form URL is now complete and active: `https://docs.google.com/forms/d/e/1FAIpQLSdg-_10tmUYcqrOAjxjsqrSIfaahzm_zZ0j16lmmFCb1RiXIA/viewform`. No cPanel ZIP or real server deployment was created.
+
 - 2026-05-17: Established tactical visual system, responsive rules, logo/header/footer constraints, lightweight image strategy, and backend-ready design rules for initial site build.
 - 2026-05-17: Confirmed build-readiness work did not change visual rules; kept logo and gallery asset paths compatible with Vite.
 - 2026-05-17: Kept generated artifacts out of source control so deployed design stays lightweight and maintainable.

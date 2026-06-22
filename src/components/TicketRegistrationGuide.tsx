@@ -24,6 +24,66 @@ function renderStepBody(body: string, highlight?: string) {
   );
 }
 
+function renderStepIcon(stepId: string) {
+  switch (stepId) {
+    case 'complete-registration':
+      return (
+        <svg viewBox="0 0 64 64" focusable="false" aria-hidden="true">
+          <path d="M22 12h20" />
+          <path d="M24 10h16l2 6H22z" />
+          <path d="M18 16h28v38H18z" />
+          <path d="M25 28h14" />
+          <path d="M25 36h14" />
+          <path d="M25 44h9" />
+        </svg>
+      );
+    case 'sign-waiver':
+      return (
+        <svg viewBox="0 0 64 64" focusable="false" aria-hidden="true">
+          <path d="M18 10h22l8 8v36H18z" />
+          <path d="M40 10v10h8" />
+          <path d="M24 42c5-8 9-8 12 0 2 5 5 5 10-1" />
+          <path d="M24 50h16" />
+        </svg>
+      );
+    case 'make-payment':
+      return (
+        <svg viewBox="0 0 64 64" focusable="false" aria-hidden="true">
+          <path d="M14 20h36a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V24a4 4 0 0 1 4-4z" />
+          <path d="M10 29h44" />
+          <path d="M18 40h12" />
+          <path d="M40 40h6" />
+        </svg>
+      );
+    case 'receive-confirmation':
+      return (
+        <svg viewBox="0 0 64 64" focusable="false" aria-hidden="true">
+          <path d="M10 20h44v30H10z" />
+          <path d="m10 22 22 17 22-17" />
+          <path d="m10 50 16-15" />
+          <path d="m54 50-16-15" />
+        </svg>
+      );
+    case 'bring-documents':
+      return (
+        <svg viewBox="0 0 64 64" focusable="false" aria-hidden="true">
+          <path d="M10 22h17l5 6h22v24H10z" />
+          <path d="M14 16h16l5 6h15" />
+          <path d="M21 37h22" />
+          <path d="M21 45h15" />
+        </svg>
+      );
+    default:
+      return (
+        <svg viewBox="0 0 64 64" focusable="false" aria-hidden="true">
+          <path d="M18 12h28v40H18z" />
+          <path d="M25 26h14" />
+          <path d="M25 36h14" />
+        </svg>
+      );
+  }
+}
+
 export function TicketRegistrationGuide({ content }: TicketRegistrationGuideProps) {
   const backgroundImage = getPublicAssetPath(content.backgroundImagePath);
   const sectionStyle: RegisterSectionStyle = backgroundImage
@@ -48,7 +108,7 @@ export function TicketRegistrationGuide({ content }: TicketRegistrationGuideProp
               <article className="register-step-card" key={step.id}>
                 <div className="corner-number">{String(index + 1).padStart(2, '0')}</div>
                 <div className="step-icon" aria-hidden="true">
-                  <span>{step.iconLabel}</span>
+                  <span>{renderStepIcon(step.id)}</span>
                 </div>
                 <h3>{step.eyebrow}</h3>
                 <h4>{step.title}</h4>
