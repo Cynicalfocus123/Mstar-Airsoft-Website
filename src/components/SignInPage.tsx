@@ -2,6 +2,7 @@ import type { FormEvent } from 'react';
 import type { SignInContent } from '../types/siteContent';
 import { getCleanFormData } from '../utils/formSecurity';
 import { getStoredAccountProfile, saveAccountProfile } from '../utils/accountProfile';
+import { getSafeInternalHref } from '../utils/safeUrl';
 
 interface SignInPageProps {
   content: SignInContent;
@@ -35,7 +36,7 @@ export function SignInPage({ content, onSuccess }: SignInPageProps) {
             <button className="btn btn-gold" type="submit">
               Sign In
             </button>
-            <a className="forgot-link" href="/signin">
+            <a className="forgot-link" href={getSafeInternalHref('/signin')}>
               Forgot your password?
             </a>
           </form>
@@ -47,7 +48,7 @@ export function SignInPage({ content, onSuccess }: SignInPageProps) {
               <li key={benefit}>{benefit}</li>
             ))}
           </ul>
-          <a className="btn btn-secondary" href="/signup">
+          <a className="btn btn-secondary" href={getSafeInternalHref('/signup')}>
             Create Account
           </a>
         </aside>

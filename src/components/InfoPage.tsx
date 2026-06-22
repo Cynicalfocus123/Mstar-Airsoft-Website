@@ -1,6 +1,6 @@
 import type { InfoPageContent } from '../types/siteContent';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
-import { getSafeMailtoHref } from '../utils/safeUrl';
+import { getSafeInternalHref, getSafeMailtoHref } from '../utils/safeUrl';
 
 interface InfoPageProps {
   content?: InfoPageContent;
@@ -80,7 +80,7 @@ export function InfoPage({ content }: InfoPageProps) {
 
             if (card.href) {
               return (
-                <a className="event-banner-card info-banner-card" key={card.id} href={card.href} aria-label={`Open ${card.title}`}>
+                <a className="event-banner-card info-banner-card" key={card.id} href={getSafeInternalHref(card.href)} aria-label={`Open ${card.title}`}>
                   {cardBody}
                 </a>
               );

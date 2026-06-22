@@ -1,5 +1,5 @@
 import type { FooterSection, SiteIdentity } from '../types/siteContent';
-import { getSafeInternalPath } from '../utils/safeUrl';
+import { getSafeInternalHref } from '../utils/safeUrl';
 
 interface FooterProps {
   identity: SiteIdentity;
@@ -23,7 +23,7 @@ export function Footer({ identity, sections }: FooterProps) {
             <div className="footer-links">
               {section.links.map((link) => (
                 <a
-                  href={getSafeInternalPath(link.href)}
+                  href={getSafeInternalHref(link.href)}
                   key={link.href}
                   onClick={(event) => {
                     if (link.label.toLowerCase() === 'gallery' || link.href === '/gallery') {

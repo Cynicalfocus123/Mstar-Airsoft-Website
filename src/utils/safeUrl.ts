@@ -10,6 +10,14 @@ export function getSafeInternalPath(value: string, fallback = '/') {
   return internalPathPattern.test(value) ? value : fallback;
 }
 
+export function getSafeInternalHref(value: string, fallback = '/') {
+  const safePath = getSafeInternalPath(value, fallback);
+  const basePath = import.meta.env.BASE_URL || '/';
+
+  if (basePath === '/') return safePath;
+  return safePath === '/' ? basePath : `${basePath.replace(/\/$/, '')}${safePath}`;
+}
+
 export function getSafeMailtoHref(value: string) {
   return /^mailto:[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(value) ? value : undefined;
 }

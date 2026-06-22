@@ -8,6 +8,7 @@ import {
 } from '../utils/accountProfile';
 import { getCleanFormData } from '../utils/formSecurity';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
+import { getSafeInternalHref } from '../utils/safeUrl';
 
 interface EventCheckoutPageProps {
   event?: EventCard;
@@ -117,7 +118,7 @@ export function EventCheckoutPage({ event, isAuthenticated }: EventCheckoutPageP
           <p className="eyebrow">Cart</p>
           <h1>Event Not Found</h1>
           <p>This checkout cannot load because the selected event is not available.</p>
-          <a className="btn btn-gold" href="/events">
+          <a className="btn btn-gold" href={getSafeInternalHref('/events')}>
             View Events
           </a>
         </section>
@@ -133,7 +134,7 @@ export function EventCheckoutPage({ event, isAuthenticated }: EventCheckoutPageP
             <p className="checkout-kicker">Cart / Checkout</p>
             <h1>Event Registration</h1>
           </div>
-          <a className="checkout-back-link" href={`/events/${event.id}`}>
+          <a className="checkout-back-link" href={getSafeInternalHref(`/events/${event.id}`)}>
             Back to event
           </a>
         </div>
@@ -150,14 +151,14 @@ export function EventCheckoutPage({ event, isAuthenticated }: EventCheckoutPageP
                 <div className="checkout-auth-actions">
                   <a
                     className="btn btn-secondary"
-                    href="/signin"
+                    href={getSafeInternalHref('/signin')}
                     onClick={() => sessionStorage.setItem('mstarAuthReturnTo', `/checkout/${event.id}`)}
                   >
                     Login
                   </a>
                   <a
                     className="btn btn-gold"
-                    href="/signup"
+                    href={getSafeInternalHref('/signup')}
                     onClick={() => sessionStorage.setItem('mstarAuthReturnTo', `/checkout/${event.id}`)}
                   >
                     Register
@@ -170,7 +171,7 @@ export function EventCheckoutPage({ event, isAuthenticated }: EventCheckoutPageP
               <section className="checkout-line-section">
                 <div className="checkout-section-header">
                   <h2>Customer</h2>
-                  <button className="checkout-edit" type="button" onClick={() => { window.location.href = '/account'; }}>
+                  <button className="checkout-edit" type="button" onClick={() => { window.location.href = getSafeInternalHref('/account'); }}>
                     Edit
                   </button>
                 </div>
@@ -223,7 +224,7 @@ export function EventCheckoutPage({ event, isAuthenticated }: EventCheckoutPageP
             <section className="checkout-summary">
               <div className="checkout-summary-header">
                 <h2>Order Summary</h2>
-                <a className="checkout-summary-link" href={`/events/${event.id}`}>
+                <a className="checkout-summary-link" href={getSafeInternalHref(`/events/${event.id}`)}>
                   Edit Cart
                 </a>
               </div>

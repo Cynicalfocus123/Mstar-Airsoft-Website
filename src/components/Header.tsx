@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { NavLink, SiteIdentity } from '../types/siteContent';
-import { getSafeInternalPath } from '../utils/safeUrl';
+import { getSafeInternalHref } from '../utils/safeUrl';
 
 interface HeaderProps {
   identity: SiteIdentity;
@@ -18,7 +18,7 @@ export function Header({ identity, navLinks, isAuthenticated, onHomeClick, onLog
     <header className="site-header">
       <a
         className="brand"
-        href="/"
+        href={getSafeInternalHref('/')}
         aria-label={`${identity.name} home`}
         onClick={(event) => {
           event.preventDefault();
@@ -44,7 +44,7 @@ export function Header({ identity, navLinks, isAuthenticated, onHomeClick, onLog
         {navLinks.map((link) => (
           <a
             key={link.href}
-            href={getSafeInternalPath(link.href)}
+            href={getSafeInternalHref(link.href)}
             onClick={(event) => {
               setIsOpen(false);
               setIsAccountOpen(false);
@@ -74,10 +74,10 @@ export function Header({ identity, navLinks, isAuthenticated, onHomeClick, onLog
                 My Account
               </button>
               <div className="account-dropdown" role="menu">
-                <a href="/account" role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
+                <a href={getSafeInternalHref('/account')} role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
                   Account Settings
                 </a>
-                <a href="/account" role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
+                <a href={getSafeInternalHref('/account')} role="menuitem" onClick={() => { setIsOpen(false); setIsAccountOpen(false); }}>
                   Orders
                 </a>
                 <button

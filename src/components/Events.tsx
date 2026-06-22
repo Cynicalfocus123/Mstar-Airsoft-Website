@@ -1,4 +1,5 @@
 import type { EventCard } from '../types/siteContent';
+import { getSafeInternalHref } from '../utils/safeUrl';
 
 interface EventsProps {
   events: EventCard[];
@@ -14,7 +15,7 @@ export function Events({ events, viewAllHref }: EventsProps) {
         <p className="section-intro">
           Select upcoming Mstar Airsoft operations are listed below. Open the full events page for the complete season.
         </p>
-        <a className="btn btn-gold section-action" href={viewAllHref}>
+        <a className="btn btn-gold section-action" href={getSafeInternalHref(viewAllHref)}>
           View All Events
         </a>
       </div>
@@ -45,7 +46,7 @@ export function Events({ events, viewAllHref }: EventsProps) {
           );
 
           return event.href ? (
-            <a className="event-card" key={event.id} href={event.href}>
+            <a className="event-card" key={event.id} href={getSafeInternalHref(event.href)}>
               {cardBody}
             </a>
           ) : (

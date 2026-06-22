@@ -1,5 +1,6 @@
 import type { EventCard } from '../types/siteContent';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
+import { getSafeInternalHref } from '../utils/safeUrl';
 
 interface EventsPageProps {
   events: EventCard[];
@@ -51,7 +52,7 @@ export function EventsPage({ events }: EventsPageProps) {
             <a
               className={cardClassName}
               key={event.id}
-              href={event.href}
+              href={getSafeInternalHref(event.href)}
               aria-label={`Get tickets for ${event.title}`}
             >
               {cardBody}
