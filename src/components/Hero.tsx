@@ -1,4 +1,6 @@
+import type { CSSProperties } from 'react';
 import type { HeroContent } from '../types/siteContent';
+import { getPublicAssetPath } from '../utils/publicAssetPath';
 import { getSafeYouTubeEmbedUrl } from '../utils/safeUrl';
 
 interface HeroProps {
@@ -6,8 +8,13 @@ interface HeroProps {
 }
 
 export function Hero({ content }: HeroProps) {
+  const backgroundImage = getPublicAssetPath('/images/home/photo-1661339051428-1af0c377a793.avif');
+  const sectionStyle = backgroundImage
+    ? ({ '--hero-video-background-image': `url("${backgroundImage}")` } as CSSProperties)
+    : undefined;
+
   return (
-    <section className="hero hero-embed-section section-anchor" id="home">
+    <section className="hero hero-embed-section section-anchor" id="home" style={sectionStyle}>
       <div className="hero-video-grid">
         {content.videos.map((video) => {
           const embedUrl = getSafeYouTubeEmbedUrl(video.embedUrl);

@@ -1,4 +1,6 @@
+import type { CSSProperties } from 'react';
 import type { EventCard } from '../types/siteContent';
+import { getPublicAssetPath } from '../utils/publicAssetPath';
 import { getSafeInternalHref } from '../utils/safeUrl';
 
 interface EventsProps {
@@ -7,8 +9,13 @@ interface EventsProps {
 }
 
 export function Events({ events, viewAllHref }: EventsProps) {
+  const backgroundImage = getPublicAssetPath('/images/home/photo-1666873577061-26f78e7452ce.avif');
+  const sectionStyle = backgroundImage
+    ? ({ '--game-schedules-background-image': `url("${backgroundImage}")` } as CSSProperties)
+    : undefined;
+
   return (
-    <section className="section section-anchor section-rib" id="events">
+    <section className="section section-anchor section-rib game-schedules-section" id="events" style={sectionStyle}>
       <div className="section-heading">
         <p className="eyebrow">Upcoming Operations</p>
         <h2>Game Schedules</h2>

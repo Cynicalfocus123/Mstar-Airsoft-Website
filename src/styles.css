@@ -300,7 +300,43 @@ textarea {
   border-block: 1px solid var(--line);
 }
 
+.game-schedules-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #080a07;
+  background-image: var(--game-schedules-background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game-schedules-section::before,
+.game-schedules-section::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.game-schedules-section::before {
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 7, 5, 0.92), rgba(5, 7, 5, 0.7) 46%, rgba(5, 7, 5, 0.88)),
+    linear-gradient(180deg, rgba(5, 7, 5, 0.74), rgba(18, 26, 12, 0.72) 42%, rgba(0, 0, 0, 0.9));
+}
+
+.game-schedules-section::after {
+  z-index: 0;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(140, 161, 93, 0.16), transparent 34%),
+    linear-gradient(135deg, rgba(240, 185, 11, 0.08), transparent 44%);
+  mix-blend-mode: screen;
+  opacity: 0.6;
+}
+
 .section-rib > * {
+  position: relative;
+  z-index: 1;
   width: min(1160px, 100%);
   margin-right: auto;
   margin-left: auto;
@@ -1241,15 +1277,45 @@ select:focus {
 }
 
 .hero-embed-section {
+  position: relative;
+  overflow: hidden;
   min-height: auto;
   padding: clamp(36px, 6vw, 64px) clamp(18px, 4vw, 64px) clamp(54px, 8vw, 84px);
   border-bottom: 1px solid var(--line);
+  background-color: #080a07;
+  background-image: var(--hero-video-background-image);
+  background-position: center 44%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-embed-section::before,
+.hero-embed-section::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.hero-embed-section::before {
+  z-index: 0;
   background:
-    linear-gradient(180deg, rgba(240, 185, 11, 0.08), rgba(0, 0, 0, 0) 42%),
-    linear-gradient(180deg, #0b0c0a, #070707);
+    linear-gradient(90deg, rgba(5, 6, 5, 0.9), rgba(5, 6, 5, 0.68) 50%, rgba(5, 6, 5, 0.9)),
+    linear-gradient(180deg, rgba(10, 13, 8, 0.78), rgba(0, 0, 0, 0.86));
+}
+
+.hero-embed-section::after {
+  z-index: 0;
+  background:
+    radial-gradient(circle at 72% 22%, rgba(240, 185, 11, 0.12), transparent 30%),
+    linear-gradient(135deg, rgba(89, 104, 61, 0.16), transparent 42%);
+  mix-blend-mode: screen;
+  opacity: 0.55;
 }
 
 .hero-video-grid {
+  position: relative;
+  z-index: 1;
   width: min(1160px, 100%);
   margin: 0 auto;
   display: grid;
