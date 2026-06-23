@@ -2,6 +2,11 @@
   "name": "mstar-airsoft-website",
   "private": true,
   "version": "0.1.0",
+  "homepage": "https://cynicalfocus123.github.io/Mstar-Airsoft-Website/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cynicalfocus123/Mstar-Airsoft-Website.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",

@@ -2,15 +2,17 @@
 
 React + Vite + TypeScript frontend for Mstar Airsoft tournament and event pages.
 
-## Live Site
+## GitHub Test Homepage
 
-GitHub Pages preview:
+Use this GitHub Pages URL to preview the repository build only. This is separate from the live production domain and is meant for testing/review:
 
 ```text
 https://cynicalfocus123.github.io/Mstar-Airsoft-Website/
 ```
 
-Live production domain:
+## Live Production Site
+
+The public production website remains separate:
 
 ```text
 https://mstarairsoft.com/
@@ -18,11 +20,14 @@ https://mstarairsoft.com/
 
 ## Deployment Links
 
-- GitHub Pages preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/
-- Production site: https://mstarairsoft.com/
-- Ticket page preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/ticket
-- Events page preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/events
-- Rules page preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/rules-and-regulation
+- GitHub repo test homepage: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/
+- Live production site: https://mstarairsoft.com/
+- Ticket page test preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/ticket
+- Events page test preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/events
+- Things to Know test preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/things-to-know
+- Rules page test preview: https://cynicalfocus123.github.io/Mstar-Airsoft-Website/rules-and-regulation
+
+The GitHub Pages links are for repository testing only. They do not upload to cPanel and do not change `https://mstarairsoft.com/`.
 
 ## Changes
 
