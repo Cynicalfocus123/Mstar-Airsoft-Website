@@ -1,5 +1,6 @@
 import logoPath from '../assets/mstar-airsoft-logo.png';
 import type { SiteContent } from '../types/siteContent';
+import { cancellationRefundLanguageVersions } from './cancellationRefundContent';
 import { countryRegions } from './countries';
 import { termsLanguageVersions } from './termsContent';
 
@@ -314,6 +315,7 @@ export const siteContent: SiteContent = {
         { label: 'Gallery', href: '/gallery' },
         { label: 'Contact', href: '/contact' },
         { label: 'Terms & Conditions', href: '/terms-and-conditions' },
+        { label: 'Cancellation and Refund', href: '/cancellation-and-refund' },
         { label: 'Privacy', href: '/privacy' },
         { label: 'Complaints', href: '/complaints' },
       ],
@@ -1106,6 +1108,14 @@ export const siteContent: SiteContent = {
       description: '',
       sections: termsLanguageVersions[0].sections,
       languageVersions: termsLanguageVersions,
+    },
+    {
+      slug: 'cancellation-and-refund',
+      eyebrow: 'Legal',
+      title: 'Cancellation and Refund',
+      description: '',
+      sections: cancellationRefundLanguageVersions[0].sections,
+      languageVersions: cancellationRefundLanguageVersions,
     },
     {
       slug: 'privacy',

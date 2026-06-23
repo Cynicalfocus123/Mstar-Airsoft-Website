@@ -302,6 +302,12 @@ export const seoContent: Record<string, SeoEntry> = {
     description: 'Read the terms and conditions for using the MSTAR Airsoft website, event information, ticketing pages, and related services.',
     ogType: 'article',
   }),
+  '/cancellation-and-refund': makeSeo({
+    path: '/cancellation-and-refund',
+    title: 'Cancellation and Refund | MSTAR Airsoft',
+    description: 'Read the Force of Conquest event cancellation, refund, transfer, postponement, and no-show policy in English and Thai.',
+    ogType: 'article',
+  }),
   '/privacy': makeSeo({
     path: '/privacy',
     title: 'Privacy Policy | MSTAR Airsoft',
@@ -405,6 +411,7 @@ export const sitemapRoutes = [
   { path: '/what-to-do-in-thailand', priority: '0.7' },
   { path: '/travel-preparation', priority: '0.7' },
   { path: '/terms-and-conditions', priority: '0.6' },
+  { path: '/cancellation-and-refund', priority: '0.6' },
   { path: '/privacy', priority: '0.6' },
   { path: '/complaints', priority: '0.5' },
 ] as const;

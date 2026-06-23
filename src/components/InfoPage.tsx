@@ -10,6 +10,7 @@ interface InfoPageProps {
 
 const unboxedPolicySlugs = new Set([
   'terms-and-conditions',
+  'cancellation-and-refund',
   'privacy',
   'complaints',
   'equipment',
