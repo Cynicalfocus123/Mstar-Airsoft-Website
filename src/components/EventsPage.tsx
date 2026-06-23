@@ -10,11 +10,10 @@ export function EventsPage({ events }: EventsPageProps) {
   return (
     <main className="page-shell">
       <section className="page-hero">
-        <p className="eyebrow">All Operations</p>
-        <h1>Events</h1>
-        <p>Browse Mstar Airsoft tournaments, qualifiers, night games, and championship events.</p>
+        <h1>Operations</h1>
+        <p>Browse Mstar Airsoft tournaments, qualifiers, night games, and championship operations.</p>
       </section>
-      <section className="event-banner-list" aria-label="All events">
+      <section className="event-banner-list" aria-label="All operations">
         {events.map((event) => {
           const cardClassName = `event-banner-card ${event.id === 'urban-rush' ? 'event-banner-card-force-of-conquest' : ''}`;
           const cardBody = (
