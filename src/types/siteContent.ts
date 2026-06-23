@@ -126,6 +126,39 @@ export interface EventCard {
   summary: string;
   overview: string;
   imagePath: string;
+  detail?: {
+    heroTitle: string;
+    heroDescription: string;
+    heroCtas: CtaButton[];
+    overviewTitle: string;
+    missionTitle: string;
+    missionBody: string;
+    detailRows: Array<{
+      label: string;
+      value: string;
+    }>;
+    timeline: Array<{
+      label: string;
+      title: string;
+      body: string;
+    }>;
+    requirements: string[];
+    mediaPlaceholders: Array<{
+      title: string;
+      label: string;
+    }>;
+    footerTitle: string;
+    footerCta: CtaButton;
+  };
+}
+
+export interface EventCountdownContent {
+  eyebrow: string;
+  title: string;
+  description: string;
+  targetIso: string;
+  gateLabel: string;
+  completeLabel: string;
 }
 
 export interface FormField {
@@ -234,6 +267,7 @@ export interface SiteContent {
   about: AboutContent;
   ticketPage: TicketPageContent;
   events: EventCard[];
+  eventCountdown: EventCountdownContent;
   registrationFields: FormField[];
   gameTerrain: GameTerrainContent;
   rules: RuleItem[];

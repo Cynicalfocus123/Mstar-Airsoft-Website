@@ -173,12 +173,12 @@ export const siteContent: SiteContent = {
   },
   events: [
     {
-      id: 'urban-rush',
-      href: '/ticket',
+      id: 'force-of-conquest',
+      href: '/events/force-of-conquest',
       title: 'Force of Conquest',
       date: 'Jan 8–10, 2027',
       time: '09:00 AM - 05:30 PM',
-      location: 'Mstar Jungle Land',
+      location: 'Mstar Jungle Land, Thailand',
       entryFee: '€160.00 EURO',
       teams: 'Alpha Coalition vs Bravo Unit',
       attendance: '2,000 players',
@@ -187,6 +187,58 @@ export const siteContent: SiteContent = {
       overview:
         'Force of Conquest delivers immersive large-scale jungle warfare with natural cover, demanding terrain, coordinated objectives, and realistic airsoft combat built for organized squads.',
       imagePath: '/images/events/force-of-conquest-card.png',
+      detail: {
+        heroTitle: 'FORCE OF CONQUEST',
+        heroDescription:
+          'A large-scale tactical airsoft operation built for international players, teams, and serious milsim competitors.',
+        heroCtas: [
+          { label: 'Buy Ticket Now', href: '/ticket', variant: 'primary' },
+          { label: 'View Rules', href: '/rules-and-regulation', variant: 'secondary' },
+        ],
+        overviewTitle: 'Event Overview',
+        missionTitle: 'Mission / Operation Brief',
+        missionBody:
+          'Players will move through jungle terrain, natural cover, and coordinated objective zones designed for organized squad communication, fair play, and sustained tactical decision-making.',
+        detailRows: [
+          { label: 'Date', value: 'January 8–10, 2027' },
+          { label: 'Location', value: 'Mstar Jungle Land, Thailand' },
+          { label: 'Registration', value: 'Open' },
+          { label: 'Format', value: 'Large-scale airsoft operation' },
+          { label: 'Entry', value: 'Ticket required' },
+          { label: 'Player type', value: 'International players and teams' },
+        ],
+        timeline: [
+          {
+            label: 'Day 1',
+            title: 'Arrival, check-in, safety briefing',
+            body: 'Players arrive on site, confirm registration, complete required checks, and receive safety and field briefings.',
+          },
+          {
+            label: 'Day 2',
+            title: 'Main operation',
+            body: 'Primary mission play begins across the main battlefield with team objectives and marshal-led operations.',
+          },
+          {
+            label: 'Day 3',
+            title: 'Final operation and closing',
+            body: 'Final operation blocks and closing activity complete the event weekend. Exact timing will be confirmed later.',
+          },
+        ],
+        requirements: [
+          'Valid ticket confirmation',
+          'Signed waiver form',
+          'Required identification or passport',
+          'Required safety equipment',
+          'Event rule compliance',
+        ],
+        mediaPlaceholders: [
+          { title: 'Image Coming Soon', label: 'Field media placeholder' },
+          { title: 'Event Media Coming Soon', label: 'Operation gallery placeholder' },
+          { title: 'Image Coming Soon', label: 'Team briefing placeholder' },
+        ],
+        footerTitle: 'Ready for Force of Conquest?',
+        footerCta: { label: 'Buy Ticket Now', href: '/ticket', variant: 'primary' },
+      },
     },
     {
       id: 'night-grid',
@@ -219,6 +271,14 @@ export const siteContent: SiteContent = {
       imagePath: '/banners/event-final.svg',
     },
   ],
+  eventCountdown: {
+    eyebrow: 'Force of Conquest Countdown',
+    title: 'Gates open on Friday January 8th, 2027',
+    description: 'Live countdown to the next MSTAR Airsoft operation in Thailand.',
+    targetIso: '2027-01-08T00:00:00+07:00',
+    gateLabel: 'Gates open on Friday January 8th, 2027',
+    completeLabel: 'Event Started',
+  },
   registrationFields: [
     { id: 'name', label: 'Name', type: 'text', placeholder: 'Your name', required: true },
     { id: 'email', label: 'Email', type: 'email', placeholder: 'you@example.com', required: true },

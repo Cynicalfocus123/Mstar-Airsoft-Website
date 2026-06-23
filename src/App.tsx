@@ -101,9 +101,11 @@ export default function App() {
   }
 
   const isHome = route.name === 'home';
-  const selectedEvent = route.name === 'eventDetail' || route.name === 'checkout'
-    ? siteContent.events.find((event) => event.id === route.eventId)
-    : undefined;
+  const selectedEvent = route.name === 'eventDetail'
+    ? siteContent.events.find((event) => event.id === route.eventId && event.href === `/events/${route.eventId}`)
+    : route.name === 'checkout'
+      ? siteContent.events.find((event) => event.id === route.eventId)
+      : undefined;
   const selectedInfoPage = route.name === 'info'
     ? siteContent.infoPages.find((page) => page.slug === route.slug)
     : undefined;
@@ -136,7 +138,7 @@ export default function App() {
           <BannerSlider slides={siteContent.heroSlides} />
           <Hero content={siteContent.hero} />
           <About content={siteContent.about} />
-          <Events events={siteContent.events.slice(0, 3)} viewAllHref="/events" />
+          <Events events={siteContent.events.slice(0, 3)} viewAllHref="/events" countdown={siteContent.eventCountdown} />
           <GameTerrain content={siteContent.gameTerrain} />
         </main>
       )}

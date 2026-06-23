@@ -97,7 +97,7 @@ const websiteSchema = {
 const eventSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
-  '@id': `${siteUrl}/events/urban-rush#event`,
+  '@id': `${siteUrl}/events/force-of-conquest#event`,
   name: 'MSTAR Airsoft Festival - Force of Conquest',
   description: 'An intense, realistic large-scale airsoft combat experience set deep in the jungle.',
   startDate: '2027-01-08T09:00:00+07:00',
@@ -187,8 +187,8 @@ export const seoContent: Record<string, SeoEntry> = {
       ]),
     ],
   }),
-  '/events/urban-rush': makeSeo({
-    path: '/events/urban-rush',
+  '/events/force-of-conquest': makeSeo({
+    path: '/events/force-of-conquest',
     title: 'Force of Conquest | MSTAR Airsoft Thailand',
     description: 'View Force of Conquest event details for MSTAR Airsoft, including jungle gameplay, timing, location, attendance, and ticket information.',
     schema: [
@@ -196,7 +196,7 @@ export const seoContent: Record<string, SeoEntry> = {
       breadcrumbs([
         { name: 'Home', path: '/' },
         { name: 'Events', path: '/events' },
-        { name: 'Force of Conquest', path: '/events/urban-rush' },
+        { name: 'Force of Conquest', path: '/events/force-of-conquest' },
       ]),
     ],
   }),
@@ -374,7 +374,11 @@ export const seoContent: Record<string, SeoEntry> = {
 };
 
 export function getSeoPath(pathname: string) {
-  const cleanPath = pathname.replace(/\/+$/, '') || '/';
+  const basePath = new URL(import.meta.env.BASE_URL, siteUrl).pathname.replace(/\/+$/, '');
+  const rawPath = pathname.replace(/\/+$/, '') || '/';
+  const cleanPath = basePath && rawPath.startsWith(`${basePath}/`)
+    ? rawPath.slice(basePath.length) || '/'
+    : rawPath;
   if (cleanPath.startsWith('/checkout/')) return '/checkout';
   if (cleanPath.startsWith('/events/')) return cleanPath;
   return routeAliases[cleanPath] ?? cleanPath;
@@ -399,6 +403,7 @@ export const sitemapRoutes = [
   { path: '/', priority: '1.0' },
   { path: '/ticket', priority: '0.9' },
   { path: '/events', priority: '0.9' },
+  { path: '/events/force-of-conquest', priority: '0.9' },
   { path: '/things-to-know', priority: '0.8' },
   { path: '/rules-and-regulation', priority: '0.8' },
   { path: '/contact', priority: '0.8' },

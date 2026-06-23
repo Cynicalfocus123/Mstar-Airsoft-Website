@@ -15,7 +15,7 @@ export function EventsPage({ events }: EventsPageProps) {
       </section>
       <section className="event-banner-list" aria-label="All operations">
         {events.map((event) => {
-          const cardClassName = `event-banner-card ${event.id === 'urban-rush' ? 'event-banner-card-force-of-conquest' : ''}`;
+          const cardClassName = `event-banner-card ${event.id === 'force-of-conquest' ? 'event-banner-card-force-of-conquest' : ''}`;
           const cardBody = (
             <>
               <div className="event-card-image">
@@ -52,7 +52,7 @@ export function EventsPage({ events }: EventsPageProps) {
               className={cardClassName}
               key={event.id}
               href={getSafeInternalHref(event.href)}
-              aria-label={`Get tickets for ${event.title}`}
+              aria-label={`View details for ${event.title}`}
             >
               {cardBody}
             </a>

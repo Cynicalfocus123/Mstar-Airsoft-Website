@@ -23,46 +23,134 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
     );
   }
 
+  const detail = event.detail;
+  const heroTitle = detail?.heroTitle ?? event.title;
+  const heroDescription = detail?.heroDescription ?? event.summary;
+  const heroCtas = detail?.heroCtas ?? [
+    { label: isAuthenticated ? 'Join Now' : 'Create Account', href: isAuthenticated ? `/checkout/${event.id}` : '/signup', variant: 'primary' as const },
+  ];
+
   return (
     <main className="event-detail-page">
       <section className="event-detail-hero">
         <img src={getPublicAssetPath(event.imagePath)} alt="" />
-      </section>
-      <section className="event-detail-layout">
-        <article className="event-detail-main">
+        <div className="event-detail-hero-content">
           <p className="eyebrow">{event.status}</p>
-          <h1>{event.title}</h1>
-          <div className="event-meta-strip">
+          <h1>{heroTitle}</h1>
+          <p>{heroDescription}</p>
+          <div className="event-detail-hero-meta" aria-label="Event summary">
+            <span>JAN 8-10, 2027</span>
             <span>{event.location}</span>
-            <span>{event.date}</span>
-            <span>{event.time}</span>
+            <span>{event.status}</span>
           </div>
-          <h2>Game Overview</h2>
+          <div className="event-detail-actions">
+            {heroCtas.map((cta) => (
+              <a
+                className={`btn ${cta.variant === 'primary' ? 'btn-gold' : 'btn-secondary'}`}
+                href={getSafeInternalHref(cta.href)}
+                key={cta.href}
+                onClick={() => {
+                  if (cta.href === '/signup') {
+                    sessionStorage.setItem('mstarAuthReturnTo', `/checkout/${event.id}`);
+                  }
+                }}
+              >
+                {cta.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="event-detail-content">
+        <section className="event-detail-panel event-detail-overview">
+          <div>
+            <p className="eyebrow">{detail?.overviewTitle ?? 'Game Overview'}</p>
+            <h2>{event.title}</h2>
+          </div>
           <p>{event.overview}</p>
-        </article>
-        <aside className="event-detail-sidebar">
-          <a
-            className="btn btn-gold join-now-button"
-            href={getSafeInternalHref(isAuthenticated ? `/checkout/${event.id}` : '/signup')}
-            onClick={() => {
-              if (!isAuthenticated) {
-                sessionStorage.setItem('mstarAuthReturnTo', `/checkout/${event.id}`);
-              }
-            }}
-          >
-            Join Now
-          </a>
-          <dl>
-            <div>
-              <dt>Entry fee</dt>
-              <dd>{event.entryFee}</dd>
+        </section>
+
+        <section className="event-detail-split">
+          <article className="event-detail-panel event-detail-brief">
+            <p className="eyebrow">{detail?.missionTitle ?? 'Mission Brief'}</p>
+            <h2>Operation Brief</h2>
+            <p>{detail?.missionBody ?? event.overview}</p>
+          </article>
+          <aside className="event-detail-panel event-detail-facts">
+            <p className="eyebrow">Event Details</p>
+            <dl>
+              {(detail?.detailRows ?? [
+                { label: 'Date', value: event.date },
+                { label: 'Location', value: event.location },
+                { label: 'Registration', value: event.status },
+                { label: 'Entry', value: event.entryFee },
+              ]).map((row) => (
+                <div key={row.label}>
+                  <dt>{row.label}</dt>
+                  <dd>{row.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
+        </section>
+
+        {detail?.timeline && (
+          <section className="event-detail-panel event-detail-timeline">
+            <div className="event-section-heading">
+              <p className="eyebrow">Schedule / Timeline</p>
+              <h2>Draft Event Flow</h2>
             </div>
-            <div>
-              <dt>Attendance</dt>
-              <dd>{event.attendance}</dd>
+            <div className="event-timeline-grid">
+              {detail.timeline.map((item) => (
+                <article className="event-timeline-card" key={item.label}>
+                  <span>{item.label}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </article>
+              ))}
             </div>
-          </dl>
-        </aside>
+          </section>
+        )}
+
+        {detail?.requirements && (
+          <section className="event-detail-panel event-detail-requirements">
+            <div className="event-section-heading">
+              <p className="eyebrow">Requirements</p>
+              <h2>Before You Arrive</h2>
+            </div>
+            <ul>
+              {detail.requirements.map((requirement) => (
+                <li key={requirement}>{requirement}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {detail?.mediaPlaceholders && (
+          <section className="event-detail-panel event-detail-media">
+            <div className="event-section-heading">
+              <p className="eyebrow">Media / Gallery</p>
+              <h2>Event Media Coming Soon</h2>
+            </div>
+            <div className="event-media-grid">
+              {detail.mediaPlaceholders.map((placeholder) => (
+                <article className="event-media-placeholder" key={placeholder.label}>
+                  <span>{placeholder.label}</span>
+                  <strong>{placeholder.title}</strong>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {detail?.footerCta && (
+          <section className="event-detail-final-cta">
+            <h2>{detail.footerTitle}</h2>
+            <a className="btn btn-gold" href={getSafeInternalHref(detail.footerCta.href)}>
+              {detail.footerCta.label}
+            </a>
+          </section>
+        )}
       </section>
     </main>
   );
