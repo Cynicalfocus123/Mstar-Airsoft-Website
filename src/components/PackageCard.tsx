@@ -32,6 +32,7 @@ export function PackageCard({ offer }: PackageCardProps) {
       {offer.stripeBuyButtonId && offer.stripePublishableKey ? (
         <StripeBuyButton
           buyButtonId={offer.stripeBuyButtonId}
+          className="stripe-buy-button-wrap-package"
           publishableKey={offer.stripePublishableKey}
         />
       ) : null}

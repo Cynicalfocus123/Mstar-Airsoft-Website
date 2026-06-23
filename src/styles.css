@@ -1775,6 +1775,18 @@ select:focus {
   margin-left: auto;
 }
 
+.stripe-buy-button-wrap-package {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.stripe-buy-button-wrap-package stripe-buy-button {
+  border-radius: 999px;
+  overflow: hidden;
+  contain: paint;
+  transform: translateZ(0);
+}
+
 .ticket-addons {
   width: min(1160px, 100%);
   margin: clamp(48px, 7vw, 76px) auto 0;
