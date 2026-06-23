@@ -1,6 +1,7 @@
 import type { EventCard } from '../types/siteContent';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
 import { getSafeInternalHref } from '../utils/safeUrl';
+import type { CSSProperties } from 'react';
 
 interface EventDetailPageProps {
   event?: EventCard;
@@ -62,7 +63,7 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
         </div>
       </section>
       <section className="event-detail-content">
-        <section className="event-detail-panel event-detail-overview">
+        <section className="event-detail-section event-detail-overview">
           <div>
             <p className="eyebrow">{detail?.overviewTitle ?? 'Game Overview'}</p>
             <h2>{event.title}</h2>
@@ -71,12 +72,12 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
         </section>
 
         <section className="event-detail-split">
-          <article className="event-detail-panel event-detail-brief">
+          <article className="event-detail-section event-detail-brief">
             <p className="eyebrow">{detail?.missionTitle ?? 'Mission Brief'}</p>
             <h2>Operation Brief</h2>
             <p>{detail?.missionBody ?? event.overview}</p>
           </article>
-          <aside className="event-detail-panel event-detail-facts">
+          <aside className="event-detail-section event-detail-facts">
             <p className="eyebrow">Event Details</p>
             <dl>
               {(detail?.detailRows ?? [
@@ -95,7 +96,7 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
         </section>
 
         {detail?.timeline && (
-          <section className="event-detail-panel event-detail-timeline">
+          <section className="event-detail-section event-detail-timeline">
             <div className="event-section-heading">
               <p className="eyebrow">Schedule / Timeline</p>
               <h2>Draft Event Flow</h2>
@@ -113,7 +114,7 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
         )}
 
         {detail?.requirements && (
-          <section className="event-detail-panel event-detail-requirements">
+          <section className="event-detail-section event-detail-requirements">
             <div className="event-section-heading">
               <p className="eyebrow">Requirements</p>
               <h2>Before You Arrive</h2>
@@ -126,19 +127,31 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
           </section>
         )}
 
-        {detail?.mediaPlaceholders && (
-          <section className="event-detail-panel event-detail-media">
-            <div className="event-section-heading">
-              <p className="eyebrow">Media / Gallery</p>
-              <h2>Event Media Coming Soon</h2>
-            </div>
-            <div className="event-media-grid">
-              {detail.mediaPlaceholders.map((placeholder) => (
-                <article className="event-media-placeholder" key={placeholder.label}>
-                  <span>{placeholder.label}</span>
-                  <strong>{placeholder.title}</strong>
-                </article>
-              ))}
+        {detail?.missionScenario && (
+          <section
+            className="mission-scenario-section"
+            style={{
+              '--mission-scenario-background': `url("${getPublicAssetPath(detail.missionScenario.backgroundImagePath)}")`,
+            } as CSSProperties}
+          >
+            <div className="mission-scenario-content">
+              <div className="mission-scenario-intro">
+                <p className="eyebrow">{detail.missionScenario.eyebrow}</p>
+                <h2>{detail.missionScenario.heading}</h2>
+                <strong>{detail.missionScenario.subheading}</strong>
+                <p>{detail.missionScenario.intro}</p>
+              </div>
+              <div className="mission-scenario-days">
+                {detail.missionScenario.days.map((day) => (
+                  <article className="mission-scenario-day" key={day.label}>
+                    <span>{day.label}</span>
+                    <h3>{day.title}</h3>
+                    <strong>{day.subtitle}</strong>
+                    <p>{day.body}</p>
+                  </article>
+                ))}
+              </div>
+              <p className="mission-scenario-closing">{detail.missionScenario.closingLine}</p>
             </div>
           </section>
         )}

@@ -231,11 +231,39 @@ export const siteContent: SiteContent = {
           'Required safety equipment',
           'Event rule compliance',
         ],
-        mediaPlaceholders: [
-          { title: 'Image Coming Soon', label: 'Field media placeholder' },
-          { title: 'Event Media Coming Soon', label: 'Operation gallery placeholder' },
-          { title: 'Image Coming Soon', label: 'Team briefing placeholder' },
-        ],
+        missionScenario: {
+          eyebrow: 'Three-Day Campaign Storyline',
+          heading: 'Mission Scenario',
+          subheading: 'Force of Conquest 2027',
+          backgroundImagePath: '/images/events/force-of-conquest-mission-scenario.jfif',
+          intro:
+            'January 8-10, 2027 - Saraburi, Thailand. The Republic of Siam Frontier has descended into chaos after a powerful criminal syndicate operating throughout the Golden Triangle seized control of strategic territories, natural resources, transportation routes, and military installations. Factions will compete through strategy, leadership, diplomacy, and combat, with every victory and defeat directly affecting the next phase of the war.',
+          days: [
+            {
+              label: 'Day 1',
+              title: 'Operation: Jungle Storm',
+              subtitle: 'Reconnaissance, Infiltration & Territory Seizure',
+              body:
+                'Factions enter the conflict with limited intelligence and resources. Reconnaissance teams move deep into hostile territory to locate enemy positions, supply caches, communication towers, and strategic objectives.',
+            },
+            {
+              label: 'Day 2',
+              title: 'Operation: Golden Triangle',
+              subtitle: 'Counter-Insurgency & Drug Cartel Elimination',
+              body:
+                'Intelligence from Day 1 reveals major cartel operations. Factions compete to destroy drug manufacturing facilities, disrupt smuggling routes, capture high-value targets, and survive guerrilla attacks across the jungle.',
+            },
+            {
+              label: 'Day 3',
+              title: 'Operation: Final Conquest',
+              subtitle: 'Assault on the Capital',
+              body:
+                'The remaining factions launch a final offensive against The Capital. Every resource earned during the previous two days becomes critical as squads fight for command centers, strategic zones, and final control of the region.',
+            },
+          ],
+          closingLine:
+            'Every victory and defeat directly affects the next phase of the war. Night Festival & Entertainment keeps the campaign alive after dark, because the war never stops.',
+        },
         footerTitle: 'Ready for Force of Conquest?',
         footerCta: { label: 'Buy Ticket Now', href: '/ticket', variant: 'primary' },
       },

@@ -143,10 +143,20 @@ export interface EventCard {
       body: string;
     }>;
     requirements: string[];
-    mediaPlaceholders: Array<{
-      title: string;
-      label: string;
-    }>;
+    missionScenario: {
+      eyebrow: string;
+      heading: string;
+      subheading: string;
+      backgroundImagePath: string;
+      intro: string;
+      days: Array<{
+        label: string;
+        title: string;
+        subtitle: string;
+        body: string;
+      }>;
+      closingLine: string;
+    };
     footerTitle: string;
     footerCta: CtaButton;
   };

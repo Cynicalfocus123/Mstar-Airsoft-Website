@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { useEffect, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 import type { EventCard, EventCountdownContent } from '../types/siteContent';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
 import { getSafeInternalHref } from '../utils/safeUrl';
@@ -45,10 +45,17 @@ function EventCountdown({ content }: { content: EventCountdownContent }) {
       </div>
       <div className="event-countdown-grid" aria-label={content.gateLabel}>
         {countdown.values.map((value, index) => (
-          <div className="event-countdown-unit" key={countdownLabels[index]}>
-            <strong>{String(value).padStart(2, '0')}</strong>
-            <span>{countdownLabels[index]}</span>
-          </div>
+          <Fragment key={countdownLabels[index]}>
+            <div className="event-countdown-unit">
+              <strong>{String(value).padStart(2, '0')}</strong>
+              <span>{countdownLabels[index]}</span>
+            </div>
+            {index < countdown.values.length - 1 && (
+              <span className="event-countdown-separator" aria-hidden="true">
+                :
+              </span>
+            )}
+          </Fragment>
         ))}
       </div>
     </div>
