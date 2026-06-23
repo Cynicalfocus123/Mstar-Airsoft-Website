@@ -1,7 +1,7 @@
+import type { CSSProperties } from 'react';
 import type { EventCard } from '../types/siteContent';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
 import { getSafeInternalHref } from '../utils/safeUrl';
-import type { CSSProperties } from 'react';
 
 interface EventDetailPageProps {
   event?: EventCard;
@@ -128,32 +128,19 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
         )}
 
         {detail?.missionScenario && (
-          <section
-            className="mission-scenario-section"
+          <a
+            className="mission-scenario-banner"
+            href={getSafeInternalHref(detail.missionScenario.href)}
             style={{
               '--mission-scenario-background': `url("${getPublicAssetPath(detail.missionScenario.backgroundImagePath)}")`,
             } as CSSProperties}
           >
-            <div className="mission-scenario-content">
-              <div className="mission-scenario-intro">
-                <p className="eyebrow">{detail.missionScenario.eyebrow}</p>
-                <h2>{detail.missionScenario.heading}</h2>
-                <strong>{detail.missionScenario.subheading}</strong>
-                <p>{detail.missionScenario.intro}</p>
-              </div>
-              <div className="mission-scenario-days">
-                {detail.missionScenario.days.map((day) => (
-                  <article className="mission-scenario-day" key={day.label}>
-                    <span>{day.label}</span>
-                    <h3>{day.title}</h3>
-                    <strong>{day.subtitle}</strong>
-                    <p>{day.body}</p>
-                  </article>
-                ))}
-              </div>
-              <p className="mission-scenario-closing">{detail.missionScenario.closingLine}</p>
+            <div className="mission-scenario-banner-content">
+              <span>{detail.missionScenario.eyebrow}</span>
+              <h2>{detail.missionScenario.bannerText}</h2>
+              <p>{detail.missionScenario.bannerSubtext}</p>
             </div>
-          </section>
+          </a>
         )}
 
         {detail?.footerCta && (

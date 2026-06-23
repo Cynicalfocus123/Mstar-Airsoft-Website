@@ -236,33 +236,137 @@ export const siteContent: SiteContent = {
           heading: 'Mission Scenario',
           subheading: 'Force of Conquest 2027',
           backgroundImagePath: '/images/events/force-of-conquest-mission-scenario.jfif',
+          href: '/events/force-of-conquest/mission-scenario',
+          bannerText: 'See Mission Scenario',
+          bannerSubtext: 'View the full three-day campaign storyline.',
           intro:
-            'January 8-10, 2027 - Saraburi, Thailand. The Republic of Siam Frontier has descended into chaos after a powerful criminal syndicate operating throughout the Golden Triangle seized control of strategic territories, natural resources, transportation routes, and military installations. Factions will compete through strategy, leadership, diplomacy, and combat, with every victory and defeat directly affecting the next phase of the war.',
+            'January 8-10, 2027 - Saraburi, Thailand. The Republic of Siam Frontier has descended into chaos. A powerful criminal syndicate operating throughout the Golden Triangle has seized control of strategic territories, natural resources, transportation routes, and military installations. Local governments have collapsed, and insurgent groups, private military contractors, and international intervention forces are now fighting for control of the region.',
+          coreLine:
+            'Players will choose a faction and participate in a three-day military campaign in which every victory and defeat directly affects the next phase of the war.',
           days: [
             {
               label: 'Day 1',
               title: 'Operation: Jungle Storm',
               subtitle: 'Reconnaissance, Infiltration & Territory Seizure',
               body:
-                'Factions enter the conflict with limited intelligence and resources. Reconnaissance teams move deep into hostile territory to locate enemy positions, supply caches, communication towers, and strategic objectives.',
+                'The war begins. All factions enter the conflict with limited intelligence and resources. Commanders must deploy reconnaissance teams deep into hostile territory to locate enemy positions, supply caches, communication towers, and strategic objectives. The primary goal is to establish a foothold in the region and secure critical assets before enemy forces can react.',
+              schedule: [
+                { time: '08:00 - 10:00', mission: 'Reconnaissance Patrol & Intelligence Gathering' },
+                { time: '10:00 - 12:00', mission: 'Secure Communication Towers' },
+                { time: '13:00 - 15:00', mission: 'Capture Strategic Villages' },
+                { time: '15:00 - 17:00', mission: 'Defend Supply Convoys' },
+                { time: '19:00 - 21:00', mission: 'Night Infiltration Mission' },
+              ],
+              objectivesTitle: 'Key Objectives',
+              objectives: [
+                'Gather battlefield intelligence',
+                'Capture radio towers',
+                'Establish forward operating bases',
+                'Secure ammunition depots',
+                'Control transportation routes',
+                'Identify enemy leadership',
+              ],
+              victoryTitle: 'Day 1 Victory Conditions',
+              victoryItems: [
+                'Additional resources',
+                'Extra vehicles',
+                'Intelligence advantages',
+                'Reinforcements on Day 2',
+              ],
             },
             {
               label: 'Day 2',
               title: 'Operation: Golden Triangle',
               subtitle: 'Counter-Insurgency & Drug Cartel Elimination',
               body:
-                'Intelligence from Day 1 reveals major cartel operations. Factions compete to destroy drug manufacturing facilities, disrupt smuggling routes, capture high-value targets, and survive guerrilla attacks across the jungle.',
+                'The conflict escalates. Intelligence gathered during Day 1 reveals the location of major cartel operations controlling the region. Multiple factions now compete to destroy drug manufacturing facilities, disrupt smuggling routes, and capture high-value targets while enemy insurgents launch guerrilla attacks throughout the jungle.',
+              schedule: [
+                { time: '08:00 - 10:00', mission: 'Destroy Drug Production Facilities' },
+                { time: '10:00 - 12:00', mission: 'Capture Cartel Leadership' },
+                { time: '13:00 - 15:00', mission: 'Hostage Rescue Operation' },
+                { time: '15:00 - 17:00', mission: 'Convoy Ambush & Counter-Ambush' },
+                { time: '19:00 - 21:00', mission: 'Drone Strike Night Operation' },
+              ],
+              objectivesTitle: 'Key Objectives',
+              objectives: [
+                'Eliminate cartel commanders',
+                'Capture intelligence documents',
+                'Rescue hostages',
+                'Protect supply chains',
+                'Conduct drone reconnaissance',
+                'Destroy enemy infrastructure',
+              ],
+              extraTitle: 'Dynamic Events',
+              extraItems: [
+                'Surprise helicopter crash scenario',
+                'VIP extraction mission',
+                'Intelligence package recovery',
+                'Guerrilla ambushes',
+              ],
+              victoryTitle: 'Day 2 Victory Conditions',
+              victoryItems: [
+                'Additional funding',
+                'Strategic intelligence',
+                'Advanced mission advantages',
+                'Access to special operations teams',
+              ],
             },
             {
               label: 'Day 3',
               title: 'Operation: Final Conquest',
               subtitle: 'Assault on the Capital',
               body:
-                'The remaining factions launch a final offensive against The Capital. Every resource earned during the previous two days becomes critical as squads fight for command centers, strategic zones, and final control of the region.',
+                'The final battle begins. The remaining factions launch a massive offensive against the enemy stronghold known as The Capital. The faction that successfully captures and controls the capital city, government compound, military headquarters, and strategic command centers will determine the future of the region.',
+              schedule: [
+                { time: '08:00 - 10:00', mission: 'Assault Enemy Defensive Lines' },
+                { time: '10:00 - 12:00', mission: 'Capture Government Compound' },
+                { time: '13:00 - 15:00', mission: 'Destroy Enemy Command Center' },
+                { time: '15:00 - 17:00', mission: 'Final Battle for Capital City' },
+              ],
+              objectivesTitle: 'Final Objectives',
+              objectives: [
+                'Capture the Presidential Palace',
+                'Eliminate enemy warlords',
+                'Secure military headquarters',
+                'Control all strategic zones',
+                'Raise your faction flag over the capital',
+              ],
+              endGameTitle: 'End Game Scenario',
+              endGameParagraphs: [
+                'The event concludes with a massive final battle involving all factions fighting simultaneously for complete control of the region.',
+                'Every player, squad, and commander will contribute to the outcome. Only one faction can claim victory.',
+              ],
             },
           ],
+          nightFestival: {
+            title: 'Night Festival & Entertainment',
+            intro: 'Every evening from 6:00 PM to 2:00 AM, participants can enjoy:',
+            groups: [
+              {
+                title: 'International Food Festival',
+                items: ['Thai Cuisine', 'American BBQ', 'European Specialties', 'Asian Street Food'],
+              },
+              {
+                title: 'Live Entertainment',
+                items: ['International Live Bands', 'DJs', 'Cultural Performances'],
+              },
+              {
+                title: 'Carnival Zone',
+                items: ['Shooting Challenges', 'Team Competitions', 'Adventure Activities', 'Lucky Draws'],
+              },
+              {
+                title: 'Vendor Village',
+                items: ['Military Expo', 'Airsoft Manufacturers', 'Tactical Equipment Displays', 'New Product Launches', 'Sponsor Exhibitions'],
+              },
+            ],
+          },
           closingLine:
-            'Every victory and defeat directly affects the next phase of the war. Night Festival & Entertainment keeps the campaign alive after dark, because the war never stops.',
+            'The War Never Stops',
+          closingParagraphs: [
+            'Every mission completed throughout the campaign affects the overall war effort.',
+            'Territories captured, commanders eliminated, resources secured, and alliances formed during the first two days will directly influence the final outcome of Force of Conquest 2027.',
+            'No two campaigns will ever be the same. Prepare your team. Choose your faction. Fight for victory.',
+          ],
         },
         footerTitle: 'Ready for Force of Conquest?',
         footerCta: { label: 'Buy Ticket Now', href: '/ticket', variant: 'primary' },

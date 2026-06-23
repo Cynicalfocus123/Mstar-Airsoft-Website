@@ -148,14 +148,39 @@ export interface EventCard {
       heading: string;
       subheading: string;
       backgroundImagePath: string;
+      href: string;
+      bannerText: string;
+      bannerSubtext: string;
       intro: string;
+      coreLine: string;
       days: Array<{
         label: string;
         title: string;
         subtitle: string;
         body: string;
+        schedule: Array<{
+          time: string;
+          mission: string;
+        }>;
+        objectivesTitle: string;
+        objectives: string[];
+        extraTitle?: string;
+        extraItems?: string[];
+        victoryTitle?: string;
+        victoryItems?: string[];
+        endGameTitle?: string;
+        endGameParagraphs?: string[];
       }>;
+      nightFestival: {
+        title: string;
+        intro: string;
+        groups: Array<{
+          title: string;
+          items: string[];
+        }>;
+      };
       closingLine: string;
+      closingParagraphs: string[];
     };
     footerTitle: string;
     footerCta: CtaButton;

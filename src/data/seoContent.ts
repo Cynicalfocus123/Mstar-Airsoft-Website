@@ -200,6 +200,21 @@ export const seoContent: Record<string, SeoEntry> = {
       ]),
     ],
   }),
+  '/events/force-of-conquest/mission-scenario': makeSeo({
+    path: '/events/force-of-conquest/mission-scenario',
+    title: 'Mission Scenario | Force of Conquest 2027',
+    description: 'Read the Force of Conquest 2027 three-day campaign storyline, including Day 1 Jungle Storm, Day 2 Golden Triangle, and Day 3 Final Conquest.',
+    ogType: 'article',
+    schema: [
+      webPage('/events/force-of-conquest/mission-scenario', 'Mission Scenario | Force of Conquest 2027', 'Read the Force of Conquest 2027 three-day campaign storyline, including Day 1 Jungle Storm, Day 2 Golden Triangle, and Day 3 Final Conquest.', 'Article'),
+      breadcrumbs([
+        { name: 'Home', path: '/' },
+        { name: 'Events', path: '/events' },
+        { name: 'Force of Conquest', path: '/events/force-of-conquest' },
+        { name: 'Mission Scenario', path: '/events/force-of-conquest/mission-scenario' },
+      ]),
+    ],
+  }),
   '/events/night-grid': makeSeo({
     path: '/events/night-grid',
     title: 'TBA Event | MSTAR Airsoft',
@@ -404,6 +419,7 @@ export const sitemapRoutes = [
   { path: '/ticket', priority: '0.9' },
   { path: '/events', priority: '0.9' },
   { path: '/events/force-of-conquest', priority: '0.9' },
+  { path: '/events/force-of-conquest/mission-scenario', priority: '0.8' },
   { path: '/things-to-know', priority: '0.8' },
   { path: '/rules-and-regulation', priority: '0.8' },
   { path: '/contact', priority: '0.8' },

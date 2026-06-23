@@ -12,6 +12,7 @@ import { CreateAccountPage } from './components/CreateAccountPage';
 import { AccountSettingsPage } from './components/AccountSettingsPage';
 import { EventDetailPage } from './components/EventDetailPage';
 import { EventCheckoutPage } from './components/EventCheckoutPage';
+import { MissionScenarioPage } from './components/MissionScenarioPage';
 import { InfoPage } from './components/InfoPage';
 import { TicketPage } from './components/TicketPage';
 import { SeoHead } from './components/SeoHead';
@@ -26,6 +27,7 @@ function getRoute() {
     ? rawPath.slice(basePath.length) || '/'
     : rawPath;
 
+  if (path === '/events/force-of-conquest/mission-scenario') return { name: 'missionScenario', eventId: 'force-of-conquest' };
   if (path.startsWith('/events/')) return { name: 'eventDetail', eventId: path.replace('/events/', '') };
   if (path.startsWith('/checkout/')) return { name: 'checkout', eventId: path.replace('/checkout/', '') };
   if (path === '/events') return { name: 'events' };
@@ -103,6 +105,8 @@ export default function App() {
   const isHome = route.name === 'home';
   const selectedEvent = route.name === 'eventDetail'
     ? siteContent.events.find((event) => event.id === route.eventId && event.href === `/events/${route.eventId}`)
+    : route.name === 'missionScenario'
+      ? siteContent.events.find((event) => event.id === route.eventId && event.href === `/events/${route.eventId}`)
     : route.name === 'checkout'
       ? siteContent.events.find((event) => event.id === route.eventId)
       : undefined;
@@ -145,6 +149,7 @@ export default function App() {
       {route.name === 'events' && <EventsPage events={siteContent.events} />}
       {route.name === 'ticket' && <TicketPage content={siteContent.ticketPage} />}
       {route.name === 'eventDetail' && <EventDetailPage event={selectedEvent} isAuthenticated={isAuthenticated} />}
+      {route.name === 'missionScenario' && <MissionScenarioPage event={selectedEvent} />}
       {route.name === 'checkout' && <EventCheckoutPage event={selectedEvent} isAuthenticated={isAuthenticated} />}
       {route.name === 'info' && <InfoPage content={selectedInfoPage} />}
       {route.name === 'signin' && <SignInPage content={siteContent.signIn} onSuccess={markSignedIn} />}

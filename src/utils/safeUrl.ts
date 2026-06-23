@@ -1,4 +1,4 @@
-const internalPathPattern = /^\/(?:[a-z0-9][a-z0-9-]*(?:\/[a-z0-9][a-z0-9-]*)?)?$/i;
+const internalPathPattern = /^\/(?:[a-z0-9][a-z0-9-]*(?:\/[a-z0-9][a-z0-9-]*)*)?$/i;
 const localAssetPattern = /^\/(?:[a-z0-9._-]+\/)*[a-z0-9._-]+$/i;
 const youtubeEmbedHosts = new Set(['www.youtube.com', 'www.youtube-nocookie.com']);
 const approvedVideoHosts = new Set([
