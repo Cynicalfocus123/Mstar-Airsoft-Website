@@ -3017,6 +3017,22 @@ select:focus {
   line-height: 1.76;
 }
 
+.mission-closing-calls {
+  display: grid;
+  gap: 8px;
+  margin-top: clamp(22px, 4vw, 34px);
+}
+
+.mission-closing-calls strong {
+  color: var(--gold);
+  font-family: "Rajdhani", "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
 .mission-day-section {
   display: grid;
   gap: clamp(22px, 4vw, 40px);

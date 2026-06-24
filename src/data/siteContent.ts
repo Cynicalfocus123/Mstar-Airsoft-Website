@@ -217,23 +217,29 @@ export const siteContent: SiteContent = {
         ],
         missionScenario: {
           eyebrow: 'Three-Day Campaign Storyline',
-          heading: 'Mission Scenario',
-          subheading: 'Force of Conquest 2027',
+          heading: 'Force of Conquest 2027',
+          subheading: 'Three-Day Campaign Storyline',
           backgroundImagePath: '/images/events/force-of-conquest-mission-scenario.jfif',
           href: '/events/force-of-conquest/mission-scenario',
           bannerText: 'See Mission Scenario',
           bannerSubtext: '',
-          intro:
-            'January 8-10, 2027 - Saraburi, Thailand. The Republic of Siam Frontier has descended into chaos. A powerful criminal syndicate operating throughout the Golden Triangle has seized control of strategic territories, natural resources, transportation routes, and military installations. Local governments have collapsed, and insurgent groups, private military contractors, and international intervention forces are now fighting for control of the region.',
-          coreLine:
+          dateLocation: 'January 8-10, 2027 - Saraburi, Thailand',
+          backgroundHeading: 'Background',
+          backgroundParagraphs: [
+            'The Republic of Siam Frontier has descended into chaos.',
+            'A powerful criminal syndicate operating throughout the Golden Triangle has seized control of strategic territories, natural resources, transportation routes, and military installations. Local governments have collapsed, and insurgent groups, private military contractors, and international intervention forces are now fighting for control of the region.',
             'Players will choose a faction and participate in a three-day military campaign in which every victory and defeat directly affects the next phase of the war.',
+            'The fate of the region will be decided through strategy, leadership, diplomacy, and combat.',
+          ],
           days: [
             {
               label: 'Day 1',
               title: 'Operation: Jungle Storm',
               subtitle: 'Reconnaissance, Infiltration & Territory Seizure',
-              body:
-                'The war begins. All factions enter the conflict with limited intelligence and resources. Commanders must deploy reconnaissance teams deep into hostile territory to locate enemy positions, supply caches, communication towers, and strategic objectives. The primary goal is to establish a foothold in the region and secure critical assets before enemy forces can react.',
+              intro: 'The war begins.',
+              bodyParagraphs: [
+                'All factions enter the conflict with limited intelligence and resources. Commanders must deploy reconnaissance teams deep into hostile territory to locate enemy positions, supply caches, communication towers, and strategic objectives. The primary goal is to establish a foothold in the region and secure critical assets before enemy forces can react.',
+              ],
               schedule: [
                 { time: '08:00 - 10:00', mission: 'Reconnaissance Patrol & Intelligence Gathering' },
                 { time: '10:00 - 12:00', mission: 'Secure Communication Towers' },
@@ -251,6 +257,7 @@ export const siteContent: SiteContent = {
                 'Identify enemy leadership',
               ],
               victoryTitle: 'Day 1 Victory Conditions',
+              victoryIntro: 'The faction controlling the most territory receives:',
               victoryItems: [
                 'Additional resources',
                 'Extra vehicles',
@@ -262,8 +269,11 @@ export const siteContent: SiteContent = {
               label: 'Day 2',
               title: 'Operation: Golden Triangle',
               subtitle: 'Counter-Insurgency & Drug Cartel Elimination',
-              body:
-                'The conflict escalates. Intelligence gathered during Day 1 reveals the location of major cartel operations controlling the region. Multiple factions now compete to destroy drug manufacturing facilities, disrupt smuggling routes, and capture high-value targets while enemy insurgents launch guerrilla attacks throughout the jungle.',
+              intro: 'The conflict escalates.',
+              bodyParagraphs: [
+                'Intelligence gathered during Day 1 reveals the location of major cartel operations controlling the region. Multiple factions now compete to destroy drug manufacturing facilities, disrupt smuggling routes, and capture high-value targets.',
+                'Enemy insurgents launch guerrilla attacks throughout the jungle while factions battle for dominance.',
+              ],
               schedule: [
                 { time: '08:00 - 10:00', mission: 'Destroy Drug Production Facilities' },
                 { time: '10:00 - 12:00', mission: 'Capture Cartel Leadership' },
@@ -281,6 +291,7 @@ export const siteContent: SiteContent = {
                 'Destroy enemy infrastructure',
               ],
               extraTitle: 'Dynamic Events',
+              extraIntro: 'Throughout the day:',
               extraItems: [
                 'Surprise helicopter crash scenario',
                 'VIP extraction mission',
@@ -288,6 +299,7 @@ export const siteContent: SiteContent = {
                 'Guerrilla ambushes',
               ],
               victoryTitle: 'Day 2 Victory Conditions',
+              victoryIntro: 'The leading faction gains:',
               victoryItems: [
                 'Additional funding',
                 'Strategic intelligence',
@@ -299,8 +311,12 @@ export const siteContent: SiteContent = {
               label: 'Day 3',
               title: 'Operation: Final Conquest',
               subtitle: 'Assault on the Capital',
-              body:
-                'The final battle begins. The remaining factions launch a massive offensive against the enemy stronghold known as The Capital. The faction that successfully captures and controls the capital city, government compound, military headquarters, and strategic command centers will determine the future of the region.',
+              intro: 'The final battle begins.',
+              bodyParagraphs: [
+                'The remaining factions launch a massive offensive against the enemy stronghold known as "The Capital."',
+                'Years of conflict have led to this moment. The faction that successfully captures and controls the capital city, government compound, military headquarters, and strategic command centers will determine the future of the region.',
+                'Every resource earned during the previous two days will now be critical.',
+              ],
               schedule: [
                 { time: '08:00 - 10:00', mission: 'Assault Enemy Defensive Lines' },
                 { time: '10:00 - 12:00', mission: 'Capture Government Compound' },
@@ -318,7 +334,8 @@ export const siteContent: SiteContent = {
               endGameTitle: 'End Game Scenario',
               endGameParagraphs: [
                 'The event concludes with a massive final battle involving all factions fighting simultaneously for complete control of the region.',
-                'Every player, squad, and commander will contribute to the outcome. Only one faction can claim victory.',
+                'Every player, squad, and commander will contribute to the outcome.',
+                'Only one faction can claim victory.',
               ],
             },
           ],
@@ -349,8 +366,9 @@ export const siteContent: SiteContent = {
           closingParagraphs: [
             'Every mission completed throughout the campaign affects the overall war effort.',
             'Territories captured, commanders eliminated, resources secured, and alliances formed during the first two days will directly influence the final outcome of Force of Conquest 2027.',
-            'No two campaigns will ever be the same. Prepare your team. Choose your faction. Fight for victory.',
+            'No two campaigns will ever be the same.',
           ],
+          closingCalls: ['Prepare your team.', 'Choose your faction.', 'Fight for victory.'],
         },
         footerTitle: 'Ready for Force of Conquest?',
         footerCta: { label: 'Buy Ticket Now', href: '/ticket', variant: 'primary' },

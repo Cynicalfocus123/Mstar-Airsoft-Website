@@ -151,21 +151,25 @@ export interface EventCard {
       href: string;
       bannerText: string;
       bannerSubtext: string;
-      intro: string;
-      coreLine: string;
+      dateLocation: string;
+      backgroundHeading: string;
+      backgroundParagraphs: string[];
       days: Array<{
         label: string;
         title: string;
         subtitle: string;
-        body: string;
+        intro: string;
+        bodyParagraphs: string[];
         schedule: Array<{
           time: string;
           mission: string;
         }>;
         objectivesTitle: string;
         objectives: string[];
+        extraIntro?: string;
         extraTitle?: string;
         extraItems?: string[];
+        victoryIntro?: string;
         victoryTitle?: string;
         victoryItems?: string[];
         endGameTitle?: string;
@@ -181,6 +185,7 @@ export interface EventCard {
       };
       closingLine: string;
       closingParagraphs: string[];
+      closingCalls: string[];
     };
     footerTitle: string;
     footerCta: CtaButton;

@@ -28,8 +28,8 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
       <section className="mission-page-hero">
         <p className="eyebrow">{scenario.eyebrow}</p>
         <h1>{scenario.heading}</h1>
-        <strong>{scenario.subheading} Three-Day Campaign Storyline</strong>
-        <p>January 8-10, 2027 - Saraburi, Thailand</p>
+        <strong>{scenario.subheading}</strong>
+        <p>{scenario.dateLocation}</p>
         <a className="btn btn-secondary" href={getSafeInternalHref(event.href ?? '/events/force-of-conquest')}>
           Back to Event
         </a>
@@ -37,9 +37,10 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
 
       <section className="mission-page-content">
         <section className="mission-story-intro">
-          <h2>Force of Conquest 2027</h2>
-          <p>{scenario.intro}</p>
-          <p className="mission-core-line">{scenario.coreLine}</p>
+          <h2>{scenario.backgroundHeading}</h2>
+          {scenario.backgroundParagraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
         </section>
 
         {scenario.days.map((day) => (
@@ -53,8 +54,10 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
             </div>
 
             <div className="mission-story-block">
-              <h3>Short Overview</h3>
-              <p>{day.body}</p>
+              <p className="mission-core-line">{day.intro}</p>
+              {day.bodyParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
 
             <div className="mission-story-block">
@@ -81,6 +84,7 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
             {day.extraTitle && day.extraItems && (
               <div className="mission-story-block">
                 <h3>{day.extraTitle}</h3>
+                {day.extraIntro && <p>{day.extraIntro}</p>}
                 <ul className="mission-check-list">
                   {day.extraItems.map((item) => (
                     <li key={item}>{item}</li>
@@ -92,6 +96,7 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
             {day.victoryTitle && day.victoryItems && (
               <div className="mission-story-block">
                 <h3>{day.victoryTitle}</h3>
+                {day.victoryIntro && <p>{day.victoryIntro}</p>}
                 <ul className="mission-check-list">
                   {day.victoryItems.map((item) => (
                     <li key={item}>{item}</li>
@@ -138,6 +143,11 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
           {scenario.closingParagraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          <div className="mission-closing-calls">
+            {scenario.closingCalls.map((line) => (
+              <strong key={line}>{line}</strong>
+            ))}
+          </div>
         </section>
       </section>
     </main>
