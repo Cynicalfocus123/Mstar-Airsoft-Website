@@ -2799,6 +2799,100 @@ select:focus {
   transform: rotate(45deg);
 }
 
+.event-factions-section {
+  display: grid;
+  gap: clamp(24px, 4vw, 42px);
+}
+
+.event-factions-section .event-section-heading {
+  max-width: 840px;
+}
+
+.event-factions-section .event-section-heading p:not(.eyebrow) {
+  color: #e7ddc8;
+  font-size: clamp(1rem, 1.35vw, 1.12rem);
+  line-height: 1.72;
+}
+
+.event-factions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 34px);
+}
+
+.event-faction-card {
+  position: relative;
+  display: grid;
+  gap: clamp(18px, 3vw, 26px);
+  align-content: start;
+  min-width: 0;
+  padding: clamp(18px, 3vw, 30px);
+  overflow: hidden;
+  border: 1px solid rgba(240, 185, 11, 0.28);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(240, 185, 11, 0.12), transparent 42%),
+    linear-gradient(180deg, rgba(18, 24, 15, 0.92), rgba(7, 9, 6, 0.96));
+}
+
+.event-faction-card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(140, 161, 93, 0.14), transparent 38%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 48%);
+  pointer-events: none;
+}
+
+.event-faction-logo,
+.event-faction-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.event-faction-logo {
+  display: grid;
+  place-items: center;
+  min-height: clamp(190px, 24vw, 310px);
+  padding: clamp(14px, 3vw, 24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08), transparent 58%),
+    rgba(0, 0, 0, 0.18);
+}
+
+.event-faction-logo img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 320px);
+  height: auto;
+  max-height: clamp(170px, 22vw, 280px);
+  object-fit: contain;
+}
+
+.event-faction-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.event-faction-copy h3 {
+  margin: 0;
+  color: var(--white);
+  font-family: "Barlow Condensed", "Arial Narrow", "Oswald", sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 3.1rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.event-faction-copy p {
+  margin: 0;
+  color: #d9cfb7;
+  font-size: clamp(0.98rem, 1.2vw, 1.05rem);
+  line-height: 1.68;
+}
+
 .event-detail-final-cta {
   display: flex;
   align-items: center;
@@ -2964,6 +3058,52 @@ select:focus {
 .mission-page-hero .btn {
   justify-self: start;
   margin-top: 12px;
+}
+
+.mission-language-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.mission-language-toggle button {
+  min-height: 42px;
+  padding: 10px 18px;
+  border: 1px solid rgba(240, 185, 11, 0.48);
+  background: rgba(10, 12, 8, 0.68);
+  color: #f6eddc;
+  cursor: pointer;
+  font-family: "Rajdhani", "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.mission-language-toggle button:hover,
+.mission-language-toggle button:focus-visible {
+  border-color: var(--gold);
+  outline: none;
+}
+
+.mission-language-toggle button.is-active {
+  border-color: rgba(240, 185, 11, 0.88);
+  background: linear-gradient(180deg, rgba(240, 185, 11, 0.95), rgba(176, 126, 0, 0.95));
+  color: #070806;
+}
+
+.mission-page-th {
+  font-family: "Noto Sans Thai", "Prompt", "Inter", Arial, sans-serif;
+}
+
+.mission-page-th .mission-story-intro p,
+.mission-page-th .mission-story-block p,
+.mission-page-th .mission-closing-section p,
+.mission-page-th .mission-check-list li,
+.mission-page-th .mission-festival-group ul {
+  font-family: "Noto Sans Thai", "Prompt", "Inter", Arial, sans-serif;
 }
 
 .mission-page-content {
@@ -3601,9 +3741,18 @@ select:focus {
   }
 
   .event-timeline-card,
+  .event-factions-grid,
   .mission-day-heading {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .event-faction-logo {
+    min-height: clamp(170px, 42vw, 260px);
+  }
+
+  .event-faction-logo img {
+    max-height: clamp(150px, 38vw, 230px);
   }
 
   .mission-scenario-banner {
@@ -3861,6 +4010,14 @@ select:focus {
 
   .mission-page-content {
     gap: 46px;
+  }
+
+  .mission-language-toggle {
+    width: 100%;
+  }
+
+  .mission-language-toggle button {
+    flex: 1 1 120px;
   }
 
   .mission-day-heading-operation > span {

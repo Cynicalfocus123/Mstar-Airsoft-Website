@@ -143,49 +143,67 @@ export interface EventCard {
       body: string;
     }>;
     requirements: string[];
+    factions?: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      items: Array<{
+        name: string;
+        imagePath: string;
+        description: string;
+      }>;
+    };
     missionScenario: {
       eyebrow: string;
-      heading: string;
-      subheading: string;
       backgroundImagePath: string;
       href: string;
       bannerText: string;
       bannerSubtext: string;
-      dateLocation: string;
-      backgroundHeading: string;
-      backgroundParagraphs: string[];
-      days: Array<{
+      defaultLanguage: 'en' | 'th';
+      languages: Array<{
+        code: 'en' | 'th';
         label: string;
-        title: string;
-        subtitle: string;
-        intro: string;
-        bodyParagraphs: string[];
-        schedule: Array<{
-          time: string;
-          mission: string;
-        }>;
-        objectivesTitle: string;
-        objectives: string[];
-        extraIntro?: string;
-        extraTitle?: string;
-        extraItems?: string[];
-        victoryIntro?: string;
-        victoryTitle?: string;
-        victoryItems?: string[];
-        endGameTitle?: string;
-        endGameParagraphs?: string[];
-      }>;
-      nightFestival: {
-        title: string;
-        intro: string;
-        groups: Array<{
+        htmlLang: string;
+        heading: string;
+        subheading: string;
+        dateLocation: string;
+        backgroundHeading: string;
+        backgroundParagraphs: string[];
+        scheduleHeading: string;
+        days: Array<{
+          label: string;
           title: string;
-          items: string[];
+          subtitle: string;
+          intro: string;
+          bodyParagraphs: string[];
+          schedule: Array<{
+            time: string;
+            mission: string;
+          }>;
+          objectivesTitle: string;
+          objectives: string[];
+          extraIntro?: string;
+          extraTitle?: string;
+          extraItems?: string[];
+          victoryIntro?: string;
+          victoryTitle?: string;
+          victoryItems?: string[];
+          endGameTitle?: string;
+          endGameParagraphs?: string[];
         }>;
-      };
-      closingLine: string;
-      closingParagraphs: string[];
-      closingCalls: string[];
+        nightFestival: {
+          label: string;
+          title: string;
+          intro: string;
+          groups: Array<{
+            title: string;
+            items: string[];
+          }>;
+        };
+        closingLine: string;
+        closingParagraphs: string[];
+        closingCalls: string[];
+      }>;
     };
     footerTitle: string;
     footerCta: CtaButton;

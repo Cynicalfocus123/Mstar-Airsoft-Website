@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { EventCard } from '../types/siteContent';
 import { getSafeInternalHref } from '../utils/safeUrl';
 
@@ -7,8 +8,13 @@ interface MissionScenarioPageProps {
 
 export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
   const scenario = event?.detail?.missionScenario;
+  const [activeLanguage, setActiveLanguage] = useState<'en' | 'th'>(scenario?.defaultLanguage ?? 'en');
+  const activeScenario =
+    scenario?.languages.find((language) => language.code === activeLanguage) ??
+    scenario?.languages.find((language) => language.code === scenario.defaultLanguage) ??
+    scenario?.languages[0];
 
-  if (!event || !scenario) {
+  if (!event || !scenario || !activeScenario) {
     return (
       <main className="page-shell">
         <section className="page-hero">
@@ -24,12 +30,25 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
   }
 
   return (
-    <main className="mission-page">
+    <main className={`mission-page mission-page-${activeScenario.code}`} lang={activeScenario.htmlLang}>
       <section className="mission-page-hero">
         <p className="eyebrow">{scenario.eyebrow}</p>
-        <h1>{scenario.heading}</h1>
-        <strong>{scenario.subheading}</strong>
-        <p>{scenario.dateLocation}</p>
+        <h1>{activeScenario.heading}</h1>
+        <strong>{activeScenario.subheading}</strong>
+        <p>{activeScenario.dateLocation}</p>
+        <div className="mission-language-toggle" aria-label="Mission Scenario language">
+          {scenario.languages.map((language) => (
+            <button
+              aria-pressed={activeScenario.code === language.code}
+              className={activeScenario.code === language.code ? 'is-active' : ''}
+              key={language.code}
+              onClick={() => setActiveLanguage(language.code)}
+              type="button"
+            >
+              {language.label}
+            </button>
+          ))}
+        </div>
         <a className="btn btn-secondary" href={getSafeInternalHref(event.href ?? '/events/force-of-conquest')}>
           Back to Event
         </a>
@@ -37,13 +56,13 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
 
       <section className="mission-page-content">
         <section className="mission-story-intro">
-          <h2>{scenario.backgroundHeading}</h2>
-          {scenario.backgroundParagraphs.map((paragraph) => (
+          <h2>{activeScenario.backgroundHeading}</h2>
+          {activeScenario.backgroundParagraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </section>
 
-        {scenario.days.map((day) => (
+        {activeScenario.days.map((day) => (
           <section className="mission-day-section" key={day.label}>
             <div className="mission-day-heading mission-day-heading-operation">
               <span>{day.label}</span>
@@ -61,7 +80,7 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
             </div>
 
             <div className="mission-story-block">
-              <h3>Mission Schedule</h3>
+              <h3>{activeScenario.scheduleHeading}</h3>
               <div className="mission-schedule-list">
                 {day.schedule.map((item) => (
                   <div className="mission-schedule-row" key={`${day.label}-${item.time}`}>
@@ -118,14 +137,14 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
 
         <section className="mission-day-section">
           <div className="mission-day-heading mission-day-heading-support">
-            <span>Night</span>
+            <span>{activeScenario.nightFestival.label}</span>
             <div>
-              <h2>{scenario.nightFestival.title}</h2>
-              <strong>{scenario.nightFestival.intro}</strong>
+              <h2>{activeScenario.nightFestival.title}</h2>
+              <strong>{activeScenario.nightFestival.intro}</strong>
             </div>
           </div>
           <div className="mission-festival-grid">
-            {scenario.nightFestival.groups.map((group) => (
+            {activeScenario.nightFestival.groups.map((group) => (
               <article className="mission-festival-group" key={group.title}>
                 <h3>{group.title}</h3>
                 <ul>
@@ -139,12 +158,12 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
         </section>
 
         <section className="mission-closing-section">
-          <h2>{scenario.closingLine}</h2>
-          {scenario.closingParagraphs.map((paragraph) => (
+          <h2>{activeScenario.closingLine}</h2>
+          {activeScenario.closingParagraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
           <div className="mission-closing-calls">
-            {scenario.closingCalls.map((line) => (
+            {activeScenario.closingCalls.map((line) => (
               <strong key={line}>{line}</strong>
             ))}
           </div>

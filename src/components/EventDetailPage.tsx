@@ -127,6 +127,29 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
           </section>
         )}
 
+        {detail?.factions && (
+          <section className="event-detail-section event-factions-section">
+            <div className="event-section-heading">
+              <p className="eyebrow">{detail.factions.eyebrow}</p>
+              <h2>{detail.factions.title}</h2>
+              <p>{detail.factions.description}</p>
+            </div>
+            <div className="event-factions-grid">
+              {detail.factions.items.map((faction) => (
+                <article className="event-faction-card" key={faction.name}>
+                  <div className="event-faction-logo">
+                    <img src={getPublicAssetPath(faction.imagePath)} alt={`${faction.name} logo`} loading="lazy" />
+                  </div>
+                  <div className="event-faction-copy">
+                    <h3>{faction.name}</h3>
+                    <p>{faction.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
         {detail?.missionScenario && (
           <a
             className="mission-scenario-banner"
