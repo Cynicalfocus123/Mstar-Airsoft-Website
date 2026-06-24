@@ -264,6 +264,10 @@ When the user asks for a future deployment ZIP, report:
 - Add a short changelog entry before commit.
 - Commit memory files with the related code/design change.
 
+## Current Design Log
+
+- 2026-06-24: Removed all boxed card, border, gradient-panel, and logo sub-panel styling from the Choose Your Factions section on the Force of Conquest event detail page. Faction logos and copy now sit openly on the dark tactical background; desktop keeps two balanced sides separated only by a thin gold center rule, while mobile stacks both factions and removes the rule. Logos use responsive contained sizing, names wrap without clipping, and the section stays before the Mission Scenario banner. The change reused the existing data-driven markup with minimal scoped CSS and follows the token-saving and automatic commit/push workflow.
+
 ## Token And Do-Not-Repeat Rules
 
 - Use fewer tokens and summarize results only.

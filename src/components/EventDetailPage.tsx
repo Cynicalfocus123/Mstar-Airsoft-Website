@@ -136,7 +136,7 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
             </div>
             <div className="event-factions-grid">
               {detail.factions.items.map((faction) => (
-                <article className="event-faction-card" key={faction.name}>
+                <article className="event-faction-side" key={faction.name}>
                   <div className="event-faction-logo">
                     <img src={getPublicAssetPath(faction.imagePath)} alt={`${faction.name} logo`} loading="lazy" />
                   </div>
