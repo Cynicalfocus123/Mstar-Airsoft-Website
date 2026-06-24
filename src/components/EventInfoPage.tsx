@@ -53,7 +53,7 @@ export function EventInfoPage({ event }: EventInfoPageProps) {
 
       <div className="event-info-sections">
         {activeContent.sections.map((section, index) => (
-          <section className={`event-info-split ${index % 2 === 1 ? 'event-info-split-reverse' : ''}`} key={section.title}>
+          <section className={`event-info-split ${index % 2 === 1 ? 'event-info-split-reverse' : ''}`} key={section.title ?? `${activeContent.code}-${index}`}>
             <div className="event-info-media">
               {section.imagePath ? (
                 <img
@@ -69,7 +69,7 @@ export function EventInfoPage({ event }: EventInfoPageProps) {
             </div>
             <article className="event-info-copy">
               {section.subtitle && <p className="event-info-subtitle">{section.subtitle}</p>}
-              <h2>{section.title}</h2>
+              {section.title && <h2>{section.title}</h2>}
               {section.headline && <strong className="event-info-headline">{section.headline}</strong>}
               {section.dateLine && <p className="event-info-date">{section.dateLine}</p>}
               {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -90,14 +90,15 @@ export function EventInfoPage({ event }: EventInfoPageProps) {
               )}
               {section.email && <a className="event-info-email" href={`mailto:${section.email}`}>{section.email}</a>}
               {section.note && <p className="event-info-note">{section.note}</p>}
-              {section.closingLines && (
-                <div className="event-info-closing">
-                  {section.closingLines.map((line) => <strong key={line}>{line}</strong>)}
-                </div>
-              )}
             </article>
           </section>
         ))}
+        <section className="event-detail-final-cta event-info-final-cta">
+          <h2>{eventInfo.ctaTitle}</h2>
+          <a className="btn btn-gold" href={getSafeInternalHref(eventInfo.ctaHref)}>
+            {eventInfo.ctaLabel}
+          </a>
+        </section>
       </div>
     </main>
   );

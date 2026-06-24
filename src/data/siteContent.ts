@@ -239,6 +239,9 @@ export const siteContent: SiteContent = {
           backgroundImagePath: '/images/events/force-of-conquest/event-info-banner.jpg',
           href: '/events/force-of-conquest/event-info',
           bannerText: 'See Event Info',
+          ctaTitle: 'Ready for Force of Conquest?',
+          ctaLabel: 'Buy Ticket Now',
+          ctaHref: '/ticket',
           defaultLanguage: 'en',
           languages: [
             {
@@ -249,17 +252,14 @@ export const siteContent: SiteContent = {
               pageSubtitle: 'Force of Conquest 2027 - 3 Days • 2 Nights of Non-Stop Action, Adventure, and Immersion',
               sections: [
                 {
-                  title: 'Force of Conquest 2027',
                   subtitle: "Asia's Largest Airsoft MilSim Experience",
-                  headline: '3 Days • 2 Nights of Non-Stop Action, Adventure, and Immersion',
-                  dateLine: 'The battle for conquest begins January 8-10, 2027.',
                   paragraphs: [
                     'Force of Conquest 2027 is more than just an airsoft event - it is a fully immersive military simulation experience unlike anything else in Asia.',
                     'Set across more than 100 acres of stunning natural rainforest terrain in Thailand, this three-day, two-night adventure combines intense military operations, strategic gameplay, camping, entertainment, and community activities into one unforgettable event.',
                     'By purchasing a Force of Conquest Event Ticket, you secure your place in an epic battlefield where teamwork, strategy, endurance, and leadership will determine the fate of entire factions.',
                     'Beyond the battlefield, participants can enjoy live music performances, festival-style entertainment, BBQ competitions, carnival activities, adventure rides, camping, role-playing experiences, and social gatherings with fellow players from around the world.',
                   ],
-                  imagePath: '/images/events/force-of-conquest/event-info-banner.jpg',
+                  imagePath: '/images/events/force-of-conquest/c7ddb663-e7b8-47e9-8063-e4e8730a1ffb.jfif',
                   imageAlt: 'Airsoft player holding a rifle in tactical equipment',
                 },
                 {
@@ -278,8 +278,7 @@ export const siteContent: SiteContent = {
                     'Drone reconnaissance and attack missions',
                     'Security stabilization and peacekeeping operations',
                   ],
-                  note: 'Every decision matters. Every objective has consequences. Fight for Territory. Build Alliances. Conquer the Battlefield.',
-                  imagePath: '/images/events/force-of-conquest-mission-scenario.jfif',
+                  imagePath: '/images/events/force-of-conquest/874d0ed7-e484-4b41-964e-18b9aebd6a28.jfif',
                   imageAlt: 'Force of Conquest military simulation campaign',
                 },
                 {
@@ -414,15 +413,6 @@ export const siteContent: SiteContent = {
                   ],
                   placeholderLabel: 'Sanitary Facilities',
                 },
-                {
-                  title: 'Join the Battle',
-                  paragraphs: [
-                    'Whether you are an experienced MilSim veteran or a passionate airsoft enthusiast seeking the next great adventure, Force of Conquest 2027 offers an unparalleled battlefield experience in the heart of Thailand.',
-                  ],
-                  closingLines: ['Prepare your team.', 'Choose your faction.', 'Fight for control.'],
-                  imagePath: '/images/game-terrain/fun-combat-terrains.webp',
-                  imageAlt: 'Airsoft players moving through combat terrain',
-                },
               ],
             },
             {
@@ -433,17 +423,14 @@ export const siteContent: SiteContent = {
               pageSubtitle: 'Force of Conquest 2027 - 3 วัน • 2 คืน แห่งการต่อสู้ ผจญภัย และประสบการณ์เสมือนจริงแบบไร้ขีดจำกัด',
               sections: [
                 {
-                  title: 'FORCE OF CONQUEST 2027',
                   subtitle: 'ประสบการณ์ Airsoft MilSim ที่ยิ่งใหญ่ที่สุดในเอเชีย',
-                  headline: '3 วัน • 2 คืน แห่งการต่อสู้ ผจญภัย และประสบการณ์เสมือนจริงแบบไร้ขีดจำกัด',
-                  dateLine: 'สงครามแห่งการพิชิตกำลังจะเริ่มต้นขึ้น 8-10 มกราคม 2570 จังหวัดสระบุรี ประเทศไทย',
                   paragraphs: [
                     'Force of Conquest 2027 ไม่ใช่เพียงกิจกรรมแอร์ซอฟต์ธรรมดา แต่คือประสบการณ์การจำลองยุทธการทางทหาร (Military Simulation Experience) แบบเต็มรูปแบบที่ยิ่งใหญ่และสมจริงที่สุดแห่งหนึ่งในเอเชีย',
                     'บนพื้นที่ป่าธรรมชาติอันสวยงามกว่า 267 ไร่ ในจังหวัดสระบุรี ประเทศไทย ผู้เข้าร่วมจะได้สัมผัสการผจญภัยตลอด 3 วัน 2 คืน ที่ผสานการรบทางยุทธวิธี การวางแผนเชิงกลยุทธ์ การตั้งแคมป์ กิจกรรมบันเทิง และการสร้างมิตรภาพจากผู้เล่นทั่วโลกไว้ในงานเดียว',
                     'เมื่อคุณซื้อบัตรเข้าร่วมงาน Force of Conquest 2027 คุณจะได้ก้าวเข้าสู่สนามรบขนาดมหึมา ซึ่งความสามัคคี การวางแผน ความอดทน และภาวะผู้นำ จะเป็นตัวกำหนดชะตากรรมของทั้งกองทัพ',
                     'นอกเหนือจากสนามรบ ผู้เข้าร่วมยังสามารถเพลิดเพลินกับการแสดงดนตรีสด เทศกาลอาหารนานาชาติ การแข่งขัน BBQ โซนกิจกรรมคาร์นิวัลและเครื่องเล่น กิจกรรมผจญภัย การตั้งแคมป์กลางธรรมชาติ กิจกรรมเกมและการแสดงต่าง ๆ รวมถึงงานสังสรรค์กับผู้เล่นจากทั่วโลก',
                   ],
-                  imagePath: '/images/events/force-of-conquest/event-info-banner.jpg',
+                  imagePath: '/images/events/force-of-conquest/c7ddb663-e7b8-47e9-8063-e4e8730a1ffb.jfif',
                   imageAlt: 'ผู้เล่นแอร์ซอฟต์พร้อมอุปกรณ์ยุทธวิธี',
                 },
                 {
@@ -462,8 +449,7 @@ export const siteContent: SiteContent = {
                     'ภารกิจลาดตระเวนและโจมตีด้วยโดรน',
                     'ปฏิบัติการรักษาความมั่นคงและสันติภาพ',
                   ],
-                  note: 'ทุกการตัดสินใจมีความหมาย ทุกภารกิจส่งผลต่อผลลัพธ์ของสงคราม ต่อสู้เพื่อดินแดน สร้างพันธมิตร และพิชิตสนามรบ',
-                  imagePath: '/images/events/force-of-conquest-mission-scenario.jfif',
+                  imagePath: '/images/events/force-of-conquest/874d0ed7-e484-4b41-964e-18b9aebd6a28.jfif',
                   imageAlt: 'แคมเปญจำลองยุทธการ Force of Conquest',
                 },
                 {
@@ -595,15 +581,6 @@ export const siteContent: SiteContent = {
                     'จุดกำจัดขยะ',
                   ],
                   placeholderLabel: 'สิ่งอำนวยความสะดวกด้านสุขอนามัย',
-                },
-                {
-                  title: 'เข้าร่วมสงครามแห่งการพิชิต',
-                  paragraphs: [
-                    'ไม่ว่าคุณจะเป็นนักรบ MilSim มากประสบการณ์ หรือผู้เล่นแอร์ซอฟต์ที่กำลังมองหาความท้าทายครั้งใหม่ Force of Conquest 2027 จะมอบประสบการณ์สนามรบระดับโลกใจกลางประเทศไทยที่คุณจะไม่มีวันลืม',
-                  ],
-                  closingLines: ['เตรียมทีมของคุณ', 'เลือกฝ่ายของคุณ', 'เข้าร่วมสงคราม และต่อสู้เพื่อยึดครองชัยชนะ'],
-                  imagePath: '/images/game-terrain/fun-combat-terrains.webp',
-                  imageAlt: 'ผู้เล่นแอร์ซอฟต์ในพื้นที่การรบ',
                 },
               ],
             },

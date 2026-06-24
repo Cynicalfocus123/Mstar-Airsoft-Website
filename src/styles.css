@@ -3004,8 +3004,9 @@ select:focus {
 .event-info-hero > p {
   max-width: 850px;
   margin: 0;
-  color: #e3dccd;
+  color: var(--gold);
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 900;
   line-height: 1.55;
 }
 
@@ -3052,11 +3053,12 @@ select:focus {
 
 .event-info-split {
   display: grid;
-  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+  grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(30px, 5vw, 72px);
+  align-items: center;
   min-width: 0;
-  overflow: hidden;
-  border: 1px solid rgba(240, 185, 11, 0.22);
-  background: linear-gradient(135deg, rgba(16, 21, 13, 0.96), rgba(6, 8, 5, 0.98));
+  padding-top: clamp(28px, 4vw, 54px);
+  border-top: 1px solid rgba(240, 185, 11, 0.22);
 }
 
 .event-info-split-reverse .event-info-media {
@@ -3064,6 +3066,7 @@ select:focus {
 }
 
 .event-info-media {
+  overflow: hidden;
   min-height: clamp(360px, 42vw, 560px);
   background: #090b08;
 }
@@ -3098,20 +3101,21 @@ select:focus {
 .event-info-copy {
   display: flex;
   min-width: 0;
-  padding: clamp(30px, 5vw, 64px);
   flex-direction: column;
   justify-content: center;
 }
 
 .event-info-copy h2 {
+  max-width: 19ch;
   margin: 0 0 20px;
   color: var(--white);
   font-family: "Barlow Condensed", "Arial Narrow", "Oswald", sans-serif;
-  font-size: clamp(2.1rem, 4.6vw, 4rem);
+  font-size: clamp(38px, 4vw, 64px);
   font-weight: 900;
   letter-spacing: 0.025em;
-  line-height: 0.98;
-  overflow-wrap: anywhere;
+  line-height: 1.02;
+  overflow-wrap: normal;
+  word-break: normal;
   text-transform: uppercase;
 }
 
@@ -3218,15 +3222,8 @@ select:focus {
   font-weight: 700;
 }
 
-.event-info-closing {
-  display: grid;
-  gap: 7px;
-  margin-top: 18px;
-  color: var(--gold);
-  font-family: "Barlow Condensed", "Arial Narrow", "Oswald", sans-serif;
-  font-size: clamp(1.45rem, 2.8vw, 2.3rem);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.event-info-final-cta {
+  margin-top: clamp(10px, 2vw, 24px);
 }
 
 .mission-scenario-banner::before {
@@ -4082,6 +4079,7 @@ select:focus {
 
   .event-info-split {
     grid-template-columns: 1fr;
+    gap: clamp(24px, 5vw, 38px);
   }
 
   .event-info-split-reverse .event-info-media {
@@ -4090,6 +4088,11 @@ select:focus {
 
   .event-info-media {
     min-height: clamp(280px, 60vw, 440px);
+  }
+
+  .event-info-copy h2 {
+    max-width: 24ch;
+    font-size: clamp(32px, 4vw, 48px);
   }
 
   .mission-scenario-banner {
@@ -4348,11 +4351,13 @@ select:focus {
   }
 
   .event-info-copy {
-    padding: 24px 20px 28px;
+    padding: 0 0 8px;
   }
 
   .event-info-copy h2 {
-    font-size: clamp(1.9rem, 10vw, 2.8rem);
+    max-width: 100%;
+    font-size: clamp(28px, 8vw, 38px);
+    line-height: 1.08;
   }
 
   .event-info-rows div {

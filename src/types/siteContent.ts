@@ -157,6 +157,9 @@ export interface EventCard {
       backgroundImagePath: string;
       href: string;
       bannerText: string;
+      ctaTitle: string;
+      ctaLabel: string;
+      ctaHref: string;
       defaultLanguage: 'en' | 'th';
       languages: Array<{
         code: 'en' | 'th';
@@ -165,7 +168,7 @@ export interface EventCard {
         pageTitle: string;
         pageSubtitle: string;
         sections: Array<{
-          title: string;
+          title?: string;
           subtitle?: string;
           headline?: string;
           dateLine?: string;
