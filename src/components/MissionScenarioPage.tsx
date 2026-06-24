@@ -44,7 +44,7 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
 
         {scenario.days.map((day) => (
           <section className="mission-day-section" key={day.label}>
-            <div className="mission-day-heading">
+            <div className="mission-day-heading mission-day-heading-operation">
               <span>{day.label}</span>
               <div>
                 <h2>{day.title}</h2>
@@ -112,7 +112,7 @@ export function MissionScenarioPage({ event }: MissionScenarioPageProps) {
         ))}
 
         <section className="mission-day-section">
-          <div className="mission-day-heading">
+          <div className="mission-day-heading mission-day-heading-support">
             <span>Night</span>
             <div>
               <h2>{scenario.nightFestival.title}</h2>

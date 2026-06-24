@@ -2867,6 +2867,7 @@ select:focus {
 
 .mission-page {
   min-height: calc(100vh - 92px);
+  font-family: "Inter", Arial, sans-serif;
   background:
     radial-gradient(circle at 14% 8%, rgba(75, 104, 45, 0.2), transparent 34%),
     linear-gradient(180deg, #080a07, #040404 42%, #080907);
@@ -2883,6 +2884,7 @@ select:focus {
 .mission-page-hero h1 {
   margin: 0;
   color: var(--white);
+  font-family: "Barlow Condensed", "Arial Narrow", "Oswald", sans-serif;
   font-size: clamp(2.6rem, 7vw, 6.8rem);
   line-height: 0.9;
   text-transform: uppercase;
@@ -2892,7 +2894,9 @@ select:focus {
 .mission-core-line,
 .mission-day-heading strong {
   color: var(--gold);
+  font-family: "Rajdhani", "Barlow Condensed", "Arial Narrow", sans-serif;
   font-weight: 900;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -2924,13 +2928,27 @@ select:focus {
 }
 
 .mission-story-intro h2,
-.mission-day-heading h2,
-.mission-closing-section h2 {
+.mission-closing-section h2,
+.mission-day-heading-support h2 {
   margin: 0;
-  color: var(--white);
-  font-size: clamp(1.9rem, 4vw, 4rem);
+  color: var(--gold);
+  font-family: "Rajdhani", "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.8rem);
+  letter-spacing: 0.09em;
   line-height: 1;
   text-transform: uppercase;
+}
+
+.mission-day-heading-operation h2 {
+  margin: 0;
+  color: var(--white);
+  font-family: "Barlow Condensed", "Arial Narrow", "Oswald", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5.9rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .mission-story-intro p,
@@ -2940,7 +2958,8 @@ select:focus {
   margin: 14px 0 0;
   color: #e7ddc8;
   font-size: clamp(1rem, 1.3vw, 1.08rem);
-  line-height: 1.72;
+  font-weight: 400;
+  line-height: 1.76;
 }
 
 .mission-day-section {
@@ -2950,23 +2969,42 @@ select:focus {
 
 .mission-day-heading {
   display: grid;
-  grid-template-columns: minmax(76px, 0.2fr) minmax(0, 1fr);
+  grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
   gap: clamp(18px, 4vw, 48px);
   align-items: start;
 }
 
 .mission-day-heading > span {
   color: var(--gold);
-  font-size: 0.82rem;
+  font-family: "Oswald", "Arial Narrow", Impact, Haettenschweiler, sans-serif;
+  font-size: clamp(72px, 8vw, 115px);
   font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 0.82;
   text-transform: uppercase;
+}
+
+.mission-day-heading-support > span {
+  color: var(--green-bright);
+  font-family: "Rajdhani", "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  line-height: 1;
 }
 
 .mission-story-block h3,
 .mission-festival-group h3 {
+  position: relative;
   margin: 0;
-  color: var(--white);
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(240, 185, 11, 0.34);
+  color: var(--gold);
+  font-family: "Rajdhani", "Barlow Condensed", "Arial Narrow", sans-serif;
   font-size: clamp(1.08rem, 2vw, 1.45rem);
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -2990,14 +3028,16 @@ select:focus {
 
 .mission-schedule-row span {
   color: var(--gold);
+  font-family: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
   font-size: 0.86rem;
-  font-weight: 900;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .mission-schedule-row p {
   margin: 0;
   color: #f2eadc;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .mission-check-list {
@@ -3016,7 +3056,9 @@ select:focus {
   padding: 14px 0 14px 28px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   color: #f0eadc;
-  font-weight: 800;
+  font-size: clamp(0.98rem, 1.2vw, 1.06rem);
+  font-weight: 500;
+  line-height: 1.65;
 }
 
 .mission-check-list li::before {
@@ -3042,6 +3084,7 @@ select:focus {
   padding: 0;
   margin: 14px 0 0;
   color: #e7ddc8;
+  line-height: 1.68;
   list-style: none;
 }
 
@@ -3492,6 +3535,10 @@ select:focus {
     gap: 10px;
   }
 
+  .mission-day-heading-operation > span {
+    font-size: clamp(54px, 7vw, 82px);
+  }
+
   .mission-festival-grid {
     grid-template-columns: 1fr;
   }
@@ -3713,9 +3760,32 @@ select:focus {
     text-align: center;
   }
 
+  .mission-page-content {
+    gap: 46px;
+  }
+
+  .mission-day-heading-operation > span {
+    font-size: clamp(42px, 13vw, 60px);
+    line-height: 0.86;
+  }
+
+  .mission-day-heading-operation h2 {
+    font-size: clamp(2.15rem, 12vw, 3.45rem);
+    line-height: 0.95;
+  }
+
+  .mission-story-block h3,
+  .mission-festival-group h3 {
+    line-height: 1.12;
+  }
+
   .mission-schedule-row,
   .mission-check-list {
     grid-template-columns: 1fr;
+  }
+
+  .mission-schedule-row {
+    gap: 6px;
   }
 
   .captcha-check {
