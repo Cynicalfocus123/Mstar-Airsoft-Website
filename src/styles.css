@@ -2550,6 +2550,7 @@ select:focus {
 
 .event-detail-page {
   min-height: calc(100vh - 92px);
+  overflow-x: clip;
   background:
     radial-gradient(circle at 12% 18%, rgba(75, 104, 45, 0.18), transparent 32%),
     linear-gradient(180deg, #080a07, #040404 42%, #080907);
@@ -2606,17 +2607,32 @@ select:focus {
 .event-detail-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 10px 18px;
 }
 
 .event-detail-hero-meta span {
-  padding: 8px 11px;
-  border: 1px solid rgba(240, 185, 11, 0.38);
-  background: rgba(5, 8, 4, 0.58);
-  color: var(--gold);
+  position: relative;
+  color: #f4e8ca;
   font-size: 0.78rem;
   font-weight: 900;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.event-detail-hero-meta span:first-child,
+.event-detail-hero-meta span:last-child {
+  color: var(--gold);
+}
+
+.event-detail-hero-meta span:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  width: 4px;
+  height: 4px;
+  background: var(--green-bright);
+  content: "";
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .event-detail-content {
@@ -2775,8 +2791,6 @@ select:focus {
   gap: 18px;
   padding-top: clamp(24px, 4vw, 42px);
   border-top: 1px solid rgba(240, 185, 11, 0.24);
-  background:
-    linear-gradient(90deg, rgba(34, 48, 24, 0.28), transparent 64%);
 }
 
 .mission-scenario-banner {
@@ -2844,23 +2858,49 @@ select:focus {
 
 .mission-scenario-banner-content span {
   color: var(--gold);
-  font-size: 0.78rem;
+  font-family: "Rajdhani", "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.45rem);
   font-weight: 900;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .mission-scenario-banner-content h2 {
   margin: 0;
   color: var(--white);
+  font-family: "Barlow Condensed", "Arial Narrow", "Oswald", sans-serif;
   font-size: clamp(2rem, 5vw, 4.8rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
   line-height: 0.92;
   text-transform: uppercase;
+}
+
+.mission-scenario-banner-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 46px;
+  margin-top: 4px;
+  padding: 12px 18px;
+  border: 1px solid rgba(240, 185, 11, 0.68);
+  background: linear-gradient(180deg, rgba(240, 185, 11, 0.96), rgba(184, 132, 0, 0.96));
+  color: #070806 !important;
+  font-family: "Rajdhani", "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(0.88rem, 1.2vw, 1rem) !important;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
 
 .mission-scenario-banner-content p {
   max-width: 44ch;
   margin: 0;
   color: #eee5d4;
+  font-family: "Inter", Arial, sans-serif;
   font-size: clamp(0.96rem, 1.4vw, 1.1rem);
   font-weight: 800;
 }
@@ -3535,6 +3575,10 @@ select:focus {
     gap: 10px;
   }
 
+  .mission-scenario-banner {
+    min-height: clamp(220px, 34vw, 280px);
+  }
+
   .mission-day-heading-operation > span {
     font-size: clamp(54px, 7vw, 82px);
   }
@@ -3756,8 +3800,32 @@ select:focus {
   }
 
   .mission-scenario-banner-content {
+    gap: 7px;
     justify-items: center;
+    padding-block: 18px;
     text-align: center;
+  }
+
+  .mission-scenario-banner-content span {
+    font-size: clamp(0.86rem, 3.7vw, 0.98rem);
+    letter-spacing: 0.07em;
+  }
+
+  .mission-scenario-banner-content h2 {
+    font-size: clamp(1.8rem, 8vw, 2.25rem);
+    line-height: 0.95;
+  }
+
+  .mission-scenario-banner-button {
+    width: 100%;
+    max-width: 320px;
+    min-height: 42px;
+    padding: 10px 16px;
+  }
+
+  .mission-scenario-banner-content p {
+    font-size: 0.94rem;
+    line-height: 1.38;
   }
 
   .mission-page-content {

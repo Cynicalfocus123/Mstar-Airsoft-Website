@@ -138,6 +138,7 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
             <div className="mission-scenario-banner-content">
               <span>{detail.missionScenario.eyebrow}</span>
               <h2>{detail.missionScenario.bannerText}</h2>
+              <span className="mission-scenario-banner-button">View Full Scenario</span>
               <p>{detail.missionScenario.bannerSubtext}</p>
             </div>
           </a>
