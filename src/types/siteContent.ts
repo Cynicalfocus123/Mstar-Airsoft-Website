@@ -153,6 +153,37 @@ export interface EventCard {
         description: string;
       }>;
     };
+    eventInfo?: {
+      backgroundImagePath: string;
+      href: string;
+      bannerText: string;
+      defaultLanguage: 'en' | 'th';
+      languages: Array<{
+        code: 'en' | 'th';
+        label: string;
+        htmlLang: string;
+        pageTitle: string;
+        pageSubtitle: string;
+        sections: Array<{
+          title: string;
+          subtitle?: string;
+          headline?: string;
+          dateLine?: string;
+          paragraphs?: string[];
+          bullets?: string[];
+          infoRows?: Array<{
+            label: string;
+            value: string;
+          }>;
+          email?: string;
+          note?: string;
+          imagePath?: string;
+          imageAlt?: string;
+          placeholderLabel?: string;
+          closingLines?: string[];
+        }>;
+      }>;
+    };
     missionScenario: {
       eyebrow: string;
       backgroundImagePath: string;

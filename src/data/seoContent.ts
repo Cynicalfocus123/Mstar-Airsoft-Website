@@ -215,6 +215,21 @@ export const seoContent: Record<string, SeoEntry> = {
       ]),
     ],
   }),
+  '/events/force-of-conquest/event-info': makeSeo({
+    path: '/events/force-of-conquest/event-info',
+    title: 'Event Info | Force of Conquest 2027',
+    description: 'Read bilingual Force of Conquest 2027 event information covering the MilSim experience, tickets, facilities, camping, safety, and participation requirements.',
+    ogType: 'article',
+    schema: [
+      webPage('/events/force-of-conquest/event-info', 'Event Info | Force of Conquest 2027', 'Read bilingual Force of Conquest 2027 event information covering the MilSim experience, tickets, facilities, camping, safety, and participation requirements.', 'Article'),
+      breadcrumbs([
+        { name: 'Home', path: '/' },
+        { name: 'Events', path: '/events' },
+        { name: 'Force of Conquest', path: '/events/force-of-conquest' },
+        { name: 'Event Info', path: '/events/force-of-conquest/event-info' },
+      ]),
+    ],
+  }),
   '/events/night-grid': makeSeo({
     path: '/events/night-grid',
     title: 'TBA Event | MSTAR Airsoft',
@@ -420,6 +435,7 @@ export const sitemapRoutes = [
   { path: '/events', priority: '0.9' },
   { path: '/events/force-of-conquest', priority: '0.9' },
   { path: '/events/force-of-conquest/mission-scenario', priority: '0.8' },
+  { path: '/events/force-of-conquest/event-info', priority: '0.8' },
   { path: '/things-to-know', priority: '0.8' },
   { path: '/rules-and-regulation', priority: '0.8' },
   { path: '/contact', priority: '0.8' },

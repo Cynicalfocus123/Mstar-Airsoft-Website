@@ -95,6 +95,18 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
           </aside>
         </section>
 
+        {detail?.eventInfo && (
+          <a
+            className="event-info-banner"
+            href={getSafeInternalHref(detail.eventInfo.href)}
+            style={{
+              '--event-info-background': `url("${getPublicAssetPath(detail.eventInfo.backgroundImagePath)}")`,
+            } as CSSProperties}
+          >
+            <h2>{detail.eventInfo.bannerText}</h2>
+          </a>
+        )}
+
         {detail?.timeline && detail.timeline.length > 0 && (
           <section className="event-detail-section event-detail-timeline">
             <div className="event-section-heading">
@@ -110,20 +122,6 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
                 </article>
               ))}
             </div>
-          </section>
-        )}
-
-        {detail?.requirements && (
-          <section className="event-detail-section event-detail-requirements">
-            <div className="event-section-heading">
-              <p className="eyebrow">Requirements</p>
-              <h2>Before You Arrive</h2>
-            </div>
-            <ul>
-              {detail.requirements.map((requirement) => (
-                <li key={requirement}>{requirement}</li>
-              ))}
-            </ul>
           </section>
         )}
 
@@ -165,6 +163,20 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
               {detail.missionScenario.bannerSubtext && <p>{detail.missionScenario.bannerSubtext}</p>}
             </div>
           </a>
+        )}
+
+        {detail?.requirements && (
+          <section className="event-detail-section event-detail-requirements">
+            <div className="event-section-heading">
+              <p className="eyebrow">Requirements</p>
+              <h2>Before You Arrive</h2>
+            </div>
+            <ul>
+              {detail.requirements.map((requirement) => (
+                <li key={requirement}>{requirement}</li>
+              ))}
+            </ul>
+          </section>
         )}
 
         {detail?.footerCta && (
