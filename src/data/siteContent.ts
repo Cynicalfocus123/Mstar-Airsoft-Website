@@ -179,10 +179,10 @@ export const siteContent: SiteContent = {
       date: 'Jan 8–10, 2027',
       time: '09:00 AM - 05:30 PM',
       location: 'Mstar Jungle Land, Thailand',
-      entryFee: '€160.00 EURO',
+      entryFee: '€120 Pre Sale',
       teams: 'Alpha Coalition vs Bravo Unit',
       attendance: '2,000 players',
-      status: 'Registration Open',
+      status: 'REGISTRATION NOW OPEN!',
       summary: 'An intense, realistic large-scale airsoft combat experience set deep in the jungle.',
       overview:
         'Force of Conquest delivers immersive large-scale jungle warfare with natural cover, demanding terrain, coordinated objectives, and realistic airsoft combat built for organized squads.',
@@ -207,23 +207,7 @@ export const siteContent: SiteContent = {
           { label: 'Entry', value: 'Ticket required' },
           { label: 'Player type', value: 'International players and teams' },
         ],
-        timeline: [
-          {
-            label: 'Day 1',
-            title: 'Arrival, check-in, safety briefing',
-            body: 'Players arrive on site, confirm registration, complete required checks, and receive safety and field briefings.',
-          },
-          {
-            label: 'Day 2',
-            title: 'Main operation',
-            body: 'Primary mission play begins across the main battlefield with team objectives and marshal-led operations.',
-          },
-          {
-            label: 'Day 3',
-            title: 'Final operation and closing',
-            body: 'Final operation blocks and closing activity complete the event weekend. Exact timing will be confirmed later.',
-          },
-        ],
+        timeline: [],
         requirements: [
           'Valid ticket confirmation',
           'Signed waiver form',
@@ -238,7 +222,7 @@ export const siteContent: SiteContent = {
           backgroundImagePath: '/images/events/force-of-conquest-mission-scenario.jfif',
           href: '/events/force-of-conquest/mission-scenario',
           bannerText: 'See Mission Scenario',
-          bannerSubtext: 'View the full three-day campaign storyline.',
+          bannerSubtext: '',
           intro:
             'January 8-10, 2027 - Saraburi, Thailand. The Republic of Siam Frontier has descended into chaos. A powerful criminal syndicate operating throughout the Golden Triangle has seized control of strategic territories, natural resources, transportation routes, and military installations. Local governments have collapsed, and insurgent groups, private military contractors, and international intervention forces are now fighting for control of the region.',
           coreLine:
@@ -378,7 +362,7 @@ export const siteContent: SiteContent = {
       date: '2027',
       time: '04:00 PM - 11:30 PM',
       location: 'TBA',
-      entryFee: '€160.00 EURO',
+      entryFee: 'TBA',
       teams: 'Night Squad vs Grid Command',
       attendance: '2000+',
       status: 'To Be Announced Soon',
@@ -393,7 +377,7 @@ export const siteContent: SiteContent = {
       date: '2027',
       time: '08:00 AM - 06:00 PM',
       location: 'TBA',
-      entryFee: '€160.00 EURO',
+      entryFee: 'TBA',
       teams: 'Qualified Teams Bracket',
       attendance: '2000+',
       status: 'To Be Announced Soon',

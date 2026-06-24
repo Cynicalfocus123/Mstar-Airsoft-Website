@@ -95,7 +95,7 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
           </aside>
         </section>
 
-        {detail?.timeline && (
+        {detail?.timeline && detail.timeline.length > 0 && (
           <section className="event-detail-section event-detail-timeline">
             <div className="event-section-heading">
               <p className="eyebrow">Schedule / Timeline</p>
@@ -139,7 +139,7 @@ export function EventDetailPage({ event, isAuthenticated }: EventDetailPageProps
               <span>{detail.missionScenario.eyebrow}</span>
               <h2>{detail.missionScenario.bannerText}</h2>
               <span className="mission-scenario-banner-button">View Full Scenario</span>
-              <p>{detail.missionScenario.bannerSubtext}</p>
+              {detail.missionScenario.bannerSubtext && <p>{detail.missionScenario.bannerSubtext}</p>}
             </div>
           </a>
         )}

@@ -85,6 +85,11 @@ export function Events({ events, viewAllHref, countdown }: EventsProps) {
         {events.map((event) => {
           const cardBody = (
             <>
+              {event.id === 'force-of-conquest' && (
+                <div className="event-card-home-image">
+                  <img src={getPublicAssetPath(event.imagePath)} alt="" loading="lazy" />
+                </div>
+              )}
               <div className="card-topline">
                 <span>{event.date}</span>
                 <strong>{event.status}</strong>

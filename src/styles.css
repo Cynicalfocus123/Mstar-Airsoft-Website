@@ -520,6 +520,21 @@ textarea {
   padding: 22px;
 }
 
+.event-card-home-image {
+  position: relative;
+  aspect-ratio: 1793 / 798;
+  margin: -22px -22px 18px;
+  overflow: hidden;
+  background: #050505;
+}
+
+.event-card-home-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .package-offer-card {
   display: flex;
   flex-direction: column;
