@@ -284,13 +284,15 @@ export const siteContent: SiteContent = {
                   imageAlt: 'Airsoft team advancing through a ruined jungle building',
                 },
                 {
+                  id: 'important-information-before-purchasing',
                   title: 'Important Information Before Purchasing',
                   paragraphs: [
                     'To ensure balanced gameplay and proper faction organization, all players planning to participate in specialized roles, military units, media teams, or support functions must contact event management before purchasing a ticket.',
                     'This helps prevent duplicate assignments and ensures all roles fit within the event storyline and operational structure.',
                   ],
                   email: 'info@mstarairsoft.com',
-                  placeholderLabel: 'Specialized Roles & Units',
+                  imagePath: '/images/events/force-of-conquest/important-information-referee-briefing.jfif',
+                  imageAlt: 'Referee wearing a high-visibility vest briefing airsoft players',
                 },
                 {
                   id: 'led-armband',
@@ -484,13 +486,15 @@ export const siteContent: SiteContent = {
                   imageAlt: 'ทีมแอร์ซอฟต์เคลื่อนที่ผ่านอาคารร้างกลางป่า',
                 },
                 {
+                  id: 'important-information-before-purchasing',
                   title: 'ข้อมูลสำคัญก่อนการซื้อบัตร',
                   paragraphs: [
                     'เพื่อให้การจัดกำลังพลและบทบาทภายในกิจกรรมเป็นไปอย่างสมดุล ผู้เล่นที่ต้องการเข้าร่วมในตำแหน่งพิเศษ หน่วยรบเฉพาะกิจ ทีมสื่อมวลชน หรือหน่วยสนับสนุนต่าง ๆ จำเป็นต้องติดต่อทีมงานก่อนทำการซื้อบัตร',
                     'ขั้นตอนนี้ช่วยป้องกันการซ้ำซ้อนของบทบาท และทำให้ทุกตำแหน่งสอดคล้องกับเนื้อเรื่องและโครงสร้างการปฏิบัติการของกิจกรรม',
                   ],
                   email: 'info@mstarairsoft.com',
-                  placeholderLabel: 'บทบาทและหน่วยพิเศษ',
+                  imagePath: '/images/events/force-of-conquest/important-information-referee-briefing.jfif',
+                  imageAlt: 'กรรมการสวมเสื้อกั๊กสะท้อนแสงกำลังชี้แจงข้อมูลแก่ผู้เล่นแอร์ซอฟต์',
                 },
                 {
                   id: 'led-armband',
