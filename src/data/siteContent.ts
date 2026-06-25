@@ -263,6 +263,7 @@ export const siteContent: SiteContent = {
                   imageAlt: 'Airsoft player holding a rifle in tactical equipment',
                 },
                 {
+                  id: 'military-simulation',
                   title: 'Experience Realistic Military Simulation',
                   paragraphs: [
                     'Prepare for one of the most challenging and immersive Airsoft MilSim experiences ever created. Developed by experienced airsoft professionals and military strategy consultants, Force of Conquest features dynamic mission-based gameplay inspired by modern military operations and historical guerrilla warfare scenarios.',
@@ -278,8 +279,8 @@ export const siteContent: SiteContent = {
                     'Drone reconnaissance and attack missions',
                     'Security stabilization and peacekeeping operations',
                   ],
-                  imagePath: '/images/events/force-of-conquest/874d0ed7-e484-4b41-964e-18b9aebd6a28.jfif',
-                  imageAlt: 'Force of Conquest military simulation campaign',
+                  imagePath: '/images/events/force-of-conquest/military-simulation-team.webp',
+                  imageAlt: 'Airsoft team advancing through a ruined jungle building',
                 },
                 {
                   title: 'Important Information Before Purchasing',
@@ -291,6 +292,7 @@ export const siteContent: SiteContent = {
                   placeholderLabel: 'Specialized Roles & Units',
                 },
                 {
+                  id: 'led-armband',
                   title: 'Complimentary LED Identification Armband Included',
                   paragraphs: [
                     'Every participant will receive an official Force of Conquest LED Armband as part of their event package. These specially designed illuminated armbands play a vital role during both daytime and nighttime operations.',
@@ -316,6 +318,7 @@ export const siteContent: SiteContent = {
                   placeholderLabel: 'Faction Uniform Guide',
                 },
                 {
+                  id: 'ticket-inclusions',
                   title: "What's Included With Your Event Ticket",
                   bullets: [
                     'Full access to the event grounds and battlefield throughout the event',
@@ -343,6 +346,7 @@ export const siteContent: SiteContent = {
                   placeholderLabel: '18+ Participation',
                 },
                 {
+                  id: 'event-information',
                   title: 'Event Information',
                   infoRows: [
                     { label: 'Event', value: 'Force of Conquest 2027' },
@@ -353,10 +357,9 @@ export const siteContent: SiteContent = {
                     { label: 'Game Format', value: 'Multi-Faction Military Simulation Campaign' },
                     { label: 'Eligibility', value: '18 Years and Older' },
                   ],
-                  imagePath: '/images/game-terrain/forest-movement.webp',
-                  imageAlt: 'Natural rainforest airsoft terrain',
                 },
                 {
+                  id: 'facilities',
                   title: 'Facilities',
                   bullets: [
                     'Portable Toilets',
@@ -367,10 +370,11 @@ export const siteContent: SiteContent = {
                     'Event Administration Center',
                     'Camping Information',
                   ],
-                  imagePath: '/images/things-to-know/campground.png',
-                  imageAlt: 'Event campground facilities',
+                  imagePath: '/images/events/force-of-conquest/facilities-food-vendors.webp',
+                  imageAlt: 'Food vendors and event guests in a night market setting',
                 },
                 {
+                  id: 'camping-information',
                   title: 'Camping Information',
                   paragraphs: [
                     'Participants will operate from designated Headquarters (HQ) Camps throughout the event. Upon arrival, players receive registration materials and equipment assignments before proceeding to faction headquarters.',
@@ -384,10 +388,11 @@ export const siteContent: SiteContent = {
                     'Safe zones where shooting is strictly prohibited',
                   ],
                   note: 'Players are required to remove magazines and clear all airsoft replicas while inside safe zones.',
-                  imagePath: '/images/game-terrain/beautiful-scenery.webp',
-                  imageAlt: 'Forest campsite and event terrain',
+                  imagePath: '/images/events/force-of-conquest/camping-tents.webp',
+                  imageAlt: 'Force of Conquest player tents in the jungle campground',
                 },
                 {
+                  id: 'camping-rules',
                   title: 'Camping Rules',
                   bullets: [
                     'BBQ cooking is permitted only within designated BBQ zones using approved gas grills.',
@@ -396,9 +401,9 @@ export const siteContent: SiteContent = {
                     'Outside food and beverages are not permitted within event operational areas.',
                     'All airsoft replicas and equipment must comply with event regulations and receive approval from game management when required.',
                   ],
-                  placeholderLabel: 'Campground Rules',
                 },
                 {
+                  id: 'sanitary-facilities',
                   title: 'Sanitary Facilities',
                   paragraphs: [
                     'Player comfort and hygiene are important priorities at Force of Conquest.',
@@ -411,7 +416,8 @@ export const siteContent: SiteContent = {
                     'Hygiene areas',
                     'Waste disposal facilities',
                   ],
-                  placeholderLabel: 'Sanitary Facilities',
+                  imagePath: '/images/events/force-of-conquest/sanitary-facilities.webp',
+                  imageAlt: 'Portable toilet facilities beside the event staging area',
                 },
               ],
             },
@@ -434,6 +440,7 @@ export const siteContent: SiteContent = {
                   imageAlt: 'ผู้เล่นแอร์ซอฟต์พร้อมอุปกรณ์ยุทธวิธี',
                 },
                 {
+                  id: 'military-simulation',
                   title: 'สัมผัสประสบการณ์ Military Simulation ที่สมจริง',
                   paragraphs: [
                     'เตรียมตัวให้พร้อมสำหรับหนึ่งในกิจกรรม Airsoft MilSim ที่ท้าทายและสมจริงที่สุดเท่าที่เคยมีมา กิจกรรมนี้ได้รับการออกแบบโดยผู้เชี่ยวชาญด้านแอร์ซอฟต์และที่ปรึกษาด้านยุทธศาสตร์ทางทหาร โดยนำแรงบันดาลใจจากปฏิบัติการทางทหารสมัยใหม่และสงครามกองโจรในประวัติศาสตร์มาพัฒนาเป็นภารกิจที่มีความหลากหลายและเปลี่ยนแปลงตลอดเวลา',
@@ -449,8 +456,8 @@ export const siteContent: SiteContent = {
                     'ภารกิจลาดตระเวนและโจมตีด้วยโดรน',
                     'ปฏิบัติการรักษาความมั่นคงและสันติภาพ',
                   ],
-                  imagePath: '/images/events/force-of-conquest/874d0ed7-e484-4b41-964e-18b9aebd6a28.jfif',
-                  imageAlt: 'แคมเปญจำลองยุทธการ Force of Conquest',
+                  imagePath: '/images/events/force-of-conquest/military-simulation-team.webp',
+                  imageAlt: 'ทีมแอร์ซอฟต์เคลื่อนที่ผ่านอาคารร้างกลางป่า',
                 },
                 {
                   title: 'ข้อมูลสำคัญก่อนการซื้อบัตร',
@@ -462,6 +469,7 @@ export const siteContent: SiteContent = {
                   placeholderLabel: 'บทบาทและหน่วยพิเศษ',
                 },
                 {
+                  id: 'led-armband',
                   title: 'สายรัดแขน LED ฟรีสำหรับผู้เข้าร่วมทุกคน',
                   paragraphs: [
                     'ผู้เข้าร่วมทุกคนจะได้รับสายรัดแขน LED Force of Conquest อย่างเป็นทางการ สายรัดแขนนี้ถูกออกแบบเป็นพิเศษเพื่อใช้ในการปฏิบัติภารกิจทั้งกลางวันและกลางคืน',
@@ -487,6 +495,7 @@ export const siteContent: SiteContent = {
                   placeholderLabel: 'คู่มือเครื่องแบบประจำฝ่าย',
                 },
                 {
+                  id: 'ticket-inclusions',
                   title: 'สิ่งที่รวมอยู่ในบัตรเข้าร่วมงาน',
                   bullets: [
                     'สิทธิ์เข้าพื้นที่กิจกรรมตลอดระยะเวลางาน',
@@ -514,6 +523,7 @@ export const siteContent: SiteContent = {
                   placeholderLabel: 'ผู้เข้าร่วมอายุ 18 ปีขึ้นไป',
                 },
                 {
+                  id: 'event-information',
                   title: 'ข้อมูลกิจกรรม',
                   infoRows: [
                     { label: 'กิจกรรม', value: 'Force of Conquest 2027' },
@@ -524,10 +534,9 @@ export const siteContent: SiteContent = {
                     { label: 'รูปแบบการแข่งขัน', value: 'สงครามจำลองหลายฝ่าย (Multi-Faction Military Simulation Campaign)' },
                     { label: 'คุณสมบัติผู้เข้าร่วม', value: 'อายุ 18 ปีขึ้นไป' },
                   ],
-                  imagePath: '/images/game-terrain/forest-movement.webp',
-                  imageAlt: 'สนามป่าธรรมชาติสำหรับกิจกรรมแอร์ซอฟต์',
                 },
                 {
+                  id: 'facilities',
                   title: 'สิ่งอำนวยความสะดวก',
                   bullets: [
                     'ห้องน้ำเคลื่อนที่',
@@ -537,10 +546,11 @@ export const siteContent: SiteContent = {
                     'หน่วยแพทย์',
                     'ศูนย์อำนวยการกิจกรรม',
                   ],
-                  imagePath: '/images/things-to-know/campground.png',
-                  imageAlt: 'พื้นที่ตั้งแคมป์และสิ่งอำนวยความสะดวก',
+                  imagePath: '/images/events/force-of-conquest/facilities-food-vendors.webp',
+                  imageAlt: 'ร้านอาหารและผู้ร่วมงานในบรรยากาศตลาดกลางคืน',
                 },
                 {
+                  id: 'camping-information',
                   title: 'ข้อมูลการตั้งแคมป์และ HQ',
                   paragraphs: [
                     'ผู้เข้าร่วมจะปฏิบัติการจากค่ายกองบัญชาการ (HQ) ที่กำหนดตลอดระยะเวลากิจกรรม เมื่อเดินทางมาถึง ผู้เล่นจะได้รับเอกสารลงทะเบียนและการมอบหมายอุปกรณ์ ก่อนเดินทางเข้าสู่กองบัญชาการของฝ่าย',
@@ -554,10 +564,11 @@ export const siteContent: SiteContent = {
                     'เขตปลอดภัยที่ห้ามยิงโดยเด็ดขาด',
                   ],
                   note: 'ผู้เล่นต้องถอดแม็กกาซีนและเคลียร์ปืนแอร์ซอฟต์ทุกกระบอกเมื่ออยู่ภายในเขตปลอดภัย',
-                  imagePath: '/images/game-terrain/beautiful-scenery.webp',
-                  imageAlt: 'พื้นที่ป่าและแคมป์กิจกรรม',
+                  imagePath: '/images/events/force-of-conquest/camping-tents.webp',
+                  imageAlt: 'เต็นท์ผู้เล่นในพื้นที่ตั้งแคมป์กลางป่า',
                 },
                 {
+                  id: 'camping-rules',
                   title: 'กฎการตั้งแคมป์',
                   bullets: [
                     'อนุญาตให้ทำอาหาร BBQ เฉพาะในโซน BBQ ที่กำหนด โดยใช้เตาแก๊สที่ได้รับอนุญาต',
@@ -566,9 +577,9 @@ export const siteContent: SiteContent = {
                     'ไม่อนุญาตให้นำอาหารและเครื่องดื่มจากภายนอกเข้าสู่พื้นที่ปฏิบัติการของกิจกรรม',
                     'ปืนแอร์ซอฟต์และอุปกรณ์ทั้งหมดต้องเป็นไปตามกฎของกิจกรรม และได้รับอนุมัติจากฝ่ายจัดการแข่งขันเมื่อกำหนด',
                   ],
-                  placeholderLabel: 'กฎพื้นที่ตั้งแคมป์',
                 },
                 {
+                  id: 'sanitary-facilities',
                   title: 'สิ่งอำนวยความสะดวกด้านสุขอนามัย',
                   paragraphs: [
                     'ความสะดวกสบายและสุขอนามัยของผู้เล่นเป็นสิ่งสำคัญสำหรับ Force of Conquest',
@@ -580,7 +591,8 @@ export const siteContent: SiteContent = {
                     'พื้นที่ดูแลสุขอนามัย',
                     'จุดกำจัดขยะ',
                   ],
-                  placeholderLabel: 'สิ่งอำนวยความสะดวกด้านสุขอนามัย',
+                  imagePath: '/images/events/force-of-conquest/sanitary-facilities.webp',
+                  imageAlt: 'ห้องน้ำเคลื่อนที่ข้างพื้นที่เตรียมกิจกรรม',
                 },
               ],
             },

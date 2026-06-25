@@ -52,47 +52,59 @@ export function EventInfoPage({ event }: EventInfoPageProps) {
       </section>
 
       <div className="event-info-sections">
-        {activeContent.sections.map((section, index) => (
-          <section className={`event-info-split ${index % 2 === 1 ? 'event-info-split-reverse' : ''}`} key={section.title ?? `${activeContent.code}-${index}`}>
-            <div className="event-info-media">
-              {section.imagePath ? (
-                <img
-                  alt={section.imageAlt ?? ''}
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                  src={getPublicAssetPath(section.imagePath)}
-                />
-              ) : (
-                <div className="event-info-placeholder" aria-label={section.placeholderLabel ?? 'Image Coming Soon'}>
-                  <span>{section.placeholderLabel ?? 'Image Coming Soon'}</span>
+        {activeContent.sections.map((section, index) => {
+          const hasMedia = Boolean(section.imagePath || section.placeholderLabel);
+          const sectionClassName = [
+            'event-info-split',
+            index % 2 === 1 ? 'event-info-split-reverse' : '',
+            hasMedia ? '' : 'event-info-split-text-only',
+            section.id ? `event-info-section-${section.id}` : '',
+          ].filter(Boolean).join(' ');
+
+          return (
+            <section className={sectionClassName} key={section.id ?? section.title ?? `${activeContent.code}-${index}`}>
+              {hasMedia && (
+                <div className="event-info-media">
+                  {section.imagePath ? (
+                    <img
+                      alt={section.imageAlt ?? ''}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      src={getPublicAssetPath(section.imagePath)}
+                    />
+                  ) : (
+                    <div className="event-info-placeholder" aria-label={section.placeholderLabel ?? 'Image Coming Soon'}>
+                      <span>{section.placeholderLabel ?? 'Image Coming Soon'}</span>
+                    </div>
+                  )}
                 </div>
               )}
-            </div>
-            <article className="event-info-copy">
-              {section.subtitle && <p className="event-info-subtitle">{section.subtitle}</p>}
-              {section.title && <h2>{section.title}</h2>}
-              {section.headline && <strong className="event-info-headline">{section.headline}</strong>}
-              {section.dateLine && <p className="event-info-date">{section.dateLine}</p>}
-              {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              {section.bullets && (
-                <ul>
-                  {section.bullets.map((item) => <li key={item}>{item}</li>)}
-                </ul>
-              )}
-              {section.infoRows && (
-                <dl className="event-info-rows">
-                  {section.infoRows.map((row) => (
-                    <div key={row.label}>
-                      <dt>{row.label}</dt>
-                      <dd>{row.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-              )}
-              {section.email && <a className="event-info-email" href={`mailto:${section.email}`}>{section.email}</a>}
-              {section.note && <p className="event-info-note">{section.note}</p>}
-            </article>
-          </section>
-        ))}
+              <article className="event-info-copy">
+                {section.subtitle && <p className="event-info-subtitle">{section.subtitle}</p>}
+                {section.title && <h2>{section.title}</h2>}
+                {section.headline && <strong className="event-info-headline">{section.headline}</strong>}
+                {section.dateLine && <p className="event-info-date">{section.dateLine}</p>}
+                {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {section.bullets && (
+                  <ul>
+                    {section.bullets.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                )}
+                {section.infoRows && (
+                  <dl className="event-info-rows">
+                    {section.infoRows.map((row) => (
+                      <div key={row.label}>
+                        <dt>{row.label}</dt>
+                        <dd>{row.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+                {section.email && <a className="event-info-email" href={`mailto:${section.email}`}>{section.email}</a>}
+                {section.note && <p className="event-info-note">{section.note}</p>}
+              </article>
+            </section>
+          );
+        })}
         <section className="event-detail-final-cta event-info-final-cta">
           <h2>{eventInfo.ctaTitle}</h2>
           <a className="btn btn-gold" href={getSafeInternalHref(eventInfo.ctaHref)}>

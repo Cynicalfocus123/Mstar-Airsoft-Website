@@ -168,6 +168,7 @@ export interface EventCard {
         pageTitle: string;
         pageSubtitle: string;
         sections: Array<{
+          id?: string;
           title?: string;
           subtitle?: string;
           headline?: string;

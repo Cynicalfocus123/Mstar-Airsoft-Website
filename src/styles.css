@@ -3065,6 +3065,14 @@ select:focus {
   order: 2;
 }
 
+.event-info-split-text-only {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.event-info-split-text-only .event-info-copy {
+  width: min(900px, 100%);
+}
+
 .event-info-media {
   overflow: hidden;
   min-height: clamp(360px, 42vw, 560px);
@@ -3077,6 +3085,43 @@ select:focus {
   height: 100%;
   min-height: inherit;
   object-fit: cover;
+}
+
+.event-info-section-ticket-inclusions .event-info-media {
+  padding: clamp(12px, 2.2vw, 26px);
+  background: #050605;
+}
+
+.event-info-section-ticket-inclusions .event-info-media img {
+  box-sizing: border-box;
+  object-fit: contain;
+  object-position: center;
+}
+
+.event-info-section-led-armband .event-info-copy h2 {
+  max-width: 24ch;
+  font-size: clamp(30px, 3.2vw, 48px);
+  line-height: 1.08;
+}
+
+.event-info-section-event-information .event-info-copy {
+  width: min(980px, 100%);
+}
+
+.event-info-section-facilities .event-info-media img,
+.event-info-section-camping-information .event-info-media img,
+.event-info-section-military-simulation .event-info-media img,
+.event-info-section-sanitary-facilities .event-info-media img {
+  object-position: center;
+}
+
+.event-info-section-camping-rules {
+  margin-top: clamp(-38px, -3vw, -20px);
+  padding-top: clamp(22px, 3vw, 36px);
+}
+
+.event-info-section-camping-rules .event-info-copy {
+  width: min(900px, 100%);
 }
 
 .event-info-placeholder {
@@ -4095,6 +4140,10 @@ select:focus {
     font-size: clamp(32px, 4vw, 48px);
   }
 
+  .event-info-section-led-armband .event-info-copy h2 {
+    font-size: clamp(30px, 4vw, 42px);
+  }
+
   .mission-scenario-banner {
     min-height: clamp(220px, 34vw, 280px);
   }
@@ -4358,6 +4407,14 @@ select:focus {
     max-width: 100%;
     font-size: clamp(28px, 8vw, 38px);
     line-height: 1.08;
+  }
+
+  .event-info-section-led-armband .event-info-copy h2 {
+    font-size: clamp(27px, 7.2vw, 34px);
+  }
+
+  .event-info-section-camping-rules {
+    margin-top: -12px;
   }
 
   .event-info-rows div {
