@@ -121,7 +121,7 @@ export function TicketRegistrationGuide({ content }: TicketRegistrationGuideProp
       </section>
       <section className="ticket-form-guide" aria-label="Ticket registration forms">
         {content.formSections.map((section) => (
-          <article className="ticket-form-card" key={section.id}>
+          <article className="ticket-form-card" id={section.id} key={section.id}>
             <div>
               <p className="eyebrow">Required Forms</p>
               <h2>{section.title}</h2>

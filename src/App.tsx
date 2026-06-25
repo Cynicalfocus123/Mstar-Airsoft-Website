@@ -130,6 +130,15 @@ export default function App() {
     }
 
     window.scrollTo({ top: 0, left: 0 });
+
+    const hashId = window.location.hash.slice(1);
+    if (/^[a-z0-9-]+$/i.test(hashId)) {
+      const timeoutId = window.setTimeout(() => {
+        document.getElementById(hashId)?.scrollIntoView({ block: 'start' });
+      }, 100);
+
+      return () => window.clearTimeout(timeoutId);
+    }
   }, [route.name, route.section, route.slug, selectedEvent?.id]);
 
   return (

@@ -178,6 +178,9 @@ export interface EventCard {
           infoRows?: Array<{
             label: string;
             value: string;
+            linkLabel?: string;
+            linkPath?: string;
+            linkHash?: string;
           }>;
           email?: string;
           note?: string;

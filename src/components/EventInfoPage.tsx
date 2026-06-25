@@ -118,7 +118,18 @@ export function EventInfoPage({ event }: EventInfoPageProps) {
                     {section.infoRows.map((row) => (
                       <div key={row.label}>
                         <dt>{row.label}</dt>
-                        <dd>{row.value}</dd>
+                        <dd>
+                          {row.value}
+                          {row.linkLabel && row.linkPath && row.linkHash ? (
+                            <>
+                              {' '}
+                              <a href={`${getSafeInternalHref(row.linkPath)}#${row.linkHash}`}>
+                                {row.linkLabel}
+                              </a>
+                              .
+                            </>
+                          ) : null}
+                        </dd>
                       </div>
                     ))}
                   </dl>

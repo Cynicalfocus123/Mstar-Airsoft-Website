@@ -134,7 +134,7 @@ export const siteContent: SiteContent = {
           ],
         },
         {
-          id: 'adult-authorization',
+          id: 'authorization-of-supervising-adult',
           title: 'Authorization of a Supervising Adult',
           description: 'Required for participants who need adult authorization. Please complete the correct Thai or English form before arrival.',
           links: [
@@ -314,8 +314,8 @@ export const siteContent: SiteContent = {
                   title: 'Dress Code',
                   paragraphs: [
                     'To maximize immersion and maintain battlefield realism, teams and factions are identified through uniforms and designated dress codes rather than colored armbands.',
-                    'All participants must strictly follow the assigned faction dress code. Detailed uniform requirements and visual examples will be provided prior to the event.',
-                    'Compliance with the dress code is mandatory and contributes significantly to the overall atmosphere and authenticity of the event.',
+                    'We are not strict about every small uniform detail, but we strongly encourage all players to wear the designated faction dress code for better team immersion, battlefield realism, and overall fun factor.',
+                    'Following the recommended dress code helps players recognize teams more easily, improves the atmosphere of the event, and makes the Force of Conquest experience feel more authentic for everyone.',
                   ],
                   factionPanels: [
                     {
@@ -366,7 +366,13 @@ export const siteContent: SiteContent = {
                     { label: 'Event Duration', value: '3 Days / 2 Nights' },
                     { label: 'Battlefield', value: 'Over 100 Acres of Natural Rainforest Terrain' },
                     { label: 'Game Format', value: 'Multi-Faction Military Simulation Campaign' },
-                    { label: 'Eligibility', value: '18 Years and Older' },
+                    {
+                      label: 'Eligibility',
+                      value: '18 Years and Older. 17 and younger need to fill out a waiver.',
+                      linkLabel: 'Click here',
+                      linkPath: '/ticket',
+                      linkHash: 'authorization-of-supervising-adult',
+                    },
                   ],
                 },
                 {
