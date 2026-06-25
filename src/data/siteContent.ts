@@ -311,7 +311,7 @@ export const siteContent: SiteContent = {
                 },
                 {
                   id: 'mandatory-dress-code',
-                  title: 'Mandatory Dress Code',
+                  title: 'Dress Code',
                   paragraphs: [
                     'To maximize immersion and maintain battlefield realism, teams and factions are identified through uniforms and designated dress codes rather than colored armbands.',
                     'All participants must strictly follow the assigned faction dress code. Detailed uniform requirements and visual examples will be provided prior to the event.',
