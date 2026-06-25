@@ -189,6 +189,8 @@ export interface EventCard {
             uniform: string;
             imagePath: string;
             imageAlt: string;
+            logoPath: string;
+            logoAlt: string;
           }>;
           closingLines?: string[];
         }>;
@@ -358,6 +360,15 @@ export interface InfoPageContent {
   languageVersions?: InfoLanguageVersion[];
 }
 
+export interface VendorPageContent {
+  eyebrow: string;
+  title: string;
+  sectionTitle: string;
+  paragraphs: string[];
+  buttonLabel: string;
+  formUrl: string;
+}
+
 export interface SiteContent {
   identity: SiteIdentity;
   navLinks: NavLink[];
@@ -373,6 +384,7 @@ export interface SiteContent {
   contact: ContactContent;
   footerSections: FooterSection[];
   infoPages: InfoPageContent[];
+  vendorPage: VendorPageContent;
   signIn: SignInContent;
   createAccount: CreateAccountContent;
   countryRegions: CountryRegion[];

@@ -17,6 +17,7 @@ import { EventInfoPage } from './components/EventInfoPage';
 import { InfoPage } from './components/InfoPage';
 import { TicketPage } from './components/TicketPage';
 import { SeoHead } from './components/SeoHead';
+import { VendorPage } from './components/VendorPage';
 import { siteContent } from './data/siteContent';
 import { getSeoForPath } from './data/seoContent';
 import { getSafeInternalPath } from './utils/safeUrl';
@@ -37,12 +38,14 @@ function getRoute() {
   if (path === '/signin') return { name: 'signin' };
   if (path === '/signup') return { name: 'signup' };
   if (path === '/account') return { name: 'account' };
+  if (path === '/become-a-vendor') return { name: 'vendor' };
   if (path !== '/') {
     const section = path.slice(1) || 'home';
     const routeSlug = section.split('/')[0];
     const slugAliases: Record<string, string> = {
       'ship-your-equipment': 'equipment',
       accommodation: 'accommodation-and-campground',
+      'travel-preparation': 'how-to-get-to-the-event',
     };
     const slug = slugAliases[routeSlug] ?? routeSlug;
 
@@ -155,6 +158,7 @@ export default function App() {
       {route.name === 'eventInfo' && <EventInfoPage event={selectedEvent} />}
       {route.name === 'checkout' && <EventCheckoutPage event={selectedEvent} isAuthenticated={isAuthenticated} />}
       {route.name === 'info' && <InfoPage content={selectedInfoPage} />}
+      {route.name === 'vendor' && <VendorPage content={siteContent.vendorPage} />}
       {route.name === 'signin' && <SignInPage content={siteContent.signIn} onSuccess={markSignedIn} />}
       {route.name === 'signup' && (
         <CreateAccountPage

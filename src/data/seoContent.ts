@@ -22,6 +22,7 @@ const routeAliases: Record<string, string> = {
   '/ship-your-equipment': '/ship-your-equipment',
   '/accommodation-and-campground': '/accommodation',
   '/accommodation': '/accommodation',
+  '/travel-preparation': '/how-to-get-to-the-event',
 };
 
 function absoluteUrl(path: string) {
@@ -306,6 +307,11 @@ export const seoContent: Record<string, SeoEntry> = {
     title: 'Travel Preparation | MSTAR Airsoft Thailand',
     description: 'Prepare documents, arrival plans, travel timing, and practical details for attending the MSTAR Airsoft event in Thailand.',
   }),
+  '/become-a-vendor': makeSeo({
+    path: '/become-a-vendor',
+    title: 'Become a Vendor | Force of Conquest 2027',
+    description: 'Apply to operate a stall or exhibit at the MSTAR Airsoft Force of Conquest 2027 event.',
+  }),
   '/contact': makeSeo({
     path: '/contact',
     title: 'Contact MSTAR Airsoft | Event Support',
@@ -447,6 +453,7 @@ export const sitemapRoutes = [
   { path: '/activity', priority: '0.7' },
   { path: '/what-to-do-in-thailand', priority: '0.7' },
   { path: '/travel-preparation', priority: '0.7' },
+  { path: '/become-a-vendor', priority: '0.7' },
   { path: '/terms-and-conditions', priority: '0.6' },
   { path: '/cancellation-and-refund', priority: '0.6' },
   { path: '/privacy', priority: '0.6' },

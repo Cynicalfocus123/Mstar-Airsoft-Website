@@ -94,6 +94,12 @@ export function EventInfoPage({ event }: EventInfoPageProps) {
                         role="img"
                         style={{ backgroundImage: `url("${getPublicAssetPath(panel.imagePath)}")` }}
                       >
+                        <img
+                          alt={panel.logoAlt}
+                          className="event-info-faction-dress-logo"
+                          loading="lazy"
+                          src={getPublicAssetPath(panel.logoPath)}
+                        />
                         <div>
                           <strong>{panel.name}</strong>
                           <span>{panel.uniform}</span>

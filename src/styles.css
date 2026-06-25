@@ -3133,6 +3133,16 @@ select:focus {
   isolation: isolate;
 }
 
+.event-info-faction-dress-logo {
+  position: absolute;
+  top: clamp(16px, 2.4vw, 26px);
+  left: clamp(16px, 2.4vw, 26px);
+  width: clamp(70px, 8vw, 104px);
+  height: clamp(70px, 8vw, 104px);
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.62));
+}
+
 .event-info-faction-dress-panel::before {
   position: absolute;
   z-index: -1;
@@ -3145,6 +3155,62 @@ select:focus {
   display: grid;
   gap: 4px;
   padding: clamp(18px, 3vw, 28px);
+}
+
+.vendor-page {
+  display: grid;
+  min-height: calc(100vh - 92px);
+  place-items: center;
+  padding: clamp(64px, 10vw, 120px) clamp(18px, 5vw, 48px);
+  background:
+    radial-gradient(circle at 50% 20%, rgba(116, 137, 72, 0.16), transparent 38%),
+    linear-gradient(180deg, #080a07, #020302);
+}
+
+.vendor-page-panel {
+  display: grid;
+  width: min(860px, 100%);
+  justify-items: center;
+  gap: 18px;
+  padding: clamp(32px, 6vw, 68px);
+  border-block: 1px solid rgba(240, 185, 11, 0.34);
+  text-align: center;
+  background: linear-gradient(135deg, rgba(30, 35, 23, 0.4), rgba(4, 5, 4, 0.82));
+}
+
+.vendor-page-panel h1 {
+  max-width: 100%;
+  margin: 0;
+  color: var(--white);
+  font-family: "Barlow Condensed", "Arial Narrow", "Oswald", sans-serif;
+  font-size: clamp(3.3rem, 9vw, 7rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.vendor-page-divider {
+  width: min(180px, 42%);
+  height: 3px;
+  background: var(--gold);
+}
+
+.vendor-page-panel h2 {
+  margin: 6px 0 0;
+  color: var(--gold);
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  text-transform: uppercase;
+}
+
+.vendor-page-panel > p:not(.eyebrow) {
+  max-width: 690px;
+  margin: 0;
+  color: #e5dfd2;
+  font-size: clamp(1rem, 1.5vw, 1.08rem);
+  line-height: 1.75;
+}
+
+.vendor-page-button {
+  margin-top: 14px;
 }
 
 .event-info-faction-dress-panel strong {
@@ -4495,6 +4561,15 @@ select:focus {
 
   .event-info-faction-dress-panel {
     min-height: clamp(200px, 64vw, 280px);
+  }
+
+  .event-info-faction-dress-logo {
+    width: clamp(56px, 18vw, 78px);
+    height: clamp(56px, 18vw, 78px);
+  }
+
+  .vendor-page-panel {
+    padding-inline: 20px;
   }
 
   .event-info-rows div {
