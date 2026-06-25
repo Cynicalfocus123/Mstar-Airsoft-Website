@@ -7,6 +7,7 @@
 - Professional event-operations feel, not generic landing page.
 - First screen must show actual Mstar Airsoft brand signal and tournament CTA.
 - `DESIGNER.md` must be updated alongside `AGENT.md` whenever design, layout, media behavior, navigation behavior, responsive behavior, or visual decisions change.
+- Force of Conquest Event Info includes a bilingual Event Map section directly below Event Information. It uses `Force of conquest map final.png` at full responsive width with automatic height, centered directly on the dark tactical background without a card, panel, heavy border, cropping, stretching, or horizontal overflow. The English dress-code section heading reads `Dress Code`; its existing content, faction cards, logos, and camouflage artwork remain unchanged. No cPanel ZIP was created and no real server upload was performed.
 
 ## Reference Site Notes
 

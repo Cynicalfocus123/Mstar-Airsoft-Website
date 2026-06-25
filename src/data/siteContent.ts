@@ -370,6 +370,12 @@ export const siteContent: SiteContent = {
                   ],
                 },
                 {
+                  id: 'event-map',
+                  title: 'Event Map',
+                  imagePath: '/images/events/force-of-conquest/force-of-conquest-event-map.png',
+                  imageAlt: 'Force of Conquest event map with routes, facilities, camps, and battlefield locations',
+                },
+                {
                   id: 'facilities',
                   title: 'Facilities',
                   bullets: [
@@ -556,6 +562,12 @@ export const siteContent: SiteContent = {
                     { label: 'รูปแบบการแข่งขัน', value: 'สงครามจำลองหลายฝ่าย (Multi-Faction Military Simulation Campaign)' },
                     { label: 'คุณสมบัติผู้เข้าร่วม', value: 'อายุ 18 ปีขึ้นไป' },
                   ],
+                },
+                {
+                  id: 'event-map',
+                  title: 'แผนที่กิจกรรม',
+                  imagePath: '/images/events/force-of-conquest/force-of-conquest-event-map.png',
+                  imageAlt: 'แผนที่กิจกรรม Force of Conquest แสดงเส้นทาง สิ่งอำนวยความสะดวก จุดตั้งแคมป์ และพื้นที่สนามรบ',
                 },
                 {
                   id: 'facilities',

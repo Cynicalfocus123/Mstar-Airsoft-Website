@@ -3246,6 +3246,34 @@ select:focus {
   width: min(980px, 100%);
 }
 
+.event-info-section-event-map {
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 30px);
+}
+
+.event-info-section-event-map .event-info-copy {
+  order: 1;
+  width: 100%;
+}
+
+.event-info-section-event-map .event-info-copy h2 {
+  max-width: none;
+}
+
+.event-info-split-reverse.event-info-section-event-map .event-info-media {
+  order: 2;
+  min-height: 0;
+  overflow: visible;
+  background: transparent;
+}
+
+.event-info-section-event-map .event-info-media img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+}
+
 .event-info-section-facilities .event-info-media img,
 .event-info-section-camping-information .event-info-media img,
 .event-info-section-military-simulation .event-info-media img,
