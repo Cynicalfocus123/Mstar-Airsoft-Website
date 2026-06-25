@@ -184,6 +184,12 @@ export interface EventCard {
           imagePath?: string;
           imageAlt?: string;
           placeholderLabel?: string;
+          factionPanels?: Array<{
+            name: string;
+            uniform: string;
+            imagePath: string;
+            imageAlt: string;
+          }>;
           closingLines?: string[];
         }>;
       }>;

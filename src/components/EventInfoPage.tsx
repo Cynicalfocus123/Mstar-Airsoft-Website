@@ -84,6 +84,24 @@ export function EventInfoPage({ event }: EventInfoPageProps) {
                 {section.headline && <strong className="event-info-headline">{section.headline}</strong>}
                 {section.dateLine && <p className="event-info-date">{section.dateLine}</p>}
                 {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {section.factionPanels && (
+                  <div className="event-info-faction-dress-grid">
+                    {section.factionPanels.map((panel) => (
+                      <div
+                        aria-label={panel.imageAlt}
+                        className="event-info-faction-dress-panel"
+                        key={panel.name}
+                        role="img"
+                        style={{ backgroundImage: `url("${getPublicAssetPath(panel.imagePath)}")` }}
+                      >
+                        <div>
+                          <strong>{panel.name}</strong>
+                          <span>{panel.uniform}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
                 {section.bullets && (
                   <ul>
                     {section.bullets.map((item) => <li key={item}>{item}</li>)}

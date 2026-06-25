@@ -3098,6 +3098,78 @@ select:focus {
   object-position: center;
 }
 
+.event-info-section-event-introduction .event-info-media img {
+  object-position: center;
+}
+
+.event-info-section-mandatory-dress-code {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.event-info-section-mandatory-dress-code .event-info-copy {
+  width: 100%;
+}
+
+.event-info-section-mandatory-dress-code .event-info-copy h2 {
+  max-width: none;
+}
+
+.event-info-faction-dress-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+  margin-top: clamp(16px, 3vw, 28px);
+}
+
+.event-info-faction-dress-panel {
+  position: relative;
+  display: grid;
+  min-height: clamp(220px, 28vw, 340px);
+  align-items: end;
+  overflow: hidden;
+  border: 1px solid rgba(240, 185, 11, 0.32);
+  background-position: center;
+  background-size: cover;
+  isolation: isolate;
+}
+
+.event-info-faction-dress-panel::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(2, 3, 2, 0.05), rgba(2, 3, 2, 0.92));
+}
+
+.event-info-faction-dress-panel div {
+  display: grid;
+  gap: 4px;
+  padding: clamp(18px, 3vw, 28px);
+}
+
+.event-info-faction-dress-panel strong {
+  color: var(--white);
+  font-family: "Barlow Condensed", "Arial Narrow", "Oswald", sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.4rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.event-info-faction-dress-panel span {
+  color: var(--gold);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.policy-layout-plain[lang="th"] {
+  font-family: "Noto Sans Thai", "Prompt", "Inter", Arial, sans-serif;
+}
+
+.policy-layout-plain[lang="th"] .policy-section h2 {
+  line-height: 1.35;
+  text-transform: none;
+}
+
 .event-info-section-led-armband .event-info-copy h2 {
   max-width: 24ch;
   font-size: clamp(30px, 3.2vw, 48px);
@@ -4144,6 +4216,10 @@ select:focus {
     font-size: clamp(30px, 4vw, 42px);
   }
 
+  .event-info-faction-dress-grid {
+    grid-template-columns: 1fr;
+  }
+
   .mission-scenario-banner {
     min-height: clamp(220px, 34vw, 280px);
   }
@@ -4415,6 +4491,10 @@ select:focus {
 
   .event-info-section-camping-rules {
     margin-top: -12px;
+  }
+
+  .event-info-faction-dress-panel {
+    min-height: clamp(200px, 64vw, 280px);
   }
 
   .event-info-rows div {

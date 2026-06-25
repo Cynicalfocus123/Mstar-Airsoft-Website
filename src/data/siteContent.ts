@@ -2,6 +2,7 @@ import logoPath from '../assets/mstar-airsoft-logo.png';
 import type { SiteContent } from '../types/siteContent';
 import { cancellationRefundLanguageVersions } from './cancellationRefundContent';
 import { countryRegions } from './countries';
+import { equipmentLanguageVersions } from './equipmentContent';
 import { termsLanguageVersions } from './termsContent';
 
 export const siteContent: SiteContent = {
@@ -252,6 +253,7 @@ export const siteContent: SiteContent = {
               pageSubtitle: 'Force of Conquest 2027 - 3 Days • 2 Nights of Non-Stop Action, Adventure, and Immersion',
               sections: [
                 {
+                  id: 'event-introduction',
                   subtitle: "Asia's Largest Airsoft MilSim Experience",
                   paragraphs: [
                     'Force of Conquest 2027 is more than just an airsoft event - it is a fully immersive military simulation experience unlike anything else in Asia.',
@@ -259,8 +261,8 @@ export const siteContent: SiteContent = {
                     'By purchasing a Force of Conquest Event Ticket, you secure your place in an epic battlefield where teamwork, strategy, endurance, and leadership will determine the fate of entire factions.',
                     'Beyond the battlefield, participants can enjoy live music performances, festival-style entertainment, BBQ competitions, carnival activities, adventure rides, camping, role-playing experiences, and social gatherings with fellow players from around the world.',
                   ],
-                  imagePath: '/images/events/force-of-conquest/c7ddb663-e7b8-47e9-8063-e4e8730a1ffb.jfif',
-                  imageAlt: 'Airsoft player holding a rifle in tactical equipment',
+                  imagePath: '/images/events/force-of-conquest/event-info-intro-gopro.webp',
+                  imageAlt: 'Airsoft player wearing a helmet camera in jungle terrain',
                 },
                 {
                   id: 'military-simulation',
@@ -309,13 +311,27 @@ export const siteContent: SiteContent = {
                   imageAlt: 'Airsoft player registration and equipment',
                 },
                 {
+                  id: 'mandatory-dress-code',
                   title: 'Mandatory Dress Code',
                   paragraphs: [
                     'To maximize immersion and maintain battlefield realism, teams and factions are identified through uniforms and designated dress codes rather than colored armbands.',
                     'All participants must strictly follow the assigned faction dress code. Detailed uniform requirements and visual examples will be provided prior to the event.',
                     'Compliance with the dress code is mandatory and contributes significantly to the overall atmosphere and authenticity of the event.',
                   ],
-                  placeholderLabel: 'Faction Uniform Guide',
+                  factionPanels: [
+                    {
+                      name: 'Siam Frontier Coalition',
+                      uniform: 'Woodland camouflage uniform',
+                      imagePath: '/images/events/force-of-conquest/siam-frontier-woodland.webp',
+                      imageAlt: 'Woodland camouflage pattern for Siam Frontier Coalition',
+                    },
+                    {
+                      name: 'Golden Triangle Syndicate',
+                      uniform: 'Tiger stripe camouflage uniform',
+                      imagePath: '/images/events/force-of-conquest/golden-triangle-tiger-stripe.webp',
+                      imageAlt: 'Tiger stripe camouflage pattern for Golden Triangle Syndicate',
+                    },
+                  ],
                 },
                 {
                   id: 'ticket-inclusions',
@@ -336,14 +352,6 @@ export const siteContent: SiteContent = {
                   ],
                   imagePath: '/images/events/force-of-conquest-card.png',
                   imageAlt: 'Force of Conquest 2027 event artwork',
-                },
-                {
-                  title: 'Age Requirement',
-                  paragraphs: [
-                    'Participation in Force of Conquest is strictly limited to individuals aged 18 years and older.',
-                    'Valid identification may be required upon registration.',
-                  ],
-                  placeholderLabel: '18+ Participation',
                 },
                 {
                   id: 'event-information',
@@ -429,6 +437,7 @@ export const siteContent: SiteContent = {
               pageSubtitle: 'Force of Conquest 2027 - 3 วัน • 2 คืน แห่งการต่อสู้ ผจญภัย และประสบการณ์เสมือนจริงแบบไร้ขีดจำกัด',
               sections: [
                 {
+                  id: 'event-introduction',
                   subtitle: 'ประสบการณ์ Airsoft MilSim ที่ยิ่งใหญ่ที่สุดในเอเชีย',
                   paragraphs: [
                     'Force of Conquest 2027 ไม่ใช่เพียงกิจกรรมแอร์ซอฟต์ธรรมดา แต่คือประสบการณ์การจำลองยุทธการทางทหาร (Military Simulation Experience) แบบเต็มรูปแบบที่ยิ่งใหญ่และสมจริงที่สุดแห่งหนึ่งในเอเชีย',
@@ -436,8 +445,8 @@ export const siteContent: SiteContent = {
                     'เมื่อคุณซื้อบัตรเข้าร่วมงาน Force of Conquest 2027 คุณจะได้ก้าวเข้าสู่สนามรบขนาดมหึมา ซึ่งความสามัคคี การวางแผน ความอดทน และภาวะผู้นำ จะเป็นตัวกำหนดชะตากรรมของทั้งกองทัพ',
                     'นอกเหนือจากสนามรบ ผู้เข้าร่วมยังสามารถเพลิดเพลินกับการแสดงดนตรีสด เทศกาลอาหารนานาชาติ การแข่งขัน BBQ โซนกิจกรรมคาร์นิวัลและเครื่องเล่น กิจกรรมผจญภัย การตั้งแคมป์กลางธรรมชาติ กิจกรรมเกมและการแสดงต่าง ๆ รวมถึงงานสังสรรค์กับผู้เล่นจากทั่วโลก',
                   ],
-                  imagePath: '/images/events/force-of-conquest/c7ddb663-e7b8-47e9-8063-e4e8730a1ffb.jfif',
-                  imageAlt: 'ผู้เล่นแอร์ซอฟต์พร้อมอุปกรณ์ยุทธวิธี',
+                  imagePath: '/images/events/force-of-conquest/event-info-intro-gopro.webp',
+                  imageAlt: 'ผู้เล่นแอร์ซอฟต์ติดกล้องบนหมวกในพื้นที่ป่า',
                 },
                 {
                   id: 'military-simulation',
@@ -486,13 +495,27 @@ export const siteContent: SiteContent = {
                   imageAlt: 'การลงทะเบียนและอุปกรณ์ผู้เล่น',
                 },
                 {
+                  id: 'mandatory-dress-code',
                   title: 'ระเบียบการแต่งกาย (Dress Code)',
                   paragraphs: [
                     'เพื่อเพิ่มความสมจริงของสงครามและสร้างบรรยากาศการรบอย่างเต็มรูปแบบ การแบ่งฝ่ายจะใช้เครื่องแบบและรูปแบบการแต่งกายเฉพาะของแต่ละฝ่าย แทนการใช้ปลอกแขนสี',
                     'ผู้เข้าร่วมทุกคนต้องปฏิบัติตาม Dress Code ของฝ่ายที่ได้รับมอบหมายอย่างเคร่งครัด',
                     'รายละเอียดเครื่องแบบและตัวอย่างการแต่งกายจะประกาศให้ทราบก่อนวันกิจกรรม',
                   ],
-                  placeholderLabel: 'คู่มือเครื่องแบบประจำฝ่าย',
+                  factionPanels: [
+                    {
+                      name: 'Siam Frontier Coalition',
+                      uniform: 'เครื่องแบบลายพราง Woodland',
+                      imagePath: '/images/events/force-of-conquest/siam-frontier-woodland.webp',
+                      imageAlt: 'ลายพราง Woodland สำหรับฝ่าย Siam Frontier Coalition',
+                    },
+                    {
+                      name: 'Golden Triangle Syndicate',
+                      uniform: 'เครื่องแบบลายพราง Tiger Stripe',
+                      imagePath: '/images/events/force-of-conquest/golden-triangle-tiger-stripe.webp',
+                      imageAlt: 'ลายพราง Tiger Stripe สำหรับฝ่าย Golden Triangle Syndicate',
+                    },
+                  ],
                 },
                 {
                   id: 'ticket-inclusions',
@@ -513,14 +536,6 @@ export const siteContent: SiteContent = {
                   ],
                   imagePath: '/images/events/force-of-conquest-card.png',
                   imageAlt: 'ภาพกิจกรรม Force of Conquest 2027',
-                },
-                {
-                  title: 'อายุผู้เข้าร่วม',
-                  paragraphs: [
-                    'กิจกรรม Force of Conquest จำกัดเฉพาะผู้มีอายุ 18 ปีขึ้นไปเท่านั้น',
-                    'ผู้เข้าร่วมอาจถูกขอตรวจสอบเอกสารแสดงตัวตนในวันลงทะเบียน',
-                  ],
-                  placeholderLabel: 'ผู้เข้าร่วมอายุ 18 ปีขึ้นไป',
                 },
                 {
                   id: 'event-information',
@@ -1242,82 +1257,10 @@ export const siteContent: SiteContent = {
     },
     {
       slug: 'equipment',
-      eyebrow: 'Travel Guide',
-      title: 'Equipment',
-      description: 'Shipping rules, customs prep, and airport handling steps for bringing tournament equipment to Thailand.',
-      sections: [
-        {
-          id: 'equipment-overview',
-          title: 'How to Ship Your Equipment for the Airsoft Tournament',
-          paragraphs: [
-            'All participants are required to ship their airsoft equipment to our office in Thailand at least 3 weeks prior to the tournament date to allow sufficient time for customs clearance, inspection, and transportation arrangements.',
-          ],
-        },
-        {
-          id: 'equipment-required-items',
-          title: 'Equipment Required to Be Shipped in Advance',
-          paragraphs: [
-            'The following items must be shipped prior to arrival:',
-          ],
-          bullets: [
-            'All types of airsoft guns with orange/red safety markings and user manuals',
-            'All ammunition, including biodegradable plastic BBs',
-            'Air tanks must be completely empty with caps removed',
-            'Tactical gear, including helmets, body armor, gloves, knee pads, and military uniforms',
-          ],
-        },
-        {
-          id: 'packing-shipping-instructions',
-          title: 'Packing & Shipping Instructions',
-          paragraphs: [
-            'To ensure smooth customs processing and safe delivery, please follow the instructions below:',
-          ],
-          bullets: [
-            'Use high-quality protective packaging materials to secure your equipment during transit',
-            'Clearly declare all items being imported into Thailand',
-            'Attach the official MSTAR Airsoft approval letter to the outside of the shipping box',
-            'The Bill of Lading or shipping invoice must clearly specify the type of airsoft gun, model number, total quantity of units, ammunition details, and a list of all additional equipment included in the shipment',
-            'For multiple boxes, clearly label each package as Box 1 of 3, Box 2 of 3, and Box 3 of 3',
-          ],
-        },
-        {
-          id: 'emergency-shipment-procedures',
-          title: 'Emergency Shipment Procedures',
-          paragraphs: [
-            'If you are unable to ship your equipment 3 weeks in advance and plan to travel with your airsoft equipment by air, you must notify the MSTAR team at least 5 days before departure.',
-            'Before boarding your flight:',
-          ],
-          bullets: [
-            'Inform your airline security department in your home country that you are traveling with airsoft tournament equipment for Thailand',
-            'Present the official MSTAR approval letter to airline security personnel',
-            'Your airline security team may transport the equipment separately according to airline and airport regulations',
-          ],
-        },
-        {
-          id: 'arrival-thailand-equipment',
-          title: 'Upon Arrival in Thailand',
-          bullets: [
-            'Proceed to airport security and present your MSTAR approval letter',
-            'Inform airport authorities that your equipment was transported separately',
-            'Airport security officials will inspect and verify the shipment documentation',
-            'Your equipment will be secured and safely stored until collected by MSTAR staff',
-            'MSTAR personnel will transport your equipment directly to the designated airsoft field',
-          ],
-        },
-        {
-          id: 'equipment-important-notice',
-          title: 'Important Notice',
-          paragraphs: [
-            'For safety and legal compliance, participants are not permitted to handle or transport airsoft equipment outside of the official event premises.',
-          ],
-          bullets: [
-            'All airsoft equipment may only be handled within the designated airsoft field and event area',
-            'After the tournament concludes, MSTAR staff will transport your equipment back to the airport for your departing flight',
-            'You will receive a WhatsApp notification once your equipment arrives at the airport',
-            'Participants must check in with airport security to verify and confirm the collection of their equipment before departure',
-          ],
-        },
-      ],
+      eyebrow: 'Security Protocol',
+      title: 'Equipment Transportation',
+      description: 'Official international airsoft equipment transport, storage, event-use, and re-export procedures for Force of Conquest 2027.',
+      languageVersions: equipmentLanguageVersions,
     },
     {
       slug: 'rules-and-regulation',
