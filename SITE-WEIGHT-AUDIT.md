@@ -1,21 +1,21 @@
-# Mstar Airsoft Site Weight Audit
+﻿# Mstar Airsoft Site Weight Audit
 
-Audit date: 2026-06-26  
+Audit date: 2026-06-27
 Repo location confirmed: `D:\mstar airsoft site`
 
 ## Summary
 
-Current post-cleanup / post-Phase-3 numbers:
+Current post-cleanup / post-Phase-3 / event content update numbers:
 
 * Total repo size: 4.54 GB
 * Total repo size excluding node_modules/.git/dist/ZIPs: 2.02 GB
-* public/ size: 27.99 MB
-* public/images size: 15.16 MB
+* public/ size: 29.35 MB
+* public/images size: 16.52 MB
 * public/videos size: 12.82 MB
 * public/media size: 0 B
-* src/ size: 820.41 KB
-* dist production build size: 28.93 MB
-* Largest current deploy weight area: `public/images` at 15.16 MB, followed by `public/videos` at 12.82 MB.
+* src/ size: 0.84 MB
+* dist production build size: 30.33 MB
+* Largest current deploy weight area: `public/images` at 16.52 MB, followed by `public/videos` at 12.82 MB.
 
 Before Phase 1, `dist/` was 512.55 MB and `public/` was 511.61 MB. Those are no longer current deploy sizes.
 
@@ -210,13 +210,15 @@ Videos over 50 MB in current `public/`: none.
 * dist/videos size: 12.82 MB
 * dist/media size: 0 B
 * largest JS chunks:
-  * `dist/assets/index-0qXNyXEE.js` — 532.43 KB
+* `dist/assets/index-CXNzadvn.js` - 557.43 KB, main JS bundle; Vite warns it is over 500 KB.
 * largest CSS files:
-  * `dist/assets/index-D8UVGbHj.css` — 71.56 KB
+  * `dist/assets/index-D8UVGbHj.css` â€” 71.56 KB
 * source maps found in `dist`: no
 * unusual build warnings:
   * Vite/Rolldown still warns that one JS chunk is larger than 500 KB after minification.
   * A plugin timing warning can appear for build preparation/CSS processing.
+* 2026-06-26 runtime package verification: temporary Playwright verifier built the app, served local `dist`, checked 15 requested routes at desktop and mobile widths, clicked visible Thai language toggles, scanned rendered DOM text for expanded mojibake patterns, and verified local `/images/`, `/videos/`, and `/assets/` media. Result: 30 route/view checks passed, 10 Thai-toggle route/view checks passed, 102 local media route/view references verified, zero rendered mojibake, and zero missing local media. Initial runtime-verified Hostinger staging folder: `hostinger-hpanel-live-package-runtime-verified/`, 28.93 MB. Initial runtime-verified ZIP: `mstarairsoft-hostinger-runtime-verified.zip`, 28.04 MB.
+* 2026-06-26 Git/source asset pruning pass: Git inspection confirmed the workspace is on `main` at `4da1677ea4d8eb26155c3fc5fe6a9da616a79322` with the expected GitHub remote. Current source references 58 local deploy media assets: 46 images, 5 videos, and 7 banners. All referenced media exists in the built output and is Git-tracked. The final Hostinger staging folder was rebuilt from required root files, compiled `assets/`, and only those source-referenced public media files. Pruned staging folder: 65 files, 27.04 MB. Pruned ZIP: `mstarairsoft-hostinger-runtime-verified.zip`, 26.18 MB. Runtime verification against the pruned staging folder passed with 30 route/view checks, 10 Thai-toggle checks, 106 local media route/view references, zero rendered mojibake, and zero missing media. ZIP inspection found no parent folder, source files, Git files, package/config/docs/backups, source maps, forbidden GitHub/GitHub Pages links, requested mojibake sequences, or missing source-referenced assets.
 
 Largest files inside current `dist`:
 
@@ -225,39 +227,49 @@ Largest files inside current `dist`:
 | `dist/videos/force-of-conquest-header-compress-video.mp4` | 4.81 MB | Current optimized homepage hero video. |
 | `dist/videos/game-terrain/fun-combat-terrains.webm` | 2.97 MB | Game Terrain section. |
 | `dist/videos/game-terrain/forest-movement.webm` | 2.62 MB | Game Terrain section. |
+| `dist/images/events/force-of-conquest/referee-final-edit.png` | 1.95 MB | Event Info important-information section. |
 | `dist/videos/game-terrain/beautiful-scenery.webm` | 1.56 MB | Game Terrain section. |
 | `dist/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` | 1.07 MB | Event Info map. |
 | `dist/videos/game-terrain/large-open-area.webm` | 889.31 KB | Game Terrain section. |
 | `dist/images/events/force-of-conquest-card.png` | 742.37 KB | Event card / SEO image. |
 
+## 2026-06-27 Event Content Update
+
+The Event Info important-information section now uses the supplied referee briefing image:
+
+* Added active deploy asset: `public/images/events/force-of-conquest/referee-final-edit.png` - 1.95 MB.
+* Removed obsolete deploy asset: `public/images/events/force-of-conquest/important-information-referee-briefing.jfif` - 601.96 KB.
+* Net public image increase for this media swap: about 1.36 MB.
+* Refreshed production build after removal; `dist/images/events/force-of-conquest/referee-final-edit.png` exists and the old JFIF no longer appears in `dist`.
+
 ## Homepage First-Load Risks
 
 Likely homepage first-load assets:
 
-* `public/videos/force-of-conquest-header-compress-video.mp4` — 4.81 MB, referenced by `siteContent.ts` as the hero video.
-* `public/images/home-hero-poster.webp` — 341.54 KB, referenced by the homepage hero poster handling.
-* `dist/assets/index-0qXNyXEE.js` — 532.43 KB, main JS bundle; Vite warns it is over 500 KB.
-* `public/images/events/force-of-conquest-card.png` — 0.72 MB, referenced by event-card data and SEO default image; may affect Home/Events depending on rendered event cards.
+* `public/videos/force-of-conquest-header-compress-video.mp4` â€” 4.81 MB, referenced by `siteContent.ts` as the hero video.
+* `public/images/home-hero-poster.webp` â€” 341.54 KB, referenced by the homepage hero poster handling.
+* `dist/assets/index-CXNzadvn.js` - 557.43 KB, main JS bundle; Vite warns it is over 500 KB.
+* `public/images/events/force-of-conquest-card.png` â€” 0.72 MB, referenced by event-card data and SEO default image; may affect Home/Events depending on rendered event cards.
 
 ## Event Page Weight Risks
 
 Force of Conquest / Event Info risks:
 
-* `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` — 1.07 MB, Event Info `EVENT MAP` section.
-* `public/images/events/force-of-conquest/team-2.webp` — 0.32 MB, faction section.
-* `public/images/events/force-of-conquest/team-1.webp` — 0.21 MB, faction section.
-* `public/images/events/force-of-conquest-card.png` — 0.72 MB, event card and Event Info image references.
-* `public/images/events/force-of-conquest/important-information-referee-briefing.jfif` — 601.96 KB, Event Info important information section.
-* `public/images/events/force-of-conquest/event-info-banner.jpg` — 329.64 KB, Event Info banner.
+* `public/images/events/force-of-conquest/referee-final-edit.png` - 1.95 MB, Event Info important-information section.
+* `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` â€” 1.07 MB, Event Info `EVENT MAP` section.
+* `public/images/events/force-of-conquest/team-2.webp` â€” 0.32 MB, faction section.
+* `public/images/events/force-of-conquest/team-1.webp` â€” 0.21 MB, faction section.
+* `public/images/events/force-of-conquest-card.png` â€” 0.72 MB, event card and Event Info image references.
+* `public/images/events/force-of-conquest/event-info-banner.jpg` â€” 329.64 KB, Event Info banner.
 
 ## Possible Unused or Duplicate Assets
 
 List only. Do not delete without a separate confirmation task.
 
-* `deploy-export/` — 330.16 MB, looks like old build/deploy output.
-* `zip-check/` — 330.16 MB, looks like old build/deploy verification output.
-* `website video/` — 666.05 MB, local editing/source media.
-* `site content/non-deployed-heavy-media-backup/` — backup-only media moved out of deploy paths.
+* `deploy-export/` â€” 330.16 MB, looks like old build/deploy output.
+* `zip-check/` â€” 330.16 MB, looks like old build/deploy verification output.
+* `website video/` â€” 666.05 MB, local editing/source media.
+* `site content/non-deployed-heavy-media-backup/` â€” backup-only media moved out of deploy paths.
 * Same or similar media appears in multiple places: `site content/`, `website video/`, old `deploy-export/`, old `zip-check/`, and Git/LFS history.
 * `site content/map final edit.png` and `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` appear to be source/public copies of the same map artwork; the deployed public copy is now optimized.
 * `site content/force of conquest header compress video.mp4`, `site content/non-deployed-heavy-media-backup/force-of-conquest-header-compress-video-original.mp4`, and `public/videos/force-of-conquest-header-compress-video.mp4` are source/original/optimized versions of the active homepage hero.
@@ -279,7 +291,16 @@ List only. Do not delete without a separate confirmation task.
 * Game Terrain videos are likely homepage below-the-fold; keep them lazy/controlled so they do not all load immediately.
 * Things to Know guide images over 1 MB are inner-page risks, not homepage first-load risks unless linked previews use them.
 
-## Optimization Plan — One By One
+## Token-Saving and Bundle-Size Rules
+
+* Keep verification scripts targeted and make their output minimal: counts, first failures, and pass/fail summaries are preferred over full file dumps.
+* Avoid duplicate deployed media; keep source/original/backups outside `public/`, `dist/`, and Hostinger ZIP staging folders.
+* Prefer optimized WebP/AVIF images where browser support and visual quality are acceptable; keep PNG/JPG only when transparency, SEO/social paths, or readability require them.
+* Avoid unused assets in the production build. Only referenced media should live in deploy-copied public paths.
+* Do not consolidate the required live structure into a single folder: keep `assets/`, `images/`, and `videos/` as separate build roots.
+* Reuse existing verification scripts or targeted one-off checks rather than broad scans that read binary media unnecessarily.
+
+## Optimization Plan â€” One By One
 
 Do not perform these yet without a separate optimization task.
 

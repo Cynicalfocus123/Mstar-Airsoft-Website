@@ -3,7 +3,9 @@ import type { SiteContent } from '../types/siteContent';
 import { cancellationRefundLanguageVersions } from './cancellationRefundContent';
 import { countryRegions } from './countries';
 import { equipmentLanguageVersions } from './equipmentContent';
+import { privacyLanguageVersions } from './privacyThaiContent';
 import { termsLanguageVersions } from './termsContent';
+import { travelLanguageVersions } from './travelThaiContent';
 
 export const siteContent: SiteContent = {
   identity: {
@@ -60,9 +62,9 @@ export const siteContent: SiteContent = {
   },
   about: {
     eyebrow: '',
-    title: 'Experience the Largest Airsoft Festival in Southeast Asia — where adrenaline, entertainment, and adventure come together day and night.',
+    title: 'Experience the Largest Airsoft Festival in Southeast Asia - where adrenaline, entertainment, and adventure come together day and night.',
     body:
-      'The Mstar Airsoft Tournament delivers an immersive battlefield experience set in Thailand’s stunning tropical rainforest, complete with natural creeks and realistic combat environments that replicate real tactical scenarios. Beyond the battlefield, guests can enjoy the vibrant atmosphere of an international music festival featuring global food vendors, carnival attractions, live entertainment, and adventure activities for all ages. Step into a world of nonstop excitement, competition, and unforgettable experiences surrounded by the breathtaking beauty of Thailand.',
+      "The Mstar Airsoft Tournament delivers an immersive battlefield experience set in Thailand's stunning tropical rainforest, complete with natural creeks and realistic combat environments that replicate real tactical scenarios. Beyond the battlefield, guests can enjoy the vibrant atmosphere of an international music festival featuring global food vendors, carnival attractions, live entertainment, and adventure activities for all ages. Step into a world of nonstop excitement, competition, and unforgettable experiences surrounded by the breathtaking beauty of Thailand.",
     highlights: [
       'LIVE BAND, EDM ZONE, INTERNATIONAL FOOD COURT, CARNIVAL',
       'ATV RIDE, JUNGLE TOUR',
@@ -153,8 +155,8 @@ export const siteContent: SiteContent = {
     packages: [
       {
         label: 'Pre Sale',
-        price: '€120.00 EURO',
-        originalPrice: '(Original Price €160.00 EURO)',
+        price: 'EUR 120.00',
+        originalPrice: '(Original Price EUR 160.00)',
         expiry: 'Expire November 20, 2026',
         details: ['3 Days / 2 Nights'],
         perks: ['Live Music', 'Food Court'],
@@ -165,8 +167,8 @@ export const siteContent: SiteContent = {
     addons: [
       {
         title: 'Camping Experience',
-        price: '€69 EURO',
-        description: 'Add additional camping set.',
+        price: 'EUR 69',
+        description: 'Includes pillow, blanket, mattress, and 2-person tent.',
         stripeBuyButtonId: 'buy_btn_1TiUMF5Kev5Ia2RiheGKvjgJ',
         stripePublishableKey: 'pk_live_51Ti9OB5Kev5Ia2RiP7lxGp51P9mFeLMplhAUXd1xjLxxNePuGp25jujSGlT6XTiHP2QxHjJLxCgG6n8tVNg6JQfI00wqscszxi',
       },
@@ -177,10 +179,10 @@ export const siteContent: SiteContent = {
       id: 'force-of-conquest',
       href: '/events/force-of-conquest',
       title: 'Force of Conquest',
-      date: 'Jan 8–10, 2027',
+      date: 'Jan 8-10, 2027',
       time: '09:00 AM - 05:30 PM',
       location: 'Mstar Jungle Land, Thailand',
-      entryFee: '€120 Pre Sale',
+      entryFee: 'EUR 120 Pre Sale',
       teams: 'Alpha Coalition vs Bravo Unit',
       attendance: '2,000 players',
       status: 'REGISTRATION NOW OPEN!',
@@ -200,11 +202,18 @@ export const siteContent: SiteContent = {
         missionBody:
           'Players will move through jungle terrain, natural cover, and coordinated objective zones designed for organized squad communication, fair play, and sustained tactical decision-making.',
         detailRows: [
-          { label: 'Date', value: 'January 8–10, 2027' },
+          { label: 'Date', value: 'January 8-10, 2027' },
           { label: 'Location', value: 'Mstar Jungle Land, Thailand' },
           { label: 'Registration', value: 'Open' },
           { label: 'Format', value: 'Large-scale airsoft operation' },
           { label: 'Entry', value: 'Ticket required' },
+          {
+            label: 'Eligibility',
+            value: '18 and older. 17 and younger need to fill out a waiver.',
+            linkLabel: 'Click here',
+            linkPath: '/ticket',
+            linkHash: 'authorization-of-supervising-adult',
+          },
           { label: 'Player type', value: 'International players and teams' },
         ],
         timeline: [],
@@ -291,7 +300,7 @@ export const siteContent: SiteContent = {
                     'This helps prevent duplicate assignments and ensures all roles fit within the event storyline and operational structure.',
                   ],
                   email: 'info@mstarairsoft.com',
-                  imagePath: '/images/events/force-of-conquest/important-information-referee-briefing.jfif',
+                  imagePath: '/images/events/force-of-conquest/referee-final-edit.png',
                   imageAlt: 'Referee wearing a high-visibility vest briefing airsoft players',
                 },
                 {
@@ -493,7 +502,7 @@ export const siteContent: SiteContent = {
                     'ขั้นตอนนี้ช่วยป้องกันการซ้ำซ้อนของบทบาท และทำให้ทุกตำแหน่งสอดคล้องกับเนื้อเรื่องและโครงสร้างการปฏิบัติการของกิจกรรม',
                   ],
                   email: 'info@mstarairsoft.com',
-                  imagePath: '/images/events/force-of-conquest/important-information-referee-briefing.jfif',
+                  imagePath: '/images/events/force-of-conquest/referee-final-edit.png',
                   imageAlt: 'กรรมการสวมเสื้อกั๊กสะท้อนแสงกำลังชี้แจงข้อมูลแก่ผู้เล่นแอร์ซอฟต์',
                 },
                 {
@@ -570,7 +579,13 @@ export const siteContent: SiteContent = {
                     { label: 'ระยะเวลา', value: '3 วัน / 2 คืน' },
                     { label: 'สนามแข่งขัน', value: 'พื้นที่ป่าธรรมชาติกว่า 267 ไร่' },
                     { label: 'รูปแบบการแข่งขัน', value: 'สงครามจำลองหลายฝ่าย (Multi-Faction Military Simulation Campaign)' },
-                    { label: 'คุณสมบัติผู้เข้าร่วม', value: 'อายุ 18 ปีขึ้นไป' },
+                    {
+                      label: 'คุณสมบัติผู้เข้าร่วม',
+                      value: 'อายุ 18 ปีขึ้นไป ผู้เข้าร่วมอายุ 17 ปีหรือต่ำกว่าต้องกรอกแบบฟอร์มยินยอมจากผู้ปกครอง',
+                      linkLabel: 'คลิกที่นี่',
+                      linkPath: '/ticket',
+                      linkHash: 'authorization-of-supervising-adult',
+                    },
                   ],
                 },
                 {
@@ -901,7 +916,7 @@ export const siteContent: SiteContent = {
                   subtitle: 'ยุทธการบุกยึดเมืองหลวง',
                   intro: 'ศึกตัดสินชะตากรรมได้เริ่มต้นขึ้น',
                   bodyParagraphs: [
-                    'ทุกฝ่ายระดมกำลังเปิดฉากโจมตีฐานที่มั่นสุดท้ายของศัตรู ซึ่งเป็นศูนย์กลางการปกครองและการบัญชาการที่รู้จักกันในชื่อ “เมืองหลวง”',
+                    'ทุกฝ่ายระดมกำลังเปิดฉากโจมตีฐานที่มั่นสุดท้ายของศัตรู ซึ่งเป็นศูนย์กลางการปกครองและการบัญชาการที่รู้จักกันในชื่อ "เมืองหลวง"',
                     'ทรัพยากร กำลังพล และข่าวกรองที่สะสมมาตลอดสองวันที่ผ่านมา จะเป็นปัจจัยสำคัญในการชี้ขาดชัยชนะ',
                   ],
                   schedule: [
@@ -1206,6 +1221,7 @@ export const siteContent: SiteContent = {
       eyebrow: 'Travel Guide',
       title: 'How to Get to the Event',
       description: 'Travel options, transfer timing, and support contacts for getting from Bangkok to the MSTAR Airsoft event in Saraburi.',
+      languageVersions: travelLanguageVersions,
       sections: [
         {
           id: 'arrival-overview',
@@ -1229,7 +1245,7 @@ export const siteContent: SiteContent = {
           title: 'Budget-Friendly Transportation Option',
           paragraphs: [
             'For travelers looking to save on transportation costs, the recommended option is to take a local taxi or book a Grab ride to Mo Chit Bus Terminal. Upon arrival at the terminal, you can purchase a bus ticket to Saraburi.',
-            'Once you arrive at the Saraburi Bus Terminal, you will find a designated minivan displaying the sign “MSTAR Airsoft Event.”',
+            'Once you arrive at the Saraburi Bus Terminal, you will find a designated minivan displaying the sign "MSTAR Airsoft Event."',
           ],
           bullets: [
             'Transfer Fee: 500 THB per person',
@@ -1381,15 +1397,12 @@ export const siteContent: SiteContent = {
         },
         {
           id: 'camping-rental',
-          title: 'Camping Equipment Rental',
+          title: 'Camping 69€',
           paragraphs: [
-            'For the convenience of international travelers and participants, rental equipment is available directly at the campground:',
+            'Camping set includes pillow, blanket, mattress, and 2-person tent.',
           ],
-          bullets: [
-            '2-Person Tent - 20 EUR per night',
-            '4-Person Tent - 30 EUR per night',
-            'BBQ Stove - 20 EUR per night',
-            'Lantern - 10 EUR per night',
+          links: [
+            { label: 'Reserve Camping on the Ticket Page', href: '/ticket#camping' },
           ],
         },
         {
@@ -1517,7 +1530,7 @@ export const siteContent: SiteContent = {
           id: 'haew-narok-waterfall',
           title: 'Haew Narok Waterfall',
           paragraphs: [
-            'A dramatic waterfall destination for travelers who want to experience more of Thailand’s lush forest scenery during their trip.',
+            "A dramatic waterfall destination for travelers who want to experience more of Thailand's lush forest scenery during their trip.",
           ],
           images: [
             {
@@ -1559,7 +1572,7 @@ export const siteContent: SiteContent = {
           id: 'pak-chong',
           title: 'Pak Chong',
           paragraphs: [
-            'Pak Chong is a popular getaway area for travelers who want sweeping viewpoints, cool mountain scenery, local food stops, and easy access to some of the region’s best outdoor experiences.',
+            "Pak Chong is a popular getaway area for travelers who want sweeping viewpoints, cool mountain scenery, local food stops, and easy access to some of the region's best outdoor experiences.",
           ],
           images: [
             {
@@ -1601,7 +1614,7 @@ export const siteContent: SiteContent = {
           id: 'khao-yai-national-park',
           title: 'Khao Yai National Park',
           paragraphs: [
-            'Khao Yai National Park is one of Thailand’s most iconic natural destinations, known for dramatic landscapes, forest roads, wildlife encounters, and unforgettable day trips into the mountains.',
+            "Khao Yai National Park is one of Thailand's most iconic natural destinations, known for dramatic landscapes, forest roads, wildlife encounters, and unforgettable day trips into the mountains.",
           ],
           images: [
             {
@@ -1810,6 +1823,7 @@ export const siteContent: SiteContent = {
       eyebrow: 'Legal',
       title: 'Privacy',
       description: 'How MSTAR Airsoft (Force of Conquest) collects, uses, stores, and protects personal information.',
+      languageVersions: privacyLanguageVersions,
       sections: [
         {
           id: 'privacy-intro',
@@ -1817,7 +1831,7 @@ export const siteContent: SiteContent = {
           paragraphs: [
             'Effective Date: May 20, 2026',
             'Operated By: Mstar (Asia) Co., Ltd.',
-            'Mstar (Asia) Co., Ltd. (“MSTAR,” “we,” “our,” or “us”) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, process, store, disclose, and safeguard information obtained through the MSTAR Airsoft (Force of Conquest) website, mobile application, event registration systems, ticketing platforms, campground services, and related event operations.',
+            'Mstar (Asia) Co., Ltd. ("MSTAR," "we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, process, store, disclose, and safeguard information obtained through the MSTAR Airsoft (Force of Conquest) website, mobile application, event registration systems, ticketing platforms, campground services, and related event operations.',
             'By accessing or using our website, mobile application, services, or participating in MSTAR Airsoft events, you acknowledge and agree to the terms of this Privacy Policy.',
           ],
         },
@@ -1950,7 +1964,7 @@ export const siteContent: SiteContent = {
         },
         {
           id: 'privacy-children',
-          title: '11. Children’s Privacy',
+          title: "11. Children's Privacy",
           paragraphs: [
             'MSTAR does not knowingly collect personal information from children without appropriate parental or guardian consent where required by law.',
             'Participants under legal age may require parental authorization to register or participate in event activities.',
@@ -2004,6 +2018,24 @@ export const siteContent: SiteContent = {
             'Mstar (Asia) Co., Ltd.',
             'Official Event: MSTAR Airsoft (Force of Conquest)',
             'For questions regarding this Privacy Policy, data protection matters, event registration, or account support, please contact the official MSTAR support team through the authorized website, mobile application, or customer support channels.',
+          ],
+        },
+      ],
+    },
+    {
+      slug: 'become-a-sponsor',
+      eyebrow: 'Force of Conquest 2027',
+      title: 'Become a Sponsor',
+      description: 'Sponsor opportunities for Force of Conquest 2027 are coming soon.',
+      sections: [
+        {
+          id: 'become-a-sponsor-overview',
+          title: 'BECOME A SPONSOR',
+          paragraphs: [
+            'Sponsor opportunities for Force of Conquest 2027 are coming soon.',
+          ],
+          links: [
+            { label: 'CONTACT MSTAR AIRSOFT', href: 'mailto:info@mstarairsoft.com' },
           ],
         },
       ],
@@ -2083,6 +2115,7 @@ export const siteContent: SiteContent = {
     ],
     buttonLabel: 'Open Vendor Application Form',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScIAKOLoJzT32QE8tl61qmdrfBoKZ3gmKlLgZ0_pW-XBboaSw/viewform',
+    sponsorLink: { label: 'Become a Sponsor', href: '/become-a-sponsor' },
   },
   signIn: {
     title: 'SIGN IN',

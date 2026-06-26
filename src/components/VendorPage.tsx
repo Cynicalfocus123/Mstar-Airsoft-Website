@@ -1,5 +1,5 @@
 import type { VendorPageContent } from '../types/siteContent';
-import { getSafeGoogleFormUrl } from '../utils/safeUrl';
+import { getSafeGoogleFormUrl, getSafeInternalHref } from '../utils/safeUrl';
 
 interface VendorPageProps {
   content: VendorPageContent;
@@ -26,6 +26,11 @@ export function VendorPage({ content }: VendorPageProps) {
             target="_blank"
           >
             {content.buttonLabel}
+          </a>
+        )}
+        {content.sponsorLink && (
+          <a className="vendor-page-sponsor-link" href={getSafeInternalHref(content.sponsorLink.href)}>
+            {content.sponsorLink.label}
           </a>
         )}
       </section>

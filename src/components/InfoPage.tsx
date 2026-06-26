@@ -13,6 +13,7 @@ const unboxedPolicySlugs = new Set([
   'cancellation-and-refund',
   'privacy',
   'complaints',
+  'become-a-sponsor',
   'equipment',
   'how-to-get-to-the-event',
   'immigration-visa',
@@ -20,6 +21,17 @@ const unboxedPolicySlugs = new Set([
   'activity',
   'contact',
 ]);
+
+function getSafeInfoLinkHref(value: string) {
+  const mailtoHref = getSafeMailtoHref(value);
+  if (mailtoHref) return mailtoHref;
+
+  const [path, hash] = value.split('#');
+  const safePath = getSafeInternalHref(path, '');
+  if (!safePath) return undefined;
+  if (!hash) return safePath;
+  return /^[a-z0-9-]+$/i.test(hash) ? `${safePath}#${hash}` : undefined;
+}
 
 const hiddenHeroSlugs = new Set([
   'activity',
@@ -78,7 +90,8 @@ export function InfoPage({ content }: InfoPageProps) {
   const shouldShowHero = !hiddenHeroSlugs.has(content.slug);
   const [activeLanguageId, setActiveLanguageId] = useState(content.languageVersions?.[0]?.id);
   const activeLanguage = content.languageVersions?.find((language) => language.id === activeLanguageId) ?? content.languageVersions?.[0];
-  const visibleSections = activeLanguage?.sections ?? content.sections;
+  const isDefaultLanguage = Boolean(activeLanguage && activeLanguage.id === content.languageVersions?.[0]?.id);
+  const visibleSections = isDefaultLanguage && content.sections ? content.sections : activeLanguage?.sections ?? content.sections;
   const policyClassName = [
     'policy-layout',
     content.slug === 'rules-and-regulation' ? 'policy-layout-rules' : '',
@@ -189,7 +202,7 @@ export function InfoPage({ content }: InfoPageProps) {
               {section.links && (
                 <ul className="policy-link-list">
                   {section.links.map((link) => {
-                    const safeHref = getSafeMailtoHref(link.href);
+                    const safeHref = getSafeInfoLinkHref(link.href);
 
                     return safeHref ? (
                       <li key={link.href}>

@@ -2729,6 +2729,18 @@ select:focus {
   font-weight: 800;
 }
 
+.event-detail-facts dd a {
+  color: var(--gold);
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.event-detail-facts dd a:hover,
+.event-detail-facts dd a:focus-visible {
+  color: var(--white);
+}
+
 .event-section-heading {
   display: grid;
   gap: 8px;
@@ -3211,6 +3223,24 @@ select:focus {
 
 .vendor-page-button {
   margin-top: 14px;
+}
+
+.vendor-page-sponsor-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 4px;
+  color: var(--gold);
+  font-family: "Rajdhani", "Inter", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.vendor-page-sponsor-link:hover,
+.vendor-page-sponsor-link:focus-visible {
+  color: var(--white);
 }
 
 .event-info-faction-dress-panel strong {

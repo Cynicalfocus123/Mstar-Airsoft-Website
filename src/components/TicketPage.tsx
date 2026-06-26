@@ -21,7 +21,7 @@ export function TicketPage({ content }: TicketPageProps) {
           <PackageCard offer={offer} key={offer.label} />
         ))}
       </section>
-      <section className="ticket-addons" aria-labelledby="ticket-addons-title">
+      <section className="ticket-addons" id="camping" aria-labelledby="ticket-addons-title">
         <div className="ticket-section-heading">
           <p className="eyebrow">Camping Extras</p>
           <h2 id="ticket-addons-title">Add-Ons</h2>

@@ -18,6 +18,7 @@ type SeoInput = Omit<SeoEntry, 'canonical' | 'robots' | 'ogTitle' | 'ogDescripti
 };
 
 const routeAliases: Record<string, string> = {
+  '/privacy-policy': '/privacy',
   '/equipment': '/ship-your-equipment',
   '/ship-your-equipment': '/ship-your-equipment',
   '/accommodation-and-campground': '/accommodation',
@@ -311,6 +312,11 @@ export const seoContent: Record<string, SeoEntry> = {
     path: '/become-a-vendor',
     title: 'Become a Vendor | Force of Conquest 2027',
     description: 'Apply to operate a stall or exhibit at the MSTAR Airsoft Force of Conquest 2027 event.',
+  }),
+  '/become-a-sponsor': makeSeo({
+    path: '/become-a-sponsor',
+    title: 'Become a Sponsor | Force of Conquest 2027',
+    description: 'Sponsor opportunities for Force of Conquest 2027 are coming soon.',
   }),
   '/contact': makeSeo({
     path: '/contact',

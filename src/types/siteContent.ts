@@ -136,6 +136,9 @@ export interface EventCard {
     detailRows: Array<{
       label: string;
       value: string;
+      linkLabel?: string;
+      linkPath?: string;
+      linkHash?: string;
     }>;
     timeline: Array<{
       label: string;
@@ -370,6 +373,7 @@ export interface VendorPageContent {
   paragraphs: string[];
   buttonLabel: string;
   formUrl: string;
+  sponsorLink?: NavLink;
 }
 
 export interface SiteContent {
