@@ -380,7 +380,7 @@ export const siteContent: SiteContent = {
                 {
                   id: 'event-map',
                   title: 'Event Map',
-                  imagePath: '/images/events/force-of-conquest/force-of-conquest-event-map.png',
+                  imagePath: '/images/events/force-of-conquest/force-of-conquest-event-map-updated.png',
                   imageAlt: 'Force of Conquest event map with routes, facilities, camps, and battlefield locations',
                 },
                 {
@@ -576,7 +576,7 @@ export const siteContent: SiteContent = {
                 {
                   id: 'event-map',
                   title: 'แผนที่กิจกรรม',
-                  imagePath: '/images/events/force-of-conquest/force-of-conquest-event-map.png',
+                  imagePath: '/images/events/force-of-conquest/force-of-conquest-event-map-updated.png',
                   imageAlt: 'แผนที่กิจกรรม Force of Conquest แสดงเส้นทาง สิ่งอำนวยความสะดวก จุดตั้งแคมป์ และพื้นที่สนามรบ',
                 },
                 {
