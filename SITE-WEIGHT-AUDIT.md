@@ -254,6 +254,19 @@ The live white homepage was traced to an incomplete live deployment/package, not
 * Fresh full cPanel ZIP created: `mstarairsoft-cpanel-full-aa75a9a.zip`, 29.82 MB.
 * ZIP root contains `.htaccess`, `index.html`, `assets/`, `banners/`, `gallery/`, `images/`, `sitemap.xml`, `videos/`, and `robots.txt`; it does not contain a nested `dist/` folder or source/project files.
 
+## 2026-06-27 Safe cPanel ZIP Path Fix
+
+Created a reusable safe ZIP workflow because Windows-created archives can store entries such as `assets\index-CXNzadvn.js`, which cPanel/Linux may extract as literal filenames instead of folders.
+
+* New script: `scripts/create-deployment-zip.mjs`.
+* New npm command: `npm run zip:deploy`.
+* New deployment ZIP: `mstar-airsoft-live-deployment.zip`.
+* ZIP size: 30.34 MB.
+* Files added to ZIP: 79.
+* Verified root entries include `index.html` and `.htaccess`.
+* Verified archive entries use POSIX forward slashes, for example `assets/index-CXNzadvn.js`, `banners/event-final.svg`, and `images/events/force-of-conquest/referee-final-edit.png`.
+* Verified no backslash entries, no nested `dist/`, no nested project folder, and no source/project files.
+
 ## Homepage First-Load Risks
 
 Likely homepage first-load assets:

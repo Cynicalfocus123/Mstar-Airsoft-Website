@@ -13,6 +13,7 @@
     "build": "tsc -b && vite build",
     "build:github-pages": "tsc -b && vite build --mode github-pages && node scripts/create-spa-fallback.mjs",
     "build:cpanel": "tsc -b && vite build --mode cpanel",
+    "zip:deploy": "node scripts/create-deployment-zip.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
