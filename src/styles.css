@@ -3263,7 +3263,9 @@ select:focus {
 
 .event-info-split-reverse.event-info-section-event-map .event-info-media {
   order: 2;
+  width: min(100%, 980px);
   min-height: 0;
+  margin-inline: auto;
   overflow: visible;
   background: transparent;
 }
