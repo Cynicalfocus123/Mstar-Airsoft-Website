@@ -5,17 +5,17 @@ Repo location confirmed: `D:\mstar airsoft site`
 
 ## Summary
 
-Current post-cleanup / post-Phase-2 numbers:
+Current post-cleanup / post-Phase-3 numbers:
 
 * Total repo size: 4.54 GB
 * Total repo size excluding node_modules/.git/dist/ZIPs: 2.02 GB
-* public/ size: 36.08 MB
-* public/images size: 23.25 MB
+* public/ size: 27.99 MB
+* public/images size: 15.16 MB
 * public/videos size: 12.82 MB
 * public/media size: 0 B
 * src/ size: 820.41 KB
-* dist production build size: 37.02 MB
-* Largest current deploy weight area: `public/images` at 23.25 MB, followed by `public/videos` at 12.82 MB.
+* dist production build size: 28.93 MB
+* Largest current deploy weight area: `public/images` at 15.16 MB, followed by `public/videos` at 12.82 MB.
 
 Before Phase 1, `dist/` was 512.55 MB and `public/` was 511.61 MB. Those are no longer current deploy sizes.
 
@@ -81,6 +81,53 @@ Optimization notes:
 * Local browser check confirmed the homepage requests `/videos/force-of-conquest-header-compress-video.mp4`, receives `206 video/mp4`, and the video reaches `readyState: 4` with no media error.
 * No cPanel ZIP was created and no real server deployment was performed.
 
+## Phase 3 Image Optimization
+
+Completed on 2026-06-26.
+
+Backed up the six original deployed images before optimizing:
+
+`site content/non-deployed-heavy-media-backup/phase-3-image-originals/`
+
+| Image | Usage | Original Size | New Size | Size Saved | Output |
+| --- | --- | ---: | ---: | ---: | --- |
+| `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` | Event Info Event Map, English and Thai | 2.72 MB | 1.07 MB | 1.65 MB | Optimized PNG, same path |
+| `public/images/what-to-do-thailand/kaeng-khoi.jpg` -> `kaeng-khoi.webp` | Things to Know / What to Do in Thailand inner guide | 2.15 MB | 0.47 MB | 1.68 MB | WebP, typed content reference updated |
+| `public/images/events/force-of-conquest/team-2.png` -> `team-2.webp` | Force of Conquest event detail faction section | 2.01 MB | 0.32 MB | 1.69 MB | WebP, typed content reference updated |
+| `public/images/events/force-of-conquest-card.png` | Homepage event card, Events page, Event Info sections, SEO/social default image | 1.93 MB | 0.72 MB | 1.21 MB | Optimized PNG, same path |
+| `public/images/events/force-of-conquest/team-1.png` -> `team-1.webp` | Force of Conquest event detail faction section | 1.33 MB | 0.21 MB | 1.12 MB | WebP, typed content reference updated |
+| `public/images/what-to-do-thailand/kayaking-rapids.jpg` -> `kayaking-rapids.webp` | Things to Know card and Activity / What to Do in Thailand inner guide | 1.11 MB | 0.36 MB | 0.75 MB | WebP, typed content references updated |
+
+Phase 3 totals:
+
+* Optimized image set: 11.24 MB -> 3.15 MB
+* Total image size saved: 8.09 MB
+* New `public/images` size: 15.16 MB
+* New `public/` size: 27.99 MB
+* New `dist/` size after `cmd /c npm run build`: 28.93 MB
+* New `dist/images` size: 15.16 MB
+* Source maps in `dist`: no
+
+Usage investigation:
+
+* Event map: Event Info page, English and Thai, lower-page Event Map section.
+* Kaeng Khoi: Things to Know / What to Do in Thailand inner guide, below-the-fold guide content.
+* Team 2 and Team 1 faction images: Force of Conquest event detail page faction section.
+* Force of Conquest card image: homepage-visible event card, Events page, Event Info sections, and SEO/social default image.
+* Kayaking rapids: Things to Know card and Activity / What to Do in Thailand inner guide content.
+
+Verification:
+
+* `cmd /c npm run build`: passed.
+* `git diff --check`: passed with only normal CRLF working-copy warnings.
+* Built-app desktop 1440px and mobile 390px checks passed for Home, Events, Force of Conquest, Event Info, Things to Know, What to Do in Thailand, and Activity.
+* No broken image icons found in checked routes.
+* No horizontal overflow found in checked desktop/mobile routes.
+* Event Map labels remained readable after PNG optimization.
+* Faction images remained clean after WebP conversion.
+* Force of Conquest card image and SEO/social path remained `force-of-conquest-card.png`.
+* No cPanel ZIP was created and no real server deployment was performed.
+
 ## Size Breakdown
 
 | Area | Current Size | Notes |
@@ -91,9 +138,9 @@ Optimization notes:
 | `deploy-export/` | 330.16 MB | Old deployment/export output; not current `dist`. |
 | `zip-check/` | 330.16 MB | Old deployment/check output; not current `dist`. |
 | `site content/` | Includes backup/source media | Ignored non-deployed media source/backup folder. |
-| `dist/` | 37.02 MB | Current production output after Phase 2 build. |
-| `public/` | 36.08 MB | Current deploy-copied public folder. |
-| `public/images` | 23.25 MB | Current largest deployed asset group. |
+| `dist/` | 28.93 MB | Current production output after Phase 3 build. |
+| `public/` | 27.99 MB | Current deploy-copied public folder. |
+| `public/images` | 15.16 MB | Current largest deployed asset group after Phase 3. |
 | `public/videos` | 12.82 MB | Current deployed video group after Phase 1 and Phase 2. |
 | `public/media` | 0 B | Phase 1 removed deployed media bloat from this folder. |
 | `src/` | 820.41 KB | Application source is light. |
@@ -127,14 +174,14 @@ Optimization notes:
 
 | File | Size | Format | Used Where | Optimization Priority | Notes |
 | --- | ---: | --- | --- | --- | --- |
-| `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` | 2.72 MB | PNG | Event Info `EVENT MAP` section, English and Thai | High | Largest deployed image; do not optimize until a separate image phase. |
-| `public/images/what-to-do-thailand/kaeng-khoi.jpg` | 2.15 MB | JPG | Things to Know / Thailand guide content | High | Large inner-guide image. |
-| `public/images/events/force-of-conquest/team-2.png` | 2.01 MB | PNG | Force of Conquest faction section | High | Large event-page faction logo/image. |
-| `public/images/events/force-of-conquest-card.png` | 1.93 MB | PNG | Event card, Event Info sections, SEO default image | High | Used in event-card/SEO surfaces. |
-| `public/images/events/force-of-conquest/team-1.png` | 1.33 MB | PNG | Force of Conquest faction section | Medium | Large event-page faction logo/image. |
-| `public/images/what-to-do-thailand/kayaking-rapids.jpg` | 1.11 MB | JPG | Things to Know / activity guide content | Medium | Inner-guide image. |
+| `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` | 1.07 MB | PNG | Event Info `EVENT MAP` section, English and Thai | Done | Optimized PNG kept readable and kept same path. |
+| `public/images/events/force-of-conquest-card.png` | 0.72 MB | PNG | Event card, Event Info sections, SEO default image | Done | Optimized PNG kept same SEO/social path. |
+| `public/images/what-to-do-thailand/kaeng-khoi.webp` | 0.47 MB | WebP | Things to Know / Thailand guide content | Done | Converted from JPG and reference updated. |
+| `public/images/what-to-do-thailand/kayaking-rapids.webp` | 0.36 MB | WebP | Things to Know / activity guide content | Done | Converted from JPG and references updated. |
+| `public/images/events/force-of-conquest/team-2.webp` | 0.32 MB | WebP | Force of Conquest faction section | Done | Converted from PNG and reference updated. |
+| `public/images/events/force-of-conquest/team-1.webp` | 0.21 MB | WebP | Force of Conquest faction section | Done | Converted from PNG and reference updated. |
 
-Images over 1 MB in `public/`: 6.
+Images over 1 MB in `public/`: 1.
 Images over 3 MB in `public/`: none.
 Images over 5 MB in `public/`: none.
 
@@ -157,15 +204,15 @@ Videos over 50 MB in current `public/`: none.
 ## Build Output
 
 * `cmd /c npm run build`: passed
-* dist total size: 37.02 MB
-* dist/assets size: 962.56 KB
-* dist/images size: 23.25 MB
+* dist total size: 28.93 MB
+* dist/assets size: 0.94 MB
+* dist/images size: 15.16 MB
 * dist/videos size: 12.82 MB
 * dist/media size: 0 B
 * largest JS chunks:
-  * `dist/assets/index-D4a9DaQm.js` — 519.95 KB
+  * `dist/assets/index-0qXNyXEE.js` — 532.43 KB
 * largest CSS files:
-  * `dist/assets/index-CSn-BSvi.css` — 71.58 KB
+  * `dist/assets/index-D8UVGbHj.css` — 71.56 KB
 * source maps found in `dist`: no
 * unusual build warnings:
   * Vite/Rolldown still warns that one JS chunk is larger than 500 KB after minification.
@@ -177,14 +224,11 @@ Largest files inside current `dist`:
 | --- | ---: | --- |
 | `dist/videos/force-of-conquest-header-compress-video.mp4` | 4.81 MB | Current optimized homepage hero video. |
 | `dist/videos/game-terrain/fun-combat-terrains.webm` | 2.97 MB | Game Terrain section. |
-| `dist/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` | 2.72 MB | Event Info map. |
 | `dist/videos/game-terrain/forest-movement.webm` | 2.62 MB | Game Terrain section. |
-| `dist/images/what-to-do-thailand/kaeng-khoi.jpg` | 2.15 MB | Things to Know guide. |
-| `dist/images/events/force-of-conquest/team-2.png` | 2.01 MB | Event faction section. |
-| `dist/images/events/force-of-conquest-card.png` | 1.93 MB | Event card / SEO image. |
 | `dist/videos/game-terrain/beautiful-scenery.webm` | 1.56 MB | Game Terrain section. |
-| `dist/images/events/force-of-conquest/team-1.png` | 1.33 MB | Event faction section. |
-| `dist/images/what-to-do-thailand/kayaking-rapids.jpg` | 1.11 MB | Things to Know guide. |
+| `dist/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` | 1.07 MB | Event Info map. |
+| `dist/videos/game-terrain/large-open-area.webm` | 889.31 KB | Game Terrain section. |
+| `dist/images/events/force-of-conquest-card.png` | 742.37 KB | Event card / SEO image. |
 
 ## Homepage First-Load Risks
 
@@ -192,17 +236,17 @@ Likely homepage first-load assets:
 
 * `public/videos/force-of-conquest-header-compress-video.mp4` — 4.81 MB, referenced by `siteContent.ts` as the hero video.
 * `public/images/home-hero-poster.webp` — 341.54 KB, referenced by the homepage hero poster handling.
-* `dist/assets/index-D4a9DaQm.js` — 519.95 KB, main JS bundle; Vite warns it is over 500 KB.
-* `public/images/events/force-of-conquest-card.png` — 1.93 MB, referenced by event-card data and SEO default image; may affect Home/Events depending on rendered event cards.
+* `dist/assets/index-0qXNyXEE.js` — 532.43 KB, main JS bundle; Vite warns it is over 500 KB.
+* `public/images/events/force-of-conquest-card.png` — 0.72 MB, referenced by event-card data and SEO default image; may affect Home/Events depending on rendered event cards.
 
 ## Event Page Weight Risks
 
 Force of Conquest / Event Info risks:
 
-* `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` — 2.72 MB, Event Info `EVENT MAP` section.
-* `public/images/events/force-of-conquest/team-2.png` — 2.01 MB, faction section.
-* `public/images/events/force-of-conquest/team-1.png` — 1.33 MB, faction section.
-* `public/images/events/force-of-conquest-card.png` — 1.93 MB, event card and Event Info image references.
+* `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` — 1.07 MB, Event Info `EVENT MAP` section.
+* `public/images/events/force-of-conquest/team-2.webp` — 0.32 MB, faction section.
+* `public/images/events/force-of-conquest/team-1.webp` — 0.21 MB, faction section.
+* `public/images/events/force-of-conquest-card.png` — 0.72 MB, event card and Event Info image references.
 * `public/images/events/force-of-conquest/important-information-referee-briefing.jfif` — 601.96 KB, Event Info important information section.
 * `public/images/events/force-of-conquest/event-info-banner.jpg` — 329.64 KB, Event Info banner.
 
@@ -215,7 +259,7 @@ List only. Do not delete without a separate confirmation task.
 * `website video/` — 666.05 MB, local editing/source media.
 * `site content/non-deployed-heavy-media-backup/` — backup-only media moved out of deploy paths.
 * Same or similar media appears in multiple places: `site content/`, `website video/`, old `deploy-export/`, old `zip-check/`, and Git/LFS history.
-* `site content/map final edit.png` and `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` appear to be source/public copies of the same map artwork.
+* `site content/map final edit.png` and `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` appear to be source/public copies of the same map artwork; the deployed public copy is now optimized.
 * `site content/force of conquest header compress video.mp4`, `site content/non-deployed-heavy-media-backup/force-of-conquest-header-compress-video-original.mp4`, and `public/videos/force-of-conquest-header-compress-video.mp4` are source/original/optimized versions of the active homepage hero.
 
 ## Grouped Heavy Files by Type
@@ -223,7 +267,7 @@ List only. Do not delete without a separate confirmation task.
 | Type | Current Deploy Impact | Notes |
 | --- | ---: | --- |
 | Videos in `public/` | 12.82 MB | Phase 1 removed unused public videos; Phase 2 optimized active hero. |
-| Images in `public/` | 23.25 MB | Largest current deploy asset group. |
+| Images in `public/` | 15.16 MB | Largest current deploy asset group after Phase 3 optimization. |
 | PDFs/docs | Small | Mostly under `pdf/`, not current public deploy weight. |
 | ZIP/archive files | 0 B found | No `.zip/.7z/.rar` files found in the latest scan. |
 | JS/CSS build assets | 962.56 KB | Main JS is still slightly above Vite's 500 KB warning threshold. |
@@ -231,7 +275,7 @@ List only. Do not delete without a separate confirmation task.
 ## Asset Loading Risk
 
 * Highest current first-load media risk: homepage hero video at 4.81 MB.
-* Highest current deployed image risk: Event Map PNG at 2.72 MB.
+* Highest current deployed image risk: Event Map PNG at 1.07 MB.
 * Game Terrain videos are likely homepage below-the-fold; keep them lazy/controlled so they do not all load immediately.
 * Things to Know guide images over 1 MB are inner-page risks, not homepage first-load risks unless linked previews use them.
 
@@ -239,8 +283,8 @@ List only. Do not delete without a separate confirmation task.
 
 Do not perform these yet without a separate optimization task.
 
-1. Optimize `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` only when the user starts the image/map phase.
-2. Optimize `public/images/events/force-of-conquest-card.png` because it appears in event-card/SEO surfaces.
+1. Consider future optimization of Game Terrain videos if a later video phase is requested.
+2. Consider code-splitting the main JS bundle if the Vite chunk warning becomes a priority.
 3. Review old non-deployed folders `deploy-export/` and `zip-check/` if the user wants local repo cleanup, not deploy output cleanup.
 
 ## Safe Next Steps

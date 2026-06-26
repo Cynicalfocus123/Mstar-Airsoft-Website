@@ -223,13 +223,13 @@ export const siteContent: SiteContent = {
           items: [
             {
               name: 'Siam Frontier Coalition',
-              imagePath: '/images/events/force-of-conquest/team-2.png',
+              imagePath: '/images/events/force-of-conquest/team-2.webp',
               description:
                 'International stabilization forces fighting to defend, stabilize, and restore control across the Republic of Siam Frontier.',
             },
             {
               name: 'Golden Triangle Syndicate',
-              imagePath: '/images/events/force-of-conquest/team-1.png',
+              imagePath: '/images/events/force-of-conquest/team-1.webp',
               description:
                 'A powerful criminal syndicate operating throughout the Golden Triangle and fighting to control strategic territory, resources, and transportation routes.',
             },
@@ -1194,7 +1194,7 @@ export const siteContent: SiteContent = {
           id: 'activity',
           title: 'Activity',
           summary: 'Outdoor adventure, international food, music, nightlife, and festival entertainment around the event.',
-          imagePath: '/images/what-to-do-thailand/kayaking-rapids.jpg',
+          imagePath: '/images/what-to-do-thailand/kayaking-rapids.webp',
           href: '/activity',
           badge: 'Guide',
           placeholderLabel: 'Open guide',
@@ -1577,7 +1577,7 @@ export const siteContent: SiteContent = {
           ],
           images: [
             {
-              src: '/images/what-to-do-thailand/kaeng-khoi.jpg',
+              src: '/images/what-to-do-thailand/kaeng-khoi.webp',
               alt: 'Waterfall destination representing Kaeng Khoi',
               title: 'Kaeng Khoi',
             },
@@ -1619,7 +1619,7 @@ export const siteContent: SiteContent = {
           ],
           images: [
             {
-              src: '/images/what-to-do-thailand/kayaking-rapids.jpg',
+              src: '/images/what-to-do-thailand/kayaking-rapids.webp',
               alt: 'Outdoor adventure scene representing kayaking near the event area',
               title: 'Kayaking',
             },
