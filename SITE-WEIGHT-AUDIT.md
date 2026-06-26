@@ -5,15 +5,19 @@ Repo location confirmed: `D:\mstar airsoft site`
 
 ## Summary
 
-* Total repo size: 5.00 GB
-* Total repo size excluding node_modules/.git/dist/ZIPs: 2.01 GB
-* public/ size: 511.61 MB
+Current post-cleanup / post-Phase-2 numbers:
+
+* Total repo size: 4.54 GB
+* Total repo size excluding node_modules/.git/dist/ZIPs: 2.02 GB
+* public/ size: 36.08 MB
 * public/images size: 23.25 MB
-* public/videos size: 317.20 MB
+* public/videos size: 12.82 MB
+* public/media size: 0 B
 * src/ size: 820.41 KB
-* dist production build size: 512.55 MB
-* cPanel build size: 512.55 MB
-* Largest problem area: video files and duplicated deployment/export folders. The biggest live-deploy risk is `public/`, especially `public/videos` plus `public/media`, which together include about 488.35 MB of video files.
+* dist production build size: 37.02 MB
+* Largest current deploy weight area: `public/images` at 23.25 MB, followed by `public/videos` at 12.82 MB.
+
+Before Phase 1, `dist/` was 512.55 MB and `public/` was 511.61 MB. Those are no longer current deploy sizes.
 
 ## Phase 1 Deploy Bloat Cleanup
 
@@ -36,168 +40,160 @@ Live production pages checked read-only:
 
 Desktop and mobile checks confirmed the homepage hero requests and renders `https://mstarairsoft.com/videos/force-of-conquest-header-compress-video.mp4`, not the moved files.
 
-Post-cleanup measurements after `cmd /c npm run build`:
+Post-Phase-1 measurements after `cmd /c npm run build`:
 
-* New `dist/` size: 44.31 MB
-* New `public/` size: 43.36 MB
-* New `public/videos` size: 20.11 MB
-* New `public/media` size: 0 B
+* `dist/` size: 44.31 MB
+* `public/` size: 43.36 MB
+* `public/videos` size: 20.11 MB
+* `public/media` size: 0 B
 * Deploy/build size reduction: about 468.24 MB
 * Source maps in `dist`: no
 
 The files were moved to a non-deployed backup folder only. They were not compressed, converted, renamed for active use, deleted permanently, or replaced. No cPanel ZIP was created and no real server deployment was performed.
 
+## Phase 2 Homepage Hero Video Optimization
+
+Completed on 2026-06-26.
+
+Optimized only the active homepage hero video:
+
+`public/videos/force-of-conquest-header-compress-video.mp4`
+
+| Item | Size |
+| --- | ---: |
+| Original hero video size | 12.10 MB |
+| Optimized hero video size | 4.81 MB |
+| Size saved | 7.29 MB |
+| New `dist/` size | 37.02 MB |
+| New `public/videos` size | 12.82 MB |
+
+Original backup:
+
+`site content/non-deployed-heavy-media-backup/force-of-conquest-header-compress-video-original.mp4`
+
+Optimization notes:
+
+* Kept the same deployed filename and path, so source references did not change.
+* Encoded as web-friendly H.264 MP4 with `+faststart`.
+* Removed audio because the homepage hero is muted background video.
+* Kept poster fallback unchanged: `public/images/home-hero-poster.webp`.
+* Kept autoplay/muted/loop/playsInline/no-controls behavior unchanged.
+* Local browser check confirmed the homepage requests `/videos/force-of-conquest-header-compress-video.mp4`, receives `206 video/mp4`, and the video reaches `readyState: 4` with no media error.
+* No cPanel ZIP was created and no real server deployment was performed.
+
 ## Size Breakdown
 
-| Area | Size | Notes |
+| Area | Current Size | Notes |
 | --- | ---: | --- |
-| Full repo | 5.00 GB | Includes `.git`, `node_modules`, `dist`, raw media, backups, and deploy folders. |
-| `.git` | 2.41 GB | Large Git pack/LFS history. |
-| `website video/` | 666.05 MB | Local editing/source media; not part of normal deploy unless copied. |
-| `dist/` | 512.55 MB | Current production output after build. |
-| `public/` | 511.61 MB | Gets copied into `dist`; major deploy weight. |
-| `deploy-export/` | 330.16 MB | Looks like old deployment/export output. |
-| `zip-check/` | 330.16 MB | Looks like old deployment/export verification output. |
-| `site content/` | 216.51 MB | Source/upload media folder, not directly used by Vite unless referenced/copied. |
-| `node_modules/` | 82.10 MB | Dependency install. |
-| `pdf/` | 2.11 MB | Source/reference PDFs. |
+| Full repo | 4.54 GB | Includes `.git`, dependencies, build output, ignored source media, and backup folders. |
+| `.git` | About 2.41 GB | Large Git pack/LFS history remains the biggest local repo weight area. |
+| `website video/` | 666.05 MB | Local editing/source media; not deployed by Vite. |
+| `deploy-export/` | 330.16 MB | Old deployment/export output; not current `dist`. |
+| `zip-check/` | 330.16 MB | Old deployment/check output; not current `dist`. |
+| `site content/` | Includes backup/source media | Ignored non-deployed media source/backup folder. |
+| `dist/` | 37.02 MB | Current production output after Phase 2 build. |
+| `public/` | 36.08 MB | Current deploy-copied public folder. |
+| `public/images` | 23.25 MB | Current largest deployed asset group. |
+| `public/videos` | 12.82 MB | Current deployed video group after Phase 1 and Phase 2. |
+| `public/media` | 0 B | Phase 1 removed deployed media bloat from this folder. |
 | `src/` | 820.41 KB | Application source is light. |
 
 ## Top Heavy Files
 
 | Rank | File | Size | Type | Likely Used On | Notes |
 | ---: | --- | ---: | --- | --- | --- |
-| 1 | `.git/objects/pack/pack-72d88590c95821359d50f315a03bb8bd78775946.pack` | 1.72 GB | Git pack | Repo only | Git history is the largest local size source. |
+| 1 | `.git/objects/pack/pack-72d88590c95821359d50f315a03bb8bd78775946.pack` | 1.72 GB | Git pack | Repo only | Git history/local clone weight. |
 | 2 | `.git/objects/pack/pack-28c63aa59e95f488477efa8e750a23496fef425d.pack` | 355.50 MB | Git pack | Repo only | Git history/local clone weight. |
-| 3 | `public/videos/home-hero.mp4` | 171.16 MB | MP4 | Possibly unused/orphaned | Not found referenced in `src`; still copied to deploy output. |
-| 4 | `public/media/largest-airsoft-game-southeast-asia.mp4` | 171.16 MB | MP4 | Possibly unused/orphaned | Not found referenced in `src`; still copied to deploy output. |
-| 5 | `dist/videos/home-hero.mp4` | 171.16 MB | MP4 | Build output | Copied from `public/videos`. |
-| 6 | `dist/media/largest-airsoft-game-southeast-asia.mp4` | 171.16 MB | MP4 | Build output | Copied from `public/media`. |
-| 7 | `zip-check/videos/home-hero.mp4` | 171.16 MB | MP4 | Backup/check folder | Duplicate-looking old output. |
-| 8 | `deploy-export/videos/home-hero.mp4` | 171.16 MB | MP4 | Backup/export folder | Duplicate-looking old output. |
-| 9 | `website video/webp video/IMG_0752.webm` | 157.04 MB | WEBM | Local source media | Large editing/source media. |
-| 10 | `public/videos/home-hero-mobile.mp4` | 125.93 MB | MP4 | Possibly unused/orphaned | Not found referenced in `src`; still copied to deploy output. |
-| 11 | `dist/videos/home-hero-mobile.mp4` | 125.93 MB | MP4 | Build output | Copied from `public/videos`. |
-| 12 | `zip-check/videos/home-hero-mobile.mp4` | 125.93 MB | MP4 | Backup/check folder | Duplicate-looking old output. |
-| 13 | `deploy-export/videos/home-hero-mobile.mp4` | 125.93 MB | MP4 | Backup/export folder | Duplicate-looking old output. |
-| 14 | `website video/webp video/IMG_0749.webm` | 116.16 MB | WEBM | Local source media | Large editing/source media. |
-| 15 | `website video/TH Airsoft Game - youtube.mp4` | 82.36 MB | MP4 | Local source media | Not deploy-critical unless copied. |
-| 16 | `site content/force of conquest 2027.mp4` | 79.84 MB | MP4 | Source/upload media | Not directly referenced from `src`. |
-| 17 | `website video/Airsoft Game - youtube.mp4` | 79.84 MB | MP4 | Local source media | Not deploy-critical unless copied. |
-| 18 | `site content/youtube content/Largest Airsoft Game in Southeast Asia - youtube.mp4` | 76.69 MB | MP4 | Source/upload media | Not directly referenced from `src`. |
-| 19 | `website video/IMG_0752.MOV` | 56.01 MB | MOV | Local source media | Large raw editing media. |
-| 20 | `website video/IMG_0749.MOV` | 47.66 MB | MOV | Local source media | Large raw editing media. |
+| 3 | `.git/lfs/objects/...25af...` | 171.16 MB | Git LFS object | Repo history | Historical LFS object for moved media. |
+| 4 | `deploy-export/videos/home-hero.mp4` | 171.16 MB | MP4 | Old export folder | Non-current duplicate output. |
+| 5 | `zip-check/videos/home-hero.mp4` | 171.16 MB | MP4 | Old check folder | Non-current duplicate output. |
+| 6 | `site content/non-deployed-heavy-media-backup/largest-airsoft-game-southeast-asia.mp4` | 171.16 MB | MP4 | Backup only | Moved out of `public/` in Phase 1. |
+| 7 | `site content/non-deployed-heavy-media-backup/home-hero.mp4` | 171.16 MB | MP4 | Backup only | Moved out of `public/` in Phase 1. |
+| 8 | `website video/webp video/IMG_0752.webm` | 157.04 MB | WEBM | Local source media | Not current deploy output. |
+| 9 | `.git/lfs/objects/...7856...` | 125.93 MB | Git LFS object | Repo history | Historical LFS object for moved media. |
+| 10 | `deploy-export/videos/home-hero-mobile.mp4` | 125.93 MB | MP4 | Old export folder | Non-current duplicate output. |
+| 11 | `site content/non-deployed-heavy-media-backup/home-hero-mobile.mp4` | 125.93 MB | MP4 | Backup only | Moved out of `public/` in Phase 1. |
+| 12 | `zip-check/videos/home-hero-mobile.mp4` | 125.93 MB | MP4 | Old check folder | Non-current duplicate output. |
+| 13 | `website video/webp video/IMG_0749.webm` | 116.16 MB | WEBM | Local source media | Not current deploy output. |
+| 14 | `website video/TH Airsoft Game - youtube.mp4` | 82.36 MB | MP4 | Local source media | Not current deploy output. |
+| 15 | `site content/force of conquest 2027.mp4` | 79.84 MB | MP4 | Source/upload media | Not current deploy output. |
+| 16 | `website video/Airsoft Game - youtube.mp4` | 79.84 MB | MP4 | Local source media | Not current deploy output. |
+| 17 | `site content/youtube content/Largest Airsoft Game in Southeast Asia - youtube.mp4` | 76.69 MB | MP4 | Source/upload media | Not current deploy output. |
+| 18 | `website video/IMG_0752.MOV` | 56.01 MB | MOV | Local source media | Raw editing media. |
+| 19 | `website video/IMG_0749.MOV` | 47.66 MB | MOV | Local source media | Raw editing media. |
+| 20 | `website video/webp video/IMG_0747.webm` | 45.32 MB | WEBM | Local source media | Not current deploy output. |
 
 ## Heavy Images
 
 | File | Size | Format | Used Where | Optimization Priority | Notes |
 | --- | ---: | --- | --- | --- | --- |
-| `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` | 2.72 MB | PNG | Event Info `EVENT MAP` section, English and Thai | High | Largest deployed image; inner page only, but could be optimized later. |
+| `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` | 2.72 MB | PNG | Event Info `EVENT MAP` section, English and Thai | High | Largest deployed image; do not optimize until a separate image phase. |
 | `public/images/what-to-do-thailand/kaeng-khoi.jpg` | 2.15 MB | JPG | Things to Know / Thailand guide content | High | Large inner-guide image. |
 | `public/images/events/force-of-conquest/team-2.png` | 2.01 MB | PNG | Force of Conquest faction section | High | Large event-page faction logo/image. |
-| `public/images/events/force-of-conquest-card.png` | 1.93 MB | PNG | Event card, Event Info sections, SEO default image | High | Likely appears on Events/Home event surfaces and metadata. |
+| `public/images/events/force-of-conquest-card.png` | 1.93 MB | PNG | Event card, Event Info sections, SEO default image | High | Used in event-card/SEO surfaces. |
 | `public/images/events/force-of-conquest/team-1.png` | 1.33 MB | PNG | Force of Conquest faction section | Medium | Large event-page faction logo/image. |
 | `public/images/what-to-do-thailand/kayaking-rapids.jpg` | 1.11 MB | JPG | Things to Know / activity guide content | Medium | Inner-guide image. |
-| `public/images/what-to-do-thailand/khao-yai-national-park.jpg` | 612.30 KB | JPG | Thailand guide content | Low | Reasonable but still larger than most optimized assets. |
-| `public/images/events/force-of-conquest/important-information-referee-briefing.jfif` | 601.96 KB | JFIF | Event Info important information section | Low | Already moderate. |
-| `public/images/home/photo-1666873577061-26f78e7452ce.avif` | 532.37 KB | AVIF | Home imagery | Low | Homepage risk if above fold; AVIF format helps. |
-| `public/images/home-hero-poster.webp` | 341.54 KB | WEBP | Homepage hero poster | Low | First-load image, but size is reasonable. |
 
-Images over 1 MB:
-
-* `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` — 2.72 MB
-* `public/images/what-to-do-thailand/kaeng-khoi.jpg` — 2.15 MB
-* `public/images/events/force-of-conquest/team-2.png` — 2.01 MB
-* `public/images/events/force-of-conquest-card.png` — 1.93 MB
-* `public/images/events/force-of-conquest/team-1.png` — 1.33 MB
-* `public/images/what-to-do-thailand/kayaking-rapids.jpg` — 1.11 MB
-
-Images over 3 MB in `public/`: none found.
-
-Images over 5 MB in `public/`: none found.
+Images over 1 MB in `public/`: 6.
+Images over 3 MB in `public/`: none.
+Images over 5 MB in `public/`: none.
 
 ## Heavy Videos
 
 | File | Size | Format | Used Where | Optimization Priority | Notes |
 | --- | ---: | --- | --- | --- | --- |
-| `public/videos/home-hero.mp4` | 171.16 MB | MP4 | Possibly unused/orphaned | Critical | Not found referenced in `src`, but copied to `dist`. |
-| `public/media/largest-airsoft-game-southeast-asia.mp4` | 171.16 MB | MP4 | Possibly unused/orphaned | Critical | Not found referenced in `src`, but copied to `dist`. Same size as `home-hero.mp4`. |
-| `public/videos/home-hero-mobile.mp4` | 125.93 MB | MP4 | Possibly unused/orphaned | Critical | Not found referenced in `src`, but copied to `dist`. |
-| `public/videos/force-of-conquest-header-compress-video.mp4` | 12.10 MB | MP4 | Homepage hero via `siteContent.ts` | High | Current homepage first-load video source. |
+| `public/videos/force-of-conquest-header-compress-video.mp4` | 4.81 MB | MP4 | Homepage hero via `siteContent.ts` | Done | Optimized in Phase 2; same filename retained. |
 | `public/videos/game-terrain/fun-combat-terrains.webm` | 2.97 MB | WEBM | Homepage Game Terrain section | Medium | Likely below the fold. |
 | `public/videos/game-terrain/forest-movement.webm` | 2.62 MB | WEBM | Homepage Game Terrain section | Medium | Likely below the fold. |
 | `public/videos/game-terrain/beautiful-scenery.webm` | 1.56 MB | WEBM | Homepage Game Terrain section | Low | Likely below the fold. |
 | `public/videos/game-terrain/large-open-area.webm` | 889.31 KB | WEBM | Homepage Game Terrain section | Low | Likely below the fold. |
 
-Videos over 10 MB:
+Videos over 10 MB in current `public/`: none.
 
-* `public/videos/home-hero.mp4` — 171.16 MB
-* `public/media/largest-airsoft-game-southeast-asia.mp4` — 171.16 MB
-* `public/videos/home-hero-mobile.mp4` — 125.93 MB
-* `public/videos/force-of-conquest-header-compress-video.mp4` — 12.10 MB
+Videos over 25 MB in current `public/`: none.
 
-Videos over 25 MB:
-
-* `public/videos/home-hero.mp4` — 171.16 MB
-* `public/media/largest-airsoft-game-southeast-asia.mp4` — 171.16 MB
-* `public/videos/home-hero-mobile.mp4` — 125.93 MB
-
-Videos over 50 MB:
-
-* `public/videos/home-hero.mp4` — 171.16 MB
-* `public/media/largest-airsoft-game-southeast-asia.mp4` — 171.16 MB
-* `public/videos/home-hero-mobile.mp4` — 125.93 MB
+Videos over 50 MB in current `public/`: none.
 
 ## Build Output
 
-* Normal `cmd /c npm run build`: passed
-* `cmd /c npm run build:cpanel`: passed
-* dist total size: 512.55 MB
+* `cmd /c npm run build`: passed
+* dist total size: 37.02 MB
 * dist/assets size: 962.56 KB
 * dist/images size: 23.25 MB
-* dist/videos size: 317.20 MB
-* dist/media size: 171.16 MB
+* dist/videos size: 12.82 MB
+* dist/media size: 0 B
 * largest JS chunks:
   * `dist/assets/index-D4a9DaQm.js` — 519.95 KB
 * largest CSS files:
   * `dist/assets/index-CSn-BSvi.css` — 71.58 KB
 * source maps found in `dist`: no
-* source maps found elsewhere: yes, inside `node_modules` dev/dependency files only
 * unusual build warnings:
-  * Vite/Rolldown warns that one chunk is larger than 500 KB after minification.
-  * Build timing warning reports significant time in `vite:prepare-out-dir`.
+  * Vite/Rolldown still warns that one JS chunk is larger than 500 KB after minification.
+  * A plugin timing warning can appear for build preparation/CSS processing.
 
-Largest files inside `dist`:
+Largest files inside current `dist`:
 
 | File | Size | Notes |
 | --- | ---: | --- |
-| `dist/videos/home-hero.mp4` | 171.16 MB | Copied from `public/videos`; not found referenced in current `src`. |
-| `dist/media/largest-airsoft-game-southeast-asia.mp4` | 171.16 MB | Copied from `public/media`; not found referenced in current `src`. |
-| `dist/videos/home-hero-mobile.mp4` | 125.93 MB | Copied from `public/videos`; not found referenced in current `src`. |
-| `dist/videos/force-of-conquest-header-compress-video.mp4` | 12.10 MB | Current homepage hero video. |
+| `dist/videos/force-of-conquest-header-compress-video.mp4` | 4.81 MB | Current optimized homepage hero video. |
 | `dist/videos/game-terrain/fun-combat-terrains.webm` | 2.97 MB | Game Terrain section. |
 | `dist/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` | 2.72 MB | Event Info map. |
 | `dist/videos/game-terrain/forest-movement.webm` | 2.62 MB | Game Terrain section. |
 | `dist/images/what-to-do-thailand/kaeng-khoi.jpg` | 2.15 MB | Things to Know guide. |
 | `dist/images/events/force-of-conquest/team-2.png` | 2.01 MB | Event faction section. |
 | `dist/images/events/force-of-conquest-card.png` | 1.93 MB | Event card / SEO image. |
+| `dist/videos/game-terrain/beautiful-scenery.webm` | 1.56 MB | Game Terrain section. |
+| `dist/images/events/force-of-conquest/team-1.png` | 1.33 MB | Event faction section. |
+| `dist/images/what-to-do-thailand/kayaking-rapids.jpg` | 1.11 MB | Things to Know guide. |
 
 ## Homepage First-Load Risks
 
 Likely homepage first-load assets:
 
-* `public/videos/force-of-conquest-header-compress-video.mp4` — 12.10 MB, referenced by `siteContent.ts` as the hero video.
+* `public/videos/force-of-conquest-header-compress-video.mp4` — 4.81 MB, referenced by `siteContent.ts` as the hero video.
 * `public/images/home-hero-poster.webp` — 341.54 KB, referenced by the homepage hero poster handling.
 * `dist/assets/index-D4a9DaQm.js` — 519.95 KB, main JS bundle; Vite warns it is over 500 KB.
 * `public/images/events/force-of-conquest-card.png` — 1.93 MB, referenced by event-card data and SEO default image; may affect Home/Events depending on rendered event cards.
-
-Possibly deployed but not currently referenced:
-
-* `public/videos/home-hero.mp4` — 171.16 MB
-* `public/videos/home-hero-mobile.mp4` — 125.93 MB
-* `public/media/largest-airsoft-game-southeast-asia.mp4` — 171.16 MB
-
-These may not affect browser first-load if not referenced, but they still make deployment output and upload/download packages very heavy.
 
 ## Event Page Weight Risks
 
@@ -209,57 +205,46 @@ Force of Conquest / Event Info risks:
 * `public/images/events/force-of-conquest-card.png` — 1.93 MB, event card and Event Info image references.
 * `public/images/events/force-of-conquest/important-information-referee-briefing.jfif` — 601.96 KB, Event Info important information section.
 * `public/images/events/force-of-conquest/event-info-banner.jpg` — 329.64 KB, Event Info banner.
-* `public/videos/force-of-conquest-header-compress-video.mp4` — 12.10 MB, homepage hero/event promo video reference.
 
 ## Possible Unused or Duplicate Assets
 
-Do not delete without a separate confirmation task. These are candidates only:
+List only. Do not delete without a separate confirmation task.
 
-* `public/videos/home-hero.mp4` — 171.16 MB, not found referenced in `src`.
-* `public/videos/home-hero-mobile.mp4` — 125.93 MB, not found referenced in `src`.
-* `public/media/largest-airsoft-game-southeast-asia.mp4` — 171.16 MB, not found referenced in `src`.
 * `deploy-export/` — 330.16 MB, looks like old build/deploy output.
 * `zip-check/` — 330.16 MB, looks like old build/deploy verification output.
 * `website video/` — 666.05 MB, local editing/source media.
-* `site content/` — 216.51 MB, uploaded/source media; some files have optimized/public copies.
-* Same or similar media appears in multiple places: `public/`, `dist/`, `deploy-export/`, `zip-check/`, `site content/`, and `website video/`.
+* `site content/non-deployed-heavy-media-backup/` — backup-only media moved out of deploy paths.
+* Same or similar media appears in multiple places: `site content/`, `website video/`, old `deploy-export/`, old `zip-check/`, and Git/LFS history.
 * `site content/map final edit.png` and `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` appear to be source/public copies of the same map artwork.
-* `site content/force of conquest header compress video.mp4` and `public/videos/force-of-conquest-header-compress-video.mp4` appear to be source/public copies of the same video.
-* `site content/team 1.png` / `site content/team 2.png` and public faction assets appear to be source/public copies.
+* `site content/force of conquest header compress video.mp4`, `site content/non-deployed-heavy-media-backup/force-of-conquest-header-compress-video-original.mp4`, and `public/videos/force-of-conquest-header-compress-video.mp4` are source/original/optimized versions of the active homepage hero.
 
 ## Grouped Heavy Files by Type
 
-| Type | Total Size | Count | Notes |
-| --- | ---: | ---: | --- |
-| Videos `.mp4/.mov/.webm` | 2.39 GB | 43 | Largest total weight across repo. |
-| Images `.png/.jpg/.jpeg/.jfif/.webp/.avif` | 125.96 MB | 255 | Public images are 23.25 MB. |
-| PDFs/docs | 2.13 MB | 14 | Small compared with media. |
-| ZIP/archive files | 0 B | 0 | No `.zip/.7z/.rar` files found. |
-| JS files | 31.54 MB | 1434 | Mostly dependencies/node_modules; built JS is about 519.95 KB. |
-| CSS files | 267.36 KB | 5 | Built CSS is about 71.58 KB. |
+| Type | Current Deploy Impact | Notes |
+| --- | ---: | --- |
+| Videos in `public/` | 12.82 MB | Phase 1 removed unused public videos; Phase 2 optimized active hero. |
+| Images in `public/` | 23.25 MB | Largest current deploy asset group. |
+| PDFs/docs | Small | Mostly under `pdf/`, not current public deploy weight. |
+| ZIP/archive files | 0 B found | No `.zip/.7z/.rar` files found in the latest scan. |
+| JS/CSS build assets | 962.56 KB | Main JS is still slightly above Vite's 500 KB warning threshold. |
 
 ## Asset Loading Risk
 
-* Highest first-load risk: current homepage hero video `force-of-conquest-header-compress-video.mp4` at 12.10 MB.
-* Highest deploy-size risk: unreferenced-looking videos inside `public/`, especially the 171.16 MB and 125.93 MB MP4 files.
-* Event Info map is the largest deployed image at 2.72 MB, but it is on an inner page and lower than the homepage hero video risk.
-* Game Terrain videos are likely homepage below-the-fold; they should remain lazy/controlled so they do not all load immediately.
+* Highest current first-load media risk: homepage hero video at 4.81 MB.
+* Highest current deployed image risk: Event Map PNG at 2.72 MB.
+* Game Terrain videos are likely homepage below-the-fold; keep them lazy/controlled so they do not all load immediately.
 * Things to Know guide images over 1 MB are inner-page risks, not homepage first-load risks unless linked previews use them.
 
 ## Optimization Plan — One By One
 
 Do not perform these yet without a separate optimization task.
 
-1. First file to optimize/check: `public/videos/home-hero.mp4` and `public/media/largest-airsoft-game-southeast-asia.mp4`. They are each 171.16 MB, appear unreferenced in `src`, and still get copied into `dist`, making deploy output very heavy.
-2. Second file to optimize/check: `public/videos/home-hero-mobile.mp4`. It is 125.93 MB, appears unreferenced in `src`, and is copied into `dist`.
-3. Third file to optimize: `public/videos/force-of-conquest-header-compress-video.mp4`. It is the current homepage hero video and likely affects first load directly.
-4. Fourth file to optimize: `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png`. It is the largest deployed image at 2.72 MB.
-5. Fifth file to optimize: `public/images/events/force-of-conquest-card.png`. It is 1.93 MB and used in event-card/SEO surfaces.
+1. Optimize `public/images/events/force-of-conquest/force-of-conquest-event-map-updated.png` only when the user starts the image/map phase.
+2. Optimize `public/images/events/force-of-conquest-card.png` because it appears in event-card/SEO surfaces.
+3. Review old non-deployed folders `deploy-export/` and `zip-check/` if the user wants local repo cleanup, not deploy output cleanup.
 
 ## Safe Next Steps
 
-No files were removed, compressed, converted, renamed, moved, deleted, replaced, deployed, or uploaded in this audit.
+No visible design, routes, buttons, Stripe, header, footer, Ticket page, Event pages, cPanel settings, `.htaccess`, DNS, or SSL were changed during this audit/optimization phase.
 
-Recommended next step is a separate, narrow optimization task starting with the unreferenced-looking deployed videos in `public/`. Confirm whether those files are still needed before removing or replacing anything. If they are not needed, removing them from `public/` would reduce `dist` by roughly 468 MB. If they are needed, optimize them one by one with replacement checks on desktop, tablet, and mobile.
-
-No cPanel ZIP was created and no real server upload was performed.
+No cPanel ZIP was created and no real server deployment was performed.
