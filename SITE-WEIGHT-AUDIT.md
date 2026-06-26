@@ -242,6 +242,18 @@ The Event Info important-information section now uses the supplied referee brief
 * Net public image increase for this media swap: about 1.36 MB.
 * Refreshed production build after removal; `dist/images/events/force-of-conquest/referee-final-edit.png` exists and the old JFIF no longer appears in `dist`.
 
+## 2026-06-27 White Homepage Deployment Fix
+
+The live white homepage was traced to an incomplete live deployment/package, not a source-code render crash:
+
+* Live `index.html` referenced `/assets/index-CXNzadvn.js` and `/assets/index-BNZIBf1G.css`.
+* Those live asset URLs returned the SPA fallback as `text/html; charset=UTF-8` instead of real JS/CSS, so the browser could not hydrate the React app.
+* Local `dist/index.html` uses root-safe `/assets/...` paths and contains no `/Mstar-Airsoft-Website/` base path for the cPanel build.
+* Local `dist/assets/index-CXNzadvn.js` and `dist/assets/index-BNZIBf1G.css` both exist.
+* GitHub Pages homepage returned valid JS/CSS asset MIME types for its own deployed asset hashes.
+* Fresh full cPanel ZIP created: `mstarairsoft-cpanel-full-aa75a9a.zip`, 29.82 MB.
+* ZIP root contains `.htaccess`, `index.html`, `assets/`, `banners/`, `gallery/`, `images/`, `sitemap.xml`, `videos/`, and `robots.txt`; it does not contain a nested `dist/` folder or source/project files.
+
 ## Homepage First-Load Risks
 
 Likely homepage first-load assets:
