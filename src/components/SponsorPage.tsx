@@ -6,6 +6,215 @@ interface SponsorPageProps {
 }
 
 type SponsorSection = SponsorPageContent['sections'][number];
+type SponsorIconName =
+  | 'box'
+  | 'check'
+  | 'flag'
+  | 'food'
+  | 'gear'
+  | 'growth'
+  | 'handshake'
+  | 'megaphone'
+  | 'screen'
+  | 'search'
+  | 'star'
+  | 'storefront'
+  | 'tools'
+  | 'users'
+  | 'vehicle'
+  | 'video';
+
+function SponsorIcon({ name, className = '' }: { name: SponsorIconName; className?: string }) {
+  const commonProps = {
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 2.35,
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+    className: `sponsor-svg-icon ${className}`.trim(),
+    'aria-hidden': true,
+  };
+
+  switch (name) {
+    case 'box':
+      return (
+        <svg {...commonProps}>
+          <path d="M4 8.4 12 4l8 4.4-8 4.4L4 8.4Z" />
+          <path d="M4 8.4v7.2L12 20l8-4.4V8.4" />
+          <path d="M12 12.8V20" />
+        </svg>
+      );
+    case 'check':
+      return (
+        <svg {...commonProps}>
+          <circle cx="12" cy="12" r="9" fill="currentColor" stroke="none" />
+          <path d="m8 12.2 2.4 2.4L16.5 8.8" stroke="#fff" />
+        </svg>
+      );
+    case 'flag':
+      return (
+        <svg {...commonProps}>
+          <path d="M5 21V4" />
+          <path d="M5 5.5c3.2-1.5 5.6 1.5 9 0 1.5-.6 2.6-.9 4-.7v9.1c-1.4-.2-2.5.1-4 .7-3.4 1.5-5.8-1.5-9 0" />
+        </svg>
+      );
+    case 'food':
+      return (
+        <svg {...commonProps}>
+          <path d="M7 3v8" />
+          <path d="M4.5 3v8" />
+          <path d="M9.5 3v8" />
+          <path d="M4.5 11h5L7 14v7" />
+          <path d="M15 3c2.8 1.8 4 4.2 4 7.4 0 2.3-1.2 4-3 4.6v6" />
+          <path d="M15 3v18" />
+        </svg>
+      );
+    case 'gear':
+      return (
+        <svg {...commonProps}>
+          <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" />
+          <path d="m4.9 9.6 1.4-.8.2-1.2-1-1.3 1.9-1.9 1.3 1 1.2-.5.5-1.6h3.2l.5 1.6 1.2.5 1.3-1 1.9 1.9-1 1.3.2 1.2 1.4.8v2.8l-1.4.8-.2 1.2 1 1.3-1.9 1.9-1.3-1-1.2.5-.5 1.6h-3.2l-.5-1.6-1.2-.5-1.3 1-1.9-1.9 1-1.3-.2-1.2-1.4-.8V9.6Z" />
+        </svg>
+      );
+    case 'growth':
+      return (
+        <svg {...commonProps}>
+          <path d="M4 19h16" />
+          <path d="M6 16v-4" />
+          <path d="M11 16V9" />
+          <path d="M16 16V6" />
+          <path d="m5 10 5-4 4 2 5-5" />
+          <path d="M15.5 3H19v3.5" />
+        </svg>
+      );
+    case 'handshake':
+      return (
+        <svg {...commonProps}>
+          <path d="m8.5 12.5 2.2 2.2c.8.8 2 .8 2.8 0l.5-.5" />
+          <path d="m14 14.2 1.2 1.2c.8.8 2.1.8 2.9-.1l2.3-2.5" />
+          <path d="m3.7 12.9 2.3 2.4c.8.9 2.1.9 2.9.1l4.6-4.6 1.4 1.4c.7.7 1.8.7 2.5 0 .8-.8.7-2-.1-2.7L14.5 7H11L8.5 9.5" />
+          <path d="M2 8.5 5.5 5 9 8.5" />
+          <path d="M22 8.5 18.5 5 15 8.5" />
+        </svg>
+      );
+    case 'megaphone':
+      return (
+        <svg {...commonProps}>
+          <path d="M4 13h3l10 5V6L7 11H4v2Z" />
+          <path d="M7 13v5" />
+          <path d="M17 9.5c1.7.5 3 2 3 3.5s-1.3 3-3 3.5" />
+        </svg>
+      );
+    case 'screen':
+      return (
+        <svg {...commonProps}>
+          <rect x="3" y="5" width="18" height="12" rx="1.5" />
+          <path d="M8 21h8" />
+          <path d="M12 17v4" />
+          <path d="M7 9h10" />
+          <path d="M7 13h6" />
+        </svg>
+      );
+    case 'search':
+      return (
+        <svg {...commonProps}>
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <circle cx="10.5" cy="10.5" r="2.4" />
+          <path d="m15.4 15.4 5.1 5.1" />
+        </svg>
+      );
+    case 'star':
+      return (
+        <svg {...commonProps} fill="currentColor" stroke="none">
+          <path d="m12 2.2 2.9 6 6.6.9-4.8 4.7 1.2 6.6-5.9-3.1-5.9 3.1 1.2-6.6L2.5 9.1l6.6-.9L12 2.2Z" />
+        </svg>
+      );
+    case 'storefront':
+      return (
+        <svg {...commonProps}>
+          <path d="M4 10h16" />
+          <path d="M5 10 6.3 4h11.4L19 10" />
+          <path d="M6 10v9h12v-9" />
+          <path d="M9 19v-5h6v5" />
+          <path d="M3.8 10c0 1.3 1 2.3 2.2 2.3S8.2 11.3 8.2 10c0 1.3 1 2.3 2.2 2.3s2.2-1 2.2-2.3c0 1.3 1 2.3 2.2 2.3s2.2-1 2.2-2.3c0 1.3 1 2.3 2.2 2.3s2.2-1 2.2-2.3" />
+        </svg>
+      );
+    case 'tools':
+      return (
+        <svg {...commonProps}>
+          <path d="m14.6 6.4 3-3 2.8 2.8-3 3" />
+          <path d="m13 8 3 3" />
+          <path d="M4 20 15.2 8.8" />
+          <path d="m7.5 5.5 2 2" />
+          <path d="M4 4l6 6" />
+          <path d="m3.5 20.5 4-1 11-11" />
+        </svg>
+      );
+    case 'users':
+      return (
+        <svg {...commonProps}>
+          <path d="M12 11a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2Z" />
+          <path d="M5.5 20c.7-3.5 3-5.4 6.5-5.4s5.8 1.9 6.5 5.4" />
+          <path d="M5.3 10.5a2.6 2.6 0 1 0 0-5.2" />
+          <path d="M2 18c.3-2.2 1.4-3.7 3.3-4.5" />
+          <path d="M18.7 10.5a2.6 2.6 0 1 1 0-5.2" />
+          <path d="M22 18c-.3-2.2-1.4-3.7-3.3-4.5" />
+        </svg>
+      );
+    case 'vehicle':
+      return (
+        <svg {...commonProps}>
+          <path d="M4 16V7.5C4 6.1 5.1 5 6.5 5H14l3.5 5H20v6" />
+          <path d="M4 12h13" />
+          <path d="M7 18.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+          <path d="M17 18.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+        </svg>
+      );
+    case 'video':
+      return (
+        <svg {...commonProps}>
+          <rect x="3" y="6" width="13" height="12" rx="2" />
+          <path d="m16 10 5-3v10l-5-3" />
+          <path d="m8.5 9.5 4 2.5-4 2.5v-5Z" fill="currentColor" stroke="none" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
+function getSectionIcon(section: SponsorSection): SponsorIconName {
+  if (section.tone === 'green') return 'search';
+  if (section.tone === 'red') return 'check';
+  if (section.pillText === 'SPONSORSHIP') return 'handshake';
+  if (section.pillText === 'CAMPAIGN REACH') return 'megaphone';
+  if (section.pillText === 'MEDIA INVENTORY') return 'video';
+  return 'storefront';
+}
+
+function getCardIcon(icon?: string): SponsorIconName | undefined {
+  switch (icon) {
+    case 'box':
+      return 'box';
+    case 'flag':
+      return 'flag';
+    case 'food':
+      return 'food';
+    case 'growth':
+      return 'growth';
+    case 'screen':
+      return 'screen';
+    case 'service':
+      return 'gear';
+    case 'tools':
+      return 'tools';
+    case 'vehicle':
+      return 'vehicle';
+    default:
+      return undefined;
+  }
+}
 
 function SectionHeader({
   section,
@@ -19,7 +228,7 @@ function SectionHeader({
       <span className="sponsor-title-mark" aria-hidden="true" />
       {isPageTitle ? <h1>{section.heading}</h1> : <h2>{section.heading}</h2>}
       <span className="sponsor-pill">
-        <span className="sponsor-pill-icon" aria-hidden="true" />
+        <SponsorIcon name={getSectionIcon(section)} className="sponsor-pill-icon" />
         {section.pillText}
       </span>
     </header>
@@ -49,7 +258,12 @@ function ImageFrame({ section }: { section: SponsorSection }) {
 
   return (
     <figure className="sponsor-image-frame">
-      <img src={getPublicAssetPath(section.imagePath)} alt={section.imageAlt ?? ''} loading="lazy" />
+      <img
+        src={getPublicAssetPath(section.imagePath)}
+        alt={section.imageAlt ?? ''}
+        loading="lazy"
+        data-image-fit={section.id === 'premium-placements' ? 'contain' : 'cover'}
+      />
     </figure>
   );
 }
@@ -62,7 +276,7 @@ function CardGrid({ cards, columns = 'two' }: { cards?: SponsorFeatureCard[]; co
       {cards.map((card, index) => (
         <article className="sponsor-card" key={card.title}>
           <span className="sponsor-card-band" aria-hidden="true" />
-          {card.icon && <span className={`sponsor-card-icon sponsor-card-icon-${card.icon}`} aria-hidden="true" />}
+          {getCardIcon(card.icon) && <SponsorIcon name={getCardIcon(card.icon)!} className="sponsor-card-icon" />}
           {card.stat && <strong className="sponsor-card-stat">{card.stat}</strong>}
           <h3>{card.title}</h3>
           {card.body && <p>{card.body}</p>}
@@ -78,13 +292,13 @@ function ScopeSection({ section }: { section: SponsorSection }) {
   return (
     <div className="sponsor-scope-layout">
       <article className="sponsor-open-copy sponsor-highlight-copy">
-        <span className="sponsor-large-icon sponsor-large-icon-star" aria-hidden="true" />
+        <SponsorIcon name="star" className="sponsor-large-icon" />
         <h3>{section.leftTitle}</h3>
         <BulletList items={section.bullets} className="sponsor-check-list" />
       </article>
       <article className="sponsor-open-copy">
         <div className="sponsor-subhead-row">
-          <span className="sponsor-large-icon sponsor-large-icon-group" aria-hidden="true" />
+          <SponsorIcon name="users" className="sponsor-large-icon" />
           <h3>{section.rightTitle}</h3>
         </div>
         <div className="sponsor-audience-grid">
@@ -193,7 +407,7 @@ export function SponsorPage({ content }: SponsorPageProps) {
   return (
     <main className="sponsor-page">
       {content.sections.map((section, index) => (
-        <section className={`sponsor-section sponsor-theme-${section.tone} sponsor-section-${section.variant}`} key={section.id}>
+        <section id={section.id} className={`sponsor-section sponsor-theme-${section.tone} sponsor-section-${section.variant}`} key={section.id}>
           <SectionHeader section={section} isPageTitle={index === 0} />
           {renderSectionBody(section)}
         </section>

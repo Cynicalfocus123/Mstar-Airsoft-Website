@@ -471,13 +471,13 @@ textarea {
 
 @media (min-width: 901px) {
   .about-section .section-heading {
-    max-width: min(880px, 100%);
+    max-width: min(900px, 100%);
   }
 
   .about-section .section-heading h2 {
-    max-width: 34ch;
-    font-size: clamp(2rem, 2.6vw, 2.45rem);
-    line-height: 1.08;
+    max-width: min(900px, 100%);
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.12;
     text-wrap: wrap;
   }
 }
@@ -1329,7 +1329,7 @@ select:focus {
   position: absolute;
   inset-inline: 0;
   z-index: 4;
-  bottom: clamp(12px, 2vh, 28px);
+  bottom: clamp(8px, 1.6vh, 20px);
   display: flex;
   justify-content: center;
   padding-inline: 20px;
@@ -3260,6 +3260,7 @@ select:focus {
   width: min(1600px, 100%);
   margin-inline: auto;
   padding: 0;
+  scroll-margin-top: 120px;
   background: transparent;
 }
 
@@ -3309,30 +3310,20 @@ select:focus {
   text-transform: uppercase;
 }
 
-.sponsor-pill-icon,
-.sponsor-card-icon,
-.sponsor-large-icon {
-  position: relative;
-  display: inline-flex;
+.sponsor-svg-icon {
+  display: inline-block;
   flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
+  color: currentColor;
 }
 
 .sponsor-pill-icon {
-  width: 38px;
-  height: 38px;
-  border: 4px solid currentColor;
-  border-radius: 8px;
+  width: clamp(34px, 3vw, 46px);
+  height: clamp(34px, 3vw, 46px);
 }
 
-.sponsor-pill-icon::before {
-  position: absolute;
-  inset: -9px 7px auto;
-  height: 7px;
-  border-radius: 8px 8px 0 0;
-  content: "";
-  background: currentColor;
+.sponsor-card-icon,
+.sponsor-large-icon {
+  color: var(--sponsor-accent);
 }
 
 .sponsor-theme-green {
@@ -3349,56 +3340,6 @@ select:focus {
 
 .sponsor-theme-red {
   --sponsor-accent: #ff3336;
-}
-
-.sponsor-theme-green .sponsor-pill-icon {
-  border-width: 5px;
-  border-radius: 999px;
-}
-
-.sponsor-theme-green .sponsor-pill-icon::before {
-  inset: auto -13px -8px auto;
-  width: 20px;
-  height: 5px;
-  border-radius: 999px;
-  background: currentColor;
-  transform: rotate(45deg);
-}
-
-.sponsor-theme-red .sponsor-pill-icon {
-  width: 42px;
-  height: 30px;
-  border: 0;
-  border-radius: 0;
-}
-
-.sponsor-theme-red .sponsor-pill-icon::before {
-  inset: 8px auto auto 3px;
-  width: 25px;
-  height: 14px;
-  border-radius: 4px 3px 7px 7px;
-  background: currentColor;
-  transform: rotate(15deg);
-}
-
-.sponsor-theme-red .sponsor-pill-icon::after {
-  position: absolute;
-  inset: 8px 3px auto auto;
-  width: 25px;
-  height: 14px;
-  border-radius: 3px 4px 7px 7px;
-  content: "";
-  background: currentColor;
-  transform: rotate(-15deg);
-}
-
-.sponsor-theme-green .sponsor-pill-icon::after {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border: 4px solid currentColor;
-  border-radius: 999px;
-  content: "";
 }
 
 .sponsor-scope-layout,
@@ -3463,37 +3404,6 @@ select:focus {
 .sponsor-large-icon {
   width: 70px;
   height: 70px;
-  color: var(--sponsor-accent);
-}
-
-.sponsor-large-icon-star::before {
-  width: 58px;
-  height: 58px;
-  clip-path: polygon(50% 0, 63% 34%, 99% 35%, 70% 57%, 80% 92%, 50% 72%, 20% 92%, 30% 57%, 1% 35%, 37% 34%);
-  content: "";
-  background: #2f7d45;
-}
-
-.sponsor-large-icon-group::before,
-.sponsor-large-icon-group::after {
-  position: absolute;
-  content: "";
-  background: currentColor;
-}
-
-.sponsor-large-icon-group::before {
-  width: 56px;
-  height: 26px;
-  bottom: 8px;
-  border-radius: 40px 40px 0 0;
-}
-
-.sponsor-large-icon-group::after {
-  width: 14px;
-  height: 14px;
-  top: 18px;
-  border-radius: 999px;
-  box-shadow: -22px 8px 0 currentColor, 22px 8px 0 currentColor;
 }
 
 .sponsor-bullet-list {
@@ -3607,20 +3517,20 @@ select:focus {
 }
 
 .sponsor-audience-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
   gap: clamp(54px, 5vw, 76px) clamp(38px, 4.6vw, 76px);
 }
 
 .sponsor-card-grid-two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
 }
 
 .sponsor-card-grid-three {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
 }
 
 .sponsor-card-grid-four {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .sponsor-card {
@@ -3628,6 +3538,7 @@ select:focus {
   display: grid;
   align-content: start;
   gap: 16px;
+  min-width: 0;
   min-height: clamp(220px, 22vw, 300px);
   overflow: hidden;
   padding: clamp(36px, 4vw, 62px) clamp(32px, 4vw, 56px);
@@ -3658,6 +3569,7 @@ select:focus {
   font-size: clamp(1.06rem, 1.5vw, 1.55rem);
   font-weight: 400;
   line-height: 1.35;
+  overflow-wrap: break-word;
 }
 
 .sponsor-card .sponsor-bullet-list {
@@ -3678,11 +3590,13 @@ select:focus {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 0.95;
+  white-space: nowrap;
 }
 
 .sponsor-image-frame {
   overflow: hidden;
-  min-height: clamp(340px, 31vw, 560px);
+  aspect-ratio: 16 / 9;
+  min-height: 0;
   margin: 0;
   border-radius: 28px;
   background: #1a1d16;
@@ -3693,6 +3607,17 @@ select:focus {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+.sponsor-image-frame img[data-image-fit="contain"] {
+  object-fit: contain;
+  background: #eeede6;
+}
+
+.sponsor-section-imageList .sponsor-image-frame {
+  aspect-ratio: 871 / 588;
+  background: #eeede6;
 }
 
 .sponsor-section-cardImage .sponsor-card-grid-two,
@@ -3705,29 +3630,8 @@ select:focus {
 }
 
 .sponsor-card-icon {
-  width: 58px;
-  height: 58px;
-  color: var(--sponsor-accent);
-  background: currentColor;
-  border-radius: 999px;
-}
-
-.sponsor-card-icon-growth {
-  clip-path: polygon(0 82%, 18% 82%, 18% 61%, 35% 61%, 35% 44%, 52% 44%, 52% 25%, 69% 25%, 69% 0, 100% 32%, 83% 32%, 83% 100%, 0 100%);
-}
-
-.sponsor-card-icon-service {
-  border-radius: 16px;
-  clip-path: polygon(47% 0, 60% 0, 60% 28%, 92% 28%, 92% 42%, 60% 42%, 60% 100%, 47% 100%, 47% 42%, 8% 42%, 8% 28%, 47% 28%);
-}
-
-.sponsor-card-icon-food,
-.sponsor-card-icon-screen,
-.sponsor-card-icon-flag,
-.sponsor-card-icon-vehicle,
-.sponsor-card-icon-tools,
-.sponsor-card-icon-box {
-  border-radius: 12px;
+  width: clamp(46px, 4vw, 64px);
+  height: clamp(46px, 4vw, 64px);
 }
 
 .sponsor-section-steps .sponsor-card-grid-three {
@@ -4872,7 +4776,7 @@ select:focus {
   }
 
   .banner-overlay {
-    bottom: 22px;
+    bottom: 16px;
     padding-inline: 32px;
   }
 
@@ -5086,7 +4990,7 @@ select:focus {
   }
 
   .banner-overlay {
-    bottom: 16px;
+    bottom: 12px;
     padding-inline: 20px;
   }
 
@@ -5495,5 +5399,264 @@ select:focus {
 
   .checkout-edit {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .about-section .section-heading {
+    width: min(90%, 860px);
+    max-width: min(90%, 860px);
+  }
+
+  .about-section .section-heading h2 {
+    max-width: 100%;
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    line-height: 1.14;
+  }
+
+  .sponsor-page {
+    gap: clamp(64px, 8vw, 92px);
+    padding: clamp(40px, 5vw, 60px) clamp(28px, 5vw, 52px) clamp(64px, 8vw, 88px);
+  }
+
+  .sponsor-section {
+    width: min(100%, 1040px);
+  }
+
+  .sponsor-section-header {
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: 18px;
+    margin-bottom: clamp(38px, 6vw, 64px);
+  }
+
+  .sponsor-section-header h1,
+  .sponsor-section-header h2 {
+    font-size: clamp(3rem, 6vw, 4.1rem);
+    line-height: 0.96;
+  }
+
+  .sponsor-pill {
+    grid-column: 2;
+    justify-self: start;
+    min-height: 54px;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+  }
+
+  .sponsor-scope-layout,
+  .sponsor-image-text-layout,
+  .sponsor-retail-layout,
+  .sponsor-card-image-layout {
+    grid-template-columns: 1fr;
+    gap: clamp(34px, 6vw, 56px);
+  }
+
+  .sponsor-retail-layout .sponsor-image-frame {
+    order: 0;
+  }
+
+  .sponsor-retail-layout .sponsor-open-copy {
+    order: 1;
+  }
+
+  .sponsor-audience-grid,
+  .sponsor-card-grid-two,
+  .sponsor-card-grid-four {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: clamp(24px, 4vw, 34px);
+  }
+
+  .sponsor-card-grid-three {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: clamp(24px, 4vw, 34px);
+  }
+
+  .sponsor-section-steps .sponsor-card-grid-three {
+    padding-top: 0;
+  }
+
+  .sponsor-section-steps .sponsor-card-grid-three::before,
+  .sponsor-step-number {
+    display: none;
+  }
+
+  .sponsor-card {
+    min-height: auto;
+    padding: clamp(34px, 4vw, 46px) clamp(28px, 4vw, 40px);
+  }
+
+  .sponsor-card-stat {
+    font-size: clamp(2.6rem, 6vw, 4rem);
+  }
+
+  .sponsor-image-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+
+  .sponsor-benefit-grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: clamp(28px, 4vw, 44px);
+  }
+}
+
+@media (max-width: 767px) {
+  .sponsor-page {
+    gap: 52px;
+    padding: 32px 18px 56px;
+  }
+
+  .sponsor-section {
+    width: 100%;
+  }
+
+  .sponsor-section-header {
+    grid-template-columns: 12px minmax(0, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .sponsor-section-header h1,
+  .sponsor-section-header h2 {
+    font-size: clamp(2.15rem, 10vw, 3.15rem);
+    line-height: 1;
+  }
+
+  .sponsor-title-mark {
+    width: 12px;
+    height: 64px;
+  }
+
+  .sponsor-pill {
+    grid-column: 2;
+    justify-self: start;
+    max-width: 100%;
+    min-height: 40px;
+    padding: 8px 14px;
+    gap: 8px;
+    font-size: clamp(0.74rem, 3.2vw, 0.92rem);
+    white-space: normal;
+  }
+
+  .sponsor-pill-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sponsor-scope-layout,
+  .sponsor-image-text-layout,
+  .sponsor-retail-layout,
+  .sponsor-card-image-layout,
+  .sponsor-audience-grid,
+  .sponsor-card-grid-two,
+  .sponsor-card-grid-three,
+  .sponsor-card-grid-four,
+  .sponsor-benefit-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sponsor-retail-layout .sponsor-image-frame {
+    order: 0;
+  }
+
+  .sponsor-retail-layout .sponsor-open-copy {
+    order: 1;
+  }
+
+  .sponsor-open-copy h3 {
+    font-size: clamp(1.35rem, 6.5vw, 1.9rem);
+  }
+
+  .sponsor-open-copy p,
+  .sponsor-bullet-list,
+  .sponsor-benefit-item p {
+    font-size: clamp(1rem, 4.4vw, 1.14rem);
+    line-height: 1.38;
+  }
+
+  .sponsor-subhead-row {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .sponsor-large-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .sponsor-card {
+    width: 100%;
+    min-height: auto;
+    padding: 30px 20px 24px;
+    border-radius: 18px;
+  }
+
+  .sponsor-card h3,
+  .sponsor-card h4 {
+    font-size: clamp(1.2rem, 5.5vw, 1.55rem);
+  }
+
+  .sponsor-card p,
+  .sponsor-card .sponsor-bullet-list {
+    font-size: clamp(1rem, 4.2vw, 1.14rem);
+  }
+
+  .sponsor-card-stat {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
+  }
+
+  .sponsor-card-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sponsor-check-list,
+  .sponsor-icon-list {
+    gap: 18px;
+  }
+
+  .sponsor-check-list li,
+  .sponsor-icon-list li {
+    padding-left: 46px;
+  }
+
+  .sponsor-image-frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+    border-radius: 20px;
+  }
+
+  .sponsor-section-cardImage .sponsor-card-grid-two,
+  .sponsor-section-cardImage .sponsor-card-grid-two .sponsor-card {
+    min-height: auto;
+  }
+
+  .sponsor-section-steps .sponsor-card-grid-three {
+    padding-top: 0;
+  }
+
+  .sponsor-section-steps .sponsor-card-grid-three::before,
+  .sponsor-step-number {
+    display: none;
+  }
+
+  .sponsor-benefit-item {
+    padding-left: 44px;
+  }
+
+  .sponsor-benefit-check {
+    width: 26px;
+    height: 26px;
+  }
+
+  .sponsor-benefit-check::after {
+    top: 7px;
+    left: 7px;
+    width: 11px;
+    height: 6px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
   }
 }
