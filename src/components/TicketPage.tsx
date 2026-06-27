@@ -21,11 +21,7 @@ export function TicketPage({ content }: TicketPageProps) {
           <PackageCard offer={offer} key={offer.label} />
         ))}
       </section>
-      <section className="ticket-addons" id="camping" aria-labelledby="ticket-addons-title">
-        <div className="ticket-section-heading">
-          <p className="eyebrow">Camping Extras</p>
-          <h2 id="ticket-addons-title">Add-Ons</h2>
-        </div>
+      <section className="ticket-addons" id="camping" aria-label="Camping package">
         <div className="ticket-addon-grid">
           {content.addons.map((addon) => (
             <article className="ticket-addon-card" key={addon.title}>

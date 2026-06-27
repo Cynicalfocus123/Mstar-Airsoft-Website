@@ -166,7 +166,7 @@ export const siteContent: SiteContent = {
     ],
     addons: [
       {
-        title: 'Camping Experience',
+        title: 'Camping Package',
         price: 'EUR 69',
         description: 'Includes pillow, blanket, mattress, and 2-person tent.',
         stripeBuyButtonId: 'buy_btn_1TiUMF5Kev5Ia2RiheGKvjgJ',

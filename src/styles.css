@@ -3858,6 +3858,65 @@ select:focus {
   list-style: none;
 }
 
+[lang="th"],
+[lang|="th"],
+.thai-content,
+.lang-th,
+.event-info-page-th,
+.mission-page-th {
+  font-family: "Noto Sans Thai", "Prompt", "Inter", Arial, sans-serif;
+}
+
+[lang="th"] :is(h1, h2, h3, h4, p, li, dt, dd, strong, span),
+[lang|="th"] :is(h1, h2, h3, h4, p, li, dt, dd, strong, span),
+.thai-content :is(h1, h2, h3, h4, p, li, dt, dd, strong, span),
+.lang-th :is(h1, h2, h3, h4, p, li, dt, dd, strong, span),
+.event-info-page-th :is(h1, h2, h3, h4, p, li, dt, dd, strong, span),
+.mission-page-th :is(h1, h2, h3, h4, p, li, dt, dd, strong, span) {
+  font-family: "Noto Sans Thai", "Prompt", "Inter", Arial, sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+[lang="th"] :is(h1, h2, h3, h4),
+[lang|="th"] :is(h1, h2, h3, h4),
+.thai-content :is(h1, h2, h3, h4),
+.lang-th :is(h1, h2, h3, h4),
+.event-info-page-th :is(h1, h2, h3, h4),
+.mission-page-th :is(h1, h2, h3, h4) {
+  line-height: 1.35;
+}
+
+[lang="th"] :is(p, li, dt, dd),
+[lang|="th"] :is(p, li, dt, dd),
+.thai-content :is(p, li, dt, dd),
+.lang-th :is(p, li, dt, dd),
+.event-info-page-th :is(p, li, dt, dd),
+.mission-page-th :is(p, li, dt, dd) {
+  line-height: 1.7;
+}
+
+.policy-layout-plain[lang="th"] .policy-section h2,
+.event-info-page-th .event-info-hero h1,
+.event-info-page-th .event-info-copy h2,
+.mission-page-th .mission-story-intro h2,
+.mission-page-th .mission-closing-section h2,
+.mission-page-th .mission-day-heading h2,
+.mission-page-th .mission-story-block h3,
+.mission-page-th .mission-festival-group h3,
+.mission-page-th .mission-page-hero strong,
+.mission-page-th .mission-core-line,
+.mission-page-th .mission-day-heading strong,
+.mission-page-th .mission-closing-calls strong {
+  font-family: "Noto Sans Thai", "Prompt", "Inter", Arial, sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
 .event-detail-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);

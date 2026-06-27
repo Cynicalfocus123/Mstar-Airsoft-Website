@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import type { InfoPageContent, InfoSection } from '../types/siteContent';
 import { getPublicAssetPath } from '../utils/publicAssetPath';
@@ -89,6 +89,11 @@ export function InfoPage({ content }: InfoPageProps) {
   const isActivityPage = content.slug === 'activity';
   const shouldShowHero = !hiddenHeroSlugs.has(content.slug);
   const [activeLanguageId, setActiveLanguageId] = useState(content.languageVersions?.[0]?.id);
+
+  useEffect(() => {
+    setActiveLanguageId(content.languageVersions?.[0]?.id);
+  }, [content.slug, content.languageVersions]);
+
   const activeLanguage = content.languageVersions?.find((language) => language.id === activeLanguageId) ?? content.languageVersions?.[0];
   const isDefaultLanguage = Boolean(activeLanguage && activeLanguage.id === content.languageVersions?.[0]?.id);
   const visibleSections = isDefaultLanguage && content.sections ? content.sections : activeLanguage?.sections ?? content.sections;
