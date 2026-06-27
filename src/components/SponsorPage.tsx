@@ -1,43 +1,52 @@
-import type { SponsorFeatureCard, SponsorPageContent } from '../types/siteContent';
-import { getPublicAssetPath } from '../utils/publicAssetPath';
+import type {
+  SponsorFeatureCard,
+  SponsorPageContent,
+} from "../types/siteContent";
+import { getPublicAssetPath } from "../utils/publicAssetPath";
 
 interface SponsorPageProps {
   content: SponsorPageContent;
 }
 
-type SponsorSection = SponsorPageContent['sections'][number];
+type SponsorSection = SponsorPageContent["sections"][number];
 type SponsorIconName =
-  | 'box'
-  | 'check'
-  | 'flag'
-  | 'food'
-  | 'gear'
-  | 'growth'
-  | 'handshake'
-  | 'megaphone'
-  | 'screen'
-  | 'search'
-  | 'star'
-  | 'storefront'
-  | 'tools'
-  | 'users'
-  | 'vehicle'
-  | 'video';
+  | "box"
+  | "check"
+  | "flag"
+  | "food"
+  | "gear"
+  | "growth"
+  | "handshake"
+  | "megaphone"
+  | "screen"
+  | "search"
+  | "star"
+  | "storefront"
+  | "tools"
+  | "users"
+  | "vehicle"
+  | "video";
 
-function SponsorIcon({ name, className = '' }: { name: SponsorIconName; className?: string }) {
+function SponsorIcon({
+  name,
+  className = "",
+}: {
+  name: SponsorIconName;
+  className?: string;
+}) {
   const commonProps = {
-    viewBox: '0 0 24 24',
-    fill: 'none',
-    stroke: 'currentColor',
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
     strokeWidth: 2.35,
-    strokeLinecap: 'round' as const,
-    strokeLinejoin: 'round' as const,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
     className: `sponsor-svg-icon ${className}`.trim(),
-    'aria-hidden': true,
+    "aria-hidden": true,
   };
 
   switch (name) {
-    case 'box':
+    case "box":
       return (
         <svg {...commonProps}>
           <path d="M4 8.4 12 4l8 4.4-8 4.4L4 8.4Z" />
@@ -45,21 +54,21 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="M12 12.8V20" />
         </svg>
       );
-    case 'check':
+    case "check":
       return (
         <svg {...commonProps}>
           <circle cx="12" cy="12" r="9" fill="currentColor" stroke="none" />
           <path d="m8 12.2 2.4 2.4L16.5 8.8" stroke="#fff" />
         </svg>
       );
-    case 'flag':
+    case "flag":
       return (
         <svg {...commonProps}>
           <path d="M5 21V4" />
           <path d="M5 5.5c3.2-1.5 5.6 1.5 9 0 1.5-.6 2.6-.9 4-.7v9.1c-1.4-.2-2.5.1-4 .7-3.4 1.5-5.8-1.5-9 0" />
         </svg>
       );
-    case 'food':
+    case "food":
       return (
         <svg {...commonProps}>
           <path d="M7 3v8" />
@@ -70,14 +79,14 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="M15 3v18" />
         </svg>
       );
-    case 'gear':
+    case "gear":
       return (
         <svg {...commonProps}>
           <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" />
           <path d="m4.9 9.6 1.4-.8.2-1.2-1-1.3 1.9-1.9 1.3 1 1.2-.5.5-1.6h3.2l.5 1.6 1.2.5 1.3-1 1.9 1.9-1 1.3.2 1.2 1.4.8v2.8l-1.4.8-.2 1.2 1 1.3-1.9 1.9-1.3-1-1.2.5-.5 1.6h-3.2l-.5-1.6-1.2-.5-1.3 1-1.9-1.9 1-1.3-.2-1.2-1.4-.8V9.6Z" />
         </svg>
       );
-    case 'growth':
+    case "growth":
       return (
         <svg {...commonProps}>
           <path d="M4 19h16" />
@@ -88,7 +97,7 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="M15.5 3H19v3.5" />
         </svg>
       );
-    case 'handshake':
+    case "handshake":
       return (
         <svg {...commonProps} viewBox="0 0 32 24">
           <path d="M2.8 8.4 8.1 3l4.4 4.4" />
@@ -99,7 +108,7 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="m23.9 8.1 4.3 4.3" />
         </svg>
       );
-    case 'megaphone':
+    case "megaphone":
       return (
         <svg {...commonProps}>
           <path d="M4 12.8h3.4l9.4 4.7v-11l-9.4 4.7H4v1.6Z" />
@@ -108,7 +117,7 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="M21.3 6.8c1.2 1.4 1.9 3.2 1.9 5.2s-.7 3.8-1.9 5.2" />
         </svg>
       );
-    case 'screen':
+    case "screen":
       return (
         <svg {...commonProps}>
           <rect x="3" y="5" width="18" height="12" rx="1.5" />
@@ -118,7 +127,7 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="M7 13h6" />
         </svg>
       );
-    case 'search':
+    case "search":
       return (
         <svg {...commonProps}>
           <circle cx="10.5" cy="10.5" r="6.5" />
@@ -126,13 +135,13 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="m15.4 15.4 5.1 5.1" />
         </svg>
       );
-    case 'star':
+    case "star":
       return (
         <svg {...commonProps} fill="currentColor" stroke="none">
           <path d="m12 2.2 2.9 6 6.6.9-4.8 4.7 1.2 6.6-5.9-3.1-5.9 3.1 1.2-6.6L2.5 9.1l6.6-.9L12 2.2Z" />
         </svg>
       );
-    case 'storefront':
+    case "storefront":
       return (
         <svg {...commonProps}>
           <path d="M4 10h16" />
@@ -142,7 +151,7 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="M3.8 10c0 1.3 1 2.3 2.2 2.3S8.2 11.3 8.2 10c0 1.3 1 2.3 2.2 2.3s2.2-1 2.2-2.3c0 1.3 1 2.3 2.2 2.3s2.2-1 2.2-2.3c0 1.3 1 2.3 2.2 2.3s2.2-1 2.2-2.3" />
         </svg>
       );
-    case 'tools':
+    case "tools":
       return (
         <svg {...commonProps}>
           <path d="M4 20 15.7 8.3" />
@@ -152,7 +161,7 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="M4.2 5.8 7.6 9.2" />
         </svg>
       );
-    case 'users':
+    case "users":
       return (
         <svg {...commonProps}>
           <path d="M12 11a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2Z" />
@@ -163,7 +172,7 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="M22 18c-.3-2.2-1.4-3.7-3.3-4.5" />
         </svg>
       );
-    case 'vehicle':
+    case "vehicle":
       return (
         <svg {...commonProps}>
           <path d="M3.8 15.7V8.4c0-1.2 1-2.2 2.2-2.2h7.3l3 4.1h3.9v5.4" />
@@ -172,12 +181,16 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
           <path d="M17.2 18.2a2 2 0 1 0 0-4.1 2 2 0 0 0 0 4.1Z" />
         </svg>
       );
-    case 'video':
+    case "video":
       return (
         <svg {...commonProps}>
           <rect x="3" y="6" width="13" height="12" rx="2" />
           <path d="m16 10 5-3v10l-5-3" />
-          <path d="m8.5 9.5 4 2.5-4 2.5v-5Z" fill="currentColor" stroke="none" />
+          <path
+            d="m8.5 9.5 4 2.5-4 2.5v-5Z"
+            fill="currentColor"
+            stroke="none"
+          />
         </svg>
       );
     default:
@@ -186,33 +199,48 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
 }
 
 function getSectionIcon(section: SponsorSection): SponsorIconName {
-  if (section.pillText === 'SPONSORSHIP') return 'handshake';
-  if (section.pillText === 'CAMPAIGN REACH') return 'megaphone';
-  if (section.pillText === 'PARTNER VALUE') return 'handshake';
-  if (section.pillText === 'MEDIA INVENTORY') return 'video';
-  if (section.tone === 'green') return 'search';
-  if (section.tone === 'red') return 'check';
-  return 'storefront';
+  if (section.pillText === "SPONSORSHIP") return "handshake";
+  if (section.pillText === "CAMPAIGN REACH") return "megaphone";
+  if (section.pillText === "PARTNER VALUE") return "handshake";
+  if (section.pillText === "MEDIA INVENTORY") return "video";
+  if (section.tone === "green") return "search";
+  if (section.tone === "red") return "check";
+  return "storefront";
+}
+
+function getPillIconPath(section: SponsorSection): string | undefined {
+  switch (section.pillText) {
+    case "EVENT OVERVIEW":
+      return "/images/sponsor/icons/magnifying.png";
+    case "VENDOR PROGRAM":
+      return "/images/sponsor/icons/vendor-booth.png";
+    case "MEDIA INVENTORY":
+      return "/images/sponsor/icons/media-player.png";
+    case "PARTNER VALUE":
+      return "/images/sponsor/icons/hand-shake.png";
+    default:
+      return undefined;
+  }
 }
 
 function getCardIcon(icon?: string): SponsorIconName | undefined {
   switch (icon) {
-    case 'box':
-      return 'box';
-    case 'flag':
-      return 'flag';
-    case 'food':
-      return 'food';
-    case 'growth':
-      return 'growth';
-    case 'screen':
-      return 'screen';
-    case 'service':
-      return 'gear';
-    case 'tools':
-      return 'tools';
-    case 'vehicle':
-      return 'vehicle';
+    case "box":
+      return "box";
+    case "flag":
+      return "flag";
+    case "food":
+      return "food";
+    case "growth":
+      return "growth";
+    case "screen":
+      return "screen";
+    case "service":
+      return "gear";
+    case "tools":
+      return "tools";
+    case "vehicle":
+      return "vehicle";
     default:
       return undefined;
   }
@@ -225,12 +253,27 @@ function SectionHeader({
   section: SponsorSection;
   isPageTitle?: boolean;
 }) {
+  const pillIconPath = getPillIconPath(section);
+
   return (
     <header className="sponsor-section-header">
       <span className="sponsor-title-mark" aria-hidden="true" />
       {isPageTitle ? <h1>{section.heading}</h1> : <h2>{section.heading}</h2>}
       <span className="sponsor-pill">
-        <SponsorIcon name={getSectionIcon(section)} className="sponsor-pill-icon" />
+        {pillIconPath ? (
+          <img
+            className="sponsor-pill-icon sponsor-pill-image-icon"
+            src={getPublicAssetPath(pillIconPath)}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+        ) : (
+          <SponsorIcon
+            name={getSectionIcon(section)}
+            className="sponsor-pill-icon"
+          />
+        )}
         {section.pillText}
       </span>
     </header>
@@ -239,7 +282,7 @@ function SectionHeader({
 
 function BulletList({
   items,
-  className = '',
+  className = "",
 }: {
   items?: string[];
   className?: string;
@@ -262,9 +305,11 @@ function ImageFrame({ section }: { section: SponsorSection }) {
     <figure className="sponsor-image-frame">
       <img
         src={getPublicAssetPath(section.imagePath)}
-        alt={section.imageAlt ?? ''}
+        alt={section.imageAlt ?? ""}
         loading="lazy"
-        data-image-fit={section.id === 'premium-placements' ? 'contain' : 'cover'}
+        data-image-fit={
+          section.id === "premium-placements" ? "contain" : "cover"
+        }
       />
     </figure>
   );
@@ -272,11 +317,11 @@ function ImageFrame({ section }: { section: SponsorSection }) {
 
 function CardGrid({
   cards,
-  columns = 'two',
+  columns = "two",
   showStepNumbers = false,
 }: {
   cards?: SponsorFeatureCard[];
-  columns?: 'two' | 'three' | 'four';
+  columns?: "two" | "three" | "four";
   showStepNumbers?: boolean;
 }) {
   if (!cards?.length) return null;
@@ -286,12 +331,23 @@ function CardGrid({
       {cards.map((card, index) => (
         <article className="sponsor-card" key={card.title}>
           <span className="sponsor-card-band" aria-hidden="true" />
-          {getCardIcon(card.icon) && <SponsorIcon name={getCardIcon(card.icon)!} className="sponsor-card-icon" />}
-          {card.stat && <strong className="sponsor-card-stat">{card.stat}</strong>}
+          {getCardIcon(card.icon) && (
+            <SponsorIcon
+              name={getCardIcon(card.icon)!}
+              className="sponsor-card-icon"
+            />
+          )}
+          {card.stat && (
+            <strong className="sponsor-card-stat">{card.stat}</strong>
+          )}
           <h3>{card.title}</h3>
           {card.body && <p>{card.body}</p>}
           <BulletList items={card.bullets} />
-          {showStepNumbers && <span className="sponsor-step-number" aria-hidden="true">{index + 1}</span>}
+          {showStepNumbers && (
+            <span className="sponsor-step-number" aria-hidden="true">
+              {index + 1}
+            </span>
+          )}
         </article>
       ))}
     </div>
@@ -313,7 +369,10 @@ function ScopeSection({ section }: { section: SponsorSection }) {
         </div>
         <div className="sponsor-audience-grid">
           {section.audienceCards?.map((card) => (
-            <article className="sponsor-card sponsor-audience-card" key={card.title}>
+            <article
+              className="sponsor-card sponsor-audience-card"
+              key={card.title}
+            >
               <span className="sponsor-card-band" aria-hidden="true" />
               <h4>{card.title}</h4>
               <p>{card.body}</p>
@@ -388,25 +447,25 @@ function BenefitsSection({ section }: { section: SponsorSection }) {
 
 function renderSectionBody(section: SponsorSection) {
   switch (section.variant) {
-    case 'scope':
+    case "scope":
       return <ScopeSection section={section} />;
-    case 'imageText':
+    case "imageText":
       return <ImageTextSection section={section} />;
-    case 'twoCards':
+    case "twoCards":
       return <CardGrid cards={section.cards} columns="two" />;
-    case 'retail':
+    case "retail":
       return <RetailSection section={section} />;
-    case 'stats':
+    case "stats":
       return <CardGrid cards={section.cards} columns="four" />;
-    case 'imageList':
+    case "imageList":
       return <ImageListSection section={section} />;
-    case 'cardImage':
+    case "cardImage":
       return <CardImageSection section={section} />;
-    case 'threeCards':
+    case "threeCards":
       return <CardGrid cards={section.cards} columns="three" />;
-    case 'steps':
+    case "steps":
       return <CardGrid cards={section.cards} columns="three" showStepNumbers />;
-    case 'benefits':
+    case "benefits":
       return <BenefitsSection section={section} />;
     default:
       return null;
@@ -417,7 +476,11 @@ export function SponsorPage({ content }: SponsorPageProps) {
   return (
     <main className="sponsor-page">
       {content.sections.map((section, index) => (
-        <section id={section.id} className={`sponsor-section sponsor-theme-${section.tone} sponsor-section-${section.variant}`} key={section.id}>
+        <section
+          id={section.id}
+          className={`sponsor-section sponsor-theme-${section.tone} sponsor-section-${section.variant}`}
+          key={section.id}
+        >
           <SectionHeader section={section} isPageTitle={index === 0} />
           {renderSectionBody(section)}
         </section>

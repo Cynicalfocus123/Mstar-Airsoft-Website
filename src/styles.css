@@ -2,7 +2,13 @@
   color: #f5f4ed;
   background: #080908;
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   --bg: #080908;
@@ -157,8 +163,17 @@ textarea {
   padding: clamp(72px, 10vw, 128px) clamp(18px, 4vw, 64px) 72px;
   border-bottom: 1px solid var(--line);
   background:
-    linear-gradient(110deg, rgba(8, 9, 8, 0.98) 0%, rgba(8, 9, 8, 0.74) 52%, rgba(89, 104, 61, 0.42) 100%),
-    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 16px);
+    linear-gradient(
+      110deg,
+      rgba(8, 9, 8, 0.98) 0%,
+      rgba(8, 9, 8, 0.74) 52%,
+      rgba(89, 104, 61, 0.42) 100%
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04) 0 1px,
+      transparent 1px 16px
+    );
 }
 
 .hero-grid,
@@ -250,7 +265,11 @@ textarea {
 .rule-item,
 .contact-grid > div {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(24, 29, 20, 0.96), rgba(11, 13, 10, 0.96));
+  background: linear-gradient(
+    180deg,
+    rgba(24, 29, 20, 0.96),
+    rgba(11, 13, 10, 0.96)
+  );
   box-shadow: 0 22px 60px rgba(0, 0, 0, 0.26);
 }
 
@@ -322,16 +341,36 @@ textarea {
 .game-schedules-section::before {
   z-index: 0;
   background:
-    linear-gradient(90deg, rgba(5, 7, 5, 0.92), rgba(5, 7, 5, 0.7) 46%, rgba(5, 7, 5, 0.88)),
-    linear-gradient(180deg, rgba(5, 7, 5, 0.74), rgba(18, 26, 12, 0.72) 42%, rgba(0, 0, 0, 0.9));
+    linear-gradient(
+      90deg,
+      rgba(5, 7, 5, 0.92),
+      rgba(5, 7, 5, 0.7) 46%,
+      rgba(5, 7, 5, 0.88)
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 7, 5, 0.74),
+      rgba(18, 26, 12, 0.72) 42%,
+      rgba(0, 0, 0, 0.9)
+    );
 }
 
 .game-schedules-section::after {
   z-index: 0;
   background:
-    radial-gradient(circle at 18% 24%, rgba(140, 161, 93, 0.16), transparent 34%),
+    radial-gradient(
+      circle at 18% 24%,
+      rgba(140, 161, 93, 0.16),
+      transparent 34%
+    ),
     linear-gradient(135deg, rgba(240, 185, 11, 0.08), transparent 44%),
-    linear-gradient(180deg, rgba(9, 10, 8, 0.72), transparent 18%, transparent 78%, rgba(9, 10, 8, 0.72));
+    linear-gradient(
+      180deg,
+      rgba(9, 10, 8, 0.72),
+      transparent 18%,
+      transparent 78%,
+      rgba(9, 10, 8, 0.72)
+    );
   mix-blend-mode: screen;
   opacity: 0.6;
 }
@@ -447,7 +486,12 @@ textarea {
   inset: 0;
   content: "";
   background:
-    linear-gradient(90deg, rgba(7, 8, 7, 0.92), rgba(7, 8, 7, 0.72) 45%, rgba(7, 8, 7, 0.88)),
+    linear-gradient(
+      90deg,
+      rgba(7, 8, 7, 0.92),
+      rgba(7, 8, 7, 0.72) 45%,
+      rgba(7, 8, 7, 0.88)
+    ),
     linear-gradient(180deg, rgba(240, 185, 11, 0.08), rgba(0, 0, 0, 0.46));
 }
 
@@ -752,7 +796,13 @@ select:focus {
   padding-left: clamp(18px, 4vw, 64px);
   border-block: 0;
   background:
-    linear-gradient(180deg, rgba(9, 10, 8, 0.86), #090a08 16%, #090a08 84%, rgba(5, 6, 5, 0.96)),
+    linear-gradient(
+      180deg,
+      rgba(9, 10, 8, 0.86),
+      #090a08 16%,
+      #090a08 84%,
+      rgba(5, 6, 5, 0.96)
+    ),
     #090a08;
 }
 
@@ -812,7 +862,11 @@ select:focus {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(180deg, transparent 42%, rgba(5, 6, 5, 0.92) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 42%,
+    rgba(5, 6, 5, 0.92) 100%
+  );
   pointer-events: none;
 }
 
@@ -1087,14 +1141,22 @@ select:focus {
     min-height: 620px;
     padding-top: 72px;
     padding-bottom: 72px;
-    background-image: var(--about-mobile-background-image, var(--about-background-image));
+    background-image: var(
+      --about-mobile-background-image,
+      var(--about-background-image)
+    );
     background-position: 56% top;
     background-size: auto 100%;
   }
 
   .about-section::before {
     background:
-      linear-gradient(180deg, rgba(7, 8, 7, 0.78), rgba(7, 8, 7, 0.88) 42%, rgba(7, 8, 7, 0.96)),
+      linear-gradient(
+        180deg,
+        rgba(7, 8, 7, 0.78),
+        rgba(7, 8, 7, 0.88) 42%,
+        rgba(7, 8, 7, 0.96)
+      ),
       linear-gradient(90deg, rgba(240, 185, 11, 0.1), rgba(0, 0, 0, 0.24));
   }
 
@@ -1150,7 +1212,11 @@ select:focus {
 .site-header {
   min-height: 92px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  background: linear-gradient(180deg, rgba(64, 64, 64, 0.96), rgba(28, 28, 28, 0.96));
+  background: linear-gradient(
+    180deg,
+    rgba(64, 64, 64, 0.96),
+    rgba(28, 28, 28, 0.96)
+  );
 }
 
 .brand {
@@ -1216,7 +1282,9 @@ select:focus {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-6px);
-  transition: opacity 160ms ease, transform 160ms ease;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
 }
 
 .account-dropdown-button {
@@ -1259,7 +1327,9 @@ select:focus {
   inset: 0;
   opacity: 0;
   transform: scale(1.04);
-  transition: opacity 400ms ease, transform 700ms ease;
+  transition:
+    opacity 400ms ease,
+    transform 700ms ease;
 }
 
 .banner-slide-active {
@@ -1321,8 +1391,18 @@ select:focus {
   z-index: 3;
   content: "";
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.14) 45%, rgba(0, 0, 0, 0.52)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.34) 78%, rgba(8, 10, 7, 0.82));
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.62),
+      rgba(0, 0, 0, 0.14) 45%,
+      rgba(0, 0, 0, 0.52)
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.34) 78%,
+      rgba(8, 10, 7, 0.82)
+    );
 }
 
 .banner-overlay {
@@ -1386,16 +1466,31 @@ select:focus {
 .hero-embed-section::before {
   z-index: 0;
   background:
-    linear-gradient(90deg, rgba(5, 6, 5, 0.78), rgba(5, 6, 5, 0.48) 50%, rgba(5, 6, 5, 0.78)),
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 5, 0.78),
+      rgba(5, 6, 5, 0.48) 50%,
+      rgba(5, 6, 5, 0.78)
+    ),
     linear-gradient(180deg, rgba(10, 13, 8, 0.58), rgba(0, 0, 0, 0.68));
 }
 
 .hero-embed-section::after {
   z-index: 0;
   background:
-    radial-gradient(circle at 72% 22%, rgba(240, 185, 11, 0.16), transparent 30%),
+    radial-gradient(
+      circle at 72% 22%,
+      rgba(240, 185, 11, 0.16),
+      transparent 30%
+    ),
     linear-gradient(135deg, rgba(89, 104, 61, 0.18), transparent 42%),
-    linear-gradient(180deg, rgba(8, 10, 7, 0.62), transparent 18%, transparent 76%, rgba(9, 10, 8, 0.74));
+    linear-gradient(
+      180deg,
+      rgba(8, 10, 7, 0.62),
+      transparent 18%,
+      transparent 76%,
+      rgba(9, 10, 8, 0.74)
+    );
   mix-blend-mode: screen;
   opacity: 0.72;
 }
@@ -1499,7 +1594,8 @@ select:focus {
 .auth-page {
   min-height: calc(100vh - 92px);
   padding: clamp(44px, 7vw, 86px) clamp(18px, 4vw, 64px);
-  background: linear-gradient(135deg, rgba(240, 185, 11, 0.12), transparent 34%), #070707;
+  background:
+    linear-gradient(135deg, rgba(240, 185, 11, 0.12), transparent 34%), #070707;
 }
 
 .page-hero,
@@ -1554,7 +1650,12 @@ select:focus {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.9)),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.82),
+      rgba(0, 0, 0, 0.34),
+      rgba(0, 0, 0, 0.9)
+    ),
     linear-gradient(180deg, rgba(240, 185, 11, 0.14), transparent 42%);
   pointer-events: none;
 }
@@ -1635,7 +1736,11 @@ select:focus {
   left: 0;
   width: 78px;
   height: 78px;
-  background: linear-gradient(135deg, rgba(89, 109, 50, 0.82), rgba(44, 59, 29, 0.58));
+  background: linear-gradient(
+    135deg,
+    rgba(89, 109, 50, 0.82),
+    rgba(44, 59, 29, 0.58)
+  );
   clip-path: polygon(0 0, 100% 0, 72% 48%, 38% 48%, 0 100%);
 }
 
@@ -1710,7 +1815,12 @@ select:focus {
   width: 100%;
   height: 1px;
   margin: 22px auto 20px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.24),
+    transparent
+  );
 }
 
 .register-step-card p {
@@ -2114,9 +2224,15 @@ select:focus {
   min-height: 0;
   overflow: hidden;
   border: 1px solid rgba(240, 185, 11, 0.28);
-  background: linear-gradient(180deg, rgba(22, 22, 22, 0.98), rgba(8, 8, 8, 0.98));
+  background: linear-gradient(
+    180deg,
+    rgba(22, 22, 22, 0.98),
+    rgba(8, 8, 8, 0.98)
+  );
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
-  transition: border-color 160ms ease, transform 160ms ease;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
 }
 
 .event-banner-card:hover {
@@ -2135,7 +2251,9 @@ select:focus {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 600ms ease, filter 600ms ease;
+  transition:
+    transform 600ms ease,
+    filter 600ms ease;
 }
 
 .event-banner-card-force-of-conquest .event-card-image {
@@ -2247,7 +2365,11 @@ select:focus {
   gap: 14px;
   padding: clamp(20px, 4vw, 30px);
   border: 1px solid rgba(240, 185, 11, 0.24);
-  background: linear-gradient(180deg, rgba(22, 22, 22, 0.97), rgba(8, 8, 8, 0.97));
+  background: linear-gradient(
+    180deg,
+    rgba(22, 22, 22, 0.97),
+    rgba(8, 8, 8, 0.97)
+  );
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
 }
 
@@ -2454,7 +2576,11 @@ select:focus {
 
 .auth-panel {
   border: 1px solid rgba(240, 185, 11, 0.28);
-  background: linear-gradient(180deg, rgba(22, 22, 22, 0.96), rgba(8, 8, 8, 0.96));
+  background: linear-gradient(
+    180deg,
+    rgba(22, 22, 22, 0.96),
+    rgba(8, 8, 8, 0.96)
+  );
   padding: clamp(24px, 5vw, 48px);
 }
 
@@ -2515,8 +2641,8 @@ select:focus {
   color: var(--white);
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   background:
-      linear-gradient(180deg, rgba(240, 185, 11, 0.12), transparent 56%),
-      linear-gradient(180deg, #686868, #303030);
+    linear-gradient(180deg, rgba(240, 185, 11, 0.12), transparent 56%),
+    linear-gradient(180deg, #686868, #303030);
 }
 
 .footer-brand {
@@ -2568,7 +2694,11 @@ select:focus {
   min-height: calc(100vh - 92px);
   overflow-x: clip;
   background:
-    radial-gradient(circle at 12% 18%, rgba(75, 104, 45, 0.18), transparent 32%),
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(75, 104, 45, 0.18),
+      transparent 32%
+    ),
     linear-gradient(180deg, #080a07, #040404 42%, #080907);
 }
 
@@ -2590,7 +2720,12 @@ select:focus {
   inset: 0;
   content: "";
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.36) 48%, rgba(0, 0, 0, 0.76)),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.88),
+      rgba(0, 0, 0, 0.36) 48%,
+      rgba(0, 0, 0, 0.76)
+    ),
     linear-gradient(180deg, rgba(8, 13, 7, 0.28), rgba(0, 0, 0, 0.86));
 }
 
@@ -2755,7 +2890,10 @@ select:focus {
 
 .event-timeline-card {
   display: grid;
-  grid-template-columns: minmax(84px, 0.22fr) minmax(180px, 0.56fr) minmax(0, 1fr);
+  grid-template-columns: minmax(84px, 0.22fr) minmax(180px, 0.56fr) minmax(
+      0,
+      1fr
+    );
   gap: clamp(14px, 3vw, 32px);
   align-items: start;
   min-width: 0;
@@ -2916,7 +3054,12 @@ select:focus {
   color: var(--white);
   text-decoration: none;
   background-image:
-    linear-gradient(90deg, rgba(3, 5, 3, 0.88), rgba(3, 5, 3, 0.42) 48%, rgba(3, 5, 3, 0.82)),
+    linear-gradient(
+      90deg,
+      rgba(3, 5, 3, 0.88),
+      rgba(3, 5, 3, 0.42) 48%,
+      rgba(3, 5, 3, 0.82)
+    ),
     linear-gradient(180deg, rgba(3, 5, 3, 0.16), rgba(3, 5, 3, 0.76)),
     var(--event-info-background);
   background-position: center 44%;
@@ -2976,13 +3119,19 @@ select:focus {
   background-size: cover;
   color: var(--white);
   text-decoration: none;
-  transition: filter 180ms ease, transform 180ms ease;
+  transition:
+    filter 180ms ease,
+    transform 180ms ease;
 }
 
 .event-info-page {
   min-height: calc(100vh - 92px);
   background:
-    radial-gradient(circle at 10% 8%, rgba(105, 125, 69, 0.12), transparent 30%),
+    radial-gradient(
+      circle at 10% 8%,
+      rgba(105, 125, 69, 0.12),
+      transparent 30%
+    ),
     linear-gradient(180deg, #070906, #030403 56%, #080a07);
 }
 
@@ -2995,7 +3144,8 @@ select:focus {
   gap: 16px;
   width: min(1160px, 100%);
   margin: 0 auto;
-  padding: clamp(70px, 10vw, 126px) clamp(18px, 4vw, 24px) clamp(42px, 7vw, 76px);
+  padding: clamp(70px, 10vw, 126px) clamp(18px, 4vw, 24px)
+    clamp(42px, 7vw, 76px);
 }
 
 .event-info-hero h1 {
@@ -3176,7 +3326,11 @@ select:focus {
   place-items: center;
   padding: clamp(64px, 10vw, 120px) clamp(18px, 5vw, 48px);
   background:
-    radial-gradient(circle at 50% 20%, rgba(116, 137, 72, 0.16), transparent 38%),
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(116, 137, 72, 0.16),
+      transparent 38%
+    ),
     linear-gradient(180deg, #080a07, #020302);
 }
 
@@ -3246,13 +3400,10 @@ select:focus {
 .sponsor-page {
   display: grid;
   gap: clamp(54px, 7vw, 112px);
-  padding: clamp(44px, 6vw, 76px) clamp(28px, 5.5vw, 88px) clamp(70px, 8vw, 112px);
+  padding: clamp(44px, 6vw, 76px) clamp(28px, 5.5vw, 88px)
+    clamp(70px, 8vw, 112px);
   color: #171717;
-  background:
-    linear-gradient(90deg, rgba(30, 30, 30, 0.025) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(30, 30, 30, 0.022) 1px, transparent 1px),
-    #f6f5ef;
-  background-size: 52px 52px, 52px 52px, auto;
+  background: #f8f6ef;
 }
 
 .sponsor-page,
@@ -3331,6 +3482,12 @@ select:focus {
   height: clamp(30px, 2.8vw, 44px);
   max-width: 24%;
   stroke-width: 2.05;
+}
+
+.sponsor-pill-image-icon {
+  display: block;
+  object-fit: contain;
+  object-position: center;
 }
 
 .sponsor-card-icon,
@@ -3591,7 +3748,8 @@ select:focus {
 
 .sponsor-audience-card {
   min-height: clamp(180px, 14vw, 220px);
-  padding: clamp(36px, 3.5vw, 54px) clamp(26px, 3vw, 34px) clamp(28px, 3vw, 40px);
+  padding: clamp(36px, 3.5vw, 54px) clamp(26px, 3vw, 34px)
+    clamp(28px, 3vw, 40px);
 }
 
 .sponsor-card h3,
@@ -3633,7 +3791,8 @@ select:focus {
 .sponsor-section-stats .sponsor-card {
   gap: 14px;
   min-height: 292px;
-  padding: clamp(42px, 3.4vw, 56px) clamp(20px, 2.2vw, 30px) clamp(28px, 2.4vw, 38px);
+  padding: clamp(42px, 3.4vw, 56px) clamp(20px, 2.2vw, 30px)
+    clamp(28px, 2.4vw, 38px);
   border: 2px solid rgba(56, 174, 234, 0.68);
   border-radius: 24px;
   background: #fffdfa;
@@ -3707,7 +3866,8 @@ select:focus {
 .sponsor-section-threeCards .sponsor-card {
   gap: 14px;
   min-height: 272px;
-  padding: clamp(38px, 3.3vw, 50px) clamp(26px, 3vw, 40px) clamp(28px, 3vw, 38px);
+  padding: clamp(38px, 3.3vw, 50px) clamp(26px, 3vw, 40px)
+    clamp(28px, 3vw, 38px);
 }
 
 .sponsor-section-threeCards .sponsor-card-icon {
@@ -3732,14 +3892,7 @@ select:focus {
 }
 
 .sponsor-section-steps .sponsor-card-grid-three::before {
-  position: absolute;
-  top: 154px;
-  right: 17%;
-  left: 17%;
-  z-index: 0;
-  height: 1px;
-  content: "";
-  background: #38aeea;
+  display: none;
 }
 
 .sponsor-section-steps .sponsor-card {
@@ -3751,6 +3904,18 @@ select:focus {
   border: 2px solid #38aeea;
   border-radius: 22px;
   background: transparent;
+}
+
+.sponsor-section-steps .sponsor-card:not(:last-child)::after {
+  position: absolute;
+  top: 13px;
+  left: calc(100% + 8px);
+  z-index: 0;
+  width: calc(clamp(48px, 6vw, 86px) - 16px);
+  height: 2px;
+  content: "";
+  background: #38aeea;
+  pointer-events: none;
 }
 
 .sponsor-section-steps .sponsor-card-band {
@@ -3917,7 +4082,11 @@ select:focus {
   text-transform: uppercase;
   background:
     linear-gradient(135deg, rgba(112, 135, 75, 0.14), transparent 48%),
-    repeating-linear-gradient(135deg, transparent 0 20px, rgba(255, 255, 255, 0.018) 20px 21px);
+    repeating-linear-gradient(
+      135deg,
+      transparent 0 20px,
+      rgba(255, 255, 255, 0.018) 20px 21px
+    );
 }
 
 .event-info-copy {
@@ -4065,7 +4234,12 @@ select:focus {
   inset: 0;
   content: "";
   background:
-    linear-gradient(90deg, rgba(3, 5, 3, 0.82), rgba(3, 5, 3, 0.4) 48%, rgba(3, 5, 3, 0.76)),
+    linear-gradient(
+      90deg,
+      rgba(3, 5, 3, 0.82),
+      rgba(3, 5, 3, 0.4) 48%,
+      rgba(3, 5, 3, 0.76)
+    ),
     linear-gradient(180deg, rgba(3, 6, 3, 0.34), rgba(0, 0, 0, 0.62));
   pointer-events: none;
 }
@@ -4075,7 +4249,11 @@ select:focus {
   inset: 0;
   content: "";
   background:
-    radial-gradient(circle at 18% 24%, rgba(240, 185, 11, 0.16), transparent 30%),
+    radial-gradient(
+      circle at 18% 24%,
+      rgba(240, 185, 11, 0.16),
+      transparent 30%
+    ),
     linear-gradient(135deg, rgba(240, 185, 11, 0.08), transparent 42%);
   mix-blend-mode: screen;
   opacity: 0.7;
@@ -4132,7 +4310,11 @@ select:focus {
   margin-top: 4px;
   padding: 12px 18px;
   border: 1px solid rgba(240, 185, 11, 0.68);
-  background: linear-gradient(180deg, rgba(240, 185, 11, 0.96), rgba(184, 132, 0, 0.96));
+  background: linear-gradient(
+    180deg,
+    rgba(240, 185, 11, 0.96),
+    rgba(184, 132, 0, 0.96)
+  );
   color: #070806 !important;
   font-family: "Rajdhani", "Barlow Condensed", "Arial Narrow", sans-serif;
   font-size: clamp(0.88rem, 1.2vw, 1rem) !important;
@@ -4165,7 +4347,8 @@ select:focus {
   gap: 14px;
   width: min(1100px, 100%);
   margin: 0 auto;
-  padding: clamp(68px, 10vw, 128px) clamp(18px, 4vw, 24px) clamp(34px, 6vw, 64px);
+  padding: clamp(68px, 10vw, 128px) clamp(18px, 4vw, 24px)
+    clamp(34px, 6vw, 64px);
 }
 
 .mission-page-hero h1 {
@@ -4217,7 +4400,10 @@ select:focus {
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
 }
 
 .mission-language-toggle button:hover,
@@ -4228,7 +4414,11 @@ select:focus {
 
 .mission-language-toggle button.is-active {
   border-color: rgba(240, 185, 11, 0.88);
-  background: linear-gradient(180deg, rgba(240, 185, 11, 0.95), rgba(176, 126, 0, 0.95));
+  background: linear-gradient(
+    180deg,
+    rgba(240, 185, 11, 0.95),
+    rgba(176, 126, 0, 0.95)
+  );
   color: #070806;
 }
 
@@ -4510,7 +4700,11 @@ select:focus {
 .event-detail-main,
 .event-detail-sidebar {
   border: 1px solid rgba(240, 185, 11, 0.28);
-  background: linear-gradient(180deg, rgba(22, 22, 22, 0.97), rgba(8, 8, 8, 0.97));
+  background: linear-gradient(
+    180deg,
+    rgba(22, 22, 22, 0.97),
+    rgba(8, 8, 8, 0.97)
+  );
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
 }
 
@@ -4567,8 +4761,7 @@ select:focus {
 .checkout-page-shell {
   color: #171717;
   background:
-    linear-gradient(180deg, rgba(240, 185, 11, 0.07), transparent 18%),
-    #f7f5ef;
+    linear-gradient(180deg, rgba(240, 185, 11, 0.07), transparent 18%), #f7f5ef;
 }
 
 .checkout-page {
@@ -5543,7 +5736,8 @@ select:focus {
 
   .sponsor-page {
     gap: clamp(64px, 8vw, 92px);
-    padding: clamp(40px, 5vw, 60px) clamp(28px, 5vw, 52px) clamp(64px, 8vw, 88px);
+    padding: clamp(40px, 5vw, 60px) clamp(28px, 5vw, 52px)
+      clamp(64px, 8vw, 88px);
   }
 
   .sponsor-section {
@@ -5788,6 +5982,55 @@ select:focus {
   }
 }
 
+/* Sponsor page clean-background, pill-icon, and connector-line fix. */
+.sponsor-page {
+  background: #f8f6ef;
+}
+
+.sponsor-page .sponsor-pill {
+  width: fit-content;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.sponsor-page .sponsor-pill-image-icon {
+  display: block;
+  flex: 0 0 auto;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+.sponsor-section-steps .sponsor-card-grid-three::before {
+  display: none;
+}
+
+.sponsor-section-steps .sponsor-card:not(:last-child)::after {
+  position: absolute;
+  top: 13px;
+  left: calc(100% + 8px);
+  z-index: 0;
+  width: calc(clamp(48px, 6vw, 86px) - 16px);
+  height: 2px;
+  content: "";
+  background: #38aeea;
+  pointer-events: none;
+}
+
+@media (max-width: 1199px) {
+  .sponsor-section-steps .sponsor-card:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .sponsor-page .sponsor-pill {
+    width: fit-content;
+    max-width: calc(100vw - 48px);
+    white-space: normal;
+  }
+}
+
 /* Sponsor page responsive correction pass. */
 .sponsor-page .sponsor-section-header {
   display: flex;
@@ -5908,7 +6151,8 @@ select:focus {
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .sponsor-page {
-    padding: clamp(40px, 5vw, 60px) clamp(24px, 4vw, 44px) clamp(64px, 8vw, 88px);
+    padding: clamp(40px, 5vw, 60px) clamp(24px, 4vw, 44px)
+      clamp(64px, 8vw, 88px);
   }
 
   .sponsor-section-header {
@@ -5959,7 +6203,8 @@ select:focus {
   .sponsor-section-threeCards .sponsor-card,
   .sponsor-section-steps .sponsor-card {
     min-height: auto;
-    padding: clamp(34px, 4vw, 46px) clamp(24px, 3.5vw, 36px) clamp(28px, 3.2vw, 38px);
+    padding: clamp(34px, 4vw, 46px) clamp(24px, 3.5vw, 36px)
+      clamp(28px, 3.2vw, 38px);
   }
 
   .sponsor-section-steps .sponsor-card {
@@ -6098,5 +6343,34 @@ select:focus {
   .sponsor-benefit-check {
     top: 0.08em;
     left: 0;
+  }
+}
+
+/* Final sponsor page overrides for clean deck background and safe connectors. */
+.sponsor-page {
+  background: #f8f6ef;
+  background-image: none;
+}
+
+.sponsor-page .sponsor-pill-image-icon {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+.sponsor-section-steps .sponsor-card-grid-three::before {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .sponsor-section-steps .sponsor-card:not(:last-child)::after {
+    display: block;
+  }
+}
+
+@media (max-width: 1199px) {
+  .sponsor-section-steps .sponsor-card:not(:last-child)::after {
+    display: none;
   }
 }
