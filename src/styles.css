@@ -3695,7 +3695,7 @@ select:focus {
 }
 
 .sponsor-card-grid-two {
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
 }
 
 .sponsor-card-grid-three {
@@ -3861,6 +3861,13 @@ select:focus {
 .sponsor-card-icon {
   width: clamp(46px, 4vw, 64px);
   height: clamp(46px, 4vw, 64px);
+}
+
+.sponsor-card-image-icon {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
 }
 
 .sponsor-section-threeCards .sponsor-card {
@@ -6070,7 +6077,7 @@ select:focus {
 .sponsor-page .sponsor-benefit-item p,
 .sponsor-page .sponsor-open-copy p,
 .sponsor-page .sponsor-bullet-list li {
-  overflow-wrap: normal;
+  overflow-wrap: break-word;
   word-break: normal;
 }
 
@@ -6353,6 +6360,13 @@ select:focus {
 }
 
 .sponsor-page .sponsor-pill-image-icon {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+.sponsor-page .sponsor-card-image-icon {
   display: block;
   object-fit: contain;
   object-position: center;

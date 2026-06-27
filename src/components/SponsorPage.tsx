@@ -216,11 +216,73 @@ function getPillIconPath(section: SponsorSection): string | undefined {
       return "/images/sponsor/icons/vendor-booth.png";
     case "MEDIA INVENTORY":
       return "/images/sponsor/icons/media-player.png";
+    case "SPONSORSHIP":
+      return "/images/sponsor/icons/hand-shake.png";
     case "PARTNER VALUE":
       return "/images/sponsor/icons/hand-shake.png";
     default:
       return undefined;
   }
+}
+
+function getCardIconPath(
+  section: SponsorSection,
+  card: SponsorFeatureCard,
+): string | undefined {
+  if (section.id === "mobile-player-branding") {
+    switch (card.title) {
+      case "Mobile Assets":
+        return "/images/sponsor/icons/mobile-assets-bus.png";
+      case "Player Kit":
+        return "/images/sponsor/icons/player-kit-tools.png";
+      case "Equipment Box":
+        return "/images/sponsor/icons/equipment-box.png";
+      default:
+        return undefined;
+    }
+  }
+
+  if (section.id === "main-stage-led-screen") {
+    return "/images/sponsor/icons/premium-visibility-stage.png";
+  }
+
+  if (section.id === "venue-signage-media") {
+    switch (card.title) {
+      case "Physical Media Points":
+        return "/images/sponsor/icons/physical-media-points-flag.png";
+      case "Direct Placement Benefits":
+        return "/images/sponsor/icons/direct-placement-benefits-blue.png";
+      default:
+        return undefined;
+    }
+  }
+
+  if (
+    section.id === "food-beverage-zone" &&
+    card.title === "Who is this for?"
+  ) {
+    return "/images/sponsor/icons/food-beverage-orange.png";
+  }
+
+  if (
+    section.id === "tactical-service-zone" &&
+    card.title === "Who is this for?"
+  ) {
+    return "/images/sponsor/icons/tactical-service-gear-orange.png";
+  }
+
+  if (
+    section.id === "tactical-service-zone" &&
+    card.title === "Core Operations Advantages"
+  ) {
+    return "/images/sponsor/icons/core-operations-advantages-orange.png";
+  }
+
+  if (section.tone === "orange" && card.icon === "growth") {
+    return "/images/sponsor/icons/core-operations-advantages-orange.png";
+  }
+
+  return undefined;
 }
 
 function getCardIcon(icon?: string): SponsorIconName | undefined {
@@ -316,10 +378,12 @@ function ImageFrame({ section }: { section: SponsorSection }) {
 }
 
 function CardGrid({
+  section,
   cards,
   columns = "two",
   showStepNumbers = false,
 }: {
+  section: SponsorSection;
   cards?: SponsorFeatureCard[];
   columns?: "two" | "three" | "four";
   showStepNumbers?: boolean;
@@ -328,28 +392,40 @@ function CardGrid({
 
   return (
     <div className={`sponsor-card-grid sponsor-card-grid-${columns}`}>
-      {cards.map((card, index) => (
-        <article className="sponsor-card" key={card.title}>
-          <span className="sponsor-card-band" aria-hidden="true" />
-          {getCardIcon(card.icon) && (
-            <SponsorIcon
-              name={getCardIcon(card.icon)!}
-              className="sponsor-card-icon"
-            />
-          )}
-          {card.stat && (
-            <strong className="sponsor-card-stat">{card.stat}</strong>
-          )}
-          <h3>{card.title}</h3>
-          {card.body && <p>{card.body}</p>}
-          <BulletList items={card.bullets} />
-          {showStepNumbers && (
-            <span className="sponsor-step-number" aria-hidden="true">
-              {index + 1}
-            </span>
-          )}
-        </article>
-      ))}
+      {cards.map((card, index) => {
+        const cardIconPath = getCardIconPath(section, card);
+        const cardIcon = getCardIcon(card.icon);
+
+        return (
+          <article className="sponsor-card" key={card.title}>
+            <span className="sponsor-card-band" aria-hidden="true" />
+            {cardIconPath ? (
+              <img
+                className="sponsor-card-icon sponsor-card-image-icon"
+                src={getPublicAssetPath(cardIconPath)}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+              />
+            ) : (
+              cardIcon && (
+                <SponsorIcon name={cardIcon} className="sponsor-card-icon" />
+              )
+            )}
+            {card.stat && (
+              <strong className="sponsor-card-stat">{card.stat}</strong>
+            )}
+            <h3>{card.title}</h3>
+            {card.body && <p>{card.body}</p>}
+            <BulletList items={card.bullets} />
+            {showStepNumbers && (
+              <span className="sponsor-step-number" aria-hidden="true">
+                {index + 1}
+              </span>
+            )}
+          </article>
+        );
+      })}
     </div>
   );
 }
@@ -404,7 +480,7 @@ function RetailSection({ section }: { section: SponsorSection }) {
       <article className="sponsor-open-copy">
         <h3>{section.rightTitle}</h3>
         {section.body && <p>{section.body}</p>}
-        <CardGrid cards={section.cards} columns="two" />
+        <CardGrid section={section} cards={section.cards} columns="two" />
       </article>
     </div>
   );
@@ -426,7 +502,7 @@ function ImageListSection({ section }: { section: SponsorSection }) {
 function CardImageSection({ section }: { section: SponsorSection }) {
   return (
     <div className="sponsor-image-text-layout sponsor-card-image-layout">
-      <CardGrid cards={section.cards} columns="two" />
+      <CardGrid section={section} cards={section.cards} columns="two" />
       <ImageFrame section={section} />
     </div>
   );
@@ -452,19 +528,30 @@ function renderSectionBody(section: SponsorSection) {
     case "imageText":
       return <ImageTextSection section={section} />;
     case "twoCards":
-      return <CardGrid cards={section.cards} columns="two" />;
+      return <CardGrid section={section} cards={section.cards} columns="two" />;
     case "retail":
       return <RetailSection section={section} />;
     case "stats":
-      return <CardGrid cards={section.cards} columns="four" />;
+      return (
+        <CardGrid section={section} cards={section.cards} columns="four" />
+      );
     case "imageList":
       return <ImageListSection section={section} />;
     case "cardImage":
       return <CardImageSection section={section} />;
     case "threeCards":
-      return <CardGrid cards={section.cards} columns="three" />;
+      return (
+        <CardGrid section={section} cards={section.cards} columns="three" />
+      );
     case "steps":
-      return <CardGrid cards={section.cards} columns="three" showStepNumbers />;
+      return (
+        <CardGrid
+          section={section}
+          cards={section.cards}
+          columns="three"
+          showStepNumbers
+        />
+      );
     case "benefits":
       return <BenefitsSection section={section} />;
     default:
