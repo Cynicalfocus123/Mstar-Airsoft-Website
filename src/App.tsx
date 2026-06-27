@@ -43,6 +43,7 @@ function getRoute() {
     const section = path.slice(1) || 'home';
     const routeSlug = section.split('/')[0];
     const slugAliases: Record<string, string> = {
+      'privacy-policy': 'privacy',
       'ship-your-equipment': 'equipment',
       accommodation: 'accommodation-and-campground',
       'travel-preparation': 'how-to-get-to-the-event',
