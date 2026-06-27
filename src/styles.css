@@ -3308,6 +3308,7 @@ select:focus {
   letter-spacing: 0;
   line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .sponsor-svg-icon {
@@ -3533,6 +3534,24 @@ select:focus {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.sponsor-section-stats {
+  width: min(1720px, 100%);
+}
+
+.sponsor-section-stats .sponsor-section-header {
+  grid-template-columns: 22px minmax(0, 1fr) minmax(280px, auto);
+}
+
+.sponsor-section-stats .sponsor-pill {
+  min-width: 300px;
+  padding-inline: 34px;
+}
+
+.sponsor-section-stats .sponsor-card-grid-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 32px);
+}
+
 .sponsor-card {
   position: relative;
   display: grid;
@@ -3593,6 +3612,38 @@ select:focus {
   white-space: nowrap;
 }
 
+.sponsor-section-stats .sponsor-card {
+  gap: 14px;
+  min-height: 310px;
+  padding: clamp(42px, 3.4vw, 58px) clamp(24px, 2.5vw, 34px) clamp(28px, 2.4vw, 40px);
+  border: 1px solid rgba(56, 174, 234, 0.28);
+  border-radius: 24px;
+  background: #fffdfa;
+}
+
+.sponsor-section-stats .sponsor-card-band {
+  height: 22px;
+  border-radius: 24px 24px 0 0;
+}
+
+.sponsor-section-stats .sponsor-card-stat {
+  color: #1598dc;
+  font-size: clamp(2.4rem, 2.8vw, 3.7rem);
+  line-height: 0.95;
+}
+
+.sponsor-section-stats .sponsor-card h3 {
+  color: #111111;
+  font-size: clamp(1.18rem, 1.35vw, 1.52rem);
+  line-height: 1.08;
+  white-space: nowrap;
+}
+
+.sponsor-section-stats .sponsor-card p {
+  font-size: clamp(1rem, 1.05vw, 1.18rem);
+  line-height: 1.42;
+}
+
 .sponsor-image-frame {
   overflow: hidden;
   aspect-ratio: 16 / 9;
@@ -3634,8 +3685,30 @@ select:focus {
   height: clamp(46px, 4vw, 64px);
 }
 
+.sponsor-section-threeCards .sponsor-card {
+  gap: 14px;
+  min-height: 292px;
+  padding-top: clamp(42px, 3.6vw, 56px);
+}
+
+.sponsor-section-threeCards .sponsor-card-icon {
+  width: clamp(40px, 3vw, 50px);
+  height: clamp(40px, 3vw, 50px);
+  stroke-width: 1.9;
+}
+
+.sponsor-section-threeCards .sponsor-card h3 {
+  margin-top: 2px;
+}
+
+.sponsor-section-threeCards .sponsor-card p {
+  font-size: clamp(1rem, 1.22vw, 1.28rem);
+  line-height: 1.4;
+}
+
 .sponsor-section-steps .sponsor-card-grid-three {
   position: relative;
+  gap: clamp(26px, 3vw, 44px);
   padding-top: 48px;
 }
 
@@ -3644,14 +3717,44 @@ select:focus {
   top: 22px;
   right: 16.5%;
   left: 16.5%;
-  height: 3px;
+  z-index: 0;
+  height: 2px;
   content: "";
-  background: var(--sponsor-accent);
+  background: rgba(56, 174, 234, 0.42);
 }
 
-.sponsor-step-number {
+.sponsor-section-steps .sponsor-card {
+  z-index: 1;
+  gap: 16px;
+  min-height: 285px;
+  overflow: visible;
+  padding: 64px clamp(26px, 2.6vw, 38px) clamp(30px, 3vw, 42px);
+  border: 2px solid rgba(56, 174, 234, 0.72);
+  border-radius: 22px;
+  background: #fffefa;
+}
+
+.sponsor-section-steps .sponsor-card-band {
+  display: none;
+}
+
+.sponsor-section-steps .sponsor-card h3 {
+  color: #1598dc;
+  font-size: clamp(1.32rem, 1.65vw, 1.72rem);
+  text-align: center;
+}
+
+.sponsor-section-steps .sponsor-card .sponsor-bullet-list {
+  gap: 9px;
+  padding-left: 1.1em;
+  color: #111111;
+  font-size: clamp(1rem, 1.2vw, 1.22rem);
+  line-height: 1.36;
+}
+
+.sponsor-section-steps .sponsor-step-number {
   position: absolute;
-  top: -48px;
+  top: -26px;
   left: 50%;
   display: inline-flex;
   align-items: center;
@@ -3660,9 +3763,11 @@ select:focus {
   height: 46px;
   border-radius: 999px;
   color: #ffffff;
-  background: var(--sponsor-accent);
+  background: #1598dc;
+  box-shadow: 0 0 0 8px #f6f5ef;
   font-weight: 800;
   transform: translateX(-50%);
+  z-index: 2;
 }
 
 .sponsor-benefit-grid {

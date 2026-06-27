@@ -127,7 +127,7 @@ export const siteContent: SiteContent = {
           links: [
             {
               label: 'Thai Registration Form',
-              href: 'https://docs.google.com/forms/d/e/1FAIpQLSco2e7dI8zymqGzfB1xcLm3jejRSn27WplT3FFmxPi7M0I_hg/viewform',
+              href: 'https://docs.google.com/forms/d/e/1FAIpQLSdzq8BfEIQPQ5O79T7kOH-LHvzQA8q5TyXdaSRgA2ZwUg9eGQ/viewform',
             },
             {
               label: 'English Registration Form',

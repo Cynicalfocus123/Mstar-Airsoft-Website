@@ -91,19 +91,20 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
     case 'handshake':
       return (
         <svg {...commonProps}>
-          <path d="m8.5 12.5 2.2 2.2c.8.8 2 .8 2.8 0l.5-.5" />
-          <path d="m14 14.2 1.2 1.2c.8.8 2.1.8 2.9-.1l2.3-2.5" />
-          <path d="m3.7 12.9 2.3 2.4c.8.9 2.1.9 2.9.1l4.6-4.6 1.4 1.4c.7.7 1.8.7 2.5 0 .8-.8.7-2-.1-2.7L14.5 7H11L8.5 9.5" />
-          <path d="M2 8.5 5.5 5 9 8.5" />
-          <path d="M22 8.5 18.5 5 15 8.5" />
+          <path d="M7.2 12.6 10 15.4c.7.7 1.8.7 2.5 0l.6-.6" />
+          <path d="m12.9 14.9 1 1c.7.7 1.8.7 2.5 0l3.2-3.2" />
+          <path d="m4 12.1 2.2 2.2c.7.7 1.9.7 2.6 0l4.4-4.4 1.3 1.3c.7.7 1.9.7 2.6 0 .7-.7.7-1.8 0-2.5L14.5 6h-3L8.8 8.7" />
+          <path d="M2.8 8.2 5.8 5.2l3 3" />
+          <path d="m21.2 8.2-3-3-3 3" />
         </svg>
       );
     case 'megaphone':
       return (
         <svg {...commonProps}>
-          <path d="M4 13h3l10 5V6L7 11H4v2Z" />
-          <path d="M7 13v5" />
-          <path d="M17 9.5c1.7.5 3 2 3 3.5s-1.3 3-3 3.5" />
+          <path d="M4 12.8h3.4l9.4 4.7v-11l-9.4 4.7H4v1.6Z" />
+          <path d="M7.4 12.8 8.6 19h3.1l-1.5-4.9" />
+          <path d="M18.9 9.1c.8.7 1.3 1.7 1.3 2.9s-.5 2.2-1.3 2.9" />
+          <path d="M21.3 6.8c1.2 1.4 1.9 3.2 1.9 5.2s-.7 3.8-1.9 5.2" />
         </svg>
       );
     case 'screen':
@@ -143,12 +144,11 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
     case 'tools':
       return (
         <svg {...commonProps}>
-          <path d="m14.6 6.4 3-3 2.8 2.8-3 3" />
-          <path d="m13 8 3 3" />
-          <path d="M4 20 15.2 8.8" />
-          <path d="m7.5 5.5 2 2" />
-          <path d="M4 4l6 6" />
-          <path d="m3.5 20.5 4-1 11-11" />
+          <path d="M4 20 15.7 8.3" />
+          <path d="m14.6 5.7 2.5-2.5 3.1 3.1-2.5 2.5" />
+          <path d="m13.2 7.1 3.7 3.7" />
+          <path d="M5.8 4.2 9.2 7.6" />
+          <path d="M4.2 5.8 7.6 9.2" />
         </svg>
       );
     case 'users':
@@ -165,10 +165,10 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
     case 'vehicle':
       return (
         <svg {...commonProps}>
-          <path d="M4 16V7.5C4 6.1 5.1 5 6.5 5H14l3.5 5H20v6" />
-          <path d="M4 12h13" />
-          <path d="M7 18.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-          <path d="M17 18.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+          <path d="M3.8 15.7V8.4c0-1.2 1-2.2 2.2-2.2h7.3l3 4.1h3.9v5.4" />
+          <path d="M3.8 11.2h12.5" />
+          <path d="M7.2 18.2a2 2 0 1 0 0-4.1 2 2 0 0 0 0 4.1Z" />
+          <path d="M17.2 18.2a2 2 0 1 0 0-4.1 2 2 0 0 0 0 4.1Z" />
         </svg>
       );
     case 'video':
@@ -185,11 +185,12 @@ function SponsorIcon({ name, className = '' }: { name: SponsorIconName; classNam
 }
 
 function getSectionIcon(section: SponsorSection): SponsorIconName {
-  if (section.tone === 'green') return 'search';
-  if (section.tone === 'red') return 'check';
   if (section.pillText === 'SPONSORSHIP') return 'handshake';
   if (section.pillText === 'CAMPAIGN REACH') return 'megaphone';
+  if (section.pillText === 'PARTNER VALUE') return 'handshake';
   if (section.pillText === 'MEDIA INVENTORY') return 'video';
+  if (section.tone === 'green') return 'search';
+  if (section.tone === 'red') return 'check';
   return 'storefront';
 }
 
@@ -268,7 +269,15 @@ function ImageFrame({ section }: { section: SponsorSection }) {
   );
 }
 
-function CardGrid({ cards, columns = 'two' }: { cards?: SponsorFeatureCard[]; columns?: 'two' | 'three' | 'four' }) {
+function CardGrid({
+  cards,
+  columns = 'two',
+  showStepNumbers = false,
+}: {
+  cards?: SponsorFeatureCard[];
+  columns?: 'two' | 'three' | 'four';
+  showStepNumbers?: boolean;
+}) {
   if (!cards?.length) return null;
 
   return (
@@ -281,7 +290,7 @@ function CardGrid({ cards, columns = 'two' }: { cards?: SponsorFeatureCard[]; co
           <h3>{card.title}</h3>
           {card.body && <p>{card.body}</p>}
           <BulletList items={card.bullets} />
-          {columns === 'three' && <span className="sponsor-step-number" aria-hidden="true">{index + 1}</span>}
+          {showStepNumbers && <span className="sponsor-step-number" aria-hidden="true">{index + 1}</span>}
         </article>
       ))}
     </div>
@@ -395,7 +404,7 @@ function renderSectionBody(section: SponsorSection) {
     case 'threeCards':
       return <CardGrid cards={section.cards} columns="three" />;
     case 'steps':
-      return <CardGrid cards={section.cards} columns="three" />;
+      return <CardGrid cards={section.cards} columns="three" showStepNumbers />;
     case 'benefits':
       return <BenefitsSection section={section} />;
     default:
