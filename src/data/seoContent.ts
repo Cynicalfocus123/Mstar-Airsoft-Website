@@ -109,9 +109,10 @@ const eventSchema = {
   image: [defaultImage],
   location: {
     '@type': 'Place',
-    name: 'Mstar Jungle Land',
+    name: 'Saraburi, Thailand',
     address: {
       '@type': 'PostalAddress',
+      addressRegion: 'Saraburi',
       addressCountry: 'TH',
     },
   },
@@ -316,7 +317,7 @@ export const seoContent: Record<string, SeoEntry> = {
   '/become-a-sponsor': makeSeo({
     path: '/become-a-sponsor',
     title: 'Become a Sponsor | Force of Conquest 2027',
-    description: 'Sponsor opportunities for Force of Conquest 2027 are coming soon.',
+    description: 'Explore Force of Conquest 2027 sponsor and vendor program sections for event scale, commercial zones, food and beverage, and retail airsoft marketplace opportunities.',
   }),
   '/contact': makeSeo({
     path: '/contact',
@@ -460,6 +461,7 @@ export const sitemapRoutes = [
   { path: '/what-to-do-in-thailand', priority: '0.7' },
   { path: '/travel-preparation', priority: '0.7' },
   { path: '/become-a-vendor', priority: '0.7' },
+  { path: '/become-a-sponsor', priority: '0.7' },
   { path: '/terms-and-conditions', priority: '0.6' },
   { path: '/cancellation-and-refund', priority: '0.6' },
   { path: '/privacy', priority: '0.6' },

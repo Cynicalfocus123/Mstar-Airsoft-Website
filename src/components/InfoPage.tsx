@@ -13,7 +13,6 @@ const unboxedPolicySlugs = new Set([
   'cancellation-and-refund',
   'privacy',
   'complaints',
-  'become-a-sponsor',
   'equipment',
   'how-to-get-to-the-event',
   'immigration-visa',

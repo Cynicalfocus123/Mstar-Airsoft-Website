@@ -181,7 +181,7 @@ export const siteContent: SiteContent = {
       title: 'Force of Conquest',
       date: 'Jan 8-10, 2027',
       time: '09:00 AM - 05:30 PM',
-      location: 'Mstar Jungle Land, Thailand',
+      location: 'Saraburi, Thailand',
       entryFee: 'EUR 120 Pre Sale',
       teams: 'Alpha Coalition vs Bravo Unit',
       attendance: '2,000 players',
@@ -203,7 +203,7 @@ export const siteContent: SiteContent = {
           'Players will move through jungle terrain, natural cover, and coordinated objective zones designed for organized squad communication, fair play, and sustained tactical decision-making.',
         detailRows: [
           { label: 'Date', value: 'January 8-10, 2027' },
-          { label: 'Location', value: 'Mstar Jungle Land, Thailand' },
+          { label: 'Location', value: 'Saraburi, Thailand' },
           { label: 'Registration', value: 'Open' },
           { label: 'Format', value: 'Large-scale airsoft operation' },
           { label: 'Entry', value: 'Ticket required' },
@@ -373,7 +373,7 @@ export const siteContent: SiteContent = {
                   infoRows: [
                     { label: 'Event', value: 'Force of Conquest 2027' },
                     { label: 'Date', value: 'January 8-10, 2027' },
-                    { label: 'Location', value: 'Saraburi Province, Thailand' },
+                    { label: 'Location', value: 'Saraburi, Thailand' },
                     { label: 'Event Duration', value: '3 Days / 2 Nights' },
                     { label: 'Battlefield', value: 'Over 100 Acres of Natural Rainforest Terrain' },
                     { label: 'Game Format', value: 'Multi-Faction Military Simulation Campaign' },
@@ -2024,24 +2024,6 @@ export const siteContent: SiteContent = {
       ],
     },
     {
-      slug: 'become-a-sponsor',
-      eyebrow: 'Force of Conquest 2027',
-      title: 'Become a Sponsor',
-      description: 'Sponsor opportunities for Force of Conquest 2027 are coming soon.',
-      sections: [
-        {
-          id: 'become-a-sponsor-overview',
-          title: 'BECOME A SPONSOR',
-          paragraphs: [
-            'Sponsor opportunities for Force of Conquest 2027 are coming soon.',
-          ],
-          links: [
-            { label: 'CONTACT MSTAR AIRSOFT', href: 'mailto:info@mstarairsoft.com' },
-          ],
-        },
-      ],
-    },
-    {
       slug: 'complaints',
       eyebrow: 'Support',
       title: 'Complaints',
@@ -2116,6 +2098,100 @@ export const siteContent: SiteContent = {
     ],
     buttonLabel: 'Open Vendor Application Form',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScIAKOLoJzT32QE8tl61qmdrfBoKZ3gmKlLgZ0_pW-XBboaSw/viewform',
+  },
+  sponsorPage: {
+    scopeSection: {
+      heading: 'Unparalleled Scope & Scale',
+      pillText: 'EVENT OVERVIEW',
+      leftTitle: 'Event Highlights',
+      bullets: [
+        '160 Rai Arena: Expansive 256,000 sq.m. professional game zone.',
+        'International Competition: Top-tier global tactical teams competing.',
+        'Massive Vendor Village: Dedicated tactical and F&B marketplace areas.',
+        'Brand Exhibition Zones: Leading regional & international weapon makers.',
+      ],
+      rightTitle: 'Target Audience Profile',
+      cards: [
+        {
+          title: 'Tactical Community',
+          body: 'Active players, collectors, & gear enthusiasts.',
+          iconLabel: 'TC',
+        },
+        {
+          title: 'Outdoor Enthusiasts',
+          body: 'Military simulation collectors & survival lifestyle fans.',
+          iconLabel: 'OE',
+        },
+        {
+          title: 'General Public',
+          body: 'Local families, regional spectators, and visitors.',
+          iconLabel: 'GP',
+        },
+        {
+          title: 'Global Media',
+          body: 'Content creators, specialized sports media & international press.',
+          iconLabel: 'GM',
+        },
+      ],
+    },
+    vendorSection: {
+      heading: 'Vendor & Commercial Zones',
+      pillText: 'VENDOR PROGRAM',
+      contentTitle: 'Diverse Commercial Spaces',
+      body: 'Position your brand directly at the heart of user excitement. Multiple designated areas cater to diverse vendor types to keep the traffic flow constantly high.',
+      bullets: [
+        'Premium Retail Hubs: Gun stores, tactical apparel, gear shops.',
+        'F&B Concessions: Major food trucks, beverage booths, quick service.',
+        'Technical Services: Custom repair garages, parts stations, upgrades.',
+      ],
+      imagePath: '/images/events/force-of-conquest/facilities-food-vendors.webp',
+      imageAlt: 'Night market food and vendor area with event guests',
+    },
+    foodSection: {
+      heading: 'Food & Beverage Zone',
+      pillText: 'VENDOR PROGRAM',
+      cards: [
+        {
+          title: 'Who is this for?',
+          bullets: [
+            'Food Booths',
+            'Beverage Stands',
+            'Mobile Coffee Bar',
+            'Desert & Sweets',
+            'Ice Cream Carts',
+            'Convenience Corner',
+          ],
+        },
+        {
+          title: 'F&B Benefits & Projections',
+          bullets: [
+            'Constant Foot Traffic: Continuous flow of active hungry/thirsty gamers.',
+            'Repeat Purchases: Multi-day event requires continuous hydration & nutrition.',
+            'Longer Stay Times: Chill lounge zones next to the stage drive food sales.',
+          ],
+        },
+      ],
+    },
+    retailSection: {
+      heading: 'Retail & Airsoft Marketplace',
+      pillText: 'VENDOR PROGRAM',
+      imagePath: '/images/events/force-of-conquest/c7ddb663-e7b8-47e9-8063-e4e8730a1ffb.jfif',
+      imageAlt: 'Airsoft player aiming a tactical replica with mounted optics',
+      contentTitle: 'Prime Tactical Market',
+      body: 'Meet the largest gathering of highly passionate, high-budget airsoft weapon collectors and gear buyers in the ASEAN region.',
+      cards: [
+        {
+          title: 'Launchpad',
+          body: 'Unveil new weapon variants & accessories directly to core fans.',
+          iconLabel: 'LP',
+        },
+        {
+          title: 'Direct Sales',
+          body: 'High ticket purchase conversion rate on unique gears.',
+          iconLabel: 'DS',
+        },
+      ],
+    },
   },
   signIn: {
     title: 'SIGN IN',

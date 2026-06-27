@@ -376,6 +376,53 @@ export interface VendorPageContent {
   sponsorLink?: NavLink;
 }
 
+export interface SponsorAudienceCard {
+  title: string;
+  body: string;
+  iconLabel: string;
+}
+
+export interface SponsorFeatureCard {
+  title: string;
+  body?: string;
+  bullets?: string[];
+  iconLabel?: string;
+}
+
+export interface SponsorPageContent {
+  scopeSection: {
+    heading: string;
+    pillText: string;
+    leftTitle: string;
+    bullets: string[];
+    rightTitle: string;
+    cards: SponsorAudienceCard[];
+  };
+  vendorSection: {
+    heading: string;
+    pillText: string;
+    contentTitle: string;
+    body: string;
+    bullets: string[];
+    imagePath: string;
+    imageAlt: string;
+  };
+  foodSection: {
+    heading: string;
+    pillText: string;
+    cards: SponsorFeatureCard[];
+  };
+  retailSection: {
+    heading: string;
+    pillText: string;
+    imagePath: string;
+    imageAlt: string;
+    contentTitle: string;
+    body: string;
+    cards: SponsorFeatureCard[];
+  };
+}
+
 export interface SiteContent {
   identity: SiteIdentity;
   navLinks: NavLink[];
@@ -392,6 +439,7 @@ export interface SiteContent {
   footerSections: FooterSection[];
   infoPages: InfoPageContent[];
   vendorPage: VendorPageContent;
+  sponsorPage: SponsorPageContent;
   signIn: SignInContent;
   createAccount: CreateAccountContent;
   countryRegions: CountryRegion[];
