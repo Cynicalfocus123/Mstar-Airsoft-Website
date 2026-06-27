@@ -1096,6 +1096,7 @@ export const siteContent: SiteContent = {
         { label: 'Things to Know', href: '/things-to-know' },
         { label: 'Events', href: '/events' },
         { label: 'Become a Vendor', href: '/become-a-vendor' },
+        { label: 'Become a Sponsor', href: '/become-a-sponsor' },
       ],
     },
     {
@@ -2115,7 +2116,6 @@ export const siteContent: SiteContent = {
     ],
     buttonLabel: 'Open Vendor Application Form',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScIAKOLoJzT32QE8tl61qmdrfBoKZ3gmKlLgZ0_pW-XBboaSw/viewform',
-    sponsorLink: { label: 'Become a Sponsor', href: '/become-a-sponsor' },
   },
   signIn: {
     title: 'SIGN IN',
