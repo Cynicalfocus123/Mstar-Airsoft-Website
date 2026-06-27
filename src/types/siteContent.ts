@@ -379,48 +379,43 @@ export interface VendorPageContent {
 export interface SponsorAudienceCard {
   title: string;
   body: string;
-  iconLabel: string;
 }
 
 export interface SponsorFeatureCard {
   title: string;
   body?: string;
   bullets?: string[];
-  iconLabel?: string;
+  stat?: string;
+  icon?: string;
 }
 
 export interface SponsorPageContent {
-  scopeSection: {
+  sections: Array<{
+    id: string;
+    variant:
+      | 'scope'
+      | 'imageText'
+      | 'twoCards'
+      | 'retail'
+      | 'stats'
+      | 'imageList'
+      | 'cardImage'
+      | 'threeCards'
+      | 'steps'
+      | 'benefits';
+    tone: 'green' | 'orange' | 'blue' | 'red';
     heading: string;
     pillText: string;
-    leftTitle: string;
-    bullets: string[];
-    rightTitle: string;
-    cards: SponsorAudienceCard[];
-  };
-  vendorSection: {
-    heading: string;
-    pillText: string;
-    contentTitle: string;
-    body: string;
-    bullets: string[];
-    imagePath: string;
-    imageAlt: string;
-  };
-  foodSection: {
-    heading: string;
-    pillText: string;
-    cards: SponsorFeatureCard[];
-  };
-  retailSection: {
-    heading: string;
-    pillText: string;
-    imagePath: string;
-    imageAlt: string;
-    contentTitle: string;
-    body: string;
-    cards: SponsorFeatureCard[];
-  };
+    leftTitle?: string;
+    rightTitle?: string;
+    body?: string;
+    bullets?: string[];
+    imagePath?: string;
+    imageAlt?: string;
+    cards?: SponsorFeatureCard[];
+    audienceCards?: SponsorAudienceCard[];
+    benefits?: string[];
+  }>;
 }
 
 export interface SiteContent {

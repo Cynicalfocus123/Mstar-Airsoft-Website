@@ -2100,98 +2100,311 @@ export const siteContent: SiteContent = {
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScIAKOLoJzT32QE8tl61qmdrfBoKZ3gmKlLgZ0_pW-XBboaSw/viewform',
   },
   sponsorPage: {
-    scopeSection: {
-      heading: 'Unparalleled Scope & Scale',
-      pillText: 'EVENT OVERVIEW',
-      leftTitle: 'Event Highlights',
-      bullets: [
-        '160 Rai Arena: Expansive 256,000 sq.m. professional game zone.',
-        'International Competition: Top-tier global tactical teams competing.',
-        'Massive Vendor Village: Dedicated tactical and F&B marketplace areas.',
-        'Brand Exhibition Zones: Leading regional & international weapon makers.',
-      ],
-      rightTitle: 'Target Audience Profile',
-      cards: [
-        {
-          title: 'Tactical Community',
-          body: 'Active players, collectors, & gear enthusiasts.',
-          iconLabel: 'TC',
-        },
-        {
-          title: 'Outdoor Enthusiasts',
-          body: 'Military simulation collectors & survival lifestyle fans.',
-          iconLabel: 'OE',
-        },
-        {
-          title: 'General Public',
-          body: 'Local families, regional spectators, and visitors.',
-          iconLabel: 'GP',
-        },
-        {
-          title: 'Global Media',
-          body: 'Content creators, specialized sports media & international press.',
-          iconLabel: 'GM',
-        },
-      ],
-    },
-    vendorSection: {
-      heading: 'Vendor & Commercial Zones',
-      pillText: 'VENDOR PROGRAM',
-      contentTitle: 'Diverse Commercial Spaces',
-      body: 'Position your brand directly at the heart of user excitement. Multiple designated areas cater to diverse vendor types to keep the traffic flow constantly high.',
-      bullets: [
-        'Premium Retail Hubs: Gun stores, tactical apparel, gear shops.',
-        'F&B Concessions: Major food trucks, beverage booths, quick service.',
-        'Technical Services: Custom repair garages, parts stations, upgrades.',
-      ],
-      imagePath: '/images/events/force-of-conquest/facilities-food-vendors.webp',
-      imageAlt: 'Night market food and vendor area with event guests',
-    },
-    foodSection: {
-      heading: 'Food & Beverage Zone',
-      pillText: 'VENDOR PROGRAM',
-      cards: [
-        {
-          title: 'Who is this for?',
-          bullets: [
-            'Food Booths',
-            'Beverage Stands',
-            'Mobile Coffee Bar',
-            'Desert & Sweets',
-            'Ice Cream Carts',
-            'Convenience Corner',
-          ],
-        },
-        {
-          title: 'F&B Benefits & Projections',
-          bullets: [
-            'Constant Foot Traffic: Continuous flow of active hungry/thirsty gamers.',
-            'Repeat Purchases: Multi-day event requires continuous hydration & nutrition.',
-            'Longer Stay Times: Chill lounge zones next to the stage drive food sales.',
-          ],
-        },
-      ],
-    },
-    retailSection: {
-      heading: 'Retail & Airsoft Marketplace',
-      pillText: 'VENDOR PROGRAM',
-      imagePath: '/images/events/force-of-conquest/c7ddb663-e7b8-47e9-8063-e4e8730a1ffb.jfif',
-      imageAlt: 'Airsoft player aiming a tactical replica with mounted optics',
-      contentTitle: 'Prime Tactical Market',
-      body: 'Meet the largest gathering of highly passionate, high-budget airsoft weapon collectors and gear buyers in the ASEAN region.',
-      cards: [
-        {
-          title: 'Launchpad',
-          body: 'Unveil new weapon variants & accessories directly to core fans.',
-          iconLabel: 'LP',
-        },
-        {
-          title: 'Direct Sales',
-          body: 'High ticket purchase conversion rate on unique gears.',
-          iconLabel: 'DS',
-        },
-      ],
-    },
+    sections: [
+      {
+        id: 'scope-scale',
+        variant: 'scope',
+        tone: 'green',
+        heading: 'Unparalleled Scope & Scale',
+        pillText: 'EVENT OVERVIEW',
+        leftTitle: 'Event Highlights',
+        bullets: [
+          '160 Rai Arena: Expansive 256,000 sq.m. professional game zone.',
+          'International Competition: Top-tier global tactical teams competing.',
+          'Massive Vendor Village: Dedicated tactical and F&B marketplace areas.',
+          'Brand Exhibition Zones: Leading regional & international weapon makers.',
+        ],
+        rightTitle: 'Target Audience Profile',
+        audienceCards: [
+          {
+            title: 'Tactical Community',
+            body: 'Active players, collectors, & gear enthusiasts.',
+          },
+          {
+            title: 'Outdoor Enthusiasts',
+            body: 'Military simulation collectors & survival lifestyle fans.',
+          },
+          {
+            title: 'General Public',
+            body: 'Local families, regional spectators, and visitors.',
+          },
+          {
+            title: 'Global Media',
+            body: 'Content creators, specialized sports media & international press.',
+          },
+        ],
+      },
+      {
+        id: 'vendor-commercial-zones',
+        variant: 'imageText',
+        tone: 'orange',
+        heading: 'Vendor & Commercial Zones',
+        pillText: 'VENDOR PROGRAM',
+        leftTitle: 'Diverse Commercial Spaces',
+        body: 'Position your brand directly at the heart of user excitement. Multiple designated areas cater to diverse vendor types to keep the traffic flow constantly high.',
+        bullets: [
+          'Premium Retail Hubs: Gun stores, tactical apparel, gear shops.',
+          'F&B Concessions: Major food trucks, beverage booths, quick service.',
+          'Technical Services: Custom repair garages, parts stations, upgrades.',
+        ],
+        imagePath: '/images/events/force-of-conquest/facilities-food-vendors.webp',
+        imageAlt: 'Night market food and vendor area with event guests',
+      },
+      {
+        id: 'food-beverage-zone',
+        variant: 'twoCards',
+        tone: 'orange',
+        heading: 'Food & Beverage Zone',
+        pillText: 'VENDOR PROGRAM',
+        cards: [
+          {
+            title: 'Who is this for?',
+            icon: 'food',
+            bullets: [
+              'Food Booths',
+              'Beverage Stands',
+              'Mobile Coffee Bar',
+              'Desert & Sweets',
+              'Ice Cream Carts',
+              'Convenience Corner',
+            ],
+          },
+          {
+            title: 'F&B Benefits & Projections',
+            icon: 'growth',
+            bullets: [
+              'Constant Foot Traffic: Continuous flow of active hungry/thirsty gamers.',
+              'Repeat Purchases: Multi-day event requires continuous hydration & nutrition.',
+              'Longer Stay Times: Chill lounge zones next to the stage drive food sales.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'retail-airsoft-marketplace',
+        variant: 'retail',
+        tone: 'orange',
+        heading: 'Retail & Airsoft Marketplace',
+        pillText: 'VENDOR PROGRAM',
+        imagePath: '/images/sponsor/airsoft-retail-gun-wall.png',
+        imageAlt: 'Airsoft retail gun wall display',
+        rightTitle: 'Prime Tactical Market',
+        body: 'Meet the largest gathering of highly passionate, high-budget airsoft weapon collectors and gear buyers in the ASEAN region.',
+        cards: [
+          {
+            title: 'Launchpad',
+            body: 'Unveil new weapon variants & accessories directly to core fans.',
+          },
+          {
+            title: 'Direct Sales',
+            body: 'High ticket purchase conversion rate on unique gears.',
+          },
+        ],
+      },
+      {
+        id: 'tactical-service-zone',
+        variant: 'twoCards',
+        tone: 'orange',
+        heading: 'Tactical Service Zone',
+        pillText: 'VENDOR PROGRAM',
+        cards: [
+          {
+            title: 'Who is this for?',
+            icon: 'service',
+            bullets: [
+              'Gun Repair',
+              'Battery Charging',
+              'Rental Gear',
+              'Massage Stations',
+              'Chronograph Testing',
+              'Locker Storage',
+            ],
+          },
+          {
+            title: 'Core Operations Advantages',
+            icon: 'growth',
+            bullets: [
+              'High Repeated Daily Demand: Players require constant maintenance and storage over a multi-day format.',
+              'Unique Premium Monetization: Highly essential services convert into strong additional revenue points.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'why-sponsor-this-event',
+        variant: 'stats',
+        tone: 'blue',
+        heading: 'Why Sponsor This Event?',
+        pillText: 'SPONSORSHIP',
+        cards: [
+          {
+            stat: '3K-10K+',
+            title: 'Active Participants',
+            body: 'Engaged international and local core airsoft combatants.',
+          },
+          {
+            stat: 'Thousands',
+            title: 'Daily Visitors',
+            body: 'High-intent spectator crowds visiting the festival area daily.',
+          },
+          {
+            stat: 'Millions',
+            title: 'Online Impressions',
+            body: 'Broad streaming reach via popular tactical channels and sponsors.',
+          },
+          {
+            stat: 'Global',
+            title: 'Brand Exposure',
+            body: 'Extensive coverage across major Asian and global airsoft channels.',
+          },
+        ],
+      },
+      {
+        id: 'premium-placements',
+        variant: 'imageList',
+        tone: 'blue',
+        heading: 'Premium Placements',
+        pillText: 'MEDIA INVENTORY',
+        leftTitle: 'Diverse Commercial Spaces',
+        body: 'Gain maximum impact and massive visibility with high-visibility billboard spots across our premium arena locations.',
+        bullets: [
+          'LED Screen',
+          'Main Stage',
+          'Entrance Gate',
+          'Pole Signage',
+          'Flag',
+          'Banner',
+          'Stand Signage',
+          'Street Light',
+          'Vendor Cart',
+          'Player Sticker',
+          'Equipment Branding',
+        ],
+        imagePath: '/images/sponsor/premium-placement-collage.png',
+        imageAlt: 'Sponsorship placement collage across a forest event venue',
+      },
+      {
+        id: 'main-stage-led-screen',
+        variant: 'cardImage',
+        tone: 'blue',
+        heading: 'Main Stage & LED Screen',
+        pillText: 'MEDIA INVENTORY',
+        imagePath: '/images/sponsor/main-stage-led-screen.png',
+        imageAlt: 'Main stage with LED screen showing MSTAR Airsoft branding',
+        cards: [
+          {
+            title: 'Premium Visibility',
+            icon: 'screen',
+            bullets: [
+              'Ultra Large Screen: Run direct visual advertisements and video clips throughout the day.',
+              'Ceremony Placement: Integrate your corporate brand during official winners presentations.',
+              'Global Broadcasting: Visual placement during match-wide digital online streaming.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'venue-signage-media',
+        variant: 'twoCards',
+        tone: 'blue',
+        heading: 'Venue Signage Media',
+        pillText: 'MEDIA INVENTORY',
+        cards: [
+          {
+            title: 'Physical Media Points',
+            icon: 'flag',
+            bullets: [
+              'Road Pole Signs & Stand Signs',
+              'Direction & Wayfinding Signs',
+              'Flying Flags & Entry Gates',
+            ],
+          },
+          {
+            title: 'Direct Placement Benefits',
+            icon: 'growth',
+            bullets: [
+              '100% Sightline saturation during main events',
+              'Thousands of high value photography moments',
+              'Highly organic logo sharing on social platforms',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'mobile-player-branding',
+        variant: 'threeCards',
+        tone: 'blue',
+        heading: 'Mobile & Player Branding',
+        pillText: 'MEDIA INVENTORY',
+        cards: [
+          {
+            title: 'Mobile Assets',
+            icon: 'vehicle',
+            body: 'Branding applied directly across shuttle vehicles, cargo golf carts, and venue carts crossing the 160 Rai field daily.',
+          },
+          {
+            title: 'Player Kit',
+            icon: 'tools',
+            body: 'Include corporate logos directly on player badges, wristbands, tactical helmet wraps, and arm patches.',
+          },
+          {
+            title: 'Equipment Box',
+            icon: 'box',
+            body: 'Include branding placement across rental boxes, chronometer stations, and custom gun transport cases.',
+          },
+        ],
+      },
+      {
+        id: 'multi-phase-marketing-reach',
+        variant: 'steps',
+        tone: 'blue',
+        heading: 'Multi-Phase Marketing Reach',
+        pillText: 'CAMPAIGN REACH',
+        cards: [
+          {
+            title: 'Before Event',
+            bullets: [
+              'Social Media Campaigns',
+              'Official Website Press',
+              'Active Online Ads',
+            ],
+          },
+          {
+            title: 'During Event',
+            bullets: [
+              'Match Live Streams',
+              'Sponsor Video Ads',
+              'KOL & Influencer tours',
+            ],
+          },
+          {
+            title: 'After Event',
+            bullets: [
+              'Cinematic Highlights',
+              'Global Media Coverage',
+              'Continuous Social Sharing',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'core-business-benefits',
+        variant: 'benefits',
+        tone: 'red',
+        heading: 'Core Business Benefits',
+        pillText: 'PARTNER VALUE',
+        benefits: [
+          'Target Audience Access: Instant direct pathways to prospective tactical buyers.',
+          'High Media Presence: Leverage organic sharing from over 100+ content creators.',
+          'Direct Product Sales: Immediate high product turnover rates inside the expo.',
+          'Distributor Networking: Establish valuable networks with leading retailers globally.',
+          'Live Product Demo: Showcase performance, reliability, and precision live.',
+          'Aesthetic Brand Impact: Connect with positive sporting action and energy.',
+          'Lead Generation: Cultivate rich regional distributor contact lists.',
+          'Guaranteed ROI: Scale high transactional revenue during three active days.',
+        ],
+      },
+    ],
   },
   signIn: {
     title: 'SIGN IN',
