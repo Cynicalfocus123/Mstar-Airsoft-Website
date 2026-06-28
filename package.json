@@ -15,6 +15,7 @@
     "build:cpanel": "tsc -b && vite build --mode cpanel",
     "zip": "node scripts/create-deployment-zip.mjs",
     "zip:deploy": "node scripts/create-deployment-zip.mjs --full",
+    "zip:hostinger-current": "node scripts/create-hostinger-current-deploy.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

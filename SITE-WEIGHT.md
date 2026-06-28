@@ -8,6 +8,22 @@ Live site checked: `https://mstarairsoft.com`
 
 Fresh audit completed after the latest sponsor/media updates.
 
+## 2026-06-28 Clean Hostinger Current Deploy Package
+
+- Created `hostinger-current-deploy-package/` from the fresh root-domain `dist` build using only runtime-referenced deployment files.
+- Created `mstar-airsoft-hostinger-current-deploy.zip` for direct `public_html` extraction.
+- ZIP size: 29.47 MB.
+- Staging size: 29.46 MB.
+- ZIP entries: 85.
+- Runtime references included: 81.
+- Sponsor assets included: 20 files under `images/sponsor/`.
+- Current bundles included: `assets/index-CwCwwbt0.js` and `assets/index-DsCkN_Vt.css`.
+- Stale bundle names excluded: `index-DjVJ79JP`, `index-BIOSmsMW`, `index-BNZIBf1G`, and `index-CXNzadvn`.
+- ZIP root contains `.htaccess`, `index.html`, `robots.txt`, `sitemap.xml`, `assets/`, `banners/`, `images/`, and `videos/`.
+- ZIP inspection confirmed no backslash entries, no nested staging root, no source files, no source maps, no old deploy folders, and no unused `gallery/` or `media/` folders.
+- Staging-folder rendered verification passed 34 desktop/mobile route views, 16 Thai-toggle checks, 152 media references, zero rendered mojibake, and zero missing media.
+- No live upload, DNS, SSL, cPanel, Cloudflare, Stripe, price, form, or visual-design change was performed.
+
 ## 2026-06-28 Sponsor Layout Follow-Up
 
 - Added one missing deploy icon for the Sponsor page Campaign Reach pill: `public/images/sponsor/icons/campaign-reach-megaphone.png` - 77.7 KB.
