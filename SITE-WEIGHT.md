@@ -8,6 +8,14 @@ Live site checked: `https://mstarairsoft.com`
 
 Fresh audit completed after the latest sponsor/media updates.
 
+## 2026-06-28 Sponsor Layout Follow-Up
+
+- Added one missing deploy icon for the Sponsor page Campaign Reach pill: `public/images/sponsor/icons/campaign-reach-megaphone.png` - 77.7 KB.
+- Existing sponsor icon assets were reused and not recopied.
+- Added a data-driven Sponsor CTA and sponsor-scoped responsive CSS only.
+- No new heavy image/video assets were added.
+- No cPanel ZIP or server deployment was created.
+
 | Area | Size |
 | --- | ---: |
 | Full repo | 5,021.16 MB |

@@ -2100,6 +2100,11 @@ export const siteContent: SiteContent = {
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScIAKOLoJzT32QE8tl61qmdrfBoKZ3gmKlLgZ0_pW-XBboaSw/viewform',
   },
   sponsorPage: {
+    cta: {
+      eyebrow: 'Interested in sponsorship opportunities for Force of Conquest 2027?',
+      buttonLabel: 'CONTACT US VIA INFO@MSTARAIRSOFT.COM',
+      href: 'mailto:info@mstarairsoft.com?subject=Sponsor',
+    },
     sections: [
       {
         id: 'scope-scale',

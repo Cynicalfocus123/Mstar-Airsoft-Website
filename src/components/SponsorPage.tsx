@@ -218,6 +218,8 @@ function getPillIconPath(section: SponsorSection): string | undefined {
       return "/images/sponsor/icons/media-player.png";
     case "SPONSORSHIP":
       return "/images/sponsor/icons/hand-shake.png";
+    case "CAMPAIGN REACH":
+      return "/images/sponsor/icons/campaign-reach-megaphone.png";
     case "PARTNER VALUE":
       return "/images/sponsor/icons/hand-shake.png";
     default:
@@ -244,6 +246,17 @@ function getCardIconPath(
 
   if (section.id === "main-stage-led-screen") {
     return "/images/sponsor/icons/premium-visibility-stage.png";
+  }
+
+  if (section.id === "retail-airsoft-marketplace") {
+    switch (card.title) {
+      case "Launchpad":
+        return "/images/sponsor/icons/vendor-stall-orange.png";
+      case "Direct Sales":
+        return "/images/sponsor/icons/core-operations-advantages-orange.png";
+      default:
+        return undefined;
+    }
   }
 
   if (section.id === "venue-signage-media") {
@@ -619,6 +632,12 @@ export function SponsorPage({ content }: SponsorPageProps) {
           {renderSectionBody(section)}
         </section>
       ))}
+      <section className="sponsor-cta-section" aria-labelledby="sponsor-cta-title">
+        <p id="sponsor-cta-title">{content.cta.eyebrow}</p>
+        <a className="sponsor-cta-button" href={content.cta.href}>
+          {content.cta.buttonLabel}
+        </a>
+      </section>
     </main>
   );
 }

@@ -390,6 +390,11 @@ export interface SponsorFeatureCard {
 }
 
 export interface SponsorPageContent {
+  cta: {
+    eyebrow: string;
+    buttonLabel: string;
+    href: string;
+  };
   sections: Array<{
     id: string;
     variant:
