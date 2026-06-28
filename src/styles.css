@@ -3667,6 +3667,39 @@ select:focus {
   transform: rotate(-45deg);
 }
 
+.sponsor-commercial-icon-list {
+  display: grid;
+  gap: clamp(18px, 2.4vw, 30px);
+  margin: 0;
+  padding: 0;
+  color: #111922;
+  font-size: clamp(1.1rem, 1.6vw, 1.78rem);
+  font-weight: 400;
+  line-height: 1.35;
+  list-style: none;
+}
+
+.sponsor-commercial-icon-list li {
+  display: grid;
+  grid-template-columns: clamp(34px, 3.4vw, 46px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(16px, 1.8vw, 24px);
+  min-width: 0;
+}
+
+.sponsor-commercial-row-icon {
+  display: block;
+  width: clamp(34px, 3.4vw, 46px);
+  height: clamp(34px, 3.4vw, 46px);
+  object-fit: contain;
+  object-position: center;
+}
+
+.sponsor-commercial-icon-list span {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
 .sponsor-plain-list {
   padding-left: 40px;
   list-style: disc;

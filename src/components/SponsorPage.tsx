@@ -360,6 +360,49 @@ function BulletList({
   );
 }
 
+function getCommercialZoneIconPath(item: string): string | undefined {
+  if (item.startsWith("Premium Retail Hubs:")) {
+    return "/images/sponsor/icons/vendor-stall-orange.png";
+  }
+
+  if (item.startsWith("F&B Concessions:")) {
+    return "/images/sponsor/icons/food-orange.png";
+  }
+
+  if (item.startsWith("Technical Services:")) {
+    return "/images/sponsor/icons/orange-gear.png";
+  }
+
+  return undefined;
+}
+
+function CommercialZoneIconList({ items }: { items?: string[] }) {
+  if (!items?.length) return null;
+
+  return (
+    <ul className="sponsor-commercial-icon-list">
+      {items.map((item) => {
+        const iconPath = getCommercialZoneIconPath(item);
+
+        return (
+          <li key={item}>
+            {iconPath && (
+              <img
+                className="sponsor-commercial-row-icon"
+                src={getPublicAssetPath(iconPath)}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+              />
+            )}
+            <span>{item}</span>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 function ImageFrame({ section }: { section: SponsorSection }) {
   if (!section.imagePath) return null;
 
@@ -466,7 +509,11 @@ function ImageTextSection({ section }: { section: SponsorSection }) {
       <article className="sponsor-open-copy">
         <h3>{section.leftTitle}</h3>
         {section.body && <p>{section.body}</p>}
-        <BulletList items={section.bullets} className="sponsor-icon-list" />
+        {section.id === "vendor-commercial-zones" ? (
+          <CommercialZoneIconList items={section.bullets} />
+        ) : (
+          <BulletList items={section.bullets} className="sponsor-icon-list" />
+        )}
       </article>
       <ImageFrame section={section} />
     </div>
