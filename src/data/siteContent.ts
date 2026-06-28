@@ -300,7 +300,7 @@ export const siteContent: SiteContent = {
                     'This helps prevent duplicate assignments and ensures all roles fit within the event storyline and operational structure.',
                   ],
                   email: 'info@mstarairsoft.com',
-                  imagePath: '/images/events/force-of-conquest/referee-final-edit.png',
+                  imagePath: '/images/events/force-of-conquest/referee-final-edit.webp',
                   imageAlt: 'Referee wearing a high-visibility vest briefing airsoft players',
                 },
                 {
@@ -502,7 +502,7 @@ export const siteContent: SiteContent = {
                     'ขั้นตอนนี้ช่วยป้องกันการซ้ำซ้อนของบทบาท และทำให้ทุกตำแหน่งสอดคล้องกับเนื้อเรื่องและโครงสร้างการปฏิบัติการของกิจกรรม',
                   ],
                   email: 'info@mstarairsoft.com',
-                  imagePath: '/images/events/force-of-conquest/referee-final-edit.png',
+                  imagePath: '/images/events/force-of-conquest/referee-final-edit.webp',
                   imageAlt: 'กรรมการสวมเสื้อกั๊กสะท้อนแสงกำลังชี้แจงข้อมูลแก่ผู้เล่นแอร์ซอฟต์',
                 },
                 {
@@ -2280,7 +2280,7 @@ export const siteContent: SiteContent = {
           'Player Sticker',
           'Equipment Branding',
         ],
-        imagePath: '/images/sponsor/premium-placement-collage.png',
+        imagePath: '/images/sponsor/premium-placement-collage.webp',
         imageAlt: 'Sponsorship placement collage across a forest event venue',
       },
       {

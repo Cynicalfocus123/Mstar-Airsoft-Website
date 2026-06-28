@@ -4,9 +4,18 @@ import { execFileSync } from 'node:child_process';
 
 const rootDir = process.cwd();
 const distDir = path.join(rootDir, 'dist');
-const args = new Set(process.argv.slice(2));
+const rawArgs = process.argv.slice(2);
+const args = new Set(rawArgs);
 const isFullZip = args.has('--full');
-const outputName = isFullZip ? 'mstar-airsoft-live-deployment.zip' : 'mstar-airsoft-update-deployment.zip';
+const outputArg = rawArgs.find((arg) => arg.startsWith('--output='));
+const outputName = outputArg
+  ? outputArg.slice('--output='.length)
+  : isFullZip
+    ? 'mstar-airsoft-live-deployment.zip'
+    : 'mstar-airsoft-update-deployment.zip';
+if (!/^[A-Za-z0-9._-]+\.zip$/.test(outputName)) {
+  throw new Error(`Unsafe ZIP output filename: ${outputName}`);
+}
 const outputPath = path.join(rootDir, outputName);
 const defaultDiffBase = process.env.DEPLOY_DIFF_BASE || 'HEAD~5';
 
