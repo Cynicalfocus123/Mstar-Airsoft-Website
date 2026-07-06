@@ -136,6 +136,21 @@ export const siteContent: SiteContent = {
           ],
         },
         {
+          id: 'waiver',
+          title: 'Waiver',
+          description: 'Please complete the required waiver form before arrival. Thai and English waiver forms are available.',
+          links: [
+            {
+              label: 'Thai Waiver Form',
+              href: 'https://docs.google.com/forms/d/e/1FAIpQLSenvk_Fx5aci27vj_YhusopCRoAlUIlmJzVecK_i9b4pRRM1w/viewform',
+            },
+            {
+              label: 'English Waiver Form',
+              href: 'https://docs.google.com/forms/d/e/1FAIpQLScXmLtixy3qxsjxh28m2JuXxfqlCSZEFpB7_yqdd-zg4IUAww/viewform',
+            },
+          ],
+        },
+        {
           id: 'authorization-of-supervising-adult',
           title: 'Authorization of a Supervising Adult',
           description: 'Required for participants who need adult authorization. Please complete the correct Thai or English form before arrival.',

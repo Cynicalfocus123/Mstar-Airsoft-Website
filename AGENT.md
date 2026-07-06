@@ -750,6 +750,7 @@ When the user asks for a future deployment ZIP, report:
 - 2026-05-23: Updated the What to Do in Thailand guide again to use the supplied images for Wat Maneewong, Pak Chong, Kaeng Khoi, and Wang Takrai National Park from copied public travel-image assets.
 - 2026-05-23: Updated the What to Do in Thailand guide again so Khao Yai, Kayaking, Nay Hua cafe, Cafe Laura Bar and Restaurant, Kin Do Funk, Jasmine Restaurant, and Montreux Cafe and Farm use the newly supplied local images and naming.
 - 2026-05-23: Removed Products from the header and footer nav, moved About into the Mstar Airsoft footer group, and renamed that footer group from Explore MSTAR to Mstar Airsoft.
+- 2026-07-06: Added the Ticket required-forms Waiver section between Registration Forms and Authorization using the existing data-driven form section config only.
 
 ## Next Steps
 
