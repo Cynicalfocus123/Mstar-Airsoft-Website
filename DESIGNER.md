@@ -2,6 +2,8 @@
 
 ## Design Direction
 
+- The 2026-09-09 Hostinger package is a delivery-only refresh for the existing homepage language video cards. The Thai and English cards keep their current CSS, frame proportions, labels, controls, and responsive presentation; only the YouTube embed destinations changed to the supplied videos. The cPanel-ready ZIP contains the current root-domain runtime output at the archive root with no nested folder, stale bundle, backslash path, or duplicate heavy source-media entry. No visual design, layout, Ticket/Stripe behavior, forms, DNS, SSL, cPanel settings, or live upload changed.
+
 - Bold military/tactical tournament site.
 - Dark base with red, white, black, and military green accents.
 - Professional event-operations feel, not generic landing page.
