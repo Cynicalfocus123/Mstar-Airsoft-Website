@@ -42,12 +42,12 @@ export const siteContent: SiteContent = {
     videos: [
       {
         language: 'Thai Language',
-        embedUrl: 'https://www.youtube.com/embed/VYv1pw_dM1Y?rel=0&modestbranding=1&playsinline=1',
+        embedUrl: 'https://www.youtube.com/embed/VJ8KdjPXB-s?rel=0&modestbranding=1&playsinline=1',
         title: 'Thai Language Video',
       },
       {
         language: 'English Language',
-        embedUrl: 'https://www.youtube.com/embed/c9EP32Ptv2Y?rel=0&modestbranding=1&playsinline=1',
+        embedUrl: 'https://www.youtube.com/embed/get2zuAHT2w?rel=0&modestbranding=1&playsinline=1',
         title: 'English Language Video',
       },
     ],
