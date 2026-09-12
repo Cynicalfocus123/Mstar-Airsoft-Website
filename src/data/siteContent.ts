@@ -73,6 +73,11 @@ export const siteContent: SiteContent = {
     backgroundImagePath: '/images/about-background.webp',
     mobileBackgroundImagePath: '/images/about-background.webp',
   },
+  supportedBy: {
+    title: 'National Thailand Airsoft and Paintball Association',
+    imagePath: '/images/home/national-thailand-airsoft-paintball-association.png',
+    imageAlt: 'National Thailand Airsoft and Paintball Association emblem',
+  },
   ticketPage: {
     eyebrow: '',
     title: 'Ticket',

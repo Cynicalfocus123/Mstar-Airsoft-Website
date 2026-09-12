@@ -2,6 +2,8 @@
 
 ## Design Direction
 
+- The 2026-09-12 homepage support strip sits between About and Game Schedules. It uses the supplied National Thailand Airsoft and Paintball Association emblem, compact uppercase support copy, a single desktop text line, and safe mobile stacking while matching the existing dark, gold-accented home page. The supplied 1454px image is downsampled to a 512px deploy asset for its small display size. No existing section styling or page behavior changed.
+
 - The 2026-09-09 Hostinger package is a delivery-only refresh for the existing homepage language video cards. The Thai and English cards keep their current CSS, frame proportions, labels, controls, and responsive presentation; only the YouTube embed destinations changed to the supplied videos. The cPanel-ready ZIP contains the current root-domain runtime output at the archive root with no nested folder, stale bundle, backslash path, or duplicate heavy source-media entry. No visual design, layout, Ticket/Stripe behavior, forms, DNS, SSL, cPanel settings, or live upload changed.
 
 - Bold military/tactical tournament site.

@@ -58,6 +58,12 @@ export interface AboutContent {
   mobileBackgroundImagePath?: string;
 }
 
+export interface SupportedByContent {
+  title: string;
+  imagePath: string;
+  imageAlt: string;
+}
+
 export interface TicketPackageItem {
   label: string;
   price: string;
@@ -429,6 +435,7 @@ export interface SiteContent {
   heroSlides: HeroSlide[];
   hero: HeroContent;
   about: AboutContent;
+  supportedBy: SupportedByContent;
   ticketPage: TicketPageContent;
   events: EventCard[];
   eventCountdown: EventCountdownContent;
