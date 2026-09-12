@@ -158,9 +158,9 @@ export default function App() {
       {isHome && (
         <main>
           <BannerSlider slides={siteContent.heroSlides} />
+          <SupportedBy content={siteContent.supportedBy} />
           <Hero content={siteContent.hero} />
           <About content={siteContent.about} />
-          <SupportedBy content={siteContent.supportedBy} />
           <Events events={siteContent.events.slice(0, 3)} viewAllHref="/events" countdown={siteContent.eventCountdown} />
           <GameTerrain content={siteContent.gameTerrain} />
         </main>

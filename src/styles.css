@@ -554,7 +554,7 @@ textarea {
 .supported-by-label {
   margin: 0;
   color: var(--gold);
-  font-size: 0.68rem;
+  font-size: clamp(0.7rem, 1.3vw, 0.84rem);
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
