@@ -2477,6 +2477,53 @@ select:focus {
   gap: 14px;
 }
 
+.rules-language-toggle {
+  width: 100%;
+  margin: 0;
+}
+
+.rules-fps-table-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid rgba(240, 185, 11, 0.2);
+  border-bottom: 1px solid rgba(240, 185, 11, 0.2);
+}
+
+.rules-fps-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e9e0c8;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.rules-fps-table th,
+.rules-fps-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(240, 185, 11, 0.14);
+  text-align: left;
+  vertical-align: top;
+}
+
+.rules-fps-table thead th {
+  color: var(--gold);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.rules-fps-table th:last-child,
+.rules-fps-table td {
+  text-align: right;
+}
+
+.rules-fps-table tbody tr:last-child th,
+.rules-fps-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.rules-fps-note strong {
+  color: var(--gold);
+}
+
 .policy-language-toggle {
   display: flex;
   flex-wrap: wrap;
@@ -5591,6 +5638,47 @@ select:focus {
   .event-info-language-toggle button {
     width: 100%;
     min-width: 0;
+  }
+
+  .rules-fps-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .rules-fps-table,
+  .rules-fps-table tbody,
+  .rules-fps-table tr,
+  .rules-fps-table th,
+  .rules-fps-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .rules-fps-table tr {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(240, 185, 11, 0.14);
+  }
+
+  .rules-fps-table th,
+  .rules-fps-table td {
+    padding: 0;
+    border: 0;
+    text-align: left;
+  }
+
+  .rules-fps-table td {
+    margin-top: 4px;
+    color: var(--gold);
+    font-weight: 900;
+  }
+
+  .rules-fps-table tbody tr:last-child {
+    border-bottom: 0;
   }
 
   .event-info-sections {

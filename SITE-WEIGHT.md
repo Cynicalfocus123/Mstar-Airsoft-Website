@@ -6,6 +6,13 @@ Live site checked: `https://mstarairsoft.com`
 
 ## Summary
 
+## 2026-09-13 Rules bilingual FPS update
+
+- Updated typed source/content and global CSS only; no media or package added.
+- `/rules-and-regulation` now uses existing Event Info language-button styling, English default, client-side English/Thai switching, and UTF-8 Thai copy.
+- FPS is directly after the Rules introduction and before Safety & Protective Gear Requirements. Desktop shows a semantic two-column table; narrow screens stack each row without horizontal scrolling.
+- A fresh build regenerates `dist/` from current source. Build/type/lint/test availability is recorded with the task verification.
+
 Fresh audit completed after the latest sponsor/media updates.
 
 ## 2026-06-28 Clean Hostinger Current Deploy Package

@@ -94,15 +94,69 @@ export function InfoPage({ content }: InfoPageProps) {
   }, [content.slug, content.languageVersions]);
 
   const activeLanguage = content.languageVersions?.find((language) => language.id === activeLanguageId) ?? content.languageVersions?.[0];
+  const activeEyebrow = activeLanguage?.eyebrow ?? content.eyebrow;
+  const activePageTitle = activeLanguage?.pageTitle ?? content.title;
+  const activeDescription = activeLanguage?.description ?? content.description;
   const isDefaultLanguage = Boolean(activeLanguage && activeLanguage.id === content.languageVersions?.[0]?.id);
   const visibleSections = isDefaultLanguage && content.sections ? content.sections : activeLanguage?.sections ?? content.sections;
+  const isRulesPage = content.slug === 'rules-and-regulation';
   const policyClassName = [
     'policy-layout',
-    content.slug === 'rules-and-regulation' ? 'policy-layout-rules' : '',
+    isRulesPage ? 'policy-layout-rules' : '',
     unboxedPolicySlugs.has(content.slug) ? 'policy-layout-plain' : '',
     content.slug === 'contact' ? 'policy-layout-contact' : '',
     content.slug === 'accommodation-and-campground' ? 'policy-layout-accommodation' : '',
   ].filter(Boolean).join(' ');
+
+  const renderSections = (sections: InfoSection[]) => sections.map((section) => (
+    <article className="policy-section" key={section.id}>
+      <h2 className={isActivityPage && section.id === 'activity-overview' ? 'activity-section-heading' : undefined}>
+        {isActivityPage && section.id === 'activity-overview' ? (
+          <>
+            <span>Activities</span>
+            <span className="activity-section-heading-amp">&amp;</span>
+            <span>Entertainment Experience</span>
+          </>
+        ) : section.title}
+      </h2>
+      {renderPolicyItems(section)}
+      {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+      {section.table && (
+        <div className="rules-fps-table-wrap">
+          <table className="rules-fps-table">
+            <thead>
+              <tr>{section.table.headers.map((header) => <th key={header} scope="col">{header}</th>)}</tr>
+            </thead>
+            <tbody>
+              {section.table.rows.map(([role, weight]) => (
+                <tr key={`${role}-${weight}`}><th scope="row">{role}</th><td>{weight}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      {section.note && <p className="rules-fps-note"><strong>{section.note.label}</strong> {section.note.text}</p>}
+      {section.images && (
+        <div className="policy-image-grid">
+          {section.images.map((image) => (
+            <figure className="policy-image-card" key={image.src}>
+              <img src={getPublicAssetPath(image.src)} alt={image.alt} loading="lazy" />
+              {image.title && <figcaption>{image.title}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      )}
+      {section.bullets && <ul className="policy-bullet-list">{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}
+      {section.links && (
+        <ul className="policy-link-list">
+          {section.links.map((link) => {
+            const safeHref = getSafeInfoLinkHref(link.href);
+            return safeHref ? <li key={link.href}><a href={safeHref}>{link.label}</a></li> : null;
+          })}
+        </ul>
+      )}
+    </article>
+  ));
 
   return (
     <main className="page-shell">
@@ -110,9 +164,9 @@ export function InfoPage({ content }: InfoPageProps) {
         <section
           className={`page-hero ${content.heroAlign === 'center' ? 'page-hero-centered' : ''} ${content.sections ? 'page-hero-legal' : ''} ${content.slug === 'things-to-know' ? 'page-hero-guide-index' : ''} ${content.slug === 'accommodation-and-campground' ? 'page-hero-accommodation' : ''}`}
         >
-          <p className="eyebrow">{content.eyebrow}</p>
-          <h1>{content.title}</h1>
-          {content.description && <p>{content.description}</p>}
+          <p className="eyebrow">{activeEyebrow}</p>
+          <h1>{activePageTitle}</h1>
+          {activeDescription && <p>{activeDescription}</p>}
         </section>
       )}
       {content.cards && (
@@ -150,7 +204,7 @@ export function InfoPage({ content }: InfoPageProps) {
           })}
         </section>
       )}
-      {content.languageVersions && (
+      {content.languageVersions && !isRulesPage && (
         <div className="policy-language-toggle" aria-label={`${content.title} language`}>
           {content.languageVersions.map((language) => (
             <button
@@ -171,53 +225,21 @@ export function InfoPage({ content }: InfoPageProps) {
           aria-label={content.title}
           lang={activeLanguage?.lang}
         >
-          {visibleSections.map((section) => (
-            <article className="policy-section" key={section.id}>
-              <h2 className={isActivityPage && section.id === 'activity-overview' ? 'activity-section-heading' : undefined}>
-                {isActivityPage && section.id === 'activity-overview' ? (
-                  <>
-                    <span>Activities</span>
-                    <span className="activity-section-heading-amp">&amp;</span>
-                    <span>Entertainment Experience</span>
-                  </>
-                ) : section.title}
-              </h2>
-              {renderPolicyItems(section)}
-              {section.paragraphs?.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-              {section.images && (
-                <div className="policy-image-grid">
-                  {section.images.map((image) => (
-                    <figure className="policy-image-card" key={image.src}>
-                      <img src={getPublicAssetPath(image.src)} alt={image.alt} loading="lazy" />
-                      {image.title && <figcaption>{image.title}</figcaption>}
-                    </figure>
+          {isRulesPage ? (
+            <>
+              {renderSections(visibleSections.slice(0, 1))}
+              {content.languageVersions && (
+                <div className="event-info-language-toggle rules-language-toggle" aria-label={`${content.title} language`}>
+                  {content.languageVersions.map((language) => (
+                    <button aria-pressed={language.id === activeLanguage?.id} className={language.id === activeLanguage?.id ? 'is-active' : ''} key={language.id} onClick={() => setActiveLanguageId(language.id)} type="button">
+                      {language.label}
+                    </button>
                   ))}
                 </div>
               )}
-              {section.bullets && (
-                <ul className="policy-bullet-list">
-                  {section.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              )}
-              {section.links && (
-                <ul className="policy-link-list">
-                  {section.links.map((link) => {
-                    const safeHref = getSafeInfoLinkHref(link.href);
-
-                    return safeHref ? (
-                      <li key={link.href}>
-                        <a href={safeHref}>{link.label}</a>
-                      </li>
-                    ) : null;
-                  })}
-                </ul>
-              )}
-            </article>
-          ))}
+              {renderSections(visibleSections.slice(1))}
+            </>
+          ) : renderSections(visibleSections)}
         </section>
       )}
     </main>

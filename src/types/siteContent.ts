@@ -352,12 +352,23 @@ export interface InfoSection {
     alt: string;
     title?: string;
   }>;
+  table?: {
+    headers: [string, string];
+    rows: Array<[string, string]>;
+  };
+  note?: {
+    label: string;
+    text: string;
+  };
 }
 
 export interface InfoLanguageVersion {
   id: string;
   label: string;
   lang: string;
+  eyebrow?: string;
+  pageTitle?: string;
+  description?: string;
   sections: InfoSection[];
 }
 
