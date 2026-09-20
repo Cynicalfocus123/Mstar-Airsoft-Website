@@ -241,6 +241,8 @@ When the user asks for a future deployment ZIP, report:
 
 ## Current Task Log
 
+- 2026-09-21: Replaced only the bilingual Event Info map artwork with the supplied `site content/new map 2.png`, keeping the existing `force-of-conquest-event-map-updated.png` runtime path and fluid no-crop layout. Re-optimized the 1448x1086 image as a palette PNG at 903,894 bytes, rebuilt the site, and prepared a changes-only deployment ZIP; no content, routes, CSS, payment controls, or unrelated deployment assets changed.
+
 - 2026-09-20: Updated all runtime location content from the previous province to `Phetchaburi, Thailand` across English and Thai event cards, event details, Event Info, Mission Scenario, travel guidance, and SEO metadata. Replaced the tracked Event Info map artwork with the supplied Phetchaburi map, optimized it as a palette PNG, and kept the existing fluid, auto-height map treatment safe for desktop, tablet, and mobile. Added async image decoding for Event Info media. Built and prepared a changes-only Hostinger overwrite ZIP; no live upload, DNS, SSL, cPanel settings, payment controls, or unrelated deployment assets changed.
 
 - 2026-09-13: Updated only `/rules-and-regulation` with the existing Event Info-style ENGLISH/THAI selector. The source stays data-driven in `src/data/siteContent.ts`; English is default, switches without reload, and Thai uses UTF-8-safe page content. Added FPS directly after the introduction and before Safety & Protective Gear Requirements, with responsive semantic table rows that stack on narrow screens. Updated `src/components/InfoPage.tsx`, `src/types/siteContent.ts`, and `src/styles.css`; build, TypeScript, and available checks run before commit.

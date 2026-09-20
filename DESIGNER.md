@@ -2,6 +2,8 @@
 
 ## Design Direction
 
+- The 2026-09-21 Event Info map-only update keeps the existing open dark section, bilingual data path, fluid width, intrinsic height, and no-crop behavior. It swaps in supplied `new map 2.png` artwork, re-optimized as a 1448x1086 palette PNG at 903,894 bytes; all other page visuals and interactions remain unchanged.
+
 - The 2026-09-20 location/map update changes the visible event location to `Phetchaburi, Thailand` in English and Thai content, including the travel guide and SEO data. Event Info keeps the unboxed dark-background map section but now uses the supplied Phetchaburi map artwork as an optimized palette PNG with fluid width, intrinsic height, no crop/stretch, and safe desktop/tablet/mobile behavior. Event Info media uses async decoding; header, footer, ticket/payment surfaces, and unrelated page layouts stay unchanged.
 
 - The 2026-09-13 Rules-page update reuses the Event Info ENGLISH/THAI button treatment: gold solid active state, outlined inactive state, 44px touch target, keyboard focus, and two-column mobile layout. FPS sits after Rules introduction and before Safety & Protective Gear Requirements on the existing unboxed dark/gold rule layout. Its semantic table uses clean dividers and switches to readable stacked rows on narrow screens; Thai uses existing safe font/wrapping rules. Header, navigation, footer, and other pages stay unchanged.
@@ -313,6 +315,8 @@ When the user asks for a future deployment ZIP, report:
 - Commit memory files with the related code/design change.
 
 ## Current Design Log
+
+- 2026-09-21: Swapped only the bilingual Force of Conquest Event Info map to the supplied `new map 2.png`. Preserved the existing same-path optimized PNG delivery, open dark-background presentation, natural aspect ratio, and desktop/tablet/mobile behavior. No layout, route, content, navigation, payment, or unrelated media changes were made. Prepared a changes-only deployment ZIP after the production build; no live upload was performed.
 
 - 2026-06-25: Refined only the requested Force of Conquest, travel, footer, and vendor surfaces after the required memory-file read. Mandatory Dress Code now layers a small responsive faction logo at the top-left of each camouflage banner, with transparent edge-connected backgrounds removed from the supplied artwork so the marks sit directly on woodland and tiger-stripe textures; logos use `object-fit: contain`, remain separate from the bottom-aligned faction text, and scale from desktop to mobile without clipping or overflow. The Force of Conquest hero now presents one balanced gold `Buy Ticket Now` action with the secondary `View Rules` action removed. Travel Preparation no longer has two placeholder cards and now presents the complete How to Get to the Event guide through the shared route alias. The footer Mstar Airsoft column includes Become a Vendor. The new vendor page uses a centered dark tactical panel, oversized white title, restrained gold divider/section heading, readable application copy, and a prominent gold Google Form action that remains mobile-safe. Desktop and 390px responsive checks confirmed contained logos, readable text, healthy routes, no horizontal overflow, no framework overlay, and unchanged Ticket/Stripe presentation. No cPanel ZIP or real server deployment was created.
 
