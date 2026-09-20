@@ -2,6 +2,8 @@
 
 ## Design Direction
 
+- The 2026-09-20 location/map update changes the visible event location to `Phetchaburi, Thailand` in English and Thai content, including the travel guide and SEO data. Event Info keeps the unboxed dark-background map section but now uses the supplied Phetchaburi map artwork as an optimized palette PNG with fluid width, intrinsic height, no crop/stretch, and safe desktop/tablet/mobile behavior. Event Info media uses async decoding; header, footer, ticket/payment surfaces, and unrelated page layouts stay unchanged.
+
 - The 2026-09-13 Rules-page update reuses the Event Info ENGLISH/THAI button treatment: gold solid active state, outlined inactive state, 44px touch target, keyboard focus, and two-column mobile layout. FPS sits after Rules introduction and before Safety & Protective Gear Requirements on the existing unboxed dark/gold rule layout. Its semantic table uses clean dividers and switches to readable stacked rows on narrow screens; Thai uses existing safe font/wrapping rules. Header, navigation, footer, and other pages stay unchanged.
 
 - The 2026-09-12 homepage support strip sits between the ticket hero and the two language video cards. It uses a transparent cropped 768px deploy copy of the supplied National Thailand Airsoft and Paintball Association logo, compact uppercase support copy matched to the video heading scale, a single desktop text line, and safe mobile stacking while matching the existing dark, gold-accented home page. Only the logo is clickable and it links to `https://thaiairsoft.org/`; the CSS no longer adds a second circle around the original mark. No existing section styling or page behavior changed.

@@ -201,7 +201,7 @@ export const siteContent: SiteContent = {
       title: 'Force of Conquest',
       date: 'Jan 8-10, 2027',
       time: '09:00 AM - 05:30 PM',
-      location: 'Saraburi, Thailand',
+      location: 'Phetchaburi, Thailand',
       entryFee: 'EUR 120 Pre Sale',
       teams: 'Alpha Coalition vs Bravo Unit',
       attendance: '2,000 players',
@@ -223,7 +223,7 @@ export const siteContent: SiteContent = {
           'Players will move through jungle terrain, natural cover, and coordinated objective zones designed for organized squad communication, fair play, and sustained tactical decision-making.',
         detailRows: [
           { label: 'Date', value: 'January 8-10, 2027' },
-          { label: 'Location', value: 'Saraburi, Thailand' },
+          { label: 'Location', value: 'Phetchaburi, Thailand' },
           { label: 'Registration', value: 'Open' },
           { label: 'Format', value: 'Large-scale airsoft operation' },
           { label: 'Entry', value: 'Ticket required' },
@@ -393,7 +393,7 @@ export const siteContent: SiteContent = {
                   infoRows: [
                     { label: 'Event', value: 'Force of Conquest 2027' },
                     { label: 'Date', value: 'January 8-10, 2027' },
-                    { label: 'Location', value: 'Saraburi, Thailand' },
+                    { label: 'Location', value: 'Phetchaburi, Thailand' },
                     { label: 'Event Duration', value: '3 Days / 2 Nights' },
                     { label: 'Battlefield', value: 'Over 100 Acres of Natural Rainforest Terrain' },
                     { label: 'Game Format', value: 'Multi-Faction Military Simulation Campaign' },
@@ -487,7 +487,7 @@ export const siteContent: SiteContent = {
                   subtitle: 'ประสบการณ์ Airsoft MilSim ที่ยิ่งใหญ่ที่สุดในเอเชีย',
                   paragraphs: [
                     'Force of Conquest 2027 ไม่ใช่เพียงกิจกรรมแอร์ซอฟต์ธรรมดา แต่คือประสบการณ์การจำลองยุทธการทางทหาร (Military Simulation Experience) แบบเต็มรูปแบบที่ยิ่งใหญ่และสมจริงที่สุดแห่งหนึ่งในเอเชีย',
-                    'บนพื้นที่ป่าธรรมชาติอันสวยงามกว่า 267 ไร่ ในจังหวัดสระบุรี ประเทศไทย ผู้เข้าร่วมจะได้สัมผัสการผจญภัยตลอด 3 วัน 2 คืน ที่ผสานการรบทางยุทธวิธี การวางแผนเชิงกลยุทธ์ การตั้งแคมป์ กิจกรรมบันเทิง และการสร้างมิตรภาพจากผู้เล่นทั่วโลกไว้ในงานเดียว',
+                    'บนพื้นที่ป่าธรรมชาติอันสวยงามกว่า 267 ไร่ ในจังหวัดเพชรบุรี ประเทศไทย ผู้เข้าร่วมจะได้สัมผัสการผจญภัยตลอด 3 วัน 2 คืน ที่ผสานการรบทางยุทธวิธี การวางแผนเชิงกลยุทธ์ การตั้งแคมป์ กิจกรรมบันเทิง และการสร้างมิตรภาพจากผู้เล่นทั่วโลกไว้ในงานเดียว',
                     'เมื่อคุณซื้อบัตรเข้าร่วมงาน Force of Conquest 2027 คุณจะได้ก้าวเข้าสู่สนามรบขนาดมหึมา ซึ่งความสามัคคี การวางแผน ความอดทน และภาวะผู้นำ จะเป็นตัวกำหนดชะตากรรมของทั้งกองทัพ',
                     'นอกเหนือจากสนามรบ ผู้เข้าร่วมยังสามารถเพลิดเพลินกับการแสดงดนตรีสด เทศกาลอาหารนานาชาติ การแข่งขัน BBQ โซนกิจกรรมคาร์นิวัลและเครื่องเล่น กิจกรรมผจญภัย การตั้งแคมป์กลางธรรมชาติ กิจกรรมเกมและการแสดงต่าง ๆ รวมถึงงานสังสรรค์กับผู้เล่นจากทั่วโลก',
                   ],
@@ -595,7 +595,7 @@ export const siteContent: SiteContent = {
                   infoRows: [
                     { label: 'กิจกรรม', value: 'Force of Conquest 2027' },
                     { label: 'วันที่', value: '8-10 มกราคม 2570' },
-                    { label: 'สถานที่', value: 'จังหวัดสระบุรี ประเทศไทย' },
+                    { label: 'สถานที่', value: 'จังหวัดเพชรบุรี ประเทศไทย' },
                     { label: 'ระยะเวลา', value: '3 วัน / 2 คืน' },
                     { label: 'สนามแข่งขัน', value: 'พื้นที่ป่าธรรมชาติกว่า 267 ไร่' },
                     { label: 'รูปแบบการแข่งขัน', value: 'สงครามจำลองหลายฝ่าย (Multi-Faction Military Simulation Campaign)' },
@@ -691,7 +691,7 @@ export const siteContent: SiteContent = {
               htmlLang: 'en',
               heading: 'Force of Conquest 2027',
               subheading: 'Three-Day Campaign Storyline',
-              dateLocation: 'January 8-10, 2027 - Saraburi, Thailand',
+              dateLocation: 'January 8-10, 2027 - Phetchaburi, Thailand',
               backgroundHeading: 'Background',
               backgroundParagraphs: [
                 'The Republic of Siam Frontier has descended into chaos.',
@@ -845,7 +845,7 @@ export const siteContent: SiteContent = {
               htmlLang: 'th',
               heading: 'Force of Conquest 2027',
               subheading: 'เนื้อเรื่องภารกิจหลักตลอด 3 วัน',
-              dateLocation: '8-10 มกราคม 2570 - จังหวัดสระบุรี ประเทศไทย',
+              dateLocation: '8-10 มกราคม 2570 - จังหวัดเพชรบุรี ประเทศไทย',
               backgroundHeading: 'ภูมิหลังของสงคราม',
               backgroundParagraphs: [
                 'สาธารณรัฐชายแดนสยาม (Republic of Siam Frontier) กำลังเผชิญกับภาวะความวุ่นวายครั้งใหญ่',
@@ -1241,15 +1241,15 @@ export const siteContent: SiteContent = {
       slug: 'how-to-get-to-the-event',
       eyebrow: 'Travel Guide',
       title: 'How to Get to the Event',
-      description: 'Travel options, transfer timing, and support contacts for getting from Bangkok to the MSTAR Airsoft event in Saraburi.',
+      description: 'Travel options, transfer timing, and support contacts for getting from Bangkok to the MSTAR Airsoft event in Phetchaburi.',
       languageVersions: travelLanguageVersions,
       sections: [
         {
           id: 'arrival-overview',
-          title: 'How to Get to the MSTAR Airsoft Event in Saraburi',
+          title: 'How to Get to the MSTAR Airsoft Event in Phetchaburi',
           paragraphs: [
             'Upon arriving at Suvarnabhumi Airport, you may purchase a local SIM card at the airport or directly at the event venue for convenient communication during your stay.',
-            'There are several transportation options for traveling from Bangkok to the MSTAR Airsoft Event in Saraburi, including private car services, buses, minibuses, and ride-hailing services such as Grab.',
+            'There are several transportation options for traveling from Bangkok to the MSTAR Airsoft Event in Phetchaburi, including private car services, buses, minibuses, and ride-hailing services such as Grab.',
           ],
         },
         {
@@ -1265,8 +1265,8 @@ export const siteContent: SiteContent = {
           id: 'budget-friendly-option',
           title: 'Budget-Friendly Transportation Option',
           paragraphs: [
-            'For travelers looking to save on transportation costs, the recommended option is to take a local taxi or book a Grab ride to Mo Chit Bus Terminal. Upon arrival at the terminal, you can purchase a bus ticket to Saraburi.',
-            'Once you arrive at the Saraburi Bus Terminal, you will find a designated minivan displaying the sign "MSTAR Airsoft Event."',
+            'For travelers looking to save on transportation costs, the recommended option is to take a local taxi or book a Grab ride to Mo Chit Bus Terminal. Upon arrival at the terminal, you can purchase a bus ticket to Phetchaburi.',
+            'Once you arrive at the Phetchaburi Bus Terminal, you will find a designated minivan displaying the sign "MSTAR Airsoft Event."',
           ],
           bullets: [
             'Transfer Fee: 500 THB per person',

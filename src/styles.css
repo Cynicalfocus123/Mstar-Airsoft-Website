@@ -4203,6 +4203,8 @@ select:focus {
 }
 
 .event-info-section-event-map .event-info-media img {
+  display: block;
+  max-width: 100%;
   width: 100%;
   height: auto;
   min-height: 0;

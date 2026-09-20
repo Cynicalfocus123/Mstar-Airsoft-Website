@@ -68,6 +68,7 @@ export function EventInfoPage({ event }: EventInfoPageProps) {
                   {section.imagePath ? (
                     <img
                       alt={section.imageAlt ?? ''}
+                      decoding="async"
                       loading={index === 0 ? 'eager' : 'lazy'}
                       src={getPublicAssetPath(section.imagePath)}
                     />

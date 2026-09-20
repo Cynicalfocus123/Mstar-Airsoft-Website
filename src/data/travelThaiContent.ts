@@ -8,10 +8,10 @@ export const travelLanguageVersions: InfoLanguageVersion[] = [
     sections: [
       {
         id: 'arrival-overview',
-        title: 'How to Get to the MSTAR Airsoft Event in Saraburi',
+        title: 'How to Get to the MSTAR Airsoft Event in Phetchaburi',
         paragraphs: [
           'Upon arriving at Suvarnabhumi Airport, you may purchase a local SIM card at the airport or directly at the event venue for convenient communication during your stay.',
-          'There are several transportation options for traveling from Bangkok to the MSTAR Airsoft Event in Saraburi, including private car services, buses, minibuses, and ride-hailing services such as Grab.',
+          'There are several transportation options for traveling from Bangkok to the MSTAR Airsoft Event in Phetchaburi, including private car services, buses, minibuses, and ride-hailing services such as Grab.',
         ],
       },
       {
@@ -27,8 +27,8 @@ export const travelLanguageVersions: InfoLanguageVersion[] = [
         id: 'budget-friendly-option',
         title: 'Budget-Friendly Transportation Option',
         paragraphs: [
-          'For travelers looking to save on transportation costs, the recommended option is to take a local taxi or book a Grab ride to Mo Chit Bus Terminal. Upon arrival at the terminal, you can purchase a bus ticket to Saraburi.',
-          'Once you arrive at the Saraburi Bus Terminal, you will find a designated minivan displaying the sign "MSTAR Airsoft Event."',
+          'For travelers looking to save on transportation costs, the recommended option is to take a local taxi or book a Grab ride to Mo Chit Bus Terminal. Upon arrival at the terminal, you can purchase a bus ticket to Phetchaburi.',
+          'Once you arrive at the Phetchaburi Bus Terminal, you will find a designated minivan displaying the sign "MSTAR Airsoft Event."',
         ],
         bullets: [
           'Transfer Fee: 500 THB per person',
@@ -62,10 +62,10 @@ export const travelLanguageVersions: InfoLanguageVersion[] = [
     sections: [
       {
         id: 'arrival-overview-th',
-        title: 'วิธีการเดินทางมายังงาน MSTAR Airsoft จังหวัดสระบุรี',
+        title: 'วิธีการเดินทางมายังงาน MSTAR Airsoft จังหวัดเพชรบุรี',
         paragraphs: [
           'เมื่อเดินทางมาถึงท่าอากาศยานสุวรรณภูมิ ท่านสามารถซื้อซิมการ์ดโทรศัพท์มือถือของประเทศไทยได้ที่สนามบิน หรือเลือกซื้อภายในพื้นที่จัดงาน เพื่อความสะดวกในการติดต่อสื่อสารตลอดระยะเวลาที่พำนักในประเทศไทย',
-          'ผู้เข้าร่วมงานสามารถเดินทางจากกรุงเทพมหานครมายัง MSTAR Airsoft Event จังหวัดสระบุรี ได้หลายรูปแบบ ได้แก่ รถยนต์ส่วนตัว รถแท็กซี่ รถโดยสารประจำทาง รถตู้โดยสาร และบริการเรียกรถผ่านแอปพลิเคชัน เช่น Grab',
+          'ผู้เข้าร่วมงานสามารถเดินทางจากกรุงเทพมหานครมายัง MSTAR Airsoft Event จังหวัดเพชรบุรี ได้หลายรูปแบบ ได้แก่ รถยนต์ส่วนตัว รถแท็กซี่ รถโดยสารประจำทาง รถตู้โดยสาร และบริการเรียกรถผ่านแอปพลิเคชัน เช่น Grab',
         ],
       },
       {
@@ -81,8 +81,8 @@ export const travelLanguageVersions: InfoLanguageVersion[] = [
         id: 'budget-friendly-option-th',
         title: 'ตัวเลือกการเดินทางแบบประหยัด',
         paragraphs: [
-          'สำหรับผู้ที่ต้องการประหยัดค่าใช้จ่ายในการเดินทาง ขอแนะนำให้ใช้บริการแท็กซี่หรือ Grab จากสนามบินหรือที่พัก ไปยังสถานีขนส่งผู้โดยสารกรุงเทพฯ (หมอชิต 2) จากนั้นซื้อตั๋วรถโดยสารไปยังจังหวัดสระบุรี',
-          'เมื่อเดินทางถึงสถานีขนส่งจังหวัดสระบุรี จะมีรถตู้รับส่งของงาน พร้อมป้าย "MSTAR Airsoft Event" รอให้บริการ',
+          'สำหรับผู้ที่ต้องการประหยัดค่าใช้จ่ายในการเดินทาง ขอแนะนำให้ใช้บริการแท็กซี่หรือ Grab จากสนามบินหรือที่พัก ไปยังสถานีขนส่งผู้โดยสารกรุงเทพฯ (หมอชิต 2) จากนั้นซื้อตั๋วรถโดยสารไปยังจังหวัดเพชรบุรี',
+          'เมื่อเดินทางถึงสถานีขนส่งจังหวัดเพชรบุรี จะมีรถตู้รับส่งของงาน พร้อมป้าย "MSTAR Airsoft Event" รอให้บริการ',
         ],
         bullets: [
           'ค่าบริการรถรับส่ง: 500 บาทต่อท่าน',

@@ -109,10 +109,10 @@ const eventSchema = {
   image: [defaultImage],
   location: {
     '@type': 'Place',
-    name: 'Saraburi, Thailand',
+    name: 'Phetchaburi, Thailand',
     address: {
       '@type': 'PostalAddress',
-      addressRegion: 'Saraburi',
+      addressRegion: 'Phetchaburi',
       addressCountry: 'TH',
     },
   },
