@@ -2,6 +2,8 @@
 
 ## Design Direction
 
+- The 2026-09-21 Event Info map replacement uses supplied `new map 3.png` artwork at the existing 1448x1086 aspect ratio. Same open dark section, fluid intrinsic-height image, bilingual content path, and no-crop behavior remain; replacement ZIP contains only the new map asset.
+
 - The 2026-09-21 Event Info map-only update keeps the existing open dark section, bilingual data path, fluid width, intrinsic height, and no-crop behavior. It swaps in supplied `new map 2.png` artwork, re-optimized as a 1448x1086 palette PNG at 903,894 bytes; all other page visuals and interactions remain unchanged.
 
 - The 2026-09-20 location/map update changes the visible event location to `Phetchaburi, Thailand` in English and Thai content, including the travel guide and SEO data. Event Info keeps the unboxed dark-background map section but now uses the supplied Phetchaburi map artwork as an optimized palette PNG with fluid width, intrinsic height, no crop/stretch, and safe desktop/tablet/mobile behavior. Event Info media uses async decoding; header, footer, ticket/payment surfaces, and unrelated page layouts stay unchanged.
@@ -315,6 +317,8 @@ When the user asks for a future deployment ZIP, report:
 - Commit memory files with the related code/design change.
 
 ## Current Design Log
+
+- 2026-09-21: Replaced the bilingual Force of Conquest Event Info map with supplied `new map 3.png`, optimized it as a palette PNG, deleted the previous ZIP, and created a replacement ZIP containing only the new map asset. No prior map or unrelated runtime file entered package.
 
 - 2026-09-21: Swapped only the bilingual Force of Conquest Event Info map to the supplied `new map 2.png`. Preserved the existing same-path optimized PNG delivery, open dark-background presentation, natural aspect ratio, and desktop/tablet/mobile behavior. No layout, route, content, navigation, payment, or unrelated media changes were made. Prepared a changes-only deployment ZIP after the production build; no live upload was performed.
 

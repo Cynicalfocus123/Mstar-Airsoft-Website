@@ -241,6 +241,8 @@ When the user asks for a future deployment ZIP, report:
 
 ## Current Task Log
 
+- 2026-09-21: Replaced Event Info map artwork again with supplied `site content/new map 3.png`, keeping same runtime path and palette-PNG optimization. Deleted prior update ZIP before creating a new one containing only `images/events/force-of-conquest/force-of-conquest-event-map-updated.png`; no previous map or unrelated deployment file was included.
+
 - 2026-09-21: Replaced only the bilingual Event Info map artwork with the supplied `site content/new map 2.png`, keeping the existing `force-of-conquest-event-map-updated.png` runtime path and fluid no-crop layout. Re-optimized the 1448x1086 image as a palette PNG at 903,894 bytes, rebuilt the site, and prepared a changes-only deployment ZIP; no content, routes, CSS, payment controls, or unrelated deployment assets changed.
 
 - 2026-09-20: Updated all runtime location content from the previous province to `Phetchaburi, Thailand` across English and Thai event cards, event details, Event Info, Mission Scenario, travel guidance, and SEO metadata. Replaced the tracked Event Info map artwork with the supplied Phetchaburi map, optimized it as a palette PNG, and kept the existing fluid, auto-height map treatment safe for desktop, tablet, and mobile. Added async image decoding for Event Info media. Built and prepared a changes-only Hostinger overwrite ZIP; no live upload, DNS, SSL, cPanel settings, payment controls, or unrelated deployment assets changed.
