@@ -2,6 +2,8 @@
 
 ## Design Direction
 
+- The 2026-09-30 Game Terrain media update changes only the Beautiful Scenery and Large Open Area clips. Each uses supplied footage optimized to a 20-second 960x540 VP9 WebM at 18fps, without audio. Existing card layout, overlay typography, poster images, video paths, autoplay/mute/loop behavior, and responsive treatment remain unchanged. Forest Movement and Fun Combat Terrains remain untouched.
+
 - The 2026-09-30 organizer update replaces visible `MSTAR Airsoft` wording with `Organized by: Thailand Airsoft and Paintball Association` across site content and page metadata. Homepage association strip now reads `Organized by:` followed by `Thailand Airsoft and Paintball Association`; its existing dark/gold layout, linked emblem, spacing, and responsive behavior remain unchanged. Logo artwork, domain, emails, and legal company references remain unchanged.
 
 - The 2026-09-21 Event Info map replacement uses supplied `new map 3.png` artwork at the existing 1448x1086 aspect ratio. Same open dark section, fluid intrinsic-height image, bilingual content path, and no-crop behavior remain; replacement ZIP contains only the new map asset.
@@ -319,6 +321,8 @@ When the user asks for a future deployment ZIP, report:
 - Commit memory files with the related code/design change.
 
 ## Current Design Log
+
+- 2026-09-30: Replaced only Beautiful Scenery and Large Open Area terrain videos with user-supplied footage. FFmpeg outputs retain current 960x540 VP9 WebM delivery but optimize to 20 seconds at 18fps with no audio and roughly 1 MB per file. Kept existing path names and loop behavior, leaving the terrain card design, all device layouts, Forest Movement, and Fun Combat Terrains unchanged. Deleted previous ZIP before making a new two-video-only changes package.
 
 - 2026-09-30: Updated visible runtime branding text across homepage, event information, travel guides, rules, privacy content, SEO data, and default social metadata from `MSTAR Airsoft` to `Organized by: Thailand Airsoft and Paintball Association`. Homepage support strip now uses the requested organizer wording. Retained existing association emblem, logo image, layout, responsive styling, official domain, contact email addresses, and legal company references. Prepared a changes-only Hostinger ZIP after production build; no unrelated deployment assets included.
 

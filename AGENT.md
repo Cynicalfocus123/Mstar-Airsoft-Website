@@ -241,6 +241,8 @@ When the user asks for a future deployment ZIP, report:
 
 ## Current Task Log
 
+- 2026-09-30: Replaced only Game Terrain `beautiful-scenery.webm` and `large-open-area.webm` with supplied DJI/MOV footage. Each replacement is a muted-audio-free 20-second, 960x540, 18fps VP9 WebM optimized by FFmpeg at about 1 MB. Existing video paths, loop behavior, responsive layout, poster images, and Forest Movement/Fun Combat Terrains files remain unchanged. Deleted prior update ZIP before preparing a new two-video-only changes ZIP.
+
 - 2026-09-30: Replaced all visible runtime `MSTAR Airsoft` text with `Organized by: Thailand Airsoft and Paintball Association` across homepage, event/travel/rules/privacy content, SEO metadata, and default social metadata. Updated homepage association strip from `Supported by` to `Organized by:` with Thailand Airsoft and Paintball Association. Preserved the deployed domain, email addresses, storage keys, logo artwork, and legal Mstar (Asia) company references. Prepared a Hostinger changes-only ZIP after production build; no unrelated files included.
 
 - 2026-09-21: Replaced Event Info map artwork again with supplied `site content/new map 3.png`, keeping same runtime path and palette-PNG optimization. Deleted prior update ZIP before creating a new one containing only `images/events/force-of-conquest/force-of-conquest-event-map-updated.png`; no previous map or unrelated deployment file was included.
