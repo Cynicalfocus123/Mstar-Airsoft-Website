@@ -1,7 +1,7 @@
 import type { SeoEntry, JsonLdSchema } from '../types/seo';
 
 const siteUrl = 'https://mstarairsoft.com';
-const siteName = 'MSTAR Airsoft';
+const siteName = 'Organized by: Thailand Airsoft and Paintball Association';
 const defaultImage = `${siteUrl}/images/events/force-of-conquest-card.png`;
 const organizationId = `${siteUrl}/#organization`;
 const websiteId = `${siteUrl}/#website`;
@@ -81,7 +81,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': organizationId,
-  name: 'MSTAR Airsoft',
+  name: 'Organized by: Thailand Airsoft and Paintball Association',
   url: siteUrl,
   logo: defaultImage,
   email: 'info@mstarairsoft.com',
@@ -100,7 +100,7 @@ const eventSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
   '@id': `${siteUrl}/events/force-of-conquest#event`,
-  name: 'MSTAR Airsoft Festival - Force of Conquest',
+  name: 'Organized by: Thailand Airsoft and Paintball Association - Force of Conquest',
   description: 'An intense, realistic large-scale airsoft combat experience set deep in the jungle.',
   startDate: '2027-01-08T09:00:00+07:00',
   endDate: '2027-01-10T17:30:00+07:00',
@@ -131,26 +131,26 @@ const eventSchema = {
 export const seoContent: Record<string, SeoEntry> = {
   '/': makeSeo({
     path: '/',
-    title: 'MSTAR Airsoft Festival Thailand | Force of Conquest',
-    description: 'Join MSTAR Airsoft Festival in Thailand for Force of Conquest, a tactical airsoft event with jungle gameplay, travel guides, tickets, and event support.',
+    title: 'Organized by: Thailand Airsoft and Paintball Association Thailand | Force of Conquest',
+    description: 'Join Organized by: Thailand Airsoft and Paintball Association in Thailand for Force of Conquest, a tactical airsoft event with jungle gameplay, travel guides, tickets, and event support.',
     schema: [
       organizationSchema,
       websiteSchema,
-      webPage('/', 'MSTAR Airsoft Festival Thailand | Force of Conquest', 'Join MSTAR Airsoft Festival in Thailand for Force of Conquest, a tactical airsoft event with jungle gameplay, travel guides, tickets, and event support.'),
+      webPage('/', 'Organized by: Thailand Airsoft and Paintball Association Thailand | Force of Conquest', 'Join Organized by: Thailand Airsoft and Paintball Association in Thailand for Force of Conquest, a tactical airsoft event with jungle gameplay, travel guides, tickets, and event support.'),
       breadcrumbs([{ name: 'Home', path: '/' }]),
     ],
   }),
   '/about': makeSeo({
     path: '/about',
-    title: 'About MSTAR Airsoft | Thailand Tactical Festival',
-    description: 'Learn about the MSTAR Airsoft Festival experience, combining tactical jungle gameplay, entertainment, camping, food, and adventure in Thailand.',
+    title: 'About Organized by: Thailand Airsoft and Paintball Association | Thailand Tactical Festival',
+    description: 'Learn about the Organized by: Thailand Airsoft and Paintball Association experience, combining tactical jungle gameplay, entertainment, camping, food, and adventure in Thailand.',
   }),
   '/ticket': makeSeo({
     path: '/ticket',
-    title: 'MSTAR Airsoft Tickets | Force of Conquest Presale',
-    description: 'Buy MSTAR Airsoft Force of Conquest presale tickets and camping experience add-ons for the Thailand tactical airsoft festival.',
+    title: 'Organized by: Thailand Airsoft and Paintball Association Tickets | Force of Conquest Presale',
+    description: 'Buy Organized by: Thailand Airsoft and Paintball Association Force of Conquest presale tickets and camping experience add-ons for the Thailand tactical airsoft festival.',
     schema: [
-      webPage('/ticket', 'MSTAR Airsoft Tickets | Force of Conquest Presale', 'Buy MSTAR Airsoft Force of Conquest presale tickets and camping experience add-ons for the Thailand tactical airsoft festival.'),
+      webPage('/ticket', 'Organized by: Thailand Airsoft and Paintball Association Tickets | Force of Conquest Presale', 'Buy Organized by: Thailand Airsoft and Paintball Association Force of Conquest presale tickets and camping experience add-ons for the Thailand tactical airsoft festival.'),
       eventSchema,
       breadcrumbs([
         { name: 'Home', path: '/' },
@@ -160,10 +160,10 @@ export const seoContent: Record<string, SeoEntry> = {
   }),
   '/events': makeSeo({
     path: '/events',
-    title: 'MSTAR Airsoft Events | Tactical Airsoft Thailand',
-    description: 'Explore MSTAR Airsoft events in Thailand, including Force of Conquest and upcoming tactical airsoft tournament experiences.',
+    title: 'Organized by: Thailand Airsoft and Paintball Association Events | Tactical Airsoft Thailand',
+    description: 'Explore Organized by: Thailand Airsoft and Paintball Association events in Thailand, including Force of Conquest and upcoming tactical airsoft tournament experiences.',
     schema: [
-      webPage('/events', 'MSTAR Airsoft Events | Tactical Airsoft Thailand', 'Explore MSTAR Airsoft events in Thailand, including Force of Conquest and upcoming tactical airsoft tournament experiences.', 'CollectionPage'),
+      webPage('/events', 'Organized by: Thailand Airsoft and Paintball Association Events | Tactical Airsoft Thailand', 'Explore Organized by: Thailand Airsoft and Paintball Association events in Thailand, including Force of Conquest and upcoming tactical airsoft tournament experiences.', 'CollectionPage'),
       {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -178,7 +178,7 @@ export const seoContent: Record<string, SeoEntry> = {
             position: 2,
             item: {
               '@type': 'Thing',
-              name: 'MSTAR Airsoft TBA Event',
+              name: 'Organized by: Thailand Airsoft and Paintball Association TBA Event',
               description: 'Event details will be announced soon.',
             },
           },
@@ -192,8 +192,8 @@ export const seoContent: Record<string, SeoEntry> = {
   }),
   '/events/force-of-conquest': makeSeo({
     path: '/events/force-of-conquest',
-    title: 'Force of Conquest | MSTAR Airsoft Thailand',
-    description: 'View Force of Conquest event details for MSTAR Airsoft, including jungle gameplay, timing, location, attendance, and ticket information.',
+    title: 'Force of Conquest | Organized by: Thailand Airsoft and Paintball Association Thailand',
+    description: 'View Force of Conquest event details for Organized by: Thailand Airsoft and Paintball Association, including jungle gameplay, timing, location, attendance, and ticket information.',
     schema: [
       eventSchema,
       breadcrumbs([
@@ -235,22 +235,22 @@ export const seoContent: Record<string, SeoEntry> = {
   }),
   '/events/night-grid': makeSeo({
     path: '/events/night-grid',
-    title: 'TBA Event | MSTAR Airsoft',
-    description: 'MSTAR Airsoft event details will be announced soon.',
+    title: 'TBA Event | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Organized by: Thailand Airsoft and Paintball Association details will be announced soon.',
     robots: 'noindex, follow',
   }),
   '/events/final-front': makeSeo({
     path: '/events/final-front',
-    title: 'TBA Event | MSTAR Airsoft',
-    description: 'MSTAR Airsoft event details will be announced soon.',
+    title: 'TBA Event | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Organized by: Thailand Airsoft and Paintball Association details will be announced soon.',
     robots: 'noindex, follow',
   }),
   '/things-to-know': makeSeo({
     path: '/things-to-know',
-    title: 'Things to Know | MSTAR Airsoft Thailand Travel Guide',
-    description: 'Plan your MSTAR Airsoft trip with guides for visa, transportation, equipment shipping, accommodation, rules, and activities in Thailand.',
+    title: 'Things to Know | Organized by: Thailand Airsoft and Paintball Association Thailand Travel Guide',
+    description: 'Plan your Organized by: Thailand Airsoft and Paintball Association trip with guides for visa, transportation, equipment shipping, accommodation, rules, and activities in Thailand.',
     schema: [
-      webPage('/things-to-know', 'Things to Know | MSTAR Airsoft Thailand Travel Guide', 'Plan your MSTAR Airsoft trip with guides for visa, transportation, equipment shipping, accommodation, rules, and activities in Thailand.'),
+      webPage('/things-to-know', 'Things to Know | Organized by: Thailand Airsoft and Paintball Association Thailand Travel Guide', 'Plan your Organized by: Thailand Airsoft and Paintball Association trip with guides for visa, transportation, equipment shipping, accommodation, rules, and activities in Thailand.'),
       {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -271,48 +271,48 @@ export const seoContent: Record<string, SeoEntry> = {
   }),
   '/rules-and-regulation': makeSeo({
     path: '/rules-and-regulation',
-    title: 'Rules & Regulation | MSTAR Airsoft Festival',
-    description: 'Review MSTAR Airsoft rules, safety requirements, gameplay conduct, chronograph guidance, and event regulations before attending.',
+    title: 'Rules & Regulation | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Review Organized by: Thailand Airsoft and Paintball Association rules, safety requirements, gameplay conduct, chronograph guidance, and event regulations before attending.',
   }),
   '/immigration-visa': makeSeo({
     path: '/immigration-visa',
-    title: 'Immigration Visa Guide | MSTAR Airsoft Thailand',
-    description: 'Read entry and visa guidance for international players traveling to Thailand for the MSTAR Airsoft Force of Conquest event.',
+    title: 'Immigration Visa Guide | Organized by: Thailand Airsoft and Paintball Association Thailand',
+    description: 'Read entry and visa guidance for international players traveling to Thailand for the Organized by: Thailand Airsoft and Paintball Association Force of Conquest event.',
   }),
   '/how-to-get-to-the-event': makeSeo({
     path: '/how-to-get-to-the-event',
-    title: 'How to Get to the Event | MSTAR Airsoft Thailand',
-    description: 'Find travel guidance for reaching the MSTAR Airsoft event venue in Thailand, including arrival planning and transfer information.',
+    title: 'How to Get to the Event | Organized by: Thailand Airsoft and Paintball Association Thailand',
+    description: 'Find travel guidance for reaching the Organized by: Thailand Airsoft and Paintball Association venue in Thailand, including arrival planning and transfer information.',
   }),
   '/ship-your-equipment': makeSeo({
     path: '/ship-your-equipment',
-    title: 'Ship Your Equipment | MSTAR Airsoft Travel Guide',
-    description: 'Learn how to prepare and ship airsoft equipment for the MSTAR Airsoft event in Thailand with safety and travel planning guidance.',
+    title: 'Ship Your Equipment | Organized by: Thailand Airsoft and Paintball Association Travel Guide',
+    description: 'Learn how to prepare and ship airsoft equipment for the Organized by: Thailand Airsoft and Paintball Association in Thailand with safety and travel planning guidance.',
   }),
   '/accommodation': makeSeo({
     path: '/accommodation',
-    title: 'Accommodation & Campground | MSTAR Airsoft Festival',
-    description: 'View accommodation and campground information for MSTAR Airsoft attendees planning their Thailand event experience.',
+    title: 'Accommodation & Campground | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'View accommodation and campground information for Organized by: Thailand Airsoft and Paintball Association attendees planning their Thailand event experience.',
   }),
   '/activity': makeSeo({
     path: '/activity',
-    title: 'Activities & Entertainment | MSTAR Airsoft Festival',
-    description: 'Explore outdoor adventure, entertainment, jungle activities, waterfalls, and festival experiences around the MSTAR Airsoft event.',
+    title: 'Activities & Entertainment | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Explore outdoor adventure, entertainment, jungle activities, waterfalls, and festival experiences around the Organized by: Thailand Airsoft and Paintball Association.',
   }),
   '/what-to-do-in-thailand': makeSeo({
     path: '/what-to-do-in-thailand',
-    title: 'What to Do in Thailand | MSTAR Airsoft Guide',
-    description: 'Explore waterfalls, national parks, kayaking, cafes, restaurants, and entertainment near the MSTAR Airsoft event in Thailand.',
+    title: 'What to Do in Thailand | Organized by: Thailand Airsoft and Paintball Association Guide',
+    description: 'Explore waterfalls, national parks, kayaking, cafes, restaurants, and entertainment near the Organized by: Thailand Airsoft and Paintball Association in Thailand.',
   }),
   '/travel-preparation': makeSeo({
     path: '/travel-preparation',
-    title: 'Travel Preparation | MSTAR Airsoft Thailand',
-    description: 'Prepare documents, arrival plans, travel timing, and practical details for attending the MSTAR Airsoft event in Thailand.',
+    title: 'Travel Preparation | Organized by: Thailand Airsoft and Paintball Association Thailand',
+    description: 'Prepare documents, arrival plans, travel timing, and practical details for attending the Organized by: Thailand Airsoft and Paintball Association in Thailand.',
   }),
   '/become-a-vendor': makeSeo({
     path: '/become-a-vendor',
     title: 'Become a Vendor | Force of Conquest 2027',
-    description: 'Apply to operate a stall or exhibit at the MSTAR Airsoft Force of Conquest 2027 event.',
+    description: 'Apply to operate a stall or exhibit at the Organized by: Thailand Airsoft and Paintball Association Force of Conquest 2027 event.',
   }),
   '/become-a-sponsor': makeSeo({
     path: '/become-a-sponsor',
@@ -321,10 +321,10 @@ export const seoContent: Record<string, SeoEntry> = {
   }),
   '/contact': makeSeo({
     path: '/contact',
-    title: 'Contact MSTAR Airsoft | Event Support',
-    description: 'Contact MSTAR Airsoft for general inquiries, support issues, media questions, and Force of Conquest event information.',
+    title: 'Contact Organized by: Thailand Airsoft and Paintball Association | Event Support',
+    description: 'Contact Organized by: Thailand Airsoft and Paintball Association for general inquiries, support issues, media questions, and Force of Conquest event information.',
     schema: [
-      webPage('/contact', 'Contact MSTAR Airsoft | Event Support', 'Contact MSTAR Airsoft for general inquiries, support issues, media questions, and Force of Conquest event information.', 'ContactPage'),
+      webPage('/contact', 'Contact Organized by: Thailand Airsoft and Paintball Association | Event Support', 'Contact Organized by: Thailand Airsoft and Paintball Association for general inquiries, support issues, media questions, and Force of Conquest event information.', 'ContactPage'),
       {
         ...organizationSchema,
         contactPoint: [
@@ -341,77 +341,77 @@ export const seoContent: Record<string, SeoEntry> = {
   }),
   '/terms-and-conditions': makeSeo({
     path: '/terms-and-conditions',
-    title: 'Terms & Conditions | MSTAR Airsoft',
-    description: 'Read the terms and conditions for using the MSTAR Airsoft website, event information, ticketing pages, and related services.',
+    title: 'Terms & Conditions | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Read the terms and conditions for using the Organized by: Thailand Airsoft and Paintball Association website, event information, ticketing pages, and related services.',
     ogType: 'article',
   }),
   '/cancellation-and-refund': makeSeo({
     path: '/cancellation-and-refund',
-    title: 'Cancellation and Refund | MSTAR Airsoft',
+    title: 'Cancellation and Refund | Organized by: Thailand Airsoft and Paintball Association',
     description: 'Read the Force of Conquest event cancellation, refund, transfer, postponement, and no-show policy in English and Thai.',
     ogType: 'article',
   }),
   '/privacy': makeSeo({
     path: '/privacy',
-    title: 'Privacy Policy | MSTAR Airsoft',
-    description: 'Read the MSTAR Airsoft privacy policy covering website use, contact information, event inquiries, and data handling practices.',
+    title: 'Privacy Policy | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Read the Organized by: Thailand Airsoft and Paintball Association privacy policy covering website use, contact information, event inquiries, and data handling practices.',
     ogType: 'article',
   }),
   '/complaints': makeSeo({
     path: '/complaints',
-    title: 'Complaints | MSTAR Airsoft Support',
-    description: 'Submit or review complaint guidance for MSTAR Airsoft event support, website issues, ticket questions, and attendee communication.',
+    title: 'Complaints | Organized by: Thailand Airsoft and Paintball Association Support',
+    description: 'Submit or review complaint guidance for Organized by: Thailand Airsoft and Paintball Association support, website issues, ticket questions, and attendee communication.',
   }),
   '/products': makeSeo({
     path: '/products',
-    title: 'Products | MSTAR Airsoft',
-    description: 'MSTAR Airsoft product planning placeholder.',
+    title: 'Products | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Organized by: Thailand Airsoft and Paintball Association product planning placeholder.',
     robots: 'noindex, follow',
   }),
   '/gallery': makeSeo({
     path: '/gallery',
-    title: 'Gallery | MSTAR Airsoft',
-    description: 'MSTAR Airsoft gallery placeholder.',
+    title: 'Gallery | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Organized by: Thailand Airsoft and Paintball Association gallery placeholder.',
     robots: 'noindex, nofollow',
   }),
   '/immigration': makeSeo({
     path: '/immigration-visa',
-    title: 'Immigration Visa Guide | MSTAR Airsoft Thailand',
-    description: 'Read entry and visa guidance for international players traveling to Thailand for the MSTAR Airsoft Force of Conquest event.',
+    title: 'Immigration Visa Guide | Organized by: Thailand Airsoft and Paintball Association Thailand',
+    description: 'Read entry and visa guidance for international players traveling to Thailand for the Organized by: Thailand Airsoft and Paintball Association Force of Conquest event.',
   }),
   '/how-to-pack': makeSeo({
     path: '/ship-your-equipment',
-    title: 'Ship Your Equipment | MSTAR Airsoft Travel Guide',
-    description: 'Learn how to prepare and ship airsoft equipment for the MSTAR Airsoft event in Thailand with safety and travel planning guidance.',
+    title: 'Ship Your Equipment | Organized by: Thailand Airsoft and Paintball Association Travel Guide',
+    description: 'Learn how to prepare and ship airsoft equipment for the Organized by: Thailand Airsoft and Paintball Association in Thailand with safety and travel planning guidance.',
   }),
   '/thailand-laws-and-regulations': makeSeo({
     path: '/thailand-laws-and-regulations',
-    title: 'Thailand Laws and Regulations | MSTAR Airsoft',
-    description: 'Placeholder local guidance for MSTAR Airsoft travelers.',
+    title: 'Thailand Laws and Regulations | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Placeholder local guidance for Organized by: Thailand Airsoft and Paintball Association travelers.',
     robots: 'noindex, follow',
   }),
   '/faq': makeSeo({
     path: '/faq',
-    title: 'FAQ | MSTAR Airsoft',
-    description: 'MSTAR Airsoft frequently asked questions placeholder.',
+    title: 'FAQ | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Organized by: Thailand Airsoft and Paintball Association frequently asked questions placeholder.',
     robots: 'noindex, follow',
   }),
   '/signin': makeSeo({
     path: '/signin',
-    title: 'Sign In | MSTAR Airsoft',
-    description: 'Sign in to your MSTAR Airsoft account.',
+    title: 'Sign In | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Sign in to your Organized by: Thailand Airsoft and Paintball Association account.',
     robots: 'noindex, nofollow',
   }),
   '/signup': makeSeo({
     path: '/signup',
-    title: 'Create Account | MSTAR Airsoft',
-    description: 'Create an MSTAR Airsoft account.',
+    title: 'Create Account | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Create an Organized by: Thailand Airsoft and Paintball Association account.',
     robots: 'noindex, nofollow',
   }),
   '/account': makeSeo({
     path: '/account',
-    title: 'Account | MSTAR Airsoft',
-    description: 'Manage your MSTAR Airsoft account.',
+    title: 'Account | Organized by: Thailand Airsoft and Paintball Association',
+    description: 'Manage your Organized by: Thailand Airsoft and Paintball Association account.',
     robots: 'noindex, nofollow',
   }),
 };
@@ -433,8 +433,8 @@ export function getSeoForPath(pathname: string) {
   if (seoPath === '/checkout') {
     return makeSeo({
       path: '/checkout',
-      title: 'Checkout | MSTAR Airsoft',
-      description: 'MSTAR Airsoft event checkout.',
+      title: 'Checkout | Organized by: Thailand Airsoft and Paintball Association',
+      description: 'Organized by: Thailand Airsoft and Paintball Association checkout.',
       robots: 'noindex, nofollow',
     });
   }

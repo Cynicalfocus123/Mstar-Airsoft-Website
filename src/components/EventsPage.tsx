@@ -11,7 +11,7 @@ export function EventsPage({ events }: EventsPageProps) {
     <main className="page-shell">
       <section className="page-hero">
         <h1>Operations</h1>
-        <p>Browse Mstar Airsoft tournaments, qualifiers, night games, and championship operations.</p>
+        <p>Browse Organized by: Thailand Airsoft and Paintball Association tournaments, qualifiers, night games, and championship operations.</p>
       </section>
       <section className="event-banner-list" aria-label="All operations">
         {events.map((event) => {

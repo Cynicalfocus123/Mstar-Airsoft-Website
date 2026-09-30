@@ -48,7 +48,7 @@ export function SeoHead({ seo }: SeoHeadProps) {
     document.title = seo.title;
     upsertMeta('name', 'description', seo.description);
     upsertMeta('name', 'robots', seo.robots);
-    upsertMeta('property', 'og:site_name', 'MSTAR Airsoft');
+    upsertMeta('property', 'og:site_name', 'Organized by: Thailand Airsoft and Paintball Association');
     upsertMeta('property', 'og:title', seo.ogTitle);
     upsertMeta('property', 'og:description', seo.ogDescription);
     upsertMeta('property', 'og:url', seo.canonical);

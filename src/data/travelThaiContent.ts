@@ -8,10 +8,10 @@ export const travelLanguageVersions: InfoLanguageVersion[] = [
     sections: [
       {
         id: 'arrival-overview',
-        title: 'How to Get to the MSTAR Airsoft Event in Phetchaburi',
+        title: 'How to Get to the Organized by: Thailand Airsoft and Paintball Association in Phetchaburi',
         paragraphs: [
           'Upon arriving at Suvarnabhumi Airport, you may purchase a local SIM card at the airport or directly at the event venue for convenient communication during your stay.',
-          'There are several transportation options for traveling from Bangkok to the MSTAR Airsoft Event in Phetchaburi, including private car services, buses, minibuses, and ride-hailing services such as Grab.',
+          'There are several transportation options for traveling from Bangkok to the Organized by: Thailand Airsoft and Paintball Association in Phetchaburi, including private car services, buses, minibuses, and ride-hailing services such as Grab.',
         ],
       },
       {
@@ -28,7 +28,7 @@ export const travelLanguageVersions: InfoLanguageVersion[] = [
         title: 'Budget-Friendly Transportation Option',
         paragraphs: [
           'For travelers looking to save on transportation costs, the recommended option is to take a local taxi or book a Grab ride to Mo Chit Bus Terminal. Upon arrival at the terminal, you can purchase a bus ticket to Phetchaburi.',
-          'Once you arrive at the Phetchaburi Bus Terminal, you will find a designated minivan displaying the sign "MSTAR Airsoft Event."',
+          'Once you arrive at the Phetchaburi Bus Terminal, you will find a designated minivan displaying the sign "Organized by: Thailand Airsoft and Paintball Association."',
         ],
         bullets: [
           'Transfer Fee: 500 THB per person',
@@ -62,10 +62,10 @@ export const travelLanguageVersions: InfoLanguageVersion[] = [
     sections: [
       {
         id: 'arrival-overview-th',
-        title: 'วิธีการเดินทางมายังงาน MSTAR Airsoft จังหวัดเพชรบุรี',
+        title: 'วิธีการเดินทางมายังงาน Organized by: Thailand Airsoft and Paintball Association จังหวัดเพชรบุรี',
         paragraphs: [
           'เมื่อเดินทางมาถึงท่าอากาศยานสุวรรณภูมิ ท่านสามารถซื้อซิมการ์ดโทรศัพท์มือถือของประเทศไทยได้ที่สนามบิน หรือเลือกซื้อภายในพื้นที่จัดงาน เพื่อความสะดวกในการติดต่อสื่อสารตลอดระยะเวลาที่พำนักในประเทศไทย',
-          'ผู้เข้าร่วมงานสามารถเดินทางจากกรุงเทพมหานครมายัง MSTAR Airsoft Event จังหวัดเพชรบุรี ได้หลายรูปแบบ ได้แก่ รถยนต์ส่วนตัว รถแท็กซี่ รถโดยสารประจำทาง รถตู้โดยสาร และบริการเรียกรถผ่านแอปพลิเคชัน เช่น Grab',
+          'ผู้เข้าร่วมงานสามารถเดินทางจากกรุงเทพมหานครมายัง Organized by: Thailand Airsoft and Paintball Association จังหวัดเพชรบุรี ได้หลายรูปแบบ ได้แก่ รถยนต์ส่วนตัว รถแท็กซี่ รถโดยสารประจำทาง รถตู้โดยสาร และบริการเรียกรถผ่านแอปพลิเคชัน เช่น Grab',
         ],
       },
       {
@@ -82,11 +82,11 @@ export const travelLanguageVersions: InfoLanguageVersion[] = [
         title: 'ตัวเลือกการเดินทางแบบประหยัด',
         paragraphs: [
           'สำหรับผู้ที่ต้องการประหยัดค่าใช้จ่ายในการเดินทาง ขอแนะนำให้ใช้บริการแท็กซี่หรือ Grab จากสนามบินหรือที่พัก ไปยังสถานีขนส่งผู้โดยสารกรุงเทพฯ (หมอชิต 2) จากนั้นซื้อตั๋วรถโดยสารไปยังจังหวัดเพชรบุรี',
-          'เมื่อเดินทางถึงสถานีขนส่งจังหวัดเพชรบุรี จะมีรถตู้รับส่งของงาน พร้อมป้าย "MSTAR Airsoft Event" รอให้บริการ',
+          'เมื่อเดินทางถึงสถานีขนส่งจังหวัดเพชรบุรี จะมีรถตู้รับส่งของงาน พร้อมป้าย "Organized by: Thailand Airsoft and Paintball Association" รอให้บริการ',
         ],
         bullets: [
           'ค่าบริการรถรับส่ง: 500 บาทต่อท่าน',
-          'ปลายทาง: เดินทางตรงสู่พื้นที่ตั้งแคมป์และสนามแข่งขัน MSTAR Airsoft',
+          'ปลายทาง: เดินทางตรงสู่พื้นที่ตั้งแคมป์และสนามแข่งขัน Organized by: Thailand Airsoft and Paintball Association',
         ],
       },
       {
@@ -101,7 +101,7 @@ export const travelLanguageVersions: InfoLanguageVersion[] = [
         title: 'บริการช่วยเหลือด้านการเดินทาง',
         paragraphs: [
           'หากท่านต้องการความช่วยเหลือเกี่ยวกับการเดินทาง การจองรถ หรือข้อมูลการเดินทางมายังสถานที่จัดงาน กรุณาติดต่อทีมงานของเราได้ตลอดเวลา',
-          'ทีมงาน MSTAR Airsoft ยินดีให้ความช่วยเหลือเพื่อให้การเดินทางของท่านเป็นไปอย่างสะดวก ปลอดภัย และราบรื่นตั้งแต่เดินทางมาถึงประเทศไทยจนถึงพื้นที่จัดงาน',
+          'ทีมงาน Organized by: Thailand Airsoft and Paintball Association ยินดีให้ความช่วยเหลือเพื่อให้การเดินทางของท่านเป็นไปอย่างสะดวก ปลอดภัย และราบรื่นตั้งแต่เดินทางมาถึงประเทศไทยจนถึงพื้นที่จัดงาน',
         ],
         bullets: [
           'WhatsApp / โทรศัพท์: +66 97 392 4632',

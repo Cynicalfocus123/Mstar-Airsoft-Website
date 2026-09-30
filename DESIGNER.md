@@ -2,6 +2,8 @@
 
 ## Design Direction
 
+- The 2026-09-30 organizer update replaces visible `MSTAR Airsoft` wording with `Organized by: Thailand Airsoft and Paintball Association` across site content and page metadata. Homepage association strip now reads `Organized by:` followed by `Thailand Airsoft and Paintball Association`; its existing dark/gold layout, linked emblem, spacing, and responsive behavior remain unchanged. Logo artwork, domain, emails, and legal company references remain unchanged.
+
 - The 2026-09-21 Event Info map replacement uses supplied `new map 3.png` artwork at the existing 1448x1086 aspect ratio. Same open dark section, fluid intrinsic-height image, bilingual content path, and no-crop behavior remain; replacement ZIP contains only the new map asset.
 
 - The 2026-09-21 Event Info map-only update keeps the existing open dark section, bilingual data path, fluid width, intrinsic height, and no-crop behavior. It swaps in supplied `new map 2.png` artwork, re-optimized as a 1448x1086 palette PNG at 903,894 bytes; all other page visuals and interactions remain unchanged.
@@ -317,6 +319,8 @@ When the user asks for a future deployment ZIP, report:
 - Commit memory files with the related code/design change.
 
 ## Current Design Log
+
+- 2026-09-30: Updated visible runtime branding text across homepage, event information, travel guides, rules, privacy content, SEO data, and default social metadata from `MSTAR Airsoft` to `Organized by: Thailand Airsoft and Paintball Association`. Homepage support strip now uses the requested organizer wording. Retained existing association emblem, logo image, layout, responsive styling, official domain, contact email addresses, and legal company references. Prepared a changes-only Hostinger ZIP after production build; no unrelated deployment assets included.
 
 - 2026-09-21: Replaced the bilingual Force of Conquest Event Info map with supplied `new map 3.png`, optimized it as a palette PNG, deleted the previous ZIP, and created a replacement ZIP containing only the new map asset. No prior map or unrelated runtime file entered package.
 

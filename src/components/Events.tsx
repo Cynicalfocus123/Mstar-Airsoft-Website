@@ -75,7 +75,7 @@ export function Events({ events, viewAllHref, countdown }: EventsProps) {
         <p className="eyebrow">Upcoming Operations</p>
         <h2>Game Schedules</h2>
         <p className="section-intro">
-          Select upcoming Mstar Airsoft operations are listed below. Open the full events page for the complete season.
+          Select upcoming Organized by: Thailand Airsoft and Paintball Association operations are listed below. Open the full events page for the complete season.
         </p>
         <a className="btn btn-gold section-action" href={getSafeInternalHref(viewAllHref)}>
           View All Events

@@ -9,7 +9,7 @@ import { travelLanguageVersions } from './travelThaiContent';
 
 export const siteContent: SiteContent = {
   identity: {
-    name: 'Mstar Airsoft',
+    name: 'Organized by: Thailand Airsoft and Paintball Association',
     logoPath,
     tagline: 'Competitive tactical airsoft events',
   },
@@ -30,13 +30,13 @@ export const siteContent: SiteContent = {
       videoMp4Path: '/videos/force-of-conquest-header-compress-video.mp4',
       eyebrow: 'Featured Tournament',
       title: 'Gold Rush Open',
-      body: 'Squad-based tournament registration is open now for the next Mstar Airsoft operation.',
+      body: 'Squad-based tournament registration is open now for the next Organized by: Thailand Airsoft and Paintball Association operation.',
       cta: { label: 'Get Ticket Now', href: '/ticket', variant: 'primary' },
     },
   ],
   hero: {
     kicker: 'Tournament Operations',
-    title: 'MSTAR AIRSOFT',
+    title: 'Organized by: Thailand Airsoft and Paintball Association',
     subtitle:
       'Tactical airsoft tournaments and competitive events built for organized teams, clear rules, and mission-focused play.',
     videos: [
@@ -64,7 +64,7 @@ export const siteContent: SiteContent = {
     eyebrow: '',
     title: 'Experience the Largest Airsoft Festival in Southeast Asia - where adrenaline, entertainment, and adventure come together day and night.',
     body:
-      "The Mstar Airsoft Tournament delivers an immersive battlefield experience set in Thailand's stunning tropical rainforest, complete with natural creeks and realistic combat environments that replicate real tactical scenarios. Beyond the battlefield, guests can enjoy the vibrant atmosphere of an international music festival featuring global food vendors, carnival attractions, live entertainment, and adventure activities for all ages. Step into a world of nonstop excitement, competition, and unforgettable experiences surrounded by the breathtaking beauty of Thailand.",
+      "The Organized by: Thailand Airsoft and Paintball Association delivers an immersive battlefield experience set in Thailand's stunning tropical rainforest, complete with natural creeks and realistic combat environments that replicate real tactical scenarios. Beyond the battlefield, guests can enjoy the vibrant atmosphere of an international music festival featuring global food vendors, carnival attractions, live entertainment, and adventure activities for all ages. Step into a world of nonstop excitement, competition, and unforgettable experiences surrounded by the breathtaking beauty of Thailand.",
     highlights: [
       'LIVE BAND, EDM ZONE, INTERNATIONAL FOOD COURT, CARNIVAL',
       'ATV RIDE, JUNGLE TOUR',
@@ -74,7 +74,7 @@ export const siteContent: SiteContent = {
     mobileBackgroundImagePath: '/images/about-background.webp',
   },
   supportedBy: {
-    title: 'National Thailand Airsoft and Paintball Association',
+    title: 'Thailand Airsoft and Paintball Association',
     imagePath: '/images/home/national-thailand-airsoft-paintball-association.png',
     imageAlt: 'National Thailand Airsoft and Paintball Association emblem',
   },
@@ -1032,7 +1032,7 @@ export const siteContent: SiteContent = {
   eventCountdown: {
     eyebrow: 'Force of Conquest Countdown',
     title: 'Gates open on Friday January 8th, 2027',
-    description: 'Live countdown to the next MSTAR Airsoft operation in Thailand.',
+    description: 'Live countdown to the next Organized by: Thailand Airsoft and Paintball Association operation in Thailand.',
     targetIso: '2027-01-08T00:00:00+07:00',
     gateLabel: 'Gates open on Friday January 8th, 2027',
     completeLabel: 'Event Started',
@@ -1109,7 +1109,7 @@ export const siteContent: SiteContent = {
   },
   footerSections: [
     {
-      title: 'Mstar Airsoft',
+      title: 'Organized by: Thailand Airsoft and Paintball Association',
       links: [
         { label: 'Home', href: '/' },
         { label: 'About', href: '/about' },
@@ -1241,15 +1241,15 @@ export const siteContent: SiteContent = {
       slug: 'how-to-get-to-the-event',
       eyebrow: 'Travel Guide',
       title: 'How to Get to the Event',
-      description: 'Travel options, transfer timing, and support contacts for getting from Bangkok to the MSTAR Airsoft event in Phetchaburi.',
+      description: 'Travel options, transfer timing, and support contacts for getting from Bangkok to the Organized by: Thailand Airsoft and Paintball Association in Phetchaburi.',
       languageVersions: travelLanguageVersions,
       sections: [
         {
           id: 'arrival-overview',
-          title: 'How to Get to the MSTAR Airsoft Event in Phetchaburi',
+          title: 'How to Get to the Organized by: Thailand Airsoft and Paintball Association in Phetchaburi',
           paragraphs: [
             'Upon arriving at Suvarnabhumi Airport, you may purchase a local SIM card at the airport or directly at the event venue for convenient communication during your stay.',
-            'There are several transportation options for traveling from Bangkok to the MSTAR Airsoft Event in Phetchaburi, including private car services, buses, minibuses, and ride-hailing services such as Grab.',
+            'There are several transportation options for traveling from Bangkok to the Organized by: Thailand Airsoft and Paintball Association in Phetchaburi, including private car services, buses, minibuses, and ride-hailing services such as Grab.',
           ],
         },
         {
@@ -1266,7 +1266,7 @@ export const siteContent: SiteContent = {
           title: 'Budget-Friendly Transportation Option',
           paragraphs: [
             'For travelers looking to save on transportation costs, the recommended option is to take a local taxi or book a Grab ride to Mo Chit Bus Terminal. Upon arrival at the terminal, you can purchase a bus ticket to Phetchaburi.',
-            'Once you arrive at the Phetchaburi Bus Terminal, you will find a designated minivan displaying the sign "MSTAR Airsoft Event."',
+            'Once you arrive at the Phetchaburi Bus Terminal, you will find a designated minivan displaying the sign "Organized by: Thailand Airsoft and Paintball Association."',
           ],
           bullets: [
             'Transfer Fee: 500 THB per person',
@@ -1297,7 +1297,7 @@ export const siteContent: SiteContent = {
       slug: 'immigration-visa',
       eyebrow: 'Travel Guide',
       title: 'Immigration Visa',
-      description: 'Entry guidance and arrival documents for international attendees traveling to Thailand for the MSTAR Airsoft event.',
+      description: 'Entry guidance and arrival documents for international attendees traveling to Thailand for the Organized by: Thailand Airsoft and Paintball Association.',
       sections: [
         {
           id: 'visa-overview',
@@ -1317,7 +1317,7 @@ export const siteContent: SiteContent = {
             'Round-trip airline ticket',
             'Hotel or accommodation reservation during your stay',
             'Declaration of the amount of cash or funds brought into Thailand',
-            'Event confirmation letter and booking ticket from MSTAR Airsoft Event',
+            'Event confirmation letter and booking ticket from Organized by: Thailand Airsoft and Paintball Association',
           ],
         },
       ],
@@ -1352,9 +1352,9 @@ export const siteContent: SiteContent = {
           sections: [
             {
               id: 'rules-overview',
-              title: 'กฎและระเบียบ MSTAR Airsoft',
+              title: 'กฎและระเบียบ Organized by: Thailand Airsoft and Paintball Association',
               paragraphs: [
-                'MSTAR Airsoft - Force of Conquest มุ่งมั่นรักษามาตรฐานสูงสุดด้านความปลอดภัย ความเป็นมืออาชีพ และการเล่นอย่างยุติธรรมตลอดงาน ผู้เข้าร่วมทุกคนต้องปฏิบัติตามระเบียบงาน ขั้นตอนความปลอดภัย และกติกาการเล่นอย่างเคร่งครัดตลอดเวลา',
+                'Organized by: Thailand Airsoft and Paintball Association - Force of Conquest มุ่งมั่นรักษามาตรฐานสูงสุดด้านความปลอดภัย ความเป็นมืออาชีพ และการเล่นอย่างยุติธรรมตลอดงาน ผู้เข้าร่วมทุกคนต้องปฏิบัติตามระเบียบงาน ขั้นตอนความปลอดภัย และกติกาการเล่นอย่างเคร่งครัดตลอดเวลา',
                 'ความสำเร็จของปฏิบัติการแอร์ซอฟต์ขนาดใหญ่ขึ้นอยู่กับการบังคับใช้ความปลอดภัยอย่างจริงจัง ความรับผิดชอบของผู้เล่น และการยึดถือระบบเกียรติยศ ผู้เข้าร่วมทุกคนต้องผ่านการตรวจโครโนกราฟ สวมอุปกรณ์ป้องกันที่ได้รับอนุมัติ และปฏิบัติตามกฎพื้นที่เตรียมตัวและการยิง',
               ],
             },
@@ -1420,7 +1420,7 @@ export const siteContent: SiteContent = {
             {
               id: 'rules-acknowledgement',
               title: 'การรับทราบของผู้เข้าร่วม',
-              paragraphs: ['การเข้าร่วมงาน MSTAR Airsoft - Force of Conquest ถือว่าผู้เข้าร่วมทุกคนรับทราบและยินยอมปฏิบัติตามกฎและระเบียบเหล่านี้ เพื่อให้ทุกคนได้รับประสบการณ์ที่ปลอดภัย ยุติธรรม และสนุกสนาน'],
+              paragraphs: ['การเข้าร่วมงาน Organized by: Thailand Airsoft and Paintball Association - Force of Conquest ถือว่าผู้เข้าร่วมทุกคนรับทราบและยินยอมปฏิบัติตามกฎและระเบียบเหล่านี้ เพื่อให้ทุกคนได้รับประสบการณ์ที่ปลอดภัย ยุติธรรม และสนุกสนาน'],
             },
           ],
         },
@@ -1428,9 +1428,9 @@ export const siteContent: SiteContent = {
       sections: [
         {
           id: 'rules-overview',
-          title: 'MSTAR Airsoft Rules & Regulations',
+          title: 'Organized by: Thailand Airsoft and Paintball Association Rules & Regulations',
           paragraphs: [
-            'MSTAR Airsoft - Force of Conquest is committed to maintaining the highest standards of safety, professionalism, and fair play throughout the event. All participants are required to follow official event regulations, safety procedures, and game rules at all times.',
+            'Organized by: Thailand Airsoft and Paintball Association - Force of Conquest is committed to maintaining the highest standards of safety, professionalism, and fair play throughout the event. All participants are required to follow official event regulations, safety procedures, and game rules at all times.',
             'The success of large-scale airsoft operations depends on strict safety enforcement, responsible player conduct, and adherence to the honor system. Every participant must complete weapon chronograph inspections, wear approved protective equipment, and comply with all staging and firing regulations.',
           ],
         },
@@ -1498,7 +1498,7 @@ export const siteContent: SiteContent = {
           id: 'rules-acknowledgement',
           title: 'Participant Acknowledgement',
           paragraphs: [
-            'By participating in the MSTAR Airsoft - Force of Conquest event, all attendees acknowledge and agree to comply with these rules and regulations to ensure a safe, fair, and enjoyable experience for everyone involved.',
+            'By participating in the Organized by: Thailand Airsoft and Paintball Association - Force of Conquest event, all attendees acknowledge and agree to comply with these rules and regulations to ensure a safe, fair, and enjoyable experience for everyone involved.',
           ],
         },
       ],
@@ -1507,13 +1507,13 @@ export const siteContent: SiteContent = {
       slug: 'accommodation-and-campground',
       eyebrow: 'Event Guide',
       title: 'Accommodation & Campground Experience',
-      description: 'Campground atmosphere, facilities, and rental gear for players staying on site during the MSTAR Airsoft festival.',
+      description: 'Campground atmosphere, facilities, and rental gear for players staying on site during the Organized by: Thailand Airsoft and Paintball Association.',
       sections: [
         {
           id: 'campground-overview',
           title: 'Accommodation & Campground Experience',
           paragraphs: [
-            'Experience the ultimate outdoor airsoft lifestyle at the official MSTAR Airsoft Event Campground - a massive recreational camping area spanning more than 80,000 square meters, designed to deliver an immersive festival atmosphere for players and visitors from around the world.',
+            'Experience the ultimate outdoor airsoft lifestyle at the official Organized by: Thailand Airsoft and Paintball Association Campground - a massive recreational camping area spanning more than 80,000 square meters, designed to deliver an immersive festival atmosphere for players and visitors from around the world.',
             'The campground combines tactical gameplay with entertainment, community activities, and outdoor relaxation, creating a complete international airsoft festival experience.',
           ],
         },
@@ -1552,13 +1552,13 @@ export const siteContent: SiteContent = {
       slug: 'activity',
       eyebrow: 'Event Guide',
       title: 'Activities & Entertainment Experience',
-      description: 'Outdoor adventure, food, music, nightlife, and festival entertainment built around the MSTAR Airsoft experience.',
+      description: 'Outdoor adventure, food, music, nightlife, and festival entertainment built around the Organized by: Thailand Airsoft and Paintball Association experience.',
       sections: [
         {
           id: 'activity-overview',
           title: 'Activities & Entertainment Experience',
           paragraphs: [
-            'Prepare for a nonstop adrenaline-filled adventure at the MSTAR Airsoft Festival, where tactical combat meets outdoor exploration, music, nightlife, and world-class entertainment.',
+            'Prepare for a nonstop adrenaline-filled adventure at the Organized by: Thailand Airsoft and Paintball Association, where tactical combat meets outdoor exploration, music, nightlife, and world-class entertainment.',
             'Surrounded by breathtaking natural scenery, waterfalls, and tropical forest landscapes, attendees will experience far more than just an airsoft tournament - this is a full-scale international adventure festival designed for thrill-seekers, travelers, and outdoor enthusiasts from around the world.',
           ],
         },
@@ -1619,7 +1619,7 @@ export const siteContent: SiteContent = {
           paragraphs: [
             'Spend your days battling through intense airsoft missions and outdoor adventures, then celebrate your nights with music, food, entertainment, and an international community of players and travelers.',
             'From sunrise to late night, the energy never stops.',
-            'MSTAR Airsoft Festival is more than an event - it is a once-in-a-lifetime experience filled with excitement, friendship, adventure, and memories that will bring you back year after year.',
+            'Organized by: Thailand Airsoft and Paintball Association is more than an event - it is a once-in-a-lifetime experience filled with excitement, friendship, adventure, and memories that will bring you back year after year.',
           ],
         },
       ],
@@ -1628,13 +1628,13 @@ export const siteContent: SiteContent = {
       slug: 'what-to-do-in-thailand',
       eyebrow: 'Travel Guide',
       title: 'What to Do in Thailand',
-      description: 'Discover scenic attractions and memorable side trips to enjoy before or after the MSTAR Airsoft event.',
+      description: 'Discover scenic attractions and memorable side trips to enjoy before or after the Organized by: Thailand Airsoft and Paintball Association.',
       sections: [
         {
           id: 'what-to-do-overview',
           title: 'Explore More of Thailand',
           paragraphs: [
-            'Make the most of your trip with nearby nature, culture, and landmark destinations that add even more adventure to your MSTAR Airsoft experience.',
+            'Make the most of your trip with nearby nature, culture, and landmark destinations that add even more adventure to your Organized by: Thailand Airsoft and Paintball Association experience.',
           ],
           bullets: [
             'Narong Waterfall',
@@ -1956,17 +1956,17 @@ export const siteContent: SiteContent = {
       slug: 'privacy',
       eyebrow: 'Legal',
       title: 'Privacy',
-      description: 'How MSTAR Airsoft (Force of Conquest) collects, uses, stores, and protects personal information.',
+      description: 'How Organized by: Thailand Airsoft and Paintball Association (Force of Conquest) collects, uses, stores, and protects personal information.',
       languageVersions: privacyLanguageVersions,
       sections: [
         {
           id: 'privacy-intro',
-          title: 'MSTAR Airsoft (Force of Conquest) Privacy Policy',
+          title: 'Organized by: Thailand Airsoft and Paintball Association (Force of Conquest) Privacy Policy',
           paragraphs: [
             'Effective Date: May 20, 2026',
             'Operated By: Mstar (Asia) Co., Ltd.',
-            'Mstar (Asia) Co., Ltd. ("MSTAR," "we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, process, store, disclose, and safeguard information obtained through the MSTAR Airsoft (Force of Conquest) website, mobile application, event registration systems, ticketing platforms, campground services, and related event operations.',
-            'By accessing or using our website, mobile application, services, or participating in MSTAR Airsoft events, you acknowledge and agree to the terms of this Privacy Policy.',
+            'Mstar (Asia) Co., Ltd. ("MSTAR," "we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, process, store, disclose, and safeguard information obtained through the Organized by: Thailand Airsoft and Paintball Association (Force of Conquest) website, mobile application, event registration systems, ticketing platforms, campground services, and related event operations.',
+            'By accessing or using our website, mobile application, services, or participating in Organized by: Thailand Airsoft and Paintball Association events, you acknowledge and agree to the terms of this Privacy Policy.',
           ],
         },
         {
@@ -2044,7 +2044,7 @@ export const siteContent: SiteContent = {
           id: 'privacy-transfers',
           title: '6. International Data Transfers',
           paragraphs: [
-            'As MSTAR Airsoft operates internationally, user information may be transferred, processed, or stored in multiple countries where our service providers, partners, or operational systems are located.',
+            'As Organized by: Thailand Airsoft and Paintball Association operates internationally, user information may be transferred, processed, or stored in multiple countries where our service providers, partners, or operational systems are located.',
             'By using our services, users consent to such international data transfers where permitted by law.',
           ],
         },
@@ -2083,7 +2083,7 @@ export const siteContent: SiteContent = {
           id: 'privacy-media-consent',
           title: '9. Media Consent & Event Recording',
           paragraphs: [
-            'By attending MSTAR Airsoft (Force of Conquest), participants acknowledge and agree that event areas may be photographed or video recorded, gameplay footage may be livestreamed globally, and participant images, voice, likeness, and appearance may appear in promotional materials, documentaries, social media, advertising campaigns, and future event marketing.',
+            'By attending Organized by: Thailand Airsoft and Paintball Association (Force of Conquest), participants acknowledge and agree that event areas may be photographed or video recorded, gameplay footage may be livestreamed globally, and participant images, voice, likeness, and appearance may appear in promotional materials, documentaries, social media, advertising campaigns, and future event marketing.',
             'Mstar (Asia) Co., Ltd. retains the unrestricted right to use such content without additional compensation unless prohibited by applicable law.',
           ],
         },
@@ -2150,7 +2150,7 @@ export const siteContent: SiteContent = {
           title: '17. Contact Information',
           paragraphs: [
             'Mstar (Asia) Co., Ltd.',
-            'Official Event: MSTAR Airsoft (Force of Conquest)',
+            'Official Event: Organized by: Thailand Airsoft and Paintball Association (Force of Conquest)',
             'For questions regarding this Privacy Policy, data protection matters, event registration, or account support, please contact the official MSTAR support team through the authorized website, mobile application, or customer support channels.',
           ],
         },
@@ -2166,7 +2166,7 @@ export const siteContent: SiteContent = {
           id: 'complaints-overview',
           title: 'Complaints Procedure',
           paragraphs: [
-            'MSTAR Airsoft (Force of Conquest) aims to handle complaints fairly, respectfully, and as quickly as possible. This page explains how participants, guests, vendors, media, and partners can report concerns relating to registration, event operations, campground services, conduct, safety, media, logistics, or customer support.',
+            'Organized by: Thailand Airsoft and Paintball Association (Force of Conquest) aims to handle complaints fairly, respectfully, and as quickly as possible. This page explains how participants, guests, vendors, media, and partners can report concerns relating to registration, event operations, campground services, conduct, safety, media, logistics, or customer support.',
           ],
         },
         {
@@ -2210,7 +2210,7 @@ export const siteContent: SiteContent = {
           title: 'Contact Information',
           paragraphs: [
             'Mstar (Asia) Co., Ltd.',
-            'Official Event: MSTAR Airsoft (Force of Conquest)',
+            'Official Event: Organized by: Thailand Airsoft and Paintball Association (Force of Conquest)',
             'For complaint support, please contact the official MSTAR support team through the event website or authorized communication channels.',
           ],
           links: [
@@ -2428,7 +2428,7 @@ export const siteContent: SiteContent = {
         heading: 'Main Stage & LED Screen',
         pillText: 'MEDIA INVENTORY',
         imagePath: '/images/sponsor/main-stage-led-screen.png',
-        imageAlt: 'Main stage with LED screen showing MSTAR Airsoft branding',
+        imageAlt: 'Main stage with LED screen showing Organized by: Thailand Airsoft and Paintball Association branding',
         cards: [
           {
             title: 'Premium Visibility',

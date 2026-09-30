@@ -3,12 +3,12 @@ import type { InfoLanguageVersion, InfoSection } from '../types/siteContent';
 export const privacyEnglishSections: InfoSection[] = [
   {
     id: 'privacy-intro',
-    title: 'MSTAR Airsoft (Force of Conquest) Privacy Policy',
+    title: 'Organized by: Thailand Airsoft and Paintball Association (Force of Conquest) Privacy Policy',
     paragraphs: [
       'Effective Date: May 20, 2026',
       'Operated By: Mstar (Asia) Co., Ltd.',
-      'Mstar (Asia) Co., Ltd. ("MSTAR," "we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, process, store, disclose, and safeguard information obtained through the MSTAR Airsoft (Force of Conquest) website, mobile application, event registration systems, ticketing platforms, campground services, and related event operations.',
-      'By accessing or using our website, mobile application, services, or participating in MSTAR Airsoft events, you acknowledge and agree to the terms of this Privacy Policy.',
+      'Mstar (Asia) Co., Ltd. ("MSTAR," "we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, process, store, disclose, and safeguard information obtained through the Organized by: Thailand Airsoft and Paintball Association (Force of Conquest) website, mobile application, event registration systems, ticketing platforms, campground services, and related event operations.',
+      'By accessing or using our website, mobile application, services, or participating in Organized by: Thailand Airsoft and Paintball Association events, you acknowledge and agree to the terms of this Privacy Policy.',
     ],
   },
   {
@@ -66,7 +66,7 @@ export const privacyEnglishSections: InfoSection[] = [
     id: 'privacy-transfers',
     title: '6. International Data Transfers',
     paragraphs: [
-      'As MSTAR Airsoft operates internationally, user information may be transferred, processed, or stored in multiple countries where our service providers, partners, or operational systems are located.',
+      'As Organized by: Thailand Airsoft and Paintball Association operates internationally, user information may be transferred, processed, or stored in multiple countries where our service providers, partners, or operational systems are located.',
       'By using our services, users consent to such international data transfers where permitted by law.',
     ],
   },
@@ -90,7 +90,7 @@ export const privacyEnglishSections: InfoSection[] = [
     id: 'privacy-media-consent',
     title: '9. Media Consent & Event Recording',
     paragraphs: [
-      'By attending MSTAR Airsoft (Force of Conquest), participants acknowledge and agree that event areas may be photographed or video recorded, gameplay footage may be livestreamed globally, and participant images, voice, likeness, and appearance may appear in promotional materials, documentaries, social media, advertising campaigns, and future event marketing.',
+      'By attending Organized by: Thailand Airsoft and Paintball Association (Force of Conquest), participants acknowledge and agree that event areas may be photographed or video recorded, gameplay footage may be livestreamed globally, and participant images, voice, likeness, and appearance may appear in promotional materials, documentaries, social media, advertising campaigns, and future event marketing.',
       'Mstar (Asia) Co., Ltd. retains the unrestricted right to use such content without additional compensation unless prohibited by applicable law.',
     ],
   },
@@ -150,7 +150,7 @@ export const privacyEnglishSections: InfoSection[] = [
     title: '17. Contact Information',
     paragraphs: [
       'Mstar (Asia) Co., Ltd.',
-      'Official Event: MSTAR Airsoft (Force of Conquest)',
+      'Official Event: Organized by: Thailand Airsoft and Paintball Association (Force of Conquest)',
       'For questions regarding this Privacy Policy, data protection matters, event registration, or account support, please contact the official MSTAR support team through the authorized website, mobile application, or customer support channels.',
     ],
   },
@@ -170,7 +170,7 @@ export const privacyLanguageVersions: InfoLanguageVersion[] = [
     sections: [
       {
         id: 'privacy-intro-th',
-        title: 'นโยบายความเป็นส่วนตัว MSTAR Airsoft (Force of Conquest)',
+        title: 'นโยบายความเป็นส่วนตัว Organized by: Thailand Airsoft and Paintball Association (Force of Conquest)',
         paragraphs: [
           'มีผลบังคับใช้ตั้งแต่วันที่ 20 พฤษภาคม พ.ศ. 2569',
           'ดำเนินการโดย บริษัท เอ็มสตาร์ (เอเชีย) จำกัด',
@@ -230,7 +230,7 @@ export const privacyLanguageVersions: InfoLanguageVersion[] = [
         id: 'privacy-transfers-th',
         title: '6. การโอนข้อมูลส่วนบุคคลระหว่างประเทศ',
         paragraphs: [
-          'เนื่องจาก MSTAR Airsoft ดำเนินกิจกรรมและให้บริการในระดับนานาชาติ ข้อมูลส่วนบุคคลของผู้ใช้งานอาจถูกโอน ประมวลผล หรือจัดเก็บในหลายประเทศตามที่ผู้ให้บริการ พันธมิตร หรือระบบปฏิบัติการของบริษัทตั้งอยู่',
+          'เนื่องจาก Organized by: Thailand Airsoft and Paintball Association ดำเนินกิจกรรมและให้บริการในระดับนานาชาติ ข้อมูลส่วนบุคคลของผู้ใช้งานอาจถูกโอน ประมวลผล หรือจัดเก็บในหลายประเทศตามที่ผู้ให้บริการ พันธมิตร หรือระบบปฏิบัติการของบริษัทตั้งอยู่',
           'บริษัทจะดำเนินมาตรการตามสมควรเพื่อคุ้มครองข้อมูลส่วนบุคคลตามกฎหมายที่เกี่ยวข้อง',
         ],
       },
@@ -254,7 +254,7 @@ export const privacyLanguageVersions: InfoLanguageVersion[] = [
         id: 'privacy-media-consent-th',
         title: '9. ความยินยอมด้านสื่อและการบันทึกภาพกิจกรรม',
         paragraphs: [
-          'การเข้าร่วมงาน MSTAR Airsoft (Force of Conquest) ถือว่าผู้เข้าร่วมรับทราบและยอมรับว่าพื้นที่กิจกรรมอาจมีการถ่ายภาพ บันทึกวิดีโอ ถ่ายทอดสด หรือบันทึกภาพการเล่น และภาพ เสียง รูปลักษณ์ หรือการปรากฏตัวของผู้เข้าร่วมอาจถูกใช้ในสื่อประชาสัมพันธ์ สารคดี โซเชียลมีเดีย โฆษณา และการตลาดของกิจกรรมในอนาคต',
+          'การเข้าร่วมงาน Organized by: Thailand Airsoft and Paintball Association (Force of Conquest) ถือว่าผู้เข้าร่วมรับทราบและยอมรับว่าพื้นที่กิจกรรมอาจมีการถ่ายภาพ บันทึกวิดีโอ ถ่ายทอดสด หรือบันทึกภาพการเล่น และภาพ เสียง รูปลักษณ์ หรือการปรากฏตัวของผู้เข้าร่วมอาจถูกใช้ในสื่อประชาสัมพันธ์ สารคดี โซเชียลมีเดีย โฆษณา และการตลาดของกิจกรรมในอนาคต',
           'บริษัท เอ็มสตาร์ (เอเชีย) จำกัด มีสิทธิ์ใช้สื่อดังกล่าวโดยไม่ต้องจ่ายค่าตอบแทนเพิ่มเติม เว้นแต่กฎหมายที่เกี่ยวข้องจะกำหนดไว้เป็นอย่างอื่น',
         ],
       },
@@ -316,7 +316,7 @@ export const privacyLanguageVersions: InfoLanguageVersion[] = [
         title: '17. ข้อมูลติดต่อ',
         paragraphs: [
           'บริษัท เอ็มสตาร์ (เอเชีย) จำกัด',
-          'กิจกรรมอย่างเป็นทางการ: MSTAR Airsoft (Force of Conquest)',
+          'กิจกรรมอย่างเป็นทางการ: Organized by: Thailand Airsoft and Paintball Association (Force of Conquest)',
           'หากมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัว การคุ้มครองข้อมูล การลงทะเบียนกิจกรรม หรือการสนับสนุนบัญชีผู้ใช้งาน กรุณาติดต่อทีมสนับสนุนอย่างเป็นทางการของ MSTAR ผ่านเว็บไซต์ แอปพลิเคชัน หรือช่องทางบริการลูกค้าที่ได้รับอนุญาต',
         ],
       },
